@@ -24,6 +24,7 @@ import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.moflon.core.utilities.LogUtils;
 import org.moflon.core.utilities.MoflonUtilitiesActivator;
@@ -32,6 +33,8 @@ import com.caleidoscope.extensionpoint.ArtefactAdapter;
 import com.caleidoscope.extensionpoint.BXtool;
 import com.caleidoscope.extensionpoint.DeltaDiscovery;
 import com.caleidoscope.extensionpoint.Synchronizer;
+import com.kaleidoscope.implementation.artefactadapter.JavaArtefactAdapter;
+import com.kaleidoscope.implementation.artefactadapter.XMIArtefactAdapter;
 import com.kaleidoscope.implementation.tool.BxtendTool;
 import com.kaleidoscope.implementation.tool.EMoflonTool;
 
@@ -46,7 +49,7 @@ import CryptoJava.JavaPackage;
  */
 public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implements IResourceDeltaVisitor {
 	
-	private ResourceSetImpl resourceSet = new ResourceSetImpl();
+	private static ResourceSetImpl resourceSet = new ResourceSetImpl();
 	private IProject project;
 	private Path projectPath;
 	private DeltaDiscovery deltaDiscovery;
@@ -70,7 +73,7 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 	}
 	
 	
-	public static Optional<ArtefactAdapter> artefactAdapterFactory(String type) {
+	public  static Optional<ArtefactAdapter> artefactAdapterFactory(String type, ResourceSet set) {
         IConfigurationElement[] config = Platform.getExtensionRegistry().getConfigurationElementsFor(ARTEFACT_ADAPTER_EXTENSON_ID);
         try {
             for (IConfigurationElement e : config) {
@@ -79,10 +82,14 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
             	
             	if(typeAttribute.equals(Optional.of(type))){
             		final Object o = e.createExecutableExtension("class");
-            		
-                    if (o instanceof ArtefactAdapter) {
-                    	return Optional.of((ArtefactAdapter)o);
+            		if (o instanceof XMIArtefactAdapter) {
+	                	((XMIArtefactAdapter) o).initialize(set);
+	                	
+	                }
+                    if (o instanceof JavaArtefactAdapter) {
+                    	((JavaArtefactAdapter) o).initialize(set);
                     }
+                    return Optional.of((ArtefactAdapter)o);
             	}
                 logger.debug("Evaluating extension");            
             }
@@ -143,11 +150,11 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
             	if(typeAttribute.equals(Optional.of(type))){
 	                final Object o = e.createExecutableExtension("class");
 	                if (o instanceof EMoflonTool) {
-	                	((EMoflonTool) o).initialize(pathToTGGtransProjet.getPath(), CryptoConfigToJavaPackage.eINSTANCE, persistanceDir);
+	                	((EMoflonTool) o).initialize(resourceSet, pathToTGGtransProjet.getPath(), CryptoConfigToJavaPackage.eINSTANCE, persistanceDir);
 	                	
 	                }
 	                if (o instanceof BxtendTool) {
-	                	((BxtendTool) o).initialize(persistanceDir);
+	                	((BxtendTool) o).initialize(resourceSet, persistanceDir);
 	                	
 	                }
 	                return Optional.of((BXtool) o);
@@ -218,15 +225,15 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 	 */
 	private void syncForward(String configFileName)throws CoreException{
 		logger.info("Sync a java model with the configuration model " + configFileName + " is performed!");
-		ArtefactAdapter cryptoJavaArtefactAdapter = artefactAdapterFactory("java").get();
+		ArtefactAdapter cryptoJavaArtefactAdapter = artefactAdapterFactory("java", resourceSet).get();
 		cryptoJavaArtefactAdapter.setUnParseSource(projectPath);
 		
 		Path absConfigFilePath = projectPath.resolve(Paths.get("models", configFileName + ".xmi"));
 		
-		ArtefactAdapter configArtefactAdapter = artefactAdapterFactory("xmi").get();
+		ArtefactAdapter configArtefactAdapter = artefactAdapterFactory("xmi", resourceSet).get();
 		configArtefactAdapter.setParseSource(absConfigFilePath);
 		
-		ArtefactAdapter deltaArtefactAdapter = artefactAdapterFactory("xmi").get();
+		ArtefactAdapter deltaArtefactAdapter = artefactAdapterFactory("xmi", resourceSet).get();
 		
 		Path relDeltaPath = Paths.get("models", "gen", configFileName, "fwd.src.delta.xmi");
 		Path absDeltaPath = projectPath.resolve(relDeltaPath);
@@ -261,17 +268,17 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		logger.info("Sync configuration model " + configFileName + " with a java model is performed!");
 		ArrayList<Path>javaFilePaths = configJavaFilesRelation.getJavaFiles(configFileName);	
 		
-		ArtefactAdapter cryptoJavaEditor = artefactAdapterFactory("java").get();
+		ArtefactAdapter cryptoJavaEditor = artefactAdapterFactory("java", resourceSet).get();
 		cryptoJavaEditor.setUnParseSource(projectPath);
 		cryptoJavaEditor.setParseSource(javaFilePaths);
 		
 		Path absConfigFilePath = projectPath.resolve(Paths.get("models", configFileName + ".xmi"));
-		ArtefactAdapter configArtefactAdapter = artefactAdapterFactory("xmi").get();
+		ArtefactAdapter configArtefactAdapter = artefactAdapterFactory("xmi", resourceSet).get();
 		configArtefactAdapter.setParseSource(absConfigFilePath);
 		
 		Path relDeltaPath = Paths.get("models", "gen", configFileName, "bwd.trg.delta.xmi");
 		Path absDeltaPath = projectPath.resolve(relDeltaPath);
-		ArtefactAdapter deltaArtefactAdapter = artefactAdapterFactory("xmi").get();
+		ArtefactAdapter deltaArtefactAdapter = artefactAdapterFactory("xmi", resourceSet).get();
 		
 		Path persistanceDir = projectPath.resolve(Paths.get("models", "gen", configFileName));
 		Synchronizer synchronizer = synchronizerFactory("default").get();
@@ -308,10 +315,10 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		BXtool tool = bxToolFactory(bxToolType, persistanceDir).get();
 		synchronizer.initialize(tool, deltaDiscovery, null);
 		
-		ArtefactAdapter configArtefactAdapter = artefactAdapterFactory("xmi").get();
+		ArtefactAdapter configArtefactAdapter = artefactAdapterFactory("xmi", resourceSet).get();
 		configArtefactAdapter.setParseSource(absoluteConfigurationPath);
 		
-		ArtefactAdapter cryptoJavaArtefactAdapter = artefactAdapterFactory("java").get();
+		ArtefactAdapter cryptoJavaArtefactAdapter = artefactAdapterFactory("java", resourceSet).get();
 		cryptoJavaArtefactAdapter.setUnParseSource(projectPath);		
 		
 		synchronizer.setSourceArtefactAdapter(configArtefactAdapter);

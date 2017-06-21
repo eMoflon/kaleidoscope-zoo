@@ -127,6 +127,24 @@ public class BxtendCryptoImplPackageImpl extends EPackageImpl implements BxtendC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getTransformation_SourceModel() {
+		return (EReference)transformationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTransformation_TargetModel() {
+		return (EReference)transformationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCorr() {
 		return corrEClass;
 	}
@@ -197,6 +215,8 @@ public class BxtendCryptoImplPackageImpl extends EPackageImpl implements BxtendC
 		// Create classes and their features
 		transformationEClass = createEClass(TRANSFORMATION);
 		createEReference(transformationEClass, TRANSFORMATION__CORRESPONDENCES);
+		createEReference(transformationEClass, TRANSFORMATION__SOURCE_MODEL);
+		createEReference(transformationEClass, TRANSFORMATION__TARGET_MODEL);
 
 		corrEClass = createEClass(CORR);
 		createEReference(corrEClass, CORR__SOURCE_ELEMENT);
@@ -239,6 +259,8 @@ public class BxtendCryptoImplPackageImpl extends EPackageImpl implements BxtendC
 		// Initialize classes, features, and operations; add parameters
 		initEClass(transformationEClass, Transformation.class, "Transformation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTransformation_Correspondences(), this.getCorr(), null, "correspondences", null, 0, -1, Transformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransformation_SourceModel(), ecorePackage.getEObject(), null, "sourceModel", null, 0, 1, Transformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransformation_TargetModel(), ecorePackage.getEObject(), null, "targetModel", null, 0, 1, Transformation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(corrEClass, Corr.class, "Corr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCorr_SourceElement(), ecorePackage.getEObject(), null, "sourceElement", null, 0, 1, Corr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

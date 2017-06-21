@@ -76,13 +76,31 @@ public interface BxtendCryptoImplPackage extends EPackage {
 	int TRANSFORMATION__CORRESPONDENCES = 0;
 
 	/**
+	 * The feature id for the '<em><b>Source Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSFORMATION__SOURCE_MODEL = 1;
+
+	/**
+	 * The feature id for the '<em><b>Target Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSFORMATION__TARGET_MODEL = 2;
+
+	/**
 	 * The number of structural features of the '<em>Transformation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSFORMATION_FEATURE_COUNT = 1;
+	int TRANSFORMATION_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Transformation</em>' class.
@@ -226,6 +244,28 @@ public interface BxtendCryptoImplPackage extends EPackage {
 	EReference getTransformation_Correspondences();
 
 	/**
+	 * Returns the meta object for the reference '{@link BxtendCryptoImpl.Transformation#getSourceModel <em>Source Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source Model</em>'.
+	 * @see BxtendCryptoImpl.Transformation#getSourceModel()
+	 * @see #getTransformation()
+	 * @generated
+	 */
+	EReference getTransformation_SourceModel();
+
+	/**
+	 * Returns the meta object for the reference '{@link BxtendCryptoImpl.Transformation#getTargetModel <em>Target Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target Model</em>'.
+	 * @see BxtendCryptoImpl.Transformation#getTargetModel()
+	 * @see #getTransformation()
+	 * @generated
+	 */
+	EReference getTransformation_TargetModel();
+
+	/**
 	 * Returns the meta object for class '{@link BxtendCryptoImpl.Corr <em>Corr</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -318,6 +358,22 @@ public interface BxtendCryptoImplPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TRANSFORMATION__CORRESPONDENCES = eINSTANCE.getTransformation_Correspondences();
+
+		/**
+		 * The meta object literal for the '<em><b>Source Model</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSFORMATION__SOURCE_MODEL = eINSTANCE.getTransformation_SourceModel();
+
+		/**
+		 * The meta object literal for the '<em><b>Target Model</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSFORMATION__TARGET_MODEL = eINSTANCE.getTransformation_TargetModel();
 
 		/**
 		 * The meta object literal for the '{@link BxtendCryptoImpl.impl.CorrImpl <em>Corr</em>}' class.

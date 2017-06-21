@@ -74,7 +74,7 @@ public class ConfigJavaFilesRelation {
 			// parse fwd.trg.xmi to get JavaPackage which is then used to extract paths of all compilation units(java files) 
 			// contained inside the JavaPackage
 			
-			editor = CryptoAPIProjectBuilder.artefactAdapterFactory("xmi").get();			
+			editor = CryptoAPIProjectBuilder.artefactAdapterFactory("xmi", resourceSet).get();			
 			editor.setParseSource(javaModelFileLocation);			
 			
 			JavaPackage javaPackage = (JavaPackage)editor.parse();

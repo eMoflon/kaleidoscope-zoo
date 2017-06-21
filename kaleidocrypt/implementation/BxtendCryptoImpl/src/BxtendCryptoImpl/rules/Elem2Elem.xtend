@@ -120,7 +120,14 @@ abstract class Elem2Elem {
 		if (corr.sourceElement == null){
 			source = createSourceElement(clazz)
 			corr.sourceElement = source
-			//elementsToCorr.put(corr.sourceElement, corr)
+			
+			var List<Corr> corrList = corr.sourceElement.getCorrModelElem
+		
+			if(corrList == null){
+				corrList = new ArrayList<Corr>	
+			}
+			corrList.add(corr)
+			elementsToCorr.put(corr.sourceElement, corrList)
 		}
 		return source
 	}
@@ -130,7 +137,14 @@ abstract class Elem2Elem {
 		if (target == null) {
 			target = createTargetElement(clazz)
 			corr.targetElement = target
-			//elementsToCorr.put(corr.targetElement, corr)
+			
+			var List<Corr> corrList = corr.targetElement.getCorrModelElem
+		
+			if(corrList == null){
+				corrList = new ArrayList<Corr>	
+			}
+			corrList.add(corr)
+			elementsToCorr.put(corr.targetElement, corrList)
 		}
 		return target
 	}

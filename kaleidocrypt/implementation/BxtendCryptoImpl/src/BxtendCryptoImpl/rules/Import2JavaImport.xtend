@@ -24,6 +24,7 @@ class Import2JavaImport  extends Elem2Elem{
 				val corrTarget = i.getOrCreateCorrModelElement(BxtendCryptoImplTransformation.import2JavaImport)
 				val targetElement = corrTarget.getOrCreateTargetElem(CryptoJavaPackage.eINSTANCE.javaImport) as JavaImport
 				targetElement.value = i.value
+				val targetModelContents = targetModel.contents
 				if(!targetModel.contents.contains(targetElement)){
 					
 					

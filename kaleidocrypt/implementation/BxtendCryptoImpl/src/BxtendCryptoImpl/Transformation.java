@@ -16,6 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link BxtendCryptoImpl.Transformation#getCorrespondences <em>Correspondences</em>}</li>
+ *   <li>{@link BxtendCryptoImpl.Transformation#getSourceModel <em>Source Model</em>}</li>
+ *   <li>{@link BxtendCryptoImpl.Transformation#getTargetModel <em>Target Model</em>}</li>
  * </ul>
  *
  * @see BxtendCryptoImpl.BxtendCryptoImplPackage#getTransformation()
@@ -38,5 +40,57 @@ public interface Transformation extends EObject {
 	 * @generated
 	 */
 	EList<Corr> getCorrespondences();
+
+	/**
+	 * Returns the value of the '<em><b>Source Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Source Model</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Source Model</em>' reference.
+	 * @see #setSourceModel(EObject)
+	 * @see BxtendCryptoImpl.BxtendCryptoImplPackage#getTransformation_SourceModel()
+	 * @model
+	 * @generated
+	 */
+	EObject getSourceModel();
+
+	/**
+	 * Sets the value of the '{@link BxtendCryptoImpl.Transformation#getSourceModel <em>Source Model</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Source Model</em>' reference.
+	 * @see #getSourceModel()
+	 * @generated
+	 */
+	void setSourceModel(EObject value);
+
+	/**
+	 * Returns the value of the '<em><b>Target Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Target Model</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Target Model</em>' reference.
+	 * @see #setTargetModel(EObject)
+	 * @see BxtendCryptoImpl.BxtendCryptoImplPackage#getTransformation_TargetModel()
+	 * @model
+	 * @generated
+	 */
+	EObject getTargetModel();
+
+	/**
+	 * Sets the value of the '{@link BxtendCryptoImpl.Transformation#getTargetModel <em>Target Model</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Target Model</em>' reference.
+	 * @see #getTargetModel()
+	 * @generated
+	 */
+	void setTargetModel(EObject value);
 
 } // Transformation

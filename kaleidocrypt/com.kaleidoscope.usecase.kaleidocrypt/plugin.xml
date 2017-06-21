@@ -4,8 +4,8 @@
 	<extension
          point="org.eclipse.ui.newWizards">
       <category
-            id="CryptoUseCase"
-            name="CryptoAPI Wizards">
+            id="Kaleidocrypt.wizards"
+            name="Kaleidocrypt Wizards">
       </category>
       <wizard
             category="CryptoUseCase"
@@ -19,8 +19,8 @@
 	<extension
          point="org.eclipse.ui.newWizards">
       <category
-            id="CryptoUseCase"
-            name="CryptoAPI Wizards">
+            id="Kaleidocrypt.wizards"
+            name="Kaleidocrypt Wizards">
       </category>
       <wizard
             category="CryptoUseCase"
@@ -35,8 +35,8 @@
 	<extension
          point="org.eclipse.ui.newWizards">
       <category
-            id="CryptoUseCase"
-            name="CryptoAPI Wizards">
+            id="Kaleidocrypt.wizards"
+            name="Kaleidocrypt Wizards">
       </category>
       <wizard
             category="CryptoUseCase"
@@ -51,8 +51,8 @@
  	<extension
          point="org.eclipse.ui.newWizards">
       <category
-            id="CryptoUseCase"
-            name="CryptoAPI Wizards">
+            id="KaleidocryptUseCase"
+            name="New Kaleidocrypt Project">
       </category>
       <wizard
             category="CryptoUseCase"
@@ -65,7 +65,7 @@
    
    
    <extension
-         id="kaleidoscope.usecase.crypto.nature"
+         id="kaleidoscope.usecase.kaleidocrypt.nature"
          point="org.eclipse.core.resources.natures">
       <runtime>
          <run
@@ -76,8 +76,8 @@
    
    
    <extension
-         id="kaleidoscope.usecase.crypto.builder"
-         name="CryptoAPIBuilder"
+         id="kaleidoscope.usecase.kaleidocrypt.builder"
+         name="KaleidocryptAPIBuilder"
          point="org.eclipse.core.resources.builders">
       <builder
             callOnEmptyDelta="true">

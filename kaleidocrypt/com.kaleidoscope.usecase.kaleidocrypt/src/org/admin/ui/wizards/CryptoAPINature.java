@@ -29,8 +29,8 @@ import org.eclipse.core.runtime.SubMonitor;
 
 public class CryptoAPINature implements IProjectNature {
 
-	public static final String CRYPTO_API_NATURE_ID = "kaleidoscope.usecase.crypto.nature";
-	public static final String CRYPTO_API_BUILDER_ID = "kaleidoscope.usecase.crypto.builder";
+	public static final String CRYPTO_API_NATURE_ID = "kaleidoscope.usecase.kaleidocrypt.nature";
+	public static final String CRYPTO_API_BUILDER_ID = "kaleidoscope.usecase.kaleidocrypt.builder";
 	
 	
 	private static final Logger logger = Logger.getLogger(WorkspaceHelper.class);
