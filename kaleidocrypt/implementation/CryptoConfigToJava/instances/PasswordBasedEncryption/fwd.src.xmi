@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CryptoAPIConfig:Task
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:CryptoAPIConfig="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore"
+    package="Crypto"
+    description="PasswordBasedEncryption">
+  <algorithms
+      xsi:type="CryptoAPIConfig:SymmetricBlockCipher"
+      name="AES"
+      mode="GCM"
+      padding="PKCS5Padding">
+    <imports
+        value="java.security.InvalidAlgorithmParameterException"/>
+    <imports
+        value="java.security.InvalidKeyException"/>
+    <imports
+        value="java.security.Key"/>
+    <imports
+        value="java.security.NoSuchAlgorithmException"/>
+    <imports
+        value="java.security.SecureRandom"/>
+    <imports
+        value="javax.crypto.BadPaddingException"/>
+    <imports
+        value="javax.crypto.Cipher"/>
+    <imports
+        value="javax.crypto.IllegalBlockSizeException"/>
+    <imports
+        value="javax.crypto.KeyGenerator"/>
+    <imports
+        value="javax.crypto.NoSuchPaddingException"/>
+    <imports
+        value="javax.crypto.SecretKey"/>
+    <imports
+        value="javax.crypto.spec.IvParameterSpec"/>
+  </algorithms>
+  <algorithms
+      xsi:type="CryptoAPIConfig:KeyDerivationAlgorithm"
+      name="&quot;PKCS&quot;"
+      iterations="1000"
+      outputSize="128">
+   <imports value="java.security.NoSuchAlgorithmException"/>
+	  <imports value="java.security.SecureRandom"/>
+	  <imports value="java.security.spec.InvalidKeySpecException"/>
+	  <imports value="javax.crypto.SecretKey"/>
+	  <imports value="javax.crypto.SecretKeyFactory"/>
+	  <imports value="javax.crypto.spec.PBEKeySpec"/>
+	  <imports value="javax.crypto.spec.SecretKeySpec"/>
+  </algorithms>
+</CryptoAPIConfig:Task>

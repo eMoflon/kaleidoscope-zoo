@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+	<extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="CryptoUseCase"
+            name="CryptoAPI Wizards">
+      </category>
+      <wizard
+            category="CryptoUseCase"
+            class="org.admin.ui.wizards.password_based_encryption.NewPasswordBasedEncryptionWizard"
+            icon="icons/encryption-icon.png"
+            id="org.admin.ui.wizards.password_based_encryption.NewPasswordBasedEncryptionWizard"
+            name="New Password-based Encryption">
+      </wizard>
+   </extension>
+   
+	<extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="CryptoUseCase"
+            name="CryptoAPI Wizards">
+      </category>
+      <wizard
+            category="CryptoUseCase"
+            class="org.admin.ui.wizards.secure_password.NewSecurePasswordWizard"
+            icon="icons/encryption-icon.png"
+            id="kaleidoscope.usecase.crypto.wizards.NewSecurePasswordWizard"
+            name="New SecurePassword">
+      </wizard>
+   </extension>
+   
+   
+	<extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="CryptoUseCase"
+            name="CryptoAPI Wizards">
+      </category>
+      <wizard
+            category="CryptoUseCase"
+            class="org.admin.ui.wizards.symmetric_encryption.NewSymmetricEncryptionWizard"
+            icon="icons/encryption-icon.png"
+            id="kaleidoscope.usecase.crypto.wizards.NewSymmetricEncryptionWizard"
+            name="New SymmetricEncryption">
+      </wizard>
+   </extension>
+   
+   
+ 	<extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="CryptoUseCase"
+            name="CryptoAPI Wizards">
+      </category>
+      <wizard
+            category="CryptoUseCase"
+            class="org.admin.ui.wizards.new_project.NewCryptoAPIProjectWizard"
+            icon="icons/encryption-icon.png"
+            id="kaleidoscope.usecase.crypto.wizards.NewCryptoAPIProject"
+            name="CryptoAPI project">
+      </wizard>
+   </extension>
+   
+   
+   <extension
+         id="kaleidoscope.usecase.crypto.nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="org.admin.ui.wizards.CryptoAPINature">
+         </run>
+      </runtime>
+   </extension>
+   
+   
+   <extension
+         id="kaleidoscope.usecase.crypto.builder"
+         name="CryptoAPIBuilder"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            callOnEmptyDelta="true">
+         <run
+               class="org.builder.CryptoAPIProjectBuilder">
+         </run>
+      </builder>
+   </extension>
+</plugin>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.moflon.tgg.runtime:DeltaSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CryptoJava="platform:/plugin/CryptoJava/model/CryptoJava.ecore" xmlns:org.moflon.tgg.runtime="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore">
+  <targetModel href="trg.xmi#/"/>
+  <addedEdges trg="//@addedNodes.0" name="imports">
+    <src href="trg.xmi#//@cunits.0"/>
+  </addedEdges>
+  <addedNodes xsi:type="CryptoJava:JavaImport" value="javax.crypto.BadPaddingExceptionnn"/>
+</org.moflon.tgg.runtime:DeltaSpecification>
