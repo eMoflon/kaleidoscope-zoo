@@ -64,7 +64,7 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 	private static final Logger logger = Logger.getLogger(CryptoAPIProjectBuilder.class);
 	URL pathToTGGtransProjet  = MoflonUtilitiesActivator.getPathRelToPlugIn(".", "CryptoConfigToJava");
 	IProgressMonitor monitor;
-	String bxToolType = "bxtend";
+	String bxToolType = "emoflon";
 	
 	public CryptoAPIProjectBuilder() {
 		// Set up a simple configuration that logs on the console.	

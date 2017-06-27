@@ -86,7 +86,7 @@ public interface Corr extends EObject {
 	 * @return the value of the '<em>Desc</em>' attribute.
 	 * @see #setDesc(String)
 	 * @see BxtendCryptoImpl.BxtendCryptoImplPackage#getCorr_Desc()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getDesc();

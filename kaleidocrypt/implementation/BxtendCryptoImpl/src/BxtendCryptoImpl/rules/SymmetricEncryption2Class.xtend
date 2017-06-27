@@ -62,7 +62,7 @@ class SymmetricEncryption2Class extends Elem2Elem{
 			name = "performEncryption";
 			throws = "InvalidKeyException,NoSuchAlgorithmException,NoSuchPaddingException,IllegalBlockSizeException,BadPaddingException,InvalidAlgorithmParameterException";
 			type = "byte[] "
-			modifier = "public"
+			modifier = "private"
 			parameters = "byte[] data,SecretKey key,String encryptPassingArgument"
 			index = 0
 			body =  "{\n  byte[] ivb=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(ivb);\n  IvParameterSpec iv=new IvParameterSpec(ivb);\n  Cipher c=Cipher.getInstance(encryptPassingArgument);\n  c.init(Cipher.ENCRYPT_MODE,key,iv);\n  byte[] res=c.doFinal(data);\n  byte[] ret=new byte[res.length + ivb.length];\n  System.arraycopy(ivb,0,ret,0,ivb.length);\n  System.arraycopy(res,0,ret,ivb.length,ret.length);\n  return ret;\n}\n"
