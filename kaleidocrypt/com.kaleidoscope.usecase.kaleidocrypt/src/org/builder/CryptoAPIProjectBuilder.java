@@ -29,17 +29,17 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.moflon.core.utilities.LogUtils;
 import org.moflon.core.utilities.MoflonUtilitiesActivator;
 
-import com.caleidoscope.extensionpoint.ArtefactAdapter;
-import com.caleidoscope.extensionpoint.BXtool;
-import com.caleidoscope.extensionpoint.DeltaDiscovery;
-import com.caleidoscope.extensionpoint.Synchronizer;
+import com.kaleidoscope.extensionpoint.ArtefactAdapter;
+import com.kaleidoscope.extensionpoint.BXtool;
+import com.kaleidoscope.extensionpoint.Controller;
+import com.kaleidoscope.extensionpoint.DeltaDiscoverer;
 import com.kaleidoscope.implementation.artefactadapter.JavaArtefactAdapter;
 import com.kaleidoscope.implementation.artefactadapter.XMIArtefactAdapter;
 import com.kaleidoscope.implementation.tool.BxtendTool;
 import com.kaleidoscope.implementation.tool.EMoflonTool;
 
 import CryptoConfigToJava.CryptoConfigToJavaPackage;
-import CryptoJava.JavaPackage;
+import SimpleJava.JavaPackage;
 /**
  * @author Dusko
  * The class is used to build projects, which created by the NewCryptoAPIProject wizard.
@@ -52,13 +52,13 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 	private static ResourceSetImpl resourceSet = new ResourceSetImpl();
 	private IProject project;
 	private Path projectPath;
-	private DeltaDiscovery deltaDiscovery;
+	private DeltaDiscoverer deltaDiscoverer;
 	private ConfigJavaFilesRelation configJavaFilesRelation;
 	
-	private static final String ARTEFACT_ADAPTER_EXTENSON_ID = "com.caleidoscope.extensionpoint.artefactadapter";
-	private static final String DELTA_DISCOVER_EXTENSON_ID = "com.caleidoscope.extensionpoint.deltadiscover";
-	private static final String SYNCHRONIZER_EXTENSON_ID = "com.caleidoscope.extensionpoint.synchronizer";
-	private static final String BXTOOL_EXTENSON_ID = "com.caleidoscope.extensionpoint.bxtool";
+	private static final String ARTEFACT_ADAPTER_EXTENSON_ID = "com.kaleidoscope.extensionpoint.artefactadapter";
+	private static final String DELTA_DISCOVER_EXTENSON_ID = "com.kaleidoscope.extensionpoint.deltadiscoverer";
+	private static final String CONTROLLER_EXTENSON_ID = "com.kaleidoscope.extensionpoint.controller";
+	private static final String BXTOOL_EXTENSON_ID = "com.kaleidoscope.extensionpoint.bxtool";
 	
 	
 	private static final Logger logger = Logger.getLogger(CryptoAPIProjectBuilder.class);
@@ -69,7 +69,7 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 	public CryptoAPIProjectBuilder() {
 		// Set up a simple configuration that logs on the console.	
 	    BasicConfigurator.configure();
-	    deltaDiscovery = deltaDiscoveryFactory("default").get();
+	    deltaDiscoverer = deltaDiscoveryFactory("default").get();
 	}
 	
 	
@@ -99,7 +99,7 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
         
         return Optional.empty();
     }
-	private Optional<DeltaDiscovery> deltaDiscoveryFactory(String type) {
+	private Optional<DeltaDiscoverer> deltaDiscoveryFactory(String type) {
         IConfigurationElement[] config = Platform.getExtensionRegistry().getConfigurationElementsFor(DELTA_DISCOVER_EXTENSON_ID);
         try {
         	
@@ -110,8 +110,8 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
             	if(typeAttribute.equals(Optional.of(type))){
             			                
 	                final Object o = e.createExecutableExtension("class");
-	                if (o instanceof DeltaDiscovery) {
-	                	return Optional.of((DeltaDiscovery)o);
+	                if (o instanceof DeltaDiscoverer) {
+	                	return Optional.of((DeltaDiscoverer)o);
 	                }
             	}
             }
@@ -120,8 +120,8 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
         }
         return Optional.empty();
     }
-	private Optional<Synchronizer> synchronizerFactory(String type) {
-        IConfigurationElement[] config = Platform.getExtensionRegistry().getConfigurationElementsFor(SYNCHRONIZER_EXTENSON_ID);
+	private Optional<Controller> controllerFactory(String type) {
+        IConfigurationElement[] config = Platform.getExtensionRegistry().getConfigurationElementsFor(CONTROLLER_EXTENSON_ID);
         try {
             for (IConfigurationElement e : config) {
             	
@@ -130,8 +130,8 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
             	if(typeAttribute.equals(Optional.of(type))){
 	                
 	                final Object o = e.createExecutableExtension("class");
-	                if (o instanceof Synchronizer) {
-	                	return Optional.of((Synchronizer) o);
+	                if (o instanceof Controller) {
+	                	return Optional.of((Controller) o);
 	                }
             	}
             }
@@ -240,17 +240,17 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		
 		// it is used by a tool for example emoflon to save corresponding model, sync protocol, source, target model...
 		Path persistanceDir = projectPath.resolve(Paths.get("models", "gen", configFileName));
-		Synchronizer synchronizer = synchronizerFactory("default").get();
+		Controller controller = controllerFactory("default").get();
 		
 		BXtool tool = bxToolFactory(bxToolType, persistanceDir).get();
-		synchronizer.initialize(tool, deltaDiscovery, deltaArtefactAdapter);
+		controller.initialize(tool, deltaDiscoverer, deltaArtefactAdapter);
 		
-		synchronizer.setSourceArtefactAdapter(configArtefactAdapter);
-		synchronizer.setTargetArtefactAdapter(cryptoJavaArtefactAdapter);
-		synchronizer.setDeltaPath(absDeltaPath);
+		controller.setSourceArtefactAdapter(configArtefactAdapter);
+		controller.setTargetArtefactAdapter(cryptoJavaArtefactAdapter);
+		controller.setDeltaPath(absDeltaPath);
 		
-		synchronizer.syncForwardFromDelta();
-		synchronizer.persistModels();
+		controller.syncForwardFromDelta();
+		controller.persistModels();
 		
 		project.getFolder("src").refreshLocal(IResource.DEPTH_INFINITE, null);
 		project.getFolder("models").refreshLocal(IResource.DEPTH_INFINITE, null);
@@ -281,15 +281,15 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		ArtefactAdapter deltaArtefactAdapter = artefactAdapterFactory("xmi", resourceSet).get();
 		
 		Path persistanceDir = projectPath.resolve(Paths.get("models", "gen", configFileName));
-		Synchronizer synchronizer = synchronizerFactory("default").get();
+		Controller controller = controllerFactory("default").get();
 		BXtool tool = bxToolFactory(bxToolType, persistanceDir).get();
 		
-		synchronizer.initialize(tool, deltaDiscovery, deltaArtefactAdapter);
-		synchronizer.setSourceArtefactAdapter(configArtefactAdapter);
-		synchronizer.setTargetArtefactAdapter(cryptoJavaEditor);
-		synchronizer.setDeltaPath(absDeltaPath);
-		synchronizer.syncBackwardFromDelta();
-		synchronizer.persistModels();
+		controller.initialize(tool, deltaDiscoverer, deltaArtefactAdapter);
+		controller.setSourceArtefactAdapter(configArtefactAdapter);
+		controller.setTargetArtefactAdapter(cryptoJavaEditor);
+		controller.setDeltaPath(absDeltaPath);
+		controller.syncBackwardFromDelta();
+		controller.persistModels();
 		
 		project.getFolder("src").refreshLocal(IResource.DEPTH_INFINITE, null);
 		project.getFolder("models").refreshLocal(IResource.DEPTH_INFINITE, null);
@@ -311,9 +311,9 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		
 		Path persistanceDir = projectPath.resolve(Paths.get("models", "gen", configurationFileName));
 		
-		Synchronizer synchronizer = synchronizerFactory("default").get();
+		Controller controller = controllerFactory("default").get();
 		BXtool tool = bxToolFactory(bxToolType, persistanceDir).get();
-		synchronizer.initialize(tool, deltaDiscovery, null);
+		controller.initialize(tool, deltaDiscoverer, null);
 		
 		ArtefactAdapter configArtefactAdapter = artefactAdapterFactory("xmi", resourceSet).get();
 		configArtefactAdapter.setParseSource(absoluteConfigurationPath);
@@ -321,11 +321,11 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		ArtefactAdapter cryptoJavaArtefactAdapter = artefactAdapterFactory("java", resourceSet).get();
 		cryptoJavaArtefactAdapter.setUnParseSource(projectPath);		
 		
-		synchronizer.setSourceArtefactAdapter(configArtefactAdapter);
-		synchronizer.setTargetArtefactAdapter(cryptoJavaArtefactAdapter);
+		controller.setSourceArtefactAdapter(configArtefactAdapter);
+		controller.setTargetArtefactAdapter(cryptoJavaArtefactAdapter);
 				
-		synchronizer.sourceToTargetTransformation(Optional.of(this::cryptoJavaModelPostProcessing));
-		synchronizer.persistModels();
+		controller.sourceToTargetTransformation(Optional.of(this::cryptoJavaModelPostProcessing));
+		controller.persistModels();
 		
 		logger.info("Transformation from " + configurationFileName + " to a java mode is finished!");
 		project.getFolder("src").refreshLocal(IResource.DEPTH_INFINITE, monitor);

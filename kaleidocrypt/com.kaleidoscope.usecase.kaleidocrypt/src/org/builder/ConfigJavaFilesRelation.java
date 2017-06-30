@@ -12,10 +12,10 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
-import com.caleidoscope.extensionpoint.ArtefactAdapter;
+import com.kaleidoscope.extensionpoint.ArtefactAdapter;
 
-import CryptoJava.JavaCompilationUnit;
-import CryptoJava.JavaPackage;
+import SimpleJava.JavaCompilationUnit;
+import SimpleJava.JavaPackage;
 
 /**
  * @class ConfigJavaFilesRelation is used to find all the configuration models in a project and the corresponding java files.

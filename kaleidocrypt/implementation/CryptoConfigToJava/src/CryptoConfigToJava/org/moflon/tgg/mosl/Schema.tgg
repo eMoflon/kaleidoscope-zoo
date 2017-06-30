@@ -1,5 +1,5 @@
 // Add imports here
-#import "platform:/plugin/CryptoJava/model/CryptoJava.ecore"
+#import "platform:/plugin/SimpleJava/model/SimpleJava.ecore"
 #import "platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore"
 
 #schema CryptoConfigToJava
@@ -9,7 +9,7 @@
 }
 
 #target { 
-	CryptoJava
+	SimpleJava
 } 
 
 #correspondence {

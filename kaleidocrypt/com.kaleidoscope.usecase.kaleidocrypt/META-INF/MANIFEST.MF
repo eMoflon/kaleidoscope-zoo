@@ -5,7 +5,7 @@ Bundle-SymbolicName: com.kaleidoscope.usecase.kaleidocrypt;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: KALEIDOSCOPE
 Require-Bundle: org.eclipse.emf.ecore,
- CryptoJava,
+ SimpleJava,
  org.eclipse.core.runtime,
  org.eclipse.jdt.core,
  org.apache.commons.lang3,

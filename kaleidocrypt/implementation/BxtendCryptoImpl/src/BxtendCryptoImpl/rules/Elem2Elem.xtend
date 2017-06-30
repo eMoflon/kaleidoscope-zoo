@@ -8,9 +8,9 @@ import org.eclipse.emf.ecore.EClass
 import org.eclipse.emf.ecore.util.EcoreUtil
 import java.util.Map
 import CryptoAPIConfig.CryptoAPIConfigFactory
-import CryptoJava.CryptoJavaFactory
+import SimpleJava.SimpleJavaFactory
 import CryptoAPIConfig.CryptoAPIConfigPackage
-import CryptoJava.CryptoJavaPackage
+import SimpleJava.SimpleJavaPackage
 import BxtendCryptoImpl.BxtendCryptoImplFactory
 import BxtendCryptoImpl.Transformation
 import BxtendCryptoImpl.Corr
@@ -23,10 +23,10 @@ abstract class Elem2Elem {
 	protected Resource corrModel
 	
 	protected val sourceFactory = CryptoAPIConfigFactory::eINSTANCE
-	protected val targetFactory = CryptoJavaFactory::eINSTANCE
+	protected val targetFactory = SimpleJavaFactory::eINSTANCE
 	protected val corrFactory = BxtendCryptoImplFactory::eINSTANCE
 	protected val sourcePackage = CryptoAPIConfigPackage::eINSTANCE
-	protected val targetPackage = CryptoJavaPackage::eINSTANCE
+	protected val targetPackage = SimpleJavaPackage::eINSTANCE
 	
 	protected var String ruleID
 	
@@ -90,7 +90,7 @@ abstract class Elem2Elem {
 			corr = corrFactory.createBasicElem => [
 			if (obj.eClass.EPackage instanceof CryptoAPIConfigPackage)
 				sourceElement = obj
-			if (obj.eClass.EPackage instanceof CryptoJavaPackage)
+			if (obj.eClass.EPackage instanceof SimpleJavaPackage)
 				targetElement = obj
 			desc = description
 			]

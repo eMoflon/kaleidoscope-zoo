@@ -5,7 +5,7 @@ import java.util.function.Consumer;
 
 import org.eclipse.emf.ecore.EObject;
 
-import com.caleidoscope.extensionpoint.ArtefactAdapter;
+import com.kaleidoscope.extensionpoint.ArtefactAdapter;
 
 /**
  * @author Dusko

@@ -14,7 +14,7 @@ Export-Package: BxtendCryptoImpl,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  CryptoAPIConfig,
- CryptoJava,
+ SimpleJava,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.xtend.lib,
  org.eclipse.xtend.lib.macro
