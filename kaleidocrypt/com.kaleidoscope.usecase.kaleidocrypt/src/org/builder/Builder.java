@@ -15,7 +15,7 @@ public interface Builder {
 
 	
 	void transformConfig(Optional<Consumer<EObject>>targetModelPostProcessing);
-	void transformCryptoJava();
+	void transformSimpleJava();
 	public void syncCode();
 	public void syncConfig();
 	public void persistModels(String pathOfCorrModel, String pathForSyncProtocolModel, String pathForSrcModel, String pathForTargetModel);

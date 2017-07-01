@@ -6,4 +6,11 @@
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package class="CryptoConfigToJava.Rules.RulesPackage" genModel="model/CryptoConfigToJava.genmodel" uri="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules"/>
   </extension>
+  <extension
+        point="com.kaleidoscope.extensionpoint.bxtool">
+     <client
+           class="CryptoConfigToJava.org.moflon.EMoflonTool"
+           name="emoflon">
+     </client>
+  </extension>
 </plugin>

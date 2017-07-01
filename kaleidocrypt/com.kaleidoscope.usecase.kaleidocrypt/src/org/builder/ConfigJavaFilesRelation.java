@@ -9,10 +9,10 @@ import java.util.Set;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
 import com.kaleidoscope.extensionpoint.ArtefactAdapter;
+import com.kaleidoscope.implementation.controller.ComponentFactory;
 
 import SimpleJava.JavaCompilationUnit;
 import SimpleJava.JavaPackage;
@@ -33,7 +33,7 @@ public class ConfigJavaFilesRelation {
 	 */
 	private HashMap<String, ArrayList<Path>> configurationModelJavaFiles;
 	private HashMap<Path, String> javaFileConfigurationModel;
-	private ArtefactAdapter editor = null;
+	private ArtefactAdapter javaXMIArtefactAdapter = null;
 	
 	public ConfigJavaFilesRelation(IProject project, ResourceSet resourceSet){
 		this.project = project;
@@ -74,10 +74,9 @@ public class ConfigJavaFilesRelation {
 			// parse fwd.trg.xmi to get JavaPackage which is then used to extract paths of all compilation units(java files) 
 			// contained inside the JavaPackage
 			
-			editor = CryptoAPIProjectBuilder.artefactAdapterFactory("xmi", resourceSet).get();			
-			editor.setParseSource(javaModelFileLocation);			
 			
-			JavaPackage javaPackage = (JavaPackage)editor.parse();
+			javaXMIArtefactAdapter = ComponentFactory.getInstance().getSourceArtefactAdapter().get();						
+			JavaPackage javaPackage = (JavaPackage)javaXMIArtefactAdapter.parse(javaModelFileLocation);
 			
 			if(javaPackage == null)
 				return false;

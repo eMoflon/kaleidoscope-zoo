@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: BxtendCryptoImpl;singleton:=true
+Bundle-SymbolicName: com.kaleidoscope.usecase.kaleidocrypt.bxtend;singleton:=true
 Bundle-Version: 1.0.0
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -17,5 +17,8 @@ Require-Bundle: org.eclipse.core.runtime,
  SimpleJava,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.xtend.lib,
- org.eclipse.xtend.lib.macro
+ org.eclipse.xtend.lib.macro,
+ com.kaleidoscope.core,
+ org.moflon.tgg.runtime,
+ org.moflon.core.utilities
 Bundle-ActivationPolicy: lazy
