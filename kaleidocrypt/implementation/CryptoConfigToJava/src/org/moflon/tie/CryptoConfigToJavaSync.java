@@ -24,9 +24,9 @@ public class CryptoConfigToJavaSync extends SynchronizationHelper{
 		CryptoConfigToJavaSync helper = new CryptoConfigToJavaSync();
 
 		// Adjust values as required
-		String delta = "instances/fwd.trg.delta.xmi";
+		String delta = "instances/fwd.src.delta.xmi";
 		String corr  = "instances/fwd.corr.xmi";
-		BiConsumer<String, String> synchronizer = helper::syncBackward;
+		BiConsumer<String, String> synchronizer = helper::syncForward;
 		
 		// Propagate changes
 		synchronizer.accept(corr, delta);

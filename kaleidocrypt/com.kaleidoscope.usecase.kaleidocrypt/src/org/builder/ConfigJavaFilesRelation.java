@@ -9,7 +9,6 @@ import java.util.Set;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.emf.ecore.resource.ResourceSet;
 
 import com.kaleidoscope.extensionpoint.ArtefactAdapter;
 import com.kaleidoscope.implementation.controller.ComponentFactory;
@@ -24,9 +23,7 @@ import SimpleJava.JavaPackage;
  */
 public class ConfigJavaFilesRelation {
 
-	private IProject project;
 	private Path projectPath;
-	private ResourceSet resourceSet;
 	/**
 	 * It is used to relate a configuration file with a java paths. Configuration file is represented with the file name, while java file 
 	 * is represented with a path relative to the project in which the file is present.
@@ -35,10 +32,8 @@ public class ConfigJavaFilesRelation {
 	private HashMap<Path, String> javaFileConfigurationModel;
 	private ArtefactAdapter javaXMIArtefactAdapter = null;
 	
-	public ConfigJavaFilesRelation(IProject project, ResourceSet resourceSet){
-		this.project = project;
-		this.projectPath = Paths.get(project.getLocation().toString());
-		this.resourceSet = resourceSet;
+	public ConfigJavaFilesRelation(IProject project){
+		this.projectPath = Paths.get(project.getLocation().toString());		
 		configurationModelJavaFiles = new HashMap<String, ArrayList<Path>>();
 		javaFileConfigurationModel = new HashMap<Path, String>();
 	}

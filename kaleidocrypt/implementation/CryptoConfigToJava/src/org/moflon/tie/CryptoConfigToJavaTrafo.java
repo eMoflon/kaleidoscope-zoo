@@ -25,8 +25,8 @@ public class CryptoConfigToJavaTrafo extends SynchronizationHelper{
 		helper.performForward("instances/fwd.src.xmi");
 		
 		// Backward Transformation
-		helper = new CryptoConfigToJavaTrafo();
-		helper.performBackward("instances/bwd.src.xmi");
+		//helper = new CryptoConfigToJavaTrafo();
+		//helper.performBackward("instances/bwd.src.xmi");
 	}
 
 	public void performForward() {

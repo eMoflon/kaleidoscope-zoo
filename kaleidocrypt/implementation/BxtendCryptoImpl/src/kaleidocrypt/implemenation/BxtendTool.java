@@ -17,8 +17,11 @@ import org.moflon.tgg.runtime.DeltaSpecification;
 import org.moflon.tgg.runtime.EMoflonEdge;
 
 import com.kaleidoscope.extensionpoint.BXtool;
+import com.kaleidoscope.ui.delta.javabased.JavaBasedDelta;
+import com.kaleidoscope.ui.delta.javabased.operational.OperationalJavaBasedDelta;
 
 import BxtendCryptoImpl.rules.BxtendCryptoImplTransformation;
+import Deltameta.OperationalDelta;
 
 public class BxtendTool  implements BXtool{
 	
@@ -154,12 +157,7 @@ public class BxtendTool  implements BXtool{
 		f2pt.sourceToTarget();
 		
 		target = targetRes.getContents().get(0);
-		corr = corrRes.getContents().get(0);
-		
-		/*Transformation trans = (Transformation)corr;
-		trans.setSourceModel(source);
-		trans.setTargetModel(target);
-		*/
+		corr = corrRes.getContents().get(0);		
 	}
 	public void targetToSourceTransformation(){
 		
@@ -190,12 +188,67 @@ public class BxtendTool  implements BXtool{
 	}
 	public void setWorkingDirectory(Path persistanceDirectory){
 		this.persistanceDirectory = persistanceDirectory;
+		loadTriple();
 	}
 	public Path getWorkingDirectory(){
 		return persistanceDirectory;
 	}
 	@Override
 	public void setResourceSet(ResourceSet resourceSet) {
+		this.set = resourceSet;
+		
+	}
+	@Override
+	public void syncForwardFromPathToDelta(Path absPathToDeltaSpec) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void syncForwardFromJavaBasedDelta(JavaBasedDelta javaBasedDelta) {
+		loadTriple();
+		OperationalJavaBasedDelta operationalJavaBasedDelta = (OperationalJavaBasedDelta)javaBasedDelta;
+		Consumer<EObject> delta = operationalJavaBasedDelta.executeOperationalDelta();
+
+		delta.accept(source);
+				
+		Resource sourceRes = set.createResource(URI.createURI("sourceModel.task"));
+		Resource  targetRes = set.createResource(URI.createURI("targetModel.package"));
+		Resource corrRes = set.createResource(URI.createURI("corrModel.corr"));
+		
+		sourceRes.getContents().add(source);
+		targetRes.getContents().add(target);
+		corrRes.getContents().add(corr);
+		
+		BxtendCryptoImplTransformation f2pt =  new BxtendCryptoImplTransformation(sourceRes, targetRes, corrRes);
+		f2pt.sourceToTarget();	
+		
+	}
+	@Override
+	public void syncForwardFromOperationalDelta(OperationalDelta operationalDelta) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void syncBackwardFromJavaBasedDelta(JavaBasedDelta javaBasedDelta) {
+		loadTriple();
+		OperationalJavaBasedDelta operationalJavaBasedDelta = (OperationalJavaBasedDelta)javaBasedDelta;
+		Consumer<EObject> delta = operationalJavaBasedDelta.executeOperationalDelta();
+		
+		delta.accept(target);
+		
+		Resource sourceRes = set.createResource(URI.createURI("sourceModel.task"));
+		Resource  targetRes = set.createResource(URI.createURI("targetModel.package"));
+		Resource corrRes = set.createResource(URI.createURI("corrModel.corr"));
+		
+		sourceRes.getContents().add(source);
+		targetRes.getContents().add(target);
+		corrRes.getContents().add(corr);
+		
+		BxtendCryptoImplTransformation f2pt =  new BxtendCryptoImplTransformation(sourceRes, targetRes, corrRes);
+		f2pt.targetToSource();
+	}
+	@Override
+	public void syncBackwardFromOperationalDelta(OperationalDelta operatinalDelta) {
 		// TODO Auto-generated method stub
 		
 	}

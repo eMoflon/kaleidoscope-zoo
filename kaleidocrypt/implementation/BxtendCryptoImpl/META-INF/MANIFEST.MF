@@ -20,5 +20,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.xtend.lib.macro,
  com.kaleidoscope.core,
  org.moflon.tgg.runtime,
- org.moflon.core.utilities
+ org.moflon.core.utilities,
+ com.kaleidoscope.ui,
+ com.kaleidoscope.core.delta.metamodel
 Bundle-ActivationPolicy: lazy

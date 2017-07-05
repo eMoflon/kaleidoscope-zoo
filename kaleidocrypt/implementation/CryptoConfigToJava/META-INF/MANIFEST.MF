@@ -18,7 +18,9 @@ Require-Bundle: org.eclipse.emf.ecore,
  CryptoAPIConfig;bundle-version="1.0.0",
  SimpleJava;bundle-version="1.0.0",
  org.moflon.tgg.language;bundle-version="2.1.0",
- org.moflon.tgg.runtime;bundle-version="2.0.0"
+ org.moflon.tgg.runtime;bundle-version="2.0.0",
+ com.kaleidoscope.core.delta.metamodel,
+ com.kaleidoscope.ui
 Bundle-ManifestVersion: 2
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

@@ -86,4 +86,14 @@
          </run>
       </builder>
    </extension>
+   <extension
+         point="com.kaleidoscope.extensionpoint.componentbuilder">
+      <client
+            componentFactoryID="kaleidocrypt"
+            deltaArtefactAdapterID="com.kaleidoscope.implementation.artefactadapter.XMIArtefactAdapter"
+            sourceArtefactAdapterID="com.kaleidoscope.implementation.artefactadapter.XMIArtefactAdapter"
+            targetArtefactAdapterID="com.kaleidoscope.implementation.artefactadapter.JavaArtefactAdapter"
+            toolName="bxtend">
+      </client>
+   </extension>
 </plugin>

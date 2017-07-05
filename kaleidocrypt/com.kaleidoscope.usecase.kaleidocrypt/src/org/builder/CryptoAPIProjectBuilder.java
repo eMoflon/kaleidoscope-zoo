@@ -1,7 +1,6 @@
 package org.builder;
 
 
-import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -22,9 +21,8 @@ import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.moflon.core.utilities.MoflonUtilitiesActivator;
 
+import com.kaleidoscope.implementation.controller.ComponentFactory;
 import com.kaleidoscope.implementation.controller.ControllerImpl;
 
 import SimpleJava.JavaPackage;
@@ -37,23 +35,20 @@ import SimpleJava.JavaPackage;
  */
 public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implements IResourceDeltaVisitor, ControllerImpl {
 	
-	private static ResourceSetImpl resourceSet = new ResourceSetImpl();
 	private IProject project;
 	private Path projectPath;
-	//private DeltaDiscoverer deltaDiscoverer;
+
 	private ConfigJavaFilesRelation configJavaFilesRelation;
-	
-	
+	private final String COMPONENT_FACTORY_ID = "kaleidocrypt";
 	
 	private static final Logger logger = Logger.getLogger(CryptoAPIProjectBuilder.class);
-	URL pathToTGGtransProjet  = MoflonUtilitiesActivator.getPathRelToPlugIn(".", "CryptoConfigToJava");
 	IProgressMonitor monitor;
-	String bxToolType = "emoflon";
+	
 	
 	public CryptoAPIProjectBuilder() {
+		ComponentFactory.COMPONENT_FACTORY_ID = COMPONENT_FACTORY_ID;
 		// Set up a simple configuration that logs on the console.	
 	    BasicConfigurator.configure();
-	    //deltaDiscoverer = deltaDiscoveryFactory("default").get();
 	}
 	
 	
@@ -69,8 +64,7 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		this.monitor = monitor;
 		projectPath = Paths.get(project.getLocation().toString());
 		
-		resourceSet = new ResourceSetImpl();
-		this.configJavaFilesRelation  = new ConfigJavaFilesRelation(project, resourceSet);
+		this.configJavaFilesRelation  = new ConfigJavaFilesRelation(project);
 		
 		switch (kind) {
 		case CLEAN_BUILD:
@@ -202,13 +196,13 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		
 		if(configFileMatcher.matches()){
 			
-			if(delta.getKind() == delta.ADDED){
+			if(delta.getKind() == IResourceDelta.ADDED){
 				
 				logger.info("ADDED change on a configuration model is detected!");
 				Path absConfigModelPath = Paths.get(delta.getResource().getLocation().toString());
 				transformForward(absConfigModelPath);	
 			}
-			if(delta.getKind() == delta.CHANGED  && 
+			if(delta.getKind() == IResourceDelta.CHANGED  && 
 				configJavaFilesRelation.configurationExists(fileName)){
 		
 				logger.info("CHANGED change on a configuration model is detected!");
@@ -218,7 +212,7 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		}else if(javaFileMatcher.matches() && 
 				configJavaFilesRelation.javaFileExists(absFilePath)){
 			
-			if(delta.getKind() == delta.CHANGED){
+			if(delta.getKind() == IResourceDelta.CHANGED){
 				logger.info("CHANGED change on the java file is detected!");
 				String configFileName = configJavaFilesRelation.getConfigurationModel(absFilePath);
 				syncBackward(configFileName);

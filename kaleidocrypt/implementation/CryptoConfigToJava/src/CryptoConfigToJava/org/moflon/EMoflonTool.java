@@ -1,7 +1,5 @@
 package CryptoConfigToJava.org.moflon;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.net.URL;
 import java.nio.file.Path;
 import java.util.function.BiConsumer;
@@ -10,11 +8,9 @@ import java.util.function.Consumer;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.moflon.core.utilities.MoflonUtilitiesActivator;
 import org.moflon.core.utilities.eMoflonEMFUtil;
@@ -25,8 +21,11 @@ import org.moflon.tgg.runtime.DeltaSpecification;
 import org.moflon.tgg.runtime.EMoflonEdge;
 
 import com.kaleidoscope.extensionpoint.BXtool;
+import com.kaleidoscope.ui.delta.javabased.JavaBasedDelta;
+import com.kaleidoscope.ui.delta.javabased.operational.OperationalJavaBasedDelta;
 
 import CryptoConfigToJava.CryptoConfigToJavaPackage;
+import Deltameta.OperationalDelta;
 
 
 
@@ -89,9 +88,15 @@ public class EMoflonTool implements BXtool{
 		helper.integrateBackward();		
 	}
 	public EObject getSourceModel(){
+		if(helper.getSrc() == null){
+			loadTriple(persistanceDirectory.resolve(corrModelFileName));
+		}
 		return helper.getSrc();
 	}
 	public EObject getTargetModel(){
+		if(helper.getTrg() == null){
+			loadTriple(persistanceDirectory.resolve(corrModelFileName));
+		}
 		return helper.getTrg();
 	}
 	public void setSourceModel(EObject sourceModel){
@@ -130,7 +135,7 @@ public class EMoflonTool implements BXtool{
 	   {
 	      DeltaSpecification localDeltaSpec = (DeltaSpecification) loadModel(pathToDelta);
 	      EcoreUtil.resolveAll(localDeltaSpec);
-	      DeltaSpecification deltaSpec = EcoreUtil.copy(localDeltaSpec);
+	      //DeltaSpecification deltaSpec = EcoreUtil.copy(localDeltaSpec);
 	      
 	      return (input) -> {    	  
 	    	  // Added edges (nodes are indirectly added)
@@ -155,4 +160,50 @@ public class EMoflonTool implements BXtool{
 	      Resource r = set.getResource(eMoflonEMFUtil.createFileURI(path, true), true);
 	      return r.getContents().get(0);
 	   }
+
+
+	@Override
+	public void syncForwardFromPathToDelta(Path absPathToDeltaSpec) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void syncForwardFromJavaBasedDelta(JavaBasedDelta javaBasedDelta) {
+		OperationalJavaBasedDelta operationalJavaBasedDelta = (OperationalJavaBasedDelta)javaBasedDelta;
+		Consumer<EObject> delta = operationalJavaBasedDelta.executeOperationalDelta();
+		
+		loadTriple(persistanceDirectory.resolve(corrModelFileName));
+		helper.loadSynchronizationProtocol(persistanceDirectory.resolve(syncProtocolFileName).toString());
+		helper.setChangeSrc(delta);
+		
+		helper.integrateForward();
+	}
+
+
+	@Override
+	public void syncForwardFromOperationalDelta(OperationalDelta operationalDelta) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void syncBackwardFromJavaBasedDelta(JavaBasedDelta javaBasedDelta) {
+		OperationalJavaBasedDelta operationalJavaBasedDelta = (OperationalJavaBasedDelta)javaBasedDelta;
+		Consumer<EObject> delta = operationalJavaBasedDelta.executeOperationalDelta();
+		loadTriple(persistanceDirectory.resolve(corrModelFileName));
+		helper.loadSynchronizationProtocol(persistanceDirectory.resolve(syncProtocolFileName).toString());
+		helper.setChangeTrg(delta);
+			
+		helper.integrateBackward();	
+	}
+
+
+	@Override
+	public void syncBackwardFromOperationalDelta(Deltameta.OperationalDelta operatinalDelta) {
+		// TODO Auto-generated method stub
+		
+	}
 }
