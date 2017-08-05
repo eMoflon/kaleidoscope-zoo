@@ -16,7 +16,7 @@ import org.moflon.tgg.runtime.AttributeDelta;
 import org.moflon.tgg.runtime.DeltaSpecification;
 import org.moflon.tgg.runtime.EMoflonEdge;
 
-import com.kaleidoscope.extensionpoint.BXtool;
+import com.kaleidoscope.extensionpoint.bxtool.BXtool;
 import com.kaleidoscope.ui.delta.javabased.JavaBasedDelta;
 import com.kaleidoscope.ui.delta.javabased.operational.OperationalJavaBasedDelta;
 

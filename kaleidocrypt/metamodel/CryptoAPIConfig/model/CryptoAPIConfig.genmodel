@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/CryptoAPIConfig/gen" modelPluginID="CryptoAPIConfig"
+    modelName="CryptoAPIConfig" updateClasspath="false" codeFormatting="true" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true">
+  <foreignModel>CryptoAPIConfig.ecore</foreignModel>
+  <genPackages prefix="CryptoAPIConfig" disposableProviderFactory="true" ecorePackage="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//SECURITY">
+      <genEnumLiterals ecoreEnumLiteral="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//SECURITY/BROKEN"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//SECURITY/WEAK"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//SECURITY/MEDIUM"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//SECURITY/STRONG"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//PERFORMANCE">
+      <genEnumLiterals ecoreEnumLiteral="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//PERFORMANCE/VERY_SLOW"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//PERFORMANCE/SLOW"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//PERFORMANCE/MEDIUM"/>
+      <genEnumLiterals ecoreEnumLiteral="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//PERFORMANCE/STRONG"/>
+    </genEnums>
+    <genClasses ecoreClass="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Task">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Task/package"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Task/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Task/algorithms"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//CodeConfiguration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//CodeConfiguration/keystore"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//CodeConfiguration/server"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//CodeConfiguration/keystorePassword"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//KeyDerivationAlgorithm">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//KeyDerivationAlgorithm/iterations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//KeyDerivationAlgorithm/outputSize"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//SecureConnection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//SecureConnection/config"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Digest">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Digest/outputSize"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//SymmetricBlockCipher">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//SymmetricBlockCipher/mode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//SymmetricBlockCipher/padding"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//SymmetricBlockCipher/keySize"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Import/value"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Algorithm">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Algorithm/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Algorithm/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Algorithm/security"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Algorithm/performance"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Algorithm/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Algorithm/includes"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

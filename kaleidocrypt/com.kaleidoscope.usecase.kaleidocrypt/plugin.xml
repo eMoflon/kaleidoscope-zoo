@@ -93,7 +93,7 @@
             deltaArtefactAdapterID="com.kaleidoscope.implementation.artefactadapter.XMIArtefactAdapter"
             sourceArtefactAdapterID="com.kaleidoscope.implementation.artefactadapter.XMIArtefactAdapter"
             targetArtefactAdapterID="com.kaleidoscope.implementation.artefactadapter.JavaArtefactAdapter"
-            toolName="bxtend">
+            toolName="emoflon">
       </client>
    </extension>
 </plugin>

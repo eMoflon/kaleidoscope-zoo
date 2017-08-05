@@ -2,6 +2,7 @@ package CryptoConfigToJava.org.moflon;
 
 import java.net.URL;
 import java.nio.file.Path;
+import java.util.Optional;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
@@ -20,16 +21,17 @@ import org.moflon.tgg.runtime.CorrespondenceModel;
 import org.moflon.tgg.runtime.DeltaSpecification;
 import org.moflon.tgg.runtime.EMoflonEdge;
 
-import com.kaleidoscope.extensionpoint.BXtool;
+import com.kaleidoscope.extensionpoint.UpdatePolicy;
+import com.kaleidoscope.extensionpoint.bxtool.BXtool;
+import com.kaleidoscope.extensionpoint.bxtool.SynchronizationReport;
 import com.kaleidoscope.ui.delta.javabased.JavaBasedDelta;
 import com.kaleidoscope.ui.delta.javabased.operational.OperationalJavaBasedDelta;
 
 import CryptoConfigToJava.CryptoConfigToJavaPackage;
-import Deltameta.OperationalDelta;
 
 
 
-public class EMoflonTool implements BXtool{
+public class EMoflonTool implements BXtool<EObject, EObject, Path>{
 
 	
 	private Path persistanceDirectory = null;
@@ -70,7 +72,15 @@ public class EMoflonTool implements BXtool{
 			System.err.println("Unable to load input triple for " + corrPath + ", " + iae.getMessage());
 		}
 	}
-	public void persistModels() {
+	@Override
+	public void restoreState(Path path){
+		persistanceDirectory = path;
+		loadTriple(path.resolve(corrModelFileName));
+	}
+	@Override
+	public void persistState(Path path) {
+		persistanceDirectory = path;
+		
 		helper.getSrc().eResource().setURI(URI.createFileURI(persistanceDirectory.resolve(sourceModelFileName).toString()));
 		helper.getTrg().eResource().setURI(URI.createFileURI(persistanceDirectory.resolve(targetModelFileName).toString()));
 		helper.getCorr().eResource().setURI(URI.createFileURI(persistanceDirectory.resolve(corrModelFileName).toString()));
@@ -80,13 +90,18 @@ public class EMoflonTool implements BXtool{
 		helper.saveSrc(persistanceDirectory.resolve(sourceModelFileName).toString());		
 		helper.saveTrg(persistanceDirectory.resolve(targetModelFileName).toString());
 	}
+	@Override
 	public void sourceToTargetTransformation(){
 		helper.integrateForward();
 		
 	}
+	
+	@Override
 	public void targetToSourceTransformation(){
 		helper.integrateBackward();		
 	}
+	
+	@Override
 	public EObject getSourceModel(){
 		if(helper.getSrc() == null){
 			loadTriple(persistanceDirectory.resolve(corrModelFileName));
@@ -162,48 +177,43 @@ public class EMoflonTool implements BXtool{
 	   }
 
 
-	@Override
-	public void syncForwardFromPathToDelta(Path absPathToDeltaSpec) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	@Override
-	public void syncForwardFromJavaBasedDelta(JavaBasedDelta javaBasedDelta) {
-		OperationalJavaBasedDelta operationalJavaBasedDelta = (OperationalJavaBasedDelta)javaBasedDelta;
-		Consumer<EObject> delta = operationalJavaBasedDelta.executeOperationalDelta();
-		
-		loadTriple(persistanceDirectory.resolve(corrModelFileName));
-		helper.loadSynchronizationProtocol(persistanceDirectory.resolve(syncProtocolFileName).toString());
-		helper.setChangeSrc(delta);
-		
-		helper.integrateForward();
-	}
-
-
-	@Override
-	public void syncForwardFromOperationalDelta(OperationalDelta operationalDelta) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	@Override
-	public void syncBackwardFromJavaBasedDelta(JavaBasedDelta javaBasedDelta) {
-		OperationalJavaBasedDelta operationalJavaBasedDelta = (OperationalJavaBasedDelta)javaBasedDelta;
-		Consumer<EObject> delta = operationalJavaBasedDelta.executeOperationalDelta();
-		loadTriple(persistanceDirectory.resolve(corrModelFileName));
-		helper.loadSynchronizationProtocol(persistanceDirectory.resolve(syncProtocolFileName).toString());
-		helper.setChangeTrg(delta);
+	 public Optional<SynchronizationReport> syncForwardFromJavaBasedDelta(JavaBasedDelta javaBasedDelta, Optional<UpdatePolicy<?>> updatePolicy){
+		 OperationalJavaBasedDelta operationalJavaBasedDelta = (OperationalJavaBasedDelta)javaBasedDelta;
+			Consumer<EObject> delta = operationalJavaBasedDelta.executeOperationalDelta();
 			
-		helper.integrateBackward();	
+			loadTriple(persistanceDirectory.resolve(corrModelFileName));
+			helper.loadSynchronizationProtocol(persistanceDirectory.resolve(syncProtocolFileName).toString());
+			helper.setChangeSrc(delta);
+			
+			helper.integrateForward();
+			return Optional.empty();
+	 }
+	 public Optional<SynchronizationReport> syncBackwardFromJavaBasedDelta(JavaBasedDelta javaBasedDelta, Optional<UpdatePolicy<?>> updatePolicy){
+		 OperationalJavaBasedDelta operationalJavaBasedDelta = (OperationalJavaBasedDelta)javaBasedDelta;
+			Consumer<EObject> delta = operationalJavaBasedDelta.executeOperationalDelta();
+			loadTriple(persistanceDirectory.resolve(corrModelFileName));
+			helper.loadSynchronizationProtocol(persistanceDirectory.resolve(syncProtocolFileName).toString());
+			helper.setChangeTrg(delta);
+				
+			helper.integrateBackward();	
+			
+			return Optional.empty();
+	 }
+
+
+	@Override
+	public void clear() {
+		// TODO Auto-generated method stub
+		
 	}
 
 
 	@Override
-	public void syncBackwardFromOperationalDelta(Deltameta.OperationalDelta operatinalDelta) {
+	public void initialize() {
 		// TODO Auto-generated method stub
 		
 	}
+
+	
+
 }
