@@ -3,12 +3,13 @@ package org.admin.ui.wizards.symmetric_encryption;
 import static org.moflon.core.utilities.WorkspaceHelper.addAllFolders;
 import static org.moflon.core.utilities.WorkspaceHelper.addAllFoldersAndFile;
 
+
+
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.jdt.internal.core.JavaProject;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
@@ -19,21 +20,17 @@ import org.eclipse.ui.PlatformUI;
 public class NewSymmetricEncryptionWizard extends Wizard implements INewWizard {
 
     private IStructuredSelection selection;
-    private NewSymmetricEncryptionWizardPage newFileWizardPage;
-    private IWorkbench workbench;
+    private NewSymmetricEncryptionWizardPage newFileWizardPage;    
     private IProject project = null;
 
     public static String NEW_SYMMETRIC_ENCRYPTION_WIZARD_ID = "kaleidoscope.usecase.crypto.wizards.NewSymmetricEncryptionWizard";
 
 	public NewSymmetricEncryptionWizard() {
-
         setWindowTitle("New SymmetricEncryption configuration model");
-
     } 
 
     @Override
     public void addPages() {
-
         newFileWizardPage = new NewSymmetricEncryptionWizardPage(selection, project);
         addPage(newFileWizardPage);
     }
@@ -41,6 +38,7 @@ public class NewSymmetricEncryptionWizard extends Wizard implements INewWizard {
     @Override
     public boolean performFinish() {
     	boolean creationAllowed = newFileWizardPage.getCreationAllowed();
+    	
     	if(creationAllowed){
     		System.out.println("Creating!");
     		String configName = newFileWizardPage.getConfigFileName();
@@ -100,29 +98,20 @@ public class NewSymmetricEncryptionWizard extends Wizard implements INewWizard {
 				e.printStackTrace();
 			}
     	}
-    public void init(IWorkbench workbench, IStructuredSelection selection) {
-        this.workbench = workbench;
+    public void init(IWorkbench workbench, IStructuredSelection selection) {        
         this.selection = selection;
         
         IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
         if (window != null)
-        {
-            //IStructuredSelection selection2 = (IStructuredSelection) window.getSelectionService().getSelection();
+        {           
             Object firstElement = selection.getFirstElement();
-            if (firstElement instanceof JavaProject)
+            if (firstElement instanceof IProject)
             {
                 project = (IProject)((IAdaptable)firstElement).getAdapter(IProject.class);
-                IPath path = project.getFullPath();               
+                  
             }
         }
         
     }
-    public IProject getProject() {
-		return project;
-	}
-
-	public void setProject(IProject project) {
-		this.project = project;
-	}
    
 }

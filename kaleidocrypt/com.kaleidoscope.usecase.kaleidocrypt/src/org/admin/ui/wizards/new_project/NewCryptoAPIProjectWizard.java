@@ -3,7 +3,6 @@ package org.admin.ui.wizards.new_project;
 import static org.moflon.core.utilities.WorkspaceHelper.addAllFolders;
 
 import java.lang.reflect.InvocationTargetException;
-
 import org.admin.ui.wizards.CryptoAPINature;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.ResourcesPlugin;
@@ -19,16 +18,7 @@ import org.eclipse.ui.IWorkbench;
 import org.moflon.core.utilities.WorkspaceHelper;
 import org.moflon.tgg.mosl.defaults.DefaultFilesHelper;
 
-/**
- * This is a sample new wizard. Its role is to create a new file 
- * resource in the provided container. If the container resource
- * (a folder or a project) is selected in the workspace 
- * when the wizard is opened, it will accept it as the target
- * container. The wizard creates one file with the extension
- * "mpe". If a sample multi-page editor (also available
- * as a template) is registered for the same extension, it will
- * be able to open it.
- */
+
 
 public class NewCryptoAPIProjectWizard extends Wizard implements INewWizard {
 	private NewCryptoAPIProjectWizardPage page;
@@ -53,8 +43,7 @@ public class NewCryptoAPIProjectWizard extends Wizard implements INewWizard {
 
 	/**
 	 * This method is called when 'Finish' button is pressed in
-	 * the wizard. We will create an operation and run it
-	 * using wizard as execution context.
+	 * the wizard. It creates a new project.
 	 */
 	public boolean performFinish() {
 		final String projectName = page.getProjectName();
@@ -82,12 +71,6 @@ public class NewCryptoAPIProjectWizard extends Wizard implements INewWizard {
 		}
 		return true;
 	}
-	
-	/**
-	 * The worker method. It will find the container, create the
-	 * file if missing or just replace its contents, and open
-	 * the editor on the newly created file.
-	 */
 
 	public void doFinish(String projectName, IProgressMonitor monitor)
 		throws CoreException {
@@ -103,17 +86,6 @@ public class NewCryptoAPIProjectWizard extends Wizard implements INewWizard {
 		addAllFolders(project, "src",subMon.split(1));
 		addAllFolders(project, "models",subMon.split(1));
 		addAllFolders(project, "models/gen",subMon.split(1));
-		
-		
-		/*IPath pathToInitialConfiguration = new Path("models/config.xmi");
-		String initialConfigurationfileContent = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" + 
-				"<CryptoAPIConfig:Task xmi:version=\"2.0\" xmlns:xmi=\"http://www.omg.org/XMI\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:CryptoAPIConfig=\"platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore\" package=\"com.java.Crypto\" description=\"SymmetricEncryption\">\n" + 
-				"  <imports value=\"com.java\"/>\n" + 
-				"  <algorithms xsi:type=\"CryptoAPIConfig:SymmetricBlockCipher\" name=\"AESS\" mode=\"GCM\" padding=\"PKCS5Padding\"/>\n" + 
-				"</CryptoAPIConfig:Task>\n" + 
-				"";
-		addAllFoldersAndFile(project, pathToInitialConfiguration, initialConfigurationfileContent, monitor);
-		*/
 	}
 	
 

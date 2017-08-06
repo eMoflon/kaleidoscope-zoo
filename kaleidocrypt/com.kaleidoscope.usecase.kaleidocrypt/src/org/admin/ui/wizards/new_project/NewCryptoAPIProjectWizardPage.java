@@ -12,18 +12,14 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 
 /**
- * The "New" wizard page allows setting the container for the new file as well
- * as the file name. The page will only accept file name without the extension
- * OR with the extension that matches the expected one (mpe).
+ * The "New" wizard page is used to provide text box for entering project name
  */
 
 public class NewCryptoAPIProjectWizardPage extends WizardPage {	
 	private Text projectText;
 
 	/**
-	 * Constructor for SampleNewWizardPage.
-	 * 
-	 * @param pageName
+	 * Constructor for NewCryptoAPIProjectWizardPage.	
 	 */
 	public NewCryptoAPIProjectWizardPage() {
 		super("wizardPage");
@@ -57,7 +53,7 @@ public class NewCryptoAPIProjectWizardPage extends WizardPage {
 	}
 
 	/**
-	 * Tests if the current workbench selection is a suitable container to use.
+	 * Initialize project text field with empty string
 	 */
 
 	private void initialize() {
@@ -66,7 +62,7 @@ public class NewCryptoAPIProjectWizardPage extends WizardPage {
 
 
 	/**
-	 * Ensures that both text fields are set.
+	 * Ensures that the text field is set.
 	 */
 
 	private void dialogChanged() {		
