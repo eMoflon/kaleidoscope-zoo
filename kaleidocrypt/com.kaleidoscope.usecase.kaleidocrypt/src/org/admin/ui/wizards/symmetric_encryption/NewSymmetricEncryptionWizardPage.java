@@ -1,31 +1,21 @@
 package org.admin.ui.wizards.symmetric_encryption;
 
-
-import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IProject;
-import org.eclipse.core.resources.IResource;
-import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IPath;
-import org.eclipse.core.runtime.Path;
-import org.eclipse.jdt.internal.core.JavaProject;
-import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
-import org.eclipse.swt.events.SelectionAdapter;
-import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
-import org.eclipse.ui.dialogs.ContainerSelectionDialog;
 
 /**
  * The "New" wizard page allows setting the container for the new file as well
@@ -35,8 +25,7 @@ import org.eclipse.ui.dialogs.ContainerSelectionDialog;
 
 public class NewSymmetricEncryptionWizardPage extends WizardPage {	
 	  private IStructuredSelection selection;
-	  private boolean creationAllowed = true;
-	  private IProject project = null;
+	  private boolean creationAllowed = true;	  
 	  
 	  private Text packageName;
 	  private Text configFileName;
@@ -55,8 +44,7 @@ public class NewSymmetricEncryptionWizardPage extends WizardPage {
 	 */
 	public NewSymmetricEncryptionWizardPage(IStructuredSelection selection, IProject project) {
 		super("wizardPage");
-		this.selection = selection;
-		this.project = project;
+		this.selection = selection;		
 		setTitle("New SymmetriEncryption wizard");
 		setDescription("This wizard creates a new SymmetricEncryption configuration model inside the models folder!");
 	}
@@ -79,16 +67,16 @@ public class NewSymmetricEncryptionWizardPage extends WizardPage {
 		String configFileName = getConfigFileName();
 		
 		if (packageName.length() == 0) {
-			updateStatus("Project name must be specified");
+			updateStatus("Package name must be specified");
 			return;
 		}
 		
 		if (configFileName.length() == 0) {
-			updateStatus("Project name must be specified");
+			updateStatus("Config file name must be specified");
 			return;
 		}
 		if (packageName.replace('\\', '/').indexOf('/', 1) > 0) {
-			updateStatus("Project name must be valid");
+			updateStatus("Package name must be valid");
 			return;
 		}
 		
@@ -135,25 +123,31 @@ public class NewSymmetricEncryptionWizardPage extends WizardPage {
 			}
 		});
 
-		
-		
 		initialize();
-		//dialogChanged();
 		setControl(container);
 		
 		
 		IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
 		
+		
+		// check if it is allowed to create a new project. First condition states that project needs to be selected and 
+		// the second that the project needs to be opened
         if (window != null)
         {
-            //IStructuredSelection selection2 = (IStructuredSelection) window.getSelectionService().getSelection();
             Object firstElement = selection.getFirstElement();
-            if (firstElement instanceof JavaProject)
+            if (firstElement instanceof IProject)
             {
                 IProject project = (IProject)((IAdaptable)firstElement).getAdapter(IProject.class);
                 IPath path = project.getFullPath();
-                System.out.println(path);
-                setCreationAllowed(true);
+                
+                if(project.isOpen()) {
+                	
+	                System.out.println(path);
+	                setCreationAllowed(true);
+                }else {
+                	setErrorMessage("A project needs to be opened in order to add the configuration model!");
+                	setCreationAllowed(false);
+                }
             }else{
             	setErrorMessage("A project needs to be selected in order to add the configuration model!");
             	setCreationAllowed(false);
