@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CryptoAPIConfig:Task
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:CryptoAPIConfig="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore"
+    package="Crypto"
+    description="SymmetricEncryption">
+  
+  <algorithms
+      xsi:type="CryptoAPIConfig:SymmetricBlockCipher"
+      name="RSA"
+      mode="GCM"
+      padding="PKCS5Padding">
+      <imports value="java.security.InvalidAlgorithmParameterException"/>
+  <imports value="java.security.InvalidKeyException"/>
+  <imports value="java.security.Key"/>
+  <imports value="java.security.NoSuchAlgorithmException"/>
+  <imports value="java.security.SecureRandom"/>
+  <imports value="javax.crypto.BadPaddingException"/>
+  <imports value="javax.crypto.Cipher"/>
+  <imports value="javax.crypto.IllegalBlockSizeException"/>
+  <imports value="javax.crypto.KeyGenerator"/>
+  <imports value="javax.crypto.NoSuchPaddingException"/>
+  <imports value="javax.crypto.SecretKey"/>
+  <imports value="javax.crypto.spec.IvParameterSpec"/>
+  <imports value="java.lang.NullPointerException"/>
+  <imports value="java.util.Calendar"/>
+  <imports value="java.util.Date"/>
+  </algorithms>
+</CryptoAPIConfig:Task>

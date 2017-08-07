@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Client">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="com.kaleidoscope.core.delta.metamodel.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/com.kaleidoscope.core.delta.metamodel/com.kaleidoscope.core.delta.metamodel">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="com.kaleidoscope.ui.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/com.kaleidoscope.ui/com.kaleidoscope.ui">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="com.kaleidoscope.core.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/com.kaleidoscope.core/com.kaleidoscope.core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="com.kaleidoscope.usecase.bxdemonstrator.bxtend.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/com.kaleidoscope.usecase.bxdemonstrator.bxtend/com.kaleidoscope.usecase.bxdemonstrator.bxtend">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="org.eclipse.xtext.xbase.lib_2.10.0.v201605250459.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/BenchmarxFamiliesToPersons/lib/eMoflon/org.eclipse.xtext.xbase.lib_2.10.0.v201605250459.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="com.google.gson_2.2.4.v201311231704.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/ECLIPSE_HOME/plugins/com.google.gson_2.2.4.v201311231704.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="guava-19.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/dusko/Downloads/guava-19.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/Client/build/classes"/>
+        <property name="context-root" value="Client"/>
+    </wb-module>
+</project-modules>

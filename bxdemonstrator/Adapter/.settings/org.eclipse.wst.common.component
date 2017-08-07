@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Adapter">
+        <wb-resource deploy-path="/" source-path="/src"/>
+        <dependent-module archiveName="com.kaleidoscope.core.delta.metamodel.jar" deploy-path="/" handle="module:/resource/com.kaleidoscope.core.delta.metamodel/com.kaleidoscope.core.delta.metamodel">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="com.kaleidoscope.core.jar" deploy-path="/" handle="module:/resource/com.kaleidoscope.core/com.kaleidoscope.core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
