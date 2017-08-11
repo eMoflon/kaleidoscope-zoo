@@ -3,8 +3,6 @@ package org.admin.ui.wizards.symmetric_encryption;
 import static org.moflon.core.utilities.WorkspaceHelper.addAllFolders;
 import static org.moflon.core.utilities.WorkspaceHelper.addAllFoldersAndFile;
 
-
-
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IAdaptable;

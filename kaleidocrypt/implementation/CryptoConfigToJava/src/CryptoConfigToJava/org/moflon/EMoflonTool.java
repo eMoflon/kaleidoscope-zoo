@@ -1,11 +1,13 @@
 package CryptoConfigToJava.org.moflon;
 
 import java.nio.file.Path;
+import java.util.Optional;
 import java.util.function.Consumer;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.moflon.tgg.algorithm.synchronization.SynchronizationHelper;
 import org.moflon.tgg.runtime.CorrespondenceModel;
@@ -13,6 +15,7 @@ import org.moflon.tgg.runtime.CorrespondenceModel;
 import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
 import com.kaleidoscope.core.framework.synchronisation.PersistentSynchroniser;
 
+import CryptoAPIConfig.CryptoAPIConfigFactory;
 import CryptoAPIConfig.Task;
 import SimpleJava.JavaPackage;
 
@@ -26,11 +29,12 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 	private String targetModelFileName = "fwd.trg.xmi";
 	private String corrModelFileName = "fwd.corr.xmi";
 	private String syncProtocolFileName = "fwd.protocol.xmi";
+	private Optional<Path> initialSourceModelPath;
 	
-	public  EMoflonTool(EPackage corrPackage, String pathToProject, ResourceSet resourceSet) {
+	public  EMoflonTool(EPackage corrPackage, String pathToProject, ResourceSet resourceSet, Optional<Path> initialSourceModelPath) {
 		
 		super(corrPackage, pathToProject, resourceSet);
-				
+		this.initialSourceModelPath = initialSourceModelPath;
 	}
 	
 	private void loadTriple(Path corrPath) {
@@ -56,6 +60,9 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 		
 		persistanceDirectory = path;
 		
+		if(getSrc() == null || getTrg() == null || getCorr() == null )
+			return;
+		
 		getSrc().eResource().setURI(URI.createFileURI(persistanceDirectory.resolve(sourceModelFileName).toString()));
 		getTrg().eResource().setURI(URI.createFileURI(persistanceDirectory.resolve(targetModelFileName).toString()));
 		getCorr().eResource().setURI(URI.createFileURI(persistanceDirectory.resolve(corrModelFileName).toString()));
@@ -70,11 +77,15 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 	public Task getSourceModel(){
 		
 		if(getSrc() == null){
-			loadTriple(persistanceDirectory.resolve(corrModelFileName));
+			Task task = CryptoAPIConfigFactory.eINSTANCE.createTask();
+			Resource resource = getResourceSet().createResource(URI.createURI("source.model"));
+			resource.getContents().add(task);
+			setSrc(task);
 		}
 		return (Task)getSrc();
 	}
 	
+	@Override
 	public JavaPackage getTargetModel(){
 		if(getTrg() == null){
 			loadTriple(persistanceDirectory.resolve(corrModelFileName));
@@ -82,7 +93,7 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 		return (JavaPackage)getTrg();
 	}
 	
-	
+	@Override
 	public void syncForward(OperationalDelta javaBasedDelta){
 		 
 		Consumer<EObject> delta = javaBasedDelta.executeOperationalDelta();
@@ -125,7 +136,10 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 
 	@Override
 	public void initialize() {
-		// TODO Auto-generated method stub
+		initialSourceModelPath.ifPresent((p) -> {
+			loadSrc(p.toString());			
+			integrateForward();	
+		});
 		
 	}
 
