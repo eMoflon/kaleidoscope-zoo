@@ -6,6 +6,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
+import java.util.regex.Matcher;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
@@ -77,7 +78,7 @@ public class ConfigJavaFilesRelation {
 				return false;
 			
 			// transform java package notation into a path 
-			String javaPackageStr = javaPackage.getName().replaceAll("\\.", File.separator);
+			String javaPackageStr = javaPackage.getName().replaceAll("\\.", Matcher.quoteReplacement(File.separator));
 			
 			// export all java file paths related to the javaPackage and add the corresponding relations
 			for (JavaCompilationUnit jcu : javaPackage.getCunits()) {
