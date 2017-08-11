@@ -70,21 +70,21 @@ public class ConfigurationModelToString {
       if ((alg instanceof SymmetricBlockCipher)) {
         _builder.newLineIfNotEmpty();
         CharSequence _unparseSymmetricBlockCipher = this.unparseSymmetricBlockCipher(((SymmetricBlockCipher)alg));
-        _builder.append(_unparseSymmetricBlockCipher, "");
+        _builder.append(_unparseSymmetricBlockCipher);
         _builder.newLineIfNotEmpty();
       }
     }
     {
       if ((alg instanceof KeyDerivationAlgorithm)) {
         CharSequence _unparseKeyDerivationAlgorithm = this.unparseKeyDerivationAlgorithm(((KeyDerivationAlgorithm)alg));
-        _builder.append(_unparseKeyDerivationAlgorithm, "");
+        _builder.append(_unparseKeyDerivationAlgorithm);
         _builder.newLineIfNotEmpty();
       }
     }
     {
       if ((alg instanceof Digest)) {
         CharSequence _unparseDigestAlgorithm = this.unparseDigestAlgorithm(((Digest)alg));
-        _builder.append(_unparseDigestAlgorithm, "");
+        _builder.append(_unparseDigestAlgorithm);
         _builder.newLineIfNotEmpty();
       }
     }

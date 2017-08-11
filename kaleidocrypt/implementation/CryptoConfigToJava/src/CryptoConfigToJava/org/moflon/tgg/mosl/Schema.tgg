@@ -1,6 +1,7 @@
 // Add imports here
-#import "platform:/plugin/SimpleJava/model/SimpleJava.ecore"
+#import "platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/SimpleJava.ecore"
 #import "platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore"
+
 
 #schema CryptoConfigToJava
 	

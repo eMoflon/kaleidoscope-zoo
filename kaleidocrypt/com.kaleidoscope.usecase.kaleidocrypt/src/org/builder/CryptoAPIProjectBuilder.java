@@ -39,14 +39,12 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 	private Path projectPath;
 
 	private ConfigJavaFilesRelation configJavaFilesRelation;
-	private final String COMPONENT_FACTORY_ID = "kaleidocrypt";
 	
 	private static final Logger logger = Logger.getLogger(CryptoAPIProjectBuilder.class);
 	IProgressMonitor monitor;
 	
 	
 	public CryptoAPIProjectBuilder() {
-		ComponentFactory.COMPONENT_FACTORY_ID = COMPONENT_FACTORY_ID;
 		// Set up a simple configuration that logs on the console.	
 	    BasicConfigurator.configure();
 	}
@@ -112,14 +110,11 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		logger.info("Sync a java model with the configuration model " + configFileName + " is performed!");
 		
 		Path absConfigFilePath = projectPath.resolve(Paths.get("models", configFileName + ".xmi"));
-		Path relDeltaPath = Paths.get("models", "gen", configFileName, "fwd.src.delta.xmi");
-		Path absDeltaPath = projectPath.resolve(relDeltaPath);
 		
 		Path persistanceDir = projectPath.resolve(Paths.get("models", "gen", configFileName));
 		syncForwardFromDelta(absConfigFilePath, projectPath, persistanceDir, absDeltaPath);
 		
 		refreshProject();
-		
 		logger.info("Sync a java model with the configuration model " + configFileName + " is done!");
 	}
 	

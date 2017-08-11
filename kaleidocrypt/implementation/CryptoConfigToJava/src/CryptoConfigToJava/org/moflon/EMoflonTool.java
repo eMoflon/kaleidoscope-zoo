@@ -1,37 +1,24 @@
 package CryptoConfigToJava.org.moflon;
 
-import java.net.URL;
 import java.nio.file.Path;
-import java.util.Optional;
-import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.moflon.core.utilities.MoflonUtilitiesActivator;
-import org.moflon.core.utilities.eMoflonEMFUtil;
 import org.moflon.tgg.algorithm.synchronization.SynchronizationHelper;
-import org.moflon.tgg.runtime.AttributeDelta;
 import org.moflon.tgg.runtime.CorrespondenceModel;
-import org.moflon.tgg.runtime.DeltaSpecification;
-import org.moflon.tgg.runtime.EMoflonEdge;
 
-import com.kaleidoscope.extensionpoint.UpdatePolicy;
-import com.kaleidoscope.extensionpoint.bxtool.BXtool;
-import com.kaleidoscope.extensionpoint.bxtool.SynchronizationReport;
-import com.kaleidoscope.ui.delta.javabased.JavaBasedDelta;
-import com.kaleidoscope.ui.delta.javabased.operational.OperationalJavaBasedDelta;
+import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
+import com.kaleidoscope.core.framework.synchronisation.PersistentSynchroniser;
 
-import CryptoConfigToJava.CryptoConfigToJavaPackage;
+import CryptoAPIConfig.Task;
+import SimpleJava.JavaPackage;
 
 
 
-public class EMoflonTool implements BXtool<EObject, EObject, Path>{
+public class EMoflonTool extends SynchronizationHelper implements  PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path> {
 
 	
 	private Path persistanceDirectory = null;
@@ -40,180 +27,106 @@ public class EMoflonTool implements BXtool<EObject, EObject, Path>{
 	private String corrModelFileName = "fwd.corr.xmi";
 	private String syncProtocolFileName = "fwd.protocol.xmi";
 	
-	private ResourceSet set;
-	private SynchronizationHelper helper;
-	
-	public EMoflonTool() {		
-	}
-	
-	
-	public void syncForwardFromDelta(Path absPathToDeltaSpec){
-		loadTriple(persistanceDirectory.resolve(corrModelFileName));
-		helper.loadSynchronizationProtocol(persistanceDirectory.resolve(syncProtocolFileName).toString());
-		helper.setChangeSrc(executeDeltaSpec(absPathToDeltaSpec.toString()));
+	public  EMoflonTool(EPackage corrPackage, String pathToProject, ResourceSet resourceSet) {
 		
-		helper.integrateForward();	
+		super(corrPackage, pathToProject, resourceSet);
+				
 	}
-	public void syncBackwardFromDelta(Path absPathToDeltaSpec){
-		loadTriple(persistanceDirectory.resolve(corrModelFileName));
-		helper.loadSynchronizationProtocol(persistanceDirectory.resolve(syncProtocolFileName).toString());
-		helper.setChangeTrg(executeDeltaSpec(absPathToDeltaSpec.toString()));
-			
-		helper.integrateBackward();	
-	}
+	
 	private void loadTriple(Path corrPath) {
 		try {
-			helper.loadCorr(corrPath.toString());
-			CorrespondenceModel corrModel = (CorrespondenceModel) helper.getCorr();						
-			helper.setTrg(corrModel.getTarget());
-			helper.setSrc(corrModel.getSource());
+			loadCorr(corrPath.toString());
+			CorrespondenceModel corrModel = (CorrespondenceModel) getCorr();						
+			setTrg(corrModel.getTarget());
+			setSrc(corrModel.getSource());
 			
 		} catch (IllegalArgumentException iae) {
 			System.err.println("Unable to load input triple for " + corrPath + ", " + iae.getMessage());
 		}
 	}
+	
 	@Override
 	public void restoreState(Path path){
 		persistanceDirectory = path;
 		loadTriple(path.resolve(corrModelFileName));
 	}
+	
 	@Override
 	public void persistState(Path path) {
+		
 		persistanceDirectory = path;
 		
-		helper.getSrc().eResource().setURI(URI.createFileURI(persistanceDirectory.resolve(sourceModelFileName).toString()));
-		helper.getTrg().eResource().setURI(URI.createFileURI(persistanceDirectory.resolve(targetModelFileName).toString()));
-		helper.getCorr().eResource().setURI(URI.createFileURI(persistanceDirectory.resolve(corrModelFileName).toString()));
+		getSrc().eResource().setURI(URI.createFileURI(persistanceDirectory.resolve(sourceModelFileName).toString()));
+		getTrg().eResource().setURI(URI.createFileURI(persistanceDirectory.resolve(targetModelFileName).toString()));
+		getCorr().eResource().setURI(URI.createFileURI(persistanceDirectory.resolve(corrModelFileName).toString()));
 		
-		helper.saveCorr(persistanceDirectory.resolve(corrModelFileName).toString());
-		helper.saveSynchronizationProtocol(persistanceDirectory.resolve(syncProtocolFileName).toString());
-		helper.saveSrc(persistanceDirectory.resolve(sourceModelFileName).toString());		
-		helper.saveTrg(persistanceDirectory.resolve(targetModelFileName).toString());
+		saveCorr(persistanceDirectory.resolve(corrModelFileName).toString());
+		saveSynchronizationProtocol(persistanceDirectory.resolve(syncProtocolFileName).toString());
+		saveSrc(persistanceDirectory.resolve(sourceModelFileName).toString());		
+		saveTrg(persistanceDirectory.resolve(targetModelFileName).toString());
 	}
+	
 	@Override
-	public void sourceToTargetTransformation(){
-		helper.integrateForward();
+	public Task getSourceModel(){
+		
+		if(getSrc() == null){
+			loadTriple(persistanceDirectory.resolve(corrModelFileName));
+		}
+		return (Task)getSrc();
+	}
+	
+	public JavaPackage getTargetModel(){
+		if(getTrg() == null){
+			loadTriple(persistanceDirectory.resolve(corrModelFileName));
+		}
+		return (JavaPackage)getTrg();
+	}
+	
+	
+	public void syncForward(OperationalDelta javaBasedDelta){
+		 
+		Consumer<EObject> delta = javaBasedDelta.executeOperationalDelta();
+		
+		loadTriple(persistanceDirectory.resolve(corrModelFileName));
+		loadSynchronizationProtocol(persistanceDirectory.resolve(syncProtocolFileName).toString());
+		setChangeSrc(delta);
+		
+		integrateForward();			
+	 }
+	 
+	 @Override
+	 public void syncBackward(OperationalDelta javaBasedDelta){		 
+		 
+		Consumer<EObject> delta = javaBasedDelta.executeOperationalDelta();
+		
+		loadTriple(persistanceDirectory.resolve(corrModelFileName));
+		loadSynchronizationProtocol(persistanceDirectory.resolve(syncProtocolFileName).toString());
+		setChangeTrg(delta);
+			
+		integrateBackward();	
+						
+	}
+
+	@Override 
+	public OperationalDelta getFailedDelta() {
+		return null;
+	}
+	
+	@Override
+	public void setUpdatePolicy(String updatePolicy) {
 		
 	}
 	
 	@Override
-	public void targetToSourceTransformation(){
-		helper.integrateBackward();		
-	}
-	
-	@Override
-	public EObject getSourceModel(){
-		if(helper.getSrc() == null){
-			loadTriple(persistanceDirectory.resolve(corrModelFileName));
-		}
-		return helper.getSrc();
-	}
-	public EObject getTargetModel(){
-		if(helper.getTrg() == null){
-			loadTriple(persistanceDirectory.resolve(corrModelFileName));
-		}
-		return helper.getTrg();
-	}
-	public void setSourceModel(EObject sourceModel){
-		Resource resource = set.createResource(URI.createURI("sourceModel.configuration"));	
-		resource.getContents().add(0,(EObject) sourceModel);
-		helper.setSrc(sourceModel);
-	}
-	public void setTargetModel(EObject targetModel){
-		Resource resource = set.createResource(URI.createURI("targetModel.java"));	
-		resource.getContents().add(0, (EObject) targetModel);
-		helper.setTrg(targetModel);
-	}
-	public void setWorkingDirectory(Path persistanceDirectory){
-		this.persistanceDirectory = persistanceDirectory;
-	}
-	public Path getWorkingDirectory(){
-		return persistanceDirectory;
-	}
-	@Override
-	public void setResourceSet(ResourceSet resourceSet) {
-		this.set = resourceSet;
-		URL pathToTGGtransProjet  = MoflonUtilitiesActivator.getPathRelToPlugIn(".", "CryptoConfigToJava");
-		helper = new SynchronizationHelper(CryptoConfigToJavaPackage.eINSTANCE, pathToTGGtransProjet.getPath(), set);
-	}
-	private void performActionOnFeature(EMoflonEdge e, BiConsumer<EStructuralFeature, EObject> actionMany, BiConsumer<EStructuralFeature, EObject> actionOne) {
-		EStructuralFeature feature = e.getSrc().eClass().getEStructuralFeature(e.getName());
-		if(!feature.isDerived()){
-			if (feature.isMany()) {
-				actionMany.accept(feature, e.getTrg());
-			} else
-				actionOne.accept(feature, e.getTrg());
-		}
-
-	}
-	protected Consumer<EObject> executeDeltaSpec(String pathToDelta)
-	   {
-	      DeltaSpecification localDeltaSpec = (DeltaSpecification) loadModel(pathToDelta);
-	      EcoreUtil.resolveAll(localDeltaSpec);
-	      //DeltaSpecification deltaSpec = EcoreUtil.copy(localDeltaSpec);
-	      
-	      return (input) -> {    	  
-	    	  // Added edges (nodes are indirectly added)
-	    	  for (EMoflonEdge ae : localDeltaSpec.getAddedEdges())
-	    		  performActionOnFeature(ae, (f, o) -> ((EList) ae.getSrc().eGet(f)).add(o), ae.getSrc()::eSet);
-	    	  
-	         // Edge deletion
-	         for (EMoflonEdge de : localDeltaSpec.getDeletedEdges())
-	            performActionOnFeature(de, (f, o) -> ((EList) de.getSrc().eGet(f)).remove(o), (f, o) -> de.getSrc().eUnset(f));
-
-	         // Node deletion
-	         for (EObject delObj : localDeltaSpec.getDeletedNodes())
-	            EcoreUtil.delete(delObj);
-
-	         // Attribute deltas
-	         for (AttributeDelta ac : localDeltaSpec.getAttributeChanges())
-	            ac.getAffectedNode().eSet(ac.getAffectedAttribute(), EcoreUtil.createFromString(ac.getAffectedAttribute().getEAttributeType(), ac.getNewValue()));
-	      };
-	   }
-	 private EObject loadModel(final String path)
-	   {
-	      Resource r = set.getResource(eMoflonEMFUtil.createFileURI(path, true), true);
-	      return r.getContents().get(0);
-	   }
-
-
-	 public Optional<SynchronizationReport> syncForwardFromJavaBasedDelta(JavaBasedDelta javaBasedDelta, Optional<UpdatePolicy<?>> updatePolicy){
-		 OperationalJavaBasedDelta operationalJavaBasedDelta = (OperationalJavaBasedDelta)javaBasedDelta;
-			Consumer<EObject> delta = operationalJavaBasedDelta.executeOperationalDelta();
-			
-			loadTriple(persistanceDirectory.resolve(corrModelFileName));
-			helper.loadSynchronizationProtocol(persistanceDirectory.resolve(syncProtocolFileName).toString());
-			helper.setChangeSrc(delta);
-			
-			helper.integrateForward();
-			return Optional.empty();
-	 }
-	 public Optional<SynchronizationReport> syncBackwardFromJavaBasedDelta(JavaBasedDelta javaBasedDelta, Optional<UpdatePolicy<?>> updatePolicy){
-		 OperationalJavaBasedDelta operationalJavaBasedDelta = (OperationalJavaBasedDelta)javaBasedDelta;
-			Consumer<EObject> delta = operationalJavaBasedDelta.executeOperationalDelta();
-			loadTriple(persistanceDirectory.resolve(corrModelFileName));
-			helper.loadSynchronizationProtocol(persistanceDirectory.resolve(syncProtocolFileName).toString());
-			helper.setChangeTrg(delta);
-				
-			helper.integrateBackward();	
-			
-			return Optional.empty();
-	 }
-
-
-	@Override
-	public void clear() {
+	public void terminate() {
 		// TODO Auto-generated method stub
 		
 	}
-
 
 	@Override
 	public void initialize() {
 		// TODO Auto-generated method stub
 		
 	}
-
-	
 
 }
