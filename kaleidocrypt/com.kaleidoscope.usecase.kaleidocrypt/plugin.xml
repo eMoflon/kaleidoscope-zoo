@@ -1,37 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
-<plugin>
-	<extension
-         point="org.eclipse.ui.newWizards">
-      <category
-            id="Kaleidocrypt.wizards"
-            name="Kaleidocrypt Wizards">
-      </category>
-      <wizard
-            category="CryptoUseCase"
-            class="org.admin.ui.wizards.password_based_encryption.NewPasswordBasedEncryptionWizard"
-            icon="icons/encryption-icon.png"
-            id="org.admin.ui.wizards.password_based_encryption.NewPasswordBasedEncryptionWizard"
-            name="New Password-based Encryption">
-      </wizard>
-   </extension>
-   
-	<extension
-         point="org.eclipse.ui.newWizards">
-      <category
-            id="Kaleidocrypt.wizards"
-            name="Kaleidocrypt Wizards">
-      </category>
-      <wizard
-            category="CryptoUseCase"
-            class="org.admin.ui.wizards.secure_password.NewSecurePasswordWizard"
-            icon="icons/encryption-icon.png"
-            id="kaleidoscope.usecase.crypto.wizards.NewSecurePasswordWizard"
-            name="New SecurePassword">
-      </wizard>
-   </extension>
-   
-   
+<plugin>   
 	<extension
          point="org.eclipse.ui.newWizards">
       <category

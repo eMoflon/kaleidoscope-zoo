@@ -13,12 +13,5 @@
             class="BxtendCryptoImpl.BxtendCryptoImplPackage"
             genModel="model/corresp.genmodel"/>
    </extension>
-   <extension
-         point="com.kaleidoscope.extensionpoint.bxtool">
-      <client
-            class="kaleidocrypt.implemenation.BxtendTool"
-            name="bxtend">
-      </client>
-   </extension>
 
 </plugin>

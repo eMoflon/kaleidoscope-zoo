@@ -91,13 +91,13 @@ public class BxtendCryptoImplTransformation {
 	
 	def detectSourceDeletions() {
 		corrModel.allContents.filter(typeof(Corr)).filter[ c |
-			c.sourceElement == null
+			c.sourceElement === null
 		]
 	}
 		
 	def detectTargetDeletions() {
 		corrModel.allContents.filter(typeof(Corr)).filter[ c |
-			c.targetElement == null 
+			c.targetElement === null 
 		]
 	}
 	

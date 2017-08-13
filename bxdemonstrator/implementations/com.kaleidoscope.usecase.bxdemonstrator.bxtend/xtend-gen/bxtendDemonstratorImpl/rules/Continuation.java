@@ -1,72 +1,99 @@
 package bxtendDemonstratorImpl.rules;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Optional;
-import java.util.function.Consumer;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure2;
 
-@SuppressWarnings("all")
 public class Continuation {
-  private Optional<String> continationDecision = Optional.<String>empty();
+  private /* Optional<String> */Object continationDecision /* Skipped initializer because of errors */;
   
-  private Optional<List<String>> continationChoices = Optional.<List<String>>of(new ArrayList<String>());
+  private /* Optional<List<String>> */Object continationChoices /* Skipped initializer because of errors */;
   
-  private Optional<HashMap<String, EObject>> context = Optional.<HashMap<String, EObject>>empty();
+  private /* Optional<HashMap<String, EObject>> */Object context /* Skipped initializer because of errors */;
   
-  private Optional<Procedure2<? super HashMap<String, EObject>, ? super String>> function = Optional.<Procedure2<? super HashMap<String, EObject>, ? super String>>empty();
+  private /* Optional<Procedure2<? super HashMap<String, EObject>, ? super String>> */Object function /* Skipped initializer because of errors */;
   
-  public Object Continuation() {
+  public java.lang.Object Continuation() {
     return null;
   }
   
   public void executeFunction() {
-    final Consumer<Procedure2<? super HashMap<String, EObject>, ? super String>> _function = (Procedure2<? super HashMap<String, EObject>, ? super String> f) -> {
-      f.apply(this.context.get(), this.getDecision().get());
-    };
-    this.function.ifPresent(_function);
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method apply(Object, Object) is undefined for the type Object"
+      + "\nThe field Continuation.function refers to the missing type Optional"
+      + "\nThere is no context to infer the closure\'s argument types from. Consider typing the arguments or put the closures into a typed context."
+      + "\nThe field Continuation.context refers to the missing type Optional"
+      + "\nThe method getDecision() from the type Continuation refers to the missing type Optional"
+      + "\nifPresent cannot be resolved"
+      + "\nget cannot be resolved"
+      + "\nget cannot be resolved");
   }
   
   public boolean hasContinuation() {
-    int _size = this.continationChoices.get().size();
-    return (_size > 0);
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe field Continuation.continationChoices refers to the missing type Optional"
+      + "\nget cannot be resolved"
+      + "\nsize cannot be resolved"
+      + "\n> cannot be resolved");
   }
   
-  public void setDecision(final String decision) {
-    this.continationDecision = Optional.<String>of(decision);
+  public void setDecision(final /* String */Object decision) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field Optional is undefined"
+      + "\nThe field Continuation.continationDecision refers to the missing type Optional"
+      + "\nof cannot be resolved");
   }
   
-  public Optional<String> getDecision() {
-    return this.continationDecision;
+  public /* Optional<String> */Object getDecision() {
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe field Continuation.continationDecision refers to the missing type Optional");
   }
   
-  public void setChoices(final List<String> choices) {
-    this.continationChoices = Optional.<List<String>>of(choices);
+  public void setChoices(final /* List<String> */Object choices) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field Optional is undefined"
+      + "\nThe field Continuation.continationChoices refers to the missing type Optional"
+      + "\nof cannot be resolved");
   }
   
-  public Optional<List<String>> getChoices() {
-    return this.continationChoices;
+  public /* Optional<List<String>> */Object getChoices() {
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe field Continuation.continationChoices refers to the missing type Optional");
   }
   
   public void clear() {
-    this.continationDecision = Optional.<String>empty();
-    ArrayList<String> _arrayList = new ArrayList<String>();
-    this.continationChoices = Optional.<List<String>>of(_arrayList);
-    this.context = Optional.<HashMap<String, EObject>>empty();
-    this.function = Optional.<Procedure2<? super HashMap<String, EObject>, ? super String>>empty();
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field Optional is undefined"
+      + "\nThe method or field Optional is undefined"
+      + "\nArrayList cannot be resolved."
+      + "\nThe method or field Optional is undefined"
+      + "\nThe method or field Optional is undefined"
+      + "\nString cannot be resolved to a type."
+      + "\nThe field Continuation.continationDecision refers to the missing type Optional"
+      + "\nThe field Continuation.continationChoices refers to the missing type Optional"
+      + "\nThe field Continuation.context refers to the missing type Optional"
+      + "\nThe field Continuation.function refers to the missing type Optional"
+      + "\nempty cannot be resolved"
+      + "\nof cannot be resolved"
+      + "\nempty cannot be resolved"
+      + "\nempty cannot be resolved");
   }
   
-  public void setContext(final HashMap<String, EObject> context) {
-    this.context = Optional.<HashMap<String, EObject>>of(context);
+  public void setContext(final /* HashMap<String, EObject> */Object context) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field Optional is undefined"
+      + "\nThe field Continuation.context refers to the missing type Optional"
+      + "\nof cannot be resolved");
   }
   
-  public Optional<HashMap<String, EObject>> getContext() {
-    return this.context;
+  public /* Optional<HashMap<String, EObject>> */Object getContext() {
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe field Continuation.context refers to the missing type Optional");
   }
   
-  public void setFunction(final Procedure2<? super HashMap<String, EObject>, ? super String> function) {
-    this.function = Optional.<Procedure2<? super HashMap<String, EObject>, ? super String>>of(function);
+  public void setFunction(final /* Procedure2<? super HashMap<String, EObject>, ? super String> */Object function) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field Optional is undefined"
+      + "\nThe field Continuation.function refers to the missing type Optional"
+      + "\nof cannot be resolved");
   }
 }

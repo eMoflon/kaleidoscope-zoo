@@ -47,7 +47,7 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 	private Path projectPath;
 	
 	private ConfigJavaFilesRelation configJavaFilesRelation;
-	private ResourceSet set;
+	private final ResourceSet set;
 	
 	private static final Logger logger = Logger.getLogger(CryptoAPIProjectBuilder.class);
 	

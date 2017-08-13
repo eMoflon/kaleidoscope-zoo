@@ -114,7 +114,7 @@ class SymmetricEncryption2Class extends Elem2Elem{
 		.forEach[ c |
 			var corr = c.getCorrModelElement(BxtendCryptoImplTransformation.task2JavaPackageCorr) 
 			
-			if(corr != null){
+			if(corr !== null){
 				var task = corr.sourceElement as Task
 				task.package  = c.name
 			}

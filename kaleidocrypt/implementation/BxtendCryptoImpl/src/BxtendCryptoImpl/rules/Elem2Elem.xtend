@@ -1,20 +1,18 @@
 package BxtendCryptoImpl.rules;
 
-import org.eclipse.emf.ecore.resource.Resource
-import java.util.List
-
-import org.eclipse.emf.ecore.EObject
-import org.eclipse.emf.ecore.EClass
-import org.eclipse.emf.ecore.util.EcoreUtil
-import java.util.Map
-import CryptoAPIConfig.CryptoAPIConfigFactory
-import SimpleJava.SimpleJavaFactory
-import CryptoAPIConfig.CryptoAPIConfigPackage
-import SimpleJava.SimpleJavaPackage
 import BxtendCryptoImpl.BxtendCryptoImplFactory
-import BxtendCryptoImpl.Transformation
 import BxtendCryptoImpl.Corr
+import BxtendCryptoImpl.Transformation
+import CryptoAPIConfig.CryptoAPIConfigFactory
+import CryptoAPIConfig.CryptoAPIConfigPackage
+import SimpleJava.SimpleJavaFactory
+import SimpleJava.SimpleJavaPackage
 import java.util.ArrayList
+import java.util.List
+import java.util.Map
+import org.eclipse.emf.ecore.EClass
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.resource.Resource
 
 abstract class Elem2Elem {
 	
@@ -41,7 +39,7 @@ abstract class Elem2Elem {
 			
 			val sourceCorrList = elementsToCorr.get(c.sourceElement) as List<Corr>
 			
-			if(sourceCorrList == null){
+			if(sourceCorrList === null){
 				var newCorrList = newArrayList
 				newCorrList.add(c)
 				elementsToCorr.put(c.sourceElement, newCorrList)
@@ -53,7 +51,7 @@ abstract class Elem2Elem {
 			
 			val targetCorrList = elementsToCorr.get(c.targetElement) as List<Corr>
 			
-			if(targetCorrList == null){
+			if(targetCorrList === null){
 				var newCorrList = newArrayList
 				newCorrList.add(c)
 				elementsToCorr.put(c.targetElement, newCorrList)
@@ -75,18 +73,18 @@ abstract class Elem2Elem {
 	}
 	def getCorrModelElement(EObject obj, String description) {
 		var List<Corr> corr = obj.getCorrModelElem
-		if(corr == null)return null
+		if(corr === null)return null
 		return corr.findFirst[c | c.desc.equals(description)]
 	}
 	def getOrCreateCorrModelElement(EObject obj, String description) {
 		var List<Corr> corrList = obj.getCorrModelElem
 		
-		if(corrList == null){
+		if(corrList === null){
 			corrList = new ArrayList<Corr>	
 		}
 		var corr = corrList.findFirst[c | c.desc.equals(description)]
 		
-		if(corr == null){
+		if(corr === null){
 			corr = corrFactory.createBasicElem => [
 			if (obj.eClass.EPackage instanceof CryptoAPIConfigPackage)
 				sourceElement = obj
@@ -117,13 +115,13 @@ abstract class Elem2Elem {
 	def getOrCreateSourceElem(Corr corr, EClass clazz) {
 		
 		var EObject source  = corr.sourceElement
-		if (corr.sourceElement == null){
+		if (corr.sourceElement === null){
 			source = createSourceElement(clazz)
 			corr.sourceElement = source
 			
 			var List<Corr> corrList = corr.sourceElement.getCorrModelElem
 		
-			if(corrList == null){
+			if(corrList === null){
 				corrList = new ArrayList<Corr>	
 			}
 			corrList.add(corr)
@@ -134,13 +132,13 @@ abstract class Elem2Elem {
 
 	def getOrCreateTargetElem(Corr corr, EClass clazz) {
 		var EObject target = corr.targetElement 
-		if (target == null) {
+		if (target === null) {
 			target = createTargetElement(clazz)
 			corr.targetElement = target
 			
 			var List<Corr> corrList = corr.targetElement.getCorrModelElem
 		
-			if(corrList == null){
+			if(corrList === null){
 				corrList = new ArrayList<Corr>	
 			}
 			corrList.add(corr)

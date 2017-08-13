@@ -4,7 +4,7 @@ import java.net.URL;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.Optional;
-
+import kaleidocrypt.implemenation.BxtendTool;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.moflon.core.utilities.MoflonUtilitiesActivator;
 
@@ -34,6 +34,7 @@ public class ControllerModule extends AbstractModule{
 	private Path targetArtefactAdapterPackageRoot;
 	private Path destination;
 	private Optional<Path> initialSourceModelPath;
+	private final BxTool bxTool = BxTool.BXTEND;
 	
 	public ControllerModule(ResourceSet set, Path destination, Path sourceArtefactAdapterUnparsePath, Path targetArtefactAdapterPackageRoot, Optional<Path> initialSourceModelPath) {
 		this.set = set;
@@ -57,7 +58,20 @@ public class ControllerModule extends AbstractModule{
 	PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path>provideSynchroniser(){
 		
 		URL pathToTGGtransProjet  = MoflonUtilitiesActivator.getPathRelToPlugIn(".", "CryptoConfigToJava"); 
-		PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path>tool = new EMoflonTool(CryptoConfigToJavaPackage.eINSTANCE, pathToTGGtransProjet.getPath(), set, initialSourceModelPath);
+		PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path>tool;
+		
+		if(bxTool.equals(BxTool.EMOFLON)) {
+			
+			tool = new EMoflonTool(CryptoConfigToJavaPackage.eINSTANCE, pathToTGGtransProjet.getPath(), set, initialSourceModelPath);
+		}
+		else if(bxTool.equals(BxTool.BXTEND)){
+			
+			tool = new BxtendTool(set, initialSourceModelPath);
+		}
+		else {
+			tool = null;
+		}
+				
 		tool.initialize();
 		
 		initialSourceModelPath.ifPresent((i) -> {
@@ -73,4 +87,8 @@ public class ControllerModule extends AbstractModule{
 		bind(Path.class).annotatedWith(Dest.class).toInstance(destination);
 	}
 	
+}
+
+enum BxTool {
+    EMOFLON, BXTEND 
 }

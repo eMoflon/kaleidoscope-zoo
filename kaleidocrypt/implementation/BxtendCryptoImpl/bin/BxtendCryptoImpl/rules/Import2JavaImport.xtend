@@ -24,7 +24,7 @@ class Import2JavaImport  extends Elem2Elem{
 				val corrTarget = i.getOrCreateCorrModelElement(BxtendCryptoImplTransformation.import2JavaImport)
 				val targetElement = corrTarget.getOrCreateTargetElem(SimpleJavaPackage.eINSTANCE.javaImport) as JavaImport
 				targetElement.value = i.value
-				val targetModelContents = targetModel.contents
+				
 				if(!targetModel.contents.contains(targetElement)){
 					
 					
@@ -32,7 +32,7 @@ class Import2JavaImport  extends Elem2Elem{
 												.targetElement as JavaCompilationUnit
 					
 					var maxIndex = -1
-					if(javaCompilationUnit.imports != null && javaCompilationUnit.imports.size != 0)
+					if(javaCompilationUnit.imports !== null && javaCompilationUnit.imports.size != 0)
 						maxIndex = javaCompilationUnit.imports.maxBy[index].index	
 					
 					targetElement.index = maxIndex + 1												

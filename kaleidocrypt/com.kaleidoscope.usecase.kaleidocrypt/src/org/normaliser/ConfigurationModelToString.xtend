@@ -32,7 +32,7 @@ class ConfigurationModelToString {
 			]						
 		}
 		'''
-	def unparseAlgorithm(Algorithm alg)
+	def String unparseAlgorithm(Algorithm alg)
 	'''«IF alg instanceof SymmetricBlockCipher»
 	«unparseSymmetricBlockCipher(alg)»
 		«ENDIF»
