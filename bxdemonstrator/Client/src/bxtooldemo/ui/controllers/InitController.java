@@ -35,7 +35,7 @@ public class InitController extends HttpServlet {
 	public InitController() {
 		super();
 		//this.adapterAnalysis = new Analysis();
-		this.uidMappings = new HashMap();
+		this.uidMappings = new HashMap<String, Object>();
 	}
 
 	/**

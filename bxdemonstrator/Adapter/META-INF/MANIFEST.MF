@@ -2,6 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Adapter
 Bundle-SymbolicName: Adapter
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Version: 1.0.0.qualifier
 Export-Package: bxtooldemo.adapter.core,
  bxtooldemo.adapter.core.delta,
@@ -13,8 +14,7 @@ Require-Bundle: org.eclipse.emf.ecore;bundle-version="2.12.0",
  org.moflon.tgg.runtime;bundle-version="2.0.0",
  org.moflon.core.utilities,
  com.google.gson,
- com.kaleidoscope.ui,
- com.kaleidoscope.core.delta.metamodel;bundle-version="1.0.0",
- com.kaleidoscope.core,
- com.kaleidoscope.usecase.bxdemonstrator.bxtend
+ com.kaleidoscope.usecase.bxdemonstrator.bxtend,
+ com.kaleidoscope.core.delta,
+ com.kaleidoscope.core.framework
 Import-Package: org.apache.log4j

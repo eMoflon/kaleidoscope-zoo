@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.moflon.tgg.runtime:DeltaSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.moflon.tgg.runtime="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore">
+  <targetModel href="src.xmi#/"/>
+  <attributeChanges oldValue="java.security.NoSuchAlgorithmException" newValue="NOVA VRIJEDNOST">
+    <affectedAttribute href="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Import/value"/>
+    <affectedNode href="src.xmi#//@algorithms.0/@imports.3"/>
+  </attributeChanges>
+</org.moflon.tgg.runtime:DeltaSpecification>

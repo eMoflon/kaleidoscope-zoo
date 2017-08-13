@@ -1,3 +1,27 @@
 Manifest-Version: 1.0
-Class-Path: 
-
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: com.kaleidoscope.usecase.bxdemonstrator.bxtend;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: bxdemonstrator.implemenation,
+ bxtendDemonstratorImpl,
+ bxtendDemonstratorImpl.impl,
+ bxtendDemonstratorImpl.rules,
+ bxtendDemonstratorImpl.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ CryptoAPIConfig,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtend.lib.macro,
+ org.moflon.tgg.runtime,
+ org.moflon.core.utilities,
+ com.kaleidoscope.ui,
+ GridLanguage;bundle-version="1.0.0",
+ KitchenLanguage;bundle-version="1.0.0",
+ org.eclipse.emf.ecore.xmi
+Bundle-ActivationPolicy: lazy

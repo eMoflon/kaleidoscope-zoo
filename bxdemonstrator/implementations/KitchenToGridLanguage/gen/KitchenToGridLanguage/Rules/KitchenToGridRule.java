@@ -102,7 +102,7 @@ public interface KitchenToGridRule extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject kitchen, EObject kitchenToGrid, EObject grid);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject grid, EObject kitchenToGrid, EObject kitchen);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -182,7 +182,7 @@ public interface KitchenToGridRule extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_BWD(PerformRuleResult ruleresult, EObject kitchen, EObject kitchenToGrid, EObject grid);
+	void registerObjects_BWD(PerformRuleResult ruleresult, EObject grid, EObject kitchenToGrid, EObject kitchen);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -198,7 +198,7 @@ public interface KitchenToGridRule extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_Grid_0(Grid grid);
+	EObjectContainer isAppropriate_FWD_Grid_1(Grid grid);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -206,7 +206,7 @@ public interface KitchenToGridRule extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_BWD_Kitchen_0(Kitchen kitchen);
+	EObjectContainer isAppropriate_BWD_Kitchen_1(Kitchen kitchen);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -238,7 +238,7 @@ public interface KitchenToGridRule extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_CC(Kitchen kitchen, Grid grid, Match sourceMatch, Match targetMatch);
+	CSP isApplicable_solveCsp_CC(Grid grid, Kitchen kitchen, Match sourceMatch, Match targetMatch);
 
 	/**
 	 * <!-- begin-user-doc -->

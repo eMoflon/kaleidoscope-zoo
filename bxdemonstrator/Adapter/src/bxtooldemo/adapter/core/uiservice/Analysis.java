@@ -1,11 +1,13 @@
 package bxtooldemo.adapter.core.uiservice;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 import java.util.Random;
 
-import com.kaleidoscope.extensionpoint.bxtool.ContinuableBXtool;
-import com.kaleidoscope.extensionpoint.bxtool.SynchronizationReport;
-import com.kaleidoscope.ui.delta.javabased.operational.OperationalJavaBasedDelta;
+import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
+import com.kaleidoscope.core.framework.synchronisation.ContinuableSynchroniser;
+import com.kaleidoscope.core.framework.workflow.adapters.ArtefactAdapter;
 
 import GridLanguage.Grid;
 import GridLanguage.Group;
@@ -14,7 +16,6 @@ import bxdemonstrator.implemenation.DemoBxtendTool;
 import bxtooldemo.adapter.artefactadapter.GridUIArtefactAdapter;
 import bxtooldemo.adapter.artefactadapter.KitchenUIArtefactAdapter;
 import bxtooldemo.adapter.core.delta.DeltaAdapter;
-import bxtooldemo.adapter.core.implementations.emoflon.EmoflonToolImpl;
 import bxtooldemo.adapter.uimodels.Layout;
 import bxtooldemo.adapter.uimodels.UIModels;
 import bxtooldemo.adapter.uimodels.Workspace;
@@ -26,9 +27,9 @@ public class Analysis {
 	private UIModels uiModelsAdapter;
 	public static int blockArrayNo;
 	
-	OperationalJavaBasedDelta sourceDeltaOperation;
-	OperationalJavaBasedDelta targetDeltaOperation;
-	ContinuableBXtool<Grid, Kitchen, String, String> bxTool = new DemoBxtendTool();
+	OperationalDelta sourceDeltaOperation;
+	OperationalDelta targetDeltaOperation;
+	ContinuableSynchroniser<Grid, Kitchen, List<String>, OperationalDelta, OperationalDelta> bxTool = new DemoBxtendTool();
 	
 	public void initeMoflonTool(int blockArrayNo) {
 		Analysis.blockArrayNo = blockArrayNo;
@@ -36,14 +37,16 @@ public class Analysis {
 	}
 
 	public UIModels getUIModels() {
-		return generateUIModel(Optional.empty(), Optional.empty());
+		return generateUIModel(new OperationalDelta(), new OperationalDelta());
 	}
 	
 	public UIModels continueSynchronisation(String decision){
-		bxTool.continueSync(decision);
+		
+		bxTool.setUpdatePolicy(Arrays.asList(decision));
+		bxTool.continueSync();
 		return getUIModelsAfterAtomicDeltaPropagation(Optional.empty()); 
 	}
-    private UIModels generateUIModel(Optional<SynchronizationReport> fwdSyncReport, Optional<SynchronizationReport> bwdSyncReport){
+    private UIModels generateUIModel(OperationalDelta fwdFailedDelta, OperationalDelta bwdFailedDelta){
     	
     	Layout layoutAdapter = new Layout();
 		Workspace workspaceAdapter = new Workspace();
@@ -52,21 +55,28 @@ public class Analysis {
 		Kitchen kitchen = this.bxTool.getTargetModel();
 		
 		//For user choices
-		if (bxTool.getChoicesForContinuation().size() > 0) {
-			uiModelAdapter.setUserChoices(bxTool.getChoicesForContinuation());
+		if (bxTool.getContinuationPolicy().size() > 0) {
+			uiModelAdapter.setUserChoices(bxTool.getContinuationPolicy());
 			return uiModelAdapter;
 		}
-		new GridUIArtefactAdapter().unparse(layoutAdapter, grid);
-		new KitchenUIArtefactAdapter().unparse(workspaceAdapter, kitchen);
+		ArtefactAdapter<Grid, Layout> gridToLayourAdapter = new GridUIArtefactAdapter();
+		gridToLayourAdapter.setModel(grid);
+		gridToLayourAdapter.setArtefact(layoutAdapter);
+		gridToLayourAdapter.unparse();
+		
+		ArtefactAdapter<Kitchen, Workspace>kitchenToWorkspace = new KitchenUIArtefactAdapter();
+		kitchenToWorkspace.setModel(kitchen);
+		kitchenToWorkspace.setArtefact(workspaceAdapter);
+		kitchenToWorkspace.unparse();
 
 		String failedDeltaMsg = "";
 		
 		
-		if(fwdSyncReport.isPresent() || bwdSyncReport.isPresent()){
+		if(fwdFailedDelta.getOperations().size() > 0 || bwdFailedDelta.getOperations().size() > 0){
 			// deal with failed deltas message
 			failedDeltaMsg = "";
-			String fwdSyncReportMessage = deltaAdapter.generateFailedDeltaOperationMessage(fwdSyncReport.get());
-			String bwdSyncReportMessage = deltaAdapter.generateFailedDeltaOperationMessage(bwdSyncReport.get());
+			String fwdSyncReportMessage = deltaAdapter.generateFailedDeltaOperationMessage(fwdFailedDelta);
+			String bwdSyncReportMessage = deltaAdapter.generateFailedDeltaOperationMessage(bwdFailedDelta);
 			failedDeltaMsg = failedDeltaMsg + fwdSyncReportMessage + bwdSyncReportMessage;
 			System.out.println(fwdSyncReportMessage + bwdSyncReportMessage);
 		}
@@ -102,13 +112,16 @@ public class Analysis {
 			sourceDeltaOperation = deltaAdapter.transformIntoSourceOpDelta(deltaString.get(), gridModel);
 			targetDeltaOperation = deltaAdapter.transformIntoTargetOpDelta(deltaString.get(), kitchenModel);
 		}
-		SynchronizationReport forwardSyncReport = bxTool.syncForwardFromJavaBasedDelta(sourceDeltaOperation, Optional.empty()).get();
-		SynchronizationReport backwardSyncReport = bxTool.syncBackwardFromJavaBasedDelta(targetDeltaOperation, Optional.empty()).get();
+		bxTool.syncForward(sourceDeltaOperation);
+		OperationalDelta forwardSyncReport = bxTool.getFailedDelta();
+		
+		bxTool.syncBackward(targetDeltaOperation);
+		OperationalDelta backwardSyncReport = bxTool.getFailedDelta();
 		
 		gridModel = bxTool.getSourceModel();
 		setColorsToUnassignedBlocks(gridModel);
 		
-		this.uiModelsAdapter = generateUIModel(Optional.of(forwardSyncReport), Optional.of(backwardSyncReport));
+		this.uiModelsAdapter = generateUIModel(forwardSyncReport, backwardSyncReport);
 		
 		return this.uiModelsAdapter;
 	}

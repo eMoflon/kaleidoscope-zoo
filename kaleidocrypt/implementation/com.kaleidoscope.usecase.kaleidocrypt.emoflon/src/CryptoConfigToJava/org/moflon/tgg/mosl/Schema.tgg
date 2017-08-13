@@ -1,0 +1,69 @@
+// Add imports here
+#import "platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/SimpleJava.ecore"
+#import "platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore"
+
+
+#schema CryptoConfigToJava
+	
+#source {
+	CryptoAPIConfig
+}
+
+#target { 
+	SimpleJava
+} 
+
+#correspondence {
+	ImportToImport {
+		#src->Import
+		#trg->JavaImport
+	}
+	KeyDerivationAlgorithmToMethod{
+		#src->KeyDerivationAlgorithm
+		#trg->JavaMethod
+	}
+	SymmetricBlockCipherToMethod{
+		#src->SymmetricBlockCipher
+		#trg->JavaMethod
+	}
+	KeyDerivationAlgorithmToJcu{
+		#src->KeyDerivationAlgorithm
+		#trg->JavaCompilationUnit
+	}
+	SymmetricBlockCipherToJcu{
+		#src->SymmetricBlockCipher
+		#trg->JavaCompilationUnit
+	}
+	AlgorithmToJcu{
+		#src->Algorithm
+		#trg->JavaCompilationUnit
+	}
+	TaskToJavaPackage{
+		#src->Task
+		#trg->JavaPackage
+	}
+	AlgorithmToJavaCompilationUnit{
+		#src->Algorithm
+		#trg->JavaCompilationUnit
+	}
+	TaskToJavaCompilationUnit{
+		#src->Task
+		#trg->JavaCompilationUnit
+	}
+	
+}
+
+#attributeConditions {
+	
+	#userDefined
+	nameModePadding(0:EString, 1:EString, 2:EString, 3:EString){
+		#sync: BBBF, FFFB, BBBB
+		#gen: FFFF
+	}
+	#userDefined
+	setDefaultStringIfNull(0:EString, 1:EString){
+		#sync: BB, FB
+		#gen: BB, FB, FF
+	}
+	
+}

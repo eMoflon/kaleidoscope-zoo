@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?eclipse version="3.0"?>
-
-<!--
--->
+<!DOCTYPE xml>
+<?eclipse version="3.4"?>
 
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated corresp -->
       <package
             uri="http://BxtendCryptoImpl/correspondence.ecore"
             class="bxtendDemonstratorImpl.BxtendDemonstratorImplPackage"
-            genModel="model/corresp.genmodel"/>
-   </extension>
-   <extension
-         point="com.kaleidoscope.extensionpoint.bxtool">
-      <client
-            class="kaleidocrypt.implemenation.BxtendTool"
-            name="bxtend">
-      </client>
+            genModel="model/model.genmodel"/>
    </extension>
 
-null
 </plugin>

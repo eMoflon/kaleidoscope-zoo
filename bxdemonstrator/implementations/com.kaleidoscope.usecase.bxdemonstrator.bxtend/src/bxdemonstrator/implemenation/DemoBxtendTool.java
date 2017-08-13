@@ -3,7 +3,6 @@ package bxdemonstrator.implemenation;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.Optional;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -14,16 +13,9 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
-import org.moflon.tgg.runtime.CorrespondenceModel;
-import org.moflon.tgg.runtime.PrecedenceStructure;
+import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
+import com.kaleidoscope.core.framework.synchronisation.ContinuableSynchroniser;
 
-import com.kaleidoscope.extensionpoint.UpdatePolicy;
-import com.kaleidoscope.extensionpoint.bxtool.ContinuableBXtool;
-import com.kaleidoscope.extensionpoint.bxtool.SynchronizationReport;
-import com.kaleidoscope.ui.delta.javabased.JavaBasedDelta;
-import com.kaleidoscope.ui.delta.javabased.operational.OperationalJavaBasedDelta;
-
-import Deltameta.OperationalDelta;
 import GridLanguage.Block;
 import GridLanguage.Grid;
 import GridLanguage.GridLanguageFactory;
@@ -34,34 +26,40 @@ import bxtendDemonstratorImpl.rules.Elem2Elem;
 import bxtendDemonstratorImpl.rules.SynchronizationError;
 
 
-public class DemoBxtendTool  implements ContinuableBXtool<Grid, Kitchen, String, String>{
+public class DemoBxtendTool  implements  ContinuableSynchroniser<Grid, Kitchen, List<String>, OperationalDelta, OperationalDelta>{
 	
 	private EObject source;
 	private EObject target;
 	private EObject corr;
 	
-	private SynchronizationReport fwdSyncReport;
-	private SynchronizationReport bwdSyncReport;
+	private OperationalDelta failedDelta;
 	
 	private Collection<EObject> root = new ArrayList<EObject>();
 	private Copier objectMapping; 
-	private OperationalJavaBasedDelta operationalJavaBasedDelta;
+	private OperationalDelta operationalJavaBasedDelta;
 
 	ResourceSet set = null;
 	
 	public DemoBxtendTool(){
 	
 	}
+	@Override
 	public void initialize() {
-		fwdSyncReport = new SynchronizationReport();
-		bwdSyncReport = new SynchronizationReport();
+		failedDelta = new OperationalDelta();	
 		set = new ResourceSetImpl();
 		set.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());
 		source = initialiseGrid();
 		sourceToTargetTransformation();
 	}
 	
-	 
+	@Override
+	public void terminate() {
+		
+	}
+	@Override
+	public OperationalDelta getFailedDelta() {
+		return failedDelta;
+	}
 	@Override
 	public Grid getSourceModel(){
 		return (Grid)source;
@@ -70,33 +68,18 @@ public class DemoBxtendTool  implements ContinuableBXtool<Grid, Kitchen, String,
 	public Kitchen getTargetModel(){
 		return (Kitchen)target;
 	}
-	@Override
-	public void setSourceModel(Grid sourceModel){
-		source = sourceModel;
-	}
 	
 	@Override
-	public void setTargetModel(Kitchen targetModel){
-		target = targetModel;
-	}
-	
-	
-	@Override
-	public void setResourceSet(ResourceSet resourceSet) {
-		this.set = resourceSet;
-		
-	}
-	@Override
-	public Optional<SynchronizationReport> syncForwardFromJavaBasedDelta(JavaBasedDelta javaBasedDelta, Optional<UpdatePolicy<?>> updatePolicy) {		
+	public void syncForward(OperationalDelta javaBasedDelta) {		
 		clear();
-		operationalJavaBasedDelta = (OperationalJavaBasedDelta)javaBasedDelta;
+		operationalJavaBasedDelta = javaBasedDelta;
 		
 		
 		while(operationalJavaBasedDelta.getOperations().size() > 0) {
 			updateConsistentState();
 			
 			try{
-				operationalJavaBasedDelta.getOperations().get(0).executeOperation(source);
+				operationalJavaBasedDelta.getOperations().get(0).executeOperation();
 				Resource sourceRes = set.createResource(URI.createURI("sourceModel.kitchen"));
 				Resource  targetRes = set.createResource(URI.createURI("targetModel.grid"));
 				Resource corrRes = set.createResource(URI.createURI("corrModel.corr"));
@@ -107,34 +90,32 @@ public class DemoBxtendTool  implements ContinuableBXtool<Grid, Kitchen, String,
 				
 				BxtendDemonstratorImplTransformation f2pt =  new BxtendDemonstratorImplTransformation(sourceRes, targetRes, corrRes);
 				f2pt.sourceToTarget();
-				fwdSyncReport.addSuccessfulOperation(operationalJavaBasedDelta.getOperations().get(0));
 				
 			}catch(SynchronizationError r){
 				rollback();
-				fwdSyncReport.addFailedOperation(operationalJavaBasedDelta.getOperations().get(0));
+				failedDelta.addOperation(operationalJavaBasedDelta.getOperations().get(0));
 				
 			}
 			operationalJavaBasedDelta.getOperations().remove(0);
 			
 			
 			if(Elem2Elem.CONTINUATION.hasContinuation()){
-				return Optional.of(fwdSyncReport);
+				return;
 			}
 		}
 		
-		return Optional.of(fwdSyncReport);
 	}
 	@Override
-	public Optional<SynchronizationReport> syncBackwardFromJavaBasedDelta(JavaBasedDelta javaBasedDelta, Optional<UpdatePolicy<?>> updatePolicy) {	
+	public void syncBackward(OperationalDelta javaBasedDelta) {	
 		clear();
-		operationalJavaBasedDelta = (OperationalJavaBasedDelta)javaBasedDelta;
+		operationalJavaBasedDelta = javaBasedDelta;
 		
 		while(operationalJavaBasedDelta.getOperations().size() > 0) {
 			updateConsistentState();
 			
 			try{
 				
-				operationalJavaBasedDelta.getOperations().get(0).executeOperation(source);
+				operationalJavaBasedDelta.getOperations().get(0).executeOperation();
 				Resource sourceRes = set.createResource(URI.createURI("sourceModel.kitchen"));
 				Resource  targetRes = set.createResource(URI.createURI("targetModel.grid"));
 				Resource corrRes = set.createResource(URI.createURI("corrModel.corr"));
@@ -145,40 +126,26 @@ public class DemoBxtendTool  implements ContinuableBXtool<Grid, Kitchen, String,
 				
 				BxtendDemonstratorImplTransformation f2pt =  new BxtendDemonstratorImplTransformation(sourceRes, targetRes, corrRes);
 				f2pt.targetToSource();
-				bwdSyncReport.addSuccessfulOperation(operationalJavaBasedDelta.getOperations().get(0));
+				
 			}catch(SynchronizationError r){
 				rollback();
-				bwdSyncReport.addFailedOperation(operationalJavaBasedDelta.getOperations().get(0));				
+				failedDelta.addOperation(operationalJavaBasedDelta.getOperations().get(0));				
 			}
 			
 			operationalJavaBasedDelta.getOperations().remove(0);
 			
 			if(Elem2Elem.CONTINUATION.hasContinuation()){
-				return Optional.of(bwdSyncReport);
+				return;
 			}
 		}	
-		return Optional.of(bwdSyncReport);
 	}
 	
-	
-	
-	@Override
-	public void persistState(String toDestination) {
-		throw new UnsupportedOperationException("Operation not supported.");
-		
-	}
-	@Override
-	public void restoreState(String fromDestination) {
-		throw new UnsupportedOperationException("Operation not supported.");
-		
-	}
-	@Override
-	public void clear() {
-		fwdSyncReport = new SynchronizationReport();
-		bwdSyncReport = new SynchronizationReport();	
+
+	private void clear() {
+		failedDelta = new OperationalDelta();	
 	}
 	
-	public void sourceToTargetTransformation(){
+	private void sourceToTargetTransformation(){
 		
 		Resource sourceRes = set.createResource(URI.createURI("sourceModel.kitchen"));
 		Resource  targetRes = set.createResource(URI.createURI("targetModel.grid"));
@@ -191,36 +158,26 @@ public class DemoBxtendTool  implements ContinuableBXtool<Grid, Kitchen, String,
 		target = targetRes.getContents().get(0);
 		corr = corrRes.getContents().get(0);		
 	}
-	public void targetToSourceTransformation(){
-		
-		Resource sourceRes = set.createResource(URI.createURI("sourceModel.kitchen"));
-		Resource  targetRes = set.createResource(URI.createURI("targetModel.grid"));
-		Resource corrRes = set.createResource(URI.createURI("corrModel.corr"));
-	
-		sourceRes.getContents().add(target);
-		
-		BxtendDemonstratorImplTransformation f2pt =  new BxtendDemonstratorImplTransformation(sourceRes, targetRes, corrRes);
-		f2pt.targetToSource();		
-		
-		source = sourceRes.getContents().get(0);
-		corr = corrRes.getContents().get(0);
-	}
+
 	@Override
 	public boolean hasContinuation() {
 		return Elem2Elem.CONTINUATION.hasContinuation();
 	}
 	@Override
-	public List<String> getChoicesForContinuation() {
+	public List<String> getContinuationPolicy() {
 		return Elem2Elem.CONTINUATION.getChoices().get();
 	}
 	@Override
-	public void continueSync(String choice) {
-		Elem2Elem.CONTINUATION.setDecision(choice);
+	public void continueSync() {
+		
 		Elem2Elem.CONTINUATION.executeFunction();
 		Elem2Elem.CONTINUATION.clear();
 		
 	}
-	
+	@Override
+	public void setUpdatePolicy(List<String> updatePolicy) {
+		Elem2Elem.CONTINUATION.setDecision(updatePolicy.get(0));
+	}
 	
 	private Grid initialiseGrid() {
 		//initialize grid with block structure
@@ -318,7 +275,7 @@ public class DemoBxtendTool  implements ContinuableBXtool<Grid, Kitchen, String,
 		EObject oldSrc = root.stream().filter(o -> o instanceof Grid).findFirst().get();
 		EObject oldTrg = root.stream().filter(o -> o instanceof Kitchen).findFirst().get();
 		EObject oldCorr = root.stream().filter(o -> o instanceof Transformation).findFirst().get();
-		EObject oldDelta = root.stream().filter(o -> o instanceof OperationalDelta).findFirst().get();
+		EObject oldDelta = root.stream().filter(o -> o instanceof KaleidoscopeDelta.OperationalDelta).findFirst().get();
 		
 		source.eResource().getContents().add(oldSrc);
 		source.eResource().getContents().remove(source);
@@ -332,7 +289,7 @@ public class DemoBxtendTool  implements ContinuableBXtool<Grid, Kitchen, String,
 		corr.eResource().getContents().remove(corr);
 		corr = (Transformation) oldCorr;
 		
-		operationalJavaBasedDelta.createFromEMFOperationalDelta((OperationalDelta)oldDelta);
+		operationalJavaBasedDelta.createFromEMFOperationalDelta((KaleidoscopeDelta.OperationalDelta)oldDelta);
 		
 		System.out.println("Performed rollback!");
 	}

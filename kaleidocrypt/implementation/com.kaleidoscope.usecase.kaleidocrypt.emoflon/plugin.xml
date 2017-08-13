@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.0"?><plugin>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package class="CryptoConfigToJava.CryptoConfigToJavaPackage" genModel="model/Emoflon.genmodel" uri="platform:/plugin/com.kaleidoscope.usecase.kaleidocrypt.emoflonnn/model/Emoflon.ecore"/>
+  </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package class="CryptoConfigToJava.Rules.RulesPackage" genModel="model/Emoflon.genmodel" uri="platform:/plugin/com.kaleidoscope.usecase.kaleidocrypt.emoflonnn/model/Emoflon.ecore#//Rules"/>
+  </extension>
+</plugin>

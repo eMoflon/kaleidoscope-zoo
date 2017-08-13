@@ -11,17 +11,12 @@ import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
 import org.moflon.core.utilities.eMoflonEMFUtil;
 import org.moflon.tgg.algorithm.configuration.Configurator;
 import org.moflon.tgg.algorithm.datastructures.SynchronizationProtocol;
-import org.moflon.tgg.algorithm.synchronization.BackwardSynchronizer;
-import org.moflon.tgg.algorithm.synchronization.ForwardSynchronizer;
 import org.moflon.tgg.algorithm.synchronization.SynchronizationHelper;
-import org.moflon.tgg.algorithm.synchronization.Synchronizer;
 import org.moflon.tgg.runtime.CorrespondenceModel;
 import org.moflon.tgg.runtime.PrecedenceStructure;
 
-import com.kaleidoscope.ui.delta.javabased.JavaBasedDelta;
-import com.kaleidoscope.ui.delta.javabased.operational.OperationalJavaBasedDelta;
+import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
 
-import Deltameta.OperationalDelta;
 import GridLanguage.Grid;
 import KitchenLanguage.Kitchen;
 import KitchenToGridLanguage.KitchenToGridLanguagePackage;
@@ -30,13 +25,13 @@ public class KitchenToGridSynchronizationHelper extends SynchronizationHelper {
 
 	private Collection<EObject> root = new ArrayList<>();
 	private Copier objectMapping; 
-	private OperationalJavaBasedDelta javaBasedDelta;
+	private OperationalDelta javaBasedDelta;
 	
-	public void setJavaBasedOperationalDelta(OperationalJavaBasedDelta javaBasedDelta){
+	public void setJavaBasedOperationalDelta(OperationalDelta javaBasedDelta){
 		this.javaBasedDelta = javaBasedDelta;
 	}
 	
-	public OperationalJavaBasedDelta getJavaBasedOperationalDelta(OperationalJavaBasedDelta javaBasedDelta){
+	public OperationalDelta getJavaBasedOperationalDelta(OperationalDelta javaBasedDelta){
 		return javaBasedDelta;
 	}
 	
@@ -89,7 +84,7 @@ public class KitchenToGridSynchronizationHelper extends SynchronizationHelper {
 		EObject oldTrg = root.stream().filter(o -> o instanceof Kitchen).findFirst().get();
 		EObject oldCorr = root.stream().filter(o -> o instanceof CorrespondenceModel).findFirst().get();
 		EObject oldProt = root.stream().filter(o -> o instanceof PrecedenceStructure).findFirst().get();
-		EObject oldDelta = root.stream().filter(o -> o instanceof OperationalDelta).findFirst().get();
+		EObject oldDelta = root.stream().filter(o -> o instanceof KaleidoscopeDelta.OperationalDelta).findFirst().get();
 		
 		src.eResource().getContents().add(oldSrc);
 		src.eResource().getContents().remove(src);
@@ -106,7 +101,7 @@ public class KitchenToGridSynchronizationHelper extends SynchronizationHelper {
 		protocol = new SynchronizationProtocol();
 		protocol.load((PrecedenceStructure) oldProt);
 		
-		javaBasedDelta.createFromEMFOperationalDelta((OperationalDelta)oldDelta);
+		javaBasedDelta.createFromEMFOperationalDelta((KaleidoscopeDelta.OperationalDelta)oldDelta);
 		
 		System.out.println("Performed rollback!");
 	}

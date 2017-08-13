@@ -1,0 +1,23 @@
+#using CryptoConfigToJava.*
+#using AttrCondDefLibrary.*
+
+#rule IgnoreParameterRule #with CryptoConfigToJava
+
+#source { 
+	
+}
+
+#target {
+	jcu:JavaWorkflowMethod{
+		++ -params->var
+	}
+	++var:JavaVariableDeclaration
+}
+
+#correspondence {
+	
+}
+
+#attributeConditions {
+	
+}

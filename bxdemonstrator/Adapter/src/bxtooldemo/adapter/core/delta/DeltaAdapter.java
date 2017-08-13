@@ -8,16 +8,15 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 
 import com.google.gson.Gson;
-import com.kaleidoscope.extensionpoint.bxtool.SynchronizationReport;
-import com.kaleidoscope.ui.delta.javabased.JavaBasedEdge;
-import com.kaleidoscope.ui.delta.javabased.operational.AddEdgeOp;
-import com.kaleidoscope.ui.delta.javabased.operational.AddNodeOp;
-import com.kaleidoscope.ui.delta.javabased.operational.AttributeChangeOp;
-import com.kaleidoscope.ui.delta.javabased.operational.CompositeOp;
-import com.kaleidoscope.ui.delta.javabased.operational.DeleteEdgeOp;
-import com.kaleidoscope.ui.delta.javabased.operational.DeleteNodeOp;
-import com.kaleidoscope.ui.delta.javabased.operational.Operation;
-import com.kaleidoscope.ui.delta.javabased.operational.OperationalJavaBasedDelta;
+import com.kaleidoscope.core.delta.javabased.JavaBasedEdge;
+import com.kaleidoscope.core.delta.javabased.operational.AddEdgeOp;
+import com.kaleidoscope.core.delta.javabased.operational.AddNodeOp;
+import com.kaleidoscope.core.delta.javabased.operational.AttributeChangeOp;
+import com.kaleidoscope.core.delta.javabased.operational.CompositeOp;
+import com.kaleidoscope.core.delta.javabased.operational.DeleteEdgeOp;
+import com.kaleidoscope.core.delta.javabased.operational.DeleteNodeOp;
+import com.kaleidoscope.core.delta.javabased.operational.Operation;
+import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
 
 import GridLanguage.Block;
 import GridLanguage.Grid;
@@ -39,13 +38,13 @@ import bxtooldemo.adapter.uimodels.UIGroup;;
 public class DeltaAdapter {
 
 	
-	public OperationalJavaBasedDelta transformIntoSourceOpDelta(String deltaJson, EObject sourceModel){
+	public OperationalDelta transformIntoSourceOpDelta(String deltaJson, EObject sourceModel){
 		
 		Gson gson = new Gson();
 		Grid grid = (Grid)sourceModel;
 		
 		GridKitchenDeltaOperation delta = gson.fromJson(deltaJson, GridKitchenDeltaOperation.class);
-		OperationalJavaBasedDelta operationalDelta = new OperationalJavaBasedDelta();
+		OperationalDelta operationalDelta = new OperationalDelta();
 		
 		List<DeltaGridOperation> gridOperations = delta.getGridOperations();
 		
@@ -108,12 +107,12 @@ public class DeltaAdapter {
 		return operationalDelta;
 	}
 	
-	public OperationalJavaBasedDelta transformIntoTargetOpDelta(String deltaJson, EObject targetModel){
+	public OperationalDelta transformIntoTargetOpDelta(String deltaJson, EObject targetModel){
 		
 		Gson gson = new Gson();
 		GridKitchenDeltaOperation delta = gson.fromJson(deltaJson, GridKitchenDeltaOperation.class);
 		List<DeltaKitchenOperation> kitchenOperations = delta.getKitchenOperations();
-		OperationalJavaBasedDelta operationalDelta = new OperationalJavaBasedDelta();
+		OperationalDelta operationalDelta = new OperationalDelta();
 		Kitchen kitchen = (Kitchen)targetModel;
 		
 		
@@ -206,11 +205,11 @@ public class DeltaAdapter {
 			else
 				return "";
 	}
-	public String generateFailedDeltaOperationMessage(SynchronizationReport syncReport){
+	public String generateFailedDeltaOperationMessage(OperationalDelta syncReport){
 		
 		String failedDeltaMsg = "";
 		
-		for (Operation op : syncReport.getFailedlOperations()) {
+		for (Operation op : syncReport.getOperations()) {
 			if(op instanceof CompositeOp){
 				
 				CompositeOp compositeOp = (CompositeOp) op;

@@ -1,9 +1,29 @@
 package bxtendDemonstratorImpl.rules;
 
+import GridLanguage.Block;
+import bxtendDemonstratorImpl.BxtendDemonstratorImplFactory;
+import bxtendDemonstratorImpl.Corr;
 import bxtendDemonstratorImpl.rules.Elem2Elem;
+import bxtendDemonstratorImpl.rules.Grid2Kitchen;
+import bxtendDemonstratorImpl.rules.Item2Group;
+import bxtendDemonstratorImpl.rules.Socket2Group;
+import com.google.common.collect.Iterators;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.function.Consumer;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.xtext.xbase.lib.CollectionLiterals;
+import org.eclipse.xtext.xbase.lib.Functions.Function1;
+import org.eclipse.xtext.xbase.lib.IteratorExtensions;
+import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 
+@SuppressWarnings("all")
 public class BxtendDemonstratorImplTransformation {
   private Resource sourceModel;
   
@@ -11,126 +31,131 @@ public class BxtendDemonstratorImplTransformation {
   
   private Resource corrModel;
   
-  private /* List<Elem2Elem> */Object rules /* Skipped initializer because of errors */;
+  private List<Elem2Elem> rules = new ArrayList<Elem2Elem>();
   
-  public final static /* String */Object FWD_DIRECTION = "FWD";
+  public final static String FWD_DIRECTION = "FWD";
   
-  public final static /* String */Object BWD_DIRECTION = "BWD";
+  public final static String BWD_DIRECTION = "BWD";
   
-  public final static /* String */Object item2FirstBlock = "item2FirstBlock";
+  public final static String item2FirstBlock = "item2FirstBlock";
   
-  public final static /* String */Object item2SecondBlock = "item2SecondBlock";
+  public final static String item2SecondBlock = "item2SecondBlock";
   
-  public final static /* String */Object grid2Kitchen = "Grid2Kitchen";
+  public final static String grid2Kitchen = "Grid2Kitchen";
   
-  public final static /* String */Object socket2Group = "socket2Group";
+  public final static String socket2Group = "socket2Group";
   
   public BxtendDemonstratorImplTransformation(final URI source, final URI target, final URI correspondence) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field size is undefined for the type EList<EObject>"
-      + "\nThe method add(Object) is undefined for the type EList<EObject>"
-      + "\n== cannot be resolved"
-      + "\neINSTANCE cannot be resolved"
-      + "\ncreateTransformation cannot be resolved");
+    final ResourceSet set = new ResourceSetImpl();
+    this.sourceModel = set.getResource(source, true);
+    this.targetModel = set.getResource(target, true);
+    this.corrModel = set.getResource(correspondence, true);
+    int _size = this.corrModel.getContents().size();
+    boolean _equals = (_size == 0);
+    if (_equals) {
+      this.corrModel.getContents().add(BxtendDemonstratorImplFactory.eINSTANCE.createTransformation());
+    }
   }
   
   public BxtendDemonstratorImplTransformation(final Resource source, final Resource target, final Resource correspondence) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field size is undefined for the type EList<EObject>"
-      + "\nThe method add(Object) is undefined for the type EList<EObject>"
-      + "\n== cannot be resolved"
-      + "\neINSTANCE cannot be resolved"
-      + "\ncreateTransformation cannot be resolved");
+    this.sourceModel = source;
+    this.targetModel = target;
+    this.corrModel = correspondence;
+    int _size = this.corrModel.getContents().size();
+    boolean _equals = (_size == 0);
+    if (_equals) {
+      this.corrModel.getContents().add(BxtendDemonstratorImplFactory.eINSTANCE.createTransformation());
+    }
+    this.addRules();
   }
   
   /**
    * Fuegt alle Regeln zum rules-Set hinzu. Sollte im Konstruktor aufgerufen werden.
    */
   private void addRules() {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method isEmpty() is undefined for the type EList<EObject>"
-      + "\nThe method add(Object) is undefined for the type EList<EObject>"
-      + "\nThe field BxtendDemonstratorImplTransformation.rules refers to the missing type List"
-      + "\nThe field BxtendDemonstratorImplTransformation.rules refers to the missing type List"
-      + "\nThe field BxtendDemonstratorImplTransformation.rules refers to the missing type List"
-      + "\neINSTANCE cannot be resolved"
-      + "\ncreateTransformation cannot be resolved"
-      + "\nadd cannot be resolved"
-      + "\nadd cannot be resolved"
-      + "\nadd cannot be resolved");
+    boolean _isEmpty = this.corrModel.getContents().isEmpty();
+    if (_isEmpty) {
+      this.corrModel.getContents().add(BxtendDemonstratorImplFactory.eINSTANCE.createTransformation());
+    }
+    Grid2Kitchen _grid2Kitchen = new Grid2Kitchen(this.sourceModel, this.targetModel, this.corrModel);
+    this.rules.add(_grid2Kitchen);
+    Socket2Group _socket2Group = new Socket2Group(this.sourceModel, this.targetModel, this.corrModel);
+    this.rules.add(_socket2Group);
+    Item2Group _item2Group = new Item2Group(this.sourceModel, this.targetModel, this.corrModel);
+    this.rules.add(_item2Group);
   }
   
   public void sourceToTarget() {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field size is undefined for the type EList<EObject>"
-      + "\nThe field BxtendDemonstratorImplTransformation.rules refers to the missing type List"
-      + "\nThe method sourceToTarget(String) from the type Elem2Elem refers to the missing type String"
-      + "\nThe method deleteUnreferencedTargetElements() from the type BxtendDemonstratorImplTransformation refers to the missing type Object"
-      + "\n!= cannot be resolved");
+    int _size = this.sourceModel.getContents().size();
+    boolean _notEquals = (_size != 0);
+    if (_notEquals) {
+      for (final Elem2Elem e : this.rules) {
+        e.sourceToTarget("Import");
+      }
+    }
+    this.deleteUnreferencedTargetElements();
   }
   
   public void targetToSource() {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field size is undefined for the type EList<EObject>"
-      + "\nThe field BxtendDemonstratorImplTransformation.rules refers to the missing type List"
-      + "\nThe method targetToSource(String) from the type Elem2Elem refers to the missing type String"
-      + "\nThe method deleteUnreferencedSourceElements() from the type BxtendDemonstratorImplTransformation refers to the missing type Object"
-      + "\n!= cannot be resolved");
+    int _size = this.targetModel.getContents().size();
+    boolean _notEquals = (_size != 0);
+    if (_notEquals) {
+      for (final Elem2Elem e : this.rules) {
+        e.targetToSource("Import");
+      }
+    }
+    this.deleteUnreferencedSourceElements();
   }
   
   public boolean checkCorrespondences() {
     return true;
   }
   
-  public Object detectSourceDeletions() {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method filter(java.lang.Class) is undefined for the type TreeIterator<EObject>"
-      + "\nThe method or field sourceElement is undefined for the type Object"
-      + "\nThere is no context to infer the closure\'s argument types from. Consider typing the arguments or put the closures into a typed context."
-      + "\nfilter cannot be resolved"
-      + "\n== cannot be resolved");
+  public Iterator<Corr> detectSourceDeletions() {
+    final Function1<Corr, Boolean> _function = (Corr c) -> {
+      EObject _sourceElement = c.getSourceElement();
+      return Boolean.valueOf((_sourceElement == null));
+    };
+    return IteratorExtensions.<Corr>filter(Iterators.<Corr>filter(this.corrModel.getAllContents(), Corr.class), _function);
   }
   
-  public Object detectTargetDeletions() {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method filter(java.lang.Class) is undefined for the type TreeIterator<EObject>"
-      + "\nThe method or field targetElement is undefined for the type Object"
-      + "\nThere is no context to infer the closure\'s argument types from. Consider typing the arguments or put the closures into a typed context."
-      + "\nfilter cannot be resolved"
-      + "\n== cannot be resolved");
+  public Iterator<Corr> detectTargetDeletions() {
+    final Function1<Corr, Boolean> _function = (Corr c) -> {
+      EObject _targetElement = c.getTargetElement();
+      return Boolean.valueOf((_targetElement == null));
+    };
+    return IteratorExtensions.<Corr>filter(Iterators.<Corr>filter(this.corrModel.getAllContents(), Corr.class), _function);
   }
   
-  public Object deleteUnreferencedTargetElements() {
-    throw new Error("Unresolved compilation problems:"
-      + "\nList cannot be resolved to a type."
-      + "\nThe method or field newArrayList is undefined"
-      + "\nThe method or field targetElement is undefined for the type Object"
-      + "\nThe method or field EcoreUtil is undefined"
-      + "\nThe method detectSourceDeletions() from the type BxtendDemonstratorImplTransformation refers to the missing type Object"
-      + "\nThere is no context to infer the closure\'s argument types from. Consider typing the arguments or put the closures into a typed context."
-      + "\nThere is no context to infer the closure\'s argument types from. Consider typing the arguments or put the closures into a typed context."
-      + "\nforEach cannot be resolved"
-      + "\n+= cannot be resolved"
-      + "\n+= cannot be resolved"
-      + "\nforEach cannot be resolved"
-      + "\ndelete cannot be resolved");
+  public void deleteUnreferencedTargetElements() {
+    final List<EObject> deletionList = CollectionLiterals.<EObject>newArrayList();
+    final Procedure1<Corr> _function = (Corr c) -> {
+      EObject _targetElement = c.getTargetElement();
+      deletionList.add(_targetElement);
+      deletionList.add(c);
+    };
+    IteratorExtensions.<Corr>forEach(this.detectSourceDeletions(), _function);
+    final Consumer<EObject> _function_1 = (EObject e) -> {
+      EcoreUtil.delete(e, true);
+    };
+    deletionList.forEach(_function_1);
   }
   
-  public Object deleteUnreferencedSourceElements() {
-    throw new Error("Unresolved compilation problems:"
-      + "\nList cannot be resolved to a type."
-      + "\nBlock cannot be resolved to a type."
-      + "\nThe method or field newArrayList is undefined"
-      + "\nThe method or field sourceElement is undefined for the type Object"
-      + "\nThe method or field sourceElement is undefined for the type Object"
-      + "\nThe method or field EcoreUtil is undefined"
-      + "\nThe method detectTargetDeletions() from the type BxtendDemonstratorImplTransformation refers to the missing type Object"
-      + "\nThere is no context to infer the closure\'s argument types from. Consider typing the arguments or put the closures into a typed context."
-      + "\nThere is no context to infer the closure\'s argument types from. Consider typing the arguments or put the closures into a typed context."
-      + "\nforEach cannot be resolved"
-      + "\n+= cannot be resolved"
-      + "\n+= cannot be resolved"
-      + "\nforEach cannot be resolved"
-      + "\ndelete cannot be resolved");
+  public void deleteUnreferencedSourceElements() {
+    final List<EObject> deletionList = CollectionLiterals.<EObject>newArrayList();
+    final Procedure1<Corr> _function = (Corr c) -> {
+      EObject _sourceElement = c.getSourceElement();
+      boolean _not = (!(_sourceElement instanceof Block));
+      if (_not) {
+        EObject _sourceElement_1 = c.getSourceElement();
+        deletionList.add(_sourceElement_1);
+      }
+      deletionList.add(c);
+    };
+    IteratorExtensions.<Corr>forEach(this.detectTargetDeletions(), _function);
+    final Consumer<EObject> _function_1 = (EObject e) -> {
+      EcoreUtil.delete(e, true);
+    };
+    deletionList.forEach(_function_1);
   }
 }

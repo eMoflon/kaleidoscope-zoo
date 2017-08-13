@@ -3,10 +3,10 @@
 	<name>Client</name>
 	<comment></comment>
 	<projects>
-		<project>com.kaleidoscope.core.delta.metamodel</project>
 		<project>com.kaleidoscope.ui</project>
-		<project>com.kaleidoscope.core</project>
 		<project>com.kaleidoscope.usecase.bxdemonstrator.bxtend</project>
+		<project>com.kaleidoscope.core.framework</project>
+		<project>com.kaleidoscope.core.delta</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

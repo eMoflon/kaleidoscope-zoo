@@ -1,0 +1,23 @@
+#using CryptoConfigToJava.*
+#using AttrCondDefLibrary.*
+
+#rule IgnoreOpaqueMethod #with CryptoConfigToJava
+
+#source { 
+	
+}
+
+#target {
+	jcu:JavaCompilationUnit{
+		++ -methods->method
+	}
+	++method:JavaOpaqueMethod
+}
+
+#correspondence {
+	
+}
+
+#attributeConditions {
+	
+}

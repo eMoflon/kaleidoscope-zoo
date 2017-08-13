@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.moflon.tgg.runtime:CorrespondenceModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CryptoConfigToJava="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore" xmlns:org.moflon.tgg.runtime="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore">
+  <correspondences xsi:type="CryptoConfigToJava:SymmetricBlockCipherToJcu">
+    <source href="fwd.src.xmi#//@algorithms.0"/>
+    <target href="fwd.trg.xmi#//@cunits.0"/>
+  </correspondences>
+  <correspondences xsi:type="CryptoConfigToJava:TaskToJavaPackage">
+    <source href="fwd.src.xmi#/"/>
+    <target href="fwd.trg.xmi#/"/>
+  </correspondences>
+  <correspondences xsi:type="CryptoConfigToJava:ImportToImport">
+    <source href="fwd.src.xmi#//@algorithms.0/@imports.10"/>
+    <target href="fwd.trg.xmi#//@cunits.0/@imports.0"/>
+  </correspondences>
+  <correspondences xsi:type="CryptoConfigToJava:ImportToImport">
+    <source href="fwd.src.xmi#//@algorithms.0/@imports.9"/>
+    <target href="fwd.trg.xmi#//@cunits.0/@imports.1"/>
+  </correspondences>
+  <correspondences xsi:type="CryptoConfigToJava:ImportToImport">
+    <source href="fwd.src.xmi#//@algorithms.0/@imports.2"/>
+    <target href="fwd.trg.xmi#//@cunits.0/@imports.2"/>
+  </correspondences>
+  <correspondences xsi:type="CryptoConfigToJava:ImportToImport">
+    <source href="fwd.src.xmi#//@algorithms.0/@imports.0"/>
+    <target href="fwd.trg.xmi#//@cunits.0/@imports.3"/>
+  </correspondences>
+  <correspondences xsi:type="CryptoConfigToJava:ImportToImport">
+    <source href="fwd.src.xmi#//@algorithms.0/@imports.6"/>
+    <target href="fwd.trg.xmi#//@cunits.0/@imports.4"/>
+  </correspondences>
+  <correspondences xsi:type="CryptoConfigToJava:ImportToImport">
+    <source href="fwd.src.xmi#//@algorithms.0/@imports.4"/>
+    <target href="fwd.trg.xmi#//@cunits.0/@imports.5"/>
+  </correspondences>
+  <correspondences xsi:type="CryptoConfigToJava:ImportToImport">
+    <source href="fwd.src.xmi#//@algorithms.0/@imports.3"/>
+    <target href="fwd.trg.xmi#//@cunits.0/@imports.6"/>
+  </correspondences>
+  <correspondences xsi:type="CryptoConfigToJava:ImportToImport">
+    <source href="fwd.src.xmi#//@algorithms.0/@imports.5"/>
+    <target href="fwd.trg.xmi#//@cunits.0/@imports.7"/>
+  </correspondences>
+  <correspondences xsi:type="CryptoConfigToJava:ImportToImport">
+    <source href="fwd.src.xmi#//@algorithms.0/@imports.1"/>
+    <target href="fwd.trg.xmi#//@cunits.0/@imports.8"/>
+  </correspondences>
+  <correspondences xsi:type="CryptoConfigToJava:ImportToImport">
+    <source href="fwd.src.xmi#//@algorithms.0/@imports.8"/>
+    <target href="fwd.trg.xmi#//@cunits.0/@imports.9"/>
+  </correspondences>
+  <correspondences xsi:type="CryptoConfigToJava:ImportToImport">
+    <source href="fwd.src.xmi#//@algorithms.0/@imports.7"/>
+    <target href="fwd.trg.xmi#//@cunits.0/@imports.10"/>
+  </correspondences>
+  <source href="fwd.src.xmi#/"/>
+  <target href="fwd.trg.xmi#/"/>
+</org.moflon.tgg.runtime:CorrespondenceModel>

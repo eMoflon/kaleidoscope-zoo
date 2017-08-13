@@ -1,0 +1,23 @@
+#using CryptoConfigToJava.*
+#using AttrCondDefLibrary.*
+
+#rule IgnoreMethodInvocationArgument #with CryptoConfigToJava
+
+#source { 
+	
+}
+
+#target {
+	jmi:JavaMethodInvocation{
+		++ -arguments->argument
+	}
+	++argument:JavaExpression
+}
+
+#correspondence {
+	
+}
+
+#attributeConditions {
+	
+}

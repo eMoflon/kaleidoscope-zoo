@@ -3,8 +3,6 @@ package bxtooldemo.adapter.uimodels;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.kaleidoscope.extensionpoint.bxtool.SynchronizationReport;
-
 /**
  * @author Arjya Shankar Mishra
  *

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<CryptoJava:JavaPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CryptoJava="platform:/plugin/CryptoJava/model/CryptoJava.ecore" name="Crypto">
+  <cunits name="Enc">
+    <imports value="java.security.InvalidKeyException"/>
+    <imports value="java.security.SecureRandom"/>
+    <imports value="java.security.Key"/>
+    <imports value="javax.crypto.Cipher"/>
+    <imports value="javax.crypto.KeyGenerator"/>
+    <imports value="javax.crypto.SecretKey"/>
+    <imports value="javax.crypto.IllegalBlockSizeException"/>
+    <imports value="java.security.InvalidAlgorithmParameterException2"/>
+    <imports value="javax.crypto.NoSuchPaddingException"/>
+    <imports value="javax.crypto.spec.IvParameterSpec"/>
+    <imports value="java.security.NoSuchAlgorithmException"/>
+    <methods xsi:type="CryptoJava:JavaOpaqueMethod" name="performEncryption" type="byte[] " modifier="private" throws="InvalidKeyException,NoSuchAlgorithmException,NoSuchPaddingException,IllegalBlockSizeException,BadPaddingException,InvalidAlgorithmParameterException" index="0" body="{&#xA;  byte[] ivb=new byte[16];&#xA;  SecureRandom.getInstanceStrong().nextBytes(ivb);&#xA;  IvParameterSpec iv=new IvParameterSpec(ivb);&#xA;  Cipher c=Cipher.getInstance(encryptPassingArgument);&#xA;  c.init(Cipher.ENCRYPT_MODE,key,iv);&#xA;  byte[] res=c.doFinal(data);&#xA;  byte[] ret=new byte[res.length + ivb.length];&#xA;  System.arraycopy(ivb,0,ret,0,ivb.length);&#xA;  System.arraycopy(res,0,ret,ivb.length,ret.length);&#xA;  return ret;&#xA;}&#xA;" parameters="byte[] data,SecretKey key,String encryptPassingArgument"/>
+    <methods xsi:type="CryptoJava:JavaWorkflowMethod" name="encrypt" type="byte[] " modifier="public" throws="InvalidKeyException,NoSuchAlgorithmException,NoSuchPaddingException,IllegalBlockSizeException,BadPaddingException,InvalidAlgorithmParameterException" index="1">
+      <params index="1" type="SecretKey" name="key"/>
+      <params index="0" type="byte[]" name="data"/>
+      <statements return="true">
+        <expr xsi:type="CryptoJava:JavaMethodInvocation" name="performEncryption">
+          <arguments xsi:type="CryptoJava:JavaName" index="1" identifier="key"/>
+          <arguments xsi:type="CryptoJava:JavaLiteral" index="2" value="&quot;AES/GCM/PKCS5Padding&quot;"/>
+          <arguments xsi:type="CryptoJava:JavaName" index="0" identifier="data"/>
+        </expr>
+      </statements>
+    </methods>
+  </cunits>
+</CryptoJava:JavaPackage>

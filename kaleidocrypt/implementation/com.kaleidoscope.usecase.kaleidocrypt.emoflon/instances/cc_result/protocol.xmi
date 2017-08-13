@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.moflon.tgg.runtime:PrecedenceStructure xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.moflon.tgg.runtime="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore">
+  <tripleMatches ruleName="SymmetricBlockCipherImportToImport">
+    <sourceElements href="src.xmi#//@algorithms.0"/>
+    <sourceElements href="src.xmi#//@algorithms.0/@imports.8"/>
+    <sourceElements href="#//@tripleMatches.0/@containedEdges.0"/>
+    <contextElements href="corr.xmi#//@correspondences.1"/>
+    <contextElements href="src.xmi#//@algorithms.0"/>
+    <contextElements href="trg.xmi#//@cunits.0"/>
+    <nodeMappings nodeName="alg">
+      <node href="src.xmi#//@algorithms.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="imp">
+      <node href="src.xmi#//@algorithms.0/@imports.8"/>
+    </nodeMappings>
+    <nodeMappings nodeName="cu">
+      <node href="trg.xmi#//@cunits.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="jimp">
+      <node href="trg.xmi#//@cunits.0/@imports.8"/>
+    </nodeMappings>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="src.xmi#//@algorithms.0"/>
+      <trg href="src.xmi#//@algorithms.0/@imports.8"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="trg.xmi#//@cunits.0"/>
+      <trg href="trg.xmi#//@cunits.0/@imports.8"/>
+    </containedEdges>
+    <targetElements href="trg.xmi#//@cunits.0"/>
+    <targetElements href="trg.xmi#//@cunits.0/@imports.8"/>
+    <targetElements href="#//@tripleMatches.0/@containedEdges.1"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.1"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.3"/>
+    <createdElements href="src.xmi#//@algorithms.0/@imports.8"/>
+    <createdElements href="corr.xmi#//@correspondences.3"/>
+    <createdElements href="#//@tripleMatches.0/@containedEdges.0"/>
+    <createdElements href="trg.xmi#//@cunits.0/@imports.8"/>
+    <createdElements href="#//@tripleMatches.0/@containedEdges.1"/>
+  </tripleMatches>
+  <tripleMatches ruleName="SymmetricBlockCipherImportToImport">
+    <sourceElements href="src.xmi#//@algorithms.0"/>
+    <sourceElements href="#//@tripleMatches.1/@containedEdges.0"/>
+    <sourceElements href="src.xmi#//@algorithms.0/@imports.7"/>
+    <contextElements href="corr.xmi#//@correspondences.1"/>
+    <contextElements href="src.xmi#//@algorithms.0"/>
+    <contextElements href="trg.xmi#//@cunits.0"/>
+    <nodeMappings nodeName="alg">
+      <node href="src.xmi#//@algorithms.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="imp">
+      <node href="src.xmi#//@algorithms.0/@imports.7"/>
+    </nodeMappings>
+    <nodeMappings nodeName="cu">
+      <node href="trg.xmi#//@cunits.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="jimp">
+      <node href="trg.xmi#//@cunits.0/@imports.4"/>
+    </nodeMappings>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="src.xmi#//@algorithms.0"/>
+      <trg href="src.xmi#//@algorithms.0/@imports.7"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="trg.xmi#//@cunits.0"/>
+      <trg href="trg.xmi#//@cunits.0/@imports.4"/>
+    </containedEdges>
+    <targetElements href="trg.xmi#//@cunits.0"/>
+    <targetElements href="trg.xmi#//@cunits.0/@imports.4"/>
+    <targetElements href="#//@tripleMatches.1/@containedEdges.1"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.1"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.2"/>
+    <createdElements href="trg.xmi#//@cunits.0/@imports.4"/>
+    <createdElements href="#//@tripleMatches.1/@containedEdges.0"/>
+    <createdElements href="#//@tripleMatches.1/@containedEdges.1"/>
+    <createdElements href="corr.xmi#//@correspondences.2"/>
+    <createdElements href="src.xmi#//@algorithms.0/@imports.7"/>
+  </tripleMatches>
+  <tripleMatches ruleName="SymmetricBlockCipherImportToImport">
+    <sourceElements href="src.xmi#//@algorithms.0"/>
+    <sourceElements href="#//@tripleMatches.2/@containedEdges.1"/>
+    <sourceElements href="src.xmi#//@algorithms.0/@imports.0"/>
+    <contextElements href="corr.xmi#//@correspondences.1"/>
+    <contextElements href="src.xmi#//@algorithms.0"/>
+    <contextElements href="trg.xmi#//@cunits.0"/>
+    <nodeMappings nodeName="alg">
+      <node href="src.xmi#//@algorithms.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="imp">
+      <node href="src.xmi#//@algorithms.0/@imports.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="cu">
+      <node href="trg.xmi#//@cunits.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="jimp">
+      <node href="trg.xmi#//@cunits.0/@imports.7"/>
+    </nodeMappings>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="trg.xmi#//@cunits.0"/>
+      <trg href="trg.xmi#//@cunits.0/@imports.7"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="src.xmi#//@algorithms.0"/>
+      <trg href="src.xmi#//@algorithms.0/@imports.0"/>
+    </containedEdges>
+    <targetElements href="trg.xmi#//@cunits.0"/>
+    <targetElements href="#//@tripleMatches.2/@containedEdges.0"/>
+    <targetElements href="trg.xmi#//@cunits.0/@imports.7"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.1"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.12"/>
+    <createdElements href="#//@tripleMatches.2/@containedEdges.0"/>
+    <createdElements href="#//@tripleMatches.2/@containedEdges.1"/>
+    <createdElements href="corr.xmi#//@correspondences.12"/>
+    <createdElements href="src.xmi#//@algorithms.0/@imports.0"/>
+    <createdElements href="trg.xmi#//@cunits.0/@imports.7"/>
+  </tripleMatches>
+  <tripleMatches ruleName="SymmetricBlockCipherImportToImport">
+    <sourceElements href="src.xmi#//@algorithms.0"/>
+    <sourceElements href="src.xmi#//@algorithms.0/@imports.5"/>
+    <sourceElements href="#//@tripleMatches.3/@containedEdges.1"/>
+    <contextElements href="corr.xmi#//@correspondences.1"/>
+    <contextElements href="src.xmi#//@algorithms.0"/>
+    <contextElements href="trg.xmi#//@cunits.0"/>
+    <nodeMappings nodeName="alg">
+      <node href="src.xmi#//@algorithms.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="imp">
+      <node href="src.xmi#//@algorithms.0/@imports.5"/>
+    </nodeMappings>
+    <nodeMappings nodeName="cu">
+      <node href="trg.xmi#//@cunits.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="jimp">
+      <node href="trg.xmi#//@cunits.0/@imports.3"/>
+    </nodeMappings>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="trg.xmi#//@cunits.0"/>
+      <trg href="trg.xmi#//@cunits.0/@imports.3"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="src.xmi#//@algorithms.0"/>
+      <trg href="src.xmi#//@algorithms.0/@imports.5"/>
+    </containedEdges>
+    <targetElements href="trg.xmi#//@cunits.0"/>
+    <targetElements href="#//@tripleMatches.3/@containedEdges.0"/>
+    <targetElements href="trg.xmi#//@cunits.0/@imports.3"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.1"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.4"/>
+    <createdElements href="#//@tripleMatches.3/@containedEdges.0"/>
+    <createdElements href="src.xmi#//@algorithms.0/@imports.5"/>
+    <createdElements href="corr.xmi#//@correspondences.4"/>
+    <createdElements href="trg.xmi#//@cunits.0/@imports.3"/>
+    <createdElements href="#//@tripleMatches.3/@containedEdges.1"/>
+  </tripleMatches>
+  <tripleMatches children="//@tripleMatches.2 //@tripleMatches.8 //@tripleMatches.9 //@tripleMatches.7 //@tripleMatches.10 //@tripleMatches.11 //@tripleMatches.5 //@tripleMatches.6 //@tripleMatches.3 //@tripleMatches.0 //@tripleMatches.1" ruleName="SymmetricEncryptionTask">
+    <sourceElements href="src.xmi#/"/>
+    <sourceElements href="src.xmi#//@algorithms.0"/>
+    <sourceElements href="#//@tripleMatches.4/@containedEdges.8"/>
+    <nodeMappings nodeName="task">
+      <node href="src.xmi#/"/>
+    </nodeMappings>
+    <nodeMappings nodeName="sbc">
+      <node href="src.xmi#//@algorithms.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="javaPackage">
+      <node href="trg.xmi#/"/>
+    </nodeMappings>
+    <nodeMappings nodeName="exprDataName">
+      <node href="trg.xmi#//@cunits.0/@methods.1/@statements.0/@expr/@arguments.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="methodPerformEncryption">
+      <node href="trg.xmi#//@cunits.0/@methods.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="exprRetPerformEncryption">
+      <node href="trg.xmi#//@cunits.0/@methods.1/@statements.0/@expr"/>
+    </nodeMappings>
+    <nodeMappings nodeName="keyEncryption">
+      <node href="trg.xmi#//@cunits.0/@methods.1/@params.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="dataEncryption">
+      <node href="trg.xmi#//@cunits.0/@methods.1/@params.1"/>
+    </nodeMappings>
+    <nodeMappings nodeName="statRetPerformEncryption">
+      <node href="trg.xmi#//@cunits.0/@methods.1/@statements.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="jcu">
+      <node href="trg.xmi#//@cunits.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="exprKeyName">
+      <node href="trg.xmi#//@cunits.0/@methods.1/@statements.0/@expr/@arguments.2"/>
+    </nodeMappings>
+    <nodeMappings nodeName="exprNameModePadding">
+      <node href="trg.xmi#//@cunits.0/@methods.1/@statements.0/@expr/@arguments.1"/>
+    </nodeMappings>
+    <nodeMappings nodeName="methodEncryption">
+      <node href="trg.xmi#//@cunits.0/@methods.1"/>
+    </nodeMappings>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="params">
+      <src href="trg.xmi#//@cunits.0/@methods.1"/>
+      <trg href="trg.xmi#//@cunits.0/@methods.1/@params.1"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="cunits">
+      <src href="trg.xmi#/"/>
+      <trg href="trg.xmi#//@cunits.0"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="params">
+      <src href="trg.xmi#//@cunits.0/@methods.1"/>
+      <trg href="trg.xmi#//@cunits.0/@methods.1/@params.0"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="methods">
+      <src href="trg.xmi#//@cunits.0"/>
+      <trg href="trg.xmi#//@cunits.0/@methods.0"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="methods">
+      <src href="trg.xmi#//@cunits.0"/>
+      <trg href="trg.xmi#//@cunits.0/@methods.1"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="statements">
+      <src href="trg.xmi#//@cunits.0/@methods.1"/>
+      <trg href="trg.xmi#//@cunits.0/@methods.1/@statements.0"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="expr">
+      <src href="trg.xmi#//@cunits.0/@methods.1/@statements.0"/>
+      <trg href="trg.xmi#//@cunits.0/@methods.1/@statements.0/@expr"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="arguments">
+      <src href="trg.xmi#//@cunits.0/@methods.1/@statements.0/@expr"/>
+      <trg href="trg.xmi#//@cunits.0/@methods.1/@statements.0/@expr/@arguments.2"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="algorithms">
+      <src href="src.xmi#/"/>
+      <trg href="src.xmi#//@algorithms.0"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="arguments">
+      <src href="trg.xmi#//@cunits.0/@methods.1/@statements.0/@expr"/>
+      <trg href="trg.xmi#//@cunits.0/@methods.1/@statements.0/@expr/@arguments.0"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="arguments">
+      <src href="trg.xmi#//@cunits.0/@methods.1/@statements.0/@expr"/>
+      <trg href="trg.xmi#//@cunits.0/@methods.1/@statements.0/@expr/@arguments.1"/>
+    </containedEdges>
+    <targetElements href="trg.xmi#//@cunits.0/@methods.1/@params.1"/>
+    <targetElements href="#//@tripleMatches.4/@containedEdges.5"/>
+    <targetElements href="trg.xmi#//@cunits.0/@methods.1"/>
+    <targetElements href="trg.xmi#//@cunits.0/@methods.1/@params.0"/>
+    <targetElements href="#//@tripleMatches.4/@containedEdges.0"/>
+    <targetElements href="trg.xmi#//@cunits.0/@methods.0"/>
+    <targetElements href="#//@tripleMatches.4/@containedEdges.6"/>
+    <targetElements href="trg.xmi#//@cunits.0/@methods.1/@statements.0"/>
+    <targetElements href="#//@tripleMatches.4/@containedEdges.1"/>
+    <targetElements href="trg.xmi#/"/>
+    <targetElements href="trg.xmi#//@cunits.0/@methods.1/@statements.0/@expr/@arguments.2"/>
+    <targetElements href="#//@tripleMatches.4/@containedEdges.2"/>
+    <targetElements href="#//@tripleMatches.4/@containedEdges.3"/>
+    <targetElements href="#//@tripleMatches.4/@containedEdges.7"/>
+    <targetElements href="trg.xmi#//@cunits.0/@methods.1/@statements.0/@expr"/>
+    <targetElements href="#//@tripleMatches.4/@containedEdges.4"/>
+    <targetElements href="trg.xmi#//@cunits.0/@methods.1/@statements.0/@expr/@arguments.0"/>
+    <targetElements href="trg.xmi#//@cunits.0/@methods.1/@statements.0/@expr/@arguments.1"/>
+    <targetElements href="trg.xmi#//@cunits.0"/>
+    <targetElements href="#//@tripleMatches.4/@containedEdges.9"/>
+    <targetElements href="#//@tripleMatches.4/@containedEdges.10"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.0"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.1"/>
+    <createdElements href="trg.xmi#//@cunits.0/@methods.1"/>
+    <createdElements href="#//@tripleMatches.4/@containedEdges.0"/>
+    <createdElements href="#//@tripleMatches.4/@containedEdges.1"/>
+    <createdElements href="corr.xmi#//@correspondences.1"/>
+    <createdElements href="#//@tripleMatches.4/@containedEdges.2"/>
+    <createdElements href="#//@tripleMatches.4/@containedEdges.3"/>
+    <createdElements href="#//@tripleMatches.4/@containedEdges.4"/>
+    <createdElements href="trg.xmi#//@cunits.0"/>
+    <createdElements href="trg.xmi#//@cunits.0/@methods.1/@params.1"/>
+    <createdElements href="#//@tripleMatches.4/@containedEdges.5"/>
+    <createdElements href="corr.xmi#//@correspondences.0"/>
+    <createdElements href="trg.xmi#//@cunits.0/@methods.1/@params.0"/>
+    <createdElements href="trg.xmi#//@cunits.0/@methods.0"/>
+    <createdElements href="#//@tripleMatches.4/@containedEdges.6"/>
+    <createdElements href="trg.xmi#//@cunits.0/@methods.1/@statements.0"/>
+    <createdElements href="trg.xmi#/"/>
+    <createdElements href="trg.xmi#//@cunits.0/@methods.1/@statements.0/@expr/@arguments.2"/>
+    <createdElements href="src.xmi#/"/>
+    <createdElements href="#//@tripleMatches.4/@containedEdges.7"/>
+    <createdElements href="src.xmi#//@algorithms.0"/>
+    <createdElements href="trg.xmi#//@cunits.0/@methods.1/@statements.0/@expr"/>
+    <createdElements href="trg.xmi#//@cunits.0/@methods.1/@statements.0/@expr/@arguments.0"/>
+    <createdElements href="trg.xmi#//@cunits.0/@methods.1/@statements.0/@expr/@arguments.1"/>
+    <createdElements href="#//@tripleMatches.4/@containedEdges.8"/>
+    <createdElements href="#//@tripleMatches.4/@containedEdges.9"/>
+    <createdElements href="#//@tripleMatches.4/@containedEdges.10"/>
+  </tripleMatches>
+  <tripleMatches ruleName="SymmetricBlockCipherImportToImport">
+    <sourceElements href="src.xmi#//@algorithms.0"/>
+    <sourceElements href="src.xmi#//@algorithms.0/@imports.6"/>
+    <sourceElements href="#//@tripleMatches.5/@containedEdges.0"/>
+    <contextElements href="corr.xmi#//@correspondences.1"/>
+    <contextElements href="src.xmi#//@algorithms.0"/>
+    <contextElements href="trg.xmi#//@cunits.0"/>
+    <nodeMappings nodeName="alg">
+      <node href="src.xmi#//@algorithms.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="imp">
+      <node href="src.xmi#//@algorithms.0/@imports.6"/>
+    </nodeMappings>
+    <nodeMappings nodeName="cu">
+      <node href="trg.xmi#//@cunits.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="jimp">
+      <node href="trg.xmi#//@cunits.0/@imports.6"/>
+    </nodeMappings>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="src.xmi#//@algorithms.0"/>
+      <trg href="src.xmi#//@algorithms.0/@imports.6"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="trg.xmi#//@cunits.0"/>
+      <trg href="trg.xmi#//@cunits.0/@imports.6"/>
+    </containedEdges>
+    <targetElements href="trg.xmi#//@cunits.0"/>
+    <targetElements href="trg.xmi#//@cunits.0/@imports.6"/>
+    <targetElements href="#//@tripleMatches.5/@containedEdges.1"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.1"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.6"/>
+    <createdElements href="corr.xmi#//@correspondences.6"/>
+    <createdElements href="src.xmi#//@algorithms.0/@imports.6"/>
+    <createdElements href="trg.xmi#//@cunits.0/@imports.6"/>
+    <createdElements href="#//@tripleMatches.5/@containedEdges.0"/>
+    <createdElements href="#//@tripleMatches.5/@containedEdges.1"/>
+  </tripleMatches>
+  <tripleMatches ruleName="SymmetricBlockCipherImportToImport">
+    <sourceElements href="src.xmi#//@algorithms.0"/>
+    <sourceElements href="src.xmi#//@algorithms.0/@imports.2"/>
+    <sourceElements href="#//@tripleMatches.6/@containedEdges.1"/>
+    <contextElements href="corr.xmi#//@correspondences.1"/>
+    <contextElements href="src.xmi#//@algorithms.0"/>
+    <contextElements href="trg.xmi#//@cunits.0"/>
+    <nodeMappings nodeName="alg">
+      <node href="src.xmi#//@algorithms.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="imp">
+      <node href="src.xmi#//@algorithms.0/@imports.2"/>
+    </nodeMappings>
+    <nodeMappings nodeName="cu">
+      <node href="trg.xmi#//@cunits.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="jimp">
+      <node href="trg.xmi#//@cunits.0/@imports.2"/>
+    </nodeMappings>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="trg.xmi#//@cunits.0"/>
+      <trg href="trg.xmi#//@cunits.0/@imports.2"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="src.xmi#//@algorithms.0"/>
+      <trg href="src.xmi#//@algorithms.0/@imports.2"/>
+    </containedEdges>
+    <targetElements href="trg.xmi#//@cunits.0"/>
+    <targetElements href="#//@tripleMatches.6/@containedEdges.0"/>
+    <targetElements href="trg.xmi#//@cunits.0/@imports.2"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.1"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.5"/>
+    <createdElements href="src.xmi#//@algorithms.0/@imports.2"/>
+    <createdElements href="corr.xmi#//@correspondences.5"/>
+    <createdElements href="#//@tripleMatches.6/@containedEdges.0"/>
+    <createdElements href="trg.xmi#//@cunits.0/@imports.2"/>
+    <createdElements href="#//@tripleMatches.6/@containedEdges.1"/>
+  </tripleMatches>
+  <tripleMatches ruleName="SymmetricBlockCipherImportToImport">
+    <sourceElements href="src.xmi#//@algorithms.0"/>
+    <sourceElements href="#//@tripleMatches.7/@containedEdges.0"/>
+    <sourceElements href="src.xmi#//@algorithms.0/@imports.4"/>
+    <contextElements href="corr.xmi#//@correspondences.1"/>
+    <contextElements href="src.xmi#//@algorithms.0"/>
+    <contextElements href="trg.xmi#//@cunits.0"/>
+    <nodeMappings nodeName="alg">
+      <node href="src.xmi#//@algorithms.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="imp">
+      <node href="src.xmi#//@algorithms.0/@imports.4"/>
+    </nodeMappings>
+    <nodeMappings nodeName="cu">
+      <node href="trg.xmi#//@cunits.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="jimp">
+      <node href="trg.xmi#//@cunits.0/@imports.1"/>
+    </nodeMappings>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="src.xmi#//@algorithms.0"/>
+      <trg href="src.xmi#//@algorithms.0/@imports.4"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="trg.xmi#//@cunits.0"/>
+      <trg href="trg.xmi#//@cunits.0/@imports.1"/>
+    </containedEdges>
+    <targetElements href="trg.xmi#//@cunits.0"/>
+    <targetElements href="#//@tripleMatches.7/@containedEdges.1"/>
+    <targetElements href="trg.xmi#//@cunits.0/@imports.1"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.1"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.9"/>
+    <createdElements href="corr.xmi#//@correspondences.9"/>
+    <createdElements href="#//@tripleMatches.7/@containedEdges.0"/>
+    <createdElements href="#//@tripleMatches.7/@containedEdges.1"/>
+    <createdElements href="trg.xmi#//@cunits.0/@imports.1"/>
+    <createdElements href="src.xmi#//@algorithms.0/@imports.4"/>
+  </tripleMatches>
+  <tripleMatches ruleName="SymmetricBlockCipherImportToImport">
+    <sourceElements href="src.xmi#//@algorithms.0"/>
+    <sourceElements href="#//@tripleMatches.8/@containedEdges.1"/>
+    <sourceElements href="src.xmi#//@algorithms.0/@imports.1"/>
+    <contextElements href="corr.xmi#//@correspondences.1"/>
+    <contextElements href="src.xmi#//@algorithms.0"/>
+    <contextElements href="trg.xmi#//@cunits.0"/>
+    <nodeMappings nodeName="alg">
+      <node href="src.xmi#//@algorithms.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="imp">
+      <node href="src.xmi#//@algorithms.0/@imports.1"/>
+    </nodeMappings>
+    <nodeMappings nodeName="cu">
+      <node href="trg.xmi#//@cunits.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="jimp">
+      <node href="trg.xmi#//@cunits.0/@imports.0"/>
+    </nodeMappings>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="trg.xmi#//@cunits.0"/>
+      <trg href="trg.xmi#//@cunits.0/@imports.0"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="src.xmi#//@algorithms.0"/>
+      <trg href="src.xmi#//@algorithms.0/@imports.1"/>
+    </containedEdges>
+    <targetElements href="trg.xmi#//@cunits.0"/>
+    <targetElements href="#//@tripleMatches.8/@containedEdges.0"/>
+    <targetElements href="trg.xmi#//@cunits.0/@imports.0"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.1"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.11"/>
+    <createdElements href="#//@tripleMatches.8/@containedEdges.0"/>
+    <createdElements href="#//@tripleMatches.8/@containedEdges.1"/>
+    <createdElements href="trg.xmi#//@cunits.0/@imports.0"/>
+    <createdElements href="corr.xmi#//@correspondences.11"/>
+    <createdElements href="src.xmi#//@algorithms.0/@imports.1"/>
+  </tripleMatches>
+  <tripleMatches ruleName="SymmetricBlockCipherImportToImport">
+    <sourceElements href="src.xmi#//@algorithms.0"/>
+    <sourceElements href="#//@tripleMatches.9/@containedEdges.0"/>
+    <sourceElements href="src.xmi#//@algorithms.0/@imports.9"/>
+    <contextElements href="corr.xmi#//@correspondences.1"/>
+    <contextElements href="src.xmi#//@algorithms.0"/>
+    <contextElements href="trg.xmi#//@cunits.0"/>
+    <nodeMappings nodeName="alg">
+      <node href="src.xmi#//@algorithms.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="imp">
+      <node href="src.xmi#//@algorithms.0/@imports.9"/>
+    </nodeMappings>
+    <nodeMappings nodeName="cu">
+      <node href="trg.xmi#//@cunits.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="jimp">
+      <node href="trg.xmi#//@cunits.0/@imports.5"/>
+    </nodeMappings>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="src.xmi#//@algorithms.0"/>
+      <trg href="src.xmi#//@algorithms.0/@imports.9"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="trg.xmi#//@cunits.0"/>
+      <trg href="trg.xmi#//@cunits.0/@imports.5"/>
+    </containedEdges>
+    <targetElements href="trg.xmi#//@cunits.0"/>
+    <targetElements href="#//@tripleMatches.9/@containedEdges.1"/>
+    <targetElements href="trg.xmi#//@cunits.0/@imports.5"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.1"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.10"/>
+    <createdElements href="#//@tripleMatches.9/@containedEdges.0"/>
+    <createdElements href="#//@tripleMatches.9/@containedEdges.1"/>
+    <createdElements href="corr.xmi#//@correspondences.10"/>
+    <createdElements href="trg.xmi#//@cunits.0/@imports.5"/>
+    <createdElements href="src.xmi#//@algorithms.0/@imports.9"/>
+  </tripleMatches>
+  <tripleMatches ruleName="SymmetricBlockCipherImportToImport">
+    <sourceElements href="src.xmi#//@algorithms.0"/>
+    <sourceElements href="src.xmi#//@algorithms.0/@imports.10"/>
+    <sourceElements href="#//@tripleMatches.10/@containedEdges.1"/>
+    <contextElements href="corr.xmi#//@correspondences.1"/>
+    <contextElements href="src.xmi#//@algorithms.0"/>
+    <contextElements href="trg.xmi#//@cunits.0"/>
+    <nodeMappings nodeName="alg">
+      <node href="src.xmi#//@algorithms.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="imp">
+      <node href="src.xmi#//@algorithms.0/@imports.10"/>
+    </nodeMappings>
+    <nodeMappings nodeName="cu">
+      <node href="trg.xmi#//@cunits.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="jimp">
+      <node href="trg.xmi#//@cunits.0/@imports.9"/>
+    </nodeMappings>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="trg.xmi#//@cunits.0"/>
+      <trg href="trg.xmi#//@cunits.0/@imports.9"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="src.xmi#//@algorithms.0"/>
+      <trg href="src.xmi#//@algorithms.0/@imports.10"/>
+    </containedEdges>
+    <targetElements href="trg.xmi#//@cunits.0"/>
+    <targetElements href="#//@tripleMatches.10/@containedEdges.0"/>
+    <targetElements href="trg.xmi#//@cunits.0/@imports.9"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.1"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.8"/>
+    <createdElements href="corr.xmi#//@correspondences.8"/>
+    <createdElements href="#//@tripleMatches.10/@containedEdges.0"/>
+    <createdElements href="src.xmi#//@algorithms.0/@imports.10"/>
+    <createdElements href="trg.xmi#//@cunits.0/@imports.9"/>
+    <createdElements href="#//@tripleMatches.10/@containedEdges.1"/>
+  </tripleMatches>
+  <tripleMatches ruleName="SymmetricBlockCipherImportToImport">
+    <sourceElements href="src.xmi#//@algorithms.0"/>
+    <sourceElements href="src.xmi#//@algorithms.0/@imports.3"/>
+    <sourceElements href="#//@tripleMatches.11/@containedEdges.0"/>
+    <contextElements href="corr.xmi#//@correspondences.1"/>
+    <contextElements href="src.xmi#//@algorithms.0"/>
+    <contextElements href="trg.xmi#//@cunits.0"/>
+    <nodeMappings nodeName="alg">
+      <node href="src.xmi#//@algorithms.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="imp">
+      <node href="src.xmi#//@algorithms.0/@imports.3"/>
+    </nodeMappings>
+    <nodeMappings nodeName="cu">
+      <node href="trg.xmi#//@cunits.0"/>
+    </nodeMappings>
+    <nodeMappings nodeName="jimp">
+      <node href="trg.xmi#//@cunits.0/@imports.10"/>
+    </nodeMappings>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="src.xmi#//@algorithms.0"/>
+      <trg href="src.xmi#//@algorithms.0/@imports.3"/>
+    </containedEdges>
+    <containedEdges xsi:type="org.moflon.tgg.runtime:EMoflonEdge" name="imports">
+      <src href="trg.xmi#//@cunits.0"/>
+      <trg href="trg.xmi#//@cunits.0/@imports.10"/>
+    </containedEdges>
+    <targetElements href="trg.xmi#//@cunits.0"/>
+    <targetElements href="trg.xmi#//@cunits.0/@imports.10"/>
+    <targetElements href="#//@tripleMatches.11/@containedEdges.1"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.1"/>
+    <correspondenceElements href="corr.xmi#//@correspondences.7"/>
+    <createdElements href="trg.xmi#//@cunits.0/@imports.10"/>
+    <createdElements href="src.xmi#//@algorithms.0/@imports.3"/>
+    <createdElements href="corr.xmi#//@correspondences.7"/>
+    <createdElements href="#//@tripleMatches.11/@containedEdges.0"/>
+    <createdElements href="#//@tripleMatches.11/@containedEdges.1"/>
+  </tripleMatches>
+</org.moflon.tgg.runtime:PrecedenceStructure>

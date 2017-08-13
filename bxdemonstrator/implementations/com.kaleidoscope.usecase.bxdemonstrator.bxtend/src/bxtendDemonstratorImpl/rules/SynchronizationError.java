@@ -4,6 +4,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
 
 public class SynchronizationError extends IllegalStateException {
 
+	private static final long serialVersionUID = 7526472295622776147L;
 	private Copier objectMapping;
 	
 	public SynchronizationError(){

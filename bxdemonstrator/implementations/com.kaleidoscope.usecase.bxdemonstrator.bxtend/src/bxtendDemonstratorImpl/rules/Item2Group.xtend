@@ -7,15 +7,13 @@ import KitchenLanguage.Fridge
 import KitchenLanguage.Item
 import KitchenLanguage.ItemSocket
 import KitchenLanguage.KitchenLanguageFactory
-import KitchenLanguage.KitchenLanguagePackage
 import KitchenLanguage.Sink
 import KitchenLanguage.Table
+import bxtendDemonstratorImpl.Corr
 import java.util.Arrays
 import java.util.HashMap
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.resource.Resource
-import org.eclipse.emf.ecore.util.EcoreUtil
-import bxtendDemonstratorImpl.Corr
 
 class Item2Group  extends Elem2Elem{
 	
@@ -55,7 +53,7 @@ class Item2Group  extends Elem2Elem{
 		if(firstBlock.s != secondBlock && secondBlock.s != firstBlock)
 			return false;
 			
-    	if(firstBlock.n != null)
+    	if(firstBlock.n !== null)
     		return false;
     		
 		return true;
@@ -67,7 +65,7 @@ class Item2Group  extends Elem2Elem{
 		if(firstBlock.e != secondBlock && secondBlock.e != firstBlock)
 			return false;
 			
-    	if(firstBlock.w != null)
+    	if(firstBlock.w !== null)
     		return false;
     		
 		return true;
@@ -78,8 +76,8 @@ class Item2Group  extends Elem2Elem{
 		b.YIndex == (table.YPos as int)/(grid.blockSize as int)] as Block;
 		
 		
-		if(firstBlock.e == null || (firstBlock.isOccupiedBy != null && firstBlock.isOccupiedBy != corrGroup)
-			 || (firstBlock.e.isOccupiedBy != null && firstBlock.e.isOccupiedBy != corrGroup)
+		if(firstBlock.e === null || (firstBlock.isOccupiedBy !== null && firstBlock.isOccupiedBy != corrGroup)
+			 || (firstBlock.e.isOccupiedBy !== null && firstBlock.e.isOccupiedBy != corrGroup)
 		){
 			return false;
 		}
@@ -92,8 +90,8 @@ class Item2Group  extends Elem2Elem{
 		var firstBlock = grid.blocks.findFirst[b | b.XIndex == (table.XPos as int)/(grid.blockSize as int) && 
 		b.YIndex == (table.YPos as int)/(grid.blockSize as int)] as Block;
 		
-		if(firstBlock.s == null || (firstBlock.isOccupiedBy != null && firstBlock.isOccupiedBy != corrGroup) 
-			 || (firstBlock.s.isOccupiedBy != null && firstBlock.s.isOccupiedBy != corrGroup)
+		if(firstBlock.s === null || (firstBlock.isOccupiedBy !== null && firstBlock.isOccupiedBy != corrGroup) 
+			 || (firstBlock.s.isOccupiedBy !== null && firstBlock.s.isOccupiedBy != corrGroup)
 		){
 			return false;
 		}
@@ -128,7 +126,7 @@ class Item2Group  extends Elem2Elem{
 					
 				if(firstBlock != oldFirstBlock){
 					
-					if(oldFirstBlock != null && oldSecondBlock != null){
+					if(oldFirstBlock !== null && oldSecondBlock !== null){
 						oldFirstBlock.isOccupiedBy = null
 						oldSecondBlock.isOccupiedBy = null						
 					}
@@ -139,8 +137,8 @@ class Item2Group  extends Elem2Elem{
 			    			
 			    				
 			    			// check if it is possible to set blocks to correspond to the f		    						    		
-			    			if(firstBlock.w != null || (firstBlock.isOccupiedBy != null && firstBlock.isOccupiedBy != corrGroup) 
-			    				|| firstBlock.e == null || (firstBlock.e.isOccupiedBy != null && firstBlock.e.isOccupiedBy != corrGroup)
+			    			if(firstBlock.w !== null || (firstBlock.isOccupiedBy !== null && firstBlock.isOccupiedBy != corrGroup) 
+			    				|| firstBlock.e === null || (firstBlock.e.isOccupiedBy !== null && firstBlock.e.isOccupiedBy != corrGroup)
 			    			){			    					
 								throw new SynchronizationError();
 									
@@ -163,8 +161,8 @@ class Item2Group  extends Elem2Elem{
 			    			
 			    			
 			    				
-				    			if((firstBlock.isOccupiedBy != null && firstBlock.isOccupiedBy != corrGroup) || firstBlock.n != null || 
-				    									firstBlock.s == null || (firstBlock.s.isOccupiedBy != null && firstBlock.s.isOccupiedBy != corrGroup)
+				    			if((firstBlock.isOccupiedBy !== null && firstBlock.isOccupiedBy != corrGroup) || firstBlock.n !== null || 
+				    									firstBlock.s === null || (firstBlock.s.isOccupiedBy !== null && firstBlock.s.isOccupiedBy != corrGroup)
 				    			){			    											
 									throw new SynchronizationError();
 									
@@ -272,7 +270,7 @@ class Item2Group  extends Elem2Elem{
 				var item = itemSocket.item as Item
 				var grid = (sourceModel.contents.get(0)) as Grid;
 				
-				if(item == null){
+				if(item === null){
 						var i = 0;
 						var j = 0;
 						

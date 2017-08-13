@@ -1,75 +1,61 @@
 package bxtendDemonstratorImpl.rules;
 
+import GridLanguage.Grid;
+import GridLanguage.GridLanguagePackage;
+import GridLanguage.Group;
+import KitchenLanguage.ItemSocket;
+import KitchenLanguage.Kitchen;
+import KitchenLanguage.KitchenLanguagePackage;
+import bxtendDemonstratorImpl.Corr;
+import bxtendDemonstratorImpl.rules.BxtendDemonstratorImplTransformation;
 import bxtendDemonstratorImpl.rules.Elem2Elem;
+import com.google.common.collect.Iterators;
+import java.util.UUID;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.xtext.xbase.lib.Functions.Function1;
+import org.eclipse.xtext.xbase.lib.IteratorExtensions;
+import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 
+@SuppressWarnings("all")
 public class Socket2Group extends Elem2Elem {
   public Socket2Group(final Resource src, final Resource trgt, final Resource corr) {
     super(src, trgt, corr);
   }
   
-  public void sourceToTarget(final /* String */Object s) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nGroup cannot be resolved to a type."
-      + "\nGrid cannot be resolved to a type."
-      + "\nKitchen cannot be resolved to a type."
-      + "\nItemSocket cannot be resolved to a type."
-      + "\nKitchen cannot be resolved to a type."
-      + "\nThe method filter(java.lang.Class) is undefined for the type TreeIterator<EObject>"
-      + "\nThe method or field eContainer is undefined for the type Object"
-      + "\nThe method or field eContainer is undefined for the type Object"
-      + "\nThe method or field KitchenLanguagePackage is undefined"
-      + "\nThe method or field UUID is undefined"
-      + "\nThe method get(int) is undefined for the type EList<EObject>"
-      + "\nThere is no context to infer the closure\'s argument types from. Consider typing the arguments or put the closures into a typed context."
-      + "\nThere is no context to infer the closure\'s argument types from. Consider typing the arguments or put the closures into a typed context."
-      + "\nThe method getOrCreateCorrModelElement(EObject, String) from the type Elem2Elem refers to the missing type Object"
-      + "\nfilter cannot be resolved"
-      + "\ngetCorrModelElement cannot be resolved"
-      + "\ngrid2Kitchen cannot be resolved"
-      + "\ntargetElement cannot be resolved"
-      + "\nforEach cannot be resolved"
-      + "\nsocket2Group cannot be resolved"
-      + "\ngetOrCreateTargetElem cannot be resolved"
-      + "\neINSTANCE cannot be resolved"
-      + "\nitemSocket cannot be resolved"
-      + "\nid cannot be resolved"
-      + "\nequals cannot be resolved"
-      + "\nid cannot be resolved"
-      + "\nrandomUUID cannot be resolved"
-      + "\ntoString cannot be resolved"
-      + "\nitemSockets cannot be resolved"
-      + "\nadd cannot be resolved");
+  @Override
+  public void sourceToTarget(final String s) {
+    final Function1<Group, Boolean> _function = (Group g) -> {
+      return Boolean.valueOf(((g.eContainer() instanceof Grid) && (this.getCorrModelElement(g.eContainer(), BxtendDemonstratorImplTransformation.grid2Kitchen).getTargetElement() instanceof Kitchen)));
+    };
+    final Procedure1<Group> _function_1 = (Group g) -> {
+      final Corr corrTarget = this.getOrCreateCorrModelElement(g, BxtendDemonstratorImplTransformation.socket2Group);
+      EObject _orCreateTargetElem = this.getOrCreateTargetElem(corrTarget, KitchenLanguagePackage.eINSTANCE.getItemSocket());
+      final ItemSocket targetItemSocket = ((ItemSocket) _orCreateTargetElem);
+      boolean _equals = targetItemSocket.getId().equals("");
+      if (_equals) {
+        targetItemSocket.setId(UUID.randomUUID().toString());
+      }
+      EObject _get = this.targetModel.getContents().get(0);
+      Kitchen kitchen = ((Kitchen) _get);
+      kitchen.getItemSockets().add(targetItemSocket);
+    };
+    IteratorExtensions.<Group>forEach(IteratorExtensions.<Group>filter(Iterators.<Group>filter(this.sourceModel.getAllContents(), Group.class), _function), _function_1);
   }
   
-  public void targetToSource(final /* String */Object s) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nItemSocket cannot be resolved to a type."
-      + "\nKitchen cannot be resolved to a type."
-      + "\nGrid cannot be resolved to a type."
-      + "\nGroup cannot be resolved to a type."
-      + "\nGrid cannot be resolved to a type."
-      + "\nThe method filter(java.lang.Class) is undefined for the type TreeIterator<EObject>"
-      + "\nThe method or field eContainer is undefined for the type Object"
-      + "\nThe method or field eContainer is undefined for the type Object"
-      + "\nThe method or field GridLanguagePackage is undefined"
-      + "\nThere is no context to infer the closure\'s argument types from. Consider typing the arguments or put the closures into a typed context."
-      + "\nThere is no context to infer the closure\'s argument types from. Consider typing the arguments or put the closures into a typed context."
-      + "\nThe method getOrCreateCorrModelElement(EObject, String) from the type Elem2Elem refers to the missing type Object"
-      + "\nThe method getCorrModelElement(EObject, String) from the type Elem2Elem refers to the missing type java.lang.Object"
-      + "\nfilter cannot be resolved"
-      + "\ngetCorrModelElement cannot be resolved"
-      + "\ngrid2Kitchen cannot be resolved"
-      + "\nsourceElement cannot be resolved"
-      + "\nforEach cannot be resolved"
-      + "\nsocket2Group cannot be resolved"
-      + "\ngetOrCreateSourceElem cannot be resolved"
-      + "\neINSTANCE cannot be resolved"
-      + "\ngroup cannot be resolved"
-      + "\neContainer cannot be resolved"
-      + "\ngrid2Kitchen cannot be resolved"
-      + "\nsourceElement cannot be resolved"
-      + "\ngroups cannot be resolved"
-      + "\nadd cannot be resolved");
+  @Override
+  public void targetToSource(final String s) {
+    final Function1<ItemSocket, Boolean> _function = (ItemSocket g) -> {
+      return Boolean.valueOf(((g.eContainer() instanceof Kitchen) && (this.getCorrModelElement(g.eContainer(), BxtendDemonstratorImplTransformation.grid2Kitchen).getSourceElement() instanceof Grid)));
+    };
+    final Procedure1<ItemSocket> _function_1 = (ItemSocket i) -> {
+      final Corr corrTarget = this.getOrCreateCorrModelElement(i, BxtendDemonstratorImplTransformation.socket2Group);
+      EObject _orCreateSourceElem = this.getOrCreateSourceElem(corrTarget, GridLanguagePackage.eINSTANCE.getGroup());
+      final Group groupElement = ((Group) _orCreateSourceElem);
+      EObject _sourceElement = this.getCorrModelElement(i.eContainer(), BxtendDemonstratorImplTransformation.grid2Kitchen).getSourceElement();
+      final Grid grid = ((Grid) _sourceElement);
+      grid.getGroups().add(groupElement);
+    };
+    IteratorExtensions.<ItemSocket>forEach(IteratorExtensions.<ItemSocket>filter(Iterators.<ItemSocket>filter(this.targetModel.getAllContents(), ItemSocket.class), _function), _function_1);
   }
 }

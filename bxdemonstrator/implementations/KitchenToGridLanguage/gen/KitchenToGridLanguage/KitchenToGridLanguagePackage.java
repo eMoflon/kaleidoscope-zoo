@@ -58,52 +58,6 @@ public interface KitchenToGridLanguagePackage extends EPackage {
 	KitchenToGridLanguagePackage eINSTANCE = KitchenToGridLanguage.impl.KitchenToGridLanguagePackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link KitchenToGridLanguage.impl.KitchenToGridCorrImpl <em>Kitchen To Grid Corr</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see KitchenToGridLanguage.impl.KitchenToGridCorrImpl
-	 * @see KitchenToGridLanguage.impl.KitchenToGridLanguagePackageImpl#getKitchenToGridCorr()
-	 * @generated
-	 */
-	int KITCHEN_TO_GRID_CORR = 0;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KITCHEN_TO_GRID_CORR__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KITCHEN_TO_GRID_CORR__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Kitchen To Grid Corr</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KITCHEN_TO_GRID_CORR_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Kitchen To Grid Corr</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KITCHEN_TO_GRID_CORR_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link KitchenToGridLanguage.impl.SocketToGroupCorrImpl <em>Socket To Group Corr</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -111,7 +65,7 @@ public interface KitchenToGridLanguagePackage extends EPackage {
 	 * @see KitchenToGridLanguage.impl.KitchenToGridLanguagePackageImpl#getSocketToGroupCorr()
 	 * @generated
 	 */
-	int SOCKET_TO_GROUP_CORR = 1;
+	int SOCKET_TO_GROUP_CORR = 0;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -150,36 +104,50 @@ public interface KitchenToGridLanguagePackage extends EPackage {
 	int SOCKET_TO_GROUP_CORR_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
 
 	/**
-	 * Returns the meta object for class '{@link KitchenToGridLanguage.KitchenToGridCorr <em>Kitchen To Grid Corr</em>}'.
+	 * The meta object id for the '{@link KitchenToGridLanguage.impl.KitchenToGridCorrImpl <em>Kitchen To Grid Corr</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Kitchen To Grid Corr</em>'.
-	 * @see KitchenToGridLanguage.KitchenToGridCorr
+	 * @see KitchenToGridLanguage.impl.KitchenToGridCorrImpl
+	 * @see KitchenToGridLanguage.impl.KitchenToGridLanguagePackageImpl#getKitchenToGridCorr()
 	 * @generated
 	 */
-	EClass getKitchenToGridCorr();
+	int KITCHEN_TO_GRID_CORR = 1;
 
 	/**
-	 * Returns the meta object for the reference '{@link KitchenToGridLanguage.KitchenToGridCorr#getSource <em>Source</em>}'.
+	 * The feature id for the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see KitchenToGridLanguage.KitchenToGridCorr#getSource()
-	 * @see #getKitchenToGridCorr()
 	 * @generated
+	 * @ordered
 	 */
-	EReference getKitchenToGridCorr_Source();
+	int KITCHEN_TO_GRID_CORR__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
 
 	/**
-	 * Returns the meta object for the reference '{@link KitchenToGridLanguage.KitchenToGridCorr#getTarget <em>Target</em>}'.
+	 * The feature id for the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see KitchenToGridLanguage.KitchenToGridCorr#getTarget()
-	 * @see #getKitchenToGridCorr()
 	 * @generated
+	 * @ordered
 	 */
-	EReference getKitchenToGridCorr_Target();
+	int KITCHEN_TO_GRID_CORR__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Kitchen To Grid Corr</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN_TO_GRID_CORR_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Kitchen To Grid Corr</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN_TO_GRID_CORR_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link KitchenToGridLanguage.SocketToGroupCorr <em>Socket To Group Corr</em>}'.
@@ -214,6 +182,38 @@ public interface KitchenToGridLanguagePackage extends EPackage {
 	EReference getSocketToGroupCorr_Target();
 
 	/**
+	 * Returns the meta object for class '{@link KitchenToGridLanguage.KitchenToGridCorr <em>Kitchen To Grid Corr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Kitchen To Grid Corr</em>'.
+	 * @see KitchenToGridLanguage.KitchenToGridCorr
+	 * @generated
+	 */
+	EClass getKitchenToGridCorr();
+
+	/**
+	 * Returns the meta object for the reference '{@link KitchenToGridLanguage.KitchenToGridCorr#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see KitchenToGridLanguage.KitchenToGridCorr#getSource()
+	 * @see #getKitchenToGridCorr()
+	 * @generated
+	 */
+	EReference getKitchenToGridCorr_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link KitchenToGridLanguage.KitchenToGridCorr#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see KitchenToGridLanguage.KitchenToGridCorr#getTarget()
+	 * @see #getKitchenToGridCorr()
+	 * @generated
+	 */
+	EReference getKitchenToGridCorr_Target();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -236,32 +236,6 @@ public interface KitchenToGridLanguagePackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
-		/**
-		 * The meta object literal for the '{@link KitchenToGridLanguage.impl.KitchenToGridCorrImpl <em>Kitchen To Grid Corr</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see KitchenToGridLanguage.impl.KitchenToGridCorrImpl
-		 * @see KitchenToGridLanguage.impl.KitchenToGridLanguagePackageImpl#getKitchenToGridCorr()
-		 * @generated
-		 */
-		EClass KITCHEN_TO_GRID_CORR = eINSTANCE.getKitchenToGridCorr();
-
-		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference KITCHEN_TO_GRID_CORR__SOURCE = eINSTANCE.getKitchenToGridCorr_Source();
-
-		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference KITCHEN_TO_GRID_CORR__TARGET = eINSTANCE.getKitchenToGridCorr_Target();
-
 		/**
 		 * The meta object literal for the '{@link KitchenToGridLanguage.impl.SocketToGroupCorrImpl <em>Socket To Group Corr</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -287,6 +261,32 @@ public interface KitchenToGridLanguagePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SOCKET_TO_GROUP_CORR__TARGET = eINSTANCE.getSocketToGroupCorr_Target();
+
+		/**
+		 * The meta object literal for the '{@link KitchenToGridLanguage.impl.KitchenToGridCorrImpl <em>Kitchen To Grid Corr</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see KitchenToGridLanguage.impl.KitchenToGridCorrImpl
+		 * @see KitchenToGridLanguage.impl.KitchenToGridLanguagePackageImpl#getKitchenToGridCorr()
+		 * @generated
+		 */
+		EClass KITCHEN_TO_GRID_CORR = eINSTANCE.getKitchenToGridCorr();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KITCHEN_TO_GRID_CORR__SOURCE = eINSTANCE.getKitchenToGridCorr_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KITCHEN_TO_GRID_CORR__TARGET = eINSTANCE.getKitchenToGridCorr_Target();
 
 	}
 
