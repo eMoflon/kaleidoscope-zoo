@@ -8,19 +8,10 @@
         <dependent-module archiveName="com.kaleidoscope.usecase.bxdemonstrator.bxtend.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/com.kaleidoscope.usecase.bxdemonstrator.bxtend/com.kaleidoscope.usecase.bxdemonstrator.bxtend">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="org.eclipse.xtext.xbase.lib_2.10.0.v201605250459.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/BenchmarxFamiliesToPersons/lib/eMoflon/org.eclipse.xtext.xbase.lib_2.10.0.v201605250459.jar">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <dependent-module archiveName="com.kaleidoscope.core.framework.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/com.kaleidoscope.core.framework/com.kaleidoscope.core.framework">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="com.kaleidoscope.core.delta.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/com.kaleidoscope.core.delta/com.kaleidoscope.core.delta">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="com.google.gson_2.7.0.v20170129-0911.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/ECLIPSE_HOME/plugins/com.google.gson_2.7.0.v20170129-0911.jar">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="guava-19.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Dusko/Downloads/guava-19.0.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="java-output-path" value="/Client/build/classes"/>
