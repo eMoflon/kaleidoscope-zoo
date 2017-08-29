@@ -46,7 +46,7 @@ public class ControllerModule extends AbstractModule{
 	
 	@Provides @Src
 	ArtefactAdapter<Task, Path> provideSourceArtefactAdapter() {		
-		return new XMIArtefactAdapter<Task>(set, sourceArtefactAdapterUnparsePath);
+		return new XMIArtefactAdapter<Task>(sourceArtefactAdapterUnparsePath);
 	}
 
 	@Provides @Trg

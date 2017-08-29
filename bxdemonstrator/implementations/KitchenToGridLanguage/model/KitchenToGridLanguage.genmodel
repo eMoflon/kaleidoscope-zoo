@@ -17,7 +17,6 @@
     </genClasses>
     <nestedGenPackages prefix="Rules" disposableProviderFactory="true" loadInitialization="true"
         literalsInterface="false" ecorePackage="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules">
-      <genClasses ecoreClass="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/CreateItemWithTwoBlocks"/>
       <genClasses ecoreClass="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge">
         <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/isAppropriate_FWD">
           <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/isAppropriate_FWD/match"/>
@@ -124,11 +123,11 @@
         <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/checkTypes_BWD">
           <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/checkTypes_BWD/match"/>
         </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/isAppropriate_FWD_EMoflonEdge_125">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/isAppropriate_FWD_EMoflonEdge_125/_edge_occupies"/>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/isAppropriate_FWD_EMoflonEdge_0">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/isAppropriate_FWD_EMoflonEdge_0/_edge_occupies"/>
         </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/isAppropriate_BWD_EMoflonEdge_197">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/isAppropriate_BWD_EMoflonEdge_197/_edge_item"/>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/isAppropriate_BWD_EMoflonEdge_0">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/isAppropriate_BWD_EMoflonEdge_0/_edge_item"/>
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/checkAttributes_FWD">
           <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/checkAttributes_FWD/__tripleMatch"/>
@@ -164,389 +163,7 @@
           <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/checkDEC_BWD/itemSocket"/>
         </genOperations>
       </genClasses>
-      <genClasses ecoreClass="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup">
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_FWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_FWD/group"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_FWD/grid"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/perform_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/perform_FWD/isApplicableMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_FWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjectsToMatch_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjectsToMatch_FWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjectsToMatch_FWD/group"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjectsToMatch_FWD/grid"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_solveCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_solveCsp_FWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_solveCsp_FWD/group"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_solveCsp_FWD/grid"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_checkCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_checkCsp_FWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_FWD/isApplicableMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_FWD/group"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_FWD/kitchenToGrid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_FWD/grid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_FWD/kitchen"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_checkCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_checkCsp_FWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_FWD/ruleresult"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_FWD/itemSocket"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_FWD/group"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_FWD/kitchenToGrid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_FWD/grid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_FWD/kitchen"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_FWD/socketToGroup"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkTypes_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkTypes_FWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_BWD/itemSocket"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_BWD/kitchen"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/perform_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/perform_BWD/isApplicableMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_BWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjectsToMatch_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjectsToMatch_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjectsToMatch_BWD/itemSocket"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjectsToMatch_BWD/kitchen"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_solveCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_solveCsp_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_solveCsp_BWD/itemSocket"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_solveCsp_BWD/kitchen"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_checkCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_checkCsp_BWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_BWD/isApplicableMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_BWD/itemSocket"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_BWD/kitchenToGrid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_BWD/grid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_BWD/kitchen"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_checkCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_checkCsp_BWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_BWD/ruleresult"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_BWD/itemSocket"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_BWD/group"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_BWD/kitchenToGrid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_BWD/grid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_BWD/kitchen"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_BWD/socketToGroup"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkTypes_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkTypes_BWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_FWD_EMoflonEdge_126">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_FWD_EMoflonEdge_126/_edge_groups"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_BWD_EMoflonEdge_198">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_BWD_EMoflonEdge_198/_edge_itemSockets"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkAttributes_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkAttributes_FWD/__tripleMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkAttributes_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkAttributes_BWD/__tripleMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_CC">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_CC/sourceMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_CC/targetMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_CC">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_CC/itemSocket"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_CC/group"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_CC/grid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_CC/kitchen"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_CC/sourceMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_CC/targetMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_checkCsp_CC">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_checkCsp_CC/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkDEC_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkDEC_FWD/group"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkDEC_FWD/grid"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkDEC_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkDEC_BWD/itemSocket"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkDEC_BWD/kitchen"/>
-        </genOperations>
-      </genClasses>
-      <genClasses ecoreClass="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule">
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_FWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_FWD/grid"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/perform_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/perform_FWD/isApplicableMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_FWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjectsToMatch_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjectsToMatch_FWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjectsToMatch_FWD/grid"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_solveCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_solveCsp_FWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_solveCsp_FWD/grid"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_checkCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_checkCsp_FWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_FWD/isApplicableMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_FWD/grid"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_checkCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_checkCsp_FWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjects_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjects_FWD/ruleresult"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjects_FWD/grid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjects_FWD/kitchenToGrid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjects_FWD/kitchen"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkTypes_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkTypes_FWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_BWD/kitchen"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/perform_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/perform_BWD/isApplicableMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_BWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjectsToMatch_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjectsToMatch_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjectsToMatch_BWD/kitchen"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_solveCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_solveCsp_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_solveCsp_BWD/kitchen"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_checkCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_checkCsp_BWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_BWD/isApplicableMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_BWD/kitchen"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_checkCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_checkCsp_BWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjects_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjects_BWD/ruleresult"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjects_BWD/grid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjects_BWD/kitchenToGrid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjects_BWD/kitchen"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkTypes_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkTypes_BWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_FWD_Grid_1">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_FWD_Grid_1/grid"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_BWD_Kitchen_1">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_BWD_Kitchen_1/kitchen"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkAttributes_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkAttributes_FWD/__tripleMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkAttributes_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkAttributes_BWD/__tripleMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_CC">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_CC/sourceMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_CC/targetMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_CC">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_CC/grid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_CC/kitchen"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_CC/sourceMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_CC/targetMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_checkCsp_CC">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_checkCsp_CC/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkDEC_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkDEC_FWD/grid"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkDEC_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkDEC_BWD/kitchen"/>
-        </genOperations>
-      </genClasses>
-      <genClasses ecoreClass="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table">
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_FWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_FWD/firstBlock"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_FWD/grid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_FWD/secondBlock"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_FWD/group"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/perform_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/perform_FWD/isApplicableMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_FWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjectsToMatch_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjectsToMatch_FWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjectsToMatch_FWD/firstBlock"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjectsToMatch_FWD/grid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjectsToMatch_FWD/secondBlock"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjectsToMatch_FWD/group"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_solveCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_solveCsp_FWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_solveCsp_FWD/firstBlock"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_solveCsp_FWD/grid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_solveCsp_FWD/secondBlock"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_solveCsp_FWD/group"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_checkCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_checkCsp_FWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_FWD/isApplicableMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_FWD/socketToGroup"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_FWD/firstBlock"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_FWD/grid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_FWD/itemSocket"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_FWD/secondBlock"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_FWD/group"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_checkCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_checkCsp_FWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_FWD/ruleresult"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_FWD/socketToGroup"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_FWD/item"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_FWD/firstBlock"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_FWD/grid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_FWD/itemSocket"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_FWD/secondBlock"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_FWD/group"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkTypes_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkTypes_FWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_BWD/item"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_BWD/itemSocket"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/perform_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/perform_BWD/isApplicableMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_BWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjectsToMatch_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjectsToMatch_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjectsToMatch_BWD/item"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjectsToMatch_BWD/itemSocket"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_solveCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_solveCsp_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_solveCsp_BWD/item"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_solveCsp_BWD/itemSocket"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_checkCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_checkCsp_BWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_BWD/isApplicableMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_BWD/socketToGroup"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_BWD/item"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_BWD/firstBlock"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_BWD/grid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_BWD/itemSocket"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_BWD/secondBlock"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_BWD/group"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_checkCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_checkCsp_BWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_BWD/ruleresult"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_BWD/socketToGroup"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_BWD/item"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_BWD/firstBlock"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_BWD/grid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_BWD/itemSocket"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_BWD/secondBlock"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_BWD/group"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkTypes_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkTypes_BWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_FWD_EMoflonEdge_127">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_FWD_EMoflonEdge_127/_edge_occupies"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_BWD_EMoflonEdge_199">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_BWD_EMoflonEdge_199/_edge_item"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkAttributes_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkAttributes_FWD/__tripleMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkAttributes_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkAttributes_BWD/__tripleMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_CC">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_CC/sourceMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_CC/targetMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_CC">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_CC/item"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_CC/firstBlock"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_CC/grid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_CC/itemSocket"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_CC/secondBlock"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_CC/group"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_CC/sourceMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_CC/targetMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_checkCsp_CC">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_checkCsp_CC/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkDEC_FWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkDEC_FWD/firstBlock"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkDEC_FWD/grid"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkDEC_FWD/secondBlock"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkDEC_FWD/group"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkDEC_BWD">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkDEC_BWD/item"/>
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkDEC_BWD/itemSocket"/>
-        </genOperations>
-      </genClasses>
-      <genClasses ecoreClass="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/CreateHorizontalItem"/>
+      <genClasses ecoreClass="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/CreateVerticalItem"/>
       <genClasses ecoreClass="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_sink">
         <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_sink/isAppropriate_FWD">
           <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_sink/isAppropriate_FWD/match"/>
@@ -653,11 +270,11 @@
         <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_sink/checkTypes_BWD">
           <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_sink/checkTypes_BWD/match"/>
         </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_sink/isAppropriate_FWD_EMoflonEdge_128">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_sink/isAppropriate_FWD_EMoflonEdge_128/_edge_occupies"/>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_sink/isAppropriate_FWD_EMoflonEdge_1">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_sink/isAppropriate_FWD_EMoflonEdge_1/_edge_occupies"/>
         </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_sink/isAppropriate_BWD_EMoflonEdge_200">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_sink/isAppropriate_BWD_EMoflonEdge_200/_edge_item"/>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_sink/isAppropriate_BWD_EMoflonEdge_1">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_sink/isAppropriate_BWD_EMoflonEdge_1/_edge_item"/>
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_sink/checkAttributes_FWD">
           <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_sink/checkAttributes_FWD/__tripleMatch"/>
@@ -693,7 +310,6 @@
           <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_sink/checkDEC_BWD/itemSocket"/>
         </genOperations>
       </genClasses>
-      <genClasses ecoreClass="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/CreateVerticalItem"/>
       <genClasses ecoreClass="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_vertical_table">
         <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_vertical_table/isAppropriate_FWD">
           <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_vertical_table/isAppropriate_FWD/match"/>
@@ -800,11 +416,11 @@
         <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_vertical_table/checkTypes_BWD">
           <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_vertical_table/checkTypes_BWD/match"/>
         </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_vertical_table/isAppropriate_FWD_EMoflonEdge_129">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_vertical_table/isAppropriate_FWD_EMoflonEdge_129/_edge_occupies"/>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_vertical_table/isAppropriate_FWD_EMoflonEdge_2">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_vertical_table/isAppropriate_FWD_EMoflonEdge_2/_edge_occupies"/>
         </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_vertical_table/isAppropriate_BWD_EMoflonEdge_201">
-          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_vertical_table/isAppropriate_BWD_EMoflonEdge_201/_edge_item"/>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_vertical_table/isAppropriate_BWD_EMoflonEdge_2">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_vertical_table/isAppropriate_BWD_EMoflonEdge_2/_edge_item"/>
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_vertical_table/checkAttributes_FWD">
           <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_vertical_table/checkAttributes_FWD/__tripleMatch"/>
@@ -838,6 +454,390 @@
         <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_vertical_table/checkDEC_BWD">
           <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_vertical_table/checkDEC_BWD/item"/>
           <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_vertical_table/checkDEC_BWD/itemSocket"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/CreateItemWithTwoBlocks"/>
+      <genClasses ecoreClass="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule">
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_FWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_FWD/grid"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/perform_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/perform_FWD/isApplicableMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_FWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjectsToMatch_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjectsToMatch_FWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjectsToMatch_FWD/grid"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_solveCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_solveCsp_FWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_solveCsp_FWD/grid"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_checkCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_checkCsp_FWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_FWD/isApplicableMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_FWD/grid"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_checkCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_checkCsp_FWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjects_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjects_FWD/ruleresult"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjects_FWD/kitchen"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjects_FWD/grid"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjects_FWD/kitchenToGrid"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkTypes_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkTypes_FWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_BWD/kitchen"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/perform_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/perform_BWD/isApplicableMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_BWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjectsToMatch_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjectsToMatch_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjectsToMatch_BWD/kitchen"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_solveCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_solveCsp_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_solveCsp_BWD/kitchen"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_checkCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_checkCsp_BWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_BWD/isApplicableMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_BWD/kitchen"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_checkCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_checkCsp_BWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjects_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjects_BWD/ruleresult"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjects_BWD/kitchen"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjects_BWD/grid"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/registerObjects_BWD/kitchenToGrid"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkTypes_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkTypes_BWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_FWD_Grid_0">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_FWD_Grid_0/grid"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_BWD_Kitchen_0">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_BWD_Kitchen_0/kitchen"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkAttributes_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkAttributes_FWD/__tripleMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkAttributes_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkAttributes_BWD/__tripleMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_CC">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_CC/sourceMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_CC/targetMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_CC">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_CC/kitchen"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_CC/grid"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_CC/sourceMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_solveCsp_CC/targetMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_checkCsp_CC">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isApplicable_checkCsp_CC/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkDEC_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkDEC_FWD/grid"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkDEC_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkDEC_BWD/kitchen"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/CreateHorizontalItem"/>
+      <genClasses ecoreClass="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table">
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_FWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_FWD/firstBlock"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_FWD/grid"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_FWD/secondBlock"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_FWD/group"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/perform_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/perform_FWD/isApplicableMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_FWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjectsToMatch_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjectsToMatch_FWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjectsToMatch_FWD/firstBlock"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjectsToMatch_FWD/grid"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjectsToMatch_FWD/secondBlock"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjectsToMatch_FWD/group"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_solveCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_solveCsp_FWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_solveCsp_FWD/firstBlock"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_solveCsp_FWD/grid"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_solveCsp_FWD/secondBlock"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_solveCsp_FWD/group"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_checkCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_checkCsp_FWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_FWD/isApplicableMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_FWD/socketToGroup"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_FWD/firstBlock"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_FWD/grid"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_FWD/itemSocket"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_FWD/secondBlock"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_FWD/group"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_checkCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_checkCsp_FWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_FWD/ruleresult"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_FWD/socketToGroup"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_FWD/item"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_FWD/firstBlock"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_FWD/grid"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_FWD/itemSocket"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_FWD/secondBlock"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_FWD/group"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkTypes_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkTypes_FWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_BWD/item"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_BWD/itemSocket"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/perform_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/perform_BWD/isApplicableMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_BWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjectsToMatch_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjectsToMatch_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjectsToMatch_BWD/item"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjectsToMatch_BWD/itemSocket"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_solveCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_solveCsp_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_solveCsp_BWD/item"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_solveCsp_BWD/itemSocket"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_checkCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_checkCsp_BWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_BWD/isApplicableMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_BWD/socketToGroup"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_BWD/item"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_BWD/firstBlock"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_BWD/grid"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_BWD/itemSocket"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_BWD/secondBlock"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_BWD/group"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_checkCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_checkCsp_BWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_BWD/ruleresult"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_BWD/socketToGroup"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_BWD/item"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_BWD/firstBlock"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_BWD/grid"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_BWD/itemSocket"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_BWD/secondBlock"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/registerObjects_BWD/group"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkTypes_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkTypes_BWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_FWD_EMoflonEdge_3">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_FWD_EMoflonEdge_3/_edge_occupies"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_BWD_EMoflonEdge_3">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_BWD_EMoflonEdge_3/_edge_item"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkAttributes_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkAttributes_FWD/__tripleMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkAttributes_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkAttributes_BWD/__tripleMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_CC">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_CC/sourceMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_CC/targetMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_CC">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_CC/item"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_CC/firstBlock"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_CC/grid"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_CC/itemSocket"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_CC/secondBlock"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_CC/group"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_CC/sourceMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_solveCsp_CC/targetMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_checkCsp_CC">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isApplicable_checkCsp_CC/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkDEC_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkDEC_FWD/firstBlock"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkDEC_FWD/grid"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkDEC_FWD/secondBlock"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkDEC_FWD/group"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkDEC_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkDEC_BWD/item"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkDEC_BWD/itemSocket"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup">
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_FWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_FWD/group"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_FWD/grid"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/perform_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/perform_FWD/isApplicableMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_FWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjectsToMatch_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjectsToMatch_FWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjectsToMatch_FWD/group"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjectsToMatch_FWD/grid"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_solveCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_solveCsp_FWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_solveCsp_FWD/group"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_solveCsp_FWD/grid"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_checkCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_checkCsp_FWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_FWD/isApplicableMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_FWD/kitchen"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_FWD/group"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_FWD/grid"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_FWD/kitchenToGrid"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_checkCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_checkCsp_FWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_FWD/ruleresult"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_FWD/kitchen"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_FWD/group"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_FWD/socketToGroup"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_FWD/grid"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_FWD/kitchenToGrid"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_FWD/itemSocket"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkTypes_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkTypes_FWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_BWD/kitchen"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_BWD/itemSocket"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/perform_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/perform_BWD/isApplicableMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_BWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjectsToMatch_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjectsToMatch_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjectsToMatch_BWD/kitchen"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjectsToMatch_BWD/itemSocket"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_solveCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_solveCsp_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_solveCsp_BWD/kitchen"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_solveCsp_BWD/itemSocket"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_checkCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_checkCsp_BWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_BWD/isApplicableMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_BWD/kitchen"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_BWD/grid"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_BWD/kitchenToGrid"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_BWD/itemSocket"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_checkCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_checkCsp_BWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_BWD/ruleresult"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_BWD/kitchen"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_BWD/group"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_BWD/socketToGroup"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_BWD/grid"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_BWD/kitchenToGrid"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/registerObjects_BWD/itemSocket"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkTypes_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkTypes_BWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_FWD_EMoflonEdge_4">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_FWD_EMoflonEdge_4/_edge_groups"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_BWD_EMoflonEdge_4">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_BWD_EMoflonEdge_4/_edge_itemSockets"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkAttributes_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkAttributes_FWD/__tripleMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkAttributes_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkAttributes_BWD/__tripleMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_CC">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_CC/sourceMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_CC/targetMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_CC">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_CC/kitchen"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_CC/group"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_CC/grid"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_CC/itemSocket"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_CC/sourceMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_solveCsp_CC/targetMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_checkCsp_CC">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isApplicable_checkCsp_CC/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkDEC_FWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkDEC_FWD/group"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkDEC_FWD/grid"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkDEC_BWD">
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkDEC_BWD/kitchen"/>
+          <genParameters ecoreParameter="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkDEC_BWD/itemSocket"/>
         </genOperations>
       </genClasses>
     </nestedGenPackages>

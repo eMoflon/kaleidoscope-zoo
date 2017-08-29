@@ -761,7 +761,7 @@ public class create_a_fridgeImpl extends AbstractRuleImpl implements create_a_fr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_125(EMoflonEdge _edge_occupies) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_0(EMoflonEdge _edge_occupies) {
 
 		Object[] result1_bindingAndBlack = create_a_fridgeImpl
 				.pattern_create_a_fridge_20_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -820,7 +820,7 @@ public class create_a_fridgeImpl extends AbstractRuleImpl implements create_a_fr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_BWD_EMoflonEdge_197(EMoflonEdge _edge_item) {
+	public EObjectContainer isAppropriate_BWD_EMoflonEdge_0(EMoflonEdge _edge_item) {
 
 		Object[] result1_bindingAndBlack = create_a_fridgeImpl
 				.pattern_create_a_fridge_21_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -1250,10 +1250,10 @@ public class create_a_fridgeImpl extends AbstractRuleImpl implements create_a_fr
 			return null;
 		case RulesPackage.CREATE_AFRIDGE___CHECK_TYPES_BWD__MATCH:
 			return checkTypes_BWD((Match) arguments.get(0));
-		case RulesPackage.CREATE_AFRIDGE___IS_APPROPRIATE_FWD_EMOFLON_EDGE_125__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_125((EMoflonEdge) arguments.get(0));
-		case RulesPackage.CREATE_AFRIDGE___IS_APPROPRIATE_BWD_EMOFLON_EDGE_197__EMOFLONEDGE:
-			return isAppropriate_BWD_EMoflonEdge_197((EMoflonEdge) arguments.get(0));
+		case RulesPackage.CREATE_AFRIDGE___IS_APPROPRIATE_FWD_EMOFLON_EDGE_0__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_0((EMoflonEdge) arguments.get(0));
+		case RulesPackage.CREATE_AFRIDGE___IS_APPROPRIATE_BWD_EMOFLON_EDGE_0__EMOFLONEDGE:
+			return isAppropriate_BWD_EMoflonEdge_0((EMoflonEdge) arguments.get(0));
 		case RulesPackage.CREATE_AFRIDGE___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.CREATE_AFRIDGE___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH:

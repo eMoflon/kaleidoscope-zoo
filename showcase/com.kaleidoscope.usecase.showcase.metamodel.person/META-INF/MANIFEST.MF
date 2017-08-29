@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.kaleidoscope.usecase.showcase.metamodel.perso
+ n;singleton:=true
+Export-Package: Persons,
+ Persons.impl,
+ Persons.util
+Bundle-Name: com.kaleidoscope.usecase.showcase.metamodel.person
+Bundle-Version: 1.0
+Require-Bundle: org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi,
+ org.moflon.core.utilities
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: TU Darmstadt

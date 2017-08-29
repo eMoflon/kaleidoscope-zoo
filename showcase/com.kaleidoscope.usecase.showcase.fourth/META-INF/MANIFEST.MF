@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Fourth
+Bundle-SymbolicName: com.kaleidoscope.usecase.showcase.fourth
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: com.google.inject;bundle-version="3.0.0",
+ org.eclipse.equinox.registry,
+ com.kaleidoscope.core.delta;bundle-version="1.0.0",
+ com.kaleidoscope.usecase.showcase.metamodel.person;bundle-version="1.0.0",
+ com.kaleidoscope.usecase.showcase.metamodel.employee;bundle-version="1.0.0",
+ com.kaleidoscope.core.framework,
+ com.kaleidoscope.core.aux.xmi;bundle-version="1.0.0",
+ com.kaleidoscope.usecase.showcase.xtext.PersonDsl,
+ org.apache.commons.lang3

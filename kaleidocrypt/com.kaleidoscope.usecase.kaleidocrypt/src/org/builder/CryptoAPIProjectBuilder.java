@@ -71,7 +71,7 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		project = getProject();
 		projectPath = Paths.get(project.getLocation().toString());
 		
-		this.configJavaFilesRelation  = new ConfigJavaFilesRelation(project, set);
+		this.configJavaFilesRelation  = new ConfigJavaFilesRelation(project);
 		
 		switch (kind) {
 		case CLEAN_BUILD:

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+	<extension point="org.eclipse.emf.ecore.generated_package">
+		<package 
+			uri = "http://www.kaleidoscope.com/usecase/showcase/xtext/EmployeeDsl"
+			class = "com.kaleidoscope.usecase.showcase.xtext.employeeDsl.EmployeeDslPackage"
+			genModel = "model/generated/EmployeeDsl.genmodel" />
+	</extension>
+</plugin>

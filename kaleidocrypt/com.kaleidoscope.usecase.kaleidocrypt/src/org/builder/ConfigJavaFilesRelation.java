@@ -10,7 +10,6 @@ import java.util.regex.Matcher;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.emf.ecore.resource.ResourceSet;
 
 import com.kaleidoscope.core.auxiliary.xmi.artefactadapter.XMIArtefactAdapter;
 import com.kaleidoscope.core.framework.workflow.adapters.ArtefactAdapter;
@@ -33,11 +32,9 @@ public class ConfigJavaFilesRelation {
 	private HashMap<String, ArrayList<Path>> configurationModelJavaFiles;
 	private HashMap<Path, String> javaFileConfigurationModel;
 	private ArtefactAdapter<JavaPackage, Path> javaXMIArtefactAdapter = null;
-	private ResourceSet resourceSet;
 	
-	public ConfigJavaFilesRelation(IProject project, ResourceSet resourceSet){
+	public ConfigJavaFilesRelation(IProject project){
 		this.projectPath = Paths.get(project.getLocation().toString());
-		this.resourceSet = resourceSet;
 		configurationModelJavaFiles = new HashMap<String, ArrayList<Path>>();
 		javaFileConfigurationModel = new HashMap<Path, String>();
 	}
@@ -72,7 +69,7 @@ public class ConfigJavaFilesRelation {
 			}
 			// parse fwd.trg.xmi to get JavaPackage which is then used to extract paths of all compilation units(java files) 
 			// contained inside the JavaPackage
-			javaXMIArtefactAdapter = new XMIArtefactAdapter<JavaPackage>(resourceSet, javaModelFileLocation);	
+			javaXMIArtefactAdapter = new XMIArtefactAdapter<JavaPackage>(javaModelFileLocation);	
 			javaXMIArtefactAdapter.parse();
 			JavaPackage javaPackage = (JavaPackage)javaXMIArtefactAdapter.getModel().get();
 			

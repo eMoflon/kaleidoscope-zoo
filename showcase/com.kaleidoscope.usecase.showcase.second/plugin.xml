@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>   
+	<extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="com.kaleidoscope.usecase.showcase.second.newproject"
+            name="Showcase Second New Project Wizards">
+      </category>
+      <wizard
+            category="Showcase Second New Project Wizards"
+            class="com.kaleidoscope.usecase.showcase.second.NewProjectWizard"            
+            id="com.kaleidoscope.usecase.showcase.second.newproject"
+            name="New Showcase Second Project">
+      </wizard>
+   </extension>
+   
+   <extension
+         id="com.kaleidoscope.usecase.showcase.second.nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="com.kaleidoscope.usecase.showcase.second.ShowcaseSecondNature">
+         </run>
+      </runtime>
+   </extension>
+   
+   
+   <extension
+         id="com.kaleidoscope.usecase.showcase.second.builder"
+         name="ShowcaseSecondBuidler"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            callOnEmptyDelta="true">
+         <run
+               class="com.kaleidoscope.usecase.showcase.second.Builder">
+         </run>
+      </builder>
+   </extension>
+</plugin>
+
