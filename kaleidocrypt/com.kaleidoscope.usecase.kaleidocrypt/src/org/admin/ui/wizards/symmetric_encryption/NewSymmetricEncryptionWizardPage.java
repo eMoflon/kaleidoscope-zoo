@@ -1,8 +1,10 @@
 package org.admin.ui.wizards.symmetric_encryption;
 
+import org.eclipse.core.internal.resources.Project;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IPath;
+import org.eclipse.jdt.internal.core.JavaProject;
 import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.WizardPage;
@@ -135,7 +137,7 @@ public class NewSymmetricEncryptionWizardPage extends WizardPage {
         if (window != null)
         {
             Object firstElement = selection.getFirstElement();
-            if (firstElement instanceof IProject)
+            if (firstElement instanceof JavaProject)
             {
                 IProject project = (IProject)((IAdaptable)firstElement).getAdapter(IProject.class);
                 IPath path = project.getFullPath();
