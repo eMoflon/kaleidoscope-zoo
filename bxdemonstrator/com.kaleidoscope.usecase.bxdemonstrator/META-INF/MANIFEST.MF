@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Adapter
+Bundle-SymbolicName: com.kaleidoscope.usecase.bxdemonstrator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Version: 1.0.0.qualifier
+Export-Package: com.bxtooldemo.controller,
+ com.bxtooldemo.delta,
+ com.bxtooldemo.uimodels
+Require-Bundle: org.eclipse.emf.ecore;bundle-version="2.12.0",
+ org.moflon.tgg.language;bundle-version="2.1.0",
+ org.moflon.tgg.runtime;bundle-version="2.0.0",
+ org.moflon.core.utilities,
+ com.google.gson,
+ com.kaleidoscope.usecase.bxdemonstrator.bxtend,
+ com.kaleidoscope.core.delta,
+ com.kaleidoscope.core.framework,
+ com.google.inject;bundle-version="3.0.0",
+ GridLanguage;bundle-version="1.0.0",
+ KitchenLanguage;bundle-version="1.0.0",
+ com.kaleidoscope.usecase.bxdemonstrator.emoflon
+

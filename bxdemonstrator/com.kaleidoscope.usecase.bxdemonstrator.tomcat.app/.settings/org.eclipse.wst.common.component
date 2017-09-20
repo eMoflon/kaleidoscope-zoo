@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="com.kaleidoscope.usecase.bxdemonstrator.tomcat.app">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="com.kaleidoscope.ui.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/com.kaleidoscope.ui/com.kaleidoscope.ui">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="com.kaleidoscope.usecase.bxdemonstrator.bxtend.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/com.kaleidoscope.usecase.bxdemonstrator.bxtend/com.kaleidoscope.usecase.bxdemonstrator.bxtend">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="com.kaleidoscope.core.framework.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/com.kaleidoscope.core.framework/com.kaleidoscope.core.framework">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="com.kaleidoscope.core.delta.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/com.kaleidoscope.core.delta/com.kaleidoscope.core.delta">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/com.kaleidoscope.usecase.bxdemonstrator.tomcat.app/build/classes"/>
+        <property name="context-root" value="com.kaleidoscope.usecase.bxdemonstrator.tomcat.app"/>
+    </wb-module>
+</project-modules>

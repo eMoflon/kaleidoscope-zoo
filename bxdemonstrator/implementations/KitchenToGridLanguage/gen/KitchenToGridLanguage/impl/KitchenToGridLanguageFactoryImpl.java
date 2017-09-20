@@ -56,10 +56,10 @@ public class KitchenToGridLanguageFactoryImpl extends EFactoryImpl implements Ki
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case KitchenToGridLanguagePackage.SOCKET_TO_GROUP_CORR:
-			return createSocketToGroupCorr();
 		case KitchenToGridLanguagePackage.KITCHEN_TO_GRID_CORR:
 			return createKitchenToGridCorr();
+		case KitchenToGridLanguagePackage.SOCKET_TO_GROUP_CORR:
+			return createSocketToGroupCorr();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -70,9 +70,9 @@ public class KitchenToGridLanguageFactoryImpl extends EFactoryImpl implements Ki
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SocketToGroupCorr createSocketToGroupCorr() {
-		SocketToGroupCorrImpl socketToGroupCorr = new SocketToGroupCorrImpl();
-		return socketToGroupCorr;
+	public KitchenToGridCorr createKitchenToGridCorr() {
+		KitchenToGridCorrImpl kitchenToGridCorr = new KitchenToGridCorrImpl();
+		return kitchenToGridCorr;
 	}
 
 	/**
@@ -80,9 +80,9 @@ public class KitchenToGridLanguageFactoryImpl extends EFactoryImpl implements Ki
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public KitchenToGridCorr createKitchenToGridCorr() {
-		KitchenToGridCorrImpl kitchenToGridCorr = new KitchenToGridCorrImpl();
-		return kitchenToGridCorr;
+	public SocketToGroupCorr createSocketToGroupCorr() {
+		SocketToGroupCorrImpl socketToGroupCorr = new SocketToGroupCorrImpl();
+		return socketToGroupCorr;
 	}
 
 	/**

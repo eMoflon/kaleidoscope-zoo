@@ -774,6 +774,10 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 		var_literal0.setValue(500);
 		var_literal0.setType("");
 
+		Variable var_kitchen_xSize = CSPFactoryHelper.eINSTANCE.createVariable("kitchen", true, csp);
+		var_kitchen_xSize.setValue(__helper.getValue("kitchen", "xSize"));
+		var_kitchen_xSize.setType("double");
+
 		Variable var_kitchen_ySize = CSPFactoryHelper.eINSTANCE.createVariable("kitchen", true, csp);
 		var_kitchen_ySize.setValue(__helper.getValue("kitchen", "ySize"));
 		var_kitchen_ySize.setType("double");
@@ -785,10 +789,6 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 		Variable var_grid_blockSize = CSPFactoryHelper.eINSTANCE.createVariable("grid", true, csp);
 		var_grid_blockSize.setValue(__helper.getValue("grid", "blockSize"));
 		var_grid_blockSize.setType("double");
-
-		Variable var_kitchen_xSize = CSPFactoryHelper.eINSTANCE.createVariable("kitchen", true, csp);
-		var_kitchen_xSize.setValue(__helper.getValue("kitchen", "xSize"));
-		var_kitchen_xSize.setType("double");
 
 		SetDefaultNumber setDefaultNumber0 = new SetDefaultNumber();
 		csp.getConstraints().add(setDefaultNumber0);
@@ -849,6 +849,10 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 		var_literal0.setValue(500);
 		var_literal0.setType("");
 
+		Variable var_kitchen_xSize = CSPFactoryHelper.eINSTANCE.createVariable("kitchen", true, csp);
+		var_kitchen_xSize.setValue(__helper.getValue("kitchen", "xSize"));
+		var_kitchen_xSize.setType("double");
+
 		Variable var_kitchen_ySize = CSPFactoryHelper.eINSTANCE.createVariable("kitchen", true, csp);
 		var_kitchen_ySize.setValue(__helper.getValue("kitchen", "ySize"));
 		var_kitchen_ySize.setType("double");
@@ -860,10 +864,6 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 		Variable var_grid_blockSize = CSPFactoryHelper.eINSTANCE.createVariable("grid", true, csp);
 		var_grid_blockSize.setValue(__helper.getValue("grid", "blockSize"));
 		var_grid_blockSize.setType("double");
-
-		Variable var_kitchen_xSize = CSPFactoryHelper.eINSTANCE.createVariable("kitchen", true, csp);
-		var_kitchen_xSize.setValue(__helper.getValue("kitchen", "xSize"));
-		var_kitchen_xSize.setType("double");
 
 		SetDefaultNumber setDefaultNumber0 = new SetDefaultNumber();
 		csp.getConstraints().add(setDefaultNumber0);

@@ -69,13 +69,13 @@ public class KitchenToGridLanguageAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected KitchenToGridLanguageSwitch<Adapter> modelSwitch = new KitchenToGridLanguageSwitch<Adapter>() {
 		@Override
-		public Adapter caseSocketToGroupCorr(SocketToGroupCorr object) {
-			return createSocketToGroupCorrAdapter();
+		public Adapter caseKitchenToGridCorr(KitchenToGridCorr object) {
+			return createKitchenToGridCorrAdapter();
 		}
 
 		@Override
-		public Adapter caseKitchenToGridCorr(KitchenToGridCorr object) {
-			return createKitchenToGridCorrAdapter();
+		public Adapter caseSocketToGroupCorr(SocketToGroupCorr object) {
+			return createSocketToGroupCorrAdapter();
 		}
 
 		@Override
@@ -103,20 +103,6 @@ public class KitchenToGridLanguageAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link KitchenToGridLanguage.SocketToGroupCorr <em>Socket To Group Corr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see KitchenToGridLanguage.SocketToGroupCorr
-	 * @generated
-	 */
-	public Adapter createSocketToGroupCorrAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link KitchenToGridLanguage.KitchenToGridCorr <em>Kitchen To Grid Corr</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -127,6 +113,20 @@ public class KitchenToGridLanguageAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createKitchenToGridCorrAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link KitchenToGridLanguage.SocketToGroupCorr <em>Socket To Group Corr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see KitchenToGridLanguage.SocketToGroupCorr
+	 * @generated
+	 */
+	public Adapter createSocketToGroupCorrAdapter() {
 		return null;
 	}
 

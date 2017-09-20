@@ -8,7 +8,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.jdt.internal.core.JavaProject;
+import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
@@ -104,7 +104,7 @@ public class NewSymmetricEncryptionWizard extends Wizard implements INewWizard {
         if (window != null)
         {           
             Object firstElement = selection.getFirstElement();
-            if (firstElement instanceof JavaProject)
+            if (firstElement instanceof IJavaProject)
             {
                 project = (IProject)((IAdaptable)firstElement).getAdapter(IProject.class);
                   

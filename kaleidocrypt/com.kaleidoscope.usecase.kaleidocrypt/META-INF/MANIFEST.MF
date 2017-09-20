@@ -37,7 +37,8 @@ Require-Bundle: org.eclipse.emf.ecore,
  com.google.inject;bundle-version="3.0.0",
  com.kaleidoscope.core.aux.emfcompare,
  com.kaleidoscope.core.aux.xmi,
- com.kaleidoscope.usecase.kaleidocrypt.bxtend
+ com.kaleidoscope.usecase.kaleidocrypt.bxtend,
+ org.apache.xmlrpc;bundle-version="3.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.admin.Activator
 Export-Package: org,
