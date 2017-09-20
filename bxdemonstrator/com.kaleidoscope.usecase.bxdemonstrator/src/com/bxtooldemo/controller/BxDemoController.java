@@ -23,9 +23,7 @@ import KitchenLanguage.Kitchen;
 
 
 public class BxDemoController extends ContinuableDeltaBasedController<Grid, Object, Kitchen, Object, List<String>, OperationalDelta, OperationalDelta, String, String> {
-
-	private UIModels uiModelsAdapter;	
-	
+		
 	public UIModels initialise() {
 		synchroniser.initialize();
 
@@ -48,8 +46,14 @@ public class BxDemoController extends ContinuableDeltaBasedController<Grid, Obje
 	
 	public UIModels continueSynchronisation(String decision){
 		setUpdatePolicy(Arrays.asList(decision));
-		continueSync();
-		return uiModelsAdapter;
+		
+		SynchronisationContinuationResult<Grid, Object, Kitchen, Object, OperationalDelta, List<String>> fwdSyncResult = continueSync();
+		setColorsToUnassignedBlocks(fwdSyncResult.getSourceArtefactAdapter().getModel().get());
+		SyncResultToUIModelArtefactAdapter syncResultToUIModelArtefactAdapter = new SyncResultToUIModelArtefactAdapter();
+		syncResultToUIModelArtefactAdapter.setArtefact(fwdSyncResult);
+		syncResultToUIModelArtefactAdapter.parse();
+		
+		return syncResultToUIModelArtefactAdapter.getModel().get();
 	}
 
 
@@ -77,14 +81,16 @@ public class BxDemoController extends ContinuableDeltaBasedController<Grid, Obje
 			setColorsToUnassignedBlocks(fwdSyncResult.getSourceArtefactAdapter().getModel().get());
 			SyncResultToUIModelArtefactAdapter syncResultToUIModelArtefactAdapter = new SyncResultToUIModelArtefactAdapter();
 			syncResultToUIModelArtefactAdapter.setArtefact(fwdSyncResult);
+			syncResultToUIModelArtefactAdapter.parse();
 			return syncResultToUIModelArtefactAdapter.getModel().get();
 		}
 		else if (targetDelta.isPresent()) {
-			SynchronisationContinuationResult<Grid, Object, Kitchen, Object, OperationalDelta, List<String>> bwdSyncResult = syncForward(targetDelta.get());
+			SynchronisationContinuationResult<Grid, Object, Kitchen, Object, OperationalDelta, List<String>> bwdSyncResult = syncBackward(targetDelta.get());
 			
 			setColorsToUnassignedBlocks(bwdSyncResult.getSourceArtefactAdapter().getModel().get());
 			SyncResultToUIModelArtefactAdapter syncResultToUIModelArtefactAdapter = new SyncResultToUIModelArtefactAdapter();
 			syncResultToUIModelArtefactAdapter.setArtefact(bwdSyncResult);
+			syncResultToUIModelArtefactAdapter.parse();
 			return syncResultToUIModelArtefactAdapter.getModel().get();
 			
 		}else {

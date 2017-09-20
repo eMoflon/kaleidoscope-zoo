@@ -117,8 +117,8 @@ function propagateChanges(){
 			loadChanges : 1,
 			userID: Uid,			
 			OperationalDelta: JSON.stringify(gridKitchenDeltaOperations),
-			noOfSourceDeltaOperations: gridKitchenDeltaOperation.gridOperations.length,
-			noOfTargetDeltaOperations: gridKitchenDeltaOperation.kitchenOperations.length
+			noOfSourceDeltaOperations: gridKitchenDeltaOperations.gridOperations.length,
+			noOfTargetDeltaOperations: gridKitchenDeltaOperations.kitchenOperations.length
 		},
 		success : function(data) {
 			if(data.userChoices.length > 0){
