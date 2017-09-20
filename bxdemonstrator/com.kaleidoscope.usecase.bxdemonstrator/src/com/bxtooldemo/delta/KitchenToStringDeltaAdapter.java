@@ -35,9 +35,9 @@ public class KitchenToStringDeltaAdapter implements DeltaAdapter<OperationalDelt
 	}
 
 	@Override
-	public String unparse(OperationalDelta d, Kitchen a) {
-		// TODO Auto-generated method stub
-		return null;
+	public String unparse(OperationalDelta operationalDelta, Kitchen kitchen) {
+		Gson gson = new Gson();
+		return gson.toJson(operationalDelta);
 	}
 	
 	private OperationalDelta transGridKitchenDeltaOpIntoOpDelta(GridKitchenDeltaOperation delta, Kitchen kitchen) {

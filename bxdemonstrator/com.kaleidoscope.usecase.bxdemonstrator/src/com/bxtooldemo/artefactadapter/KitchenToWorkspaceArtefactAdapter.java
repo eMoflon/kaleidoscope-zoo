@@ -16,6 +16,7 @@ public class KitchenToWorkspaceArtefactAdapter implements ArtefactAdapter<Kitche
 
 	@Override
 	public void parse() {
+		throw new UnsupportedOperationException();
 	}
 
 	@Override
@@ -49,7 +50,6 @@ public class KitchenToWorkspaceArtefactAdapter implements ArtefactAdapter<Kitche
 	@Override
 	public void setArtefact(Workspace a) {
 		this.artefact = a; 
-
 	}
 
 	@Override

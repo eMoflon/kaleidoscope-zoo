@@ -65,8 +65,7 @@ public class SyncResultToUIModelArtefactAdapter implements ArtefactAdapter<UIMod
 
 	@Override
 	public void unparse() {
-		// TODO Auto-generated method stub
-		
+		throw new UnsupportedOperationException();		
 	}
 
 	@Override
@@ -76,8 +75,7 @@ public class SyncResultToUIModelArtefactAdapter implements ArtefactAdapter<UIMod
 	}
 
 	@Override
-	public void setArtefact(
-			SynchronisationContinuationResult<Grid, Object, Kitchen, Object, OperationalDelta, List<String>> a) {
+	public void setArtefact(SynchronisationContinuationResult<Grid, Object, Kitchen, Object, OperationalDelta, List<String>> a) {
 		this.result = a;
 		
 	}

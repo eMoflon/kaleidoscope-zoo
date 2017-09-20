@@ -107,9 +107,10 @@ public class GridToStringDeltaAdapter implements DeltaAdapter<OperationalDelta, 
 	}
 
 	@Override
-	public String unparse(OperationalDelta d, Grid a) {
-		// TODO Auto-generated method stub
-		return null;
+	public String unparse(OperationalDelta operationalDelta, Grid grid) {
+		Gson gson = new Gson();
+		return gson.toJson(operationalDelta);
+		
 	}
 	
 	private EReference toReference(EObject src, String refName){

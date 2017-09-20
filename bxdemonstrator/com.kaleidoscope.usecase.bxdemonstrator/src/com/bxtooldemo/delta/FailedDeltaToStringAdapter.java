@@ -20,8 +20,7 @@ public class FailedDeltaToStringAdapter implements DeltaAdapter<OperationalDelta
 
 	@Override
 	public OperationalDelta parse(String ad, Object m) {
-		// TODO Auto-generated method stub
-		return null;
+		throw new UnsupportedOperationException();
 	}
 
 	@Override
@@ -70,8 +69,6 @@ public class FailedDeltaToStringAdapter implements DeltaAdapter<OperationalDelta
 					}
 				}
 				
-				
-	
 			}				
 		}
 		return failedDeltaMsg;

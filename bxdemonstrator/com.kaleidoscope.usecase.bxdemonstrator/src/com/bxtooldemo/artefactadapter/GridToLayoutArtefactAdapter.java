@@ -18,6 +18,7 @@ public class GridToLayoutArtefactAdapter implements ArtefactAdapter<Grid, Layout
 
 	@Override
 	public void parse() {
+		throw new UnsupportedOperationException();
 	}
 
 	@Override
