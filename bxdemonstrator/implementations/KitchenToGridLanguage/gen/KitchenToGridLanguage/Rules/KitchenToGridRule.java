@@ -102,7 +102,7 @@ public interface KitchenToGridRule extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject kitchenToGrid, EObject grid, EObject kitchen);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject grid, EObject kitchenToGrid, EObject kitchen);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -182,7 +182,7 @@ public interface KitchenToGridRule extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_BWD(PerformRuleResult ruleresult, EObject kitchenToGrid, EObject grid, EObject kitchen);
+	void registerObjects_BWD(PerformRuleResult ruleresult, EObject grid, EObject kitchenToGrid, EObject kitchen);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="CryptoConfigToJava" nsURI="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore"
+    nsPrefix="CryptoConfigToJava">
+  <eClassifiers xsi:type="ecore:EClass" name="AlgorithmToJavaCompilationUnit" eSuperTypes="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore#//AbstractCorrespondence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Algorithm"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/SimpleJava.ecore#//JavaCompilationUnit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SymmetricBlockCipherToJcu" eSuperTypes="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore#//AbstractCorrespondence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//SymmetricBlockCipher"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/SimpleJava.ecore#//JavaCompilationUnit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskToJavaCompilationUnit" eSuperTypes="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore#//AbstractCorrespondence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Task"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/SimpleJava.ecore#//JavaCompilationUnit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ImportToImport" eSuperTypes="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore#//AbstractCorrespondence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Import"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/SimpleJava.ecore#//JavaImport"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KeyDerivationAlgorithmToMethod" eSuperTypes="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore#//AbstractCorrespondence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//KeyDerivationAlgorithm"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/SimpleJava.ecore#//JavaMethod"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AlgorithmToJcu" eSuperTypes="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore#//AbstractCorrespondence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Algorithm"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/SimpleJava.ecore#//JavaCompilationUnit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SymmetricBlockCipherToMethod" eSuperTypes="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore#//AbstractCorrespondence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//SymmetricBlockCipher"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/SimpleJava.ecore#//JavaMethod"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskToJavaPackage" eSuperTypes="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore#//AbstractCorrespondence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Task"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/SimpleJava.ecore#//JavaPackage"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KeyDerivationAlgorithmToJcu" eSuperTypes="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore#//AbstractCorrespondence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//KeyDerivationAlgorithm"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/SimpleJava.ecore#//JavaCompilationUnit"/>
+  </eClassifiers>
+  <eSubpackages name="Rules" nsURI="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules"
+      nsPrefix="Rules">
+    <eClassifiers xsi:type="ecore:EClass" name="SymmetricEncryptionTask" eSuperTypes="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore#//AbstractRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PerformGetKeyMethod" eSuperTypes="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore#//AbstractRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="KeyDerivationAlgorithmImportToImport"
+        eSuperTypes="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore#//AbstractRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SecurePasswordTask" eSuperTypes="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore#//AbstractRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SymmetricBlockCipherImportToImport"
+        eSuperTypes="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore#//AbstractRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="IgnoreParameterRule" eSuperTypes="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore#//AbstractRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="IgnoreMethodInvocationArgument" eSuperTypes="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore#//AbstractRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="IgnoreOpaqueMethod" eSuperTypes="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore#//AbstractRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PasswordBasedEncryption" eSuperTypes="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore#//AbstractRule"/>
+  </eSubpackages>
+</ecore:EPackage>

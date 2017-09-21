@@ -22,15 +22,6 @@ public interface RulesFactory extends EFactory {
 	RulesFactory eINSTANCE = KitchenToGridLanguage.Rules.impl.RulesFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Create Item With Two Blocks</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Create Item With Two Blocks</em>'.
-	 * @generated
-	 */
-	CreateItemWithTwoBlocks createCreateItemWithTwoBlocks();
-
-	/**
 	 * Returns a new object of class '<em>create ahorizontal table</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -38,42 +29,6 @@ public interface RulesFactory extends EFactory {
 	 * @generated
 	 */
 	create_a_horizontal_table createcreate_a_horizontal_table();
-
-	/**
-	 * Returns a new object of class '<em>create afridge</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>create afridge</em>'.
-	 * @generated
-	 */
-	create_a_fridge createcreate_a_fridge();
-
-	/**
-	 * Returns a new object of class '<em>create avertical table</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>create avertical table</em>'.
-	 * @generated
-	 */
-	create_a_vertical_table createcreate_a_vertical_table();
-
-	/**
-	 * Returns a new object of class '<em>create asink</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>create asink</em>'.
-	 * @generated
-	 */
-	create_a_sink createcreate_a_sink();
-
-	/**
-	 * Returns a new object of class '<em>Kitchen To Grid Rule</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Kitchen To Grid Rule</em>'.
-	 * @generated
-	 */
-	KitchenToGridRule createKitchenToGridRule();
 
 	/**
 	 * Returns a new object of class '<em>Create Horizontal Item</em>'.
@@ -94,6 +49,33 @@ public interface RulesFactory extends EFactory {
 	SocketToGroup createSocketToGroup();
 
 	/**
+	 * Returns a new object of class '<em>create avertical table</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>create avertical table</em>'.
+	 * @generated
+	 */
+	create_a_vertical_table createcreate_a_vertical_table();
+
+	/**
+	 * Returns a new object of class '<em>create asink</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>create asink</em>'.
+	 * @generated
+	 */
+	create_a_sink createcreate_a_sink();
+
+	/**
+	 * Returns a new object of class '<em>Create Item With Two Blocks</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Create Item With Two Blocks</em>'.
+	 * @generated
+	 */
+	CreateItemWithTwoBlocks createCreateItemWithTwoBlocks();
+
+	/**
 	 * Returns a new object of class '<em>Create Vertical Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -101,6 +83,24 @@ public interface RulesFactory extends EFactory {
 	 * @generated
 	 */
 	CreateVerticalItem createCreateVerticalItem();
+
+	/**
+	 * Returns a new object of class '<em>Kitchen To Grid Rule</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Kitchen To Grid Rule</em>'.
+	 * @generated
+	 */
+	KitchenToGridRule createKitchenToGridRule();
+
+	/**
+	 * Returns a new object of class '<em>create afridge</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>create afridge</em>'.
+	 * @generated
+	 */
+	create_a_fridge createcreate_a_fridge();
 
 	/**
 	 * Returns the package supported by this factory.

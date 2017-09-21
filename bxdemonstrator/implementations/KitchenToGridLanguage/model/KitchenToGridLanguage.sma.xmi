@@ -5,9 +5,9 @@
       <isAppropriateMethods href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_FWD_EMoflonEdge_0"/>
       <checkDECMethod href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkDEC_FWD"/>
     </rules>
-    <rules ruleName="create_a_fridge">
-      <isAppropriateMethods href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/isAppropriate_FWD_EMoflonEdge_1"/>
-      <checkDECMethod href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/checkDEC_FWD"/>
+    <rules ruleName="SocketToGroup">
+      <isAppropriateMethods href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_FWD_EMoflonEdge_1"/>
+      <checkDECMethod href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkDEC_FWD"/>
     </rules>
     <rules ruleName="create_a_vertical_table">
       <isAppropriateMethods href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_vertical_table/isAppropriate_FWD_EMoflonEdge_2"/>
@@ -21,9 +21,9 @@
       <isAppropriateMethods href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_FWD_Grid_0"/>
       <checkDECMethod href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkDEC_FWD"/>
     </rules>
-    <rules ruleName="SocketToGroup">
-      <isAppropriateMethods href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_FWD_EMoflonEdge_4"/>
-      <checkDECMethod href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkDEC_FWD"/>
+    <rules ruleName="create_a_fridge">
+      <isAppropriateMethods href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/isAppropriate_FWD_EMoflonEdge_4"/>
+      <checkDECMethod href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/checkDEC_FWD"/>
     </rules>
   </sourceRules>
   <targetRules>
@@ -31,9 +31,9 @@
       <isAppropriateMethods href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/isAppropriate_BWD_EMoflonEdge_0"/>
       <checkDECMethod href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_horizontal_table/checkDEC_BWD"/>
     </rules>
-    <rules ruleName="create_a_fridge">
-      <isAppropriateMethods href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/isAppropriate_BWD_EMoflonEdge_1"/>
-      <checkDECMethod href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/checkDEC_BWD"/>
+    <rules ruleName="SocketToGroup">
+      <isAppropriateMethods href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_BWD_EMoflonEdge_1"/>
+      <checkDECMethod href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkDEC_BWD"/>
     </rules>
     <rules ruleName="create_a_vertical_table">
       <isAppropriateMethods href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_vertical_table/isAppropriate_BWD_EMoflonEdge_2"/>
@@ -47,9 +47,9 @@
       <isAppropriateMethods href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/isAppropriate_BWD_Kitchen_0"/>
       <checkDECMethod href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/KitchenToGridRule/checkDEC_BWD"/>
     </rules>
-    <rules ruleName="SocketToGroup">
-      <isAppropriateMethods href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/isAppropriate_BWD_EMoflonEdge_4"/>
-      <checkDECMethod href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/SocketToGroup/checkDEC_BWD"/>
+    <rules ruleName="create_a_fridge">
+      <isAppropriateMethods href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/isAppropriate_BWD_EMoflonEdge_4"/>
+      <checkDECMethod href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//Rules/create_a_fridge/checkDEC_BWD"/>
     </rules>
   </targetRules>
 </analysis:StaticAnalysis>

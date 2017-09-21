@@ -9,4 +9,7 @@ Require-Bundle: GridLanguage;bundle-version="1.0.0",
  KitchenLanguage;bundle-version="1.0.0",
  KitchenToGridLanguage;bundle-version="1.0.0",
  com.kaleidoscope.usecase.bxdemonstrator;bundle-version="1.0.0",
- javax.servlet
+ javax.servlet,
+ com.google.gson,
+ com.kaleidoscope.core.framework;bundle-version="1.0.0",
+ com.kaleidoscope.core.delta;bundle-version="1.0.0"
