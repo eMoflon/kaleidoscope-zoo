@@ -8,4 +8,5 @@ Export-Package: bxtooldemo.ui.controllers
 Require-Bundle: GridLanguage;bundle-version="1.0.0",
  KitchenLanguage;bundle-version="1.0.0",
  KitchenToGridLanguage;bundle-version="1.0.0",
- com.kaleidoscope.usecase.bxdemonstrator;bundle-version="1.0.0"
+ com.kaleidoscope.usecase.bxdemonstrator;bundle-version="1.0.0",
+ javax.servlet
