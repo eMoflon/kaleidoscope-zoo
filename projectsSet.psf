@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<psf version="2.0">
+<provider id="org.eclipse.egit.core.GitProvider">
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-core.git,master,com.kaleidoscope.core.aux.emfcompare"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-core.git,master,com.kaleidoscope.core.aux.simplejava"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-core.git,master,com.kaleidoscope.core.aux.xmi"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-core.git,master,com.kaleidoscope.core.delta"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-core.git,master,com.kaleidoscope.core.framework"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-ui.git,master,com.kaleidoscope.ui"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,bxdemonstrator/com.kaleidoscope.usecase.bxdemonstrator"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,bxdemonstrator/implementations/com.kaleidoscope.usecase.bxdemonstrator.bxtend"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,bxdemonstrator/implementations/com.kaleidoscope.usecase.bxdemonstrator.emoflon"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,bxdemonstrator/com.kaleidoscope.usecase.bxdemonstrator.tomcat.app"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,kaleidocrypt/com.kaleidoscope.usecase.kaleidocrypt"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,kaleidocrypt/implementation/BxtendCryptoImpl"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.first"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.fourth"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.metamodel.employee"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.metamodel.person"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.second"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.third"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.xtext.EmployeeDsl"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.xtext.EmployeeDsl.ide"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.xtext.EmployeeDsl.ui"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.xtext.PersonDsl"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.xtext.PersonDsl.ide"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.xtext.PersonDsl.ui"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,kaleidocrypt/metamodel/CryptoAPIConfig"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,kaleidocrypt/implementation/CryptoConfigToJava"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,bxdemonstrator/metamodel/GridLanguage"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,bxdemonstrator/metamodel/KitchenLanguage"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,bxdemonstrator/implementations/KitchenToGridLanguage"/>
+</provider>
+<workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1501600143500_2" label="Core-Kaleidoscope" name="Core-Kaleidoscope">
+<item elementID="=com.kaleidoscope.core.framework" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.core.aux.simplejava" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.core.aux.emfcompare" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.core.delta" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.core.aux.xmi" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSets>
+<workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1502112203077_3" label="Zoo-BXdemonstrator" name="Zoo-BXdemonstrator">
+<item elementID="=GridLanguage" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=KitchenToGridLanguage" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.bxdemonstrator.bxtend" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.bxdemonstrator.tomcat.app" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.bxdemonstrator" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=KitchenLanguage" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.bxdemonstrator.emoflon" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSets>
+<workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1505981819391_8" label="Zoo-Kaleidocrypt" name="Zoo-Kaleidocrypt">
+<item elementID="=com.kaleidoscope.usecase.kaleidocrypt.bxtend" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=CryptoAPIConfig" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=CryptoConfigToJava" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.kaleidocrypt" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSets>
+<workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1503479036315_5" label="Zoo-Showcase" name="Zoo-Showcase">
+<item elementID="=com.kaleidoscope.usecase.showcase.xtext.PersonDsl.ui" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.showcase.third" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.showcase.xtext.EmployeeDsl.ui" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.showcase.first" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.showcase.metamodel.person" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.showcase.metamodel.employee" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.showcase.xtext.PersonDsl" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.showcase.second" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.showcase.xtext.EmployeeDsl.ide" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.showcase.fourth" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.showcase.xtext.EmployeeDsl" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.showcase.xtext.PersonDsl.ide" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSets>
+<workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1505981919655_9" label="UI-Kaleidoscope" name="UI-Kaleidoscope">
+<item elementID="=com.kaleidoscope.ui" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSets>
+</psf>
