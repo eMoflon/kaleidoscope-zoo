@@ -1,4 +1,4 @@
-package com.kaleidoscope.usecase.showcase.fourth.deltaadapter;
+package com.kaleidoscope.usecase.showcase.fourth.delta;
 
 import com.kaleidoscope.core.delta.javabased.Delta;
 import com.kaleidoscope.core.framework.workflow.adapters.DeltaAdapter;

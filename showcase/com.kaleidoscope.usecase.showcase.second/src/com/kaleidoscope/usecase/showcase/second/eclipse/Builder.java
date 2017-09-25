@@ -1,4 +1,4 @@
-package com.kaleidoscope.usecase.showcase.third.builder;
+package com.kaleidoscope.usecase.showcase.second.eclipse;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -15,11 +15,10 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 
 import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
-import com.kaleidoscope.core.framework.workflow.controllers.deltabased.PersistentDeltaBasedController;
-import com.kaleidoscope.usecase.showcase.third.controller.ControllerModule;
+import com.kaleidoscope.core.framework.workflow.controllers.statebased.PersistentStateBasedController;
+import com.kaleidoscope.usecase.showcase.second.controller.ControllerModule;
 
 import Employees.EmployeeContainer;
-import Persons.PersonContainer;
 
 
   
@@ -41,7 +40,7 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 		logger.info("Build is being performed.");
 		project = getProject();
 		projectPath = Paths.get(project.getLocation().toString());
-		controllerModule = new ControllerModule(projectPath, projectPath.resolve(Paths.get("models", "gen")));
+		controllerModule = new ControllerModule(projectPath, projectPath.resolve(Paths.get("models")));
 		
 		switch (kind) {
 			case CLEAN_BUILD:
@@ -73,18 +72,18 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 	private void syncForward()	throws CoreException{
 		
 		logger.info("Sync a java model with the configuration model is performed!");
-		PersistentDeltaBasedController<PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta, OperationalDelta, Path, Path, Path> controller = controllerModule.getControllerInstance();
+		PersistentStateBasedController<Persons.PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta,  OperationalDelta, Path> controller = controllerModule.getControllerInstance();
 		
-		controller.syncForward(projectPath.resolve(Paths.get("models", "src.delta.xmi")));
+		controller.syncForward(projectPath.resolve(Paths.get("models", "src.persons")));
 		refreshProject();
 		logger.info("Sync a java model with the configuration model is done!");
 	}
 	
 	private void syncBackward()	throws CoreException{
 		logger.info("Sync configuration model with a java model is performed!");
-		PersistentDeltaBasedController<PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta, OperationalDelta, Path, Path, Path> controller = controllerModule.getControllerInstance();
+		PersistentStateBasedController<Persons.PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta, OperationalDelta, Path> controller = controllerModule.getControllerInstance();
 		
-		controller.syncBackward(projectPath.resolve(Paths.get("models", "trg.delta.xmi")));
+		controller.syncBackward(projectPath.resolve(Paths.get("models", "trg.employees")));
 		refreshProject();
 		logger.info("Sync configuration model with a java model is done!");
 	}
@@ -97,7 +96,6 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 	@Override
 	public boolean visit(IResourceDelta delta) throws CoreException {
 		
-		
 		String relFilePath = delta.getResource().getProjectRelativePath().toString();
 			
 		if(delta.getResource().getName().equals("bin")){
@@ -108,13 +106,11 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 			return true;		
 		
 
-		if(relFilePath.contentEquals("models/src.delta.xmi")){
-			
+		if(relFilePath.contentEquals("models/src.persons")) {
 			syncForward();
 			
-		}else if(relFilePath.contentEquals("models/trg.delta.xmi")){
-			
-			syncBackward();		
+		}else if(relFilePath.contentEquals("models/trg.employees")) {
+			syncBackward();
 			
 		}
 		return true;

@@ -9,7 +9,7 @@
       </category>
       <wizard
             category="Showcase First New Project Wizards"
-            class="com.kaleidoscope.usecase.showcase.first.wizard.NewProjectWizard"            
+            class="com.kaleidoscope.usecase.showcase.first.eclipse.NewProjectWizard"            
             id="com.kaleidoscope.usecase.showcase.first.newproject"
             name="New Showcase First Project">
       </wizard>
@@ -20,7 +20,7 @@
          point="org.eclipse.core.resources.natures">
       <runtime>
          <run
-               class="com.kaleidoscope.usecase.showcase.first.builder.ShowcaseFirstNature">
+               class="com.kaleidoscope.usecase.showcase.first.eclipse.ShowcaseFirstNature">
          </run>
       </runtime>
    </extension>
@@ -33,7 +33,7 @@
       <builder
             callOnEmptyDelta="true">
          <run
-               class="com.kaleidoscope.usecase.showcase.first.builder.Builder">
+               class="com.kaleidoscope.usecase.showcase.first.eclipse.Builder">
          </run>
       </builder>
    </extension>

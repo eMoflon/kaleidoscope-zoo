@@ -1,4 +1,4 @@
-package com.kaleidoscope.usecase.showcase.second.wizard;
+package com.kaleidoscope.usecase.showcase.second.eclipse;
 
 import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.wizard.WizardPage;

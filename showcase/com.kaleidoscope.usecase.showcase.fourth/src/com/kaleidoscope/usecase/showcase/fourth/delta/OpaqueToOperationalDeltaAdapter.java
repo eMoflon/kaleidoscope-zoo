@@ -1,10 +1,9 @@
-package com.kaleidoscope.usecase.showcase.fourth.deltaadapter;
+package com.kaleidoscope.usecase.showcase.fourth.delta;
 
 import com.kaleidoscope.core.delta.discovery.OnlineDeltaDiscoverer;
 import com.kaleidoscope.core.delta.javabased.opaque.OpaqueDelta;
 import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
 import com.kaleidoscope.core.framework.workflow.adapters.DeltaAdapter;
-import com.kaleidoscope.usecase.showcase.fourth.deltadiscoverer.OnlineChangeDetector;
 
 
 

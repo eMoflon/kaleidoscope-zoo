@@ -1,4 +1,4 @@
-package com.kaleidoscope.usecase.showcase.first.wizard;
+package com.kaleidoscope.usecase.showcase.third.eclipse;
 
 import static com.kaleidoscope.util.WorkspaceHelper.addAllFolders;
 import static com.kaleidoscope.util.WorkspaceHelper.addAllFoldersAndFile;
@@ -19,7 +19,6 @@ import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import com.kaleidoscope.util.WorkspaceHelper;
-import com.kaleidoscope.usecase.showcase.first.builder.ShowcaseFirstNature;
 import com.kaleidoscope.util.DefaultFilesHelper;
 
 public class NewProjectWizard extends Wizard implements INewWizard {
@@ -108,7 +107,7 @@ public class NewProjectWizard extends Wizard implements INewWizard {
 		try {
 			addAllFoldersAndFile(project, pathToSourceModel, initialSourceModelContent, null);
 			addAllFoldersAndFile(project, pathToTargetModel, initialTargetModelContent, null);
-			
+			addAllFolders(project, "models/gen", null);
 		} catch (CoreException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -125,7 +124,7 @@ public class NewProjectWizard extends Wizard implements INewWizard {
 		project.open(subMon.split(1));
 				
 		// Add CryptoAPI Nature
-		WorkspaceHelper.addNature(project, ShowcaseFirstNature.SHOWCASE_FIRST_API_NATURE_ID, subMon.split(1)); 
+		WorkspaceHelper.addNature(project, ShowcaseThirdNature.SHOWCASE_THIRD_API_NATURE_ID, subMon.split(1)); 
 	}
 
 	@Override

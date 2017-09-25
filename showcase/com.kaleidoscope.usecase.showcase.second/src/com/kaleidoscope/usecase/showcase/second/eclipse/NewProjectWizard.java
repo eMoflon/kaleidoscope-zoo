@@ -1,4 +1,4 @@
-package com.kaleidoscope.usecase.showcase.third.wizard;
+package com.kaleidoscope.usecase.showcase.second.eclipse;
 
 import static com.kaleidoscope.util.WorkspaceHelper.addAllFolders;
 import static com.kaleidoscope.util.WorkspaceHelper.addAllFoldersAndFile;
@@ -19,7 +19,6 @@ import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import com.kaleidoscope.util.WorkspaceHelper;
-import com.kaleidoscope.usecase.showcase.third.builder.ShowcaseThirdNature;
 import com.kaleidoscope.util.DefaultFilesHelper;
 
 public class NewProjectWizard extends Wizard implements INewWizard {
@@ -88,27 +87,13 @@ public class NewProjectWizard extends Wizard implements INewWizard {
 		
 		addAllFolders(project, "models",subMon.split(1));
 		
-		IPath pathToSourceModel = new Path("models/src.xmi");
-		IPath pathToTargetModel = new Path("models/trg.xmi");
+		IPath pathToXtextSourceModel = new Path("models/src.persons");
+		IPath pathToXtextTargetModel = new Path("models/trg.employees");
 		
-		String initialSourceModelContent = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n" + 
-				"<com.kaleidoscope.usecase.showcase.metamodel.person:PersonContainer xmi:version=\"2.0\"\r\n" + 
-				"    xmlns:xmi=\"http://www.omg.org/XMI\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n" + 
-				"    xmlns:com.kaleidoscope.usecase.showcase.metamodel.person=\"platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.person/model/Persons.ecore\"\r\n" + 
-				"    xsi:schemaLocation=\"platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.person/model/Persons.ecore ../model/Persons.ecore\"/>\r\n" + 
-				"";
-		
-		String initialTargetModelContent = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n" + 
-				"<com.kaleidoscope.usecase.showcase.metamodel.employee:EmployeeContainer xmi:version=\"2.0\"\r\n" + 
-				"    xmlns:xmi=\"http://www.omg.org/XMI\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n" + 
-				"    xmlns:com.kaleidoscope.usecase.showcase.metamodel.employee=\"platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore\"\r\n" + 
-				"    xsi:schemaLocation=\"platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore ../model/Employees.ecore\"/>\r\n" + 
-				"";
 		
 		try {
-			addAllFoldersAndFile(project, pathToSourceModel, initialSourceModelContent, null);
-			addAllFoldersAndFile(project, pathToTargetModel, initialTargetModelContent, null);
-			addAllFolders(project, "models/gen", null);
+			addAllFoldersAndFile(project, pathToXtextSourceModel, "", null);
+			addAllFoldersAndFile(project, pathToXtextTargetModel, "", null);
 		} catch (CoreException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -125,9 +110,10 @@ public class NewProjectWizard extends Wizard implements INewWizard {
 		project.open(subMon.split(1));
 				
 		// Add CryptoAPI Nature
-		WorkspaceHelper.addNature(project, ShowcaseThirdNature.SHOWCASE_THIRD_API_NATURE_ID, subMon.split(1)); 
+		WorkspaceHelper.addNature(project, ShowcaseSecondNature.SHOWCASE_SECOND_API_NATURE_ID, subMon.split(1)); 
 	}
 
+	
 	@Override
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
 		

@@ -1,4 +1,4 @@
-package com.kaleidoscope.usecase.showcase.second.builder;
+package com.kaleidoscope.usecase.showcase.first.eclipse;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -16,7 +16,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 
 import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
 import com.kaleidoscope.core.framework.workflow.controllers.statebased.PersistentStateBasedController;
-import com.kaleidoscope.usecase.showcase.second.controller.ControllerModule;
+import com.kaleidoscope.usecase.showcase.first.controller.ControllerModule;
 
 import Employees.EmployeeContainer;
 
@@ -74,7 +74,7 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 		logger.info("Sync a java model with the configuration model is performed!");
 		PersistentStateBasedController<Persons.PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta,  OperationalDelta, Path> controller = controllerModule.getControllerInstance();
 		
-		controller.syncForward(projectPath.resolve(Paths.get("models", "src.persons")));
+		controller.syncForward(projectPath.resolve(Paths.get("models", "src.xmi")));
 		refreshProject();
 		logger.info("Sync a java model with the configuration model is done!");
 	}
@@ -83,7 +83,7 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 		logger.info("Sync configuration model with a java model is performed!");
 		PersistentStateBasedController<Persons.PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta, OperationalDelta, Path> controller = controllerModule.getControllerInstance();
 		
-		controller.syncBackward(projectPath.resolve(Paths.get("models", "trg.employees")));
+		controller.syncBackward(projectPath.resolve(Paths.get("models", "trg.xmi")));
 		refreshProject();
 		logger.info("Sync configuration model with a java model is done!");
 	}
@@ -96,6 +96,7 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 	@Override
 	public boolean visit(IResourceDelta delta) throws CoreException {
 		
+		
 		String relFilePath = delta.getResource().getProjectRelativePath().toString();
 			
 		if(delta.getResource().getName().equals("bin")){
@@ -106,11 +107,13 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 			return true;		
 		
 
-		if(relFilePath.contentEquals("models/src.persons")) {
+		if(relFilePath.contentEquals("models/src.xmi")){
+			
 			syncForward();
 			
-		}else if(relFilePath.contentEquals("models/trg.employees")) {
-			syncBackward();
+		}else if(relFilePath.contentEquals("models/trg.xmi")){
+			
+			syncBackward();		
 			
 		}
 		return true;

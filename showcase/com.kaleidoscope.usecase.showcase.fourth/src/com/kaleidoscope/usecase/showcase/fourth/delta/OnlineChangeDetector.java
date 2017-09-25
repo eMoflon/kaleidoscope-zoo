@@ -1,4 +1,4 @@
-package com.kaleidoscope.usecase.showcase.fourth.deltadiscoverer;
+package com.kaleidoscope.usecase.showcase.fourth.delta;
 
 import com.kaleidoscope.core.delta.discovery.OnlineDeltaDiscoverer;
 

@@ -1,4 +1,4 @@
-package com.kaleidoscope.usecase.showcase.third.builder;
+package com.kaleidoscope.usecase.showcase.third.eclipse;
 
 import java.io.IOException;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.kaleidoscope.usecase.showcase.second.builder;
+package com.kaleidoscope.usecase.showcase.first.eclipse;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -20,19 +20,17 @@ import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.ui.PlatformUI;
 import com.kaleidoscope.util.LogUtils;
 import com.kaleidoscope.util.WorkspaceHelper;
-
 import com.kaleidoscope.util.BuildPropertiesFileBuilder;
 import com.kaleidoscope.util.manifest.ManifestFileUpdater;
 import com.kaleidoscope.util.manifest.ManifestFileUpdater.AttributeUpdatePolicy;
 import com.kaleidoscope.util.manifest.PluginManifestConstants;
-
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.SubMonitor;
 
-public class ShowcaseSecondNature implements IProjectNature {
+public class ShowcaseFirstNature implements IProjectNature {
 
-	public static final String SHOWCASE_SECOND_API_NATURE_ID = "com.kaleidoscope.usecase.showcase.second.nature";
-	public static final String SHOWCASE_SECOND_API_BUILDER_ID = "com.kaleidoscope.usecase.showcase.second.builder";
+	public static final String SHOWCASE_FIRST_API_NATURE_ID = "com.kaleidoscope.usecase.showcase.first.nature";
+	public static final String SHOWCASE_FIRST_API_BUILDER_ID = "com.kaleidoscope.usecase.showcase.first.builder";
 	
 	
 	private static final Logger logger = Logger.getLogger(WorkspaceHelper.class);
@@ -57,7 +55,7 @@ public class ShowcaseSecondNature implements IProjectNature {
 		IProjectDescription projectDescription = project.getDescription();
 		ICommand[] buildSpec = projectDescription.getBuildSpec();
 		ICommand command = projectDescription.newCommand();
-		command.setBuilderName(SHOWCASE_SECOND_API_BUILDER_ID);
+		command.setBuilderName(SHOWCASE_FIRST_API_BUILDER_ID);
 		Collection<ICommand> list = new ArrayList<>();
 		list.add(command);
 		list.addAll(Arrays.asList(buildSpec));

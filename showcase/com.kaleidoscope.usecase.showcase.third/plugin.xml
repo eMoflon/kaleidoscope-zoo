@@ -9,7 +9,7 @@
       </category>
       <wizard
             category="Showcase Third New Project Wizards"
-            class="com.kaleidoscope.usecase.showcase.third.wizard.NewProjectWizard"            
+            class="com.kaleidoscope.usecase.showcase.third.eclipse.NewProjectWizard"            
             id="com.kaleidoscope.usecase.showcase.third.newproject"
             name="New Showcase Third Project">
       </wizard>
@@ -20,7 +20,7 @@
          point="org.eclipse.core.resources.natures">
       <runtime>
          <run
-               class="com.kaleidoscope.usecase.showcase.third.builder.ShowcaseThirdNature">
+               class="com.kaleidoscope.usecase.showcase.third.eclipse.ShowcaseThirdNature">
          </run>
       </runtime>
    </extension>
@@ -33,7 +33,7 @@
       <builder
             callOnEmptyDelta="true">
          <run
-               class="com.kaleidoscope.usecase.showcase.third.builder.Builder">
+               class="com.kaleidoscope.usecase.showcase.third.eclipse.Builder">
          </run>
       </builder>
    </extension>
