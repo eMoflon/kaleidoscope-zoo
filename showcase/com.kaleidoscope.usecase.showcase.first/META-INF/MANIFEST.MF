@@ -21,4 +21,5 @@ Require-Bundle: com.google.inject;bundle-version="3.0.0",
  org.eclipse.jdt.core,
  com.kaleidoscope.usecase.showcase.metamodel.employee,
  org.eclipse.xtext,
- org.eclipse.emf.ecore
+ org.eclipse.emf.ecore,
+ com.kaleidoscope.util;bundle-version="1.0.0"

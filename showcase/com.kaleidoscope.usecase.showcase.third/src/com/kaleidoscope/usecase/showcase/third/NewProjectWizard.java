@@ -1,7 +1,7 @@
 package com.kaleidoscope.usecase.showcase.third;
 
-import static org.moflon.core.utilities.WorkspaceHelper.addAllFolders;
-import static org.moflon.core.utilities.WorkspaceHelper.addAllFoldersAndFile;
+import static com.kaleidoscope.util.WorkspaceHelper.addAllFolders;
+import static com.kaleidoscope.util.WorkspaceHelper.addAllFoldersAndFile;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -18,8 +18,8 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
-import org.moflon.core.utilities.WorkspaceHelper;
-import org.moflon.tgg.mosl.defaults.DefaultFilesHelper;
+import com.kaleidoscope.util.WorkspaceHelper;
+import com.kaleidoscope.util.DefaultFilesHelper;
 
 public class NewProjectWizard extends Wizard implements INewWizard {
 	private NewProjectWizardPage page;
