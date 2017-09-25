@@ -1,6 +1,7 @@
 package com.kaleidoscope.usecase.showcase.second;
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.util.Optional;
 
@@ -10,13 +11,13 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
-import com.kaleidoscope.usecase.showcase.xtext.personDsl.PersonContainer;
+
+import com.kaleidoscope.core.framework.workflow.adapters.ArtefactAdapter;
 import com.kaleidoscope.usecase.showcase.xtext.personDsl.Person;
+import com.kaleidoscope.usecase.showcase.xtext.personDsl.PersonContainer;
 import com.kaleidoscope.usecase.showcase.xtext.personDsl.PersonDslFactory;
 
 import Persons.PersonsFactory;
-
-import com.kaleidoscope.core.framework.workflow.adapters.ArtefactAdapter;
 
 
 public class PersonArtefactAdapter implements ArtefactAdapter<Persons.PersonContainer, Path> {
@@ -84,7 +85,7 @@ public class PersonArtefactAdapter implements ArtefactAdapter<Persons.PersonCont
 
 			PersonSerializer serializer = new PersonSerializer();
 			CharSequence fileContent = serializer.personContainerToString(xtextModel.get());
-			FileUtils.writeStringToFile(path.toFile(), fileContent.toString());
+			FileUtils.writeStringToFile(path.toFile(), fileContent.toString(), (Charset)null);
 			
 			logger.debug("Person DSL saved!");
 		} catch (IOException | ClassCastException e) {
