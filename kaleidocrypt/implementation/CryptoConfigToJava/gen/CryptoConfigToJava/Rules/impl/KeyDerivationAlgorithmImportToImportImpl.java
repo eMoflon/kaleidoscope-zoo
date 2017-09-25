@@ -97,20 +97,20 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isAppropriate_FWD(Match match, Import imp, KeyDerivationAlgorithm alg) {
+	public boolean isAppropriate_FWD(Match match, KeyDerivationAlgorithm alg, Import imp) {
 
 		Object[] result1_black = KeyDerivationAlgorithmImportToImportImpl
-				.pattern_KeyDerivationAlgorithmImportToImport_0_1_initialbindings_blackBBBB(this, match, imp, alg);
+				.pattern_KeyDerivationAlgorithmImportToImport_0_1_initialbindings_blackBBBB(this, match, alg, imp);
 		if (result1_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[match] = " + match + ", " + "[imp] = " + imp + ", " + "[alg] = " + alg + ".");
+					+ "[match] = " + match + ", " + "[alg] = " + alg + ", " + "[imp] = " + imp + ".");
 		}
 
 		Object[] result2_bindingAndBlack = KeyDerivationAlgorithmImportToImportImpl
-				.pattern_KeyDerivationAlgorithmImportToImport_0_2_SolveCSP_bindingAndBlackFBBBB(this, match, imp, alg);
+				.pattern_KeyDerivationAlgorithmImportToImport_0_2_SolveCSP_bindingAndBlackFBBBB(this, match, alg, imp);
 		if (result2_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[match] = " + match + ", " + "[imp] = " + imp + ", " + "[alg] = " + alg + ".");
+					+ "[match] = " + match + ", " + "[alg] = " + alg + ", " + "[imp] = " + imp + ".");
 		}
 		CSP csp = (CSP) result2_bindingAndBlack[0];
 		// 
@@ -118,22 +118,22 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 				.pattern_KeyDerivationAlgorithmImportToImport_0_3_CheckCSP_expressionFBB(this, csp)) {
 
 			Object[] result4_black = KeyDerivationAlgorithmImportToImportImpl
-					.pattern_KeyDerivationAlgorithmImportToImport_0_4_collectelementstobetranslated_blackBBB(match, imp,
-							alg);
+					.pattern_KeyDerivationAlgorithmImportToImport_0_4_collectelementstobetranslated_blackBBB(match, alg,
+							imp);
 			if (result4_black == null) {
 				throw new RuntimeException("Pattern matching failed." + " Variables: " + "[match] = " + match + ", "
-						+ "[imp] = " + imp + ", " + "[alg] = " + alg + ".");
+						+ "[alg] = " + alg + ", " + "[imp] = " + imp + ".");
 			}
 			KeyDerivationAlgorithmImportToImportImpl
 					.pattern_KeyDerivationAlgorithmImportToImport_0_4_collectelementstobetranslated_greenBBBF(match,
-							imp, alg);
+							alg, imp);
 			//nothing EMoflonEdge alg__imp____imports = (EMoflonEdge) result4_green[3];
 
 			Object[] result5_black = KeyDerivationAlgorithmImportToImportImpl
-					.pattern_KeyDerivationAlgorithmImportToImport_0_5_collectcontextelements_blackBBB(match, imp, alg);
+					.pattern_KeyDerivationAlgorithmImportToImport_0_5_collectcontextelements_blackBBB(match, alg, imp);
 			if (result5_black == null) {
 				throw new RuntimeException("Pattern matching failed." + " Variables: " + "[match] = " + match + ", "
-						+ "[imp] = " + imp + ", " + "[alg] = " + alg + ".");
+						+ "[alg] = " + alg + ", " + "[imp] = " + imp + ".");
 			}
 			KeyDerivationAlgorithmImportToImportImpl
 					.pattern_KeyDerivationAlgorithmImportToImport_0_5_collectcontextelements_greenBB(match, alg);
@@ -141,7 +141,7 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 			// 
 			KeyDerivationAlgorithmImportToImportImpl
 					.pattern_KeyDerivationAlgorithmImportToImport_0_6_registerobjectstomatch_expressionBBBB(this, match,
-							imp, alg);
+							alg, imp);
 			return KeyDerivationAlgorithmImportToImportImpl
 					.pattern_KeyDerivationAlgorithmImportToImport_0_7_expressionF();
 		} else {
@@ -165,47 +165,47 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
 					+ "[isApplicableMatch] = " + isApplicableMatch + ".");
 		}
-		Import imp = (Import) result1_bindingAndBlack[0];
-		JavaCompilationUnit cu = (JavaCompilationUnit) result1_bindingAndBlack[1];
-		KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) result1_bindingAndBlack[2];
-		KeyDerivationAlgorithmToJcu ac = (KeyDerivationAlgorithmToJcu) result1_bindingAndBlack[3];
+		JavaCompilationUnit cu = (JavaCompilationUnit) result1_bindingAndBlack[0];
+		KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) result1_bindingAndBlack[1];
+		KeyDerivationAlgorithmToJcu ac = (KeyDerivationAlgorithmToJcu) result1_bindingAndBlack[2];
+		Import imp = (Import) result1_bindingAndBlack[3];
 		CSP csp = (CSP) result1_bindingAndBlack[4];
 		Object[] result1_green = KeyDerivationAlgorithmImportToImportImpl
-				.pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_greenBFFBB(imp, cu, csp);
+				.pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_greenBFBFB(cu, imp, csp);
 		ImportToImport i2j = (ImportToImport) result1_green[1];
-		JavaImport jimp = (JavaImport) result1_green[2];
+		JavaImport jimp = (JavaImport) result1_green[3];
 
 		Object[] result2_black = KeyDerivationAlgorithmImportToImportImpl
-				.pattern_KeyDerivationAlgorithmImportToImport_1_2_collecttranslatedelements_blackBBB(imp, i2j, jimp);
+				.pattern_KeyDerivationAlgorithmImportToImport_1_2_collecttranslatedelements_blackBBB(i2j, imp, jimp);
 		if (result2_black == null) {
-			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[imp] = " + imp + ", "
-					+ "[i2j] = " + i2j + ", " + "[jimp] = " + jimp + ".");
+			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[i2j] = " + i2j + ", "
+					+ "[imp] = " + imp + ", " + "[jimp] = " + jimp + ".");
 		}
 		Object[] result2_green = KeyDerivationAlgorithmImportToImportImpl
-				.pattern_KeyDerivationAlgorithmImportToImport_1_2_collecttranslatedelements_greenFBBB(imp, i2j, jimp);
+				.pattern_KeyDerivationAlgorithmImportToImport_1_2_collecttranslatedelements_greenFBBB(i2j, imp, jimp);
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		Object[] result3_black = KeyDerivationAlgorithmImportToImportImpl
-				.pattern_KeyDerivationAlgorithmImportToImport_1_3_bookkeepingforedges_blackBBBBBBB(ruleresult, imp, i2j,
-						jimp, cu, alg, ac);
+				.pattern_KeyDerivationAlgorithmImportToImport_1_3_bookkeepingforedges_blackBBBBBBB(ruleresult, cu, alg,
+						i2j, ac, imp, jimp);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[ruleresult] = " + ruleresult
-					+ ", " + "[imp] = " + imp + ", " + "[i2j] = " + i2j + ", " + "[jimp] = " + jimp + ", " + "[cu] = "
-					+ cu + ", " + "[alg] = " + alg + ", " + "[ac] = " + ac + ".");
+					+ ", " + "[cu] = " + cu + ", " + "[alg] = " + alg + ", " + "[i2j] = " + i2j + ", " + "[ac] = " + ac
+					+ ", " + "[imp] = " + imp + ", " + "[jimp] = " + jimp + ".");
 		}
 		KeyDerivationAlgorithmImportToImportImpl
-				.pattern_KeyDerivationAlgorithmImportToImport_1_3_bookkeepingforedges_greenBBBBBBFFFF(ruleresult, imp,
-						i2j, jimp, cu, alg);
-		//nothing EMoflonEdge i2j__jimp____target = (EMoflonEdge) result3_green[6];
-		//nothing EMoflonEdge i2j__imp____source = (EMoflonEdge) result3_green[7];
-		//nothing EMoflonEdge alg__imp____imports = (EMoflonEdge) result3_green[8];
-		//nothing EMoflonEdge cu__jimp____imports = (EMoflonEdge) result3_green[9];
+				.pattern_KeyDerivationAlgorithmImportToImport_1_3_bookkeepingforedges_greenBBBBBBFFFF(ruleresult, cu,
+						alg, i2j, imp, jimp);
+		//nothing EMoflonEdge alg__imp____imports = (EMoflonEdge) result3_green[6];
+		//nothing EMoflonEdge cu__jimp____imports = (EMoflonEdge) result3_green[7];
+		//nothing EMoflonEdge i2j__imp____source = (EMoflonEdge) result3_green[8];
+		//nothing EMoflonEdge i2j__jimp____target = (EMoflonEdge) result3_green[9];
 
 		// 
 		// 
 		KeyDerivationAlgorithmImportToImportImpl
 				.pattern_KeyDerivationAlgorithmImportToImport_1_5_registerobjects_expressionBBBBBBBB(this, ruleresult,
-						imp, i2j, jimp, cu, alg, ac);
+						cu, alg, i2j, ac, imp, jimp);
 		return KeyDerivationAlgorithmImportToImportImpl
 				.pattern_KeyDerivationAlgorithmImportToImport_1_6_expressionFB(ruleresult);
 	}
@@ -235,29 +235,29 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 			throw new RuntimeException(
 					"Binding in node core match failed." + " Variables: " + "[match] = " + match + ".");
 		}
-		Import imp = (Import) result2_binding[0];
-		KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) result2_binding[1];
+		KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) result2_binding[0];
+		Import imp = (Import) result2_binding[1];
 		for (Object[] result2_black : KeyDerivationAlgorithmImportToImportImpl
-				.pattern_KeyDerivationAlgorithmImportToImport_2_2_corematch_blackBFBFB(imp, alg, match)) {
-			JavaCompilationUnit cu = (JavaCompilationUnit) result2_black[1];
-			KeyDerivationAlgorithmToJcu ac = (KeyDerivationAlgorithmToJcu) result2_black[3];
+				.pattern_KeyDerivationAlgorithmImportToImport_2_2_corematch_blackFBFBB(alg, imp, match)) {
+			JavaCompilationUnit cu = (JavaCompilationUnit) result2_black[0];
+			KeyDerivationAlgorithmToJcu ac = (KeyDerivationAlgorithmToJcu) result2_black[2];
 			// ForEach 
 			for (Object[] result3_black : KeyDerivationAlgorithmImportToImportImpl
-					.pattern_KeyDerivationAlgorithmImportToImport_2_3_findcontext_blackBBBB(imp, cu, alg, ac)) {
+					.pattern_KeyDerivationAlgorithmImportToImport_2_3_findcontext_blackBBBB(cu, alg, ac, imp)) {
 				Object[] result3_green = KeyDerivationAlgorithmImportToImportImpl
-						.pattern_KeyDerivationAlgorithmImportToImport_2_3_findcontext_greenBBBBFFFF(imp, cu, alg, ac);
+						.pattern_KeyDerivationAlgorithmImportToImport_2_3_findcontext_greenBBBBFFFF(cu, alg, ac, imp);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[4];
-				//nothing EMoflonEdge ac__cu____target = (EMoflonEdge) result3_green[5];
-				//nothing EMoflonEdge ac__alg____source = (EMoflonEdge) result3_green[6];
-				//nothing EMoflonEdge alg__imp____imports = (EMoflonEdge) result3_green[7];
+				//nothing EMoflonEdge alg__imp____imports = (EMoflonEdge) result3_green[5];
+				//nothing EMoflonEdge ac__cu____target = (EMoflonEdge) result3_green[6];
+				//nothing EMoflonEdge ac__alg____source = (EMoflonEdge) result3_green[7];
 
 				Object[] result4_bindingAndBlack = KeyDerivationAlgorithmImportToImportImpl
 						.pattern_KeyDerivationAlgorithmImportToImport_2_4_solveCSP_bindingAndBlackFBBBBBB(this,
-								isApplicableMatch, imp, cu, alg, ac);
+								isApplicableMatch, cu, alg, ac, imp);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-							+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[imp] = " + imp + ", " + "[cu] = "
-							+ cu + ", " + "[alg] = " + alg + ", " + "[ac] = " + ac + ".");
+							+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[cu] = " + cu + ", " + "[alg] = "
+							+ alg + ", " + "[ac] = " + ac + ", " + "[imp] = " + imp + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// 
@@ -290,9 +290,9 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjectsToMatch_FWD(Match match, Import imp, KeyDerivationAlgorithm alg) {
-		match.registerObject("imp", imp);
+	public void registerObjectsToMatch_FWD(Match match, KeyDerivationAlgorithm alg, Import imp) {
 		match.registerObject("alg", alg);
+		match.registerObject("imp", imp);
 
 	}
 
@@ -301,7 +301,7 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isAppropriate_solveCsp_FWD(Match match, Import imp, KeyDerivationAlgorithm alg) {// Create CSP
+	public CSP isAppropriate_solveCsp_FWD(Match match, KeyDerivationAlgorithm alg, Import imp) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
 		// Create literals
@@ -330,8 +330,8 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, Import imp, JavaCompilationUnit cu,
-			KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac) {// Create CSP
+	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, JavaCompilationUnit cu,
+			KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac, Import imp) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -356,10 +356,10 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 		eq.solve(var_imp_value, var_jimp_value);
 
 		// Snapshot pattern match on which CSP is solved
-		isApplicableMatch.registerObject("imp", imp);
 		isApplicableMatch.registerObject("cu", cu);
 		isApplicableMatch.registerObject("alg", alg);
 		isApplicableMatch.registerObject("ac", ac);
+		isApplicableMatch.registerObject("imp", imp);
 		return csp;
 	}
 
@@ -377,14 +377,14 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject imp, EObject i2j, EObject jimp, EObject cu,
-			EObject alg, EObject ac) {
-		ruleresult.registerObject("imp", imp);
-		ruleresult.registerObject("i2j", i2j);
-		ruleresult.registerObject("jimp", jimp);
+	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject cu, EObject alg, EObject i2j, EObject ac,
+			EObject imp, EObject jimp) {
 		ruleresult.registerObject("cu", cu);
 		ruleresult.registerObject("alg", alg);
+		ruleresult.registerObject("i2j", i2j);
 		ruleresult.registerObject("ac", ac);
+		ruleresult.registerObject("imp", imp);
+		ruleresult.registerObject("jimp", jimp);
 
 	}
 
@@ -403,20 +403,20 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isAppropriate_BWD(Match match, JavaImport jimp, JavaCompilationUnit cu) {
+	public boolean isAppropriate_BWD(Match match, JavaCompilationUnit cu, JavaImport jimp) {
 
 		Object[] result1_black = KeyDerivationAlgorithmImportToImportImpl
-				.pattern_KeyDerivationAlgorithmImportToImport_10_1_initialbindings_blackBBBB(this, match, jimp, cu);
+				.pattern_KeyDerivationAlgorithmImportToImport_10_1_initialbindings_blackBBBB(this, match, cu, jimp);
 		if (result1_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[match] = " + match + ", " + "[jimp] = " + jimp + ", " + "[cu] = " + cu + ".");
+					+ "[match] = " + match + ", " + "[cu] = " + cu + ", " + "[jimp] = " + jimp + ".");
 		}
 
 		Object[] result2_bindingAndBlack = KeyDerivationAlgorithmImportToImportImpl
-				.pattern_KeyDerivationAlgorithmImportToImport_10_2_SolveCSP_bindingAndBlackFBBBB(this, match, jimp, cu);
+				.pattern_KeyDerivationAlgorithmImportToImport_10_2_SolveCSP_bindingAndBlackFBBBB(this, match, cu, jimp);
 		if (result2_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[match] = " + match + ", " + "[jimp] = " + jimp + ", " + "[cu] = " + cu + ".");
+					+ "[match] = " + match + ", " + "[cu] = " + cu + ", " + "[jimp] = " + jimp + ".");
 		}
 		CSP csp = (CSP) result2_bindingAndBlack[0];
 		// 
@@ -424,22 +424,22 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 				.pattern_KeyDerivationAlgorithmImportToImport_10_3_CheckCSP_expressionFBB(this, csp)) {
 
 			Object[] result4_black = KeyDerivationAlgorithmImportToImportImpl
-					.pattern_KeyDerivationAlgorithmImportToImport_10_4_collectelementstobetranslated_blackBBB(match,
-							jimp, cu);
+					.pattern_KeyDerivationAlgorithmImportToImport_10_4_collectelementstobetranslated_blackBBB(match, cu,
+							jimp);
 			if (result4_black == null) {
 				throw new RuntimeException("Pattern matching failed." + " Variables: " + "[match] = " + match + ", "
-						+ "[jimp] = " + jimp + ", " + "[cu] = " + cu + ".");
+						+ "[cu] = " + cu + ", " + "[jimp] = " + jimp + ".");
 			}
 			KeyDerivationAlgorithmImportToImportImpl
 					.pattern_KeyDerivationAlgorithmImportToImport_10_4_collectelementstobetranslated_greenBBBF(match,
-							jimp, cu);
+							cu, jimp);
 			//nothing EMoflonEdge cu__jimp____imports = (EMoflonEdge) result4_green[3];
 
 			Object[] result5_black = KeyDerivationAlgorithmImportToImportImpl
-					.pattern_KeyDerivationAlgorithmImportToImport_10_5_collectcontextelements_blackBBB(match, jimp, cu);
+					.pattern_KeyDerivationAlgorithmImportToImport_10_5_collectcontextelements_blackBBB(match, cu, jimp);
 			if (result5_black == null) {
 				throw new RuntimeException("Pattern matching failed." + " Variables: " + "[match] = " + match + ", "
-						+ "[jimp] = " + jimp + ", " + "[cu] = " + cu + ".");
+						+ "[cu] = " + cu + ", " + "[jimp] = " + jimp + ".");
 			}
 			KeyDerivationAlgorithmImportToImportImpl
 					.pattern_KeyDerivationAlgorithmImportToImport_10_5_collectcontextelements_greenBB(match, cu);
@@ -447,7 +447,7 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 			// 
 			KeyDerivationAlgorithmImportToImportImpl
 					.pattern_KeyDerivationAlgorithmImportToImport_10_6_registerobjectstomatch_expressionBBBB(this,
-							match, jimp, cu);
+							match, cu, jimp);
 			return KeyDerivationAlgorithmImportToImportImpl
 					.pattern_KeyDerivationAlgorithmImportToImport_10_7_expressionF();
 		} else {
@@ -471,47 +471,47 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
 					+ "[isApplicableMatch] = " + isApplicableMatch + ".");
 		}
-		JavaImport jimp = (JavaImport) result1_bindingAndBlack[0];
-		JavaCompilationUnit cu = (JavaCompilationUnit) result1_bindingAndBlack[1];
-		KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) result1_bindingAndBlack[2];
-		KeyDerivationAlgorithmToJcu ac = (KeyDerivationAlgorithmToJcu) result1_bindingAndBlack[3];
+		JavaCompilationUnit cu = (JavaCompilationUnit) result1_bindingAndBlack[0];
+		KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) result1_bindingAndBlack[1];
+		KeyDerivationAlgorithmToJcu ac = (KeyDerivationAlgorithmToJcu) result1_bindingAndBlack[2];
+		JavaImport jimp = (JavaImport) result1_bindingAndBlack[3];
 		CSP csp = (CSP) result1_bindingAndBlack[4];
 		Object[] result1_green = KeyDerivationAlgorithmImportToImportImpl
-				.pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_greenFFBBB(jimp, alg, csp);
-		Import imp = (Import) result1_green[0];
+				.pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_greenBFFBB(alg, jimp, csp);
 		ImportToImport i2j = (ImportToImport) result1_green[1];
+		Import imp = (Import) result1_green[2];
 
 		Object[] result2_black = KeyDerivationAlgorithmImportToImportImpl
-				.pattern_KeyDerivationAlgorithmImportToImport_11_2_collecttranslatedelements_blackBBB(imp, i2j, jimp);
+				.pattern_KeyDerivationAlgorithmImportToImport_11_2_collecttranslatedelements_blackBBB(i2j, imp, jimp);
 		if (result2_black == null) {
-			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[imp] = " + imp + ", "
-					+ "[i2j] = " + i2j + ", " + "[jimp] = " + jimp + ".");
+			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[i2j] = " + i2j + ", "
+					+ "[imp] = " + imp + ", " + "[jimp] = " + jimp + ".");
 		}
 		Object[] result2_green = KeyDerivationAlgorithmImportToImportImpl
-				.pattern_KeyDerivationAlgorithmImportToImport_11_2_collecttranslatedelements_greenFBBB(imp, i2j, jimp);
+				.pattern_KeyDerivationAlgorithmImportToImport_11_2_collecttranslatedelements_greenFBBB(i2j, imp, jimp);
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		Object[] result3_black = KeyDerivationAlgorithmImportToImportImpl
-				.pattern_KeyDerivationAlgorithmImportToImport_11_3_bookkeepingforedges_blackBBBBBBB(ruleresult, imp,
-						i2j, jimp, cu, alg, ac);
+				.pattern_KeyDerivationAlgorithmImportToImport_11_3_bookkeepingforedges_blackBBBBBBB(ruleresult, cu, alg,
+						i2j, ac, imp, jimp);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[ruleresult] = " + ruleresult
-					+ ", " + "[imp] = " + imp + ", " + "[i2j] = " + i2j + ", " + "[jimp] = " + jimp + ", " + "[cu] = "
-					+ cu + ", " + "[alg] = " + alg + ", " + "[ac] = " + ac + ".");
+					+ ", " + "[cu] = " + cu + ", " + "[alg] = " + alg + ", " + "[i2j] = " + i2j + ", " + "[ac] = " + ac
+					+ ", " + "[imp] = " + imp + ", " + "[jimp] = " + jimp + ".");
 		}
 		KeyDerivationAlgorithmImportToImportImpl
-				.pattern_KeyDerivationAlgorithmImportToImport_11_3_bookkeepingforedges_greenBBBBBBFFFF(ruleresult, imp,
-						i2j, jimp, cu, alg);
-		//nothing EMoflonEdge i2j__jimp____target = (EMoflonEdge) result3_green[6];
-		//nothing EMoflonEdge i2j__imp____source = (EMoflonEdge) result3_green[7];
-		//nothing EMoflonEdge alg__imp____imports = (EMoflonEdge) result3_green[8];
-		//nothing EMoflonEdge cu__jimp____imports = (EMoflonEdge) result3_green[9];
+				.pattern_KeyDerivationAlgorithmImportToImport_11_3_bookkeepingforedges_greenBBBBBBFFFF(ruleresult, cu,
+						alg, i2j, imp, jimp);
+		//nothing EMoflonEdge alg__imp____imports = (EMoflonEdge) result3_green[6];
+		//nothing EMoflonEdge cu__jimp____imports = (EMoflonEdge) result3_green[7];
+		//nothing EMoflonEdge i2j__imp____source = (EMoflonEdge) result3_green[8];
+		//nothing EMoflonEdge i2j__jimp____target = (EMoflonEdge) result3_green[9];
 
 		// 
 		// 
 		KeyDerivationAlgorithmImportToImportImpl
 				.pattern_KeyDerivationAlgorithmImportToImport_11_5_registerobjects_expressionBBBBBBBB(this, ruleresult,
-						imp, i2j, jimp, cu, alg, ac);
+						cu, alg, i2j, ac, imp, jimp);
 		return KeyDerivationAlgorithmImportToImportImpl
 				.pattern_KeyDerivationAlgorithmImportToImport_11_6_expressionFB(ruleresult);
 	}
@@ -541,29 +541,29 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 			throw new RuntimeException(
 					"Binding in node core match failed." + " Variables: " + "[match] = " + match + ".");
 		}
-		JavaImport jimp = (JavaImport) result2_binding[0];
-		JavaCompilationUnit cu = (JavaCompilationUnit) result2_binding[1];
+		JavaCompilationUnit cu = (JavaCompilationUnit) result2_binding[0];
+		JavaImport jimp = (JavaImport) result2_binding[1];
 		for (Object[] result2_black : KeyDerivationAlgorithmImportToImportImpl
-				.pattern_KeyDerivationAlgorithmImportToImport_12_2_corematch_blackBBFFB(jimp, cu, match)) {
-			KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) result2_black[2];
-			KeyDerivationAlgorithmToJcu ac = (KeyDerivationAlgorithmToJcu) result2_black[3];
+				.pattern_KeyDerivationAlgorithmImportToImport_12_2_corematch_blackBFFBB(cu, jimp, match)) {
+			KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) result2_black[1];
+			KeyDerivationAlgorithmToJcu ac = (KeyDerivationAlgorithmToJcu) result2_black[2];
 			// ForEach 
 			for (Object[] result3_black : KeyDerivationAlgorithmImportToImportImpl
-					.pattern_KeyDerivationAlgorithmImportToImport_12_3_findcontext_blackBBBB(jimp, cu, alg, ac)) {
+					.pattern_KeyDerivationAlgorithmImportToImport_12_3_findcontext_blackBBBB(cu, alg, ac, jimp)) {
 				Object[] result3_green = KeyDerivationAlgorithmImportToImportImpl
-						.pattern_KeyDerivationAlgorithmImportToImport_12_3_findcontext_greenBBBBFFFF(jimp, cu, alg, ac);
+						.pattern_KeyDerivationAlgorithmImportToImport_12_3_findcontext_greenBBBBFFFF(cu, alg, ac, jimp);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[4];
-				//nothing EMoflonEdge ac__cu____target = (EMoflonEdge) result3_green[5];
-				//nothing EMoflonEdge ac__alg____source = (EMoflonEdge) result3_green[6];
-				//nothing EMoflonEdge cu__jimp____imports = (EMoflonEdge) result3_green[7];
+				//nothing EMoflonEdge cu__jimp____imports = (EMoflonEdge) result3_green[5];
+				//nothing EMoflonEdge ac__cu____target = (EMoflonEdge) result3_green[6];
+				//nothing EMoflonEdge ac__alg____source = (EMoflonEdge) result3_green[7];
 
 				Object[] result4_bindingAndBlack = KeyDerivationAlgorithmImportToImportImpl
 						.pattern_KeyDerivationAlgorithmImportToImport_12_4_solveCSP_bindingAndBlackFBBBBBB(this,
-								isApplicableMatch, jimp, cu, alg, ac);
+								isApplicableMatch, cu, alg, ac, jimp);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-							+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[jimp] = " + jimp + ", "
-							+ "[cu] = " + cu + ", " + "[alg] = " + alg + ", " + "[ac] = " + ac + ".");
+							+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[cu] = " + cu + ", " + "[alg] = "
+							+ alg + ", " + "[ac] = " + ac + ", " + "[jimp] = " + jimp + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// 
@@ -596,9 +596,9 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjectsToMatch_BWD(Match match, JavaImport jimp, JavaCompilationUnit cu) {
-		match.registerObject("jimp", jimp);
+	public void registerObjectsToMatch_BWD(Match match, JavaCompilationUnit cu, JavaImport jimp) {
 		match.registerObject("cu", cu);
+		match.registerObject("jimp", jimp);
 
 	}
 
@@ -607,7 +607,7 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isAppropriate_solveCsp_BWD(Match match, JavaImport jimp, JavaCompilationUnit cu) {// Create CSP
+	public CSP isAppropriate_solveCsp_BWD(Match match, JavaCompilationUnit cu, JavaImport jimp) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
 		// Create literals
@@ -636,8 +636,8 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaImport jimp, JavaCompilationUnit cu,
-			KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac) {// Create CSP
+	public CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaCompilationUnit cu,
+			KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac, JavaImport jimp) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -662,10 +662,10 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 		eq.solve(var_imp_value, var_jimp_value);
 
 		// Snapshot pattern match on which CSP is solved
-		isApplicableMatch.registerObject("jimp", jimp);
 		isApplicableMatch.registerObject("cu", cu);
 		isApplicableMatch.registerObject("alg", alg);
 		isApplicableMatch.registerObject("ac", ac);
+		isApplicableMatch.registerObject("jimp", jimp);
 		return csp;
 	}
 
@@ -683,14 +683,14 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_BWD(PerformRuleResult ruleresult, EObject imp, EObject i2j, EObject jimp, EObject cu,
-			EObject alg, EObject ac) {
-		ruleresult.registerObject("imp", imp);
-		ruleresult.registerObject("i2j", i2j);
-		ruleresult.registerObject("jimp", jimp);
+	public void registerObjects_BWD(PerformRuleResult ruleresult, EObject cu, EObject alg, EObject i2j, EObject ac,
+			EObject imp, EObject jimp) {
 		ruleresult.registerObject("cu", cu);
 		ruleresult.registerObject("alg", alg);
+		ruleresult.registerObject("i2j", i2j);
 		ruleresult.registerObject("ac", ac);
+		ruleresult.registerObject("imp", imp);
+		ruleresult.registerObject("jimp", jimp);
 
 	}
 
@@ -709,7 +709,7 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_6(EMoflonEdge _edge_imports) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_9(EMoflonEdge _edge_imports) {
 
 		Object[] result1_bindingAndBlack = KeyDerivationAlgorithmImportToImportImpl
 				.pattern_KeyDerivationAlgorithmImportToImport_20_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -726,8 +726,8 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 		// ForEach 
 		for (Object[] result2_black : KeyDerivationAlgorithmImportToImportImpl
 				.pattern_KeyDerivationAlgorithmImportToImport_20_2_testcorematchandDECs_blackFFB(_edge_imports)) {
-			Import imp = (Import) result2_black[0];
-			KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) result2_black[1];
+			KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) result2_black[0];
+			Import imp = (Import) result2_black[1];
 			Object[] result2_green = KeyDerivationAlgorithmImportToImportImpl
 					.pattern_KeyDerivationAlgorithmImportToImport_20_2_testcorematchandDECs_greenFB(__eClass);
 			Match match = (Match) result2_green[0];
@@ -735,7 +735,7 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 			// 
 			if (KeyDerivationAlgorithmImportToImportImpl
 					.pattern_KeyDerivationAlgorithmImportToImport_20_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBB(
-							this, match, imp, alg)) {
+							this, match, alg, imp)) {
 				// 
 				if (KeyDerivationAlgorithmImportToImportImpl
 						.pattern_KeyDerivationAlgorithmImportToImport_20_4_Ensurethatthecorrecttypesofelementsarematched_expressionFBB(
@@ -769,7 +769,7 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_BWD_EMoflonEdge_6(EMoflonEdge _edge_imports) {
+	public EObjectContainer isAppropriate_BWD_EMoflonEdge_11(EMoflonEdge _edge_imports) {
 
 		Object[] result1_bindingAndBlack = KeyDerivationAlgorithmImportToImportImpl
 				.pattern_KeyDerivationAlgorithmImportToImport_21_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -786,8 +786,8 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 		// ForEach 
 		for (Object[] result2_black : KeyDerivationAlgorithmImportToImportImpl
 				.pattern_KeyDerivationAlgorithmImportToImport_21_2_testcorematchandDECs_blackFFB(_edge_imports)) {
-			JavaImport jimp = (JavaImport) result2_black[0];
-			JavaCompilationUnit cu = (JavaCompilationUnit) result2_black[1];
+			JavaCompilationUnit cu = (JavaCompilationUnit) result2_black[0];
+			JavaImport jimp = (JavaImport) result2_black[1];
 			Object[] result2_green = KeyDerivationAlgorithmImportToImportImpl
 					.pattern_KeyDerivationAlgorithmImportToImport_21_2_testcorematchandDECs_greenFB(__eClass);
 			Match match = (Match) result2_green[0];
@@ -795,7 +795,7 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 			// 
 			if (KeyDerivationAlgorithmImportToImportImpl
 					.pattern_KeyDerivationAlgorithmImportToImport_21_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBB(
-							this, match, jimp, cu)) {
+							this, match, cu, jimp)) {
 				// 
 				if (KeyDerivationAlgorithmImportToImportImpl
 						.pattern_KeyDerivationAlgorithmImportToImport_21_4_Ensurethatthecorrecttypesofelementsarematched_expressionFBB(
@@ -839,13 +839,13 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		Variable var_jimp_value = CSPFactoryHelper.eINSTANCE.createVariable("jimp", true, csp);
-		var_jimp_value.setValue(__helper.getValue("jimp", "value"));
-		var_jimp_value.setType("String");
-
 		Variable var_imp_value = CSPFactoryHelper.eINSTANCE.createVariable("imp", true, csp);
 		var_imp_value.setValue(__helper.getValue("imp", "value"));
 		var_imp_value.setType("String");
+
+		Variable var_jimp_value = CSPFactoryHelper.eINSTANCE.createVariable("jimp", true, csp);
+		var_jimp_value.setValue(__helper.getValue("jimp", "value"));
+		var_jimp_value.setType("String");
 
 		Eq eq0 = new Eq();
 		csp.getConstraints().add(eq0);
@@ -886,13 +886,13 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		Variable var_jimp_value = CSPFactoryHelper.eINSTANCE.createVariable("jimp", true, csp);
-		var_jimp_value.setValue(__helper.getValue("jimp", "value"));
-		var_jimp_value.setType("String");
-
 		Variable var_imp_value = CSPFactoryHelper.eINSTANCE.createVariable("imp", true, csp);
 		var_imp_value.setValue(__helper.getValue("imp", "value"));
 		var_imp_value.setType("String");
+
+		Variable var_jimp_value = CSPFactoryHelper.eINSTANCE.createVariable("jimp", true, csp);
+		var_jimp_value.setValue(__helper.getValue("jimp", "value"));
+		var_jimp_value.setType("String");
 
 		Eq eq0 = new Eq();
 		csp.getConstraints().add(eq0);
@@ -941,17 +941,17 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[sourceMatch] = " + sourceMatch
 					+ ", " + "[targetMatch] = " + targetMatch + ".");
 		}
-		Import imp = (Import) result2_bindingAndBlack[0];
-		JavaImport jimp = (JavaImport) result2_bindingAndBlack[1];
-		JavaCompilationUnit cu = (JavaCompilationUnit) result2_bindingAndBlack[2];
-		KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) result2_bindingAndBlack[3];
+		JavaCompilationUnit cu = (JavaCompilationUnit) result2_bindingAndBlack[0];
+		KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) result2_bindingAndBlack[1];
+		Import imp = (Import) result2_bindingAndBlack[2];
+		JavaImport jimp = (JavaImport) result2_bindingAndBlack[3];
 
 		Object[] result3_bindingAndBlack = KeyDerivationAlgorithmImportToImportImpl
-				.pattern_KeyDerivationAlgorithmImportToImport_24_3_solvecsp_bindingAndBlackFBBBBBBB(this, imp, jimp, cu,
-						alg, sourceMatch, targetMatch);
+				.pattern_KeyDerivationAlgorithmImportToImport_24_3_solvecsp_bindingAndBlackFBBBBBBB(this, cu, alg, imp,
+						jimp, sourceMatch, targetMatch);
 		if (result3_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[imp] = " + imp + ", " + "[jimp] = " + jimp + ", " + "[cu] = " + cu + ", " + "[alg] = " + alg
+					+ "[cu] = " + cu + ", " + "[alg] = " + alg + ", " + "[imp] = " + imp + ", " + "[jimp] = " + jimp
 					+ ", " + "[sourceMatch] = " + sourceMatch + ", " + "[targetMatch] = " + targetMatch + ".");
 		}
 		CSP csp = (CSP) result3_bindingAndBlack[0];
@@ -969,17 +969,17 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 				CCMatch ccMatch = (CCMatch) result5_green[3];
 
 				Object[] result6_black = KeyDerivationAlgorithmImportToImportImpl
-						.pattern_KeyDerivationAlgorithmImportToImport_24_6_createcorrespondence_blackBBBBB(imp, jimp,
-								cu, alg, ccMatch);
+						.pattern_KeyDerivationAlgorithmImportToImport_24_6_createcorrespondence_blackBBBBB(cu, alg, imp,
+								jimp, ccMatch);
 				if (result6_black == null) {
-					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[imp] = " + imp + ", "
-							+ "[jimp] = " + jimp + ", " + "[cu] = " + cu + ", " + "[alg] = " + alg + ", "
+					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[cu] = " + cu + ", "
+							+ "[alg] = " + alg + ", " + "[imp] = " + imp + ", " + "[jimp] = " + jimp + ", "
 							+ "[ccMatch] = " + ccMatch + ".");
 				}
 				KeyDerivationAlgorithmImportToImportImpl
-						.pattern_KeyDerivationAlgorithmImportToImport_24_6_createcorrespondence_greenBFBB(imp, jimp,
+						.pattern_KeyDerivationAlgorithmImportToImport_24_6_createcorrespondence_greenFBBB(imp, jimp,
 								ccMatch);
-				//nothing ImportToImport i2j = (ImportToImport) result6_green[1];
+				//nothing ImportToImport i2j = (ImportToImport) result6_green[0];
 
 				Object[] result7_black = KeyDerivationAlgorithmImportToImportImpl
 						.pattern_KeyDerivationAlgorithmImportToImport_24_7_addtoreturnedresult_blackBB(result, ccMatch);
@@ -1003,7 +1003,7 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_CC(Import imp, JavaImport jimp, JavaCompilationUnit cu, KeyDerivationAlgorithm alg,
+	public CSP isApplicable_solveCsp_CC(JavaCompilationUnit cu, KeyDerivationAlgorithm alg, Import imp, JavaImport jimp,
 			Match sourceMatch, Match targetMatch) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
@@ -1044,9 +1044,9 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean checkDEC_FWD(Import imp, KeyDerivationAlgorithm alg) {// 
+	public boolean checkDEC_FWD(KeyDerivationAlgorithm alg, Import imp) {// 
 		Object[] result1_black = KeyDerivationAlgorithmImportToImportImpl
-				.pattern_KeyDerivationAlgorithmImportToImport_27_1_matchtggpattern_blackBB(imp, alg);
+				.pattern_KeyDerivationAlgorithmImportToImport_27_1_matchtggpattern_blackBB(alg, imp);
 		if (result1_black != null) {
 			return KeyDerivationAlgorithmImportToImportImpl
 					.pattern_KeyDerivationAlgorithmImportToImport_27_2_expressionF();
@@ -1062,9 +1062,9 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean checkDEC_BWD(JavaImport jimp, JavaCompilationUnit cu) {// 
+	public boolean checkDEC_BWD(JavaCompilationUnit cu, JavaImport jimp) {// 
 		Object[] result1_black = KeyDerivationAlgorithmImportToImportImpl
-				.pattern_KeyDerivationAlgorithmImportToImport_28_1_matchtggpattern_blackBB(jimp, cu);
+				.pattern_KeyDerivationAlgorithmImportToImport_28_1_matchtggpattern_blackBB(cu, jimp);
 		if (result1_black != null) {
 			return KeyDerivationAlgorithmImportToImportImpl
 					.pattern_KeyDerivationAlgorithmImportToImport_28_2_expressionF();
@@ -1128,11 +1128,11 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 										+ ", " + "[ac] = " + ac + ", " + "[ruleResult] = " + ruleResult + ".");
 					}
 					KeyDerivationAlgorithmImportToImportImpl
-							.pattern_KeyDerivationAlgorithmImportToImport_29_6_perform_greenFFFBBBB(cu, alg, ruleResult,
+							.pattern_KeyDerivationAlgorithmImportToImport_29_6_perform_greenBBFFFBB(cu, alg, ruleResult,
 									csp);
-					//nothing Import imp = (Import) result6_green[0];
-					//nothing ImportToImport i2j = (ImportToImport) result6_green[1];
-					//nothing JavaImport jimp = (JavaImport) result6_green[2];
+					//nothing ImportToImport i2j = (ImportToImport) result6_green[2];
+					//nothing Import imp = (Import) result6_green[3];
+					//nothing JavaImport jimp = (JavaImport) result6_green[4];
 
 				} else {
 				}
@@ -1198,26 +1198,26 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_FWD__MATCH_IMPORT_KEYDERIVATIONALGORITHM:
-			return isAppropriate_FWD((Match) arguments.get(0), (Import) arguments.get(1),
-					(KeyDerivationAlgorithm) arguments.get(2));
+		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_FWD__MATCH_KEYDERIVATIONALGORITHM_IMPORT:
+			return isAppropriate_FWD((Match) arguments.get(0), (KeyDerivationAlgorithm) arguments.get(1),
+					(Import) arguments.get(2));
 		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___PERFORM_FWD__ISAPPLICABLEMATCH:
 			return perform_FWD((IsApplicableMatch) arguments.get(0));
 		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_FWD__MATCH:
 			return isApplicable_FWD((Match) arguments.get(0));
-		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_IMPORT_KEYDERIVATIONALGORITHM:
-			registerObjectsToMatch_FWD((Match) arguments.get(0), (Import) arguments.get(1),
-					(KeyDerivationAlgorithm) arguments.get(2));
+		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_KEYDERIVATIONALGORITHM_IMPORT:
+			registerObjectsToMatch_FWD((Match) arguments.get(0), (KeyDerivationAlgorithm) arguments.get(1),
+					(Import) arguments.get(2));
 			return null;
-		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_IMPORT_KEYDERIVATIONALGORITHM:
-			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (Import) arguments.get(1),
-					(KeyDerivationAlgorithm) arguments.get(2));
+		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_KEYDERIVATIONALGORITHM_IMPORT:
+			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (KeyDerivationAlgorithm) arguments.get(1),
+					(Import) arguments.get(2));
 		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_CHECK_CSP_FWD__CSP:
 			return isAppropriate_checkCsp_FWD((CSP) arguments.get(0));
-		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_IMPORT_JAVACOMPILATIONUNIT_KEYDERIVATIONALGORITHM_KEYDERIVATIONALGORITHMTOJCU:
-			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0), (Import) arguments.get(1),
-					(JavaCompilationUnit) arguments.get(2), (KeyDerivationAlgorithm) arguments.get(3),
-					(KeyDerivationAlgorithmToJcu) arguments.get(4));
+		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_JAVACOMPILATIONUNIT_KEYDERIVATIONALGORITHM_KEYDERIVATIONALGORITHMTOJCU_IMPORT:
+			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0),
+					(JavaCompilationUnit) arguments.get(1), (KeyDerivationAlgorithm) arguments.get(2),
+					(KeyDerivationAlgorithmToJcu) arguments.get(3), (Import) arguments.get(4));
 		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_CHECK_CSP_FWD__CSP:
 			return isApplicable_checkCsp_FWD((CSP) arguments.get(0));
 		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT:
@@ -1227,26 +1227,26 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 			return null;
 		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_BWD__MATCH_JAVAIMPORT_JAVACOMPILATIONUNIT:
-			return isAppropriate_BWD((Match) arguments.get(0), (JavaImport) arguments.get(1),
-					(JavaCompilationUnit) arguments.get(2));
+		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_BWD__MATCH_JAVACOMPILATIONUNIT_JAVAIMPORT:
+			return isAppropriate_BWD((Match) arguments.get(0), (JavaCompilationUnit) arguments.get(1),
+					(JavaImport) arguments.get(2));
 		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___PERFORM_BWD__ISAPPLICABLEMATCH:
 			return perform_BWD((IsApplicableMatch) arguments.get(0));
 		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_BWD__MATCH:
 			return isApplicable_BWD((Match) arguments.get(0));
-		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_JAVAIMPORT_JAVACOMPILATIONUNIT:
-			registerObjectsToMatch_BWD((Match) arguments.get(0), (JavaImport) arguments.get(1),
-					(JavaCompilationUnit) arguments.get(2));
+		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_JAVACOMPILATIONUNIT_JAVAIMPORT:
+			registerObjectsToMatch_BWD((Match) arguments.get(0), (JavaCompilationUnit) arguments.get(1),
+					(JavaImport) arguments.get(2));
 			return null;
-		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_JAVAIMPORT_JAVACOMPILATIONUNIT:
-			return isAppropriate_solveCsp_BWD((Match) arguments.get(0), (JavaImport) arguments.get(1),
-					(JavaCompilationUnit) arguments.get(2));
+		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_JAVACOMPILATIONUNIT_JAVAIMPORT:
+			return isAppropriate_solveCsp_BWD((Match) arguments.get(0), (JavaCompilationUnit) arguments.get(1),
+					(JavaImport) arguments.get(2));
 		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_CHECK_CSP_BWD__CSP:
 			return isAppropriate_checkCsp_BWD((CSP) arguments.get(0));
-		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVAIMPORT_JAVACOMPILATIONUNIT_KEYDERIVATIONALGORITHM_KEYDERIVATIONALGORITHMTOJCU:
-			return isApplicable_solveCsp_BWD((IsApplicableMatch) arguments.get(0), (JavaImport) arguments.get(1),
-					(JavaCompilationUnit) arguments.get(2), (KeyDerivationAlgorithm) arguments.get(3),
-					(KeyDerivationAlgorithmToJcu) arguments.get(4));
+		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVACOMPILATIONUNIT_KEYDERIVATIONALGORITHM_KEYDERIVATIONALGORITHMTOJCU_JAVAIMPORT:
+			return isApplicable_solveCsp_BWD((IsApplicableMatch) arguments.get(0),
+					(JavaCompilationUnit) arguments.get(1), (KeyDerivationAlgorithm) arguments.get(2),
+					(KeyDerivationAlgorithmToJcu) arguments.get(3), (JavaImport) arguments.get(4));
 		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_CHECK_CSP_BWD__CSP:
 			return isApplicable_checkCsp_BWD((CSP) arguments.get(0));
 		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___REGISTER_OBJECTS_BWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT:
@@ -1256,26 +1256,26 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 			return null;
 		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___CHECK_TYPES_BWD__MATCH:
 			return checkTypes_BWD((Match) arguments.get(0));
-		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_FWD_EMOFLON_EDGE_6__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_6((EMoflonEdge) arguments.get(0));
-		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_BWD_EMOFLON_EDGE_6__EMOFLONEDGE:
-			return isAppropriate_BWD_EMoflonEdge_6((EMoflonEdge) arguments.get(0));
+		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_FWD_EMOFLON_EDGE_9__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_9((EMoflonEdge) arguments.get(0));
+		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_BWD_EMOFLON_EDGE_11__EMOFLONEDGE:
+			return isAppropriate_BWD_EMoflonEdge_11((EMoflonEdge) arguments.get(0));
 		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH:
 			return checkAttributes_BWD((TripleMatch) arguments.get(0));
 		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_CC__MATCH_MATCH:
 			return isApplicable_CC((Match) arguments.get(0), (Match) arguments.get(1));
-		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_CC__IMPORT_JAVAIMPORT_JAVACOMPILATIONUNIT_KEYDERIVATIONALGORITHM_MATCH_MATCH:
-			return isApplicable_solveCsp_CC((Import) arguments.get(0), (JavaImport) arguments.get(1),
-					(JavaCompilationUnit) arguments.get(2), (KeyDerivationAlgorithm) arguments.get(3),
+		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_CC__JAVACOMPILATIONUNIT_KEYDERIVATIONALGORITHM_IMPORT_JAVAIMPORT_MATCH_MATCH:
+			return isApplicable_solveCsp_CC((JavaCompilationUnit) arguments.get(0),
+					(KeyDerivationAlgorithm) arguments.get(1), (Import) arguments.get(2), (JavaImport) arguments.get(3),
 					(Match) arguments.get(4), (Match) arguments.get(5));
 		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_CHECK_CSP_CC__CSP:
 			return isApplicable_checkCsp_CC((CSP) arguments.get(0));
-		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___CHECK_DEC_FWD__IMPORT_KEYDERIVATIONALGORITHM:
-			return checkDEC_FWD((Import) arguments.get(0), (KeyDerivationAlgorithm) arguments.get(1));
-		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___CHECK_DEC_BWD__JAVAIMPORT_JAVACOMPILATIONUNIT:
-			return checkDEC_BWD((JavaImport) arguments.get(0), (JavaCompilationUnit) arguments.get(1));
+		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___CHECK_DEC_FWD__KEYDERIVATIONALGORITHM_IMPORT:
+			return checkDEC_FWD((KeyDerivationAlgorithm) arguments.get(0), (Import) arguments.get(1));
+		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___CHECK_DEC_BWD__JAVACOMPILATIONUNIT_JAVAIMPORT:
+			return checkDEC_BWD((JavaCompilationUnit) arguments.get(0), (JavaImport) arguments.get(1));
 		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___GENERATE_MODEL__RULEENTRYCONTAINER_KEYDERIVATIONALGORITHMTOJCU:
 			return generateModel((RuleEntryContainer) arguments.get(0), (KeyDerivationAlgorithmToJcu) arguments.get(1));
 		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___GENERATE_MODEL_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVACOMPILATIONUNIT_KEYDERIVATIONALGORITHM_KEYDERIVATIONALGORITHMTOJCU_MODELGENERATORRULERESULT:
@@ -1289,16 +1289,16 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_0_1_initialbindings_blackBBBB(
-			KeyDerivationAlgorithmImportToImport _this, Match match, Import imp, KeyDerivationAlgorithm alg) {
-		return new Object[] { _this, match, imp, alg };
+			KeyDerivationAlgorithmImportToImport _this, Match match, KeyDerivationAlgorithm alg, Import imp) {
+		return new Object[] { _this, match, alg, imp };
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_0_2_SolveCSP_bindingFBBBB(
-			KeyDerivationAlgorithmImportToImport _this, Match match, Import imp, KeyDerivationAlgorithm alg) {
-		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, imp, alg);
+			KeyDerivationAlgorithmImportToImport _this, Match match, KeyDerivationAlgorithm alg, Import imp) {
+		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, alg, imp);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, match, imp, alg };
+			return new Object[] { csp, _this, match, alg, imp };
 		}
 		return null;
 	}
@@ -1308,9 +1308,9 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_0_2_SolveCSP_bindingAndBlackFBBBB(
-			KeyDerivationAlgorithmImportToImport _this, Match match, Import imp, KeyDerivationAlgorithm alg) {
+			KeyDerivationAlgorithmImportToImport _this, Match match, KeyDerivationAlgorithm alg, Import imp) {
 		Object[] result_pattern_KeyDerivationAlgorithmImportToImport_0_2_SolveCSP_binding = pattern_KeyDerivationAlgorithmImportToImport_0_2_SolveCSP_bindingFBBBB(
-				_this, match, imp, alg);
+				_this, match, alg, imp);
 		if (result_pattern_KeyDerivationAlgorithmImportToImport_0_2_SolveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_KeyDerivationAlgorithmImportToImport_0_2_SolveCSP_binding[0];
 
@@ -1318,7 +1318,7 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 					csp);
 			if (result_pattern_KeyDerivationAlgorithmImportToImport_0_2_SolveCSP_black != null) {
 
-				return new Object[] { csp, _this, match, imp, alg };
+				return new Object[] { csp, _this, match, alg, imp };
 			}
 		}
 		return null;
@@ -1332,12 +1332,12 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_0_4_collectelementstobetranslated_blackBBB(
-			Match match, Import imp, KeyDerivationAlgorithm alg) {
-		return new Object[] { match, imp, alg };
+			Match match, KeyDerivationAlgorithm alg, Import imp) {
+		return new Object[] { match, alg, imp };
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_0_4_collectelementstobetranslated_greenBBBF(
-			Match match, Import imp, KeyDerivationAlgorithm alg) {
+			Match match, KeyDerivationAlgorithm alg, Import imp) {
 		EMoflonEdge alg__imp____imports = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		match.getToBeTranslatedNodes().add(imp);
 		String alg__imp____imports_name_prime = "imports";
@@ -1345,12 +1345,12 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 		alg__imp____imports.setTrg(imp);
 		match.getToBeTranslatedEdges().add(alg__imp____imports);
 		alg__imp____imports.setName(alg__imp____imports_name_prime);
-		return new Object[] { match, imp, alg, alg__imp____imports };
+		return new Object[] { match, alg, imp, alg__imp____imports };
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_0_5_collectcontextelements_blackBBB(
-			Match match, Import imp, KeyDerivationAlgorithm alg) {
-		return new Object[] { match, imp, alg };
+			Match match, KeyDerivationAlgorithm alg, Import imp) {
+		return new Object[] { match, alg, imp };
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_0_5_collectcontextelements_greenBB(
@@ -1360,8 +1360,8 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final void pattern_KeyDerivationAlgorithmImportToImport_0_6_registerobjectstomatch_expressionBBBB(
-			KeyDerivationAlgorithmImportToImport _this, Match match, Import imp, KeyDerivationAlgorithm alg) {
-		_this.registerObjectsToMatch_FWD(match, imp, alg);
+			KeyDerivationAlgorithmImportToImport _this, Match match, KeyDerivationAlgorithm alg, Import imp) {
+		_this.registerObjectsToMatch_FWD(match, alg, imp);
 
 	}
 
@@ -1377,23 +1377,23 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_bindingFFFFB(
 			IsApplicableMatch isApplicableMatch) {
-		EObject _localVariable_0 = isApplicableMatch.getObject("imp");
-		EObject _localVariable_1 = isApplicableMatch.getObject("cu");
-		EObject _localVariable_2 = isApplicableMatch.getObject("alg");
-		EObject _localVariable_3 = isApplicableMatch.getObject("ac");
-		EObject tmpImp = _localVariable_0;
-		EObject tmpCu = _localVariable_1;
-		EObject tmpAlg = _localVariable_2;
-		EObject tmpAc = _localVariable_3;
-		if (tmpImp instanceof Import) {
-			Import imp = (Import) tmpImp;
-			if (tmpCu instanceof JavaCompilationUnit) {
-				JavaCompilationUnit cu = (JavaCompilationUnit) tmpCu;
-				if (tmpAlg instanceof KeyDerivationAlgorithm) {
-					KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) tmpAlg;
-					if (tmpAc instanceof KeyDerivationAlgorithmToJcu) {
-						KeyDerivationAlgorithmToJcu ac = (KeyDerivationAlgorithmToJcu) tmpAc;
-						return new Object[] { imp, cu, alg, ac, isApplicableMatch };
+		EObject _localVariable_0 = isApplicableMatch.getObject("cu");
+		EObject _localVariable_1 = isApplicableMatch.getObject("alg");
+		EObject _localVariable_2 = isApplicableMatch.getObject("ac");
+		EObject _localVariable_3 = isApplicableMatch.getObject("imp");
+		EObject tmpCu = _localVariable_0;
+		EObject tmpAlg = _localVariable_1;
+		EObject tmpAc = _localVariable_2;
+		EObject tmpImp = _localVariable_3;
+		if (tmpCu instanceof JavaCompilationUnit) {
+			JavaCompilationUnit cu = (JavaCompilationUnit) tmpCu;
+			if (tmpAlg instanceof KeyDerivationAlgorithm) {
+				KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) tmpAlg;
+				if (tmpAc instanceof KeyDerivationAlgorithmToJcu) {
+					KeyDerivationAlgorithmToJcu ac = (KeyDerivationAlgorithmToJcu) tmpAc;
+					if (tmpImp instanceof Import) {
+						Import imp = (Import) tmpImp;
+						return new Object[] { cu, alg, ac, imp, isApplicableMatch };
 					}
 				}
 			}
@@ -1402,12 +1402,12 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_blackBBBBFBB(
-			Import imp, JavaCompilationUnit cu, KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac,
+			JavaCompilationUnit cu, KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac, Import imp,
 			KeyDerivationAlgorithmImportToImport _this, IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { imp, cu, alg, ac, csp, _this, isApplicableMatch };
+				return new Object[] { cu, alg, ac, imp, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
@@ -1418,68 +1418,68 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 		Object[] result_pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_binding = pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_bindingFFFFB(
 				isApplicableMatch);
 		if (result_pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_binding != null) {
-			Import imp = (Import) result_pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_binding[0];
-			JavaCompilationUnit cu = (JavaCompilationUnit) result_pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_binding[1];
-			KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) result_pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_binding[2];
-			KeyDerivationAlgorithmToJcu ac = (KeyDerivationAlgorithmToJcu) result_pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_binding[3];
+			JavaCompilationUnit cu = (JavaCompilationUnit) result_pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_binding[0];
+			KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) result_pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_binding[1];
+			KeyDerivationAlgorithmToJcu ac = (KeyDerivationAlgorithmToJcu) result_pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_binding[2];
+			Import imp = (Import) result_pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_binding[3];
 
 			Object[] result_pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_black = pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_blackBBBBFBB(
-					imp, cu, alg, ac, _this, isApplicableMatch);
+					cu, alg, ac, imp, _this, isApplicableMatch);
 			if (result_pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_black[4];
 
-				return new Object[] { imp, cu, alg, ac, csp, _this, isApplicableMatch };
+				return new Object[] { cu, alg, ac, imp, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
 	}
 
-	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_greenBFFBB(
-			Import imp, JavaCompilationUnit cu, CSP csp) {
+	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_1_1_performtransformation_greenBFBFB(
+			JavaCompilationUnit cu, Import imp, CSP csp) {
 		ImportToImport i2j = CryptoConfigToJavaFactory.eINSTANCE.createImportToImport();
 		JavaImport jimp = SimpleJavaFactory.eINSTANCE.createJavaImport();
 		Object _localVariable_0 = csp.getValue("jimp", "value");
 		i2j.setSource(imp);
-		i2j.setTarget(jimp);
 		cu.getImports().add(jimp);
+		i2j.setTarget(jimp);
 		String jimp_value_prime = (String) _localVariable_0;
 		jimp.setValue(jimp_value_prime);
-		return new Object[] { imp, i2j, jimp, cu, csp };
+		return new Object[] { cu, i2j, imp, jimp, csp };
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_1_2_collecttranslatedelements_blackBBB(
-			Import imp, ImportToImport i2j, JavaImport jimp) {
-		return new Object[] { imp, i2j, jimp };
+			ImportToImport i2j, Import imp, JavaImport jimp) {
+		return new Object[] { i2j, imp, jimp };
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_1_2_collecttranslatedelements_greenFBBB(
-			Import imp, ImportToImport i2j, JavaImport jimp) {
+			ImportToImport i2j, Import imp, JavaImport jimp) {
 		PerformRuleResult ruleresult = RuntimeFactory.eINSTANCE.createPerformRuleResult();
-		ruleresult.getTranslatedElements().add(imp);
 		ruleresult.getCreatedLinkElements().add(i2j);
+		ruleresult.getTranslatedElements().add(imp);
 		ruleresult.getCreatedElements().add(jimp);
-		return new Object[] { ruleresult, imp, i2j, jimp };
+		return new Object[] { ruleresult, i2j, imp, jimp };
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_1_3_bookkeepingforedges_blackBBBBBBB(
-			PerformRuleResult ruleresult, EObject imp, EObject i2j, EObject jimp, EObject cu, EObject alg, EObject ac) {
-		if (!imp.equals(jimp)) {
-			if (!i2j.equals(imp)) {
-				if (!i2j.equals(jimp)) {
-					if (!cu.equals(imp)) {
-						if (!cu.equals(i2j)) {
-							if (!cu.equals(jimp)) {
-								if (!alg.equals(imp)) {
-									if (!alg.equals(i2j)) {
-										if (!alg.equals(jimp)) {
-											if (!alg.equals(cu)) {
-												if (!ac.equals(imp)) {
+			PerformRuleResult ruleresult, EObject cu, EObject alg, EObject i2j, EObject ac, EObject imp, EObject jimp) {
+		if (!cu.equals(i2j)) {
+			if (!cu.equals(imp)) {
+				if (!cu.equals(jimp)) {
+					if (!alg.equals(cu)) {
+						if (!alg.equals(i2j)) {
+							if (!alg.equals(imp)) {
+								if (!alg.equals(jimp)) {
+									if (!i2j.equals(imp)) {
+										if (!i2j.equals(jimp)) {
+											if (!ac.equals(cu)) {
+												if (!ac.equals(alg)) {
 													if (!ac.equals(i2j)) {
-														if (!ac.equals(jimp)) {
-															if (!ac.equals(cu)) {
-																if (!ac.equals(alg)) {
-																	return new Object[] { ruleresult, imp, i2j, jimp,
-																			cu, alg, ac };
+														if (!ac.equals(imp)) {
+															if (!ac.equals(jimp)) {
+																if (!imp.equals(jimp)) {
+																	return new Object[] { ruleresult, cu, alg, i2j, ac,
+																			imp, jimp };
 																}
 															}
 														}
@@ -1499,41 +1499,41 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_1_3_bookkeepingforedges_greenBBBBBBFFFF(
-			PerformRuleResult ruleresult, EObject imp, EObject i2j, EObject jimp, EObject cu, EObject alg) {
-		EMoflonEdge i2j__jimp____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge i2j__imp____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+			PerformRuleResult ruleresult, EObject cu, EObject alg, EObject i2j, EObject imp, EObject jimp) {
 		EMoflonEdge alg__imp____imports = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge cu__jimp____imports = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge i2j__imp____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge i2j__jimp____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "KeyDerivationAlgorithmImportToImport";
-		String i2j__jimp____target_name_prime = "target";
-		String i2j__imp____source_name_prime = "source";
 		String alg__imp____imports_name_prime = "imports";
 		String cu__jimp____imports_name_prime = "imports";
-		i2j__jimp____target.setSrc(i2j);
-		i2j__jimp____target.setTrg(jimp);
-		ruleresult.getCreatedEdges().add(i2j__jimp____target);
-		i2j__imp____source.setSrc(i2j);
-		i2j__imp____source.setTrg(imp);
-		ruleresult.getCreatedEdges().add(i2j__imp____source);
+		String i2j__imp____source_name_prime = "source";
+		String i2j__jimp____target_name_prime = "target";
 		alg__imp____imports.setSrc(alg);
 		alg__imp____imports.setTrg(imp);
 		ruleresult.getTranslatedEdges().add(alg__imp____imports);
 		cu__jimp____imports.setSrc(cu);
 		cu__jimp____imports.setTrg(jimp);
 		ruleresult.getCreatedEdges().add(cu__jimp____imports);
+		i2j__imp____source.setSrc(i2j);
+		i2j__imp____source.setTrg(imp);
+		ruleresult.getCreatedEdges().add(i2j__imp____source);
+		i2j__jimp____target.setSrc(i2j);
+		i2j__jimp____target.setTrg(jimp);
+		ruleresult.getCreatedEdges().add(i2j__jimp____target);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
-		i2j__jimp____target.setName(i2j__jimp____target_name_prime);
-		i2j__imp____source.setName(i2j__imp____source_name_prime);
 		alg__imp____imports.setName(alg__imp____imports_name_prime);
 		cu__jimp____imports.setName(cu__jimp____imports_name_prime);
-		return new Object[] { ruleresult, imp, i2j, jimp, cu, alg, i2j__jimp____target, i2j__imp____source,
-				alg__imp____imports, cu__jimp____imports };
+		i2j__imp____source.setName(i2j__imp____source_name_prime);
+		i2j__jimp____target.setName(i2j__jimp____target_name_prime);
+		return new Object[] { ruleresult, cu, alg, i2j, imp, jimp, alg__imp____imports, cu__jimp____imports,
+				i2j__imp____source, i2j__jimp____target };
 	}
 
 	public static final void pattern_KeyDerivationAlgorithmImportToImport_1_5_registerobjects_expressionBBBBBBBB(
-			KeyDerivationAlgorithmImportToImport _this, PerformRuleResult ruleresult, EObject imp, EObject i2j,
-			EObject jimp, EObject cu, EObject alg, EObject ac) {
-		_this.registerObjects_FWD(ruleresult, imp, i2j, jimp, cu, alg, ac);
+			KeyDerivationAlgorithmImportToImport _this, PerformRuleResult ruleresult, EObject cu, EObject alg,
+			EObject i2j, EObject ac, EObject imp, EObject jimp) {
+		_this.registerObjects_FWD(ruleresult, cu, alg, i2j, ac, imp, jimp);
 
 	}
 
@@ -1595,28 +1595,28 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_2_2_corematch_bindingFFB(Match match) {
-		EObject _localVariable_0 = match.getObject("imp");
-		EObject _localVariable_1 = match.getObject("alg");
-		EObject tmpImp = _localVariable_0;
-		EObject tmpAlg = _localVariable_1;
-		if (tmpImp instanceof Import) {
-			Import imp = (Import) tmpImp;
-			if (tmpAlg instanceof KeyDerivationAlgorithm) {
-				KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) tmpAlg;
-				return new Object[] { imp, alg, match };
+		EObject _localVariable_0 = match.getObject("alg");
+		EObject _localVariable_1 = match.getObject("imp");
+		EObject tmpAlg = _localVariable_0;
+		EObject tmpImp = _localVariable_1;
+		if (tmpAlg instanceof KeyDerivationAlgorithm) {
+			KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) tmpAlg;
+			if (tmpImp instanceof Import) {
+				Import imp = (Import) tmpImp;
+				return new Object[] { alg, imp, match };
 			}
 		}
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_KeyDerivationAlgorithmImportToImport_2_2_corematch_blackBFBFB(
-			Import imp, KeyDerivationAlgorithm alg, Match match) {
+	public static final Iterable<Object[]> pattern_KeyDerivationAlgorithmImportToImport_2_2_corematch_blackFBFBB(
+			KeyDerivationAlgorithm alg, Import imp, Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		for (KeyDerivationAlgorithmToJcu ac : org.moflon.core.utilities.eMoflonEMFUtil.getOppositeReferenceTyped(alg,
 				KeyDerivationAlgorithmToJcu.class, "source")) {
 			JavaCompilationUnit cu = ac.getTarget();
 			if (cu != null) {
-				_result.add(new Object[] { imp, cu, alg, ac, match });
+				_result.add(new Object[] { cu, alg, ac, imp, match });
 			}
 
 		}
@@ -1624,54 +1624,54 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Iterable<Object[]> pattern_KeyDerivationAlgorithmImportToImport_2_3_findcontext_blackBBBB(
-			Import imp, JavaCompilationUnit cu, KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac) {
+			JavaCompilationUnit cu, KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac, Import imp) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		if (cu.equals(ac.getTarget())) {
-			if (alg.equals(ac.getSource())) {
-				if (alg.getImports().contains(imp)) {
-					_result.add(new Object[] { imp, cu, alg, ac });
+		if (alg.getImports().contains(imp)) {
+			if (cu.equals(ac.getTarget())) {
+				if (alg.equals(ac.getSource())) {
+					_result.add(new Object[] { cu, alg, ac, imp });
 				}
 			}
 		}
 		return _result;
 	}
 
-	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_2_3_findcontext_greenBBBBFFFF(Import imp,
-			JavaCompilationUnit cu, KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac) {
+	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_2_3_findcontext_greenBBBBFFFF(
+			JavaCompilationUnit cu, KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac, Import imp) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
+		EMoflonEdge alg__imp____imports = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge ac__cu____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge ac__alg____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge alg__imp____imports = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		String alg__imp____imports_name_prime = "imports";
 		String ac__cu____target_name_prime = "target";
 		String ac__alg____source_name_prime = "source";
-		String alg__imp____imports_name_prime = "imports";
-		isApplicableMatch.getAllContextElements().add(imp);
 		isApplicableMatch.getAllContextElements().add(cu);
 		isApplicableMatch.getAllContextElements().add(alg);
 		isApplicableMatch.getAllContextElements().add(ac);
+		isApplicableMatch.getAllContextElements().add(imp);
+		alg__imp____imports.setSrc(alg);
+		alg__imp____imports.setTrg(imp);
+		isApplicableMatch.getAllContextElements().add(alg__imp____imports);
 		ac__cu____target.setSrc(ac);
 		ac__cu____target.setTrg(cu);
 		isApplicableMatch.getAllContextElements().add(ac__cu____target);
 		ac__alg____source.setSrc(ac);
 		ac__alg____source.setTrg(alg);
 		isApplicableMatch.getAllContextElements().add(ac__alg____source);
-		alg__imp____imports.setSrc(alg);
-		alg__imp____imports.setTrg(imp);
-		isApplicableMatch.getAllContextElements().add(alg__imp____imports);
+		alg__imp____imports.setName(alg__imp____imports_name_prime);
 		ac__cu____target.setName(ac__cu____target_name_prime);
 		ac__alg____source.setName(ac__alg____source_name_prime);
-		alg__imp____imports.setName(alg__imp____imports_name_prime);
-		return new Object[] { imp, cu, alg, ac, isApplicableMatch, ac__cu____target, ac__alg____source,
-				alg__imp____imports };
+		return new Object[] { cu, alg, ac, imp, isApplicableMatch, alg__imp____imports, ac__cu____target,
+				ac__alg____source };
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_2_4_solveCSP_bindingFBBBBBB(
-			KeyDerivationAlgorithmImportToImport _this, IsApplicableMatch isApplicableMatch, Import imp,
-			JavaCompilationUnit cu, KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, imp, cu, alg, ac);
+			KeyDerivationAlgorithmImportToImport _this, IsApplicableMatch isApplicableMatch, JavaCompilationUnit cu,
+			KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac, Import imp) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, cu, alg, ac, imp);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, imp, cu, alg, ac };
+			return new Object[] { csp, _this, isApplicableMatch, cu, alg, ac, imp };
 		}
 		return null;
 	}
@@ -1681,10 +1681,10 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_2_4_solveCSP_bindingAndBlackFBBBBBB(
-			KeyDerivationAlgorithmImportToImport _this, IsApplicableMatch isApplicableMatch, Import imp,
-			JavaCompilationUnit cu, KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac) {
+			KeyDerivationAlgorithmImportToImport _this, IsApplicableMatch isApplicableMatch, JavaCompilationUnit cu,
+			KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac, Import imp) {
 		Object[] result_pattern_KeyDerivationAlgorithmImportToImport_2_4_solveCSP_binding = pattern_KeyDerivationAlgorithmImportToImport_2_4_solveCSP_bindingFBBBBBB(
-				_this, isApplicableMatch, imp, cu, alg, ac);
+				_this, isApplicableMatch, cu, alg, ac, imp);
 		if (result_pattern_KeyDerivationAlgorithmImportToImport_2_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_KeyDerivationAlgorithmImportToImport_2_4_solveCSP_binding[0];
 
@@ -1692,7 +1692,7 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 					csp);
 			if (result_pattern_KeyDerivationAlgorithmImportToImport_2_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, imp, cu, alg, ac };
+				return new Object[] { csp, _this, isApplicableMatch, cu, alg, ac, imp };
 			}
 		}
 		return null;
@@ -1727,16 +1727,16 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_10_1_initialbindings_blackBBBB(
-			KeyDerivationAlgorithmImportToImport _this, Match match, JavaImport jimp, JavaCompilationUnit cu) {
-		return new Object[] { _this, match, jimp, cu };
+			KeyDerivationAlgorithmImportToImport _this, Match match, JavaCompilationUnit cu, JavaImport jimp) {
+		return new Object[] { _this, match, cu, jimp };
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_10_2_SolveCSP_bindingFBBBB(
-			KeyDerivationAlgorithmImportToImport _this, Match match, JavaImport jimp, JavaCompilationUnit cu) {
-		CSP _localVariable_0 = _this.isAppropriate_solveCsp_BWD(match, jimp, cu);
+			KeyDerivationAlgorithmImportToImport _this, Match match, JavaCompilationUnit cu, JavaImport jimp) {
+		CSP _localVariable_0 = _this.isAppropriate_solveCsp_BWD(match, cu, jimp);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, match, jimp, cu };
+			return new Object[] { csp, _this, match, cu, jimp };
 		}
 		return null;
 	}
@@ -1746,9 +1746,9 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_10_2_SolveCSP_bindingAndBlackFBBBB(
-			KeyDerivationAlgorithmImportToImport _this, Match match, JavaImport jimp, JavaCompilationUnit cu) {
+			KeyDerivationAlgorithmImportToImport _this, Match match, JavaCompilationUnit cu, JavaImport jimp) {
 		Object[] result_pattern_KeyDerivationAlgorithmImportToImport_10_2_SolveCSP_binding = pattern_KeyDerivationAlgorithmImportToImport_10_2_SolveCSP_bindingFBBBB(
-				_this, match, jimp, cu);
+				_this, match, cu, jimp);
 		if (result_pattern_KeyDerivationAlgorithmImportToImport_10_2_SolveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_KeyDerivationAlgorithmImportToImport_10_2_SolveCSP_binding[0];
 
@@ -1756,7 +1756,7 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 					csp);
 			if (result_pattern_KeyDerivationAlgorithmImportToImport_10_2_SolveCSP_black != null) {
 
-				return new Object[] { csp, _this, match, jimp, cu };
+				return new Object[] { csp, _this, match, cu, jimp };
 			}
 		}
 		return null;
@@ -1770,12 +1770,12 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_10_4_collectelementstobetranslated_blackBBB(
-			Match match, JavaImport jimp, JavaCompilationUnit cu) {
-		return new Object[] { match, jimp, cu };
+			Match match, JavaCompilationUnit cu, JavaImport jimp) {
+		return new Object[] { match, cu, jimp };
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_10_4_collectelementstobetranslated_greenBBBF(
-			Match match, JavaImport jimp, JavaCompilationUnit cu) {
+			Match match, JavaCompilationUnit cu, JavaImport jimp) {
 		EMoflonEdge cu__jimp____imports = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		match.getToBeTranslatedNodes().add(jimp);
 		String cu__jimp____imports_name_prime = "imports";
@@ -1783,12 +1783,12 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 		cu__jimp____imports.setTrg(jimp);
 		match.getToBeTranslatedEdges().add(cu__jimp____imports);
 		cu__jimp____imports.setName(cu__jimp____imports_name_prime);
-		return new Object[] { match, jimp, cu, cu__jimp____imports };
+		return new Object[] { match, cu, jimp, cu__jimp____imports };
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_10_5_collectcontextelements_blackBBB(
-			Match match, JavaImport jimp, JavaCompilationUnit cu) {
-		return new Object[] { match, jimp, cu };
+			Match match, JavaCompilationUnit cu, JavaImport jimp) {
+		return new Object[] { match, cu, jimp };
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_10_5_collectcontextelements_greenBB(
@@ -1798,8 +1798,8 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final void pattern_KeyDerivationAlgorithmImportToImport_10_6_registerobjectstomatch_expressionBBBB(
-			KeyDerivationAlgorithmImportToImport _this, Match match, JavaImport jimp, JavaCompilationUnit cu) {
-		_this.registerObjectsToMatch_BWD(match, jimp, cu);
+			KeyDerivationAlgorithmImportToImport _this, Match match, JavaCompilationUnit cu, JavaImport jimp) {
+		_this.registerObjectsToMatch_BWD(match, cu, jimp);
 
 	}
 
@@ -1815,23 +1815,23 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_bindingFFFFB(
 			IsApplicableMatch isApplicableMatch) {
-		EObject _localVariable_0 = isApplicableMatch.getObject("jimp");
-		EObject _localVariable_1 = isApplicableMatch.getObject("cu");
-		EObject _localVariable_2 = isApplicableMatch.getObject("alg");
-		EObject _localVariable_3 = isApplicableMatch.getObject("ac");
-		EObject tmpJimp = _localVariable_0;
-		EObject tmpCu = _localVariable_1;
-		EObject tmpAlg = _localVariable_2;
-		EObject tmpAc = _localVariable_3;
-		if (tmpJimp instanceof JavaImport) {
-			JavaImport jimp = (JavaImport) tmpJimp;
-			if (tmpCu instanceof JavaCompilationUnit) {
-				JavaCompilationUnit cu = (JavaCompilationUnit) tmpCu;
-				if (tmpAlg instanceof KeyDerivationAlgorithm) {
-					KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) tmpAlg;
-					if (tmpAc instanceof KeyDerivationAlgorithmToJcu) {
-						KeyDerivationAlgorithmToJcu ac = (KeyDerivationAlgorithmToJcu) tmpAc;
-						return new Object[] { jimp, cu, alg, ac, isApplicableMatch };
+		EObject _localVariable_0 = isApplicableMatch.getObject("cu");
+		EObject _localVariable_1 = isApplicableMatch.getObject("alg");
+		EObject _localVariable_2 = isApplicableMatch.getObject("ac");
+		EObject _localVariable_3 = isApplicableMatch.getObject("jimp");
+		EObject tmpCu = _localVariable_0;
+		EObject tmpAlg = _localVariable_1;
+		EObject tmpAc = _localVariable_2;
+		EObject tmpJimp = _localVariable_3;
+		if (tmpCu instanceof JavaCompilationUnit) {
+			JavaCompilationUnit cu = (JavaCompilationUnit) tmpCu;
+			if (tmpAlg instanceof KeyDerivationAlgorithm) {
+				KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) tmpAlg;
+				if (tmpAc instanceof KeyDerivationAlgorithmToJcu) {
+					KeyDerivationAlgorithmToJcu ac = (KeyDerivationAlgorithmToJcu) tmpAc;
+					if (tmpJimp instanceof JavaImport) {
+						JavaImport jimp = (JavaImport) tmpJimp;
+						return new Object[] { cu, alg, ac, jimp, isApplicableMatch };
 					}
 				}
 			}
@@ -1840,12 +1840,12 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_blackBBBBFBB(
-			JavaImport jimp, JavaCompilationUnit cu, KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac,
+			JavaCompilationUnit cu, KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac, JavaImport jimp,
 			KeyDerivationAlgorithmImportToImport _this, IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { jimp, cu, alg, ac, csp, _this, isApplicableMatch };
+				return new Object[] { cu, alg, ac, jimp, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
@@ -1856,68 +1856,68 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 		Object[] result_pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_binding = pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_bindingFFFFB(
 				isApplicableMatch);
 		if (result_pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_binding != null) {
-			JavaImport jimp = (JavaImport) result_pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_binding[0];
-			JavaCompilationUnit cu = (JavaCompilationUnit) result_pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_binding[1];
-			KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) result_pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_binding[2];
-			KeyDerivationAlgorithmToJcu ac = (KeyDerivationAlgorithmToJcu) result_pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_binding[3];
+			JavaCompilationUnit cu = (JavaCompilationUnit) result_pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_binding[0];
+			KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) result_pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_binding[1];
+			KeyDerivationAlgorithmToJcu ac = (KeyDerivationAlgorithmToJcu) result_pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_binding[2];
+			JavaImport jimp = (JavaImport) result_pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_binding[3];
 
 			Object[] result_pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_black = pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_blackBBBBFBB(
-					jimp, cu, alg, ac, _this, isApplicableMatch);
+					cu, alg, ac, jimp, _this, isApplicableMatch);
 			if (result_pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_black[4];
 
-				return new Object[] { jimp, cu, alg, ac, csp, _this, isApplicableMatch };
+				return new Object[] { cu, alg, ac, jimp, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
 	}
 
-	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_greenFFBBB(
-			JavaImport jimp, KeyDerivationAlgorithm alg, CSP csp) {
-		Import imp = CryptoAPIConfigFactory.eINSTANCE.createImport();
+	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_11_1_performtransformation_greenBFFBB(
+			KeyDerivationAlgorithm alg, JavaImport jimp, CSP csp) {
 		ImportToImport i2j = CryptoConfigToJavaFactory.eINSTANCE.createImportToImport();
+		Import imp = CryptoAPIConfigFactory.eINSTANCE.createImport();
 		Object _localVariable_0 = csp.getValue("imp", "value");
-		alg.getImports().add(imp);
 		i2j.setTarget(jimp);
+		alg.getImports().add(imp);
 		i2j.setSource(imp);
 		String imp_value_prime = (String) _localVariable_0;
 		imp.setValue(imp_value_prime);
-		return new Object[] { imp, i2j, jimp, alg, csp };
+		return new Object[] { alg, i2j, imp, jimp, csp };
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_11_2_collecttranslatedelements_blackBBB(
-			Import imp, ImportToImport i2j, JavaImport jimp) {
-		return new Object[] { imp, i2j, jimp };
+			ImportToImport i2j, Import imp, JavaImport jimp) {
+		return new Object[] { i2j, imp, jimp };
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_11_2_collecttranslatedelements_greenFBBB(
-			Import imp, ImportToImport i2j, JavaImport jimp) {
+			ImportToImport i2j, Import imp, JavaImport jimp) {
 		PerformRuleResult ruleresult = RuntimeFactory.eINSTANCE.createPerformRuleResult();
-		ruleresult.getCreatedElements().add(imp);
 		ruleresult.getCreatedLinkElements().add(i2j);
+		ruleresult.getCreatedElements().add(imp);
 		ruleresult.getTranslatedElements().add(jimp);
-		return new Object[] { ruleresult, imp, i2j, jimp };
+		return new Object[] { ruleresult, i2j, imp, jimp };
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_11_3_bookkeepingforedges_blackBBBBBBB(
-			PerformRuleResult ruleresult, EObject imp, EObject i2j, EObject jimp, EObject cu, EObject alg, EObject ac) {
-		if (!imp.equals(jimp)) {
-			if (!i2j.equals(imp)) {
-				if (!i2j.equals(jimp)) {
-					if (!cu.equals(imp)) {
-						if (!cu.equals(i2j)) {
-							if (!cu.equals(jimp)) {
-								if (!alg.equals(imp)) {
-									if (!alg.equals(i2j)) {
-										if (!alg.equals(jimp)) {
-											if (!alg.equals(cu)) {
-												if (!ac.equals(imp)) {
+			PerformRuleResult ruleresult, EObject cu, EObject alg, EObject i2j, EObject ac, EObject imp, EObject jimp) {
+		if (!cu.equals(i2j)) {
+			if (!cu.equals(imp)) {
+				if (!cu.equals(jimp)) {
+					if (!alg.equals(cu)) {
+						if (!alg.equals(i2j)) {
+							if (!alg.equals(imp)) {
+								if (!alg.equals(jimp)) {
+									if (!i2j.equals(imp)) {
+										if (!i2j.equals(jimp)) {
+											if (!ac.equals(cu)) {
+												if (!ac.equals(alg)) {
 													if (!ac.equals(i2j)) {
-														if (!ac.equals(jimp)) {
-															if (!ac.equals(cu)) {
-																if (!ac.equals(alg)) {
-																	return new Object[] { ruleresult, imp, i2j, jimp,
-																			cu, alg, ac };
+														if (!ac.equals(imp)) {
+															if (!ac.equals(jimp)) {
+																if (!imp.equals(jimp)) {
+																	return new Object[] { ruleresult, cu, alg, i2j, ac,
+																			imp, jimp };
 																}
 															}
 														}
@@ -1937,41 +1937,41 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_11_3_bookkeepingforedges_greenBBBBBBFFFF(
-			PerformRuleResult ruleresult, EObject imp, EObject i2j, EObject jimp, EObject cu, EObject alg) {
-		EMoflonEdge i2j__jimp____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge i2j__imp____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+			PerformRuleResult ruleresult, EObject cu, EObject alg, EObject i2j, EObject imp, EObject jimp) {
 		EMoflonEdge alg__imp____imports = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge cu__jimp____imports = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge i2j__imp____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge i2j__jimp____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "KeyDerivationAlgorithmImportToImport";
-		String i2j__jimp____target_name_prime = "target";
-		String i2j__imp____source_name_prime = "source";
 		String alg__imp____imports_name_prime = "imports";
 		String cu__jimp____imports_name_prime = "imports";
-		i2j__jimp____target.setSrc(i2j);
-		i2j__jimp____target.setTrg(jimp);
-		ruleresult.getCreatedEdges().add(i2j__jimp____target);
-		i2j__imp____source.setSrc(i2j);
-		i2j__imp____source.setTrg(imp);
-		ruleresult.getCreatedEdges().add(i2j__imp____source);
+		String i2j__imp____source_name_prime = "source";
+		String i2j__jimp____target_name_prime = "target";
 		alg__imp____imports.setSrc(alg);
 		alg__imp____imports.setTrg(imp);
 		ruleresult.getCreatedEdges().add(alg__imp____imports);
 		cu__jimp____imports.setSrc(cu);
 		cu__jimp____imports.setTrg(jimp);
 		ruleresult.getTranslatedEdges().add(cu__jimp____imports);
+		i2j__imp____source.setSrc(i2j);
+		i2j__imp____source.setTrg(imp);
+		ruleresult.getCreatedEdges().add(i2j__imp____source);
+		i2j__jimp____target.setSrc(i2j);
+		i2j__jimp____target.setTrg(jimp);
+		ruleresult.getCreatedEdges().add(i2j__jimp____target);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
-		i2j__jimp____target.setName(i2j__jimp____target_name_prime);
-		i2j__imp____source.setName(i2j__imp____source_name_prime);
 		alg__imp____imports.setName(alg__imp____imports_name_prime);
 		cu__jimp____imports.setName(cu__jimp____imports_name_prime);
-		return new Object[] { ruleresult, imp, i2j, jimp, cu, alg, i2j__jimp____target, i2j__imp____source,
-				alg__imp____imports, cu__jimp____imports };
+		i2j__imp____source.setName(i2j__imp____source_name_prime);
+		i2j__jimp____target.setName(i2j__jimp____target_name_prime);
+		return new Object[] { ruleresult, cu, alg, i2j, imp, jimp, alg__imp____imports, cu__jimp____imports,
+				i2j__imp____source, i2j__jimp____target };
 	}
 
 	public static final void pattern_KeyDerivationAlgorithmImportToImport_11_5_registerobjects_expressionBBBBBBBB(
-			KeyDerivationAlgorithmImportToImport _this, PerformRuleResult ruleresult, EObject imp, EObject i2j,
-			EObject jimp, EObject cu, EObject alg, EObject ac) {
-		_this.registerObjects_BWD(ruleresult, imp, i2j, jimp, cu, alg, ac);
+			KeyDerivationAlgorithmImportToImport _this, PerformRuleResult ruleresult, EObject cu, EObject alg,
+			EObject i2j, EObject ac, EObject imp, EObject jimp) {
+		_this.registerObjects_BWD(ruleresult, cu, alg, i2j, ac, imp, jimp);
 
 	}
 
@@ -2033,28 +2033,28 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_12_2_corematch_bindingFFB(Match match) {
-		EObject _localVariable_0 = match.getObject("jimp");
-		EObject _localVariable_1 = match.getObject("cu");
-		EObject tmpJimp = _localVariable_0;
-		EObject tmpCu = _localVariable_1;
-		if (tmpJimp instanceof JavaImport) {
-			JavaImport jimp = (JavaImport) tmpJimp;
-			if (tmpCu instanceof JavaCompilationUnit) {
-				JavaCompilationUnit cu = (JavaCompilationUnit) tmpCu;
-				return new Object[] { jimp, cu, match };
+		EObject _localVariable_0 = match.getObject("cu");
+		EObject _localVariable_1 = match.getObject("jimp");
+		EObject tmpCu = _localVariable_0;
+		EObject tmpJimp = _localVariable_1;
+		if (tmpCu instanceof JavaCompilationUnit) {
+			JavaCompilationUnit cu = (JavaCompilationUnit) tmpCu;
+			if (tmpJimp instanceof JavaImport) {
+				JavaImport jimp = (JavaImport) tmpJimp;
+				return new Object[] { cu, jimp, match };
 			}
 		}
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_KeyDerivationAlgorithmImportToImport_12_2_corematch_blackBBFFB(
-			JavaImport jimp, JavaCompilationUnit cu, Match match) {
+	public static final Iterable<Object[]> pattern_KeyDerivationAlgorithmImportToImport_12_2_corematch_blackBFFBB(
+			JavaCompilationUnit cu, JavaImport jimp, Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		for (KeyDerivationAlgorithmToJcu ac : org.moflon.core.utilities.eMoflonEMFUtil.getOppositeReferenceTyped(cu,
 				KeyDerivationAlgorithmToJcu.class, "target")) {
 			KeyDerivationAlgorithm alg = ac.getSource();
 			if (alg != null) {
-				_result.add(new Object[] { jimp, cu, alg, ac, match });
+				_result.add(new Object[] { cu, alg, ac, jimp, match });
 			}
 
 		}
@@ -2062,12 +2062,12 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Iterable<Object[]> pattern_KeyDerivationAlgorithmImportToImport_12_3_findcontext_blackBBBB(
-			JavaImport jimp, JavaCompilationUnit cu, KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac) {
+			JavaCompilationUnit cu, KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac, JavaImport jimp) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		if (cu.equals(ac.getTarget())) {
-			if (alg.equals(ac.getSource())) {
-				if (cu.getImports().contains(jimp)) {
-					_result.add(new Object[] { jimp, cu, alg, ac });
+		if (cu.getImports().contains(jimp)) {
+			if (cu.equals(ac.getTarget())) {
+				if (alg.equals(ac.getSource())) {
+					_result.add(new Object[] { cu, alg, ac, jimp });
 				}
 			}
 		}
@@ -2075,41 +2075,41 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_12_3_findcontext_greenBBBBFFFF(
-			JavaImport jimp, JavaCompilationUnit cu, KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac) {
+			JavaCompilationUnit cu, KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac, JavaImport jimp) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
+		EMoflonEdge cu__jimp____imports = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge ac__cu____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge ac__alg____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge cu__jimp____imports = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		String cu__jimp____imports_name_prime = "imports";
 		String ac__cu____target_name_prime = "target";
 		String ac__alg____source_name_prime = "source";
-		String cu__jimp____imports_name_prime = "imports";
-		isApplicableMatch.getAllContextElements().add(jimp);
 		isApplicableMatch.getAllContextElements().add(cu);
 		isApplicableMatch.getAllContextElements().add(alg);
 		isApplicableMatch.getAllContextElements().add(ac);
+		isApplicableMatch.getAllContextElements().add(jimp);
+		cu__jimp____imports.setSrc(cu);
+		cu__jimp____imports.setTrg(jimp);
+		isApplicableMatch.getAllContextElements().add(cu__jimp____imports);
 		ac__cu____target.setSrc(ac);
 		ac__cu____target.setTrg(cu);
 		isApplicableMatch.getAllContextElements().add(ac__cu____target);
 		ac__alg____source.setSrc(ac);
 		ac__alg____source.setTrg(alg);
 		isApplicableMatch.getAllContextElements().add(ac__alg____source);
-		cu__jimp____imports.setSrc(cu);
-		cu__jimp____imports.setTrg(jimp);
-		isApplicableMatch.getAllContextElements().add(cu__jimp____imports);
+		cu__jimp____imports.setName(cu__jimp____imports_name_prime);
 		ac__cu____target.setName(ac__cu____target_name_prime);
 		ac__alg____source.setName(ac__alg____source_name_prime);
-		cu__jimp____imports.setName(cu__jimp____imports_name_prime);
-		return new Object[] { jimp, cu, alg, ac, isApplicableMatch, ac__cu____target, ac__alg____source,
-				cu__jimp____imports };
+		return new Object[] { cu, alg, ac, jimp, isApplicableMatch, cu__jimp____imports, ac__cu____target,
+				ac__alg____source };
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_12_4_solveCSP_bindingFBBBBBB(
-			KeyDerivationAlgorithmImportToImport _this, IsApplicableMatch isApplicableMatch, JavaImport jimp,
-			JavaCompilationUnit cu, KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_BWD(isApplicableMatch, jimp, cu, alg, ac);
+			KeyDerivationAlgorithmImportToImport _this, IsApplicableMatch isApplicableMatch, JavaCompilationUnit cu,
+			KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac, JavaImport jimp) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_BWD(isApplicableMatch, cu, alg, ac, jimp);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, jimp, cu, alg, ac };
+			return new Object[] { csp, _this, isApplicableMatch, cu, alg, ac, jimp };
 		}
 		return null;
 	}
@@ -2119,10 +2119,10 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_12_4_solveCSP_bindingAndBlackFBBBBBB(
-			KeyDerivationAlgorithmImportToImport _this, IsApplicableMatch isApplicableMatch, JavaImport jimp,
-			JavaCompilationUnit cu, KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac) {
+			KeyDerivationAlgorithmImportToImport _this, IsApplicableMatch isApplicableMatch, JavaCompilationUnit cu,
+			KeyDerivationAlgorithm alg, KeyDerivationAlgorithmToJcu ac, JavaImport jimp) {
 		Object[] result_pattern_KeyDerivationAlgorithmImportToImport_12_4_solveCSP_binding = pattern_KeyDerivationAlgorithmImportToImport_12_4_solveCSP_bindingFBBBBBB(
-				_this, isApplicableMatch, jimp, cu, alg, ac);
+				_this, isApplicableMatch, cu, alg, ac, jimp);
 		if (result_pattern_KeyDerivationAlgorithmImportToImport_12_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_KeyDerivationAlgorithmImportToImport_12_4_solveCSP_binding[0];
 
@@ -2130,7 +2130,7 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 					csp);
 			if (result_pattern_KeyDerivationAlgorithmImportToImport_12_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, jimp, cu, alg, ac };
+				return new Object[] { csp, _this, isApplicableMatch, cu, alg, ac, jimp };
 			}
 		}
 		return null;
@@ -2228,7 +2228,7 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 			if (tmpImp instanceof Import) {
 				Import imp = (Import) tmpImp;
 				if (alg.getImports().contains(imp)) {
-					_result.add(new Object[] { imp, alg, _edge_imports });
+					_result.add(new Object[] { alg, imp, _edge_imports });
 				}
 			}
 
@@ -2248,8 +2248,8 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final boolean pattern_KeyDerivationAlgorithmImportToImport_20_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBB(
-			KeyDerivationAlgorithmImportToImport _this, Match match, Import imp, KeyDerivationAlgorithm alg) {
-		boolean _localVariable_0 = _this.isAppropriate_FWD(match, imp, alg);
+			KeyDerivationAlgorithmImportToImport _this, Match match, KeyDerivationAlgorithm alg, Import imp) {
+		boolean _localVariable_0 = _this.isAppropriate_FWD(match, alg, imp);
 		boolean _result = Boolean.valueOf(_localVariable_0);
 		return _result;
 	}
@@ -2347,7 +2347,7 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 			if (tmpJimp instanceof JavaImport) {
 				JavaImport jimp = (JavaImport) tmpJimp;
 				if (cu.getImports().contains(jimp)) {
-					_result.add(new Object[] { jimp, cu, _edge_imports });
+					_result.add(new Object[] { cu, jimp, _edge_imports });
 				}
 			}
 
@@ -2367,8 +2367,8 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final boolean pattern_KeyDerivationAlgorithmImportToImport_21_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBB(
-			KeyDerivationAlgorithmImportToImport _this, Match match, JavaImport jimp, JavaCompilationUnit cu) {
-		boolean _localVariable_0 = _this.isAppropriate_BWD(match, jimp, cu);
+			KeyDerivationAlgorithmImportToImport _this, Match match, JavaCompilationUnit cu, JavaImport jimp) {
+		boolean _localVariable_0 = _this.isAppropriate_BWD(match, cu, jimp);
 		boolean _result = Boolean.valueOf(_localVariable_0);
 		return _result;
 	}
@@ -2413,24 +2413,24 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_24_2_matchsrctrgcontext_bindingFFFFBB(
-			Match sourceMatch, Match targetMatch) {
-		EObject _localVariable_0 = sourceMatch.getObject("imp");
-		EObject _localVariable_1 = targetMatch.getObject("jimp");
-		EObject _localVariable_2 = targetMatch.getObject("cu");
-		EObject _localVariable_3 = sourceMatch.getObject("alg");
-		EObject tmpImp = _localVariable_0;
-		EObject tmpJimp = _localVariable_1;
-		EObject tmpCu = _localVariable_2;
-		EObject tmpAlg = _localVariable_3;
-		if (tmpImp instanceof Import) {
-			Import imp = (Import) tmpImp;
-			if (tmpJimp instanceof JavaImport) {
-				JavaImport jimp = (JavaImport) tmpJimp;
-				if (tmpCu instanceof JavaCompilationUnit) {
-					JavaCompilationUnit cu = (JavaCompilationUnit) tmpCu;
-					if (tmpAlg instanceof KeyDerivationAlgorithm) {
-						KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) tmpAlg;
-						return new Object[] { imp, jimp, cu, alg, sourceMatch, targetMatch };
+			Match targetMatch, Match sourceMatch) {
+		EObject _localVariable_0 = targetMatch.getObject("cu");
+		EObject _localVariable_1 = sourceMatch.getObject("alg");
+		EObject _localVariable_2 = sourceMatch.getObject("imp");
+		EObject _localVariable_3 = targetMatch.getObject("jimp");
+		EObject tmpCu = _localVariable_0;
+		EObject tmpAlg = _localVariable_1;
+		EObject tmpImp = _localVariable_2;
+		EObject tmpJimp = _localVariable_3;
+		if (tmpCu instanceof JavaCompilationUnit) {
+			JavaCompilationUnit cu = (JavaCompilationUnit) tmpCu;
+			if (tmpAlg instanceof KeyDerivationAlgorithm) {
+				KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) tmpAlg;
+				if (tmpImp instanceof Import) {
+					Import imp = (Import) tmpImp;
+					if (tmpJimp instanceof JavaImport) {
+						JavaImport jimp = (JavaImport) tmpJimp;
+						return new Object[] { cu, alg, imp, jimp, targetMatch, sourceMatch };
 					}
 				}
 			}
@@ -2439,10 +2439,10 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_24_2_matchsrctrgcontext_blackBBBBBB(
-			Import imp, JavaImport jimp, JavaCompilationUnit cu, KeyDerivationAlgorithm alg, Match sourceMatch,
+			JavaCompilationUnit cu, KeyDerivationAlgorithm alg, Import imp, JavaImport jimp, Match sourceMatch,
 			Match targetMatch) {
 		if (!sourceMatch.equals(targetMatch)) {
-			return new Object[] { imp, jimp, cu, alg, sourceMatch, targetMatch };
+			return new Object[] { cu, alg, imp, jimp, sourceMatch, targetMatch };
 		}
 		return null;
 	}
@@ -2450,30 +2450,30 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_24_2_matchsrctrgcontext_bindingAndBlackFFFFBB(
 			Match sourceMatch, Match targetMatch) {
 		Object[] result_pattern_KeyDerivationAlgorithmImportToImport_24_2_matchsrctrgcontext_binding = pattern_KeyDerivationAlgorithmImportToImport_24_2_matchsrctrgcontext_bindingFFFFBB(
-				sourceMatch, targetMatch);
+				targetMatch, sourceMatch);
 		if (result_pattern_KeyDerivationAlgorithmImportToImport_24_2_matchsrctrgcontext_binding != null) {
-			Import imp = (Import) result_pattern_KeyDerivationAlgorithmImportToImport_24_2_matchsrctrgcontext_binding[0];
-			JavaImport jimp = (JavaImport) result_pattern_KeyDerivationAlgorithmImportToImport_24_2_matchsrctrgcontext_binding[1];
-			JavaCompilationUnit cu = (JavaCompilationUnit) result_pattern_KeyDerivationAlgorithmImportToImport_24_2_matchsrctrgcontext_binding[2];
-			KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) result_pattern_KeyDerivationAlgorithmImportToImport_24_2_matchsrctrgcontext_binding[3];
+			JavaCompilationUnit cu = (JavaCompilationUnit) result_pattern_KeyDerivationAlgorithmImportToImport_24_2_matchsrctrgcontext_binding[0];
+			KeyDerivationAlgorithm alg = (KeyDerivationAlgorithm) result_pattern_KeyDerivationAlgorithmImportToImport_24_2_matchsrctrgcontext_binding[1];
+			Import imp = (Import) result_pattern_KeyDerivationAlgorithmImportToImport_24_2_matchsrctrgcontext_binding[2];
+			JavaImport jimp = (JavaImport) result_pattern_KeyDerivationAlgorithmImportToImport_24_2_matchsrctrgcontext_binding[3];
 
 			Object[] result_pattern_KeyDerivationAlgorithmImportToImport_24_2_matchsrctrgcontext_black = pattern_KeyDerivationAlgorithmImportToImport_24_2_matchsrctrgcontext_blackBBBBBB(
-					imp, jimp, cu, alg, sourceMatch, targetMatch);
+					cu, alg, imp, jimp, sourceMatch, targetMatch);
 			if (result_pattern_KeyDerivationAlgorithmImportToImport_24_2_matchsrctrgcontext_black != null) {
 
-				return new Object[] { imp, jimp, cu, alg, sourceMatch, targetMatch };
+				return new Object[] { cu, alg, imp, jimp, sourceMatch, targetMatch };
 			}
 		}
 		return null;
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_24_3_solvecsp_bindingFBBBBBBB(
-			KeyDerivationAlgorithmImportToImport _this, Import imp, JavaImport jimp, JavaCompilationUnit cu,
-			KeyDerivationAlgorithm alg, Match sourceMatch, Match targetMatch) {
-		CSP _localVariable_4 = _this.isApplicable_solveCsp_CC(imp, jimp, cu, alg, sourceMatch, targetMatch);
+			KeyDerivationAlgorithmImportToImport _this, JavaCompilationUnit cu, KeyDerivationAlgorithm alg, Import imp,
+			JavaImport jimp, Match sourceMatch, Match targetMatch) {
+		CSP _localVariable_4 = _this.isApplicable_solveCsp_CC(cu, alg, imp, jimp, sourceMatch, targetMatch);
 		CSP csp = _localVariable_4;
 		if (csp != null) {
-			return new Object[] { csp, _this, imp, jimp, cu, alg, sourceMatch, targetMatch };
+			return new Object[] { csp, _this, cu, alg, imp, jimp, sourceMatch, targetMatch };
 		}
 		return null;
 	}
@@ -2483,10 +2483,10 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_24_3_solvecsp_bindingAndBlackFBBBBBBB(
-			KeyDerivationAlgorithmImportToImport _this, Import imp, JavaImport jimp, JavaCompilationUnit cu,
-			KeyDerivationAlgorithm alg, Match sourceMatch, Match targetMatch) {
+			KeyDerivationAlgorithmImportToImport _this, JavaCompilationUnit cu, KeyDerivationAlgorithm alg, Import imp,
+			JavaImport jimp, Match sourceMatch, Match targetMatch) {
 		Object[] result_pattern_KeyDerivationAlgorithmImportToImport_24_3_solvecsp_binding = pattern_KeyDerivationAlgorithmImportToImport_24_3_solvecsp_bindingFBBBBBBB(
-				_this, imp, jimp, cu, alg, sourceMatch, targetMatch);
+				_this, cu, alg, imp, jimp, sourceMatch, targetMatch);
 		if (result_pattern_KeyDerivationAlgorithmImportToImport_24_3_solvecsp_binding != null) {
 			CSP csp = (CSP) result_pattern_KeyDerivationAlgorithmImportToImport_24_3_solvecsp_binding[0];
 
@@ -2494,7 +2494,7 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 					csp);
 			if (result_pattern_KeyDerivationAlgorithmImportToImport_24_3_solvecsp_black != null) {
 
-				return new Object[] { csp, _this, imp, jimp, cu, alg, sourceMatch, targetMatch };
+				return new Object[] { csp, _this, cu, alg, imp, jimp, sourceMatch, targetMatch };
 			}
 		}
 		return null;
@@ -2532,17 +2532,17 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_24_6_createcorrespondence_blackBBBBB(
-			Import imp, JavaImport jimp, JavaCompilationUnit cu, KeyDerivationAlgorithm alg, CCMatch ccMatch) {
-		return new Object[] { imp, jimp, cu, alg, ccMatch };
+			JavaCompilationUnit cu, KeyDerivationAlgorithm alg, Import imp, JavaImport jimp, CCMatch ccMatch) {
+		return new Object[] { cu, alg, imp, jimp, ccMatch };
 	}
 
-	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_24_6_createcorrespondence_greenBFBB(
+	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_24_6_createcorrespondence_greenFBBB(
 			Import imp, JavaImport jimp, CCMatch ccMatch) {
 		ImportToImport i2j = CryptoConfigToJavaFactory.eINSTANCE.createImportToImport();
-		i2j.setTarget(jimp);
 		i2j.setSource(imp);
+		i2j.setTarget(jimp);
 		ccMatch.getCreateCorr().add(i2j);
-		return new Object[] { imp, i2j, jimp, ccMatch };
+		return new Object[] { i2j, imp, jimp, ccMatch };
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_24_7_addtoreturnedresult_blackBB(
@@ -2566,10 +2566,10 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 		return _result;
 	}
 
-	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_27_1_matchtggpattern_blackBB(Import imp,
-			KeyDerivationAlgorithm alg) {
+	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_27_1_matchtggpattern_blackBB(
+			KeyDerivationAlgorithm alg, Import imp) {
 		if (alg.getImports().contains(imp)) {
-			return new Object[] { imp, alg };
+			return new Object[] { alg, imp };
 		}
 		return null;
 	}
@@ -2585,9 +2585,9 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_28_1_matchtggpattern_blackBB(
-			JavaImport jimp, JavaCompilationUnit cu) {
+			JavaCompilationUnit cu, JavaImport jimp) {
 		if (cu.getImports().contains(jimp)) {
-			return new Object[] { jimp, cu };
+			return new Object[] { cu, jimp };
 		}
 		return null;
 	}
@@ -2722,21 +2722,21 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 		return new Object[] { cu, alg, ac, ruleResult };
 	}
 
-	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_29_6_perform_greenFFFBBBB(
+	public static final Object[] pattern_KeyDerivationAlgorithmImportToImport_29_6_perform_greenBBFFFBB(
 			JavaCompilationUnit cu, KeyDerivationAlgorithm alg, ModelgeneratorRuleResult ruleResult, CSP csp) {
-		Import imp = CryptoAPIConfigFactory.eINSTANCE.createImport();
 		ImportToImport i2j = CryptoConfigToJavaFactory.eINSTANCE.createImportToImport();
+		Import imp = CryptoAPIConfigFactory.eINSTANCE.createImport();
 		JavaImport jimp = SimpleJavaFactory.eINSTANCE.createJavaImport();
 		Object _localVariable_0 = csp.getValue("imp", "value");
 		Object _localVariable_1 = csp.getValue("jimp", "value");
 		boolean ruleResult_success_prime = Boolean.valueOf(true);
 		int _localVariable_2 = ruleResult.getIncrementedPerformCount();
-		alg.getImports().add(imp);
-		ruleResult.getSourceObjects().add(imp);
-		i2j.setSource(imp);
 		ruleResult.getCorrObjects().add(i2j);
-		i2j.setTarget(jimp);
+		alg.getImports().add(imp);
+		i2j.setSource(imp);
+		ruleResult.getSourceObjects().add(imp);
 		cu.getImports().add(jimp);
+		i2j.setTarget(jimp);
 		ruleResult.getTargetObjects().add(jimp);
 		String imp_value_prime = (String) _localVariable_0;
 		String jimp_value_prime = (String) _localVariable_1;
@@ -2745,7 +2745,7 @@ public class KeyDerivationAlgorithmImportToImportImpl extends AbstractRuleImpl
 		imp.setValue(imp_value_prime);
 		jimp.setValue(jimp_value_prime);
 		ruleResult.setPerformCount(Integer.valueOf(ruleResult_performCount_prime));
-		return new Object[] { imp, i2j, jimp, cu, alg, ruleResult, csp };
+		return new Object[] { cu, alg, i2j, imp, jimp, ruleResult, csp };
 	}
 
 	public static final ModelgeneratorRuleResult pattern_KeyDerivationAlgorithmImportToImport_29_7_expressionFB(

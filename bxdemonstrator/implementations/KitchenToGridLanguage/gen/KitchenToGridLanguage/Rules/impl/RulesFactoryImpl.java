@@ -55,24 +55,24 @@ public class RulesFactoryImpl extends EFactoryImpl implements RulesFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case RulesPackage.CREATE_AHORIZONTAL_TABLE:
-			return createcreate_a_horizontal_table();
 		case RulesPackage.CREATE_HORIZONTAL_ITEM:
 			return createCreateHorizontalItem();
-		case RulesPackage.SOCKET_TO_GROUP:
-			return createSocketToGroup();
-		case RulesPackage.CREATE_AVERTICAL_TABLE:
-			return createcreate_a_vertical_table();
 		case RulesPackage.CREATE_ASINK:
 			return createcreate_a_sink();
 		case RulesPackage.CREATE_ITEM_WITH_TWO_BLOCKS:
 			return createCreateItemWithTwoBlocks();
-		case RulesPackage.CREATE_VERTICAL_ITEM:
-			return createCreateVerticalItem();
+		case RulesPackage.SOCKET_TO_GROUP:
+			return createSocketToGroup();
 		case RulesPackage.KITCHEN_TO_GRID_RULE:
 			return createKitchenToGridRule();
+		case RulesPackage.CREATE_AHORIZONTAL_TABLE:
+			return createcreate_a_horizontal_table();
+		case RulesPackage.CREATE_VERTICAL_ITEM:
+			return createCreateVerticalItem();
 		case RulesPackage.CREATE_AFRIDGE:
 			return createcreate_a_fridge();
+		case RulesPackage.CREATE_AVERTICAL_TABLE:
+			return createcreate_a_vertical_table();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -83,39 +83,9 @@ public class RulesFactoryImpl extends EFactoryImpl implements RulesFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public create_a_horizontal_table createcreate_a_horizontal_table() {
-		create_a_horizontal_tableImpl create_a_horizontal_table = new create_a_horizontal_tableImpl();
-		return create_a_horizontal_table;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public CreateHorizontalItem createCreateHorizontalItem() {
 		CreateHorizontalItemImpl createHorizontalItem = new CreateHorizontalItemImpl();
 		return createHorizontalItem;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SocketToGroup createSocketToGroup() {
-		SocketToGroupImpl socketToGroup = new SocketToGroupImpl();
-		return socketToGroup;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public create_a_vertical_table createcreate_a_vertical_table() {
-		create_a_vertical_tableImpl create_a_vertical_table = new create_a_vertical_tableImpl();
-		return create_a_vertical_table;
 	}
 
 	/**
@@ -143,9 +113,9 @@ public class RulesFactoryImpl extends EFactoryImpl implements RulesFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CreateVerticalItem createCreateVerticalItem() {
-		CreateVerticalItemImpl createVerticalItem = new CreateVerticalItemImpl();
-		return createVerticalItem;
+	public SocketToGroup createSocketToGroup() {
+		SocketToGroupImpl socketToGroup = new SocketToGroupImpl();
+		return socketToGroup;
 	}
 
 	/**
@@ -163,9 +133,39 @@ public class RulesFactoryImpl extends EFactoryImpl implements RulesFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public create_a_horizontal_table createcreate_a_horizontal_table() {
+		create_a_horizontal_tableImpl create_a_horizontal_table = new create_a_horizontal_tableImpl();
+		return create_a_horizontal_table;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CreateVerticalItem createCreateVerticalItem() {
+		CreateVerticalItemImpl createVerticalItem = new CreateVerticalItemImpl();
+		return createVerticalItem;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public create_a_fridge createcreate_a_fridge() {
 		create_a_fridgeImpl create_a_fridge = new create_a_fridgeImpl();
 		return create_a_fridge;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public create_a_vertical_table createcreate_a_vertical_table() {
+		create_a_vertical_tableImpl create_a_vertical_table = new create_a_vertical_tableImpl();
+		return create_a_vertical_table;
 	}
 
 	/**

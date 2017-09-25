@@ -58,14 +58,14 @@ public class KitchenToGridLanguagePackageImpl extends EPackageImpl implements Ki
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass kitchenToGridCorrEClass = null;
+	private EClass socketToGroupCorrEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass socketToGroupCorrEClass = null;
+	private EClass kitchenToGridCorrEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -149,41 +149,10 @@ public class KitchenToGridLanguagePackageImpl extends EPackageImpl implements Ki
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getKitchenToGridCorr() {
-		if (kitchenToGridCorrEClass == null) {
-			kitchenToGridCorrEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(KitchenToGridLanguagePackage.eNS_URI).getEClassifiers().get(0);
-		}
-		return kitchenToGridCorrEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getKitchenToGridCorr_Source() {
-		return (EReference) getKitchenToGridCorr().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getKitchenToGridCorr_Target() {
-		return (EReference) getKitchenToGridCorr().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSocketToGroupCorr() {
 		if (socketToGroupCorrEClass == null) {
 			socketToGroupCorrEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(KitchenToGridLanguagePackage.eNS_URI).getEClassifiers().get(1);
+					.getEPackage(KitchenToGridLanguagePackage.eNS_URI).getEClassifiers().get(0);
 		}
 		return socketToGroupCorrEClass;
 	}
@@ -204,6 +173,37 @@ public class KitchenToGridLanguagePackageImpl extends EPackageImpl implements Ki
 	 */
 	public EReference getSocketToGroupCorr_Target() {
 		return (EReference) getSocketToGroupCorr().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getKitchenToGridCorr() {
+		if (kitchenToGridCorrEClass == null) {
+			kitchenToGridCorrEClass = (EClass) EPackage.Registry.INSTANCE
+					.getEPackage(KitchenToGridLanguagePackage.eNS_URI).getEClassifiers().get(1);
+		}
+		return kitchenToGridCorrEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getKitchenToGridCorr_Source() {
+		return (EReference) getKitchenToGridCorr().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getKitchenToGridCorr_Target() {
+		return (EReference) getKitchenToGridCorr().getEStructuralFeatures().get(1);
 	}
 
 	/**

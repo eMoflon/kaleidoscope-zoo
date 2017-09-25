@@ -58,190 +58,6 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	CryptoConfigToJavaPackage eINSTANCE = CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link CryptoConfigToJava.impl.AlgorithmToJavaCompilationUnitImpl <em>Algorithm To Java Compilation Unit</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see CryptoConfigToJava.impl.AlgorithmToJavaCompilationUnitImpl
-	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getAlgorithmToJavaCompilationUnit()
-	 * @generated
-	 */
-	int ALGORITHM_TO_JAVA_COMPILATION_UNIT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALGORITHM_TO_JAVA_COMPILATION_UNIT__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALGORITHM_TO_JAVA_COMPILATION_UNIT__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Algorithm To Java Compilation Unit</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALGORITHM_TO_JAVA_COMPILATION_UNIT_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Algorithm To Java Compilation Unit</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALGORITHM_TO_JAVA_COMPILATION_UNIT_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link CryptoConfigToJava.impl.SymmetricBlockCipherToJcuImpl <em>Symmetric Block Cipher To Jcu</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see CryptoConfigToJava.impl.SymmetricBlockCipherToJcuImpl
-	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getSymmetricBlockCipherToJcu()
-	 * @generated
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_TO_JCU = 1;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_TO_JCU__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_TO_JCU__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Symmetric Block Cipher To Jcu</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_TO_JCU_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Symmetric Block Cipher To Jcu</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_TO_JCU_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link CryptoConfigToJava.impl.TaskToJavaCompilationUnitImpl <em>Task To Java Compilation Unit</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see CryptoConfigToJava.impl.TaskToJavaCompilationUnitImpl
-	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getTaskToJavaCompilationUnit()
-	 * @generated
-	 */
-	int TASK_TO_JAVA_COMPILATION_UNIT = 2;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_TO_JAVA_COMPILATION_UNIT__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_TO_JAVA_COMPILATION_UNIT__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Task To Java Compilation Unit</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_TO_JAVA_COMPILATION_UNIT_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Task To Java Compilation Unit</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_TO_JAVA_COMPILATION_UNIT_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link CryptoConfigToJava.impl.ImportToImportImpl <em>Import To Import</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see CryptoConfigToJava.impl.ImportToImportImpl
-	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getImportToImport()
-	 * @generated
-	 */
-	int IMPORT_TO_IMPORT = 3;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMPORT_TO_IMPORT__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMPORT_TO_IMPORT__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Import To Import</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMPORT_TO_IMPORT_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Import To Import</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMPORT_TO_IMPORT_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link CryptoConfigToJava.impl.KeyDerivationAlgorithmToMethodImpl <em>Key Derivation Algorithm To Method</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -249,7 +65,7 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getKeyDerivationAlgorithmToMethod()
 	 * @generated
 	 */
-	int KEY_DERIVATION_ALGORITHM_TO_METHOD = 4;
+	int KEY_DERIVATION_ALGORITHM_TO_METHOD = 0;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -295,7 +111,7 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getAlgorithmToJcu()
 	 * @generated
 	 */
-	int ALGORITHM_TO_JCU = 5;
+	int ALGORITHM_TO_JCU = 1;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -332,6 +148,190 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	 * @ordered
 	 */
 	int ALGORITHM_TO_JCU_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link CryptoConfigToJava.impl.ImportToImportImpl <em>Import To Import</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see CryptoConfigToJava.impl.ImportToImportImpl
+	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getImportToImport()
+	 * @generated
+	 */
+	int IMPORT_TO_IMPORT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_TO_IMPORT__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_TO_IMPORT__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Import To Import</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_TO_IMPORT_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Import To Import</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_TO_IMPORT_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link CryptoConfigToJava.impl.SymmetricBlockCipherToJcuImpl <em>Symmetric Block Cipher To Jcu</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see CryptoConfigToJava.impl.SymmetricBlockCipherToJcuImpl
+	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getSymmetricBlockCipherToJcu()
+	 * @generated
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_TO_JCU = 3;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_TO_JCU__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_TO_JCU__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Symmetric Block Cipher To Jcu</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_TO_JCU_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Symmetric Block Cipher To Jcu</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_TO_JCU_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link CryptoConfigToJava.impl.TaskToJavaPackageImpl <em>Task To Java Package</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see CryptoConfigToJava.impl.TaskToJavaPackageImpl
+	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getTaskToJavaPackage()
+	 * @generated
+	 */
+	int TASK_TO_JAVA_PACKAGE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TO_JAVA_PACKAGE__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TO_JAVA_PACKAGE__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Task To Java Package</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TO_JAVA_PACKAGE_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Task To Java Package</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TO_JAVA_PACKAGE_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link CryptoConfigToJava.impl.TaskToJavaCompilationUnitImpl <em>Task To Java Compilation Unit</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see CryptoConfigToJava.impl.TaskToJavaCompilationUnitImpl
+	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getTaskToJavaCompilationUnit()
+	 * @generated
+	 */
+	int TASK_TO_JAVA_COMPILATION_UNIT = 5;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TO_JAVA_COMPILATION_UNIT__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TO_JAVA_COMPILATION_UNIT__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Task To Java Compilation Unit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TO_JAVA_COMPILATION_UNIT_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Task To Java Compilation Unit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TO_JAVA_COMPILATION_UNIT_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link CryptoConfigToJava.impl.SymmetricBlockCipherToMethodImpl <em>Symmetric Block Cipher To Method</em>}' class.
@@ -380,14 +380,14 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	int SYMMETRIC_BLOCK_CIPHER_TO_METHOD_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link CryptoConfigToJava.impl.TaskToJavaPackageImpl <em>Task To Java Package</em>}' class.
+	 * The meta object id for the '{@link CryptoConfigToJava.impl.AlgorithmToJavaCompilationUnitImpl <em>Algorithm To Java Compilation Unit</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see CryptoConfigToJava.impl.TaskToJavaPackageImpl
-	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getTaskToJavaPackage()
+	 * @see CryptoConfigToJava.impl.AlgorithmToJavaCompilationUnitImpl
+	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getAlgorithmToJavaCompilationUnit()
 	 * @generated
 	 */
-	int TASK_TO_JAVA_PACKAGE = 7;
+	int ALGORITHM_TO_JAVA_COMPILATION_UNIT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -396,7 +396,7 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TO_JAVA_PACKAGE__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
+	int ALGORITHM_TO_JAVA_COMPILATION_UNIT__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -405,25 +405,25 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TO_JAVA_PACKAGE__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
+	int ALGORITHM_TO_JAVA_COMPILATION_UNIT__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Task To Java Package</em>' class.
+	 * The number of structural features of the '<em>Algorithm To Java Compilation Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TO_JAVA_PACKAGE_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
+	int ALGORITHM_TO_JAVA_COMPILATION_UNIT_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Task To Java Package</em>' class.
+	 * The number of operations of the '<em>Algorithm To Java Compilation Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TO_JAVA_PACKAGE_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
+	int ALGORITHM_TO_JAVA_COMPILATION_UNIT_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link CryptoConfigToJava.impl.KeyDerivationAlgorithmToJcuImpl <em>Key Derivation Algorithm To Jcu</em>}' class.
@@ -470,134 +470,6 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	 * @ordered
 	 */
 	int KEY_DERIVATION_ALGORITHM_TO_JCU_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
-
-	/**
-	 * Returns the meta object for class '{@link CryptoConfigToJava.AlgorithmToJavaCompilationUnit <em>Algorithm To Java Compilation Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Algorithm To Java Compilation Unit</em>'.
-	 * @see CryptoConfigToJava.AlgorithmToJavaCompilationUnit
-	 * @generated
-	 */
-	EClass getAlgorithmToJavaCompilationUnit();
-
-	/**
-	 * Returns the meta object for the reference '{@link CryptoConfigToJava.AlgorithmToJavaCompilationUnit#getSource <em>Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see CryptoConfigToJava.AlgorithmToJavaCompilationUnit#getSource()
-	 * @see #getAlgorithmToJavaCompilationUnit()
-	 * @generated
-	 */
-	EReference getAlgorithmToJavaCompilationUnit_Source();
-
-	/**
-	 * Returns the meta object for the reference '{@link CryptoConfigToJava.AlgorithmToJavaCompilationUnit#getTarget <em>Target</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see CryptoConfigToJava.AlgorithmToJavaCompilationUnit#getTarget()
-	 * @see #getAlgorithmToJavaCompilationUnit()
-	 * @generated
-	 */
-	EReference getAlgorithmToJavaCompilationUnit_Target();
-
-	/**
-	 * Returns the meta object for class '{@link CryptoConfigToJava.SymmetricBlockCipherToJcu <em>Symmetric Block Cipher To Jcu</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Symmetric Block Cipher To Jcu</em>'.
-	 * @see CryptoConfigToJava.SymmetricBlockCipherToJcu
-	 * @generated
-	 */
-	EClass getSymmetricBlockCipherToJcu();
-
-	/**
-	 * Returns the meta object for the reference '{@link CryptoConfigToJava.SymmetricBlockCipherToJcu#getSource <em>Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see CryptoConfigToJava.SymmetricBlockCipherToJcu#getSource()
-	 * @see #getSymmetricBlockCipherToJcu()
-	 * @generated
-	 */
-	EReference getSymmetricBlockCipherToJcu_Source();
-
-	/**
-	 * Returns the meta object for the reference '{@link CryptoConfigToJava.SymmetricBlockCipherToJcu#getTarget <em>Target</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see CryptoConfigToJava.SymmetricBlockCipherToJcu#getTarget()
-	 * @see #getSymmetricBlockCipherToJcu()
-	 * @generated
-	 */
-	EReference getSymmetricBlockCipherToJcu_Target();
-
-	/**
-	 * Returns the meta object for class '{@link CryptoConfigToJava.TaskToJavaCompilationUnit <em>Task To Java Compilation Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Task To Java Compilation Unit</em>'.
-	 * @see CryptoConfigToJava.TaskToJavaCompilationUnit
-	 * @generated
-	 */
-	EClass getTaskToJavaCompilationUnit();
-
-	/**
-	 * Returns the meta object for the reference '{@link CryptoConfigToJava.TaskToJavaCompilationUnit#getSource <em>Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see CryptoConfigToJava.TaskToJavaCompilationUnit#getSource()
-	 * @see #getTaskToJavaCompilationUnit()
-	 * @generated
-	 */
-	EReference getTaskToJavaCompilationUnit_Source();
-
-	/**
-	 * Returns the meta object for the reference '{@link CryptoConfigToJava.TaskToJavaCompilationUnit#getTarget <em>Target</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see CryptoConfigToJava.TaskToJavaCompilationUnit#getTarget()
-	 * @see #getTaskToJavaCompilationUnit()
-	 * @generated
-	 */
-	EReference getTaskToJavaCompilationUnit_Target();
-
-	/**
-	 * Returns the meta object for class '{@link CryptoConfigToJava.ImportToImport <em>Import To Import</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Import To Import</em>'.
-	 * @see CryptoConfigToJava.ImportToImport
-	 * @generated
-	 */
-	EClass getImportToImport();
-
-	/**
-	 * Returns the meta object for the reference '{@link CryptoConfigToJava.ImportToImport#getSource <em>Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see CryptoConfigToJava.ImportToImport#getSource()
-	 * @see #getImportToImport()
-	 * @generated
-	 */
-	EReference getImportToImport_Source();
-
-	/**
-	 * Returns the meta object for the reference '{@link CryptoConfigToJava.ImportToImport#getTarget <em>Target</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see CryptoConfigToJava.ImportToImport#getTarget()
-	 * @see #getImportToImport()
-	 * @generated
-	 */
-	EReference getImportToImport_Target();
 
 	/**
 	 * Returns the meta object for class '{@link CryptoConfigToJava.KeyDerivationAlgorithmToMethod <em>Key Derivation Algorithm To Method</em>}'.
@@ -664,36 +536,68 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	EReference getAlgorithmToJcu_Target();
 
 	/**
-	 * Returns the meta object for class '{@link CryptoConfigToJava.SymmetricBlockCipherToMethod <em>Symmetric Block Cipher To Method</em>}'.
+	 * Returns the meta object for class '{@link CryptoConfigToJava.ImportToImport <em>Import To Import</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Symmetric Block Cipher To Method</em>'.
-	 * @see CryptoConfigToJava.SymmetricBlockCipherToMethod
+	 * @return the meta object for class '<em>Import To Import</em>'.
+	 * @see CryptoConfigToJava.ImportToImport
 	 * @generated
 	 */
-	EClass getSymmetricBlockCipherToMethod();
+	EClass getImportToImport();
 
 	/**
-	 * Returns the meta object for the reference '{@link CryptoConfigToJava.SymmetricBlockCipherToMethod#getSource <em>Source</em>}'.
+	 * Returns the meta object for the reference '{@link CryptoConfigToJava.ImportToImport#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see CryptoConfigToJava.SymmetricBlockCipherToMethod#getSource()
-	 * @see #getSymmetricBlockCipherToMethod()
+	 * @see CryptoConfigToJava.ImportToImport#getSource()
+	 * @see #getImportToImport()
 	 * @generated
 	 */
-	EReference getSymmetricBlockCipherToMethod_Source();
+	EReference getImportToImport_Source();
 
 	/**
-	 * Returns the meta object for the reference '{@link CryptoConfigToJava.SymmetricBlockCipherToMethod#getTarget <em>Target</em>}'.
+	 * Returns the meta object for the reference '{@link CryptoConfigToJava.ImportToImport#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see CryptoConfigToJava.SymmetricBlockCipherToMethod#getTarget()
-	 * @see #getSymmetricBlockCipherToMethod()
+	 * @see CryptoConfigToJava.ImportToImport#getTarget()
+	 * @see #getImportToImport()
 	 * @generated
 	 */
-	EReference getSymmetricBlockCipherToMethod_Target();
+	EReference getImportToImport_Target();
+
+	/**
+	 * Returns the meta object for class '{@link CryptoConfigToJava.SymmetricBlockCipherToJcu <em>Symmetric Block Cipher To Jcu</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Symmetric Block Cipher To Jcu</em>'.
+	 * @see CryptoConfigToJava.SymmetricBlockCipherToJcu
+	 * @generated
+	 */
+	EClass getSymmetricBlockCipherToJcu();
+
+	/**
+	 * Returns the meta object for the reference '{@link CryptoConfigToJava.SymmetricBlockCipherToJcu#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see CryptoConfigToJava.SymmetricBlockCipherToJcu#getSource()
+	 * @see #getSymmetricBlockCipherToJcu()
+	 * @generated
+	 */
+	EReference getSymmetricBlockCipherToJcu_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link CryptoConfigToJava.SymmetricBlockCipherToJcu#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see CryptoConfigToJava.SymmetricBlockCipherToJcu#getTarget()
+	 * @see #getSymmetricBlockCipherToJcu()
+	 * @generated
+	 */
+	EReference getSymmetricBlockCipherToJcu_Target();
 
 	/**
 	 * Returns the meta object for class '{@link CryptoConfigToJava.TaskToJavaPackage <em>Task To Java Package</em>}'.
@@ -726,6 +630,102 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTaskToJavaPackage_Target();
+
+	/**
+	 * Returns the meta object for class '{@link CryptoConfigToJava.TaskToJavaCompilationUnit <em>Task To Java Compilation Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Task To Java Compilation Unit</em>'.
+	 * @see CryptoConfigToJava.TaskToJavaCompilationUnit
+	 * @generated
+	 */
+	EClass getTaskToJavaCompilationUnit();
+
+	/**
+	 * Returns the meta object for the reference '{@link CryptoConfigToJava.TaskToJavaCompilationUnit#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see CryptoConfigToJava.TaskToJavaCompilationUnit#getSource()
+	 * @see #getTaskToJavaCompilationUnit()
+	 * @generated
+	 */
+	EReference getTaskToJavaCompilationUnit_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link CryptoConfigToJava.TaskToJavaCompilationUnit#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see CryptoConfigToJava.TaskToJavaCompilationUnit#getTarget()
+	 * @see #getTaskToJavaCompilationUnit()
+	 * @generated
+	 */
+	EReference getTaskToJavaCompilationUnit_Target();
+
+	/**
+	 * Returns the meta object for class '{@link CryptoConfigToJava.SymmetricBlockCipherToMethod <em>Symmetric Block Cipher To Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Symmetric Block Cipher To Method</em>'.
+	 * @see CryptoConfigToJava.SymmetricBlockCipherToMethod
+	 * @generated
+	 */
+	EClass getSymmetricBlockCipherToMethod();
+
+	/**
+	 * Returns the meta object for the reference '{@link CryptoConfigToJava.SymmetricBlockCipherToMethod#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see CryptoConfigToJava.SymmetricBlockCipherToMethod#getSource()
+	 * @see #getSymmetricBlockCipherToMethod()
+	 * @generated
+	 */
+	EReference getSymmetricBlockCipherToMethod_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link CryptoConfigToJava.SymmetricBlockCipherToMethod#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see CryptoConfigToJava.SymmetricBlockCipherToMethod#getTarget()
+	 * @see #getSymmetricBlockCipherToMethod()
+	 * @generated
+	 */
+	EReference getSymmetricBlockCipherToMethod_Target();
+
+	/**
+	 * Returns the meta object for class '{@link CryptoConfigToJava.AlgorithmToJavaCompilationUnit <em>Algorithm To Java Compilation Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Algorithm To Java Compilation Unit</em>'.
+	 * @see CryptoConfigToJava.AlgorithmToJavaCompilationUnit
+	 * @generated
+	 */
+	EClass getAlgorithmToJavaCompilationUnit();
+
+	/**
+	 * Returns the meta object for the reference '{@link CryptoConfigToJava.AlgorithmToJavaCompilationUnit#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see CryptoConfigToJava.AlgorithmToJavaCompilationUnit#getSource()
+	 * @see #getAlgorithmToJavaCompilationUnit()
+	 * @generated
+	 */
+	EReference getAlgorithmToJavaCompilationUnit_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link CryptoConfigToJava.AlgorithmToJavaCompilationUnit#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see CryptoConfigToJava.AlgorithmToJavaCompilationUnit#getTarget()
+	 * @see #getAlgorithmToJavaCompilationUnit()
+	 * @generated
+	 */
+	EReference getAlgorithmToJavaCompilationUnit_Target();
 
 	/**
 	 * Returns the meta object for class '{@link CryptoConfigToJava.KeyDerivationAlgorithmToJcu <em>Key Derivation Algorithm To Jcu</em>}'.
@@ -783,110 +783,6 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link CryptoConfigToJava.impl.AlgorithmToJavaCompilationUnitImpl <em>Algorithm To Java Compilation Unit</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see CryptoConfigToJava.impl.AlgorithmToJavaCompilationUnitImpl
-		 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getAlgorithmToJavaCompilationUnit()
-		 * @generated
-		 */
-		EClass ALGORITHM_TO_JAVA_COMPILATION_UNIT = eINSTANCE.getAlgorithmToJavaCompilationUnit();
-
-		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ALGORITHM_TO_JAVA_COMPILATION_UNIT__SOURCE = eINSTANCE.getAlgorithmToJavaCompilationUnit_Source();
-
-		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ALGORITHM_TO_JAVA_COMPILATION_UNIT__TARGET = eINSTANCE.getAlgorithmToJavaCompilationUnit_Target();
-
-		/**
-		 * The meta object literal for the '{@link CryptoConfigToJava.impl.SymmetricBlockCipherToJcuImpl <em>Symmetric Block Cipher To Jcu</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see CryptoConfigToJava.impl.SymmetricBlockCipherToJcuImpl
-		 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getSymmetricBlockCipherToJcu()
-		 * @generated
-		 */
-		EClass SYMMETRIC_BLOCK_CIPHER_TO_JCU = eINSTANCE.getSymmetricBlockCipherToJcu();
-
-		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SYMMETRIC_BLOCK_CIPHER_TO_JCU__SOURCE = eINSTANCE.getSymmetricBlockCipherToJcu_Source();
-
-		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SYMMETRIC_BLOCK_CIPHER_TO_JCU__TARGET = eINSTANCE.getSymmetricBlockCipherToJcu_Target();
-
-		/**
-		 * The meta object literal for the '{@link CryptoConfigToJava.impl.TaskToJavaCompilationUnitImpl <em>Task To Java Compilation Unit</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see CryptoConfigToJava.impl.TaskToJavaCompilationUnitImpl
-		 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getTaskToJavaCompilationUnit()
-		 * @generated
-		 */
-		EClass TASK_TO_JAVA_COMPILATION_UNIT = eINSTANCE.getTaskToJavaCompilationUnit();
-
-		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TASK_TO_JAVA_COMPILATION_UNIT__SOURCE = eINSTANCE.getTaskToJavaCompilationUnit_Source();
-
-		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TASK_TO_JAVA_COMPILATION_UNIT__TARGET = eINSTANCE.getTaskToJavaCompilationUnit_Target();
-
-		/**
-		 * The meta object literal for the '{@link CryptoConfigToJava.impl.ImportToImportImpl <em>Import To Import</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see CryptoConfigToJava.impl.ImportToImportImpl
-		 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getImportToImport()
-		 * @generated
-		 */
-		EClass IMPORT_TO_IMPORT = eINSTANCE.getImportToImport();
-
-		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IMPORT_TO_IMPORT__SOURCE = eINSTANCE.getImportToImport_Source();
-
-		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IMPORT_TO_IMPORT__TARGET = eINSTANCE.getImportToImport_Target();
-
-		/**
 		 * The meta object literal for the '{@link CryptoConfigToJava.impl.KeyDerivationAlgorithmToMethodImpl <em>Key Derivation Algorithm To Method</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -939,14 +835,14 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 		EReference ALGORITHM_TO_JCU__TARGET = eINSTANCE.getAlgorithmToJcu_Target();
 
 		/**
-		 * The meta object literal for the '{@link CryptoConfigToJava.impl.SymmetricBlockCipherToMethodImpl <em>Symmetric Block Cipher To Method</em>}' class.
+		 * The meta object literal for the '{@link CryptoConfigToJava.impl.ImportToImportImpl <em>Import To Import</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see CryptoConfigToJava.impl.SymmetricBlockCipherToMethodImpl
-		 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getSymmetricBlockCipherToMethod()
+		 * @see CryptoConfigToJava.impl.ImportToImportImpl
+		 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getImportToImport()
 		 * @generated
 		 */
-		EClass SYMMETRIC_BLOCK_CIPHER_TO_METHOD = eINSTANCE.getSymmetricBlockCipherToMethod();
+		EClass IMPORT_TO_IMPORT = eINSTANCE.getImportToImport();
 
 		/**
 		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
@@ -954,7 +850,7 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SYMMETRIC_BLOCK_CIPHER_TO_METHOD__SOURCE = eINSTANCE.getSymmetricBlockCipherToMethod_Source();
+		EReference IMPORT_TO_IMPORT__SOURCE = eINSTANCE.getImportToImport_Source();
 
 		/**
 		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
@@ -962,7 +858,33 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SYMMETRIC_BLOCK_CIPHER_TO_METHOD__TARGET = eINSTANCE.getSymmetricBlockCipherToMethod_Target();
+		EReference IMPORT_TO_IMPORT__TARGET = eINSTANCE.getImportToImport_Target();
+
+		/**
+		 * The meta object literal for the '{@link CryptoConfigToJava.impl.SymmetricBlockCipherToJcuImpl <em>Symmetric Block Cipher To Jcu</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see CryptoConfigToJava.impl.SymmetricBlockCipherToJcuImpl
+		 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getSymmetricBlockCipherToJcu()
+		 * @generated
+		 */
+		EClass SYMMETRIC_BLOCK_CIPHER_TO_JCU = eINSTANCE.getSymmetricBlockCipherToJcu();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYMMETRIC_BLOCK_CIPHER_TO_JCU__SOURCE = eINSTANCE.getSymmetricBlockCipherToJcu_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYMMETRIC_BLOCK_CIPHER_TO_JCU__TARGET = eINSTANCE.getSymmetricBlockCipherToJcu_Target();
 
 		/**
 		 * The meta object literal for the '{@link CryptoConfigToJava.impl.TaskToJavaPackageImpl <em>Task To Java Package</em>}' class.
@@ -989,6 +911,84 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TASK_TO_JAVA_PACKAGE__TARGET = eINSTANCE.getTaskToJavaPackage_Target();
+
+		/**
+		 * The meta object literal for the '{@link CryptoConfigToJava.impl.TaskToJavaCompilationUnitImpl <em>Task To Java Compilation Unit</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see CryptoConfigToJava.impl.TaskToJavaCompilationUnitImpl
+		 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getTaskToJavaCompilationUnit()
+		 * @generated
+		 */
+		EClass TASK_TO_JAVA_COMPILATION_UNIT = eINSTANCE.getTaskToJavaCompilationUnit();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK_TO_JAVA_COMPILATION_UNIT__SOURCE = eINSTANCE.getTaskToJavaCompilationUnit_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK_TO_JAVA_COMPILATION_UNIT__TARGET = eINSTANCE.getTaskToJavaCompilationUnit_Target();
+
+		/**
+		 * The meta object literal for the '{@link CryptoConfigToJava.impl.SymmetricBlockCipherToMethodImpl <em>Symmetric Block Cipher To Method</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see CryptoConfigToJava.impl.SymmetricBlockCipherToMethodImpl
+		 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getSymmetricBlockCipherToMethod()
+		 * @generated
+		 */
+		EClass SYMMETRIC_BLOCK_CIPHER_TO_METHOD = eINSTANCE.getSymmetricBlockCipherToMethod();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYMMETRIC_BLOCK_CIPHER_TO_METHOD__SOURCE = eINSTANCE.getSymmetricBlockCipherToMethod_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYMMETRIC_BLOCK_CIPHER_TO_METHOD__TARGET = eINSTANCE.getSymmetricBlockCipherToMethod_Target();
+
+		/**
+		 * The meta object literal for the '{@link CryptoConfigToJava.impl.AlgorithmToJavaCompilationUnitImpl <em>Algorithm To Java Compilation Unit</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see CryptoConfigToJava.impl.AlgorithmToJavaCompilationUnitImpl
+		 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getAlgorithmToJavaCompilationUnit()
+		 * @generated
+		 */
+		EClass ALGORITHM_TO_JAVA_COMPILATION_UNIT = eINSTANCE.getAlgorithmToJavaCompilationUnit();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ALGORITHM_TO_JAVA_COMPILATION_UNIT__SOURCE = eINSTANCE.getAlgorithmToJavaCompilationUnit_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ALGORITHM_TO_JAVA_COMPILATION_UNIT__TARGET = eINSTANCE.getAlgorithmToJavaCompilationUnit_Target();
 
 		/**
 		 * The meta object literal for the '{@link CryptoConfigToJava.impl.KeyDerivationAlgorithmToJcuImpl <em>Key Derivation Algorithm To Jcu</em>}' class.

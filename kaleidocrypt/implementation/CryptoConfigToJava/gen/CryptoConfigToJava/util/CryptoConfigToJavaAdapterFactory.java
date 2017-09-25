@@ -69,26 +69,6 @@ public class CryptoConfigToJavaAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected CryptoConfigToJavaSwitch<Adapter> modelSwitch = new CryptoConfigToJavaSwitch<Adapter>() {
 		@Override
-		public Adapter caseAlgorithmToJavaCompilationUnit(AlgorithmToJavaCompilationUnit object) {
-			return createAlgorithmToJavaCompilationUnitAdapter();
-		}
-
-		@Override
-		public Adapter caseSymmetricBlockCipherToJcu(SymmetricBlockCipherToJcu object) {
-			return createSymmetricBlockCipherToJcuAdapter();
-		}
-
-		@Override
-		public Adapter caseTaskToJavaCompilationUnit(TaskToJavaCompilationUnit object) {
-			return createTaskToJavaCompilationUnitAdapter();
-		}
-
-		@Override
-		public Adapter caseImportToImport(ImportToImport object) {
-			return createImportToImportAdapter();
-		}
-
-		@Override
 		public Adapter caseKeyDerivationAlgorithmToMethod(KeyDerivationAlgorithmToMethod object) {
 			return createKeyDerivationAlgorithmToMethodAdapter();
 		}
@@ -99,13 +79,33 @@ public class CryptoConfigToJavaAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseSymmetricBlockCipherToMethod(SymmetricBlockCipherToMethod object) {
-			return createSymmetricBlockCipherToMethodAdapter();
+		public Adapter caseImportToImport(ImportToImport object) {
+			return createImportToImportAdapter();
+		}
+
+		@Override
+		public Adapter caseSymmetricBlockCipherToJcu(SymmetricBlockCipherToJcu object) {
+			return createSymmetricBlockCipherToJcuAdapter();
 		}
 
 		@Override
 		public Adapter caseTaskToJavaPackage(TaskToJavaPackage object) {
 			return createTaskToJavaPackageAdapter();
+		}
+
+		@Override
+		public Adapter caseTaskToJavaCompilationUnit(TaskToJavaCompilationUnit object) {
+			return createTaskToJavaCompilationUnitAdapter();
+		}
+
+		@Override
+		public Adapter caseSymmetricBlockCipherToMethod(SymmetricBlockCipherToMethod object) {
+			return createSymmetricBlockCipherToMethodAdapter();
+		}
+
+		@Override
+		public Adapter caseAlgorithmToJavaCompilationUnit(AlgorithmToJavaCompilationUnit object) {
+			return createAlgorithmToJavaCompilationUnitAdapter();
 		}
 
 		@Override
@@ -138,62 +138,6 @@ public class CryptoConfigToJavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.AlgorithmToJavaCompilationUnit <em>Algorithm To Java Compilation Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see CryptoConfigToJava.AlgorithmToJavaCompilationUnit
-	 * @generated
-	 */
-	public Adapter createAlgorithmToJavaCompilationUnitAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.SymmetricBlockCipherToJcu <em>Symmetric Block Cipher To Jcu</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see CryptoConfigToJava.SymmetricBlockCipherToJcu
-	 * @generated
-	 */
-	public Adapter createSymmetricBlockCipherToJcuAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.TaskToJavaCompilationUnit <em>Task To Java Compilation Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see CryptoConfigToJava.TaskToJavaCompilationUnit
-	 * @generated
-	 */
-	public Adapter createTaskToJavaCompilationUnitAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.ImportToImport <em>Import To Import</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see CryptoConfigToJava.ImportToImport
-	 * @generated
-	 */
-	public Adapter createImportToImportAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.KeyDerivationAlgorithmToMethod <em>Key Derivation Algorithm To Method</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -222,16 +166,30 @@ public class CryptoConfigToJavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.SymmetricBlockCipherToMethod <em>Symmetric Block Cipher To Method</em>}'.
+	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.ImportToImport <em>Import To Import</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see CryptoConfigToJava.SymmetricBlockCipherToMethod
+	 * @see CryptoConfigToJava.ImportToImport
 	 * @generated
 	 */
-	public Adapter createSymmetricBlockCipherToMethodAdapter() {
+	public Adapter createImportToImportAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.SymmetricBlockCipherToJcu <em>Symmetric Block Cipher To Jcu</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see CryptoConfigToJava.SymmetricBlockCipherToJcu
+	 * @generated
+	 */
+	public Adapter createSymmetricBlockCipherToJcuAdapter() {
 		return null;
 	}
 
@@ -246,6 +204,48 @@ public class CryptoConfigToJavaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTaskToJavaPackageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.TaskToJavaCompilationUnit <em>Task To Java Compilation Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see CryptoConfigToJava.TaskToJavaCompilationUnit
+	 * @generated
+	 */
+	public Adapter createTaskToJavaCompilationUnitAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.SymmetricBlockCipherToMethod <em>Symmetric Block Cipher To Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see CryptoConfigToJava.SymmetricBlockCipherToMethod
+	 * @generated
+	 */
+	public Adapter createSymmetricBlockCipherToMethodAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.AlgorithmToJavaCompilationUnit <em>Algorithm To Java Compilation Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see CryptoConfigToJava.AlgorithmToJavaCompilationUnit
+	 * @generated
+	 */
+	public Adapter createAlgorithmToJavaCompilationUnitAdapter() {
 		return null;
 	}
 

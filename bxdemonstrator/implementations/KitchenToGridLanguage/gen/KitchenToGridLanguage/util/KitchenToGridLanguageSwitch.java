@@ -68,15 +68,6 @@ public class KitchenToGridLanguageSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-		case KitchenToGridLanguagePackage.KITCHEN_TO_GRID_CORR: {
-			KitchenToGridCorr kitchenToGridCorr = (KitchenToGridCorr) theEObject;
-			T result = caseKitchenToGridCorr(kitchenToGridCorr);
-			if (result == null)
-				result = caseAbstractCorrespondence(kitchenToGridCorr);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case KitchenToGridLanguagePackage.SOCKET_TO_GROUP_CORR: {
 			SocketToGroupCorr socketToGroupCorr = (SocketToGroupCorr) theEObject;
 			T result = caseSocketToGroupCorr(socketToGroupCorr);
@@ -86,24 +77,18 @@ public class KitchenToGridLanguageSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case KitchenToGridLanguagePackage.KITCHEN_TO_GRID_CORR: {
+			KitchenToGridCorr kitchenToGridCorr = (KitchenToGridCorr) theEObject;
+			T result = caseKitchenToGridCorr(kitchenToGridCorr);
+			if (result == null)
+				result = caseAbstractCorrespondence(kitchenToGridCorr);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Kitchen To Grid Corr</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Kitchen To Grid Corr</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseKitchenToGridCorr(KitchenToGridCorr object) {
-		return null;
 	}
 
 	/**
@@ -118,6 +103,21 @@ public class KitchenToGridLanguageSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSocketToGroupCorr(SocketToGroupCorr object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Kitchen To Grid Corr</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Kitchen To Grid Corr</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseKitchenToGridCorr(KitchenToGridCorr object) {
 		return null;
 	}
 
