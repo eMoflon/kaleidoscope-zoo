@@ -6,6 +6,7 @@ import java.nio.file.Paths;
 import com.kaleidoscope.core.delta.javabased.opaque.OpaqueDelta;
 import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
 import com.kaleidoscope.core.framework.workflow.controllers.deltabased.PersistentDeltaBasedController;
+import com.kaleidoscope.usecase.showcase.fourth.controller.ControllerModule;
 
 import Employees.EmployeeContainer;
 import Persons.Person;

@@ -1,0 +1,84 @@
+package com.kaleidoscope.usecase.showcase.third.deltaadapter;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
+
+import com.kaleidoscope.core.auxiliary.xmi.artefactadapter.XMIArtefactAdapter;
+import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
+import com.kaleidoscope.core.framework.workflow.adapters.DeltaAdapter;
+
+public class XMIdeltaAdapter<Model> 
+										implements DeltaAdapter<OperationalDelta, Path, Model> {
+
+	private final static Logger logger = Logger.getLogger(XMIArtefactAdapter.class); 
+	private Path path;
+	
+	public XMIdeltaAdapter(Path path) {
+		this.path = path;
+		
+	}
+	public XMIdeltaAdapter() {
+		
+	}
+	
+	@Override
+	public OperationalDelta parse(Path path, Model m) {
+		logger.debug("Parsing to XMI");
+		try {
+			File file = path.toFile();
+			Path fileName = path.getFileName();
+			
+			if(file.exists()) {
+				File genFile = path.getParent().resolve(Paths.get("gen", fileName.toString())).toFile();  
+				
+				FileUtils.copyFile(file, genFile);
+				  
+				
+				Resource genResource = ((EObject)m).eResource().getResourceSet().createResource(URI.createFileURI(genFile.getAbsolutePath()));	
+				genResource.load(null);
+			
+				KaleidoscopeDelta.OperationalDelta opDelta = (KaleidoscopeDelta.OperationalDelta)genResource.getContents().get(0);
+				
+				OperationalDelta operationalDelta = new OperationalDelta(opDelta);
+				
+				return operationalDelta;
+			}else {
+				return null;
+			}
+			
+			
+		} catch (IOException e) {	
+			logger.error("Not able to load the XMI file from " + path);			
+		}catch(ClassCastException e){			
+			logger.error("Not able to cast " + path + " to required type: " + e.getMessage());
+		}
+		return null;
+	}
+
+	@Override
+	public Path unparse(OperationalDelta d, Model a) {
+		logger.debug("Starting to unparse XMI!");
+		
+		try {
+			File file = path.toFile();  
+			Resource resource = ((EObject)a).eResource().getResourceSet().createResource(URI.createFileURI(file.getAbsolutePath()));	
+			
+			resource.getContents().add((EObject)d.transformIntoOperationalDelta());
+			resource.save(null);			
+	
+			logger.debug("XMI Resource saved!");
+		} catch (IOException | ClassCastException e) {
+			logger.error("Not able to save XMI resource: " + e.getMessage());					
+		}		
+		return path;
+	}
+
+}
