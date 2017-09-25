@@ -21,7 +21,7 @@ Make sure you enable "contact all update sites" in the update manager so all dep
 
 ### Setup steps:
 
-1. Go to ```File/Import.../Team/Team Project Set```, check URL and enter in and import this PSF file: https://raw.githubusercontent.com/eMoflon/kaleidoscope-zoo/master/showcase/ShowcaseProjectSet.psf
+1. Go to ```File/Import.../Team/Team Project Set```, check URL and enter in and import this PSF file: https://raw.githubusercontent.com/eMoflon/kaleidoscope-zoo/master/showcase/projectSet.psf
 2. Run one of the Showcase projects as Eclipse Application
 3. Add a new project called ```New Showcase [First/Second/Third] Project```
 
