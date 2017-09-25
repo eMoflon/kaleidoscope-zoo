@@ -11,6 +11,21 @@ A zoo of examples and application scenarios of kaleidoscope, a model synchronisa
   - In Eclipse: Go to ```Window->Preferences->General->Workspace```
   - Change the text file encoding to 'Other: UTF-8'
 
+## Showcases
+
+### Install required plugins:
+1. Install the latest version of Xtend: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
+2. Install the latest version of Xtext: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/r
+
+Make sure you enable "contact all update sites" in the update manager so all dependencies are automatically installed.
+
+### Setup steps:
+
+1. Go to ```File/Import.../Team/Team Project Set```, check URL and enter in and import this PSF file: https://raw.githubusercontent.com/eMoflon/kaleidoscope-zoo/master/showcase/ShowcaseProjectSet.psf
+2. Run one of the Showcase projects as Eclipse Application
+3. Add a new project called ```New Showcase [First/Second/Third] Project```
+
+
 ## BX Demonstrator
 
 ### Install required plugins:
@@ -54,19 +69,3 @@ Make sure you enable "contact all update sites" in the update manager so all dep
 2. Run ```com.kaleidoscope.usecase.kaleidocrypt``` as Eclipse Application
 3. Add new project called CryptoAPI
 4. New configuration can be added by selecting the CryptoAPI project and adding a configuration such as SymmetricEncryption.
-
-## Showcase
-
-### Install required plugins:
-1. Install the latest version of Xtend: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
-2. Install the latest version of Xtext: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/r
-
-Make sure you enable "contact all update sites" in the update manager so all dependencies are automatically installed.
-
-### Setup steps:
-
-1. Go to ```File/Import.../Team/Team Project Set```, check URL and enter in and import this PSF file: https://raw.githubusercontent.com/eMoflon/kaleidoscope-zoo/master/showcase/ShowcaseProjectSet.psf
-2. Run one of the Showcase projects as Eclipse Application
-3. Add a new project called ```New Showcase [First/Second/Third] Project```
-
-
