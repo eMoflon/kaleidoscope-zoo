@@ -58,9 +58,8 @@ Make sure you enable "contact all update sites" in the update manager so all dep
 ## Showcase
 
 ### Install required plugins:
-1. Install eMoflon: http://emoflon.github.io/eclipse-plugin/emoflon_2.31.0/updatesite
-2. Install the latest version of Xtend: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
-3. Install the latest version of Xtext: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/r
+1. Install the latest version of Xtend: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
+2. Install the latest version of Xtext: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/r
 
 Make sure you enable "contact all update sites" in the update manager so all dependencies are automatically installed.
 
