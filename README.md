@@ -4,10 +4,6 @@ A zoo of examples and application scenarios of kaleidoscope, a model synchronisa
 ## Prerequisite:
 
 1. Install Eclipse Oxygen with Eclipse Modeling Tools (tested on 4.7.0) http://www.eclipse.org/downloads/packages/eclipse-modeling-tools/oxygenr
-2. [for BX demonstrator] Tomcat: Install Tomcat Version 7.0 on your system. You can follow the below link for the installation process. (http://crunchify.com/step-by-step-guide-to-setup-and-install-apache-tomcat-server-in-eclipse-development-environment-ide/)
-
-
-Make sure you enable "contact all update sites" in the update manager so all dependencies are automatically installed.
 
 ## Setup steps:
 
@@ -18,9 +14,12 @@ Make sure you enable "contact all update sites" in the update manager so all dep
 ## BX Demonstrator
 
 ### Install required plugins:
-1. Install eMoflon: http://emoflon.github.io/eclipse-plugin/emoflon_2.31.0/updatesite
-2. Install the latest version of Xtend: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
-3. Install the latest version of Web Tools Platform http://download.eclipse.org/webtools/repository/oxygen/
+1. Tomcat: Install Tomcat Version 7.0 on your system. You can follow the below link for the installation process. (http://crunchify.com/step-by-step-guide-to-setup-and-install-apache-tomcat-server-in-eclipse-development-environment-ide/)
+2. Install eMoflon: http://emoflon.github.io/eclipse-plugin/emoflon_2.31.0/updatesite
+3. Install the latest version of Xtend: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
+4. Install the latest version of Web Tools Platform http://download.eclipse.org/webtools/repository/oxygen/
+
+Make sure you enable "contact all update sites" in the update manager so all dependencies are automatically installed.
 
 ### Setup steps:
 
@@ -47,6 +46,8 @@ For small code changes, Tomcat automatically build and push the changes while in
 1. Install eMoflon: http://emoflon.github.io/eclipse-plugin/emoflon_2.31.0/updatesite
 2. Install the latest version of Xtend: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
 
+Make sure you enable "contact all update sites" in the update manager so all dependencies are automatically installed.
+
 ### Setup steps:
 
 1. Go to ```File/Import.../Team/Team Project Set```, check URL and enter in and import this PSF file: https://raw.githubusercontent.com/eMoflon/kaleidoscope-zoo/master/projectsSet.psf
@@ -60,6 +61,8 @@ For small code changes, Tomcat automatically build and push the changes while in
 1. Install eMoflon: http://emoflon.github.io/eclipse-plugin/emoflon_2.31.0/updatesite
 2. Install the latest version of Xtend: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
 3. Install the latest version of Xtext: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/r
+
+Make sure you enable "contact all update sites" in the update manager so all dependencies are automatically installed.
 
 ### Setup steps:
 
