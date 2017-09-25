@@ -39,10 +39,10 @@ Now you will be able to run the project on browser by entering http://localhost:
 
 For small code changes, Tomcat automatically build and push the changes while in running mode. Only you have to refresh the browser to see the effect of changes. For big changes, changes in javascript file(logic.js) or if the automatic build is not working(sometimes), stop the server, clean and then start once again.
 
-### Kaleidocrypt
+## Kaleidocrypt
 
 
-## Install required plugins:
+### Install required plugins:
 1. Install eMoflon: http://emoflon.github.io/eclipse-plugin/emoflon_2.31.0/updatesite
 2. Install the latest version of Xtend: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
 
@@ -55,9 +55,9 @@ Make sure you enable "contact all update sites" in the update manager so all dep
 3. Add new project called CryptoAPI
 4. New configuration can be added by selecting the CryptoAPI project and adding a configuration such as SymmetricEncryption.
 
-### Showcase
+## Showcase
 
-## Install required plugins:
+### Install required plugins:
 1. Install eMoflon: http://emoflon.github.io/eclipse-plugin/emoflon_2.31.0/updatesite
 2. Install the latest version of Xtend: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
 3. Install the latest version of Xtext: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/r
