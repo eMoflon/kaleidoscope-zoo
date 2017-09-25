@@ -23,7 +23,7 @@ Make sure you enable "contact all update sites" in the update manager so all dep
 
 ### Setup steps:
 
-1. Go to ```File/Import.../Team/Team Project Set```, check URL and enter in and import this PSF file: https://raw.githubusercontent.com/eMoflon/kaleidoscope-zoo/master/BXdemonstratorProjectSet.psf
+1. Go to ```File/Import.../Team/Team Project Set```, check URL and enter in and import this PSF file: https://raw.githubusercontent.com/eMoflon/kaleidoscope-zoo/master/bxdemonstrator/BXdemonstratorProjectSet.psf
 2. Add Servers View  
   - ```Window->Show View->Other...->Workspace```
   - Search for Servers View and add it
@@ -50,7 +50,7 @@ Make sure you enable "contact all update sites" in the update manager so all dep
 
 ### Setup steps:
 
-1. Go to ```File/Import.../Team/Team Project Set```, check URL and enter in and import this PSF file: https://raw.githubusercontent.com/eMoflon/kaleidoscope-zoo/master/KaleidocryptProjectSet.psf
+1. Go to ```File/Import.../Team/Team Project Set```, check URL and enter in and import this PSF file: https://raw.githubusercontent.com/eMoflon/kaleidoscope-zoo/master/kaleidocrypt/KaleidocryptProjectSet.psf
 2. Run ```com.kaleidoscope.usecase.kaleidocrypt``` as Eclipse Application
 3. Add new project called CryptoAPI
 4. New configuration can be added by selecting the CryptoAPI project and adding a configuration such as SymmetricEncryption.
@@ -65,7 +65,7 @@ Make sure you enable "contact all update sites" in the update manager so all dep
 
 ### Setup steps:
 
-1. Go to ```File/Import.../Team/Team Project Set```, check URL and enter in and import this PSF file: https://raw.githubusercontent.com/eMoflon/kaleidoscope-zoo/master/ShowcaseProjectSet.psf
+1. Go to ```File/Import.../Team/Team Project Set```, check URL and enter in and import this PSF file: https://raw.githubusercontent.com/eMoflon/kaleidoscope-zoo/master/showcase/ShowcaseProjectSet.psf
 2. Run one of the Showcase projects as Eclipse Application
 3. Add a new project called ```New Showcase [First/Second/Third] Project```
 
