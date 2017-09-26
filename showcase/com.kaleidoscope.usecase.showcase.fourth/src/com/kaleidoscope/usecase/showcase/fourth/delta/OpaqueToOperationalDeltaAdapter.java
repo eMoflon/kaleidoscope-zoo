@@ -22,12 +22,7 @@ public class OpaqueToOperationalDeltaAdapter<Model> implements DeltaAdapter<Oper
 
 	@Override
 	public OpaqueDelta<Model> unparse(OperationalDelta md, Model a) {
-		
-       OpaqueDelta<Model> delta = (m) -> {
-    	   		md.executeOperationalDelta();
-		};
-		
+		OpaqueDelta<Model> delta = md.transformToOpaqueDelta();
 		return delta;
 	}
-
 }

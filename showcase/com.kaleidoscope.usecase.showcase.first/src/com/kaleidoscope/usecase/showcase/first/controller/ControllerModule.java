@@ -83,7 +83,7 @@ public class ControllerModule extends AbstractModule{
 		PersonContainer sourceModel = PersonsFactory.eINSTANCE.createPersonContainer();
 		EmployeeContainer targetModel = EmployeesFactory.eINSTANCE.createEmployeeContainer();
 		 
-		PersistentSynchroniser<PersonContainer, EmployeeContainer, String, OperationalDelta, OperationalDelta, Path> tool = new SynchroniserImpl(sourceModel, targetModel);
+		SynchroniserImpl tool = new SynchroniserImpl(sourceModel, targetModel);
 		tool.initialize();
 		
 		return tool;

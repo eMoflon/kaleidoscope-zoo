@@ -47,7 +47,7 @@ public class XMIdeltaAdapter<Model>
 			
 				KaleidoscopeDelta.OperationalDelta opDelta = (KaleidoscopeDelta.OperationalDelta)genResource.getContents().get(0);
 				
-				OperationalDelta operationalDelta = new OperationalDelta(opDelta);
+				OperationalDelta operationalDelta = OperationalDelta.fromEMF(opDelta);
 				
 				return operationalDelta;
 			}else {
@@ -71,7 +71,7 @@ public class XMIdeltaAdapter<Model>
 			File file = path.toFile();  
 			Resource resource = ((EObject)a).eResource().getResourceSet().createResource(URI.createFileURI(file.getAbsolutePath()));	
 			
-			resource.getContents().add((EObject)d.transformIntoOperationalDelta());
+			resource.getContents().add((EObject)d.toEMF());
 			resource.save(null);			
 	
 			logger.debug("XMI Resource saved!");
