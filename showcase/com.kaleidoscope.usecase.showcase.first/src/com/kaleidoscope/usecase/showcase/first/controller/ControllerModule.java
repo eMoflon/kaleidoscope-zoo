@@ -27,61 +27,105 @@ import Persons.PersonContainer;
 import Persons.PersonsFactory;
 
 public class ControllerModule extends AbstractModule{
-
 	private Path sourceArtefactAdapterPath;
 	private Path targetArtefactAdapterPath;
 	private Path destination;
-	
-	private PersistentStateBasedController<PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta, OperationalDelta, Path>  controller = null;
-	
-	public ControllerModule(Path projectPath, Path destination) {
+	private class ControllerType extends 
+		TypeLiteral<PersistentStateBasedController<
+			PersonContainer, 
+			Path, 
+			EmployeeContainer, 
+			Path, 
+			String, 
+			OperationalDelta,
+			OperationalDelta, 
+			Path>>{}
 		
+	public ControllerModule(Path projectPath, Path destination) {	
 		this.sourceArtefactAdapterPath = projectPath.resolve(Paths.get("models", "src.xmi"));
 		this.targetArtefactAdapterPath = projectPath.resolve(Paths.get("models", "trg.xmi"));	
 		this.destination = destination;
-		
 	}
 	
+	
 	@Provides @Src
-	ArtefactAdapter<PersonContainer, Path> provideSourceArtefactAdapter() {		
+	private 
+	ArtefactAdapter<
+		PersonContainer, 
+		Path
+		> 
+	provideSourceArtefactAdapter() {		
 		return new XMIArtefactAdapter<PersonContainer>(sourceArtefactAdapterPath);
 	}
 
 	@Provides @Trg
-	ArtefactAdapter<EmployeeContainer, Path> provideTargetArtefactAdapter() {	
-		
+	private 
+	ArtefactAdapter<
+		EmployeeContainer, 
+		Path
+		> 
+	provideTargetArtefactAdapter() {	
 		return new XMIArtefactAdapter<EmployeeContainer>(targetArtefactAdapterPath);
 	}
 
 	@Provides
-	PersistentSynchroniser<PersonContainer, EmployeeContainer, String, OperationalDelta, OperationalDelta, Path> provideSynchroniser(){
-		
+	private 
+	PersistentSynchroniser<
+		PersonContainer, 
+		EmployeeContainer, 
+		String, 
+		OperationalDelta, 
+		OperationalDelta, 
+		Path
+		> 
+	provideSynchroniser(){
 		PersonContainer sourceModel = PersonsFactory.eINSTANCE.createPersonContainer();
 		EmployeeContainer targetModel = EmployeesFactory.eINSTANCE.createEmployeeContainer();
 		 
-		PersistentSynchroniser<PersonContainer, EmployeeContainer, String, OperationalDelta, OperationalDelta, Path> tool = 
-				new SynchroniserImpl(sourceModel, targetModel);
-		
+		PersistentSynchroniser<PersonContainer, EmployeeContainer, String, OperationalDelta, OperationalDelta, Path> tool = new SynchroniserImpl(sourceModel, targetModel);
 		tool.initialize();
+		
 		return tool;
 	}
+	
+	@Provides @Src
+	private 
+	OfflineDeltaDiscoverer<
+		PersonContainer, 
+		OperationalDelta
+		> 
+	provideSourceOfflineDeltaDiscoverer(){
+		return new EMFCompareDeltaDiscoverer<PersonContainer>();
+	}
+	
+	@Provides @Trg
+	private 
+	OfflineDeltaDiscoverer<
+		EmployeeContainer, 
+		OperationalDelta
+		> 
+	provideTargetOfflineDeltaDiscoverer(){
+		return new EMFCompareDeltaDiscoverer<EmployeeContainer>();
+	}
+	
 	@Override
 	protected void configure() {
-		
-		
-		bind(new TypeLiteral<OfflineDeltaDiscoverer<PersonContainer, OperationalDelta>>() {}). 
-								annotatedWith(Src.class).to(new TypeLiteral<EMFCompareDeltaDiscoverer<PersonContainer>>() {});
-		bind(new TypeLiteral<OfflineDeltaDiscoverer<EmployeeContainer, OperationalDelta>>() {}). annotatedWith(Trg.class).to(new TypeLiteral<EMFCompareDeltaDiscoverer<EmployeeContainer>>() {});
 		bind(Path.class).annotatedWith(Dest.class).toInstance(destination);
 	}
 	
-	public PersistentStateBasedController<PersonContainer, Path, EmployeeContainer, Path, String,  OperationalDelta, OperationalDelta, Path> getControllerInstance() {
-		
+	public 
+	PersistentStateBasedController<
+		PersonContainer, 
+		Path, 
+		EmployeeContainer, 
+		Path, 
+		String,  
+		OperationalDelta, 
+		OperationalDelta, 
+		Path
+		> 
+	getControllerInstance() {
 		Injector injector = Guice.createInjector(this);
-		controller = 
-			injector.getInstance(Key.get(new TypeLiteral<PersistentStateBasedController<PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta, OperationalDelta, Path>>(){}));
-		
-		return controller;
+		return injector.getInstance(Key.get(new ControllerType()));
 	}
-	
 }
