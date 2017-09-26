@@ -64,13 +64,24 @@ public class ControllerModule extends AbstractModule{
 		tool.initialize();
 		return tool;
 	}
+	
+	@Provides @Src
+	OfflineDeltaDiscoverer<PersonContainer, OperationalDelta> provideSourceOfflineDeltaDiscoverer(){
+		
+		return new EMFCompareDeltaDiscoverer<PersonContainer>();
+	}
+	
+	@Provides @Trg
+	OfflineDeltaDiscoverer<EmployeeContainer, OperationalDelta> provideTargetOfflineDeltaDiscoverer(){
+		
+		return new EMFCompareDeltaDiscoverer<EmployeeContainer>();
+	}
+	
+	
 	@Override
 	protected void configure() {
 		
 		
-		bind(new TypeLiteral<OfflineDeltaDiscoverer<PersonContainer, OperationalDelta>>() {}). 
-								annotatedWith(Src.class).to(new TypeLiteral<EMFCompareDeltaDiscoverer<PersonContainer>>() {});
-		bind(new TypeLiteral<OfflineDeltaDiscoverer<EmployeeContainer, OperationalDelta>>() {}). annotatedWith(Trg.class).to(new TypeLiteral<EMFCompareDeltaDiscoverer<EmployeeContainer>>() {});
 		bind(Path.class).annotatedWith(Dest.class).toInstance(destination);
 	}
 	
