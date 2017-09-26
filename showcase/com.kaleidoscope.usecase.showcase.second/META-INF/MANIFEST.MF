@@ -25,5 +25,6 @@ Require-Bundle: com.kaleidoscope.core.framework,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.xtend.lib,
  org.eclipse.xtend.lib.macro,
- com.kaleidoscope.util;bundle-version="1.0.0"
+ com.kaleidoscope.util;bundle-version="1.0.0",
+ org.apache.commons.io;bundle-version="2.2.0"
 

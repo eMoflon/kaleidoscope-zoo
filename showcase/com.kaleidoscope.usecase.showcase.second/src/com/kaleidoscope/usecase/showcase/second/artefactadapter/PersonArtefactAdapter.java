@@ -87,7 +87,7 @@ public class PersonArtefactAdapter implements ArtefactAdapter<Persons.PersonCont
 
 			PersonSerializer serializer = new PersonSerializer();
 			CharSequence fileContent = serializer.personContainerToString(xtextModel.get());
-			FileUtils.writeStringToFile(path.toFile(), fileContent.toString(), (Charset)null);
+			FileUtils.writeStringToFile(path.toFile(), fileContent.toString());
 			
 			logger.debug("Person DSL saved!");
 		} catch (IOException | ClassCastException e) {

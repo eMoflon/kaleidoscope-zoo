@@ -30,6 +30,7 @@ public class ControllerModule extends AbstractModule{
 	private Path sourceArtefactAdapterPath;
 	private Path targetArtefactAdapterPath;
 	private Path destination;
+	
 	private class ControllerType extends 
 		TypeLiteral<PersistentStateBasedController<
 			PersonContainer, 
