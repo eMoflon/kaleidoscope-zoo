@@ -15,7 +15,7 @@ A zoo of examples and application scenarios of kaleidoscope, a model synchronisa
 
 ### Install required plugins:
 1. Install the latest version of Xtend: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
-2. Install the latest version of Xtext: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/r
+2. Install the latest version of Xtext: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
 
 Make sure you enable "contact all update sites" in the update manager so all dependencies are automatically installed.
 
