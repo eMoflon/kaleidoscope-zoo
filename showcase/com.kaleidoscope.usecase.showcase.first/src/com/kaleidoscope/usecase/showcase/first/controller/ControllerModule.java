@@ -27,9 +27,9 @@ import Persons.PersonContainer;
 import Persons.PersonsFactory;
 
 public class ControllerModule extends AbstractModule{
-	private Path sourceArtefactAdapterPath;
-	private Path targetArtefactAdapterPath;
-	private Path destination;
+	protected Path sourceArtefactAdapterPath;
+	protected Path targetArtefactAdapterPath;
+	protected Path destination;
 	
 	private class ControllerType extends 
 		TypeLiteral<PersistentStateBasedController<
@@ -42,10 +42,14 @@ public class ControllerModule extends AbstractModule{
 			OperationalDelta, 
 			Path>>{}
 		
+	protected ControllerModule(Path destination) {
+		this.destination = destination;		
+	}
+	
 	public ControllerModule(Path projectPath, Path destination) {	
+		this(destination);
 		this.sourceArtefactAdapterPath = projectPath.resolve(Paths.get("models", "src.xmi"));
 		this.targetArtefactAdapterPath = projectPath.resolve(Paths.get("models", "trg.xmi"));	
-		this.destination = destination;
 	}
 	
 	

@@ -1,7 +1,6 @@
 package com.kaleidoscope.usecase.showcase.second.artefactadapter;
 import java.io.File;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.util.Optional;
 
@@ -13,7 +12,6 @@ import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 
 import com.kaleidoscope.core.framework.workflow.adapters.ArtefactAdapter;
-import com.kaleidoscope.usecase.showcase.second.artefactadapter.EmployeeSerializer;
 import com.kaleidoscope.usecase.showcase.xtext.employeeDsl.Employee;
 import com.kaleidoscope.usecase.showcase.xtext.employeeDsl.EmployeeContainer;
 import com.kaleidoscope.usecase.showcase.xtext.employeeDsl.EmployeeDslFactory;

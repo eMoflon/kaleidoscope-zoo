@@ -4,7 +4,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Map;
 
-import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
@@ -19,22 +18,14 @@ import com.kaleidoscope.core.framework.workflow.controllers.statebased.Persisten
 import com.kaleidoscope.usecase.showcase.second.controller.ControllerModule;
 
 import Employees.EmployeeContainer;
-
-
   
-public class Builder extends IncrementalProjectBuilder implements IResourceDeltaVisitor {
-	
+public class Builder extends IncrementalProjectBuilder implements IResourceDeltaVisitor {	
 	private IProject project;
 	private Path projectPath;
 	private ControllerModule controllerModule;
 	
 	private static final Logger logger = Logger.getLogger(Builder.class);
 	
-	
-	public Builder() {
-	    BasicConfigurator.configure();
-	}
-
 	@Override
 	protected IProject[] build(int kind, Map<String, String> args, IProgressMonitor monitor) throws CoreException {		
 		logger.info("Build is being performed.");
