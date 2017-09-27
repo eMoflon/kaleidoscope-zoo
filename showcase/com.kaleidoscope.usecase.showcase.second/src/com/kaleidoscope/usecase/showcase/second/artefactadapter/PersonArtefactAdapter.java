@@ -2,6 +2,7 @@ package com.kaleidoscope.usecase.showcase.second.artefactadapter;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.util.Optional;
 
@@ -85,7 +86,7 @@ public class PersonArtefactAdapter implements ArtefactAdapter<Persons.PersonCont
 
 			PersonSerializer serializer = new PersonSerializer();
 			CharSequence fileContent = serializer.personContainerToString(xtextModel.get());
-			FileUtils.writeStringToFile(path.toFile(), fileContent.toString());
+			FileUtils.writeStringToFile(path.toFile(), fileContent.toString(), (Charset)null);
 			
 			logger.debug("Person DSL saved!");
 		} catch (IOException | ClassCastException e) {

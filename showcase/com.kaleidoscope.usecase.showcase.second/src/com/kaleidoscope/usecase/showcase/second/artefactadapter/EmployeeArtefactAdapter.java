@@ -1,6 +1,7 @@
 package com.kaleidoscope.usecase.showcase.second.artefactadapter;
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.util.Optional;
 
@@ -86,7 +87,7 @@ public class EmployeeArtefactAdapter implements ArtefactAdapter<Employees.Employ
 
 			EmployeeSerializer serializer = new EmployeeSerializer();
 			CharSequence fileContent =  serializer.employeeContainerToString(xtextModel.get());
-			FileUtils.writeStringToFile(path.toFile(), fileContent.toString());
+			FileUtils.writeStringToFile(path.toFile(), fileContent.toString(), (Charset)null);
 			logger.debug("Employee DSL saved!");
 		} catch (IOException | ClassCastException e) {
 			logger.error("Not able to save XMI resource: " + e.getMessage());					

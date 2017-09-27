@@ -13,16 +13,32 @@ import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import com.google.inject.Key;
+import com.google.inject.TypeLiteral;
 import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
 import com.kaleidoscope.core.framework.workflow.controllers.statebased.PersistentStateBasedController;
+import com.kaleidoscope.usecase.showcase.first.controller.ArtefactAdapterModule;
 import com.kaleidoscope.usecase.showcase.first.controller.ControllerModule;
 
 import Employees.EmployeeContainer;
+import Persons.PersonContainer;
   
 public class Builder extends IncrementalProjectBuilder implements IResourceDeltaVisitor {
 	private IProject project;
 	private Path projectPath;
-	private ControllerModule controllerModule;
+	
+	private class ControllerType extends 
+	TypeLiteral<PersistentStateBasedController<
+		PersonContainer, 
+		Path, 
+		EmployeeContainer, 
+		Path, 
+		String, 
+		OperationalDelta,
+		OperationalDelta, 
+		Path>>{}
 	
 	private static final Logger logger = Logger.getLogger(Builder.class);
 	
@@ -31,7 +47,6 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 		logger.info("Build is being performed.");
 		project = getProject();
 		projectPath = Paths.get(project.getLocation().toString());
-		controllerModule = new ControllerModule(projectPath, projectPath.resolve(Paths.get("models")));
 		
 		switch (kind) {
 			case CLEAN_BUILD:
@@ -50,6 +65,25 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 		return null;
 	}
 	
+	public 
+	PersistentStateBasedController<
+		PersonContainer, 
+		Path, 
+		EmployeeContainer, 
+		Path, 
+		String,  
+		OperationalDelta, 
+		OperationalDelta, 
+		Path
+		> 
+	getControllerInstance() {
+		Injector injector = Guice.createInjector(
+				new ControllerModule(projectPath.resolve(Paths.get("models"))), 
+				new ArtefactAdapterModule(projectPath)
+			);
+		return injector.getInstance(Key.get(new ControllerType()));
+	}
+	
 	private void generateFilesIfchangeIsRelevant() throws CoreException {
 		getDelta(getProject()).accept(this);
 	}
@@ -63,18 +97,14 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 	private void syncForward()	throws CoreException{
 		
 		logger.info("Sync a java model with the configuration model is performed!");
-		PersistentStateBasedController<Persons.PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta,  OperationalDelta, Path> controller = controllerModule.getControllerInstance();
-		
-		controller.syncForward(projectPath.resolve(Paths.get("models", "src.xmi")));
+		getControllerInstance().syncForward(projectPath.resolve(Paths.get("models", "src.xmi")));
 		refreshProject();
 		logger.info("Sync a java model with the configuration model is done!");
 	}
 	
 	private void syncBackward()	throws CoreException{
-		logger.info("Sync configuration model with a java model is performed!");
-		PersistentStateBasedController<Persons.PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta, OperationalDelta, Path> controller = controllerModule.getControllerInstance();
-		
-		controller.syncBackward(projectPath.resolve(Paths.get("models", "trg.xmi")));
+		logger.info("Sync configuration model with a java model is performed!");		
+		getControllerInstance().syncBackward(projectPath.resolve(Paths.get("models", "trg.xmi")));
 		refreshProject();
 		logger.info("Sync configuration model with a java model is done!");
 	}
