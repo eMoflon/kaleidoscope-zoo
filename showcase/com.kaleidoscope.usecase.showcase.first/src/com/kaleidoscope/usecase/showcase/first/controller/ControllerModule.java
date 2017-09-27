@@ -26,7 +26,7 @@ import Employees.EmployeesFactory;
 import Persons.PersonContainer;
 import Persons.PersonsFactory;
 
-public class ControllerModule extends AbstractModule{
+public class ControllerModule extends AbstractModule {
 	protected Path sourceArtefactAdapterPath;
 	protected Path targetArtefactAdapterPath;
 	protected Path destination;
@@ -74,7 +74,7 @@ public class ControllerModule extends AbstractModule{
 	}
 
 	@Provides
-	private 
+	protected 
 	PersistentSynchroniser<
 		PersonContainer, 
 		EmployeeContainer, 
@@ -94,7 +94,7 @@ public class ControllerModule extends AbstractModule{
 	}
 	
 	@Provides @Src
-	private 
+	protected
 	OfflineDeltaDiscoverer<
 		PersonContainer, 
 		OperationalDelta
@@ -104,7 +104,7 @@ public class ControllerModule extends AbstractModule{
 	}
 	
 	@Provides @Trg
-	private 
+	protected 
 	OfflineDeltaDiscoverer<
 		EmployeeContainer, 
 		OperationalDelta

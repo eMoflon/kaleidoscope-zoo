@@ -31,6 +31,7 @@ public class ControllerModule extends com.kaleidoscope.usecase.showcase.first.co
 	provideSourceArtefactAdapter() {		
 		return new PersonArtefactAdapter(sourceArtefactAdapterPath);
 	}
+	
 	@Override
 	@Provides @Trg
 	protected 
