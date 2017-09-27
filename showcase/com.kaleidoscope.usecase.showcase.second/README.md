@@ -16,6 +16,6 @@ Saving the source model should trigger the addition of a corresponding new emplo
 This scenario is:
 - __State-based__ meaning that the delta to be propagated is supplied by providing a new version of the entire model. This requires an offline delta discoverer (EMFCompare is used here).
 - __Persistent__ meaning that all models are saved to file and the synchronisation can be continued even after shutting down completely.
-- __Xtext-based__ meaning Xtext is used for defining ArtefactAdapters. For both models a special grammar is defined in Xtext for parsing and unparsing textual representations of them.
+- __Xtext-based__ meaning Xtext is used for defining ArtefactAdapters(deals with model representations). For both models a special grammar is defined in Xtext for parsing and unparsing textual representations of them.
 
-To see how the framework is correspondingly configured, take a look at `src/com/kaleidoscope/usecase/showcase/first/controller/ControllerModule.java`
+The only difference from the first scenario is way of handling models representations. This demonstrates that it is possible to switch ArtefactAdapter to represent models as text without affecting the rest of the framework. To see how the framework is correspondingly configured, take a look at `src/com/kaleidoscope/usecase/showcase/second/controller/ControllerModule.java`
