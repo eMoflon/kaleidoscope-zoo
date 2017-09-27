@@ -21,8 +21,9 @@ public class ControllerModule extends com.kaleidoscope.usecase.showcase.first.co
 		this.targetArtefactAdapterPath = projectPath.resolve(Paths.get("models", "trg.employees"));
 	}
 	
+	@Override
 	@Provides @Src
-	private 
+	protected
 	ArtefactAdapter<
 		PersonContainer, 
 		Path
@@ -30,9 +31,9 @@ public class ControllerModule extends com.kaleidoscope.usecase.showcase.first.co
 	provideSourceArtefactAdapter() {		
 		return new PersonArtefactAdapter(sourceArtefactAdapterPath);
 	}
-
+	@Override
 	@Provides @Trg
-	private 
+	protected 
 	ArtefactAdapter<
 		EmployeeContainer, 
 		Path

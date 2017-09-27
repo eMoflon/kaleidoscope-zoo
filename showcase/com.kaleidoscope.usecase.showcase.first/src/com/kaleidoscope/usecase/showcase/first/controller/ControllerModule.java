@@ -52,9 +52,9 @@ public class ControllerModule extends AbstractModule{
 		this.targetArtefactAdapterPath = projectPath.resolve(Paths.get("models", "trg.xmi"));	
 	}
 	
-	
+
 	@Provides @Src
-	private 
+	protected 
 	ArtefactAdapter<
 		PersonContainer, 
 		Path
@@ -64,7 +64,7 @@ public class ControllerModule extends AbstractModule{
 	}
 
 	@Provides @Trg
-	private 
+	protected 
 	ArtefactAdapter<
 		EmployeeContainer, 
 		Path
