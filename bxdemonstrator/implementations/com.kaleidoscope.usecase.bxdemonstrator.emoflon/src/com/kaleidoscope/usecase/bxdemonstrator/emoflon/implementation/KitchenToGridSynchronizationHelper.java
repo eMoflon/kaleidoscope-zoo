@@ -71,7 +71,7 @@ public class KitchenToGridSynchronizationHelper extends SynchronizationHelper {
 		copy.add(trg);
 		copy.add(corr);
 		copy.add(protocol.save());
-		copy.add(javaBasedDelta.transformIntoOperationalDelta());
+		copy.add(javaBasedDelta.toEMF());
 		root = EcoreUtil.copyAll(copy);
 		
 		objectMapping = new Copier();
@@ -101,8 +101,7 @@ public class KitchenToGridSynchronizationHelper extends SynchronizationHelper {
 		protocol = new SynchronizationProtocol();
 		protocol.load((org.moflon.tgg.runtime.PrecedenceStructure) oldProt);
 		
-		javaBasedDelta.createFromEMFOperationalDelta((KaleidoscopeDelta.OperationalDelta)oldDelta);
-		
+		javaBasedDelta = OperationalDelta.fromEMF((KaleidoscopeDelta.OperationalDelta)oldDelta);
 		System.out.println("Performed rollback!");
 	}
 	

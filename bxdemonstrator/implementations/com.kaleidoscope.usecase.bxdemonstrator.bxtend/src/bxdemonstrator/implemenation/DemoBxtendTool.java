@@ -263,7 +263,7 @@ public class DemoBxtendTool  implements  ContinuableSynchroniser<Grid, Kitchen, 
 		copy.add(source);
 		copy.add(target);
 		copy.add(corr);	
-		copy.add(operationalJavaBasedDelta.transformIntoOperationalDelta());
+		copy.add(operationalJavaBasedDelta.toEMF());
 		root = EcoreUtil.copyAll(copy);
 		
 		objectMapping = new Copier();
@@ -289,8 +289,7 @@ public class DemoBxtendTool  implements  ContinuableSynchroniser<Grid, Kitchen, 
 		corr.eResource().getContents().remove(corr);
 		corr = (Transformation) oldCorr;
 		
-		operationalJavaBasedDelta.createFromEMFOperationalDelta((KaleidoscopeDelta.OperationalDelta)oldDelta);
-		
+		operationalJavaBasedDelta = OperationalDelta.fromEMF((KaleidoscopeDelta.OperationalDelta)oldDelta);
 		System.out.println("Performed rollback!");
 	}
 }

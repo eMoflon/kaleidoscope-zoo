@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Optional;
-import java.util.function.Consumer;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -14,6 +13,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
+import com.kaleidoscope.core.delta.javabased.opaque.OpaqueDelta;
 import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
 import com.kaleidoscope.core.framework.synchronisation.PersistentSynchroniser;
 
@@ -95,8 +95,8 @@ public class BxtendTool
 	@Override
 	public void syncForward(OperationalDelta operationalJavaBasedDelta) {
 
-		Consumer<EObject> delta = operationalJavaBasedDelta.executeOperationalDelta();
-		delta.accept(sourceModel);
+		OpaqueDelta<Task> delta = operationalJavaBasedDelta.transformToOpaqueDelta();
+		delta.execute(sourceModel);
 
 		BxtendCryptoImplTransformation f2pt = new BxtendCryptoImplTransformation(sourceResource, targetResource, corrResource);
 		f2pt.sourceToTarget();
@@ -109,8 +109,8 @@ public class BxtendTool
 	@Override
 	public void syncBackward(OperationalDelta operationalJavaBasedDelta) {
 
-		Consumer<EObject> delta = operationalJavaBasedDelta.executeOperationalDelta();
-		delta.accept(targetModel);
+		OpaqueDelta<EObject> delta = operationalJavaBasedDelta.transformToOpaqueDelta();
+		delta.execute(targetModel);
 
 		BxtendCryptoImplTransformation f2pt = new BxtendCryptoImplTransformation(sourceResource, targetResource, corrResource);
 		f2pt.targetToSource();

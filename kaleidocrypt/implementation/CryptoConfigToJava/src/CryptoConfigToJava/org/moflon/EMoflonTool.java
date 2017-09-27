@@ -96,7 +96,7 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 	@Override
 	public void syncForward(OperationalDelta javaBasedDelta){
 		 
-		Consumer<EObject> delta = javaBasedDelta.executeOperationalDelta();
+		Consumer<EObject> delta = (model) -> {javaBasedDelta.transformToOpaqueDelta().execute(model);};
 		
 		loadTriple(persistanceDirectory.resolve(corrModelFileName));
 		loadSynchronizationProtocol(persistanceDirectory.resolve(syncProtocolFileName).toString());
@@ -108,7 +108,7 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 	 @Override
 	 public void syncBackward(OperationalDelta javaBasedDelta){		 
 		 
-		Consumer<EObject> delta = javaBasedDelta.executeOperationalDelta();
+		 Consumer<EObject> delta = (model) -> {javaBasedDelta.transformToOpaqueDelta().execute(model);};
 		
 		loadTriple(persistanceDirectory.resolve(corrModelFileName));
 		loadSynchronizationProtocol(persistanceDirectory.resolve(syncProtocolFileName).toString());
