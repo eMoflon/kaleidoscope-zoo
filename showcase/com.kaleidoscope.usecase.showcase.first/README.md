@@ -16,5 +16,6 @@ Saving the source model should trigger the addition of a corresponding new emplo
 This scenario is:
 - __State-based__ meaning that the delta to be propagated is supplied by providing a new version of the entire model. This requires an offline delta discoverer (EMFCompare is used here).
 - __Persistent__ meaning that all models are saved to file and the synchronisation can be continued even after shutting down completely.
+- Involved artefacts are standard Ecore XMI files for both source and target models.
 
 To see how the framework is correspondingly configured, take a look at `src/com/kaleidoscope/usecase/showcase/first/controller/ControllerModule.java`

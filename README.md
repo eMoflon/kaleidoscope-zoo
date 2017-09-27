@@ -13,6 +13,12 @@ A zoo of examples and application scenarios of kaleidoscope, a model synchronisa
 
 ## Showcases
 
+### The underlying consistency relation
+All showcases implement the same underlying consistency relation between the same metamodels.
+The source metamodel represents a set of persons in a single container.  Each person has a string as name and an integer as ID that is unique in the container.
+The target metamodel is similar, also consisting of a single container with employees.  Employees have names and unique IDs just like persons, but additionally have an integer representing their salary.
+Source and target models are consistent if there exist a bijection between persons and employees that is equality on IDs.
+
 ### Install required plugins:
 1. Install the latest version of Xtend: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
 2. Install the latest version of Xtext: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
@@ -22,27 +28,8 @@ Make sure you enable "contact all update sites" in the update manager so all dep
 ### Setup steps:
 
 1. Go to ```File/Import.../Team/Team Project Set```, check URL and enter in and import this PSF file: https://raw.githubusercontent.com/eMoflon/kaleidoscope-zoo/master/showcase/projectSet.psf
-
-### First scenario
-1. Run ```com.kaleidoscope.usecase.showcase.first``` as Eclipse Application
-2. In the new Eclipse instance go to ```File -> New -> Other...```
-3. Choose the wizard ```New Showcase First Project``` inside the folder ```Other```
-4. Enter the project name and Finish
-
-### Second scenario
-1. Run ```com.kaleidoscope.usecase.showcase.second``` as Eclipse Application
-2. In the new Eclipse instance go to ```File -> New -> Other...```
-3. Choose the wizard ```New Showcase Second Project``` inside the folder ```Other```
-4. Enter the project name and Finish
-
-### Third scenario
-1. Run ```com.kaleidoscope.usecase.showcase.third``` as Eclipse Application
-2. In the new Eclipse instance go to ```File -> New -> Other...```
-3. Choose the wizard ```New Showcase Third Project``` inside the folder ```Other```
-4. Enter the project name and Finish
-
-### Fourth scenario
-1. Run ```com.kaleidoscope.usecase.showcase.fourth``` as Java Application
+2. You might have to manually trigger code generation for the Xtext/Xtend projects.
+3. Consult the README file in each of the showcase projects for further instructions.
 
 ## BX Demonstrator
 
