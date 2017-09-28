@@ -12,4 +12,5 @@ Require-Bundle: com.google.inject;bundle-version="3.0.0",
  com.kaleidoscope.core.framework,
  com.kaleidoscope.core.aux.xmi;bundle-version="1.0.0",
  com.kaleidoscope.usecase.showcase.xtext.PersonDsl,
- org.apache.commons.lang3
+ org.apache.commons.lang3,
+ com.kaleidoscope.usecase.showcase.first;bundle-version="1.0.0"

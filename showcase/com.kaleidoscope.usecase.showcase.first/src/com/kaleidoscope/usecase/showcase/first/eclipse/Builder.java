@@ -26,8 +26,9 @@ import Employees.EmployeeContainer;
 import Persons.PersonContainer;
   
 public class Builder extends IncrementalProjectBuilder implements IResourceDeltaVisitor {
-	private IProject project;
-	private Path projectPath;
+	
+	protected IProject project;
+	protected Path projectPath;
 	
 	private class ControllerType extends 
 	TypeLiteral<PersistentStateBasedController<
@@ -40,7 +41,7 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 		OperationalDelta, 
 		Path>>{}
 	
-	private static final Logger logger = Logger.getLogger(Builder.class);
+	protected static final Logger logger = Logger.getLogger(Builder.class);
 	
 	@Override
 	protected IProject[] build(int kind, Map<String, String> args, IProgressMonitor monitor) throws CoreException {		
@@ -94,7 +95,7 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 	}
 	
 	
-	private void syncForward()	throws CoreException{
+	public void syncForward()	throws CoreException{
 		
 		logger.info("Sync a java model with the configuration model is performed!");
 		getControllerInstance().syncForward(projectPath.resolve(Paths.get("models", "src.xmi")));
@@ -102,14 +103,14 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 		logger.info("Sync a java model with the configuration model is done!");
 	}
 	
-	private void syncBackward()	throws CoreException{
+	public void syncBackward()	throws CoreException{
 		logger.info("Sync configuration model with a java model is performed!");		
 		getControllerInstance().syncBackward(projectPath.resolve(Paths.get("models", "trg.xmi")));
 		refreshProject();
 		logger.info("Sync configuration model with a java model is done!");
 	}
 	
-	private void refreshProject() throws CoreException{
+	public void refreshProject() throws CoreException{
 		project.getFolder("src").refreshLocal(IResource.DEPTH_INFINITE, null);
 		project.getFolder("models").refreshLocal(IResource.DEPTH_INFINITE, null);
 	}

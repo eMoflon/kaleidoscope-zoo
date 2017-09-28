@@ -17,32 +17,25 @@ import Persons.PersonContainer;
 public class ArtefactAdapterModule extends AbstractModule {
 	protected Path sourceArtefactAdapterPath;
 	protected Path targetArtefactAdapterPath;
-	
-	public ArtefactAdapterModule(Path projectPath) {	
+
+	public ArtefactAdapterModule(Path projectPath) {
 		this.sourceArtefactAdapterPath = projectPath.resolve(Paths.get("models", "src.persons"));
 		this.targetArtefactAdapterPath = projectPath.resolve(Paths.get("models", "trg.employees"));
 	}
-	
-	@Provides @Src
-	protected
-	ArtefactAdapter<
-		PersonContainer, 
-		Path
-		> 
-	provideSourceArtefactAdapter() {		
+
+	@Provides
+	@Src
+	protected ArtefactAdapter<PersonContainer, Path> provideSourceArtefactAdapter() {
 		return new PersonArtefactAdapter(sourceArtefactAdapterPath);
 	}
-	
-	@Provides @Trg
-	protected 
-	ArtefactAdapter<
-		EmployeeContainer, 
-		Path
-		> 
-	provideTargetArtefactAdapter() {		
+
+	@Provides
+	@Trg
+	protected ArtefactAdapter<EmployeeContainer, Path> provideTargetArtefactAdapter() {
 		return new EmployeeArtefactAdapter(targetArtefactAdapterPath);
 	}
 
 	@Override
-	protected void configure() {}
+	protected void configure() {
+	}
 }

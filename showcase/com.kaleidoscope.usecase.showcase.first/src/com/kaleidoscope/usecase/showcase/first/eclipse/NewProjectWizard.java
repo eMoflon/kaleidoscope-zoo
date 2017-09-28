@@ -22,7 +22,7 @@ import com.kaleidoscope.util.WorkspaceHelper;
 import com.kaleidoscope.util.DefaultFilesHelper;
 
 public class NewProjectWizard extends Wizard implements INewWizard {
-	private NewProjectWizardPage page;
+	protected NewProjectWizardPage page;
 	//private ISelection selection;
 
 	/**
@@ -81,7 +81,7 @@ public class NewProjectWizard extends Wizard implements INewWizard {
 		createInitialProjectStructure(monitor, project);
 	}
 
-	private void createInitialProjectStructure(final IProgressMonitor monitor, IProject project) throws CoreException {
+	protected void createInitialProjectStructure(final IProgressMonitor monitor, IProject project) throws CoreException {
 		final SubMonitor subMon = SubMonitor.convert(monitor, "Generate project structure", 3);
 		DefaultFilesHelper.generateDefaultSchema(project.getName());
 		
@@ -124,7 +124,7 @@ public class NewProjectWizard extends Wizard implements INewWizard {
 		project.open(subMon.split(1));
 				
 		// Add CryptoAPI Nature
-		WorkspaceHelper.addNature(project, ShowcaseFirstNature.SHOWCASE_FIRST_API_NATURE_ID, subMon.split(1)); 
+		WorkspaceHelper.addNature(project, ShowcaseFirstNature.SHOWCASE_API_NATURE_ID, subMon.split(1)); 
 	}
 
 	@Override
