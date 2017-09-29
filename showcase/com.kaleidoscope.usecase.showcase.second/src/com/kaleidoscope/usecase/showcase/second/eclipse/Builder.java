@@ -18,7 +18,7 @@ import Persons.PersonContainer;
 public class Builder extends com.kaleidoscope.usecase.showcase.first.eclipse.Builder {	
 	
 	public Builder(){
-		super(Paths.get("models", "src.persons"), Paths.get("models", "trg.persons"));
+		super(Paths.get("models", "src.persons"), Paths.get("models", "trg.employees"));
 	}
 	
 	private class ControllerType extends 
