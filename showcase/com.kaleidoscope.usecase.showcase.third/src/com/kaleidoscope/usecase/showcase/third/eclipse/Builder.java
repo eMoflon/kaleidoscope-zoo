@@ -17,59 +17,41 @@ import com.kaleidoscope.usecase.showcase.third.controller.ControllerModule;
 import Employees.EmployeeContainer;
 import Persons.PersonContainer;
 
+public class Builder extends com.kaleidoscope.usecase.showcase.first.eclipse.Builder {
 
-  
-public class Builder extends com.kaleidoscope.usecase.showcase.first.eclipse.Builder{
-	
-
-	private class ControllerType extends 
-	TypeLiteral<PersistentDeltaBasedController<PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta, OperationalDelta, Path, Path, Path>>{}
-	
-	public Builder(){
-		super(Paths.get("models", "src.delta.xmi"), Paths.get("models", "trg.delta.xmi"));		
+	private class ControllerType extends
+			TypeLiteral<PersistentDeltaBasedController<PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta, OperationalDelta, Path, Path, Path>> {
 	}
-	
-public void syncForward()	throws CoreException{
-		
+
+	public Builder() {
+		super(Paths.get("models", "src.delta.xmi"), Paths.get("models", "trg.delta.xmi"));
+	}
+
+	public void syncForward() throws CoreException {
+
 		logger.info("Sync a java model with the configuration model is performed!");
-		
+
 		Path syncForwardAbsoluteSourcePath = projectPath.resolve(super.syncForwardRealtiveSourcePath);
-		
-		if(syncForwardAbsoluteSourcePath.toFile().exists()) {
-			
-			getDeltaControllerInstance().syncForward(syncForwardAbsoluteSourcePath);
-			refreshProject();
-			logger.info("Sync a java model with the configuration model is done!");
-		}else {
-			
-			logger.info("Sync a jave model with the configuration model was tried without the existing source");
-		}
-	
-	}
-	
-	public void syncBackward()	throws CoreException{
-		logger.info("Sync configuration model with a java model is performed!");
-	
-		Path syncBacwardAbsoulteTargetPath = projectPath.resolve(super.syncBacwardRelativeTargetPath);
-	
-		if(syncBacwardAbsoulteTargetPath.toFile().exists()) {
-			getDeltaControllerInstance().syncBackward(syncBacwardAbsoulteTargetPath);
-			refreshProject();
-			logger.info("Sync configuration model with a java model is done!");
-		}else {
-			
-			logger.info("Sync configuration model with a java model was tried without the existing source");
-		}
-		
-		
+
+		getDeltaControllerInstance().syncForward(syncForwardAbsoluteSourcePath);
+		refreshProject();
+		logger.info("Sync a java model with the configuration model is done!");
+
 	}
 
-	public PersistentDeltaBasedController<PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta, OperationalDelta, Path, Path, Path>
-	getDeltaControllerInstance() {
-		Injector injector = Guice.createInjector(
-				new ControllerModule(projectPath.resolve(Paths.get("models"))), 
-				new ArtefactAdapterModule(projectPath)
-			);
+	public void syncBackward() throws CoreException {
+		logger.info("Sync configuration model with a java model is performed!");
+
+		Path syncBacwardAbsoulteTargetPath = projectPath.resolve(super.syncBacwardRelativeTargetPath);
+
+		getDeltaControllerInstance().syncBackward(syncBacwardAbsoulteTargetPath);
+		refreshProject();
+
+	}
+
+	public PersistentDeltaBasedController<PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta, OperationalDelta, Path, Path, Path> getDeltaControllerInstance() {
+		Injector injector = Guice.createInjector(new ControllerModule(projectPath.resolve(Paths.get("models", "gen"))),
+				new ArtefactAdapterModule(projectPath));
 		return injector.getInstance(Key.get(new ControllerType()));
 	}
 }

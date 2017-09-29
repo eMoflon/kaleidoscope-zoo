@@ -54,7 +54,7 @@ public class XMIdeltaAdapter<Model>
 		}catch(ClassCastException e){			
 			logger.error("Not able to cast " + path + " to required type: " + e.getMessage());
 		}
-		return null;
+		return new OperationalDelta();
 	}
 
 	@Override

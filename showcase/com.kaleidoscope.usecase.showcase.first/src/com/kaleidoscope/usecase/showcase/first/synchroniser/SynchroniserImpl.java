@@ -18,10 +18,10 @@ import Persons.PersonsFactory;
 
 public class SynchroniserImpl implements PersistentSynchroniser<PersonContainer, EmployeeContainer, String, OperationalDelta, OperationalDelta, Path>{
 
-	PersonContainer sourceModel;
-	EmployeeContainer targetModel;
-	private String sourceModelFileName = ".src.xmi";
-	private String targetModelFileName = ".trg.xmi";
+	protected PersonContainer sourceModel;
+	protected EmployeeContainer targetModel;
+	protected String sourceModelFileName = ".src.xmi";
+	protected String targetModelFileName = ".trg.xmi";
 	
 	public SynchroniserImpl(PersonContainer sourceModel, EmployeeContainer targetModel) {
 		this.sourceModel = sourceModel;

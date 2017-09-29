@@ -10,7 +10,7 @@ import com.kaleidoscope.core.framework.annotations.Src;
 import com.kaleidoscope.core.framework.annotations.Trg;
 import com.kaleidoscope.core.framework.synchronisation.PersistentSynchroniser;
 import com.kaleidoscope.core.framework.workflow.adapters.DeltaAdapter;
-import com.kaleidoscope.usecase.showcase.first.synchroniser.SynchroniserImpl;
+import com.kaleidoscope.usecase.showcase.third.synchroniser.SynchroniserImpl;
 import com.kaleidoscope.usecase.showcase.third.deltaadapter.XMIdeltaAdapter;
 
 import Employees.EmployeeContainer;
