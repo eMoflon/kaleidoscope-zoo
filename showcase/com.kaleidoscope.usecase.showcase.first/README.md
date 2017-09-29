@@ -1,4 +1,4 @@
-## First show case scenario:
+## First showcase scenario:
 
 1. Run `com.kaleidoscope.usecase.showcase.first` as an Eclipse Application
 2. In the new Eclipse instance go to `File -> New -> Other...`

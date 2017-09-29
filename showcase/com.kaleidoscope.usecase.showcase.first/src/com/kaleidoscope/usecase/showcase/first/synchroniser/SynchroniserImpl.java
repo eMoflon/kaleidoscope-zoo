@@ -152,7 +152,6 @@ public class SynchroniserImpl implements PersistentSynchroniser<PersonContainer,
 		XMIArtefactAdapter<EmployeeContainer > targetArtefactAdapter = new  XMIArtefactAdapter<EmployeeContainer>(persistenceDirectory.resolve(targetModelFileName));
 		targetArtefactAdapter .parse();
 		targetModel = targetArtefactAdapter .getModel().orElse(targetModel);
-	
 	}
 
 	@Override
@@ -164,7 +163,6 @@ public class SynchroniserImpl implements PersistentSynchroniser<PersonContainer,
 		XMIArtefactAdapter<EmployeeContainer > targetArtefactAdapter = new  XMIArtefactAdapter<EmployeeContainer>(persistenceDirectory.resolve(targetModelFileName));
 		targetArtefactAdapter.setModel(targetModel);
 		targetArtefactAdapter.unparse();
-
 	}
 
 }

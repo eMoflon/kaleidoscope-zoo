@@ -17,11 +17,11 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Key;
-import com.google.inject.TypeLiteral;
 import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
 import com.kaleidoscope.core.framework.workflow.controllers.statebased.PersistentStateBasedController;
 import com.kaleidoscope.usecase.showcase.first.controller.ArtefactAdapterModule;
 import com.kaleidoscope.usecase.showcase.first.controller.ControllerModule;
+import com.kaleidoscope.usecase.showcase.first.controller.ControllerType;
 
 import Employees.EmployeeContainer;
 import Persons.PersonContainer;
@@ -44,17 +44,6 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 		syncForwardRealtiveSourcePath = Paths.get("models", "src.xmi");
 		syncBacwardRelativeTargetPath = Paths.get("models", "trg.xmi");
 	}
-	
-	private class ControllerType extends 
-	TypeLiteral<PersistentStateBasedController<
-		PersonContainer, 
-		Path, 
-		EmployeeContainer, 
-		Path, 
-		String, 
-		OperationalDelta,
-		OperationalDelta, 
-		Path>>{}
 	
 	protected static final Logger logger = Logger.getLogger(Builder.class);
 	

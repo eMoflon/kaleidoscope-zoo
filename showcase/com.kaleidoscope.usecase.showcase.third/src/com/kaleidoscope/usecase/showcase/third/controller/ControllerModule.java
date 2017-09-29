@@ -18,8 +18,7 @@ import Employees.EmployeesFactory;
 import Persons.PersonContainer;
 import Persons.PersonsFactory;
 
-public class ControllerModule extends AbstractModule{
-
+public class ControllerModule extends AbstractModule {
 	private Path destination;
 	
 	public ControllerModule(Path destination) {
@@ -27,16 +26,26 @@ public class ControllerModule extends AbstractModule{
 	}
 	
 	@Provides @Src
-	DeltaAdapter<OperationalDelta, Path, PersonContainer>provideSourceDeltaAdapter(){
+	private 
+	DeltaAdapter<
+		OperationalDelta, 
+		Path, 
+		PersonContainer
+		>
+	provideSourceDeltaAdapter(){
 		return new XMIdeltaAdapter<PersonContainer>();
 	}
 	
 	@Provides @Trg
-	DeltaAdapter<OperationalDelta, Path, EmployeeContainer>provideTargetDeltaAdapter(){
+	private 
+	DeltaAdapter<
+		OperationalDelta, 
+		Path, 
+		EmployeeContainer
+		>
+	provideTargetDeltaAdapter(){
 		return new XMIdeltaAdapter<EmployeeContainer>();
 	}
-	
-	
 
 	@Provides
 	PersistentSynchroniser<PersonContainer, EmployeeContainer, String, OperationalDelta, OperationalDelta, Path> provideSynchroniser(){

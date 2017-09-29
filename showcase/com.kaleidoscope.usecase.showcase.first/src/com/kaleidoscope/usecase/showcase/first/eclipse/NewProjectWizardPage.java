@@ -14,9 +14,6 @@ import org.eclipse.swt.widgets.Text;
 public class NewProjectWizardPage extends WizardPage {	
 	private Text projectText;
 
-	/**
-	 * Constructor for NewCryptoAPIProjectWizardPage.	
-	 */
 	public NewProjectWizardPage() {
 		super("wizardPage");
 		setTitle("New Project wizard");

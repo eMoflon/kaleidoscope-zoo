@@ -18,12 +18,11 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
+
 import com.kaleidoscope.util.WorkspaceHelper;
-import com.kaleidoscope.util.DefaultFilesHelper;
 
 public class NewProjectWizard extends Wizard implements INewWizard {
 	protected NewProjectWizardPage page;
-	//private ISelection selection;
 
 	/**
 	 * Constructor for NewCryptoAPIProject.
@@ -36,7 +35,6 @@ public class NewProjectWizard extends Wizard implements INewWizard {
 	/**
 	 * Adding the page to the wizard.
 	 */
-
 	public void addPages() {
 		page = new NewProjectWizardPage();
 		addPage(page);
@@ -83,7 +81,6 @@ public class NewProjectWizard extends Wizard implements INewWizard {
 
 	protected void createInitialProjectStructure(final IProgressMonitor monitor, IProject project) throws CoreException {
 		final SubMonitor subMon = SubMonitor.convert(monitor, "Generate project structure", 3);
-		DefaultFilesHelper.generateDefaultSchema(project.getName());
 		
 		addAllFolders(project, "models",subMon.split(1));
 		
@@ -106,13 +103,10 @@ public class NewProjectWizard extends Wizard implements INewWizard {
 		
 		try {
 			addAllFoldersAndFile(project, pathToSourceModel, initialSourceModelContent, null);
-			addAllFoldersAndFile(project, pathToTargetModel, initialTargetModelContent, null);
-			
+			addAllFoldersAndFile(project, pathToTargetModel, initialTargetModelContent, null);	
 		} catch (CoreException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		
+		}		
 	}
 	
 
@@ -123,7 +117,7 @@ public class NewProjectWizard extends Wizard implements INewWizard {
 		project.create(subMon.split(1));
 		project.open(subMon.split(1));
 				
-		// Add CryptoAPI Nature
+		// Add nature
 		WorkspaceHelper.addNature(project, ShowcaseFirstNature.SHOWCASE_API_NATURE_ID, subMon.split(1)); 
 	}
 

@@ -10,17 +10,12 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.SubMonitor;
 
-import com.kaleidoscope.util.DefaultFilesHelper;
 import com.kaleidoscope.util.WorkspaceHelper;
 
 public class NewProjectWizard extends com.kaleidoscope.usecase.showcase.first.eclipse.NewProjectWizard {
 
 	@Override
-	protected void createInitialProjectStructure(final IProgressMonitor monitor, IProject project)
-			throws CoreException {
-
-		DefaultFilesHelper.generateDefaultSchema(project.getName());
-
+	protected void createInitialProjectStructure(final IProgressMonitor monitor, IProject project) throws CoreException {
 		createProjectFolders(project);
 		createSourceModelFile(project);
 		createTargetModelFile(project);

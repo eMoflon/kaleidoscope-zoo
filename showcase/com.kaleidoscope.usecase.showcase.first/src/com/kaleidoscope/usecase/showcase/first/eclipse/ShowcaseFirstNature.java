@@ -103,7 +103,6 @@ public class ShowcaseFirstNature implements IProjectNature {
 	}
 	@Override
 	public void deconfigure() throws CoreException {
-		// TODO Auto-generated method stub
 
 	}
 
@@ -116,7 +115,5 @@ public class ShowcaseFirstNature implements IProjectNature {
 	public void setProject(IProject project) {
 		this.project = project;
 
-	}
-
-	
+	}	
 }
