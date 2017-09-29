@@ -30,6 +30,17 @@ public class ShowcaseFirstNature implements IProjectNature {
 	protected static final Logger logger = Logger.getLogger(WorkspaceHelper.class);
 	protected IProject project;
 	
+	public ShowcaseFirstNature() {
+		
+	}
+	
+	public String getShowcaseApiNatureID() {
+		return SHOWCASE_API_NATURE_ID;
+	}
+	
+	public String getShowcaseApiBuilderID() {
+		return SHOWCASE_API_BUILDER_ID;
+	}
 	@Override
 	public void configure() throws CoreException {
 		PlatformUI.getWorkbench().getDisplay().syncExec(new Runnable() {
@@ -49,7 +60,7 @@ public class ShowcaseFirstNature implements IProjectNature {
 		IProjectDescription projectDescription = project.getDescription();
 		ICommand[] buildSpec = projectDescription.getBuildSpec();
 		ICommand command = projectDescription.newCommand();
-		command.setBuilderName(SHOWCASE_API_BUILDER_ID);
+		command.setBuilderName(getShowcaseApiBuilderID());
 		Collection<ICommand> list = new ArrayList<>();
 		list.add(command);
 		list.addAll(Arrays.asList(buildSpec));

@@ -18,33 +18,42 @@ public class NewProjectWizard extends com.kaleidoscope.usecase.showcase.first.ec
 	@Override
 	protected void createInitialProjectStructure(final IProgressMonitor monitor, IProject project)
 			throws CoreException {
-		final SubMonitor subMon = SubMonitor.convert(monitor, "Generate project structure", 3);
 		DefaultFilesHelper.generateDefaultSchema(project.getName());
 
-		addAllFolders(project, "models", subMon.split(1));
+		createProjectFolders(project);
+		createSourceModelFile(project);
+		createTargetModelFile(project);
 
-		IPath pathToXtextSourceModel = new Path("models/src.persons");
-		IPath pathToXtextTargetModel = new Path("models/trg.employees");
-
-		try {
-			addAllFoldersAndFile(project, pathToXtextSourceModel, "", null);
-			addAllFoldersAndFile(project, pathToXtextTargetModel, "", null);
-		} catch (CoreException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 
+	private void createProjectFolders(IProject project) throws CoreException {
+
+		addAllFolders(project, "models", null);
+
+	}
+
+	private void createSourceModelFile(IProject project) throws CoreException {
+
+		IPath pathToXtextSourceModel = new Path("models/src.persons");
+		addAllFoldersAndFile(project, pathToXtextSourceModel, "", null);
+
+	}
+
+	private void createTargetModelFile(IProject project) throws CoreException {
+
+		IPath pathToXtextTargetModel = new Path("models/trg.employees");
+		addAllFoldersAndFile(project, pathToXtextTargetModel, "", null);
+
+	}
 	@Override
 	protected void createProject(IProgressMonitor monitor, IProject project) throws CoreException {
 		final SubMonitor subMon = SubMonitor.convert(monitor, "Creating " + project.getName(), 3);
-
+		
 		// Create project
 		project.create(subMon.split(1));
 		project.open(subMon.split(1));
-
+				
 		// Add CryptoAPI Nature
-		WorkspaceHelper.addNature(project, ShowcaseSecondNature.SHOWCASE_API_NATURE_ID, subMon.split(1));
+		WorkspaceHelper.addNature(project, ShowcaseSecondNature.SHOWCASE_API_NATURE_ID, subMon.split(1)); 
 	}
-
 }

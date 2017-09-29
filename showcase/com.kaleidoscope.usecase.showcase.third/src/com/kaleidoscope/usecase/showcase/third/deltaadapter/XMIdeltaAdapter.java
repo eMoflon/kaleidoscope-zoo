@@ -35,25 +35,19 @@ public class XMIdeltaAdapter<Model>
 		try {
 			File file = path.toFile();
 			Path fileName = path.getFileName();
+		
+			File genFile = path.getParent().resolve(Paths.get("gen", fileName.toString())).toFile();  
+			FileUtils.copyFile(file, genFile);
+			  
 			
-			if(file.exists()) {
-				File genFile = path.getParent().resolve(Paths.get("gen", fileName.toString())).toFile();  
-				
-				FileUtils.copyFile(file, genFile);
-				  
-				
-				Resource genResource = ((EObject)m).eResource().getResourceSet().createResource(URI.createFileURI(genFile.getAbsolutePath()));	
-				genResource.load(null);
+			Resource genResource = ((EObject)m).eResource().getResourceSet().createResource(URI.createFileURI(genFile.getAbsolutePath()));	
+			genResource.load(null);
+		
+			KaleidoscopeDelta.OperationalDelta opDelta = (KaleidoscopeDelta.OperationalDelta)genResource.getContents().get(0);
 			
-				KaleidoscopeDelta.OperationalDelta opDelta = (KaleidoscopeDelta.OperationalDelta)genResource.getContents().get(0);
-				
-				OperationalDelta operationalDelta = OperationalDelta.fromEMF(opDelta);
-				
-				return operationalDelta;
-			}else {
-				return null;
-			}
+			OperationalDelta operationalDelta = OperationalDelta.fromEMF(opDelta);
 			
+			return operationalDelta;
 			
 		} catch (IOException e) {	
 			logger.error("Not able to load the XMI file from " + path);			

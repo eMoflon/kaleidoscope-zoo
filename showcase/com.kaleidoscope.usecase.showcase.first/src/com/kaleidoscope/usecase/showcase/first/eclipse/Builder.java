@@ -11,6 +11,7 @@ import org.eclipse.core.resources.IResourceDelta;
 import org.eclipse.core.resources.IResourceDeltaVisitor;
 import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
 
 import com.google.inject.Guice;
@@ -29,6 +30,20 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 	
 	protected IProject project;
 	protected Path projectPath;
+	
+	protected Path syncForwardRealtiveSourcePath;
+	protected Path syncBacwardRelativeTargetPath;
+	
+	
+	public Builder(Path syncForwardRelativeSourcePath, Path syncBackwardRelativeTargetPath) {
+		this.syncForwardRealtiveSourcePath = syncForwardRelativeSourcePath;
+		this.syncBacwardRelativeTargetPath = syncBackwardRelativeTargetPath;
+	}
+	
+	public Builder() {
+		syncForwardRealtiveSourcePath = Paths.get("models", "src.xmi");
+		syncBacwardRelativeTargetPath = Paths.get("models", "trg.xmi");
+	}
 	
 	private class ControllerType extends 
 	TypeLiteral<PersistentStateBasedController<
@@ -98,16 +113,36 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 	public void syncForward()	throws CoreException{
 		
 		logger.info("Sync a java model with the configuration model is performed!");
-		getControllerInstance().syncForward(projectPath.resolve(Paths.get("models", "src.xmi")));
-		refreshProject();
-		logger.info("Sync a java model with the configuration model is done!");
+		
+		Path syncForwardAbsoluteSourcePath = projectPath.resolve(syncForwardRealtiveSourcePath);
+		
+		if(syncForwardAbsoluteSourcePath.toFile().exists()) {
+			
+			getControllerInstance().syncForward(syncForwardAbsoluteSourcePath);
+			refreshProject();
+			logger.info("Sync a java model with the configuration model is done!");
+		}else {
+			
+			logger.info("Sync a jave model with the configuration model was tried without the existing source");
+		}
+	
 	}
 	
 	public void syncBackward()	throws CoreException{
-		logger.info("Sync configuration model with a java model is performed!");		
-		getControllerInstance().syncBackward(projectPath.resolve(Paths.get("models", "trg.xmi")));
-		refreshProject();
-		logger.info("Sync configuration model with a java model is done!");
+		logger.info("Sync configuration model with a java model is performed!");
+	
+		Path syncBacwardAbsoulteTargetPath = projectPath.resolve(syncBacwardRelativeTargetPath);
+	
+		if(syncBacwardAbsoulteTargetPath.toFile().exists()) {
+			getControllerInstance().syncBackward(syncBacwardAbsoulteTargetPath);
+			refreshProject();
+			logger.info("Sync configuration model with a java model is done!");
+		}else {
+			
+			logger.info("Sync configuration model with a java model was tried without the existing source");
+		}
+		
+		
 	}
 	
 	public void refreshProject() throws CoreException{
@@ -119,7 +154,7 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 	public boolean visit(IResourceDelta delta) throws CoreException {
 		
 		
-		String relFilePath = delta.getResource().getProjectRelativePath().toString();
+		IPath relFilePath = delta.getResource().getProjectRelativePath();
 			
 		if(delta.getResource().getName().equals("bin")){
 			return false;
@@ -129,11 +164,11 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 			return true;		
 		
 
-		if(relFilePath.contentEquals("models/src.xmi")){
+		if(relFilePath.toOSString().contentEquals(syncForwardRealtiveSourcePath.toString())){
 			
 			syncForward();
 			
-		}else if(relFilePath.contentEquals("models/trg.xmi")){
+		}else if(relFilePath.toOSString().contentEquals(syncBacwardRelativeTargetPath.toString())){
 			
 			syncBackward();		
 			

@@ -2,13 +2,8 @@ package com.kaleidoscope.usecase.showcase.third.eclipse;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Map;
 
-import org.eclipse.core.resources.IProject;
-import org.eclipse.core.resources.IResource;
-import org.eclipse.core.resources.IResourceDelta;
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.IProgressMonitor;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
@@ -26,92 +21,51 @@ import Persons.PersonContainer;
   
 public class Builder extends com.kaleidoscope.usecase.showcase.first.eclipse.Builder{
 	
-	private Path projectPath;
-	
+
 	private class ControllerType extends 
 	TypeLiteral<PersistentDeltaBasedController<PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta, OperationalDelta, Path, Path, Path>>{}
 	
-	
-	@Override
-	protected IProject[] build(int kind, Map<String, String> args, IProgressMonitor monitor) throws CoreException {		
-		logger.info("Build is being performed.");
-		project = getProject();
-		projectPath = Paths.get(project.getLocation().toString());
-		
-		switch (kind) {
-			case CLEAN_BUILD:
-				performClean();
-				break;
-			case FULL_BUILD:			
-				syncForward();
-				logger.info("Performing full build!");
-				break;
-			case AUTO_BUILD:
-			case INCREMENTAL_BUILD:
-				generateFilesIfchangeIsRelevant();
-			default:
-				break;
-		}
-		return null;
+	public Builder(){
+		super(Paths.get("models", "src.delta.xmi"), Paths.get("models", "trg.delta.xmi"));		
 	}
 	
-	private void generateFilesIfchangeIsRelevant() throws CoreException {
-		getDelta(getProject()).accept(this);
-	}
-
-
-	private void performClean() {
-		
-	}
-	
-	@Override
-	public void syncForward()	throws CoreException{
+public void syncForward()	throws CoreException{
 		
 		logger.info("Sync a java model with the configuration model is performed!");
 		
-		getControllerInstancee().syncForward(projectPath.resolve(Paths.get("models", "src.delta.xmi")));
-		refreshProject();
-		logger.info("Sync a java model with the configuration model is done!");
+		Path syncForwardAbsoluteSourcePath = projectPath.resolve(super.syncForwardRealtiveSourcePath);
+		
+		if(syncForwardAbsoluteSourcePath.toFile().exists()) {
+			
+			getDeltaControllerInstance().syncForward(syncForwardAbsoluteSourcePath);
+			refreshProject();
+			logger.info("Sync a java model with the configuration model is done!");
+		}else {
+			
+			logger.info("Sync a jave model with the configuration model was tried without the existing source");
+		}
+	
 	}
 	
-	@Override
 	public void syncBackward()	throws CoreException{
 		logger.info("Sync configuration model with a java model is performed!");
-		
-		getControllerInstancee().syncBackward(projectPath.resolve(Paths.get("models", "trg.delta.xmi")));
-		refreshProject();
-		logger.info("Sync configuration model with a java model is done!");
-	}
 	
+		Path syncBacwardAbsoulteTargetPath = projectPath.resolve(super.syncBacwardRelativeTargetPath);
 	
-	@Override
-	public boolean visit(IResourceDelta delta) throws CoreException {
-		
-		
-		String relFilePath = delta.getResource().getProjectRelativePath().toString();
+		if(syncBacwardAbsoulteTargetPath.toFile().exists()) {
+			getDeltaControllerInstance().syncBackward(syncBacwardAbsoulteTargetPath);
+			refreshProject();
+			logger.info("Sync configuration model with a java model is done!");
+		}else {
 			
-		if(delta.getResource().getName().equals("bin")){
-			return false;
+			logger.info("Sync configuration model with a java model was tried without the existing source");
 		}
 		
-		if(delta.getResource().getType() != IResource.FILE)
-			return true;		
 		
+	}
 
-		if(relFilePath.contentEquals("models/src.delta.xmi")){
-			
-			syncForward();
-			
-		}else if(relFilePath.contentEquals("models/trg.delta.xmi")){
-			
-			syncBackward();		
-			
-		}
-		return true;
-	}
-	
 	public PersistentDeltaBasedController<PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta, OperationalDelta, Path, Path, Path>
-	getControllerInstancee() {
+	getDeltaControllerInstance() {
 		Injector injector = Guice.createInjector(
 				new ControllerModule(projectPath.resolve(Paths.get("models"))), 
 				new ArtefactAdapterModule(projectPath)

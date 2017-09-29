@@ -3,10 +3,6 @@ package com.kaleidoscope.usecase.showcase.second.eclipse;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import org.eclipse.core.resources.IResource;
-import org.eclipse.core.resources.IResourceDelta;
-import org.eclipse.core.runtime.CoreException;
-
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Key;
@@ -21,6 +17,10 @@ import Persons.PersonContainer;
   
 public class Builder extends com.kaleidoscope.usecase.showcase.first.eclipse.Builder {	
 	
+	public Builder(){
+		super(Paths.get("models", "src.persons"), Paths.get("models", "trg.persons"));		
+	}
+	
 	private class ControllerType extends 
 	TypeLiteral<PersistentStateBasedController<
 		PersonContainer, 
@@ -32,47 +32,7 @@ public class Builder extends com.kaleidoscope.usecase.showcase.first.eclipse.Bui
 		OperationalDelta, 
 		Path>>{}
 	
-	@Override
-	public void syncForward()	throws CoreException{
 		
-		logger.info("Sync a java model with the configuration model is performed!");		
-		getControllerInstance().syncForward(projectPath.resolve(Paths.get("models", "src.persons")));
-		refreshProject();
-		logger.info("Sync a java model with the configuration model is done!");
-	}
-	
-	@Override
-	public void syncBackward()	throws CoreException{
-		logger.info("Sync configuration model with a java model is performed!");		
-		getControllerInstance().syncBackward(projectPath.resolve(Paths.get("models", "trg.employees")));
-		refreshProject();
-		logger.info("Sync configuration model with a java model is done!");
-	}
-	
-	
-	@Override
-	public boolean visit(IResourceDelta delta) throws CoreException {
-		
-		String relFilePath = delta.getResource().getProjectRelativePath().toString();
-			
-		if(delta.getResource().getName().equals("bin")){
-			return false;
-		}
-		
-		if(delta.getResource().getType() != IResource.FILE)
-			return true;		
-		
-
-		if(relFilePath.contentEquals("models/src.persons")) {
-			syncForward();
-			
-		}else if(relFilePath.contentEquals("models/trg.employees")) {
-			syncBackward();
-			
-		}
-		return true;
-	}
-	
 	@Override
 	public 
 	PersistentStateBasedController<
