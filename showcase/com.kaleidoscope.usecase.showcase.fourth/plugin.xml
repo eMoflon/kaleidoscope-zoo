@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>   
+	<extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="com.kaleidoscope.usecase.showcase.fourth.newproject"
+            name="Showcase Fourth New Project Wizards">
+      </category>
+      <wizard
+            category="Showcase Fourth New Project Wizards"
+            class="com.kaleidoscope.usecase.showcase.fourth.eclipse.NewProjectWizard"            
+            id="com.kaleidoscope.usecase.showcase.fourth.newproject"
+            name="New Showcase Fourth Project">
+      </wizard>
+   </extension>
+   
+     <extension
+         id="com.kaleidoscope.usecase.showcase.fourth.nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="com.kaleidoscope.usecase.showcase.fourth.eclipse.ShowcaseFourthNature">
+         </run>
+      </runtime>
+   </extension>
+</plugin>
+

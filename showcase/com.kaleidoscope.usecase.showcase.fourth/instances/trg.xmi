@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<com.kaleidoscope.usecase.showcase.metamodel.employee:EmployeeContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.kaleidoscope.usecase.showcase.metamodel.employee="platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore">
+<com.kaleidoscope.usecase.showcase.metamodel.employee:EmployeeContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.kaleidoscope.usecase.showcase.metamodel.employee="platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employees/model/Employee.ecore">
   <employees name="Nikola Tesla"/>
   <employees name="Thomas Edison"/>
 </com.kaleidoscope.usecase.showcase.metamodel.employee:EmployeeContainer>
