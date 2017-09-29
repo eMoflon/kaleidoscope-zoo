@@ -19,18 +19,14 @@ public class NewProjectWizard extends com.kaleidoscope.usecase.showcase.first.ec
 		createProjectFolders(project);
 		createSourceModelFile(project);
 		createTargetModelFile(project);
-
 	}
 
 	private void createProjectFolders(IProject project) throws CoreException {
-
 		addAllFolders(project, "models", null);
 		addAllFolders(project, "models/gen", null);
-
 	}
 
 	private void createSourceModelFile(IProject project) throws CoreException {
-
 		IPath pathToSourceModel = new Path("models/src.xmi");
 
 		String initialSourceModelContent = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n"
@@ -41,11 +37,9 @@ public class NewProjectWizard extends com.kaleidoscope.usecase.showcase.first.ec
 				+ "";
 
 		addAllFoldersAndFile(project, pathToSourceModel, initialSourceModelContent, null);
-
 	}
 
 	private void createTargetModelFile(IProject project) throws CoreException {
-
 		IPath pathToTargetModel = new Path("models/trg.xmi");
 
 		String initialTargetModelContent = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n"
@@ -56,7 +50,6 @@ public class NewProjectWizard extends com.kaleidoscope.usecase.showcase.first.ec
 				+ "";
 
 		addAllFoldersAndFile(project, pathToTargetModel, initialTargetModelContent, null);
-
 	}
 	
 	@Override
@@ -67,7 +60,7 @@ public class NewProjectWizard extends com.kaleidoscope.usecase.showcase.first.ec
 		project.create(subMon.split(1));
 		project.open(subMon.split(1));
 				
-		// Add CryptoAPI Nature
+		// Add nature
 		WorkspaceHelper.addNature(project, ShowcaseThirdNature.SHOWCASE_API_NATURE_ID, subMon.split(1)); 
 	}
 }

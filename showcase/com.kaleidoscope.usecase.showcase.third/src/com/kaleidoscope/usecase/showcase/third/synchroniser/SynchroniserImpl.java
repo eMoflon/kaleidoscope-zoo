@@ -11,5 +11,4 @@ public class SynchroniserImpl extends com.kaleidoscope.usecase.showcase.first.sy
 		sourceModelFileName = "src.xmi";
 		targetModelFileName = "trg.xmi";
 	}
-
 }

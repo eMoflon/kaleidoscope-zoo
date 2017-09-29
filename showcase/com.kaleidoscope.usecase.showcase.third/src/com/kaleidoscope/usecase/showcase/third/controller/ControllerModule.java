@@ -11,7 +11,7 @@ import com.kaleidoscope.core.framework.annotations.Trg;
 import com.kaleidoscope.core.framework.synchronisation.PersistentSynchroniser;
 import com.kaleidoscope.core.framework.workflow.adapters.DeltaAdapter;
 import com.kaleidoscope.usecase.showcase.third.synchroniser.SynchroniserImpl;
-import com.kaleidoscope.usecase.showcase.third.deltaadapter.XMIdeltaAdapter;
+import com.kaleidoscope.usecase.showcase.third.deltaadapter.XMIDeltaAdapter;
 
 import Employees.EmployeeContainer;
 import Employees.EmployeesFactory;
@@ -33,7 +33,7 @@ public class ControllerModule extends AbstractModule {
 		PersonContainer
 		>
 	provideSourceDeltaAdapter(){
-		return new XMIdeltaAdapter<PersonContainer>();
+		return new XMIDeltaAdapter<PersonContainer>();
 	}
 	
 	@Provides @Trg
@@ -44,25 +44,29 @@ public class ControllerModule extends AbstractModule {
 		EmployeeContainer
 		>
 	provideTargetDeltaAdapter(){
-		return new XMIdeltaAdapter<EmployeeContainer>();
+		return new XMIDeltaAdapter<EmployeeContainer>();
 	}
 
 	@Provides
-	PersistentSynchroniser<PersonContainer, EmployeeContainer, String, OperationalDelta, OperationalDelta, Path> provideSynchroniser(){
-		
+	private
+	PersistentSynchroniser<
+		PersonContainer, 
+		EmployeeContainer, 
+		String, 
+		OperationalDelta, 
+		OperationalDelta, 
+		Path
+		> 
+	provideSynchroniser(){	
 		PersonContainer sourceModel = PersonsFactory.eINSTANCE.createPersonContainer();
 		EmployeeContainer targetModel = EmployeesFactory.eINSTANCE.createEmployeeContainer();
-		 
-		PersistentSynchroniser<PersonContainer, EmployeeContainer, String, OperationalDelta, OperationalDelta, Path> tool = 
-				new SynchroniserImpl(sourceModel, targetModel);
-	
+		SynchroniserImpl tool = new SynchroniserImpl(sourceModel, targetModel);
 		tool.initialize();
 		return tool;
 	}
+	
 	@Override
 	protected void configure() {
 		bind(Path.class).annotatedWith(Dest.class).toInstance(destination);
 	}
-	
-	
 }
