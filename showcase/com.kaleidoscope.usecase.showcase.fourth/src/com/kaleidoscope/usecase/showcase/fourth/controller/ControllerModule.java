@@ -33,8 +33,6 @@ public class ControllerModule extends AbstractModule {
 	private Path targetArtefactAdapterPath;
 	private Path destination;
 
-	private PersistentDeltaBasedController<PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta, OperationalDelta, OpaqueDelta<PersonContainer>, OpaqueDelta<EmployeeContainer>, Path> controller = null;
-
 	public ControllerModule(Path destination) {
 
 		this.sourceArtefactAdapterPath = Paths.get("instances",  "src.xmi");
@@ -69,7 +67,14 @@ public class ControllerModule extends AbstractModule {
 	}
 
 	@Provides
-	PersistentSynchroniser<PersonContainer, EmployeeContainer, String, OperationalDelta, OperationalDelta, Path> provideSynchroniser() {
+	PersistentSynchroniser<
+		PersonContainer, 
+		EmployeeContainer,
+		String,
+		OperationalDelta,
+		OperationalDelta,
+		Path> 
+	provideSynchroniser() {
 
 		PersonContainer sourceModel = PersonsFactory.eINSTANCE.createPersonContainer();
 		EmployeeContainer targetModel = EmployeesFactory.eINSTANCE.createEmployeeContainer();
@@ -86,14 +91,36 @@ public class ControllerModule extends AbstractModule {
 		bind(Path.class).annotatedWith(Dest.class).toInstance(destination);
 	}
 
-	public PersistentDeltaBasedController<PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta, OperationalDelta, OpaqueDelta<PersonContainer>, OpaqueDelta<EmployeeContainer>, Path> getControllerInstance() {
+	public PersistentDeltaBasedController<
+		PersonContainer, 
+		Path, 
+		EmployeeContainer, 
+		Path, 
+		String, 
+		OperationalDelta, 
+		OperationalDelta, 
+		OpaqueDelta<PersonContainer>, 
+		OpaqueDelta<EmployeeContainer>, 
+		Path>
+	getControllerInstance() {
 
 		Injector injector = Guice.createInjector(this);
-		controller = injector.getInstance(Key.get(
-				new TypeLiteral<PersistentDeltaBasedController<PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta, OperationalDelta, OpaqueDelta<PersonContainer>, OpaqueDelta<EmployeeContainer>, Path>>() {
-				}));
-
-		return controller;
+		return injector.getInstance(Key.get(
+				new TypeLiteral<
+					PersistentDeltaBasedController<
+						PersonContainer,
+						Path,
+						EmployeeContainer,
+						Path,
+						String,
+						OperationalDelta,
+						OperationalDelta,
+						OpaqueDelta<PersonContainer>,
+						OpaqueDelta<EmployeeContainer>,
+						Path
+					>
+				>() {
+			}));
 	}
 
 }

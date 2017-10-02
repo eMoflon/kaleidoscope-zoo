@@ -1,14 +1,10 @@
 package com.kaleidoscope.usecase.showcase.first.eclipse;
 
-import static com.kaleidoscope.util.WorkspaceHelper.addAllFolders;
-import static com.kaleidoscope.util.WorkspaceHelper.addAllFoldersAndFile;
-
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.SubMonitor;
@@ -80,8 +76,6 @@ public class NewProjectWizard extends Wizard implements INewWizard {
 	}
 
 	protected void createInitialProjectStructure(final IProgressMonitor monitor, IProject project) throws CoreException {
-		final SubMonitor subMon = SubMonitor.convert(monitor, "Generate project structure", 3);
-		
 		InitialProjectStructure.addEmptyEmployeeModelFile(project, new Path("models/trg.xmi"));
 		InitialProjectStructure.addEmptyPersonModelFile(project, new Path("models/src.xmi"));	
 	}

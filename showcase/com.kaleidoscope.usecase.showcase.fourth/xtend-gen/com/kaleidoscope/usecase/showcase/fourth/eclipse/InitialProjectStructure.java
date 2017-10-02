@@ -12,20 +12,13 @@ public class InitialProjectStructure extends com.kaleidoscope.usecase.showcase.f
   public static void addJavaMainFile(final IProject project) throws CoreException {
     final IPath filePath = new Path("src/Main.java");
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("import java.nio.file.Path;");
-    _builder.newLine();
     _builder.append("import java.nio.file.Paths;");
     _builder.newLine();
     _builder.newLine();
     _builder.append("import com.kaleidoscope.core.delta.javabased.opaque.OpaqueDelta;");
     _builder.newLine();
-    _builder.append("import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;");
-    _builder.newLine();
-    _builder.append("import com.kaleidoscope.core.framework.workflow.controllers.deltabased.PersistentDeltaBasedController;");
-    _builder.newLine();
     _builder.append("import com.kaleidoscope.usecase.showcase.fourth.controller.ControllerModule;");
     _builder.newLine();
-    _builder.append("import Employees.EmployeeContainer;");
     _builder.newLine();
     _builder.append("import Persons.Person;");
     _builder.newLine();
@@ -69,22 +62,19 @@ public class InitialProjectStructure extends com.kaleidoscope.usecase.showcase.f
     _builder.newLine();
     _builder.newLine();
     _builder.append("\t\t");
-    _builder.append("ControllerModule controllerModule = new ControllerModule(Paths.get(\"instances\", \"gen\"));");
+    _builder.append("ControllerModule controllerModule = new ControllerModule(Paths.get(\"models\", \"gen\"));");
     _builder.newLine();
     _builder.append("\t\t");
-    _builder.append("PersistentDeltaBasedController<PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta, OperationalDelta, OpaqueDelta<PersonContainer>, OpaqueDelta<EmployeeContainer>, Path> controller = controllerModule");
-    _builder.newLine();
-    _builder.append("\t\t\t\t");
-    _builder.append(".getControllerInstance();");
     _builder.newLine();
     _builder.append("\t\t");
-    _builder.append("controller.syncForward(delta);");
+    _builder.append("controllerModule.getControllerInstance().syncForward(delta);");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("}");
     _builder.newLine();
     _builder.newLine();
     _builder.append("}");
+    _builder.newLine();
     final String fileContent = _builder.toString();
     WorkspaceHelper.addAllFoldersAndFile(project, filePath, fileContent, null);
   }

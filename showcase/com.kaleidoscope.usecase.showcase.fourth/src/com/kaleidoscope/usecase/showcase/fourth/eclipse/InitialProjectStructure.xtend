@@ -14,14 +14,11 @@ class InitialProjectStructure extends com.kaleidoscope.usecase.showcase.first.ec
 		
 		val IPath filePath = new Path("src/Main.java")
 		val String fileContent = '''
-		import java.nio.file.Path;
 		import java.nio.file.Paths;
 		
 		import com.kaleidoscope.core.delta.javabased.opaque.OpaqueDelta;
-		import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
-		import com.kaleidoscope.core.framework.workflow.controllers.deltabased.PersistentDeltaBasedController;
 		import com.kaleidoscope.usecase.showcase.fourth.controller.ControllerModule;
-		import Employees.EmployeeContainer;
+		
 		import Persons.Person;
 		import Persons.PersonContainer;
 		import Persons.PersonsFactory;
@@ -40,13 +37,13 @@ class InitialProjectStructure extends com.kaleidoscope.usecase.showcase.first.ec
 					m.getPersons().add(newPersonEdison);
 				};
 		
-				ControllerModule controllerModule = new ControllerModule(Paths.get("instances", "gen"));
-				PersistentDeltaBasedController<PersonContainer, Path, EmployeeContainer, Path, String, OperationalDelta, OperationalDelta, OpaqueDelta<PersonContainer>, OpaqueDelta<EmployeeContainer>, Path> controller = controllerModule
-						.getControllerInstance();
-				controller.syncForward(delta);
+				ControllerModule controllerModule = new ControllerModule(Paths.get("models", "gen"));
+				
+				controllerModule.getControllerInstance().syncForward(delta);
 			}
 		
-		}'''
+		}
+		'''
 		addAllFoldersAndFile(project, filePath, fileContent, null)
 	
 	}
