@@ -23,4 +23,4 @@ This scenario is:
 The only difference compared to the first scenario is the way of generating delta and the type of delta.
 `Main` class contains programmatically defined `Opaque Delta` which is used as a change on the source model or on the target model. 
 This demonstrates that it is possible to easily swap Delta type (here Operational to Opaque Delta) without affecting the rest of the framework. 
-To see how the framework is correspondingly configured, take a look at `src/com/kaleidoscope/usecase/showcase/third/controller/ControllerModule.java`
+To see how the framework is correspondingly configured, take a look at `src/com/kaleidoscope/usecase/showcase/fourth/controller/ControllerModule.java`
