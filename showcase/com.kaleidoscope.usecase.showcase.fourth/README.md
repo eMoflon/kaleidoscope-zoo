@@ -6,7 +6,7 @@
 4. Enter the project name and click `Finish`
 
 A new project with the chosen name should be created in the workspace. 
-It contains a Java class `Main` and a folder `instances` with two files `src.xmi` and `trg.xmi`.
+It contains a Java class `Main` and a folder `models` with two files `src.xmi` and `trg.xmi`.
 A user performs all the changes inside the class `Main`. How a delta (change) is defined can be modified by changing a local variable `OpaqueDelta<PersonContainer> delta`.
 Direction of the synchronisaiton can be altered by calling `controllerModule.getControllerInstance().syncForward(delta)` or 
 `controllerModule.getControllerInstance().syncForward(delta)`. 
