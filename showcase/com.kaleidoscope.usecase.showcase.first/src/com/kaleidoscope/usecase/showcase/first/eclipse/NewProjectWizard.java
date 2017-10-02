@@ -82,31 +82,8 @@ public class NewProjectWizard extends Wizard implements INewWizard {
 	protected void createInitialProjectStructure(final IProgressMonitor monitor, IProject project) throws CoreException {
 		final SubMonitor subMon = SubMonitor.convert(monitor, "Generate project structure", 3);
 		
-		addAllFolders(project, "models",subMon.split(1));
-		
-		IPath pathToSourceModel = new Path("models/src.xmi");
-		IPath pathToTargetModel = new Path("models/trg.xmi");
-		
-		String initialSourceModelContent = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n" + 
-				"<com.kaleidoscope.usecase.showcase.metamodel.person:PersonContainer xmi:version=\"2.0\"\r\n" + 
-				"    xmlns:xmi=\"http://www.omg.org/XMI\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n" + 
-				"    xmlns:com.kaleidoscope.usecase.showcase.metamodel.person=\"platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.person/model/Persons.ecore\"\r\n" + 
-				"    xsi:schemaLocation=\"platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.person/model/Persons.ecore ../model/Persons.ecore\"/>\r\n" + 
-				"";
-		
-		String initialTargetModelContent = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n" + 
-				"<com.kaleidoscope.usecase.showcase.metamodel.employee:EmployeeContainer xmi:version=\"2.0\"\r\n" + 
-				"    xmlns:xmi=\"http://www.omg.org/XMI\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n" + 
-				"    xmlns:com.kaleidoscope.usecase.showcase.metamodel.employee=\"platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore\"\r\n" + 
-				"    xsi:schemaLocation=\"platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore ../model/Employees.ecore\"/>\r\n" + 
-				"";
-		
-		try {
-			addAllFoldersAndFile(project, pathToSourceModel, initialSourceModelContent, null);
-			addAllFoldersAndFile(project, pathToTargetModel, initialTargetModelContent, null);	
-		} catch (CoreException e) {
-			e.printStackTrace();
-		}		
+		InitialProjectStructure.addEmptyEmployeeModelFile(project, new Path("models/trg.xmi"));
+		InitialProjectStructure.addEmptyPersonModelFile(project, new Path("models/src.xmi"));	
 	}
 	
 
