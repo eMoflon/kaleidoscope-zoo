@@ -38,7 +38,7 @@ public interface EmployeesPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore";
+	String eNS_URI = "platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employees.ecore";
 
 	/**
 	 * The package namespace name.

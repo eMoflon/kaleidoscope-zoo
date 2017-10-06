@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link Employees.Employee#getName <em>Name</em>}</li>
  *   <li>{@link Employees.Employee#getSalary <em>Salary</em>}</li>
  *   <li>{@link Employees.Employee#getID <em>ID</em>}</li>
  * </ul>
- * </p>
  *
  * @see Employees.EmployeesPackage#getEmployee()
  * @model
