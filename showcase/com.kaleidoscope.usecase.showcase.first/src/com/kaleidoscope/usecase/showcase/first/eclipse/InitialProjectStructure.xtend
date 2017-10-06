@@ -27,8 +27,7 @@ class InitialProjectStructure {
 		<?xml version="1.0" encoding="UTF-8"?>
 		<com.kaleidoscope.usecase.showcase.metamodel.employee:EmployeeContainer xmi:version="2.0"
 		    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		    xmlns:com.kaleidoscope.usecase.showcase.metamodel.employee="platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore"
-		    xsi:schemaLocation="platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore ../model/Employees.ecore"/>
+		    xmlns:com.kaleidoscope.usecase.showcase.metamodel.employee="platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employees.ecore"/>
 		'''
 		addAllFoldersAndFile(project, filePath, initialTargetModelContent, null)
 	}
@@ -39,8 +38,7 @@ class InitialProjectStructure {
 		<?xml version="1.0" encoding="UTF-8"?>
 		<com.kaleidoscope.usecase.showcase.metamodel.person:PersonContainer xmi:version="2.0"
 		    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		    xmlns:com.kaleidoscope.usecase.showcase.metamodel.person="platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.person/model/Persons.ecore"
-		    xsi:schemaLocation="platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.person/model/Persons.ecore ../model/Persons.ecore"/>
+		    xmlns:com.kaleidoscope.usecase.showcase.metamodel.person="platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.person/model/Persons.ecore"/>
 		'''
 		
 		addAllFoldersAndFile(project, filePath, initialSourceModelContent, null)

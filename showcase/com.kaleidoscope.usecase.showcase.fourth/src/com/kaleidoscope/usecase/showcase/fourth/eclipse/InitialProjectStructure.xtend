@@ -28,12 +28,14 @@ class InitialProjectStructure extends com.kaleidoscope.usecase.showcase.first.ec
 				BasicConfigurator.configure();
 				
 				OpaqueDelta<PersonContainer> delta = (m) -> {
-					Person newPerson = PersonsFactory.eINSTANCE.createPerson();
-					newPerson.setName("Nikola Tesla");
-					m.getPersons().add(newPerson);
+					Person newPersonTesla = PersonsFactory.eINSTANCE.createPerson();
+					newPersonTesla.setName("Nikola Tesla");
+					newPersonTesla.setID(0);
+					m.getPersons().add(newPersonTesla);
 					
 					Person newPersonEdison = PersonsFactory.eINSTANCE.createPerson();
 					newPersonEdison.setName("Thomas Edison");
+					newPersonEdison.setID(1);
 					m.getPersons().add(newPersonEdison);
 				};
 		
