@@ -24,7 +24,6 @@ public class NewProjectWizard extends com.kaleidoscope.usecase.showcase.first.ec
 	
 	@Override
 	protected void createInitialProjectStructure(final IProgressMonitor monitor, IProject project) throws CoreException {				
-		
 		InitialProjectStructure.addJavaMainFile(project);
 		InitialProjectStructure.addEmptyEmployeeModelFile(project, new Path("models/trg.xmi"));
 		InitialProjectStructure.addEmptyPersonModelFile(project, new Path("models/src.xmi"));	

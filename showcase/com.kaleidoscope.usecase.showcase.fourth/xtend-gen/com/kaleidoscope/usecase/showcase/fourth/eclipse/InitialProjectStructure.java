@@ -10,8 +10,11 @@ import org.eclipse.xtend2.lib.StringConcatenation;
 @SuppressWarnings("all")
 public class InitialProjectStructure extends com.kaleidoscope.usecase.showcase.first.eclipse.InitialProjectStructure {
   public static void addJavaMainFile(final IProject project) throws CoreException {
-    final IPath filePath = new Path("src/Main.java");
+    final IPath filePath = new Path("src/com/kaleidoscope/usecase/showcase/fourth/App.java");
     StringConcatenation _builder = new StringConcatenation();
+    _builder.append("package com.kaleidoscope.usecase.showcase.fourth;");
+    _builder.newLine();
+    _builder.newLine();
     _builder.append("import java.nio.file.Paths;");
     _builder.newLine();
     _builder.newLine();
@@ -27,12 +30,11 @@ public class InitialProjectStructure extends com.kaleidoscope.usecase.showcase.f
     _builder.append("import Persons.PersonsFactory;");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("public class Main {");
+    _builder.append("public class App {");
     _builder.newLine();
     _builder.newLine();
     _builder.append("\t");
     _builder.append("public static void main(String[] args) {");
-    _builder.newLine();
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("OpaqueDelta<PersonContainer> delta = (m) -> {");
@@ -63,8 +65,6 @@ public class InitialProjectStructure extends com.kaleidoscope.usecase.showcase.f
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("ControllerModule controllerModule = new ControllerModule(Paths.get(\"models\", \"gen\"));");
-    _builder.newLine();
-    _builder.append("\t\t");
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("controllerModule.getControllerInstance().syncForward(delta);");

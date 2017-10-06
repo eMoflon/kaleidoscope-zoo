@@ -27,22 +27,45 @@ import Persons.PersonContainer;
 import Persons.PersonsFactory;
 
 public class ControllerModule extends AbstractModule {
-
 	private Path destination;
-
+	private class ControllerType extends TypeLiteral<
+		PersistentDeltaBasedController<
+		PersonContainer,
+		Path,
+		EmployeeContainer,
+		Path,
+		String,
+		OperationalDelta,
+		OperationalDelta,
+		OpaqueDelta<PersonContainer>,
+		OpaqueDelta<EmployeeContainer>,
+		Path
+		>
+	>{};
+	
 	public ControllerModule(Path destination) {
 		this.destination = destination;
 	}
 
 	@Provides
 	@Src
-	DeltaAdapter<OperationalDelta, OpaqueDelta<PersonContainer>, PersonContainer> provideSourceDeltaAdapter() {
+	DeltaAdapter<
+		OperationalDelta, 
+		OpaqueDelta<PersonContainer>, 
+		PersonContainer
+		> 
+	provideSourceDeltaAdapter() {
 		return new OpaqueToOperationalDeltaAdapter<PersonContainer>();
 	}
 
 	@Provides
 	@Trg
-	DeltaAdapter<OperationalDelta, OpaqueDelta<EmployeeContainer>, EmployeeContainer> provideTargetDeltaAdapter() {
+	DeltaAdapter<
+		OperationalDelta, 
+		OpaqueDelta<EmployeeContainer>, 
+		EmployeeContainer
+		> 
+	provideTargetDeltaAdapter() {
 		return new OpaqueToOperationalDeltaAdapter<EmployeeContainer>();
 	}
 
@@ -55,13 +78,9 @@ public class ControllerModule extends AbstractModule {
 		OperationalDelta,
 		Path> 
 	provideSynchroniser() {
-
 		PersonContainer sourceModel = PersonsFactory.eINSTANCE.createPersonContainer();
 		EmployeeContainer targetModel = EmployeesFactory.eINSTANCE.createEmployeeContainer();
-
-		PersistentSynchroniser<PersonContainer, EmployeeContainer, String, OperationalDelta, OperationalDelta, Path> tool = new SynchroniserImpl(
-				sourceModel, targetModel);
-
+		SynchroniserImpl tool = new SynchroniserImpl(sourceModel, targetModel);
 		tool.initialize();
 		return tool;
 	}
@@ -83,24 +102,7 @@ public class ControllerModule extends AbstractModule {
 		OpaqueDelta<EmployeeContainer>, 
 		Path>
 	getControllerInstance() {
-
 		Injector injector = Guice.createInjector(this, new ArtefactAdapterModule(Paths.get(".")));
-		return injector.getInstance(Key.get(
-				new TypeLiteral<
-					PersistentDeltaBasedController<
-						PersonContainer,
-						Path,
-						EmployeeContainer,
-						Path,
-						String,
-						OperationalDelta,
-						OperationalDelta,
-						OpaqueDelta<PersonContainer>,
-						OpaqueDelta<EmployeeContainer>,
-						Path
-					>
-				>() {
-			}));
+		return injector.getInstance(Key.get(new ControllerType()));
 	}
-
 }

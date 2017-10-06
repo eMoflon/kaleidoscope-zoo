@@ -9,11 +9,11 @@ import static com.kaleidoscope.util.WorkspaceHelper.addAllFoldersAndFile
 
 class InitialProjectStructure extends com.kaleidoscope.usecase.showcase.first.eclipse.InitialProjectStructure {
 	
-
-	def static void addJavaMainFile(IProject project) throws CoreException{
-		
-		val IPath filePath = new Path("src/Main.java")
+	def static void addJavaMainFile(IProject project) throws CoreException{	
+		val IPath filePath = new Path("src/com/kaleidoscope/usecase/showcase/fourth/App.java")
 		val String fileContent = '''
+		package com.kaleidoscope.usecase.showcase.fourth;
+		
 		import java.nio.file.Paths;
 		
 		import com.kaleidoscope.core.delta.javabased.opaque.OpaqueDelta;
@@ -23,10 +23,9 @@ class InitialProjectStructure extends com.kaleidoscope.usecase.showcase.first.ec
 		import Persons.PersonContainer;
 		import Persons.PersonsFactory;
 		
-		public class Main {
+		public class App {
 		
 			public static void main(String[] args) {
-		
 				OpaqueDelta<PersonContainer> delta = (m) -> {
 					Person newPerson = PersonsFactory.eINSTANCE.createPerson();
 					newPerson.setName("Nikola Tesla");
@@ -38,13 +37,11 @@ class InitialProjectStructure extends com.kaleidoscope.usecase.showcase.first.ec
 				};
 		
 				ControllerModule controllerModule = new ControllerModule(Paths.get("models", "gen"));
-				
 				controllerModule.getControllerInstance().syncForward(delta);
 			}
 		
 		}
 		'''
 		addAllFoldersAndFile(project, filePath, fileContent, null)
-	
 	}
 }

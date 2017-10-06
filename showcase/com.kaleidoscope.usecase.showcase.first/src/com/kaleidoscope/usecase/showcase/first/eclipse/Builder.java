@@ -27,7 +27,6 @@ import Employees.EmployeeContainer;
 import Persons.PersonContainer;
   
 public class Builder extends IncrementalProjectBuilder implements IResourceDeltaVisitor {
-	
 	protected IProject project;
 	protected Path projectPath;
 	
@@ -94,13 +93,10 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 	}
 
 
-	private void performClean() {
-		
-	}
+	private void performClean() {}
 	
 	
 	public void syncForward()	throws CoreException{
-		
 		logger.info("Sync a java model with the configuration model is performed!");
 		
 		Path syncForwardAbsoluteSourcePath = projectPath.resolve(syncForwardRealtiveSourcePath);
@@ -111,8 +107,7 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 			refreshProject();
 			logger.info("Sync a java model with the configuration model is done!");
 		}else {
-			
-			logger.info("Sync a jave model with the configuration model was tried without the existing source");
+			logger.info("Sync a java model with the configuration model was tried without the existing source");
 		}
 	
 	}
@@ -130,8 +125,6 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 			
 			logger.info("Sync configuration model with a java model was tried without the existing source");
 		}
-		
-		
 	}
 	
 	public void refreshProject() throws CoreException{
@@ -141,8 +134,6 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 	
 	@Override
 	public boolean visit(IResourceDelta delta) throws CoreException {
-		
-		
 		IPath relFilePath = delta.getResource().getProjectRelativePath();
 			
 		if(delta.getResource().getName().equals("bin")){
@@ -152,15 +143,10 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 		if(delta.getResource().getType() != IResource.FILE)
 			return true;		
 		
-
 		if(relFilePath.toOSString().contentEquals(syncForwardRealtiveSourcePath.toString())){
-			
 			syncForward();
-			
 		}else if(relFilePath.toOSString().contentEquals(syncBacwardRelativeTargetPath.toString())){
-			
-			syncBackward();		
-			
+			syncBackward();			
 		}
 		return true;
 	}

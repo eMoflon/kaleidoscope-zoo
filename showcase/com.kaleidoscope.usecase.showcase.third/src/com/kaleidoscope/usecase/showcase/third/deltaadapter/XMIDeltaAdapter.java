@@ -16,16 +16,7 @@ import com.kaleidoscope.core.framework.workflow.adapters.DeltaAdapter;
 
 public class XMIDeltaAdapter<Model> implements DeltaAdapter<OperationalDelta, Path, Model> {
 	private final static Logger logger = Logger.getLogger(XMIDeltaAdapter.class); 
-	private Path path;
-	
-	public XMIDeltaAdapter(Path path) {
-		this.path = path;
-	}
-	
-	public XMIDeltaAdapter() {
 		
-	}
-	
 	@Override
 	public OperationalDelta parse(Path path, Model m) {
 		logger.debug("Parsing to XMI");
@@ -51,23 +42,4 @@ public class XMIDeltaAdapter<Model> implements DeltaAdapter<OperationalDelta, Pa
 		
 		return new OperationalDelta();
 	}
-
-	@Override
-	public Path unparse(OperationalDelta d, Model a) {
-		logger.debug("Starting to unparse XMI");
-		try {
-			File file = path.toFile();  
-			Resource resource = ((EObject)a).eResource().getResourceSet().createResource(URI.createFileURI(file.getAbsolutePath()));	
-			
-			resource.getContents().add((EObject)d.toEMF());
-			resource.save(null);			
-	
-			logger.debug("XMI Resource saved!");
-		} catch (IOException | ClassCastException e) {
-			logger.error("Not able to save XMI resource: " + e.getMessage());					
-		}		
-		
-		return path;
-	}
-
 }
