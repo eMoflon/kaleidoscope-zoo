@@ -18,8 +18,8 @@ import com.kaleidoscope.core.framework.synchronisation.PersistentSynchroniser;
 import com.kaleidoscope.core.framework.workflow.adapters.DeltaAdapter;
 import com.kaleidoscope.core.framework.workflow.controllers.deltabased.PersistentDeltaBasedController;
 import com.kaleidoscope.usecase.showcase.first.controller.ArtefactAdapterModule;
-import com.kaleidoscope.usecase.showcase.first.synchroniser.SynchroniserImpl;
 import com.kaleidoscope.usecase.showcase.fourth.delta.OpaqueToOperationalDeltaAdapter;
+import com.kaleidoscope.usecase.showcase.fourth.synchroniser.SynchroniserImpl;
 
 import Employees.EmployeeContainer;
 import Employees.EmployeesFactory;
