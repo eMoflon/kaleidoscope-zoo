@@ -73,7 +73,7 @@ public class ShowcaseFourthNature implements IProjectNature {
 					" org.eclipse.emf.ecore.xmi;bundle-version=\"2.13.0\",\r\n" + 
 					" com.kaleidoscope.usecase.showcase.first;bundle-version=\"1.0.0\",\r\n" + 
 					" org.apache.log4j;bundle-version=\"1.2.15\",\r\n" + 
-					"com.google.inject;bundle-version=\"3.0.0\",\r\n" +
+					" com.google.inject;bundle-version=\"3.0.0\",\r\n" +
 					" javax.inject;bundle-version=\"1.0.0\",\r\n" + 
 					" com.kaleidoscope.usecase.showcase.fourth;bundle-version=\"1.0.0\",\r\n" + 
 					" com.kaleidoscope.core.framework;bundle-version=\"1.0.0\"", AttributeUpdatePolicy.KEEP);
