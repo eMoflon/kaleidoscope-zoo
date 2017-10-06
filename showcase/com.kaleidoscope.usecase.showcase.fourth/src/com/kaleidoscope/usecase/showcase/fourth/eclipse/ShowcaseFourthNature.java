@@ -67,10 +67,11 @@ public class ShowcaseFourthNature implements IProjectNature {
 			changed |= ManifestFileUpdater.updateAttribute(manifest, PluginManifestConstants.BUNDLE_VENDOR, "eMoflon IBeX", AttributeUpdatePolicy.KEEP);
 			changed |= ManifestFileUpdater.updateAttribute(manifest, PluginManifestConstants.BUNDLE_ACTIVATION_POLICY, "lazy", AttributeUpdatePolicy.KEEP);
 			changed |= ManifestFileUpdater.updateAttribute(manifest, PluginManifestConstants.BUNDLE_EXECUTION_ENVIRONMENT, "JavaSE-1.8", AttributeUpdatePolicy.KEEP);
-			changed |= ManifestFileUpdater.updateAttribute(manifest, PluginManifestConstants.REQUIRE_BUNDLE, "com.kaleidoscope.core.delta;bundle-version=\"1.0.0\",\r\n" + 
+			changed |= ManifestFileUpdater.updateAttribute(manifest, PluginManifestConstants.REQUIRE_BUNDLE, 
+					"com.kaleidoscope.core.delta;bundle-version=\"1.0.0\",\r\n" + 
 					" com.kaleidoscope.usecase.showcase.metamodel.employee;bundle-version=\"1.0.0\",\r\n" + 
 					" com.kaleidoscope.usecase.showcase.metamodel.person;bundle-version=\"1.0.0\",\r\n" + 
-					" com.kaleidoscope.core.aux.xmi" +
+					" com.kaleidoscope.core.aux.xmi,\r\n" +
 					" org.eclipse.emf.ecore.xmi;bundle-version=\"2.13.0\",\r\n" + 
 					" com.kaleidoscope.usecase.showcase.first;bundle-version=\"1.0.0\",\r\n" + 
 					" org.apache.log4j;bundle-version=\"1.2.15\",\r\n" + 
