@@ -15,10 +15,9 @@ class InitialProjectStructure extends com.kaleidoscope.usecase.showcase.first.ec
 		package com.kaleidoscope.usecase.showcase.fourth;
 		
 		import java.nio.file.Paths;
-		
+		import org.apache.log4j.BasicConfigurator;
 		import com.kaleidoscope.core.delta.javabased.opaque.OpaqueDelta;
 		import com.kaleidoscope.usecase.showcase.fourth.controller.ControllerModule;
-		
 		import Persons.Person;
 		import Persons.PersonContainer;
 		import Persons.PersonsFactory;
@@ -26,6 +25,8 @@ class InitialProjectStructure extends com.kaleidoscope.usecase.showcase.first.ec
 		public class App {
 		
 			public static void main(String[] args) {
+				BasicConfigurator.configure();
+				
 				OpaqueDelta<PersonContainer> delta = (m) -> {
 					Person newPerson = PersonsFactory.eINSTANCE.createPerson();
 					newPerson.setName("Nikola Tesla");
