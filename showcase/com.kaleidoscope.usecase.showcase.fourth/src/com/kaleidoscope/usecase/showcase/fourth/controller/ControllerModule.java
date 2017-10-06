@@ -9,18 +9,17 @@ import com.google.inject.Injector;
 import com.google.inject.Key;
 import com.google.inject.Provides;
 import com.google.inject.TypeLiteral;
-import com.kaleidoscope.core.auxiliary.xmi.artefactadapter.XMIArtefactAdapter;
 import com.kaleidoscope.core.delta.javabased.opaque.OpaqueDelta;
 import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
 import com.kaleidoscope.core.framework.annotations.Dest;
 import com.kaleidoscope.core.framework.annotations.Src;
 import com.kaleidoscope.core.framework.annotations.Trg;
 import com.kaleidoscope.core.framework.synchronisation.PersistentSynchroniser;
-import com.kaleidoscope.core.framework.workflow.adapters.ArtefactAdapter;
 import com.kaleidoscope.core.framework.workflow.adapters.DeltaAdapter;
 import com.kaleidoscope.core.framework.workflow.controllers.deltabased.PersistentDeltaBasedController;
-import com.kaleidoscope.usecase.showcase.fourth.delta.OpaqueToOperationalDeltaAdapter;
+import com.kaleidoscope.usecase.showcase.first.controller.ArtefactAdapterModule;
 import com.kaleidoscope.usecase.showcase.first.synchroniser.SynchroniserImpl;
+import com.kaleidoscope.usecase.showcase.fourth.delta.OpaqueToOperationalDeltaAdapter;
 
 import Employees.EmployeeContainer;
 import Employees.EmployeesFactory;
@@ -29,16 +28,10 @@ import Persons.PersonsFactory;
 
 public class ControllerModule extends AbstractModule {
 
-	private Path sourceArtefactAdapterPath;
-	private Path targetArtefactAdapterPath;
 	private Path destination;
 
 	public ControllerModule(Path destination) {
-
-		this.sourceArtefactAdapterPath = Paths.get("instances",  "src.xmi");
-		this.targetArtefactAdapterPath = Paths.get("instances", "trg.xmi");
 		this.destination = destination;
-
 	}
 
 	@Provides
@@ -51,19 +44,6 @@ public class ControllerModule extends AbstractModule {
 	@Trg
 	DeltaAdapter<OperationalDelta, OpaqueDelta<EmployeeContainer>, EmployeeContainer> provideTargetDeltaAdapter() {
 		return new OpaqueToOperationalDeltaAdapter<EmployeeContainer>();
-	}
-
-	@Provides
-	@Src
-	ArtefactAdapter<PersonContainer, Path> provideSourceArtefactAdapter() {
-		return new XMIArtefactAdapter<PersonContainer>(sourceArtefactAdapterPath);
-	}
-
-	@Provides
-	@Trg
-	ArtefactAdapter<EmployeeContainer, Path> provideTargetArtefactAdapter() {
-
-		return new XMIArtefactAdapter<EmployeeContainer>(targetArtefactAdapterPath);
 	}
 
 	@Provides
@@ -104,7 +84,7 @@ public class ControllerModule extends AbstractModule {
 		Path>
 	getControllerInstance() {
 
-		Injector injector = Guice.createInjector(this);
+		Injector injector = Guice.createInjector(this, new ArtefactAdapterModule(Paths.get(".")));
 		return injector.getInstance(Key.get(
 				new TypeLiteral<
 					PersistentDeltaBasedController<
