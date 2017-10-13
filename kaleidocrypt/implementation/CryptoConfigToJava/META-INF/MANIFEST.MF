@@ -22,7 +22,8 @@ Require-Bundle: org.eclipse.emf.ecore,
  com.kaleidoscope.ui,
  com.kaleidoscope.core.aux.simplejava;bundle-version="1.0.0",
  com.kaleidoscope.core.delta,
- com.kaleidoscope.core.framework
+ com.kaleidoscope.core.framework,
+ com.kaleidoscope.usecase.showcase.metamodel.person;bundle-version="1.0.0"
 Bundle-ManifestVersion: 2
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

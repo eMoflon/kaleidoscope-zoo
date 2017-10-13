@@ -761,7 +761,7 @@ public class create_a_fridgeImpl extends AbstractRuleImpl implements create_a_fr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_3(EMoflonEdge _edge_occupies) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_2(EMoflonEdge _edge_occupies) {
 
 		Object[] result1_bindingAndBlack = create_a_fridgeImpl
 				.pattern_create_a_fridge_20_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -820,7 +820,7 @@ public class create_a_fridgeImpl extends AbstractRuleImpl implements create_a_fr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_BWD_EMoflonEdge_3(EMoflonEdge _edge_item) {
+	public EObjectContainer isAppropriate_BWD_EMoflonEdge_2(EMoflonEdge _edge_item) {
 
 		Object[] result1_bindingAndBlack = create_a_fridgeImpl
 				.pattern_create_a_fridge_21_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -887,29 +887,29 @@ public class create_a_fridgeImpl extends AbstractRuleImpl implements create_a_fr
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		Variable var_firstBlock_yIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock", true, csp);
-		var_firstBlock_yIndex.setValue(__helper.getValue("firstBlock", "yIndex"));
-		var_firstBlock_yIndex.setType("int");
-
 		Variable var_literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
 		var_literal0.setValue(0);
 		var_literal0.setType("int");
 
-		Variable var_grid_blockSize = CSPFactoryHelper.eINSTANCE.createVariable("grid", true, csp);
-		var_grid_blockSize.setValue(__helper.getValue("grid", "blockSize"));
-		var_grid_blockSize.setType("double");
+		Variable var_firstBlock_yIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock", true, csp);
+		var_firstBlock_yIndex.setValue(__helper.getValue("firstBlock", "yIndex"));
+		var_firstBlock_yIndex.setType("int");
 
 		Variable var_item_yPos = CSPFactoryHelper.eINSTANCE.createVariable("item", true, csp);
 		var_item_yPos.setValue(__helper.getValue("item", "yPos"));
 		var_item_yPos.setType("double");
 
-		Variable var_item_xPos = CSPFactoryHelper.eINSTANCE.createVariable("item", true, csp);
-		var_item_xPos.setValue(__helper.getValue("item", "xPos"));
-		var_item_xPos.setType("double");
+		Variable var_grid_blockSize = CSPFactoryHelper.eINSTANCE.createVariable("grid", true, csp);
+		var_grid_blockSize.setValue(__helper.getValue("grid", "blockSize"));
+		var_grid_blockSize.setType("double");
 
 		Variable var_firstBlock_xIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock", true, csp);
 		var_firstBlock_xIndex.setValue(__helper.getValue("firstBlock", "xIndex"));
 		var_firstBlock_xIndex.setType("int");
+
+		Variable var_item_xPos = CSPFactoryHelper.eINSTANCE.createVariable("item", true, csp);
+		var_item_xPos.setValue(__helper.getValue("item", "xPos"));
+		var_item_xPos.setType("double");
 
 		Eq eq0 = new Eq();
 		csp.getConstraints().add(eq0);
@@ -966,29 +966,29 @@ public class create_a_fridgeImpl extends AbstractRuleImpl implements create_a_fr
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		Variable var_firstBlock_yIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock", true, csp);
-		var_firstBlock_yIndex.setValue(__helper.getValue("firstBlock", "yIndex"));
-		var_firstBlock_yIndex.setType("int");
-
 		Variable var_literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
 		var_literal0.setValue(0);
 		var_literal0.setType("int");
 
-		Variable var_grid_blockSize = CSPFactoryHelper.eINSTANCE.createVariable("grid", true, csp);
-		var_grid_blockSize.setValue(__helper.getValue("grid", "blockSize"));
-		var_grid_blockSize.setType("double");
+		Variable var_firstBlock_yIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock", true, csp);
+		var_firstBlock_yIndex.setValue(__helper.getValue("firstBlock", "yIndex"));
+		var_firstBlock_yIndex.setType("int");
 
 		Variable var_item_yPos = CSPFactoryHelper.eINSTANCE.createVariable("item", true, csp);
 		var_item_yPos.setValue(__helper.getValue("item", "yPos"));
 		var_item_yPos.setType("double");
 
-		Variable var_item_xPos = CSPFactoryHelper.eINSTANCE.createVariable("item", true, csp);
-		var_item_xPos.setValue(__helper.getValue("item", "xPos"));
-		var_item_xPos.setType("double");
+		Variable var_grid_blockSize = CSPFactoryHelper.eINSTANCE.createVariable("grid", true, csp);
+		var_grid_blockSize.setValue(__helper.getValue("grid", "blockSize"));
+		var_grid_blockSize.setType("double");
 
 		Variable var_firstBlock_xIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock", true, csp);
 		var_firstBlock_xIndex.setValue(__helper.getValue("firstBlock", "xIndex"));
 		var_firstBlock_xIndex.setType("int");
+
+		Variable var_item_xPos = CSPFactoryHelper.eINSTANCE.createVariable("item", true, csp);
+		var_item_xPos.setValue(__helper.getValue("item", "xPos"));
+		var_item_xPos.setType("double");
 
 		Eq eq0 = new Eq();
 		csp.getConstraints().add(eq0);
@@ -1250,10 +1250,10 @@ public class create_a_fridgeImpl extends AbstractRuleImpl implements create_a_fr
 			return null;
 		case RulesPackage.CREATE_AFRIDGE___CHECK_TYPES_BWD__MATCH:
 			return checkTypes_BWD((Match) arguments.get(0));
-		case RulesPackage.CREATE_AFRIDGE___IS_APPROPRIATE_FWD_EMOFLON_EDGE_3__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_3((EMoflonEdge) arguments.get(0));
-		case RulesPackage.CREATE_AFRIDGE___IS_APPROPRIATE_BWD_EMOFLON_EDGE_3__EMOFLONEDGE:
-			return isAppropriate_BWD_EMoflonEdge_3((EMoflonEdge) arguments.get(0));
+		case RulesPackage.CREATE_AFRIDGE___IS_APPROPRIATE_FWD_EMOFLON_EDGE_2__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_2((EMoflonEdge) arguments.get(0));
+		case RulesPackage.CREATE_AFRIDGE___IS_APPROPRIATE_BWD_EMOFLON_EDGE_2__EMOFLONEDGE:
+			return isAppropriate_BWD_EMoflonEdge_2((EMoflonEdge) arguments.get(0));
 		case RulesPackage.CREATE_AFRIDGE___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.CREATE_AFRIDGE___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH:

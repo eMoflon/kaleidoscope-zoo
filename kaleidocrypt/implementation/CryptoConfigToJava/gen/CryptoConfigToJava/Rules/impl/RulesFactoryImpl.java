@@ -55,24 +55,24 @@ public class RulesFactoryImpl extends EFactoryImpl implements RulesFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT:
-			return createIgnoreMethodInvocationArgument();
 		case RulesPackage.SECURE_PASSWORD_TASK:
 			return createSecurePasswordTask();
-		case RulesPackage.IGNORE_PARAMETER_RULE:
-			return createIgnoreParameterRule();
-		case RulesPackage.PASSWORD_BASED_ENCRYPTION:
-			return createPasswordBasedEncryption();
 		case RulesPackage.PERFORM_GET_KEY_METHOD:
 			return createPerformGetKeyMethod();
 		case RulesPackage.SYMMETRIC_ENCRYPTION_TASK:
 			return createSymmetricEncryptionTask();
 		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT:
 			return createSymmetricBlockCipherImportToImport();
-		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT:
-			return createKeyDerivationAlgorithmImportToImport();
+		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT:
+			return createIgnoreMethodInvocationArgument();
 		case RulesPackage.IGNORE_OPAQUE_METHOD:
 			return createIgnoreOpaqueMethod();
+		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT:
+			return createKeyDerivationAlgorithmImportToImport();
+		case RulesPackage.IGNORE_PARAMETER_RULE:
+			return createIgnoreParameterRule();
+		case RulesPackage.PASSWORD_BASED_ENCRYPTION:
+			return createPasswordBasedEncryption();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -83,39 +83,9 @@ public class RulesFactoryImpl extends EFactoryImpl implements RulesFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IgnoreMethodInvocationArgument createIgnoreMethodInvocationArgument() {
-		IgnoreMethodInvocationArgumentImpl ignoreMethodInvocationArgument = new IgnoreMethodInvocationArgumentImpl();
-		return ignoreMethodInvocationArgument;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public SecurePasswordTask createSecurePasswordTask() {
 		SecurePasswordTaskImpl securePasswordTask = new SecurePasswordTaskImpl();
 		return securePasswordTask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IgnoreParameterRule createIgnoreParameterRule() {
-		IgnoreParameterRuleImpl ignoreParameterRule = new IgnoreParameterRuleImpl();
-		return ignoreParameterRule;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PasswordBasedEncryption createPasswordBasedEncryption() {
-		PasswordBasedEncryptionImpl passwordBasedEncryption = new PasswordBasedEncryptionImpl();
-		return passwordBasedEncryption;
 	}
 
 	/**
@@ -153,9 +123,9 @@ public class RulesFactoryImpl extends EFactoryImpl implements RulesFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public KeyDerivationAlgorithmImportToImport createKeyDerivationAlgorithmImportToImport() {
-		KeyDerivationAlgorithmImportToImportImpl keyDerivationAlgorithmImportToImport = new KeyDerivationAlgorithmImportToImportImpl();
-		return keyDerivationAlgorithmImportToImport;
+	public IgnoreMethodInvocationArgument createIgnoreMethodInvocationArgument() {
+		IgnoreMethodInvocationArgumentImpl ignoreMethodInvocationArgument = new IgnoreMethodInvocationArgumentImpl();
+		return ignoreMethodInvocationArgument;
 	}
 
 	/**
@@ -166,6 +136,36 @@ public class RulesFactoryImpl extends EFactoryImpl implements RulesFactory {
 	public IgnoreOpaqueMethod createIgnoreOpaqueMethod() {
 		IgnoreOpaqueMethodImpl ignoreOpaqueMethod = new IgnoreOpaqueMethodImpl();
 		return ignoreOpaqueMethod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public KeyDerivationAlgorithmImportToImport createKeyDerivationAlgorithmImportToImport() {
+		KeyDerivationAlgorithmImportToImportImpl keyDerivationAlgorithmImportToImport = new KeyDerivationAlgorithmImportToImportImpl();
+		return keyDerivationAlgorithmImportToImport;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IgnoreParameterRule createIgnoreParameterRule() {
+		IgnoreParameterRuleImpl ignoreParameterRule = new IgnoreParameterRuleImpl();
+		return ignoreParameterRule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PasswordBasedEncryption createPasswordBasedEncryption() {
+		PasswordBasedEncryptionImpl passwordBasedEncryption = new PasswordBasedEncryptionImpl();
+		return passwordBasedEncryption;
 	}
 
 	/**

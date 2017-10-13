@@ -98,20 +98,20 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isAppropriate_FWD(Match match, SymmetricBlockCipher alg, Import imp) {
+	public boolean isAppropriate_FWD(Match match, Import imp, SymmetricBlockCipher alg) {
 
 		Object[] result1_black = SymmetricBlockCipherImportToImportImpl
-				.pattern_SymmetricBlockCipherImportToImport_0_1_initialbindings_blackBBBB(this, match, alg, imp);
+				.pattern_SymmetricBlockCipherImportToImport_0_1_initialbindings_blackBBBB(this, match, imp, alg);
 		if (result1_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[match] = " + match + ", " + "[alg] = " + alg + ", " + "[imp] = " + imp + ".");
+					+ "[match] = " + match + ", " + "[imp] = " + imp + ", " + "[alg] = " + alg + ".");
 		}
 
 		Object[] result2_bindingAndBlack = SymmetricBlockCipherImportToImportImpl
-				.pattern_SymmetricBlockCipherImportToImport_0_2_SolveCSP_bindingAndBlackFBBBB(this, match, alg, imp);
+				.pattern_SymmetricBlockCipherImportToImport_0_2_SolveCSP_bindingAndBlackFBBBB(this, match, imp, alg);
 		if (result2_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[match] = " + match + ", " + "[alg] = " + alg + ", " + "[imp] = " + imp + ".");
+					+ "[match] = " + match + ", " + "[imp] = " + imp + ", " + "[alg] = " + alg + ".");
 		}
 		CSP csp = (CSP) result2_bindingAndBlack[0];
 		// 
@@ -119,22 +119,22 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 				.pattern_SymmetricBlockCipherImportToImport_0_3_CheckCSP_expressionFBB(this, csp)) {
 
 			Object[] result4_black = SymmetricBlockCipherImportToImportImpl
-					.pattern_SymmetricBlockCipherImportToImport_0_4_collectelementstobetranslated_blackBBB(match, alg,
-							imp);
+					.pattern_SymmetricBlockCipherImportToImport_0_4_collectelementstobetranslated_blackBBB(match, imp,
+							alg);
 			if (result4_black == null) {
 				throw new RuntimeException("Pattern matching failed." + " Variables: " + "[match] = " + match + ", "
-						+ "[alg] = " + alg + ", " + "[imp] = " + imp + ".");
+						+ "[imp] = " + imp + ", " + "[alg] = " + alg + ".");
 			}
 			SymmetricBlockCipherImportToImportImpl
-					.pattern_SymmetricBlockCipherImportToImport_0_4_collectelementstobetranslated_greenBBBF(match, alg,
-							imp);
+					.pattern_SymmetricBlockCipherImportToImport_0_4_collectelementstobetranslated_greenBBBF(match, imp,
+							alg);
 			//nothing EMoflonEdge alg__imp____imports = (EMoflonEdge) result4_green[3];
 
 			Object[] result5_black = SymmetricBlockCipherImportToImportImpl
-					.pattern_SymmetricBlockCipherImportToImport_0_5_collectcontextelements_blackBBB(match, alg, imp);
+					.pattern_SymmetricBlockCipherImportToImport_0_5_collectcontextelements_blackBBB(match, imp, alg);
 			if (result5_black == null) {
 				throw new RuntimeException("Pattern matching failed." + " Variables: " + "[match] = " + match + ", "
-						+ "[alg] = " + alg + ", " + "[imp] = " + imp + ".");
+						+ "[imp] = " + imp + ", " + "[alg] = " + alg + ".");
 			}
 			SymmetricBlockCipherImportToImportImpl
 					.pattern_SymmetricBlockCipherImportToImport_0_5_collectcontextelements_greenBB(match, alg);
@@ -142,7 +142,7 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 			// 
 			SymmetricBlockCipherImportToImportImpl
 					.pattern_SymmetricBlockCipherImportToImport_0_6_registerobjectstomatch_expressionBBBB(this, match,
-							alg, imp);
+							imp, alg);
 			return SymmetricBlockCipherImportToImportImpl.pattern_SymmetricBlockCipherImportToImport_0_7_expressionF();
 		} else {
 			return SymmetricBlockCipherImportToImportImpl.pattern_SymmetricBlockCipherImportToImport_0_8_expressionF();
@@ -164,47 +164,47 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
 					+ "[isApplicableMatch] = " + isApplicableMatch + ".");
 		}
-		SymmetricBlockCipher alg = (SymmetricBlockCipher) result1_bindingAndBlack[0];
-		SymmetricBlockCipherToJcu ac = (SymmetricBlockCipherToJcu) result1_bindingAndBlack[1];
-		JavaCompilationUnit cu = (JavaCompilationUnit) result1_bindingAndBlack[2];
-		Import imp = (Import) result1_bindingAndBlack[3];
+		JavaCompilationUnit cu = (JavaCompilationUnit) result1_bindingAndBlack[0];
+		Import imp = (Import) result1_bindingAndBlack[1];
+		SymmetricBlockCipherToJcu ac = (SymmetricBlockCipherToJcu) result1_bindingAndBlack[2];
+		SymmetricBlockCipher alg = (SymmetricBlockCipher) result1_bindingAndBlack[3];
 		CSP csp = (CSP) result1_bindingAndBlack[4];
 		Object[] result1_green = SymmetricBlockCipherImportToImportImpl
-				.pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_greenFBBFB(cu, imp, csp);
+				.pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_greenFBFBB(cu, imp, csp);
 		JavaImport jimp = (JavaImport) result1_green[0];
-		ImportToImport i2j = (ImportToImport) result1_green[3];
+		ImportToImport i2j = (ImportToImport) result1_green[2];
 
 		Object[] result2_black = SymmetricBlockCipherImportToImportImpl
-				.pattern_SymmetricBlockCipherImportToImport_1_2_collecttranslatedelements_blackBBB(jimp, imp, i2j);
+				.pattern_SymmetricBlockCipherImportToImport_1_2_collecttranslatedelements_blackBBB(jimp, i2j, imp);
 		if (result2_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[jimp] = " + jimp + ", "
-					+ "[imp] = " + imp + ", " + "[i2j] = " + i2j + ".");
+					+ "[i2j] = " + i2j + ", " + "[imp] = " + imp + ".");
 		}
 		Object[] result2_green = SymmetricBlockCipherImportToImportImpl
-				.pattern_SymmetricBlockCipherImportToImport_1_2_collecttranslatedelements_greenFBBB(jimp, imp, i2j);
+				.pattern_SymmetricBlockCipherImportToImport_1_2_collecttranslatedelements_greenFBBB(jimp, i2j, imp);
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		Object[] result3_black = SymmetricBlockCipherImportToImportImpl
-				.pattern_SymmetricBlockCipherImportToImport_1_3_bookkeepingforedges_blackBBBBBBB(ruleresult, jimp, alg,
-						ac, cu, imp, i2j);
+				.pattern_SymmetricBlockCipherImportToImport_1_3_bookkeepingforedges_blackBBBBBBB(ruleresult, jimp, cu,
+						i2j, imp, ac, alg);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[ruleresult] = " + ruleresult
-					+ ", " + "[jimp] = " + jimp + ", " + "[alg] = " + alg + ", " + "[ac] = " + ac + ", " + "[cu] = "
-					+ cu + ", " + "[imp] = " + imp + ", " + "[i2j] = " + i2j + ".");
+					+ ", " + "[jimp] = " + jimp + ", " + "[cu] = " + cu + ", " + "[i2j] = " + i2j + ", " + "[imp] = "
+					+ imp + ", " + "[ac] = " + ac + ", " + "[alg] = " + alg + ".");
 		}
 		SymmetricBlockCipherImportToImportImpl
 				.pattern_SymmetricBlockCipherImportToImport_1_3_bookkeepingforedges_greenBBBBBBFFFF(ruleresult, jimp,
-						alg, cu, imp, i2j);
+						cu, i2j, imp, alg);
 		//nothing EMoflonEdge i2j__jimp____target = (EMoflonEdge) result3_green[6];
-		//nothing EMoflonEdge alg__imp____imports = (EMoflonEdge) result3_green[7];
-		//nothing EMoflonEdge cu__jimp____imports = (EMoflonEdge) result3_green[8];
-		//nothing EMoflonEdge i2j__imp____source = (EMoflonEdge) result3_green[9];
+		//nothing EMoflonEdge cu__jimp____imports = (EMoflonEdge) result3_green[7];
+		//nothing EMoflonEdge i2j__imp____source = (EMoflonEdge) result3_green[8];
+		//nothing EMoflonEdge alg__imp____imports = (EMoflonEdge) result3_green[9];
 
 		// 
 		// 
 		SymmetricBlockCipherImportToImportImpl
 				.pattern_SymmetricBlockCipherImportToImport_1_5_registerobjects_expressionBBBBBBBB(this, ruleresult,
-						jimp, alg, ac, cu, imp, i2j);
+						jimp, cu, i2j, imp, ac, alg);
 		return SymmetricBlockCipherImportToImportImpl
 				.pattern_SymmetricBlockCipherImportToImport_1_6_expressionFB(ruleresult);
 	}
@@ -234,17 +234,17 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 			throw new RuntimeException(
 					"Binding in node core match failed." + " Variables: " + "[match] = " + match + ".");
 		}
-		SymmetricBlockCipher alg = (SymmetricBlockCipher) result2_binding[0];
-		Import imp = (Import) result2_binding[1];
+		Import imp = (Import) result2_binding[0];
+		SymmetricBlockCipher alg = (SymmetricBlockCipher) result2_binding[1];
 		for (Object[] result2_black : SymmetricBlockCipherImportToImportImpl
-				.pattern_SymmetricBlockCipherImportToImport_2_2_corematch_blackBFFBB(alg, imp, match)) {
-			SymmetricBlockCipherToJcu ac = (SymmetricBlockCipherToJcu) result2_black[1];
-			JavaCompilationUnit cu = (JavaCompilationUnit) result2_black[2];
+				.pattern_SymmetricBlockCipherImportToImport_2_2_corematch_blackFBFBB(imp, alg, match)) {
+			JavaCompilationUnit cu = (JavaCompilationUnit) result2_black[0];
+			SymmetricBlockCipherToJcu ac = (SymmetricBlockCipherToJcu) result2_black[2];
 			// ForEach 
 			for (Object[] result3_black : SymmetricBlockCipherImportToImportImpl
-					.pattern_SymmetricBlockCipherImportToImport_2_3_findcontext_blackBBBB(alg, ac, cu, imp)) {
+					.pattern_SymmetricBlockCipherImportToImport_2_3_findcontext_blackBBBB(cu, imp, ac, alg)) {
 				Object[] result3_green = SymmetricBlockCipherImportToImportImpl
-						.pattern_SymmetricBlockCipherImportToImport_2_3_findcontext_greenBBBBFFFF(alg, ac, cu, imp);
+						.pattern_SymmetricBlockCipherImportToImport_2_3_findcontext_greenBBBBFFFF(cu, imp, ac, alg);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[4];
 				//nothing EMoflonEdge ac__cu____target = (EMoflonEdge) result3_green[5];
 				//nothing EMoflonEdge alg__imp____imports = (EMoflonEdge) result3_green[6];
@@ -252,11 +252,11 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 
 				Object[] result4_bindingAndBlack = SymmetricBlockCipherImportToImportImpl
 						.pattern_SymmetricBlockCipherImportToImport_2_4_solveCSP_bindingAndBlackFBBBBBB(this,
-								isApplicableMatch, alg, ac, cu, imp);
+								isApplicableMatch, cu, imp, ac, alg);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-							+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[alg] = " + alg + ", " + "[ac] = "
-							+ ac + ", " + "[cu] = " + cu + ", " + "[imp] = " + imp + ".");
+							+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[cu] = " + cu + ", " + "[imp] = "
+							+ imp + ", " + "[ac] = " + ac + ", " + "[alg] = " + alg + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// 
@@ -289,9 +289,9 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjectsToMatch_FWD(Match match, SymmetricBlockCipher alg, Import imp) {
-		match.registerObject("alg", alg);
+	public void registerObjectsToMatch_FWD(Match match, Import imp, SymmetricBlockCipher alg) {
 		match.registerObject("imp", imp);
+		match.registerObject("alg", alg);
 
 	}
 
@@ -300,7 +300,7 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isAppropriate_solveCsp_FWD(Match match, SymmetricBlockCipher alg, Import imp) {// Create CSP
+	public CSP isAppropriate_solveCsp_FWD(Match match, Import imp, SymmetricBlockCipher alg) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
 		// Create literals
@@ -329,8 +329,8 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, SymmetricBlockCipher alg,
-			SymmetricBlockCipherToJcu ac, JavaCompilationUnit cu, Import imp) {// Create CSP
+	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, JavaCompilationUnit cu, Import imp,
+			SymmetricBlockCipherToJcu ac, SymmetricBlockCipher alg) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -355,10 +355,10 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 		eq.solve(var_imp_value, var_jimp_value);
 
 		// Snapshot pattern match on which CSP is solved
-		isApplicableMatch.registerObject("alg", alg);
-		isApplicableMatch.registerObject("ac", ac);
 		isApplicableMatch.registerObject("cu", cu);
 		isApplicableMatch.registerObject("imp", imp);
+		isApplicableMatch.registerObject("ac", ac);
+		isApplicableMatch.registerObject("alg", alg);
 		return csp;
 	}
 
@@ -376,14 +376,14 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject jimp, EObject alg, EObject ac, EObject cu,
-			EObject imp, EObject i2j) {
+	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject jimp, EObject cu, EObject i2j, EObject imp,
+			EObject ac, EObject alg) {
 		ruleresult.registerObject("jimp", jimp);
-		ruleresult.registerObject("alg", alg);
-		ruleresult.registerObject("ac", ac);
 		ruleresult.registerObject("cu", cu);
-		ruleresult.registerObject("imp", imp);
 		ruleresult.registerObject("i2j", i2j);
+		ruleresult.registerObject("imp", imp);
+		ruleresult.registerObject("ac", ac);
+		ruleresult.registerObject("alg", alg);
 
 	}
 
@@ -469,46 +469,46 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 					+ "[isApplicableMatch] = " + isApplicableMatch + ".");
 		}
 		JavaImport jimp = (JavaImport) result1_bindingAndBlack[0];
-		SymmetricBlockCipher alg = (SymmetricBlockCipher) result1_bindingAndBlack[1];
+		JavaCompilationUnit cu = (JavaCompilationUnit) result1_bindingAndBlack[1];
 		SymmetricBlockCipherToJcu ac = (SymmetricBlockCipherToJcu) result1_bindingAndBlack[2];
-		JavaCompilationUnit cu = (JavaCompilationUnit) result1_bindingAndBlack[3];
+		SymmetricBlockCipher alg = (SymmetricBlockCipher) result1_bindingAndBlack[3];
 		CSP csp = (CSP) result1_bindingAndBlack[4];
 		Object[] result1_green = SymmetricBlockCipherImportToImportImpl
-				.pattern_SymmetricBlockCipherImportToImport_11_1_performtransformation_greenBBFFB(jimp, alg, csp);
+				.pattern_SymmetricBlockCipherImportToImport_11_1_performtransformation_greenBFFBB(jimp, alg, csp);
+		ImportToImport i2j = (ImportToImport) result1_green[1];
 		Import imp = (Import) result1_green[2];
-		ImportToImport i2j = (ImportToImport) result1_green[3];
 
 		Object[] result2_black = SymmetricBlockCipherImportToImportImpl
-				.pattern_SymmetricBlockCipherImportToImport_11_2_collecttranslatedelements_blackBBB(jimp, imp, i2j);
+				.pattern_SymmetricBlockCipherImportToImport_11_2_collecttranslatedelements_blackBBB(jimp, i2j, imp);
 		if (result2_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[jimp] = " + jimp + ", "
-					+ "[imp] = " + imp + ", " + "[i2j] = " + i2j + ".");
+					+ "[i2j] = " + i2j + ", " + "[imp] = " + imp + ".");
 		}
 		Object[] result2_green = SymmetricBlockCipherImportToImportImpl
-				.pattern_SymmetricBlockCipherImportToImport_11_2_collecttranslatedelements_greenFBBB(jimp, imp, i2j);
+				.pattern_SymmetricBlockCipherImportToImport_11_2_collecttranslatedelements_greenFBBB(jimp, i2j, imp);
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		Object[] result3_black = SymmetricBlockCipherImportToImportImpl
-				.pattern_SymmetricBlockCipherImportToImport_11_3_bookkeepingforedges_blackBBBBBBB(ruleresult, jimp, alg,
-						ac, cu, imp, i2j);
+				.pattern_SymmetricBlockCipherImportToImport_11_3_bookkeepingforedges_blackBBBBBBB(ruleresult, jimp, cu,
+						i2j, imp, ac, alg);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[ruleresult] = " + ruleresult
-					+ ", " + "[jimp] = " + jimp + ", " + "[alg] = " + alg + ", " + "[ac] = " + ac + ", " + "[cu] = "
-					+ cu + ", " + "[imp] = " + imp + ", " + "[i2j] = " + i2j + ".");
+					+ ", " + "[jimp] = " + jimp + ", " + "[cu] = " + cu + ", " + "[i2j] = " + i2j + ", " + "[imp] = "
+					+ imp + ", " + "[ac] = " + ac + ", " + "[alg] = " + alg + ".");
 		}
 		SymmetricBlockCipherImportToImportImpl
 				.pattern_SymmetricBlockCipherImportToImport_11_3_bookkeepingforedges_greenBBBBBBFFFF(ruleresult, jimp,
-						alg, cu, imp, i2j);
+						cu, i2j, imp, alg);
 		//nothing EMoflonEdge i2j__jimp____target = (EMoflonEdge) result3_green[6];
-		//nothing EMoflonEdge alg__imp____imports = (EMoflonEdge) result3_green[7];
-		//nothing EMoflonEdge cu__jimp____imports = (EMoflonEdge) result3_green[8];
-		//nothing EMoflonEdge i2j__imp____source = (EMoflonEdge) result3_green[9];
+		//nothing EMoflonEdge cu__jimp____imports = (EMoflonEdge) result3_green[7];
+		//nothing EMoflonEdge i2j__imp____source = (EMoflonEdge) result3_green[8];
+		//nothing EMoflonEdge alg__imp____imports = (EMoflonEdge) result3_green[9];
 
 		// 
 		// 
 		SymmetricBlockCipherImportToImportImpl
 				.pattern_SymmetricBlockCipherImportToImport_11_5_registerobjects_expressionBBBBBBBB(this, ruleresult,
-						jimp, alg, ac, cu, imp, i2j);
+						jimp, cu, i2j, imp, ac, alg);
 		return SymmetricBlockCipherImportToImportImpl
 				.pattern_SymmetricBlockCipherImportToImport_11_6_expressionFB(ruleresult);
 	}
@@ -541,26 +541,26 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 		JavaImport jimp = (JavaImport) result2_binding[0];
 		JavaCompilationUnit cu = (JavaCompilationUnit) result2_binding[1];
 		for (Object[] result2_black : SymmetricBlockCipherImportToImportImpl
-				.pattern_SymmetricBlockCipherImportToImport_12_2_corematch_blackBFFBB(jimp, cu, match)) {
-			SymmetricBlockCipher alg = (SymmetricBlockCipher) result2_black[1];
+				.pattern_SymmetricBlockCipherImportToImport_12_2_corematch_blackBBFFB(jimp, cu, match)) {
 			SymmetricBlockCipherToJcu ac = (SymmetricBlockCipherToJcu) result2_black[2];
+			SymmetricBlockCipher alg = (SymmetricBlockCipher) result2_black[3];
 			// ForEach 
 			for (Object[] result3_black : SymmetricBlockCipherImportToImportImpl
-					.pattern_SymmetricBlockCipherImportToImport_12_3_findcontext_blackBBBB(jimp, alg, ac, cu)) {
+					.pattern_SymmetricBlockCipherImportToImport_12_3_findcontext_blackBBBB(jimp, cu, ac, alg)) {
 				Object[] result3_green = SymmetricBlockCipherImportToImportImpl
-						.pattern_SymmetricBlockCipherImportToImport_12_3_findcontext_greenBBBBFFFF(jimp, alg, ac, cu);
+						.pattern_SymmetricBlockCipherImportToImport_12_3_findcontext_greenBBBBFFFF(jimp, cu, ac, alg);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[4];
-				//nothing EMoflonEdge ac__cu____target = (EMoflonEdge) result3_green[5];
-				//nothing EMoflonEdge ac__alg____source = (EMoflonEdge) result3_green[6];
-				//nothing EMoflonEdge cu__jimp____imports = (EMoflonEdge) result3_green[7];
+				//nothing EMoflonEdge cu__jimp____imports = (EMoflonEdge) result3_green[5];
+				//nothing EMoflonEdge ac__cu____target = (EMoflonEdge) result3_green[6];
+				//nothing EMoflonEdge ac__alg____source = (EMoflonEdge) result3_green[7];
 
 				Object[] result4_bindingAndBlack = SymmetricBlockCipherImportToImportImpl
 						.pattern_SymmetricBlockCipherImportToImport_12_4_solveCSP_bindingAndBlackFBBBBBB(this,
-								isApplicableMatch, jimp, alg, ac, cu);
+								isApplicableMatch, jimp, cu, ac, alg);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
 							+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[jimp] = " + jimp + ", "
-							+ "[alg] = " + alg + ", " + "[ac] = " + ac + ", " + "[cu] = " + cu + ".");
+							+ "[cu] = " + cu + ", " + "[ac] = " + ac + ", " + "[alg] = " + alg + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// 
@@ -633,8 +633,8 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaImport jimp, SymmetricBlockCipher alg,
-			SymmetricBlockCipherToJcu ac, JavaCompilationUnit cu) {// Create CSP
+	public CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaImport jimp, JavaCompilationUnit cu,
+			SymmetricBlockCipherToJcu ac, SymmetricBlockCipher alg) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -660,9 +660,9 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 
 		// Snapshot pattern match on which CSP is solved
 		isApplicableMatch.registerObject("jimp", jimp);
-		isApplicableMatch.registerObject("alg", alg);
-		isApplicableMatch.registerObject("ac", ac);
 		isApplicableMatch.registerObject("cu", cu);
+		isApplicableMatch.registerObject("ac", ac);
+		isApplicableMatch.registerObject("alg", alg);
 		return csp;
 	}
 
@@ -680,14 +680,14 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_BWD(PerformRuleResult ruleresult, EObject jimp, EObject alg, EObject ac, EObject cu,
-			EObject imp, EObject i2j) {
+	public void registerObjects_BWD(PerformRuleResult ruleresult, EObject jimp, EObject cu, EObject i2j, EObject imp,
+			EObject ac, EObject alg) {
 		ruleresult.registerObject("jimp", jimp);
-		ruleresult.registerObject("alg", alg);
-		ruleresult.registerObject("ac", ac);
 		ruleresult.registerObject("cu", cu);
-		ruleresult.registerObject("imp", imp);
 		ruleresult.registerObject("i2j", i2j);
+		ruleresult.registerObject("imp", imp);
+		ruleresult.registerObject("ac", ac);
+		ruleresult.registerObject("alg", alg);
 
 	}
 
@@ -706,7 +706,7 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_8(EMoflonEdge _edge_imports) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_7(EMoflonEdge _edge_imports) {
 
 		Object[] result1_bindingAndBlack = SymmetricBlockCipherImportToImportImpl
 				.pattern_SymmetricBlockCipherImportToImport_20_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -723,8 +723,8 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 		// ForEach 
 		for (Object[] result2_black : SymmetricBlockCipherImportToImportImpl
 				.pattern_SymmetricBlockCipherImportToImport_20_2_testcorematchandDECs_blackFFB(_edge_imports)) {
-			SymmetricBlockCipher alg = (SymmetricBlockCipher) result2_black[0];
-			Import imp = (Import) result2_black[1];
+			Import imp = (Import) result2_black[0];
+			SymmetricBlockCipher alg = (SymmetricBlockCipher) result2_black[1];
 			Object[] result2_green = SymmetricBlockCipherImportToImportImpl
 					.pattern_SymmetricBlockCipherImportToImport_20_2_testcorematchandDECs_greenFB(__eClass);
 			Match match = (Match) result2_green[0];
@@ -732,7 +732,7 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 			// 
 			if (SymmetricBlockCipherImportToImportImpl
 					.pattern_SymmetricBlockCipherImportToImport_20_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBB(
-							this, match, alg, imp)) {
+							this, match, imp, alg)) {
 				// 
 				if (SymmetricBlockCipherImportToImportImpl
 						.pattern_SymmetricBlockCipherImportToImport_20_4_Ensurethatthecorrecttypesofelementsarematched_expressionFBB(
@@ -766,7 +766,7 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_BWD_EMoflonEdge_10(EMoflonEdge _edge_imports) {
+	public EObjectContainer isAppropriate_BWD_EMoflonEdge_7(EMoflonEdge _edge_imports) {
 
 		Object[] result1_bindingAndBlack = SymmetricBlockCipherImportToImportImpl
 				.pattern_SymmetricBlockCipherImportToImport_21_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -836,13 +836,13 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		Variable var_jimp_value = CSPFactoryHelper.eINSTANCE.createVariable("jimp", true, csp);
-		var_jimp_value.setValue(__helper.getValue("jimp", "value"));
-		var_jimp_value.setType("String");
-
 		Variable var_imp_value = CSPFactoryHelper.eINSTANCE.createVariable("imp", true, csp);
 		var_imp_value.setValue(__helper.getValue("imp", "value"));
 		var_imp_value.setType("String");
+
+		Variable var_jimp_value = CSPFactoryHelper.eINSTANCE.createVariable("jimp", true, csp);
+		var_jimp_value.setValue(__helper.getValue("jimp", "value"));
+		var_jimp_value.setType("String");
 
 		Eq eq0 = new Eq();
 		csp.getConstraints().add(eq0);
@@ -883,13 +883,13 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		Variable var_jimp_value = CSPFactoryHelper.eINSTANCE.createVariable("jimp", true, csp);
-		var_jimp_value.setValue(__helper.getValue("jimp", "value"));
-		var_jimp_value.setType("String");
-
 		Variable var_imp_value = CSPFactoryHelper.eINSTANCE.createVariable("imp", true, csp);
 		var_imp_value.setValue(__helper.getValue("imp", "value"));
 		var_imp_value.setType("String");
+
+		Variable var_jimp_value = CSPFactoryHelper.eINSTANCE.createVariable("jimp", true, csp);
+		var_jimp_value.setValue(__helper.getValue("jimp", "value"));
+		var_jimp_value.setType("String");
 
 		Eq eq0 = new Eq();
 		csp.getConstraints().add(eq0);
@@ -939,16 +939,16 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 					+ ", " + "[targetMatch] = " + targetMatch + ".");
 		}
 		JavaImport jimp = (JavaImport) result2_bindingAndBlack[0];
-		SymmetricBlockCipher alg = (SymmetricBlockCipher) result2_bindingAndBlack[1];
-		JavaCompilationUnit cu = (JavaCompilationUnit) result2_bindingAndBlack[2];
-		Import imp = (Import) result2_bindingAndBlack[3];
+		JavaCompilationUnit cu = (JavaCompilationUnit) result2_bindingAndBlack[1];
+		Import imp = (Import) result2_bindingAndBlack[2];
+		SymmetricBlockCipher alg = (SymmetricBlockCipher) result2_bindingAndBlack[3];
 
 		Object[] result3_bindingAndBlack = SymmetricBlockCipherImportToImportImpl
-				.pattern_SymmetricBlockCipherImportToImport_24_3_solvecsp_bindingAndBlackFBBBBBBB(this, jimp, alg, cu,
-						imp, sourceMatch, targetMatch);
+				.pattern_SymmetricBlockCipherImportToImport_24_3_solvecsp_bindingAndBlackFBBBBBBB(this, jimp, cu, imp,
+						alg, sourceMatch, targetMatch);
 		if (result3_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[jimp] = " + jimp + ", " + "[alg] = " + alg + ", " + "[cu] = " + cu + ", " + "[imp] = " + imp
+					+ "[jimp] = " + jimp + ", " + "[cu] = " + cu + ", " + "[imp] = " + imp + ", " + "[alg] = " + alg
 					+ ", " + "[sourceMatch] = " + sourceMatch + ", " + "[targetMatch] = " + targetMatch + ".");
 		}
 		CSP csp = (CSP) result3_bindingAndBlack[0];
@@ -957,7 +957,7 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 				.pattern_SymmetricBlockCipherImportToImport_24_4_checkCSP_expressionFB(csp)) {
 			// ForEach 
 			for (Object[] result5_black : SymmetricBlockCipherImportToImportImpl
-					.pattern_SymmetricBlockCipherImportToImport_24_5_matchcorrcontext_blackBFBBB(alg, cu, sourceMatch,
+					.pattern_SymmetricBlockCipherImportToImport_24_5_matchcorrcontext_blackBFBBB(cu, alg, sourceMatch,
 							targetMatch)) {
 				SymmetricBlockCipherToJcu ac = (SymmetricBlockCipherToJcu) result5_black[1];
 				Object[] result5_green = SymmetricBlockCipherImportToImportImpl
@@ -966,17 +966,17 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 				CCMatch ccMatch = (CCMatch) result5_green[3];
 
 				Object[] result6_black = SymmetricBlockCipherImportToImportImpl
-						.pattern_SymmetricBlockCipherImportToImport_24_6_createcorrespondence_blackBBBBB(jimp, alg, cu,
-								imp, ccMatch);
+						.pattern_SymmetricBlockCipherImportToImport_24_6_createcorrespondence_blackBBBBB(jimp, cu, imp,
+								alg, ccMatch);
 				if (result6_black == null) {
 					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[jimp] = " + jimp + ", "
-							+ "[alg] = " + alg + ", " + "[cu] = " + cu + ", " + "[imp] = " + imp + ", " + "[ccMatch] = "
+							+ "[cu] = " + cu + ", " + "[imp] = " + imp + ", " + "[alg] = " + alg + ", " + "[ccMatch] = "
 							+ ccMatch + ".");
 				}
 				SymmetricBlockCipherImportToImportImpl
-						.pattern_SymmetricBlockCipherImportToImport_24_6_createcorrespondence_greenBBFB(jimp, imp,
+						.pattern_SymmetricBlockCipherImportToImport_24_6_createcorrespondence_greenBFBB(jimp, imp,
 								ccMatch);
-				//nothing ImportToImport i2j = (ImportToImport) result6_green[2];
+				//nothing ImportToImport i2j = (ImportToImport) result6_green[1];
 
 				Object[] result7_black = SymmetricBlockCipherImportToImportImpl
 						.pattern_SymmetricBlockCipherImportToImport_24_7_addtoreturnedresult_blackBB(result, ccMatch);
@@ -1000,7 +1000,7 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_CC(JavaImport jimp, SymmetricBlockCipher alg, JavaCompilationUnit cu, Import imp,
+	public CSP isApplicable_solveCsp_CC(JavaImport jimp, JavaCompilationUnit cu, Import imp, SymmetricBlockCipher alg,
 			Match sourceMatch, Match targetMatch) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
@@ -1041,9 +1041,9 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean checkDEC_FWD(SymmetricBlockCipher alg, Import imp) {// 
+	public boolean checkDEC_FWD(Import imp, SymmetricBlockCipher alg) {// 
 		Object[] result1_black = SymmetricBlockCipherImportToImportImpl
-				.pattern_SymmetricBlockCipherImportToImport_27_1_matchtggpattern_blackBB(alg, imp);
+				.pattern_SymmetricBlockCipherImportToImport_27_1_matchtggpattern_blackBB(imp, alg);
 		if (result1_black != null) {
 			return SymmetricBlockCipherImportToImportImpl.pattern_SymmetricBlockCipherImportToImport_27_2_expressionF();
 		} else {
@@ -1091,17 +1091,17 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 				.pattern_SymmetricBlockCipherImportToImport_29_2_isapplicablecore_blackFFFFBB(ruleEntryContainer,
 						ruleResult)) {
 			//nothing RuleEntryList acList = (RuleEntryList) result2_black[0];
-			SymmetricBlockCipher alg = (SymmetricBlockCipher) result2_black[1];
+			JavaCompilationUnit cu = (JavaCompilationUnit) result2_black[1];
 			SymmetricBlockCipherToJcu ac = (SymmetricBlockCipherToJcu) result2_black[2];
-			JavaCompilationUnit cu = (JavaCompilationUnit) result2_black[3];
+			SymmetricBlockCipher alg = (SymmetricBlockCipher) result2_black[3];
 
 			Object[] result3_bindingAndBlack = SymmetricBlockCipherImportToImportImpl
 					.pattern_SymmetricBlockCipherImportToImport_29_3_solveCSP_bindingAndBlackFBBBBBB(this,
-							isApplicableMatch, alg, ac, cu, ruleResult);
+							isApplicableMatch, cu, ac, alg, ruleResult);
 			if (result3_bindingAndBlack == null) {
 				throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-						+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[alg] = " + alg + ", " + "[ac] = " + ac
-						+ ", " + "[cu] = " + cu + ", " + "[ruleResult] = " + ruleResult + ".");
+						+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[cu] = " + cu + ", " + "[ac] = " + ac
+						+ ", " + "[alg] = " + alg + ", " + "[ruleResult] = " + ruleResult + ".");
 			}
 			CSP csp = (CSP) result3_bindingAndBlack[0];
 			// 
@@ -1109,21 +1109,22 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 					.pattern_SymmetricBlockCipherImportToImport_29_4_checkCSP_expressionFBB(this, csp)) {
 				// 
 				Object[] result5_black = SymmetricBlockCipherImportToImportImpl
-						.pattern_SymmetricBlockCipherImportToImport_29_5_checknacs_blackBBB(alg, ac, cu);
+						.pattern_SymmetricBlockCipherImportToImport_29_5_checknacs_blackBBB(cu, ac, alg);
 				if (result5_black != null) {
 
 					Object[] result6_black = SymmetricBlockCipherImportToImportImpl
-							.pattern_SymmetricBlockCipherImportToImport_29_6_perform_blackBBBB(alg, ac, cu, ruleResult);
+							.pattern_SymmetricBlockCipherImportToImport_29_6_perform_blackBBBB(cu, ac, alg, ruleResult);
 					if (result6_black == null) {
-						throw new RuntimeException("Pattern matching failed." + " Variables: " + "[alg] = " + alg + ", "
-								+ "[ac] = " + ac + ", " + "[cu] = " + cu + ", " + "[ruleResult] = " + ruleResult + ".");
+						throw new RuntimeException(
+								"Pattern matching failed." + " Variables: " + "[cu] = " + cu + ", " + "[ac] = " + ac
+										+ ", " + "[alg] = " + alg + ", " + "[ruleResult] = " + ruleResult + ".");
 					}
 					SymmetricBlockCipherImportToImportImpl
-							.pattern_SymmetricBlockCipherImportToImport_29_6_perform_greenFBBFFBB(alg, cu, ruleResult,
+							.pattern_SymmetricBlockCipherImportToImport_29_6_perform_greenFBFFBBB(cu, alg, ruleResult,
 									csp);
 					//nothing JavaImport jimp = (JavaImport) result6_green[0];
+					//nothing ImportToImport i2j = (ImportToImport) result6_green[2];
 					//nothing Import imp = (Import) result6_green[3];
-					//nothing ImportToImport i2j = (ImportToImport) result6_green[4];
 
 				} else {
 				}
@@ -1141,8 +1142,8 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP generateModel_solveCsp_BWD(IsApplicableMatch isApplicableMatch, SymmetricBlockCipher alg,
-			SymmetricBlockCipherToJcu ac, JavaCompilationUnit cu, ModelgeneratorRuleResult ruleResult) {// Create CSP
+	public CSP generateModel_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaCompilationUnit cu,
+			SymmetricBlockCipherToJcu ac, SymmetricBlockCipher alg, ModelgeneratorRuleResult ruleResult) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -1166,9 +1167,9 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 		eq.solve(var_imp_value, var_jimp_value);
 
 		// Snapshot pattern match on which CSP is solved
-		isApplicableMatch.registerObject("alg", alg);
-		isApplicableMatch.registerObject("ac", ac);
 		isApplicableMatch.registerObject("cu", cu);
+		isApplicableMatch.registerObject("ac", ac);
+		isApplicableMatch.registerObject("alg", alg);
 		return csp;
 	}
 
@@ -1189,26 +1190,26 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_FWD__MATCH_SYMMETRICBLOCKCIPHER_IMPORT:
-			return isAppropriate_FWD((Match) arguments.get(0), (SymmetricBlockCipher) arguments.get(1),
-					(Import) arguments.get(2));
+		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_FWD__MATCH_IMPORT_SYMMETRICBLOCKCIPHER:
+			return isAppropriate_FWD((Match) arguments.get(0), (Import) arguments.get(1),
+					(SymmetricBlockCipher) arguments.get(2));
 		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___PERFORM_FWD__ISAPPLICABLEMATCH:
 			return perform_FWD((IsApplicableMatch) arguments.get(0));
 		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_FWD__MATCH:
 			return isApplicable_FWD((Match) arguments.get(0));
-		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_SYMMETRICBLOCKCIPHER_IMPORT:
-			registerObjectsToMatch_FWD((Match) arguments.get(0), (SymmetricBlockCipher) arguments.get(1),
-					(Import) arguments.get(2));
+		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_IMPORT_SYMMETRICBLOCKCIPHER:
+			registerObjectsToMatch_FWD((Match) arguments.get(0), (Import) arguments.get(1),
+					(SymmetricBlockCipher) arguments.get(2));
 			return null;
-		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_SYMMETRICBLOCKCIPHER_IMPORT:
-			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (SymmetricBlockCipher) arguments.get(1),
-					(Import) arguments.get(2));
+		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_IMPORT_SYMMETRICBLOCKCIPHER:
+			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (Import) arguments.get(1),
+					(SymmetricBlockCipher) arguments.get(2));
 		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_CHECK_CSP_FWD__CSP:
 			return isAppropriate_checkCsp_FWD((CSP) arguments.get(0));
-		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_SYMMETRICBLOCKCIPHER_SYMMETRICBLOCKCIPHERTOJCU_JAVACOMPILATIONUNIT_IMPORT:
+		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_JAVACOMPILATIONUNIT_IMPORT_SYMMETRICBLOCKCIPHERTOJCU_SYMMETRICBLOCKCIPHER:
 			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0),
-					(SymmetricBlockCipher) arguments.get(1), (SymmetricBlockCipherToJcu) arguments.get(2),
-					(JavaCompilationUnit) arguments.get(3), (Import) arguments.get(4));
+					(JavaCompilationUnit) arguments.get(1), (Import) arguments.get(2),
+					(SymmetricBlockCipherToJcu) arguments.get(3), (SymmetricBlockCipher) arguments.get(4));
 		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_CHECK_CSP_FWD__CSP:
 			return isApplicable_checkCsp_FWD((CSP) arguments.get(0));
 		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT:
@@ -1234,10 +1235,10 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 					(JavaCompilationUnit) arguments.get(2));
 		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_CHECK_CSP_BWD__CSP:
 			return isAppropriate_checkCsp_BWD((CSP) arguments.get(0));
-		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVAIMPORT_SYMMETRICBLOCKCIPHER_SYMMETRICBLOCKCIPHERTOJCU_JAVACOMPILATIONUNIT:
+		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVAIMPORT_JAVACOMPILATIONUNIT_SYMMETRICBLOCKCIPHERTOJCU_SYMMETRICBLOCKCIPHER:
 			return isApplicable_solveCsp_BWD((IsApplicableMatch) arguments.get(0), (JavaImport) arguments.get(1),
-					(SymmetricBlockCipher) arguments.get(2), (SymmetricBlockCipherToJcu) arguments.get(3),
-					(JavaCompilationUnit) arguments.get(4));
+					(JavaCompilationUnit) arguments.get(2), (SymmetricBlockCipherToJcu) arguments.get(3),
+					(SymmetricBlockCipher) arguments.get(4));
 		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_CHECK_CSP_BWD__CSP:
 			return isApplicable_checkCsp_BWD((CSP) arguments.get(0));
 		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___REGISTER_OBJECTS_BWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT:
@@ -1247,32 +1248,32 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 			return null;
 		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___CHECK_TYPES_BWD__MATCH:
 			return checkTypes_BWD((Match) arguments.get(0));
-		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_FWD_EMOFLON_EDGE_8__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_8((EMoflonEdge) arguments.get(0));
-		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_BWD_EMOFLON_EDGE_10__EMOFLONEDGE:
-			return isAppropriate_BWD_EMoflonEdge_10((EMoflonEdge) arguments.get(0));
+		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_FWD_EMOFLON_EDGE_7__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_7((EMoflonEdge) arguments.get(0));
+		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_BWD_EMOFLON_EDGE_7__EMOFLONEDGE:
+			return isAppropriate_BWD_EMoflonEdge_7((EMoflonEdge) arguments.get(0));
 		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH:
 			return checkAttributes_BWD((TripleMatch) arguments.get(0));
 		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_CC__MATCH_MATCH:
 			return isApplicable_CC((Match) arguments.get(0), (Match) arguments.get(1));
-		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_CC__JAVAIMPORT_SYMMETRICBLOCKCIPHER_JAVACOMPILATIONUNIT_IMPORT_MATCH_MATCH:
-			return isApplicable_solveCsp_CC((JavaImport) arguments.get(0), (SymmetricBlockCipher) arguments.get(1),
-					(JavaCompilationUnit) arguments.get(2), (Import) arguments.get(3), (Match) arguments.get(4),
+		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_CC__JAVAIMPORT_JAVACOMPILATIONUNIT_IMPORT_SYMMETRICBLOCKCIPHER_MATCH_MATCH:
+			return isApplicable_solveCsp_CC((JavaImport) arguments.get(0), (JavaCompilationUnit) arguments.get(1),
+					(Import) arguments.get(2), (SymmetricBlockCipher) arguments.get(3), (Match) arguments.get(4),
 					(Match) arguments.get(5));
 		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_CHECK_CSP_CC__CSP:
 			return isApplicable_checkCsp_CC((CSP) arguments.get(0));
-		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___CHECK_DEC_FWD__SYMMETRICBLOCKCIPHER_IMPORT:
-			return checkDEC_FWD((SymmetricBlockCipher) arguments.get(0), (Import) arguments.get(1));
+		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___CHECK_DEC_FWD__IMPORT_SYMMETRICBLOCKCIPHER:
+			return checkDEC_FWD((Import) arguments.get(0), (SymmetricBlockCipher) arguments.get(1));
 		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___CHECK_DEC_BWD__JAVAIMPORT_JAVACOMPILATIONUNIT:
 			return checkDEC_BWD((JavaImport) arguments.get(0), (JavaCompilationUnit) arguments.get(1));
 		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___GENERATE_MODEL__RULEENTRYCONTAINER_SYMMETRICBLOCKCIPHERTOJCU:
 			return generateModel((RuleEntryContainer) arguments.get(0), (SymmetricBlockCipherToJcu) arguments.get(1));
-		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___GENERATE_MODEL_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_SYMMETRICBLOCKCIPHER_SYMMETRICBLOCKCIPHERTOJCU_JAVACOMPILATIONUNIT_MODELGENERATORRULERESULT:
+		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___GENERATE_MODEL_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVACOMPILATIONUNIT_SYMMETRICBLOCKCIPHERTOJCU_SYMMETRICBLOCKCIPHER_MODELGENERATORRULERESULT:
 			return generateModel_solveCsp_BWD((IsApplicableMatch) arguments.get(0),
-					(SymmetricBlockCipher) arguments.get(1), (SymmetricBlockCipherToJcu) arguments.get(2),
-					(JavaCompilationUnit) arguments.get(3), (ModelgeneratorRuleResult) arguments.get(4));
+					(JavaCompilationUnit) arguments.get(1), (SymmetricBlockCipherToJcu) arguments.get(2),
+					(SymmetricBlockCipher) arguments.get(3), (ModelgeneratorRuleResult) arguments.get(4));
 		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___GENERATE_MODEL_CHECK_CSP_BWD__CSP:
 			return generateModel_checkCsp_BWD((CSP) arguments.get(0));
 		}
@@ -1280,16 +1281,16 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_0_1_initialbindings_blackBBBB(
-			SymmetricBlockCipherImportToImport _this, Match match, SymmetricBlockCipher alg, Import imp) {
-		return new Object[] { _this, match, alg, imp };
+			SymmetricBlockCipherImportToImport _this, Match match, Import imp, SymmetricBlockCipher alg) {
+		return new Object[] { _this, match, imp, alg };
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_0_2_SolveCSP_bindingFBBBB(
-			SymmetricBlockCipherImportToImport _this, Match match, SymmetricBlockCipher alg, Import imp) {
-		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, alg, imp);
+			SymmetricBlockCipherImportToImport _this, Match match, Import imp, SymmetricBlockCipher alg) {
+		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, imp, alg);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, match, alg, imp };
+			return new Object[] { csp, _this, match, imp, alg };
 		}
 		return null;
 	}
@@ -1299,9 +1300,9 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_0_2_SolveCSP_bindingAndBlackFBBBB(
-			SymmetricBlockCipherImportToImport _this, Match match, SymmetricBlockCipher alg, Import imp) {
+			SymmetricBlockCipherImportToImport _this, Match match, Import imp, SymmetricBlockCipher alg) {
 		Object[] result_pattern_SymmetricBlockCipherImportToImport_0_2_SolveCSP_binding = pattern_SymmetricBlockCipherImportToImport_0_2_SolveCSP_bindingFBBBB(
-				_this, match, alg, imp);
+				_this, match, imp, alg);
 		if (result_pattern_SymmetricBlockCipherImportToImport_0_2_SolveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_SymmetricBlockCipherImportToImport_0_2_SolveCSP_binding[0];
 
@@ -1309,7 +1310,7 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 					csp);
 			if (result_pattern_SymmetricBlockCipherImportToImport_0_2_SolveCSP_black != null) {
 
-				return new Object[] { csp, _this, match, alg, imp };
+				return new Object[] { csp, _this, match, imp, alg };
 			}
 		}
 		return null;
@@ -1323,12 +1324,12 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_0_4_collectelementstobetranslated_blackBBB(
-			Match match, SymmetricBlockCipher alg, Import imp) {
-		return new Object[] { match, alg, imp };
+			Match match, Import imp, SymmetricBlockCipher alg) {
+		return new Object[] { match, imp, alg };
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_0_4_collectelementstobetranslated_greenBBBF(
-			Match match, SymmetricBlockCipher alg, Import imp) {
+			Match match, Import imp, SymmetricBlockCipher alg) {
 		EMoflonEdge alg__imp____imports = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		match.getToBeTranslatedNodes().add(imp);
 		String alg__imp____imports_name_prime = "imports";
@@ -1336,12 +1337,12 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 		alg__imp____imports.setTrg(imp);
 		match.getToBeTranslatedEdges().add(alg__imp____imports);
 		alg__imp____imports.setName(alg__imp____imports_name_prime);
-		return new Object[] { match, alg, imp, alg__imp____imports };
+		return new Object[] { match, imp, alg, alg__imp____imports };
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_0_5_collectcontextelements_blackBBB(
-			Match match, SymmetricBlockCipher alg, Import imp) {
-		return new Object[] { match, alg, imp };
+			Match match, Import imp, SymmetricBlockCipher alg) {
+		return new Object[] { match, imp, alg };
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_0_5_collectcontextelements_greenBB(
@@ -1351,8 +1352,8 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final void pattern_SymmetricBlockCipherImportToImport_0_6_registerobjectstomatch_expressionBBBB(
-			SymmetricBlockCipherImportToImport _this, Match match, SymmetricBlockCipher alg, Import imp) {
-		_this.registerObjectsToMatch_FWD(match, alg, imp);
+			SymmetricBlockCipherImportToImport _this, Match match, Import imp, SymmetricBlockCipher alg) {
+		_this.registerObjectsToMatch_FWD(match, imp, alg);
 
 	}
 
@@ -1368,23 +1369,23 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_bindingFFFFB(
 			IsApplicableMatch isApplicableMatch) {
-		EObject _localVariable_0 = isApplicableMatch.getObject("alg");
-		EObject _localVariable_1 = isApplicableMatch.getObject("ac");
-		EObject _localVariable_2 = isApplicableMatch.getObject("cu");
-		EObject _localVariable_3 = isApplicableMatch.getObject("imp");
-		EObject tmpAlg = _localVariable_0;
-		EObject tmpAc = _localVariable_1;
-		EObject tmpCu = _localVariable_2;
-		EObject tmpImp = _localVariable_3;
-		if (tmpAlg instanceof SymmetricBlockCipher) {
-			SymmetricBlockCipher alg = (SymmetricBlockCipher) tmpAlg;
-			if (tmpAc instanceof SymmetricBlockCipherToJcu) {
-				SymmetricBlockCipherToJcu ac = (SymmetricBlockCipherToJcu) tmpAc;
-				if (tmpCu instanceof JavaCompilationUnit) {
-					JavaCompilationUnit cu = (JavaCompilationUnit) tmpCu;
-					if (tmpImp instanceof Import) {
-						Import imp = (Import) tmpImp;
-						return new Object[] { alg, ac, cu, imp, isApplicableMatch };
+		EObject _localVariable_0 = isApplicableMatch.getObject("cu");
+		EObject _localVariable_1 = isApplicableMatch.getObject("imp");
+		EObject _localVariable_2 = isApplicableMatch.getObject("ac");
+		EObject _localVariable_3 = isApplicableMatch.getObject("alg");
+		EObject tmpCu = _localVariable_0;
+		EObject tmpImp = _localVariable_1;
+		EObject tmpAc = _localVariable_2;
+		EObject tmpAlg = _localVariable_3;
+		if (tmpCu instanceof JavaCompilationUnit) {
+			JavaCompilationUnit cu = (JavaCompilationUnit) tmpCu;
+			if (tmpImp instanceof Import) {
+				Import imp = (Import) tmpImp;
+				if (tmpAc instanceof SymmetricBlockCipherToJcu) {
+					SymmetricBlockCipherToJcu ac = (SymmetricBlockCipherToJcu) tmpAc;
+					if (tmpAlg instanceof SymmetricBlockCipher) {
+						SymmetricBlockCipher alg = (SymmetricBlockCipher) tmpAlg;
+						return new Object[] { cu, imp, ac, alg, isApplicableMatch };
 					}
 				}
 			}
@@ -1393,12 +1394,12 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_blackBBBBFBB(
-			SymmetricBlockCipher alg, SymmetricBlockCipherToJcu ac, JavaCompilationUnit cu, Import imp,
+			JavaCompilationUnit cu, Import imp, SymmetricBlockCipherToJcu ac, SymmetricBlockCipher alg,
 			SymmetricBlockCipherImportToImport _this, IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { alg, ac, cu, imp, csp, _this, isApplicableMatch };
+				return new Object[] { cu, imp, ac, alg, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
@@ -1409,23 +1410,23 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 		Object[] result_pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_binding = pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_bindingFFFFB(
 				isApplicableMatch);
 		if (result_pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_binding != null) {
-			SymmetricBlockCipher alg = (SymmetricBlockCipher) result_pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_binding[0];
-			SymmetricBlockCipherToJcu ac = (SymmetricBlockCipherToJcu) result_pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_binding[1];
-			JavaCompilationUnit cu = (JavaCompilationUnit) result_pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_binding[2];
-			Import imp = (Import) result_pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_binding[3];
+			JavaCompilationUnit cu = (JavaCompilationUnit) result_pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_binding[0];
+			Import imp = (Import) result_pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_binding[1];
+			SymmetricBlockCipherToJcu ac = (SymmetricBlockCipherToJcu) result_pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_binding[2];
+			SymmetricBlockCipher alg = (SymmetricBlockCipher) result_pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_binding[3];
 
 			Object[] result_pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_black = pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_blackBBBBFBB(
-					alg, ac, cu, imp, _this, isApplicableMatch);
+					cu, imp, ac, alg, _this, isApplicableMatch);
 			if (result_pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_black[4];
 
-				return new Object[] { alg, ac, cu, imp, csp, _this, isApplicableMatch };
+				return new Object[] { cu, imp, ac, alg, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
 	}
 
-	public static final Object[] pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_greenFBBFB(
+	public static final Object[] pattern_SymmetricBlockCipherImportToImport_1_1_performtransformation_greenFBFBB(
 			JavaCompilationUnit cu, Import imp, CSP csp) {
 		JavaImport jimp = SimpleJavaFactory.eINSTANCE.createJavaImport();
 		ImportToImport i2j = CryptoConfigToJavaFactory.eINSTANCE.createImportToImport();
@@ -1435,42 +1436,42 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 		i2j.setSource(imp);
 		String jimp_value_prime = (String) _localVariable_0;
 		jimp.setValue(jimp_value_prime);
-		return new Object[] { jimp, cu, imp, i2j, csp };
+		return new Object[] { jimp, cu, i2j, imp, csp };
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_1_2_collecttranslatedelements_blackBBB(
-			JavaImport jimp, Import imp, ImportToImport i2j) {
-		return new Object[] { jimp, imp, i2j };
+			JavaImport jimp, ImportToImport i2j, Import imp) {
+		return new Object[] { jimp, i2j, imp };
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_1_2_collecttranslatedelements_greenFBBB(
-			JavaImport jimp, Import imp, ImportToImport i2j) {
+			JavaImport jimp, ImportToImport i2j, Import imp) {
 		PerformRuleResult ruleresult = RuntimeFactory.eINSTANCE.createPerformRuleResult();
 		ruleresult.getCreatedElements().add(jimp);
-		ruleresult.getTranslatedElements().add(imp);
 		ruleresult.getCreatedLinkElements().add(i2j);
-		return new Object[] { ruleresult, jimp, imp, i2j };
+		ruleresult.getTranslatedElements().add(imp);
+		return new Object[] { ruleresult, jimp, i2j, imp };
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_1_3_bookkeepingforedges_blackBBBBBBB(
-			PerformRuleResult ruleresult, EObject jimp, EObject alg, EObject ac, EObject cu, EObject imp, EObject i2j) {
-		if (!alg.equals(jimp)) {
-			if (!alg.equals(cu)) {
-				if (!alg.equals(imp)) {
-					if (!alg.equals(i2j)) {
-						if (!ac.equals(jimp)) {
-							if (!ac.equals(alg)) {
-								if (!ac.equals(cu)) {
-									if (!ac.equals(imp)) {
+			PerformRuleResult ruleresult, EObject jimp, EObject cu, EObject i2j, EObject imp, EObject ac, EObject alg) {
+		if (!cu.equals(jimp)) {
+			if (!cu.equals(i2j)) {
+				if (!cu.equals(imp)) {
+					if (!i2j.equals(jimp)) {
+						if (!i2j.equals(imp)) {
+							if (!imp.equals(jimp)) {
+								if (!ac.equals(jimp)) {
+									if (!ac.equals(cu)) {
 										if (!ac.equals(i2j)) {
-											if (!cu.equals(jimp)) {
-												if (!cu.equals(imp)) {
-													if (!cu.equals(i2j)) {
-														if (!imp.equals(jimp)) {
-															if (!i2j.equals(jimp)) {
-																if (!i2j.equals(imp)) {
-																	return new Object[] { ruleresult, jimp, alg, ac, cu,
-																			imp, i2j };
+											if (!ac.equals(imp)) {
+												if (!ac.equals(alg)) {
+													if (!alg.equals(jimp)) {
+														if (!alg.equals(cu)) {
+															if (!alg.equals(i2j)) {
+																if (!alg.equals(imp)) {
+																	return new Object[] { ruleresult, jimp, cu, i2j,
+																			imp, ac, alg };
 																}
 															}
 														}
@@ -1490,41 +1491,41 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_1_3_bookkeepingforedges_greenBBBBBBFFFF(
-			PerformRuleResult ruleresult, EObject jimp, EObject alg, EObject cu, EObject imp, EObject i2j) {
+			PerformRuleResult ruleresult, EObject jimp, EObject cu, EObject i2j, EObject imp, EObject alg) {
 		EMoflonEdge i2j__jimp____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge alg__imp____imports = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge cu__jimp____imports = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge i2j__imp____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge alg__imp____imports = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "SymmetricBlockCipherImportToImport";
 		String i2j__jimp____target_name_prime = "target";
-		String alg__imp____imports_name_prime = "imports";
 		String cu__jimp____imports_name_prime = "imports";
 		String i2j__imp____source_name_prime = "source";
+		String alg__imp____imports_name_prime = "imports";
 		i2j__jimp____target.setSrc(i2j);
 		i2j__jimp____target.setTrg(jimp);
 		ruleresult.getCreatedEdges().add(i2j__jimp____target);
-		alg__imp____imports.setSrc(alg);
-		alg__imp____imports.setTrg(imp);
-		ruleresult.getTranslatedEdges().add(alg__imp____imports);
 		cu__jimp____imports.setSrc(cu);
 		cu__jimp____imports.setTrg(jimp);
 		ruleresult.getCreatedEdges().add(cu__jimp____imports);
 		i2j__imp____source.setSrc(i2j);
 		i2j__imp____source.setTrg(imp);
 		ruleresult.getCreatedEdges().add(i2j__imp____source);
+		alg__imp____imports.setSrc(alg);
+		alg__imp____imports.setTrg(imp);
+		ruleresult.getTranslatedEdges().add(alg__imp____imports);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
 		i2j__jimp____target.setName(i2j__jimp____target_name_prime);
-		alg__imp____imports.setName(alg__imp____imports_name_prime);
 		cu__jimp____imports.setName(cu__jimp____imports_name_prime);
 		i2j__imp____source.setName(i2j__imp____source_name_prime);
-		return new Object[] { ruleresult, jimp, alg, cu, imp, i2j, i2j__jimp____target, alg__imp____imports,
-				cu__jimp____imports, i2j__imp____source };
+		alg__imp____imports.setName(alg__imp____imports_name_prime);
+		return new Object[] { ruleresult, jimp, cu, i2j, imp, alg, i2j__jimp____target, cu__jimp____imports,
+				i2j__imp____source, alg__imp____imports };
 	}
 
 	public static final void pattern_SymmetricBlockCipherImportToImport_1_5_registerobjects_expressionBBBBBBBB(
-			SymmetricBlockCipherImportToImport _this, PerformRuleResult ruleresult, EObject jimp, EObject alg,
-			EObject ac, EObject cu, EObject imp, EObject i2j) {
-		_this.registerObjects_FWD(ruleresult, jimp, alg, ac, cu, imp, i2j);
+			SymmetricBlockCipherImportToImport _this, PerformRuleResult ruleresult, EObject jimp, EObject cu,
+			EObject i2j, EObject imp, EObject ac, EObject alg) {
+		_this.registerObjects_FWD(ruleresult, jimp, cu, i2j, imp, ac, alg);
 
 	}
 
@@ -1586,28 +1587,28 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_2_2_corematch_bindingFFB(Match match) {
-		EObject _localVariable_0 = match.getObject("alg");
-		EObject _localVariable_1 = match.getObject("imp");
-		EObject tmpAlg = _localVariable_0;
-		EObject tmpImp = _localVariable_1;
-		if (tmpAlg instanceof SymmetricBlockCipher) {
-			SymmetricBlockCipher alg = (SymmetricBlockCipher) tmpAlg;
-			if (tmpImp instanceof Import) {
-				Import imp = (Import) tmpImp;
-				return new Object[] { alg, imp, match };
+		EObject _localVariable_0 = match.getObject("imp");
+		EObject _localVariable_1 = match.getObject("alg");
+		EObject tmpImp = _localVariable_0;
+		EObject tmpAlg = _localVariable_1;
+		if (tmpImp instanceof Import) {
+			Import imp = (Import) tmpImp;
+			if (tmpAlg instanceof SymmetricBlockCipher) {
+				SymmetricBlockCipher alg = (SymmetricBlockCipher) tmpAlg;
+				return new Object[] { imp, alg, match };
 			}
 		}
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_SymmetricBlockCipherImportToImport_2_2_corematch_blackBFFBB(
-			SymmetricBlockCipher alg, Import imp, Match match) {
+	public static final Iterable<Object[]> pattern_SymmetricBlockCipherImportToImport_2_2_corematch_blackFBFBB(
+			Import imp, SymmetricBlockCipher alg, Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		for (SymmetricBlockCipherToJcu ac : org.moflon.core.utilities.eMoflonEMFUtil.getOppositeReferenceTyped(alg,
 				SymmetricBlockCipherToJcu.class, "source")) {
 			JavaCompilationUnit cu = ac.getTarget();
 			if (cu != null) {
-				_result.add(new Object[] { alg, ac, cu, imp, match });
+				_result.add(new Object[] { cu, imp, ac, alg, match });
 			}
 
 		}
@@ -1615,12 +1616,12 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Iterable<Object[]> pattern_SymmetricBlockCipherImportToImport_2_3_findcontext_blackBBBB(
-			SymmetricBlockCipher alg, SymmetricBlockCipherToJcu ac, JavaCompilationUnit cu, Import imp) {
+			JavaCompilationUnit cu, Import imp, SymmetricBlockCipherToJcu ac, SymmetricBlockCipher alg) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		if (cu.equals(ac.getTarget())) {
 			if (alg.getImports().contains(imp)) {
 				if (alg.equals(ac.getSource())) {
-					_result.add(new Object[] { alg, ac, cu, imp });
+					_result.add(new Object[] { cu, imp, ac, alg });
 				}
 			}
 		}
@@ -1628,7 +1629,7 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_2_3_findcontext_greenBBBBFFFF(
-			SymmetricBlockCipher alg, SymmetricBlockCipherToJcu ac, JavaCompilationUnit cu, Import imp) {
+			JavaCompilationUnit cu, Import imp, SymmetricBlockCipherToJcu ac, SymmetricBlockCipher alg) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
 		EMoflonEdge ac__cu____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge alg__imp____imports = RuntimeFactory.eINSTANCE.createEMoflonEdge();
@@ -1636,10 +1637,10 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 		String ac__cu____target_name_prime = "target";
 		String alg__imp____imports_name_prime = "imports";
 		String ac__alg____source_name_prime = "source";
-		isApplicableMatch.getAllContextElements().add(alg);
-		isApplicableMatch.getAllContextElements().add(ac);
 		isApplicableMatch.getAllContextElements().add(cu);
 		isApplicableMatch.getAllContextElements().add(imp);
+		isApplicableMatch.getAllContextElements().add(ac);
+		isApplicableMatch.getAllContextElements().add(alg);
 		ac__cu____target.setSrc(ac);
 		ac__cu____target.setTrg(cu);
 		isApplicableMatch.getAllContextElements().add(ac__cu____target);
@@ -1652,17 +1653,17 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 		ac__cu____target.setName(ac__cu____target_name_prime);
 		alg__imp____imports.setName(alg__imp____imports_name_prime);
 		ac__alg____source.setName(ac__alg____source_name_prime);
-		return new Object[] { alg, ac, cu, imp, isApplicableMatch, ac__cu____target, alg__imp____imports,
+		return new Object[] { cu, imp, ac, alg, isApplicableMatch, ac__cu____target, alg__imp____imports,
 				ac__alg____source };
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_2_4_solveCSP_bindingFBBBBBB(
-			SymmetricBlockCipherImportToImport _this, IsApplicableMatch isApplicableMatch, SymmetricBlockCipher alg,
-			SymmetricBlockCipherToJcu ac, JavaCompilationUnit cu, Import imp) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, alg, ac, cu, imp);
+			SymmetricBlockCipherImportToImport _this, IsApplicableMatch isApplicableMatch, JavaCompilationUnit cu,
+			Import imp, SymmetricBlockCipherToJcu ac, SymmetricBlockCipher alg) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, cu, imp, ac, alg);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, alg, ac, cu, imp };
+			return new Object[] { csp, _this, isApplicableMatch, cu, imp, ac, alg };
 		}
 		return null;
 	}
@@ -1672,10 +1673,10 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_2_4_solveCSP_bindingAndBlackFBBBBBB(
-			SymmetricBlockCipherImportToImport _this, IsApplicableMatch isApplicableMatch, SymmetricBlockCipher alg,
-			SymmetricBlockCipherToJcu ac, JavaCompilationUnit cu, Import imp) {
+			SymmetricBlockCipherImportToImport _this, IsApplicableMatch isApplicableMatch, JavaCompilationUnit cu,
+			Import imp, SymmetricBlockCipherToJcu ac, SymmetricBlockCipher alg) {
 		Object[] result_pattern_SymmetricBlockCipherImportToImport_2_4_solveCSP_binding = pattern_SymmetricBlockCipherImportToImport_2_4_solveCSP_bindingFBBBBBB(
-				_this, isApplicableMatch, alg, ac, cu, imp);
+				_this, isApplicableMatch, cu, imp, ac, alg);
 		if (result_pattern_SymmetricBlockCipherImportToImport_2_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_SymmetricBlockCipherImportToImport_2_4_solveCSP_binding[0];
 
@@ -1683,7 +1684,7 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 					csp);
 			if (result_pattern_SymmetricBlockCipherImportToImport_2_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, alg, ac, cu, imp };
+				return new Object[] { csp, _this, isApplicableMatch, cu, imp, ac, alg };
 			}
 		}
 		return null;
@@ -1807,22 +1808,22 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_11_1_performtransformation_bindingFFFFB(
 			IsApplicableMatch isApplicableMatch) {
 		EObject _localVariable_0 = isApplicableMatch.getObject("jimp");
-		EObject _localVariable_1 = isApplicableMatch.getObject("alg");
+		EObject _localVariable_1 = isApplicableMatch.getObject("cu");
 		EObject _localVariable_2 = isApplicableMatch.getObject("ac");
-		EObject _localVariable_3 = isApplicableMatch.getObject("cu");
+		EObject _localVariable_3 = isApplicableMatch.getObject("alg");
 		EObject tmpJimp = _localVariable_0;
-		EObject tmpAlg = _localVariable_1;
+		EObject tmpCu = _localVariable_1;
 		EObject tmpAc = _localVariable_2;
-		EObject tmpCu = _localVariable_3;
+		EObject tmpAlg = _localVariable_3;
 		if (tmpJimp instanceof JavaImport) {
 			JavaImport jimp = (JavaImport) tmpJimp;
-			if (tmpAlg instanceof SymmetricBlockCipher) {
-				SymmetricBlockCipher alg = (SymmetricBlockCipher) tmpAlg;
+			if (tmpCu instanceof JavaCompilationUnit) {
+				JavaCompilationUnit cu = (JavaCompilationUnit) tmpCu;
 				if (tmpAc instanceof SymmetricBlockCipherToJcu) {
 					SymmetricBlockCipherToJcu ac = (SymmetricBlockCipherToJcu) tmpAc;
-					if (tmpCu instanceof JavaCompilationUnit) {
-						JavaCompilationUnit cu = (JavaCompilationUnit) tmpCu;
-						return new Object[] { jimp, alg, ac, cu, isApplicableMatch };
+					if (tmpAlg instanceof SymmetricBlockCipher) {
+						SymmetricBlockCipher alg = (SymmetricBlockCipher) tmpAlg;
+						return new Object[] { jimp, cu, ac, alg, isApplicableMatch };
 					}
 				}
 			}
@@ -1831,12 +1832,12 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_11_1_performtransformation_blackBBBBFBB(
-			JavaImport jimp, SymmetricBlockCipher alg, SymmetricBlockCipherToJcu ac, JavaCompilationUnit cu,
+			JavaImport jimp, JavaCompilationUnit cu, SymmetricBlockCipherToJcu ac, SymmetricBlockCipher alg,
 			SymmetricBlockCipherImportToImport _this, IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { jimp, alg, ac, cu, csp, _this, isApplicableMatch };
+				return new Object[] { jimp, cu, ac, alg, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
@@ -1848,67 +1849,67 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 				isApplicableMatch);
 		if (result_pattern_SymmetricBlockCipherImportToImport_11_1_performtransformation_binding != null) {
 			JavaImport jimp = (JavaImport) result_pattern_SymmetricBlockCipherImportToImport_11_1_performtransformation_binding[0];
-			SymmetricBlockCipher alg = (SymmetricBlockCipher) result_pattern_SymmetricBlockCipherImportToImport_11_1_performtransformation_binding[1];
+			JavaCompilationUnit cu = (JavaCompilationUnit) result_pattern_SymmetricBlockCipherImportToImport_11_1_performtransformation_binding[1];
 			SymmetricBlockCipherToJcu ac = (SymmetricBlockCipherToJcu) result_pattern_SymmetricBlockCipherImportToImport_11_1_performtransformation_binding[2];
-			JavaCompilationUnit cu = (JavaCompilationUnit) result_pattern_SymmetricBlockCipherImportToImport_11_1_performtransformation_binding[3];
+			SymmetricBlockCipher alg = (SymmetricBlockCipher) result_pattern_SymmetricBlockCipherImportToImport_11_1_performtransformation_binding[3];
 
 			Object[] result_pattern_SymmetricBlockCipherImportToImport_11_1_performtransformation_black = pattern_SymmetricBlockCipherImportToImport_11_1_performtransformation_blackBBBBFBB(
-					jimp, alg, ac, cu, _this, isApplicableMatch);
+					jimp, cu, ac, alg, _this, isApplicableMatch);
 			if (result_pattern_SymmetricBlockCipherImportToImport_11_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_SymmetricBlockCipherImportToImport_11_1_performtransformation_black[4];
 
-				return new Object[] { jimp, alg, ac, cu, csp, _this, isApplicableMatch };
+				return new Object[] { jimp, cu, ac, alg, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
 	}
 
-	public static final Object[] pattern_SymmetricBlockCipherImportToImport_11_1_performtransformation_greenBBFFB(
+	public static final Object[] pattern_SymmetricBlockCipherImportToImport_11_1_performtransformation_greenBFFBB(
 			JavaImport jimp, SymmetricBlockCipher alg, CSP csp) {
-		Import imp = CryptoAPIConfigFactory.eINSTANCE.createImport();
 		ImportToImport i2j = CryptoConfigToJavaFactory.eINSTANCE.createImportToImport();
+		Import imp = CryptoAPIConfigFactory.eINSTANCE.createImport();
 		Object _localVariable_0 = csp.getValue("imp", "value");
-		alg.getImports().add(imp);
 		i2j.setTarget(jimp);
 		i2j.setSource(imp);
+		alg.getImports().add(imp);
 		String imp_value_prime = (String) _localVariable_0;
 		imp.setValue(imp_value_prime);
-		return new Object[] { jimp, alg, imp, i2j, csp };
+		return new Object[] { jimp, i2j, imp, alg, csp };
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_11_2_collecttranslatedelements_blackBBB(
-			JavaImport jimp, Import imp, ImportToImport i2j) {
-		return new Object[] { jimp, imp, i2j };
+			JavaImport jimp, ImportToImport i2j, Import imp) {
+		return new Object[] { jimp, i2j, imp };
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_11_2_collecttranslatedelements_greenFBBB(
-			JavaImport jimp, Import imp, ImportToImport i2j) {
+			JavaImport jimp, ImportToImport i2j, Import imp) {
 		PerformRuleResult ruleresult = RuntimeFactory.eINSTANCE.createPerformRuleResult();
 		ruleresult.getTranslatedElements().add(jimp);
-		ruleresult.getCreatedElements().add(imp);
 		ruleresult.getCreatedLinkElements().add(i2j);
-		return new Object[] { ruleresult, jimp, imp, i2j };
+		ruleresult.getCreatedElements().add(imp);
+		return new Object[] { ruleresult, jimp, i2j, imp };
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_11_3_bookkeepingforedges_blackBBBBBBB(
-			PerformRuleResult ruleresult, EObject jimp, EObject alg, EObject ac, EObject cu, EObject imp, EObject i2j) {
-		if (!alg.equals(jimp)) {
-			if (!alg.equals(cu)) {
-				if (!alg.equals(imp)) {
-					if (!alg.equals(i2j)) {
-						if (!ac.equals(jimp)) {
-							if (!ac.equals(alg)) {
-								if (!ac.equals(cu)) {
-									if (!ac.equals(imp)) {
+			PerformRuleResult ruleresult, EObject jimp, EObject cu, EObject i2j, EObject imp, EObject ac, EObject alg) {
+		if (!cu.equals(jimp)) {
+			if (!cu.equals(i2j)) {
+				if (!cu.equals(imp)) {
+					if (!i2j.equals(jimp)) {
+						if (!i2j.equals(imp)) {
+							if (!imp.equals(jimp)) {
+								if (!ac.equals(jimp)) {
+									if (!ac.equals(cu)) {
 										if (!ac.equals(i2j)) {
-											if (!cu.equals(jimp)) {
-												if (!cu.equals(imp)) {
-													if (!cu.equals(i2j)) {
-														if (!imp.equals(jimp)) {
-															if (!i2j.equals(jimp)) {
-																if (!i2j.equals(imp)) {
-																	return new Object[] { ruleresult, jimp, alg, ac, cu,
-																			imp, i2j };
+											if (!ac.equals(imp)) {
+												if (!ac.equals(alg)) {
+													if (!alg.equals(jimp)) {
+														if (!alg.equals(cu)) {
+															if (!alg.equals(i2j)) {
+																if (!alg.equals(imp)) {
+																	return new Object[] { ruleresult, jimp, cu, i2j,
+																			imp, ac, alg };
 																}
 															}
 														}
@@ -1928,41 +1929,41 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_11_3_bookkeepingforedges_greenBBBBBBFFFF(
-			PerformRuleResult ruleresult, EObject jimp, EObject alg, EObject cu, EObject imp, EObject i2j) {
+			PerformRuleResult ruleresult, EObject jimp, EObject cu, EObject i2j, EObject imp, EObject alg) {
 		EMoflonEdge i2j__jimp____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge alg__imp____imports = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge cu__jimp____imports = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge i2j__imp____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge alg__imp____imports = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "SymmetricBlockCipherImportToImport";
 		String i2j__jimp____target_name_prime = "target";
-		String alg__imp____imports_name_prime = "imports";
 		String cu__jimp____imports_name_prime = "imports";
 		String i2j__imp____source_name_prime = "source";
+		String alg__imp____imports_name_prime = "imports";
 		i2j__jimp____target.setSrc(i2j);
 		i2j__jimp____target.setTrg(jimp);
 		ruleresult.getCreatedEdges().add(i2j__jimp____target);
-		alg__imp____imports.setSrc(alg);
-		alg__imp____imports.setTrg(imp);
-		ruleresult.getCreatedEdges().add(alg__imp____imports);
 		cu__jimp____imports.setSrc(cu);
 		cu__jimp____imports.setTrg(jimp);
 		ruleresult.getTranslatedEdges().add(cu__jimp____imports);
 		i2j__imp____source.setSrc(i2j);
 		i2j__imp____source.setTrg(imp);
 		ruleresult.getCreatedEdges().add(i2j__imp____source);
+		alg__imp____imports.setSrc(alg);
+		alg__imp____imports.setTrg(imp);
+		ruleresult.getCreatedEdges().add(alg__imp____imports);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
 		i2j__jimp____target.setName(i2j__jimp____target_name_prime);
-		alg__imp____imports.setName(alg__imp____imports_name_prime);
 		cu__jimp____imports.setName(cu__jimp____imports_name_prime);
 		i2j__imp____source.setName(i2j__imp____source_name_prime);
-		return new Object[] { ruleresult, jimp, alg, cu, imp, i2j, i2j__jimp____target, alg__imp____imports,
-				cu__jimp____imports, i2j__imp____source };
+		alg__imp____imports.setName(alg__imp____imports_name_prime);
+		return new Object[] { ruleresult, jimp, cu, i2j, imp, alg, i2j__jimp____target, cu__jimp____imports,
+				i2j__imp____source, alg__imp____imports };
 	}
 
 	public static final void pattern_SymmetricBlockCipherImportToImport_11_5_registerobjects_expressionBBBBBBBB(
-			SymmetricBlockCipherImportToImport _this, PerformRuleResult ruleresult, EObject jimp, EObject alg,
-			EObject ac, EObject cu, EObject imp, EObject i2j) {
-		_this.registerObjects_BWD(ruleresult, jimp, alg, ac, cu, imp, i2j);
+			SymmetricBlockCipherImportToImport _this, PerformRuleResult ruleresult, EObject jimp, EObject cu,
+			EObject i2j, EObject imp, EObject ac, EObject alg) {
+		_this.registerObjects_BWD(ruleresult, jimp, cu, i2j, imp, ac, alg);
 
 	}
 
@@ -2038,14 +2039,14 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_SymmetricBlockCipherImportToImport_12_2_corematch_blackBFFBB(
+	public static final Iterable<Object[]> pattern_SymmetricBlockCipherImportToImport_12_2_corematch_blackBBFFB(
 			JavaImport jimp, JavaCompilationUnit cu, Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		for (SymmetricBlockCipherToJcu ac : org.moflon.core.utilities.eMoflonEMFUtil.getOppositeReferenceTyped(cu,
 				SymmetricBlockCipherToJcu.class, "target")) {
 			SymmetricBlockCipher alg = ac.getSource();
 			if (alg != null) {
-				_result.add(new Object[] { jimp, alg, ac, cu, match });
+				_result.add(new Object[] { jimp, cu, ac, alg, match });
 			}
 
 		}
@@ -2053,12 +2054,12 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Iterable<Object[]> pattern_SymmetricBlockCipherImportToImport_12_3_findcontext_blackBBBB(
-			JavaImport jimp, SymmetricBlockCipher alg, SymmetricBlockCipherToJcu ac, JavaCompilationUnit cu) {
+			JavaImport jimp, JavaCompilationUnit cu, SymmetricBlockCipherToJcu ac, SymmetricBlockCipher alg) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		if (cu.equals(ac.getTarget())) {
-			if (alg.equals(ac.getSource())) {
-				if (cu.getImports().contains(jimp)) {
-					_result.add(new Object[] { jimp, alg, ac, cu });
+		if (cu.getImports().contains(jimp)) {
+			if (cu.equals(ac.getTarget())) {
+				if (alg.equals(ac.getSource())) {
+					_result.add(new Object[] { jimp, cu, ac, alg });
 				}
 			}
 		}
@@ -2066,41 +2067,41 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_12_3_findcontext_greenBBBBFFFF(
-			JavaImport jimp, SymmetricBlockCipher alg, SymmetricBlockCipherToJcu ac, JavaCompilationUnit cu) {
+			JavaImport jimp, JavaCompilationUnit cu, SymmetricBlockCipherToJcu ac, SymmetricBlockCipher alg) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
+		EMoflonEdge cu__jimp____imports = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge ac__cu____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge ac__alg____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge cu__jimp____imports = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		String cu__jimp____imports_name_prime = "imports";
 		String ac__cu____target_name_prime = "target";
 		String ac__alg____source_name_prime = "source";
-		String cu__jimp____imports_name_prime = "imports";
 		isApplicableMatch.getAllContextElements().add(jimp);
-		isApplicableMatch.getAllContextElements().add(alg);
-		isApplicableMatch.getAllContextElements().add(ac);
 		isApplicableMatch.getAllContextElements().add(cu);
+		isApplicableMatch.getAllContextElements().add(ac);
+		isApplicableMatch.getAllContextElements().add(alg);
+		cu__jimp____imports.setSrc(cu);
+		cu__jimp____imports.setTrg(jimp);
+		isApplicableMatch.getAllContextElements().add(cu__jimp____imports);
 		ac__cu____target.setSrc(ac);
 		ac__cu____target.setTrg(cu);
 		isApplicableMatch.getAllContextElements().add(ac__cu____target);
 		ac__alg____source.setSrc(ac);
 		ac__alg____source.setTrg(alg);
 		isApplicableMatch.getAllContextElements().add(ac__alg____source);
-		cu__jimp____imports.setSrc(cu);
-		cu__jimp____imports.setTrg(jimp);
-		isApplicableMatch.getAllContextElements().add(cu__jimp____imports);
+		cu__jimp____imports.setName(cu__jimp____imports_name_prime);
 		ac__cu____target.setName(ac__cu____target_name_prime);
 		ac__alg____source.setName(ac__alg____source_name_prime);
-		cu__jimp____imports.setName(cu__jimp____imports_name_prime);
-		return new Object[] { jimp, alg, ac, cu, isApplicableMatch, ac__cu____target, ac__alg____source,
-				cu__jimp____imports };
+		return new Object[] { jimp, cu, ac, alg, isApplicableMatch, cu__jimp____imports, ac__cu____target,
+				ac__alg____source };
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_12_4_solveCSP_bindingFBBBBBB(
 			SymmetricBlockCipherImportToImport _this, IsApplicableMatch isApplicableMatch, JavaImport jimp,
-			SymmetricBlockCipher alg, SymmetricBlockCipherToJcu ac, JavaCompilationUnit cu) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_BWD(isApplicableMatch, jimp, alg, ac, cu);
+			JavaCompilationUnit cu, SymmetricBlockCipherToJcu ac, SymmetricBlockCipher alg) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_BWD(isApplicableMatch, jimp, cu, ac, alg);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, jimp, alg, ac, cu };
+			return new Object[] { csp, _this, isApplicableMatch, jimp, cu, ac, alg };
 		}
 		return null;
 	}
@@ -2111,9 +2112,9 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_12_4_solveCSP_bindingAndBlackFBBBBBB(
 			SymmetricBlockCipherImportToImport _this, IsApplicableMatch isApplicableMatch, JavaImport jimp,
-			SymmetricBlockCipher alg, SymmetricBlockCipherToJcu ac, JavaCompilationUnit cu) {
+			JavaCompilationUnit cu, SymmetricBlockCipherToJcu ac, SymmetricBlockCipher alg) {
 		Object[] result_pattern_SymmetricBlockCipherImportToImport_12_4_solveCSP_binding = pattern_SymmetricBlockCipherImportToImport_12_4_solveCSP_bindingFBBBBBB(
-				_this, isApplicableMatch, jimp, alg, ac, cu);
+				_this, isApplicableMatch, jimp, cu, ac, alg);
 		if (result_pattern_SymmetricBlockCipherImportToImport_12_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_SymmetricBlockCipherImportToImport_12_4_solveCSP_binding[0];
 
@@ -2121,7 +2122,7 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 					csp);
 			if (result_pattern_SymmetricBlockCipherImportToImport_12_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, jimp, alg, ac, cu };
+				return new Object[] { csp, _this, isApplicableMatch, jimp, cu, ac, alg };
 			}
 		}
 		return null;
@@ -2219,7 +2220,7 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 			if (tmpImp instanceof Import) {
 				Import imp = (Import) tmpImp;
 				if (alg.getImports().contains(imp)) {
-					_result.add(new Object[] { alg, imp, _edge_imports });
+					_result.add(new Object[] { imp, alg, _edge_imports });
 				}
 			}
 
@@ -2239,8 +2240,8 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final boolean pattern_SymmetricBlockCipherImportToImport_20_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBB(
-			SymmetricBlockCipherImportToImport _this, Match match, SymmetricBlockCipher alg, Import imp) {
-		boolean _localVariable_0 = _this.isAppropriate_FWD(match, alg, imp);
+			SymmetricBlockCipherImportToImport _this, Match match, Import imp, SymmetricBlockCipher alg) {
+		boolean _localVariable_0 = _this.isAppropriate_FWD(match, imp, alg);
 		boolean _result = Boolean.valueOf(_localVariable_0);
 		return _result;
 	}
@@ -2406,22 +2407,22 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_24_2_matchsrctrgcontext_bindingFFFFBB(
 			Match targetMatch, Match sourceMatch) {
 		EObject _localVariable_0 = targetMatch.getObject("jimp");
-		EObject _localVariable_1 = sourceMatch.getObject("alg");
-		EObject _localVariable_2 = targetMatch.getObject("cu");
-		EObject _localVariable_3 = sourceMatch.getObject("imp");
+		EObject _localVariable_1 = targetMatch.getObject("cu");
+		EObject _localVariable_2 = sourceMatch.getObject("imp");
+		EObject _localVariable_3 = sourceMatch.getObject("alg");
 		EObject tmpJimp = _localVariable_0;
-		EObject tmpAlg = _localVariable_1;
-		EObject tmpCu = _localVariable_2;
-		EObject tmpImp = _localVariable_3;
+		EObject tmpCu = _localVariable_1;
+		EObject tmpImp = _localVariable_2;
+		EObject tmpAlg = _localVariable_3;
 		if (tmpJimp instanceof JavaImport) {
 			JavaImport jimp = (JavaImport) tmpJimp;
-			if (tmpAlg instanceof SymmetricBlockCipher) {
-				SymmetricBlockCipher alg = (SymmetricBlockCipher) tmpAlg;
-				if (tmpCu instanceof JavaCompilationUnit) {
-					JavaCompilationUnit cu = (JavaCompilationUnit) tmpCu;
-					if (tmpImp instanceof Import) {
-						Import imp = (Import) tmpImp;
-						return new Object[] { jimp, alg, cu, imp, targetMatch, sourceMatch };
+			if (tmpCu instanceof JavaCompilationUnit) {
+				JavaCompilationUnit cu = (JavaCompilationUnit) tmpCu;
+				if (tmpImp instanceof Import) {
+					Import imp = (Import) tmpImp;
+					if (tmpAlg instanceof SymmetricBlockCipher) {
+						SymmetricBlockCipher alg = (SymmetricBlockCipher) tmpAlg;
+						return new Object[] { jimp, cu, imp, alg, targetMatch, sourceMatch };
 					}
 				}
 			}
@@ -2430,10 +2431,10 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_24_2_matchsrctrgcontext_blackBBBBBB(
-			JavaImport jimp, SymmetricBlockCipher alg, JavaCompilationUnit cu, Import imp, Match sourceMatch,
+			JavaImport jimp, JavaCompilationUnit cu, Import imp, SymmetricBlockCipher alg, Match sourceMatch,
 			Match targetMatch) {
 		if (!sourceMatch.equals(targetMatch)) {
-			return new Object[] { jimp, alg, cu, imp, sourceMatch, targetMatch };
+			return new Object[] { jimp, cu, imp, alg, sourceMatch, targetMatch };
 		}
 		return null;
 	}
@@ -2444,27 +2445,27 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 				targetMatch, sourceMatch);
 		if (result_pattern_SymmetricBlockCipherImportToImport_24_2_matchsrctrgcontext_binding != null) {
 			JavaImport jimp = (JavaImport) result_pattern_SymmetricBlockCipherImportToImport_24_2_matchsrctrgcontext_binding[0];
-			SymmetricBlockCipher alg = (SymmetricBlockCipher) result_pattern_SymmetricBlockCipherImportToImport_24_2_matchsrctrgcontext_binding[1];
-			JavaCompilationUnit cu = (JavaCompilationUnit) result_pattern_SymmetricBlockCipherImportToImport_24_2_matchsrctrgcontext_binding[2];
-			Import imp = (Import) result_pattern_SymmetricBlockCipherImportToImport_24_2_matchsrctrgcontext_binding[3];
+			JavaCompilationUnit cu = (JavaCompilationUnit) result_pattern_SymmetricBlockCipherImportToImport_24_2_matchsrctrgcontext_binding[1];
+			Import imp = (Import) result_pattern_SymmetricBlockCipherImportToImport_24_2_matchsrctrgcontext_binding[2];
+			SymmetricBlockCipher alg = (SymmetricBlockCipher) result_pattern_SymmetricBlockCipherImportToImport_24_2_matchsrctrgcontext_binding[3];
 
 			Object[] result_pattern_SymmetricBlockCipherImportToImport_24_2_matchsrctrgcontext_black = pattern_SymmetricBlockCipherImportToImport_24_2_matchsrctrgcontext_blackBBBBBB(
-					jimp, alg, cu, imp, sourceMatch, targetMatch);
+					jimp, cu, imp, alg, sourceMatch, targetMatch);
 			if (result_pattern_SymmetricBlockCipherImportToImport_24_2_matchsrctrgcontext_black != null) {
 
-				return new Object[] { jimp, alg, cu, imp, sourceMatch, targetMatch };
+				return new Object[] { jimp, cu, imp, alg, sourceMatch, targetMatch };
 			}
 		}
 		return null;
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_24_3_solvecsp_bindingFBBBBBBB(
-			SymmetricBlockCipherImportToImport _this, JavaImport jimp, SymmetricBlockCipher alg, JavaCompilationUnit cu,
-			Import imp, Match sourceMatch, Match targetMatch) {
-		CSP _localVariable_4 = _this.isApplicable_solveCsp_CC(jimp, alg, cu, imp, sourceMatch, targetMatch);
+			SymmetricBlockCipherImportToImport _this, JavaImport jimp, JavaCompilationUnit cu, Import imp,
+			SymmetricBlockCipher alg, Match sourceMatch, Match targetMatch) {
+		CSP _localVariable_4 = _this.isApplicable_solveCsp_CC(jimp, cu, imp, alg, sourceMatch, targetMatch);
 		CSP csp = _localVariable_4;
 		if (csp != null) {
-			return new Object[] { csp, _this, jimp, alg, cu, imp, sourceMatch, targetMatch };
+			return new Object[] { csp, _this, jimp, cu, imp, alg, sourceMatch, targetMatch };
 		}
 		return null;
 	}
@@ -2474,10 +2475,10 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_24_3_solvecsp_bindingAndBlackFBBBBBBB(
-			SymmetricBlockCipherImportToImport _this, JavaImport jimp, SymmetricBlockCipher alg, JavaCompilationUnit cu,
-			Import imp, Match sourceMatch, Match targetMatch) {
+			SymmetricBlockCipherImportToImport _this, JavaImport jimp, JavaCompilationUnit cu, Import imp,
+			SymmetricBlockCipher alg, Match sourceMatch, Match targetMatch) {
 		Object[] result_pattern_SymmetricBlockCipherImportToImport_24_3_solvecsp_binding = pattern_SymmetricBlockCipherImportToImport_24_3_solvecsp_bindingFBBBBBBB(
-				_this, jimp, alg, cu, imp, sourceMatch, targetMatch);
+				_this, jimp, cu, imp, alg, sourceMatch, targetMatch);
 		if (result_pattern_SymmetricBlockCipherImportToImport_24_3_solvecsp_binding != null) {
 			CSP csp = (CSP) result_pattern_SymmetricBlockCipherImportToImport_24_3_solvecsp_binding[0];
 
@@ -2485,7 +2486,7 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 					csp);
 			if (result_pattern_SymmetricBlockCipherImportToImport_24_3_solvecsp_black != null) {
 
-				return new Object[] { csp, _this, jimp, alg, cu, imp, sourceMatch, targetMatch };
+				return new Object[] { csp, _this, jimp, cu, imp, alg, sourceMatch, targetMatch };
 			}
 		}
 		return null;
@@ -2498,13 +2499,13 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Iterable<Object[]> pattern_SymmetricBlockCipherImportToImport_24_5_matchcorrcontext_blackBFBBB(
-			SymmetricBlockCipher alg, JavaCompilationUnit cu, Match sourceMatch, Match targetMatch) {
+			JavaCompilationUnit cu, SymmetricBlockCipher alg, Match sourceMatch, Match targetMatch) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		if (!sourceMatch.equals(targetMatch)) {
 			for (SymmetricBlockCipherToJcu ac : org.moflon.core.utilities.eMoflonEMFUtil.getOppositeReferenceTyped(cu,
 					SymmetricBlockCipherToJcu.class, "target")) {
 				if (alg.equals(ac.getSource())) {
-					_result.add(new Object[] { alg, ac, cu, sourceMatch, targetMatch });
+					_result.add(new Object[] { cu, ac, alg, sourceMatch, targetMatch });
 				}
 			}
 		}
@@ -2523,17 +2524,17 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_24_6_createcorrespondence_blackBBBBB(
-			JavaImport jimp, SymmetricBlockCipher alg, JavaCompilationUnit cu, Import imp, CCMatch ccMatch) {
-		return new Object[] { jimp, alg, cu, imp, ccMatch };
+			JavaImport jimp, JavaCompilationUnit cu, Import imp, SymmetricBlockCipher alg, CCMatch ccMatch) {
+		return new Object[] { jimp, cu, imp, alg, ccMatch };
 	}
 
-	public static final Object[] pattern_SymmetricBlockCipherImportToImport_24_6_createcorrespondence_greenBBFB(
+	public static final Object[] pattern_SymmetricBlockCipherImportToImport_24_6_createcorrespondence_greenBFBB(
 			JavaImport jimp, Import imp, CCMatch ccMatch) {
 		ImportToImport i2j = CryptoConfigToJavaFactory.eINSTANCE.createImportToImport();
 		i2j.setTarget(jimp);
 		i2j.setSource(imp);
 		ccMatch.getCreateCorr().add(i2j);
-		return new Object[] { jimp, imp, i2j, ccMatch };
+		return new Object[] { jimp, i2j, imp, ccMatch };
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_24_7_addtoreturnedresult_blackBB(
@@ -2557,10 +2558,10 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 		return _result;
 	}
 
-	public static final Object[] pattern_SymmetricBlockCipherImportToImport_27_1_matchtggpattern_blackBB(
-			SymmetricBlockCipher alg, Import imp) {
+	public static final Object[] pattern_SymmetricBlockCipherImportToImport_27_1_matchtggpattern_blackBB(Import imp,
+			SymmetricBlockCipher alg) {
 		if (alg.getImports().contains(imp)) {
-			return new Object[] { alg, imp };
+			return new Object[] { imp, alg };
 		}
 		return null;
 	}
@@ -2607,9 +2608,9 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_29_2_isapplicablecore_black_nac_0BB(
-			ModelgeneratorRuleResult ruleResult, SymmetricBlockCipher alg) {
-		if (ruleResult.getSourceObjects().contains(alg)) {
-			return new Object[] { ruleResult, alg };
+			ModelgeneratorRuleResult ruleResult, JavaCompilationUnit cu) {
+		if (ruleResult.getTargetObjects().contains(cu)) {
+			return new Object[] { ruleResult, cu };
 		}
 		return null;
 	}
@@ -2623,9 +2624,9 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_29_2_isapplicablecore_black_nac_2BB(
-			ModelgeneratorRuleResult ruleResult, JavaCompilationUnit cu) {
-		if (ruleResult.getTargetObjects().contains(cu)) {
-			return new Object[] { ruleResult, cu };
+			ModelgeneratorRuleResult ruleResult, SymmetricBlockCipher alg) {
+		if (ruleResult.getSourceObjects().contains(alg)) {
+			return new Object[] { ruleResult, alg };
 		}
 		return null;
 	}
@@ -2637,18 +2638,18 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 			for (EObject tmpAc : acList.getEntryObjects()) {
 				if (tmpAc instanceof SymmetricBlockCipherToJcu) {
 					SymmetricBlockCipherToJcu ac = (SymmetricBlockCipherToJcu) tmpAc;
-					SymmetricBlockCipher alg = ac.getSource();
-					if (alg != null) {
-						JavaCompilationUnit cu = ac.getTarget();
-						if (cu != null) {
+					JavaCompilationUnit cu = ac.getTarget();
+					if (cu != null) {
+						SymmetricBlockCipher alg = ac.getSource();
+						if (alg != null) {
 							if (pattern_SymmetricBlockCipherImportToImport_29_2_isapplicablecore_black_nac_1BB(
 									ruleResult, ac) == null) {
 								if (pattern_SymmetricBlockCipherImportToImport_29_2_isapplicablecore_black_nac_0BB(
-										ruleResult, alg) == null) {
+										ruleResult, cu) == null) {
 									if (pattern_SymmetricBlockCipherImportToImport_29_2_isapplicablecore_black_nac_2BB(
-											ruleResult, cu) == null) {
+											ruleResult, alg) == null) {
 										_result.add(
-												new Object[] { acList, alg, ac, cu, ruleEntryContainer, ruleResult });
+												new Object[] { acList, cu, ac, alg, ruleEntryContainer, ruleResult });
 									}
 								}
 							}
@@ -2663,12 +2664,12 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_29_3_solveCSP_bindingFBBBBBB(
-			SymmetricBlockCipherImportToImport _this, IsApplicableMatch isApplicableMatch, SymmetricBlockCipher alg,
-			SymmetricBlockCipherToJcu ac, JavaCompilationUnit cu, ModelgeneratorRuleResult ruleResult) {
-		CSP _localVariable_0 = _this.generateModel_solveCsp_BWD(isApplicableMatch, alg, ac, cu, ruleResult);
+			SymmetricBlockCipherImportToImport _this, IsApplicableMatch isApplicableMatch, JavaCompilationUnit cu,
+			SymmetricBlockCipherToJcu ac, SymmetricBlockCipher alg, ModelgeneratorRuleResult ruleResult) {
+		CSP _localVariable_0 = _this.generateModel_solveCsp_BWD(isApplicableMatch, cu, ac, alg, ruleResult);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, alg, ac, cu, ruleResult };
+			return new Object[] { csp, _this, isApplicableMatch, cu, ac, alg, ruleResult };
 		}
 		return null;
 	}
@@ -2678,10 +2679,10 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_29_3_solveCSP_bindingAndBlackFBBBBBB(
-			SymmetricBlockCipherImportToImport _this, IsApplicableMatch isApplicableMatch, SymmetricBlockCipher alg,
-			SymmetricBlockCipherToJcu ac, JavaCompilationUnit cu, ModelgeneratorRuleResult ruleResult) {
+			SymmetricBlockCipherImportToImport _this, IsApplicableMatch isApplicableMatch, JavaCompilationUnit cu,
+			SymmetricBlockCipherToJcu ac, SymmetricBlockCipher alg, ModelgeneratorRuleResult ruleResult) {
 		Object[] result_pattern_SymmetricBlockCipherImportToImport_29_3_solveCSP_binding = pattern_SymmetricBlockCipherImportToImport_29_3_solveCSP_bindingFBBBBBB(
-				_this, isApplicableMatch, alg, ac, cu, ruleResult);
+				_this, isApplicableMatch, cu, ac, alg, ruleResult);
 		if (result_pattern_SymmetricBlockCipherImportToImport_29_3_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_SymmetricBlockCipherImportToImport_29_3_solveCSP_binding[0];
 
@@ -2689,7 +2690,7 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 					csp);
 			if (result_pattern_SymmetricBlockCipherImportToImport_29_3_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, alg, ac, cu, ruleResult };
+				return new Object[] { csp, _this, isApplicableMatch, cu, ac, alg, ruleResult };
 			}
 		}
 		return null;
@@ -2703,32 +2704,32 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_29_5_checknacs_blackBBB(
-			SymmetricBlockCipher alg, SymmetricBlockCipherToJcu ac, JavaCompilationUnit cu) {
-		return new Object[] { alg, ac, cu };
+			JavaCompilationUnit cu, SymmetricBlockCipherToJcu ac, SymmetricBlockCipher alg) {
+		return new Object[] { cu, ac, alg };
 	}
 
 	public static final Object[] pattern_SymmetricBlockCipherImportToImport_29_6_perform_blackBBBB(
-			SymmetricBlockCipher alg, SymmetricBlockCipherToJcu ac, JavaCompilationUnit cu,
+			JavaCompilationUnit cu, SymmetricBlockCipherToJcu ac, SymmetricBlockCipher alg,
 			ModelgeneratorRuleResult ruleResult) {
-		return new Object[] { alg, ac, cu, ruleResult };
+		return new Object[] { cu, ac, alg, ruleResult };
 	}
 
-	public static final Object[] pattern_SymmetricBlockCipherImportToImport_29_6_perform_greenFBBFFBB(
-			SymmetricBlockCipher alg, JavaCompilationUnit cu, ModelgeneratorRuleResult ruleResult, CSP csp) {
+	public static final Object[] pattern_SymmetricBlockCipherImportToImport_29_6_perform_greenFBFFBBB(
+			JavaCompilationUnit cu, SymmetricBlockCipher alg, ModelgeneratorRuleResult ruleResult, CSP csp) {
 		JavaImport jimp = SimpleJavaFactory.eINSTANCE.createJavaImport();
-		Import imp = CryptoAPIConfigFactory.eINSTANCE.createImport();
 		ImportToImport i2j = CryptoConfigToJavaFactory.eINSTANCE.createImportToImport();
+		Import imp = CryptoAPIConfigFactory.eINSTANCE.createImport();
 		Object _localVariable_0 = csp.getValue("jimp", "value");
 		Object _localVariable_1 = csp.getValue("imp", "value");
 		boolean ruleResult_success_prime = Boolean.valueOf(true);
 		int _localVariable_2 = ruleResult.getIncrementedPerformCount();
 		cu.getImports().add(jimp);
 		ruleResult.getTargetObjects().add(jimp);
+		i2j.setTarget(jimp);
+		ruleResult.getCorrObjects().add(i2j);
+		i2j.setSource(imp);
 		alg.getImports().add(imp);
 		ruleResult.getSourceObjects().add(imp);
-		i2j.setTarget(jimp);
-		i2j.setSource(imp);
-		ruleResult.getCorrObjects().add(i2j);
 		String jimp_value_prime = (String) _localVariable_0;
 		String imp_value_prime = (String) _localVariable_1;
 		ruleResult.setSuccess(Boolean.valueOf(ruleResult_success_prime));
@@ -2736,7 +2737,7 @@ public class SymmetricBlockCipherImportToImportImpl extends AbstractRuleImpl
 		jimp.setValue(jimp_value_prime);
 		imp.setValue(imp_value_prime);
 		ruleResult.setPerformCount(Integer.valueOf(ruleResult_performCount_prime));
-		return new Object[] { jimp, alg, cu, imp, i2j, ruleResult, csp };
+		return new Object[] { jimp, cu, i2j, imp, alg, ruleResult, csp };
 	}
 
 	public static final ModelgeneratorRuleResult pattern_SymmetricBlockCipherImportToImport_29_7_expressionFB(

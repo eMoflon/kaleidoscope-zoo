@@ -97,7 +97,7 @@ public interface IgnoreParameterRule extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_BWD(Match match, JavaWorkflowMethod jcu, JavaVariableDeclaration var);
+	boolean isAppropriate_BWD(Match match, JavaVariableDeclaration var, JavaWorkflowMethod jcu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -121,7 +121,7 @@ public interface IgnoreParameterRule extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_BWD(Match match, JavaWorkflowMethod jcu, JavaVariableDeclaration var);
+	void registerObjectsToMatch_BWD(Match match, JavaVariableDeclaration var, JavaWorkflowMethod jcu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,7 +129,7 @@ public interface IgnoreParameterRule extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_BWD(Match match, JavaWorkflowMethod jcu, JavaVariableDeclaration var);
+	CSP isAppropriate_solveCsp_BWD(Match match, JavaVariableDeclaration var, JavaWorkflowMethod jcu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -145,8 +145,8 @@ public interface IgnoreParameterRule extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaWorkflowMethod jcu,
-			JavaVariableDeclaration var);
+	CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaVariableDeclaration var,
+			JavaWorkflowMethod jcu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -162,7 +162,7 @@ public interface IgnoreParameterRule extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_BWD(PerformRuleResult ruleresult, EObject jcu, EObject var);
+	void registerObjects_BWD(PerformRuleResult ruleresult, EObject var, EObject jcu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -178,7 +178,7 @@ public interface IgnoreParameterRule extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_BWD_EMoflonEdge_7(EMoflonEdge _edge_params);
+	EObjectContainer isAppropriate_BWD_EMoflonEdge_11(EMoflonEdge _edge_params);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -210,7 +210,7 @@ public interface IgnoreParameterRule extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_CC(JavaWorkflowMethod jcu, JavaVariableDeclaration var, Match sourceMatch,
+	CSP isApplicable_solveCsp_CC(JavaVariableDeclaration var, JavaWorkflowMethod jcu, Match sourceMatch,
 			Match targetMatch);
 
 	/**
@@ -235,7 +235,7 @@ public interface IgnoreParameterRule extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_BWD(JavaWorkflowMethod jcu, JavaVariableDeclaration var);
+	boolean checkDEC_BWD(JavaVariableDeclaration var, JavaWorkflowMethod jcu);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -77,11 +77,11 @@ public class RulesSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case RulesPackage.CREATE_ASINK: {
-			create_a_sink create_a_sink = (create_a_sink) theEObject;
-			T result = casecreate_a_sink(create_a_sink);
+		case RulesPackage.SOCKET_TO_GROUP: {
+			SocketToGroup socketToGroup = (SocketToGroup) theEObject;
+			T result = caseSocketToGroup(socketToGroup);
 			if (result == null)
-				result = caseAbstractRule(create_a_sink);
+				result = caseAbstractRule(socketToGroup);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -95,15 +95,6 @@ public class RulesSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case RulesPackage.SOCKET_TO_GROUP: {
-			SocketToGroup socketToGroup = (SocketToGroup) theEObject;
-			T result = caseSocketToGroup(socketToGroup);
-			if (result == null)
-				result = caseAbstractRule(socketToGroup);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case RulesPackage.KITCHEN_TO_GRID_RULE: {
 			KitchenToGridRule kitchenToGridRule = (KitchenToGridRule) theEObject;
 			T result = caseKitchenToGridRule(kitchenToGridRule);
@@ -113,20 +104,11 @@ public class RulesSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case RulesPackage.CREATE_AHORIZONTAL_TABLE: {
-			create_a_horizontal_table create_a_horizontal_table = (create_a_horizontal_table) theEObject;
-			T result = casecreate_a_horizontal_table(create_a_horizontal_table);
+		case RulesPackage.CREATE_ASINK: {
+			create_a_sink create_a_sink = (create_a_sink) theEObject;
+			T result = casecreate_a_sink(create_a_sink);
 			if (result == null)
-				result = caseAbstractRule(create_a_horizontal_table);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RulesPackage.CREATE_VERTICAL_ITEM: {
-			CreateVerticalItem createVerticalItem = (CreateVerticalItem) theEObject;
-			T result = caseCreateVerticalItem(createVerticalItem);
-			if (result == null)
-				result = caseAbstractRule(createVerticalItem);
+				result = caseAbstractRule(create_a_sink);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -140,11 +122,29 @@ public class RulesSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case RulesPackage.CREATE_AHORIZONTAL_TABLE: {
+			create_a_horizontal_table create_a_horizontal_table = (create_a_horizontal_table) theEObject;
+			T result = casecreate_a_horizontal_table(create_a_horizontal_table);
+			if (result == null)
+				result = caseAbstractRule(create_a_horizontal_table);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case RulesPackage.CREATE_AVERTICAL_TABLE: {
 			create_a_vertical_table create_a_vertical_table = (create_a_vertical_table) theEObject;
 			T result = casecreate_a_vertical_table(create_a_vertical_table);
 			if (result == null)
 				result = caseAbstractRule(create_a_vertical_table);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case RulesPackage.CREATE_VERTICAL_ITEM: {
+			CreateVerticalItem createVerticalItem = (CreateVerticalItem) theEObject;
+			T result = caseCreateVerticalItem(createVerticalItem);
+			if (result == null)
+				result = caseAbstractRule(createVerticalItem);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -170,17 +170,17 @@ public class RulesSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>create asink</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Socket To Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>create asink</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Socket To Group</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casecreate_a_sink(create_a_sink object) {
+	public T caseSocketToGroup(SocketToGroup object) {
 		return null;
 	}
 
@@ -200,21 +200,6 @@ public class RulesSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Socket To Group</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Socket To Group</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSocketToGroup(SocketToGroup object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Kitchen To Grid Rule</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -230,32 +215,17 @@ public class RulesSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>create ahorizontal table</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>create asink</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>create ahorizontal table</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>create asink</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casecreate_a_horizontal_table(create_a_horizontal_table object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Create Vertical Item</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Create Vertical Item</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCreateVerticalItem(CreateVerticalItem object) {
+	public T casecreate_a_sink(create_a_sink object) {
 		return null;
 	}
 
@@ -275,6 +245,21 @@ public class RulesSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>create ahorizontal table</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>create ahorizontal table</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casecreate_a_horizontal_table(create_a_horizontal_table object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>create avertical table</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -286,6 +271,21 @@ public class RulesSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casecreate_a_vertical_table(create_a_vertical_table object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Create Vertical Item</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Create Vertical Item</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCreateVerticalItem(CreateVerticalItem object) {
 		return null;
 	}
 

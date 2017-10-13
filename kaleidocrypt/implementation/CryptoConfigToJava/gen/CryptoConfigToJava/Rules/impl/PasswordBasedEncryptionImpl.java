@@ -177,8 +177,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		Object[] result1_green = PasswordBasedEncryptionImpl
 				.pattern_PasswordBasedEncryption_1_1_performtransformation_greenFFFFFFFFFFFFFFBFFFFFBFBFFFFB(kda, task,
 						sbc, csp);
-		JavaLiteral exprIterationLiteral = (JavaLiteral) result1_green[0];
-		JavaPackage javaPackage = (JavaPackage) result1_green[1];
+		JavaPackage javaPackage = (JavaPackage) result1_green[0];
+		JavaLiteral exprIterationLiteral = (JavaLiteral) result1_green[1];
 		JavaMethodInvocation exprRetGetKey = (JavaMethodInvocation) result1_green[2];
 		JavaLiteral exprOutputSizeLiteral = (JavaLiteral) result1_green[3];
 		SymmetricBlockCipherToJcu sbc2Jcu = (SymmetricBlockCipherToJcu) result1_green[4];
@@ -204,14 +204,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 		Object[] result2_black = PasswordBasedEncryptionImpl
 				.pattern_PasswordBasedEncryption_1_2_collecttranslatedelements_blackBBBBBBBBBBBBBBBBBBBBBBBBBBB(
-						exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu, kdaJcu,
+						javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu, kdaJcu,
 						methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, t2c,
 						exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption,
 						exprKeyName, exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName,
 						exprRetPerformEncryption, statRetGetKey, kda2Jcu);
 		if (result2_black == null) {
-			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[exprIterationLiteral] = "
-					+ exprIterationLiteral + ", " + "[javaPackage] = " + javaPackage + ", " + "[exprRetGetKey] = "
+			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[javaPackage] = " + javaPackage
+					+ ", " + "[exprIterationLiteral] = " + exprIterationLiteral + ", " + "[exprRetGetKey] = "
 					+ exprRetGetKey + ", " + "[exprOutputSizeLiteral] = " + exprOutputSizeLiteral + ", "
 					+ "[sbc2Jcu] = " + sbc2Jcu + ", " + "[kdaJcu] = " + kdaJcu + ", " + "[methodPerformEncryption] = "
 					+ methodPerformEncryption + ", " + "[sbcJcu] = " + sbcJcu + ", " + "[keyEncryption] = "
@@ -228,7 +228,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		}
 		Object[] result2_green = PasswordBasedEncryptionImpl
 				.pattern_PasswordBasedEncryption_1_2_collecttranslatedelements_greenFBBBBBBBBBBBBBBBBBBBBBBBBBBB(
-						exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu, kdaJcu,
+						javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu, kdaJcu,
 						methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, t2c,
 						exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption,
 						exprKeyName, exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName,
@@ -237,21 +237,22 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 		Object[] result3_black = PasswordBasedEncryptionImpl
 				.pattern_PasswordBasedEncryption_1_3_bookkeepingforedges_blackBBBBBBBBBBBBBBBBBBBBBBBBBBBB(ruleresult,
-						exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu, kdaJcu,
+						javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu, kdaJcu,
 						methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, t2c,
 						exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption,
 						exprKeyName, exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName,
 						exprRetPerformEncryption, statRetGetKey, kda2Jcu);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[ruleresult] = " + ruleresult
-					+ ", " + "[exprIterationLiteral] = " + exprIterationLiteral + ", " + "[javaPackage] = "
-					+ javaPackage + ", " + "[exprRetGetKey] = " + exprRetGetKey + ", " + "[exprOutputSizeLiteral] = "
-					+ exprOutputSizeLiteral + ", " + "[sbc2Jcu] = " + sbc2Jcu + ", " + "[kdaJcu] = " + kdaJcu + ", "
-					+ "[methodPerformEncryption] = " + methodPerformEncryption + ", " + "[sbcJcu] = " + sbcJcu + ", "
-					+ "[keyEncryption] = " + keyEncryption + ", " + "[dataEncryption] = " + dataEncryption + ", "
-					+ "[methodGetKey] = " + methodGetKey + ", " + "[t2c] = " + t2c + ", " + "[exprAlgNameLiteral] = "
-					+ exprAlgNameLiteral + ", " + "[pwdDeclaration] = " + pwdDeclaration + ", " + "[kda] = " + kda
-					+ ", " + "[methodPerformGetKey] = " + methodPerformGetKey + ", " + "[statRetPerformEncryption] = "
+					+ ", " + "[javaPackage] = " + javaPackage + ", " + "[exprIterationLiteral] = "
+					+ exprIterationLiteral + ", " + "[exprRetGetKey] = " + exprRetGetKey + ", "
+					+ "[exprOutputSizeLiteral] = " + exprOutputSizeLiteral + ", " + "[sbc2Jcu] = " + sbc2Jcu + ", "
+					+ "[kdaJcu] = " + kdaJcu + ", " + "[methodPerformEncryption] = " + methodPerformEncryption + ", "
+					+ "[sbcJcu] = " + sbcJcu + ", " + "[keyEncryption] = " + keyEncryption + ", "
+					+ "[dataEncryption] = " + dataEncryption + ", " + "[methodGetKey] = " + methodGetKey + ", "
+					+ "[t2c] = " + t2c + ", " + "[exprAlgNameLiteral] = " + exprAlgNameLiteral + ", "
+					+ "[pwdDeclaration] = " + pwdDeclaration + ", " + "[kda] = " + kda + ", "
+					+ "[methodPerformGetKey] = " + methodPerformGetKey + ", " + "[statRetPerformEncryption] = "
 					+ statRetPerformEncryption + ", " + "[exprKeyName] = " + exprKeyName + ", "
 					+ "[exprNameModePadding] = " + exprNameModePadding + ", " + "[methodEncryption] = "
 					+ methodEncryption + ", " + "[task] = " + task + ", " + "[exprPwdName] = " + exprPwdName + ", "
@@ -261,7 +262,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		}
 		PasswordBasedEncryptionImpl
 				.pattern_PasswordBasedEncryption_1_3_bookkeepingforedges_greenBBBBBBBBBBBBBBBBBBBBBBBBBBBBFFFFFFFFFFFFFFFFFFFFFFFFFFFF(
-						ruleresult, exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu,
+						ruleresult, javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu,
 						kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, t2c,
 						exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption,
 						exprKeyName, exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName,
@@ -273,11 +274,11 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		//nothing EMoflonEdge statRetGetKey__exprRetGetKey____expr = (EMoflonEdge) result3_green[32];
 		//nothing EMoflonEdge kdaJcu__methodGetKey____methods = (EMoflonEdge) result3_green[33];
 		//nothing EMoflonEdge sbcJcu__methodEncryption____methods = (EMoflonEdge) result3_green[34];
-		//nothing EMoflonEdge t2c__task____source = (EMoflonEdge) result3_green[35];
-		//nothing EMoflonEdge exprRetPerformEncryption__exprDataName____arguments = (EMoflonEdge) result3_green[36];
-		//nothing EMoflonEdge methodEncryption__statRetPerformEncryption____statements = (EMoflonEdge) result3_green[37];
-		//nothing EMoflonEdge kda2Jcu__kda____source = (EMoflonEdge) result3_green[38];
-		//nothing EMoflonEdge task__kda____algorithms = (EMoflonEdge) result3_green[39];
+		//nothing EMoflonEdge exprRetPerformEncryption__exprDataName____arguments = (EMoflonEdge) result3_green[35];
+		//nothing EMoflonEdge t2c__task____source = (EMoflonEdge) result3_green[36];
+		//nothing EMoflonEdge task__kda____algorithms = (EMoflonEdge) result3_green[37];
+		//nothing EMoflonEdge methodEncryption__statRetPerformEncryption____statements = (EMoflonEdge) result3_green[38];
+		//nothing EMoflonEdge kda2Jcu__kda____source = (EMoflonEdge) result3_green[39];
 		//nothing EMoflonEdge sbc2Jcu__sbcJcu____target = (EMoflonEdge) result3_green[40];
 		//nothing EMoflonEdge methodEncryption__keyEncryption____params = (EMoflonEdge) result3_green[41];
 		//nothing EMoflonEdge methodGetKey__pwdDeclaration____params = (EMoflonEdge) result3_green[42];
@@ -290,8 +291,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		//nothing EMoflonEdge exprRetGetKey__exprOutputSizeLiteral____arguments = (EMoflonEdge) result3_green[49];
 		//nothing EMoflonEdge kdaJcu__methodPerformGetKey____methods = (EMoflonEdge) result3_green[50];
 		//nothing EMoflonEdge exprRetPerformEncryption__exprNameModePadding____arguments = (EMoflonEdge) result3_green[51];
-		//nothing EMoflonEdge sbcJcu__methodPerformEncryption____methods = (EMoflonEdge) result3_green[52];
-		//nothing EMoflonEdge sbc2Jcu__sbc____source = (EMoflonEdge) result3_green[53];
+		//nothing EMoflonEdge sbc2Jcu__sbc____source = (EMoflonEdge) result3_green[52];
+		//nothing EMoflonEdge sbcJcu__methodPerformEncryption____methods = (EMoflonEdge) result3_green[53];
 		//nothing EMoflonEdge exprRetGetKey__exprAlgNameLiteral____arguments = (EMoflonEdge) result3_green[54];
 		//nothing EMoflonEdge exprRetGetKey__exprIterationLiteral____arguments = (EMoflonEdge) result3_green[55];
 
@@ -299,7 +300,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		// 
 		PasswordBasedEncryptionImpl
 				.pattern_PasswordBasedEncryption_1_5_registerobjects_expressionBBBBBBBBBBBBBBBBBBBBBBBBBBBBB(this,
-						ruleresult, exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu,
+						ruleresult, javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu,
 						kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, t2c,
 						exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption,
 						exprKeyName, exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName,
@@ -443,28 +444,28 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 		// Create literals
 		Variable literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal0", true, csp);
-		literal0.setValue(1);
+		literal0.setValue(
+				"{\n  byte[] ivb=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(ivb);\n  IvParameterSpec iv=new IvParameterSpec(ivb);\n  Cipher c=Cipher.getInstance(encryptPassingArgument);\n  c.init(Cipher.ENCRYPT_MODE,key,iv);\n  byte[] res=c.doFinal(data);\n  byte[] ret=new byte[res.length + ivb.length];\n  System.arraycopy(ivb,0,ret,0,ivb.length);\n  System.arraycopy(res,0,ret,ivb.length,ret.length);\n  return ret;\n}\n");
 		literal0.setType("");
 		Variable literal1 = CSPFactoryHelper.eINSTANCE.createVariable("literal1", true, csp);
-		literal1.setValue(
-				"{\n  byte[] ivb=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(ivb);\n  IvParameterSpec iv=new IvParameterSpec(ivb);\n  Cipher c=Cipher.getInstance(encryptPassingArgument);\n  c.init(Cipher.ENCRYPT_MODE,key,iv);\n  byte[] res=c.doFinal(data);\n  byte[] ret=new byte[res.length + ivb.length];\n  System.arraycopy(ivb,0,ret,0,ivb.length);\n  System.arraycopy(res,0,ret,ivb.length,ret.length);\n  return ret;\n}\n");
+		literal1.setValue(1);
 		literal1.setType("");
 		Variable literal2 = CSPFactoryHelper.eINSTANCE.createVariable("literal2", true, csp);
-		literal2.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
+		literal2.setValue(
+				"InvalidKeyException,NoSuchAlgorithmException,NoSuchPaddingException,IllegalBlockSizeException,BadPaddingException,InvalidAlgorithmParameterException");
 		literal2.setType("");
 		Variable literal3 = CSPFactoryHelper.eINSTANCE.createVariable("literal3", true, csp);
-		literal3.setValue(
-				"InvalidKeyException,NoSuchAlgorithmException,NoSuchPaddingException,IllegalBlockSizeException,BadPaddingException,InvalidAlgorithmParameterException");
+		literal3.setValue("byte[] data,SecretKey key,String encryptPassingArgument");
 		literal3.setType("");
 		Variable literal4 = CSPFactoryHelper.eINSTANCE.createVariable("literal4", true, csp);
-		literal4.setValue(
-				"{\n  byte[] salt=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(salt);\n  PBEKeySpec spec=new PBEKeySpec(pwd,salt,iterations,outputSize);\n  SecretKeyFactory skf=SecretKeyFactory.getInstance(algName);\n  return new SecretKeySpec(skf.generateSecret(spec).getEncoded(),\"AES\");\n}\n");
+		literal4.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
 		literal4.setType("");
 		Variable literal5 = CSPFactoryHelper.eINSTANCE.createVariable("literal5", true, csp);
-		literal5.setValue("byte[] data,SecretKey key,String encryptPassingArgument");
+		literal5.setValue("Enc");
 		literal5.setType("");
 		Variable literal6 = CSPFactoryHelper.eINSTANCE.createVariable("literal6", true, csp);
-		literal6.setValue("Enc");
+		literal6.setValue(
+				"{\n  byte[] salt=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(salt);\n  PBEKeySpec spec=new PBEKeySpec(pwd,salt,iterations,outputSize);\n  SecretKeyFactory skf=SecretKeyFactory.getInstance(algName);\n  return new SecretKeySpec(skf.generateSecret(spec).getEncoded(),\"AES\");\n}\n");
 		literal6.setType("");
 		Variable literal7 = CSPFactoryHelper.eINSTANCE.createVariable("literal7", true, csp);
 		literal7.setValue(0);
@@ -474,6 +475,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		literal8.setType("");
 
 		// Create attribute variables
+		Variable var_kda_name = CSPFactoryHelper.eINSTANCE.createVariable("kda.name", true, csp);
+		var_kda_name.setValue(kda.getName());
+		var_kda_name.setType("String");
 		Variable var_kda_iterations = CSPFactoryHelper.eINSTANCE.createVariable("kda.iterations", true, csp);
 		var_kda_iterations.setValue(kda.getIterations());
 		var_kda_iterations.setType("String");
@@ -483,9 +487,6 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		Variable var_task_package = CSPFactoryHelper.eINSTANCE.createVariable("task.package", true, csp);
 		var_task_package.setValue(task.getPackage());
 		var_task_package.setType("String");
-		Variable var_kda_name = CSPFactoryHelper.eINSTANCE.createVariable("kda.name", true, csp);
-		var_kda_name.setValue(kda.getName());
-		var_kda_name.setType("String");
 		Variable var_sbc_name = CSPFactoryHelper.eINSTANCE.createVariable("sbc.name", true, csp);
 		var_sbc_name.setValue(sbc.getName());
 		var_sbc_name.setType("String");
@@ -497,38 +498,41 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		var_sbc_padding.setType("String");
 
 		// Create unbound variables
-		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.index", csp);
-		var_methodGetKey_index.setType("int");
-		Variable var_methodEncryption_index = CSPFactoryHelper.eINSTANCE.createVariable("methodEncryption.index", csp);
-		var_methodEncryption_index.setType("int");
 		Variable var_methodPerformEncryption_body = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformEncryption.body", csp);
 		var_methodPerformEncryption_body.setType("String");
-		Variable var_methodPerformGetKey_throws = CSPFactoryHelper.eINSTANCE
-				.createVariable("methodPerformGetKey.throws", csp);
-		var_methodPerformGetKey_throws.setType("String");
+		Variable var_methodEncryption_index = CSPFactoryHelper.eINSTANCE.createVariable("methodEncryption.index", csp);
+		var_methodEncryption_index.setType("int");
 		Variable var_methodPerformEncryption_throws = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformEncryption.throws", csp);
 		var_methodPerformEncryption_throws.setType("String");
-		Variable var_methodPerformGetKey_body = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.body",
-				csp);
-		var_methodPerformGetKey_body.setType("String");
-		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.throws", csp);
-		var_methodGetKey_throws.setType("String");
 		Variable var_methodPerformEncryption_parameters = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformEncryption.parameters", csp);
 		var_methodPerformEncryption_parameters.setType("String");
-		Variable var_sbcJcu_name = CSPFactoryHelper.eINSTANCE.createVariable("sbcJcu.name", csp);
-		var_sbcJcu_name.setType("String");
 		Variable var_methodEncryption_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodEncryption.throws",
 				csp);
 		var_methodEncryption_throws.setType("String");
-		Variable var_methodPerformEncryption_index = CSPFactoryHelper.eINSTANCE
-				.createVariable("methodPerformEncryption.index", csp);
-		var_methodPerformEncryption_index.setType("int");
+		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.index", csp);
+		var_methodGetKey_index.setType("int");
+		Variable var_methodPerformGetKey_throws = CSPFactoryHelper.eINSTANCE
+				.createVariable("methodPerformGetKey.throws", csp);
+		var_methodPerformGetKey_throws.setType("String");
+		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.throws", csp);
+		var_methodGetKey_throws.setType("String");
+		Variable var_sbcJcu_name = CSPFactoryHelper.eINSTANCE.createVariable("sbcJcu.name", csp);
+		var_sbcJcu_name.setType("String");
+		Variable var_methodPerformGetKey_body = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.body",
+				csp);
+		var_methodPerformGetKey_body.setType("String");
 		Variable var_methodPerformGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.index",
 				csp);
 		var_methodPerformGetKey_index.setType("int");
+		Variable var_methodPerformEncryption_index = CSPFactoryHelper.eINSTANCE
+				.createVariable("methodPerformEncryption.index", csp);
+		var_methodPerformEncryption_index.setType("int");
+		Variable var_exprAlgNameLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprAlgNameLiteral.value",
+				csp);
+		var_exprAlgNameLiteral_value.setType("String");
 		Variable var_exprIterationLiteral_value = CSPFactoryHelper.eINSTANCE
 				.createVariable("exprIterationLiteral.value", csp);
 		var_exprIterationLiteral_value.setType("String");
@@ -537,9 +541,6 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		var_exprOutputSizeLiteral_value.setType("String");
 		Variable var_javaPackage_name = CSPFactoryHelper.eINSTANCE.createVariable("javaPackage.name", csp);
 		var_javaPackage_name.setType("String");
-		Variable var_exprAlgNameLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprAlgNameLiteral.value",
-				csp);
-		var_exprAlgNameLiteral_value.setType("String");
 		Variable var_exprNameModePadding_value = CSPFactoryHelper.eINSTANCE.createVariable("exprNameModePadding.value",
 				csp);
 		var_exprNameModePadding_value.setType("String");
@@ -588,37 +589,37 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 		// Solve CSP
 		setDefaultStringIfNull.setRuleName("NoRuleName");
-		setDefaultStringIfNull.solve(var_methodGetKey_index, literal0);
+		setDefaultStringIfNull.solve(var_methodPerformEncryption_body, literal0);
 		setDefaultStringIfNull_0.setRuleName("NoRuleName");
-		setDefaultStringIfNull_0.solve(var_methodEncryption_index, literal0);
+		setDefaultStringIfNull_0.solve(var_methodEncryption_index, literal1);
 		setDefaultStringIfNull_1.setRuleName("NoRuleName");
-		setDefaultStringIfNull_1.solve(var_methodPerformEncryption_body, literal1);
+		setDefaultStringIfNull_1.solve(var_methodPerformEncryption_throws, literal2);
 		setDefaultStringIfNull_2.setRuleName("NoRuleName");
-		setDefaultStringIfNull_2.solve(var_methodPerformGetKey_throws, literal2);
+		setDefaultStringIfNull_2.solve(var_methodPerformEncryption_parameters, literal3);
 		setDefaultStringIfNull_3.setRuleName("NoRuleName");
-		setDefaultStringIfNull_3.solve(var_methodPerformEncryption_throws, literal3);
+		setDefaultStringIfNull_3.solve(var_methodEncryption_throws, literal2);
 		setDefaultStringIfNull_4.setRuleName("NoRuleName");
-		setDefaultStringIfNull_4.solve(var_methodPerformGetKey_body, literal4);
+		setDefaultStringIfNull_4.solve(var_methodGetKey_index, literal1);
 		setDefaultStringIfNull_5.setRuleName("NoRuleName");
-		setDefaultStringIfNull_5.solve(var_methodGetKey_throws, literal2);
+		setDefaultStringIfNull_5.solve(var_methodPerformGetKey_throws, literal4);
 		setDefaultStringIfNull_6.setRuleName("NoRuleName");
-		setDefaultStringIfNull_6.solve(var_methodPerformEncryption_parameters, literal5);
+		setDefaultStringIfNull_6.solve(var_methodGetKey_throws, literal4);
 		setDefaultStringIfNull_7.setRuleName("NoRuleName");
-		setDefaultStringIfNull_7.solve(var_sbcJcu_name, literal6);
+		setDefaultStringIfNull_7.solve(var_sbcJcu_name, literal5);
 		setDefaultStringIfNull_8.setRuleName("NoRuleName");
-		setDefaultStringIfNull_8.solve(var_methodEncryption_throws, literal3);
+		setDefaultStringIfNull_8.solve(var_methodPerformGetKey_body, literal6);
 		setDefaultStringIfNull_9.setRuleName("NoRuleName");
-		setDefaultStringIfNull_9.solve(var_methodPerformEncryption_index, literal7);
+		setDefaultStringIfNull_9.solve(var_methodPerformGetKey_index, literal7);
 		setDefaultStringIfNull_10.setRuleName("NoRuleName");
-		setDefaultStringIfNull_10.solve(var_methodPerformGetKey_index, literal7);
+		setDefaultStringIfNull_10.solve(var_methodPerformEncryption_index, literal7);
 		eq.setRuleName("NoRuleName");
-		eq.solve(var_exprIterationLiteral_value, var_kda_iterations);
+		eq.solve(var_exprAlgNameLiteral_value, var_kda_name);
 		eq_0.setRuleName("NoRuleName");
-		eq_0.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
+		eq_0.solve(var_exprIterationLiteral_value, var_kda_iterations);
 		eq_1.setRuleName("NoRuleName");
-		eq_1.solve(var_task_package, var_javaPackage_name);
+		eq_1.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
 		eq_2.setRuleName("NoRuleName");
-		eq_2.solve(var_exprAlgNameLiteral_value, var_kda_name);
+		eq_2.solve(var_task_package, var_javaPackage_name);
 		nameModePadding.setRuleName("NoRuleName");
 		nameModePadding.solve(var_sbc_name, var_sbc_mode, var_sbc_padding, var_exprNameModePadding_value);
 		setDefaultStringIfNull_11.setRuleName("NoRuleName");
@@ -645,15 +646,15 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject javaPackage,
+	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject javaPackage, EObject exprIterationLiteral,
 			EObject exprRetGetKey, EObject exprOutputSizeLiteral, EObject sbc2Jcu, EObject kdaJcu,
 			EObject methodPerformEncryption, EObject sbcJcu, EObject keyEncryption, EObject dataEncryption,
 			EObject methodGetKey, EObject t2c, EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda,
 			EObject methodPerformGetKey, EObject statRetPerformEncryption, EObject exprKeyName,
 			EObject exprNameModePadding, EObject methodEncryption, EObject task, EObject exprPwdName, EObject sbc,
 			EObject exprDataName, EObject exprRetPerformEncryption, EObject statRetGetKey, EObject kda2Jcu) {
-		ruleresult.registerObject("exprIterationLiteral", exprIterationLiteral);
 		ruleresult.registerObject("javaPackage", javaPackage);
+		ruleresult.registerObject("exprIterationLiteral", exprIterationLiteral);
 		ruleresult.registerObject("exprRetGetKey", exprRetGetKey);
 		ruleresult.registerObject("exprOutputSizeLiteral", exprOutputSizeLiteral);
 		ruleresult.registerObject("sbc2Jcu", sbc2Jcu);
@@ -702,7 +703,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isAppropriate_BWD(Match match, JavaLiteral exprIterationLiteral, JavaPackage javaPackage,
+	public boolean isAppropriate_BWD(Match match, JavaPackage javaPackage, JavaLiteral exprIterationLiteral,
 			JavaMethodInvocation exprRetGetKey, JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu,
 			JavaOpaqueMethod methodPerformEncryption, JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption,
 			JavaVariableDeclaration dataEncryption, JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral,
@@ -713,16 +714,16 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 		Object[] result1_black = PasswordBasedEncryptionImpl
 				.pattern_PasswordBasedEncryption_10_1_initialbindings_blackBBBBBBBBBBBBBBBBBBBBBBB(this, match,
-						exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
+						javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
 						methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey,
 						exprAlgNameLiteral, pwdDeclaration, methodPerformGetKey, statRetPerformEncryption, exprKeyName,
 						exprNameModePadding, methodEncryption, exprPwdName, exprDataName, exprRetPerformEncryption,
 						statRetGetKey);
 		if (result1_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[match] = " + match + ", " + "[exprIterationLiteral] = " + exprIterationLiteral + ", "
-					+ "[javaPackage] = " + javaPackage + ", " + "[exprRetGetKey] = " + exprRetGetKey + ", "
-					+ "[exprOutputSizeLiteral] = " + exprOutputSizeLiteral + ", " + "[kdaJcu] = " + kdaJcu + ", "
+					+ "[match] = " + match + ", " + "[javaPackage] = " + javaPackage + ", "
+					+ "[exprIterationLiteral] = " + exprIterationLiteral + ", " + "[exprRetGetKey] = " + exprRetGetKey
+					+ ", " + "[exprOutputSizeLiteral] = " + exprOutputSizeLiteral + ", " + "[kdaJcu] = " + kdaJcu + ", "
 					+ "[methodPerformEncryption] = " + methodPerformEncryption + ", " + "[sbcJcu] = " + sbcJcu + ", "
 					+ "[keyEncryption] = " + keyEncryption + ", " + "[dataEncryption] = " + dataEncryption + ", "
 					+ "[methodGetKey] = " + methodGetKey + ", " + "[exprAlgNameLiteral] = " + exprAlgNameLiteral + ", "
@@ -736,16 +737,16 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 		Object[] result2_bindingAndBlack = PasswordBasedEncryptionImpl
 				.pattern_PasswordBasedEncryption_10_2_SolveCSP_bindingAndBlackFBBBBBBBBBBBBBBBBBBBBBBB(this, match,
-						exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
+						javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
 						methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey,
 						exprAlgNameLiteral, pwdDeclaration, methodPerformGetKey, statRetPerformEncryption, exprKeyName,
 						exprNameModePadding, methodEncryption, exprPwdName, exprDataName, exprRetPerformEncryption,
 						statRetGetKey);
 		if (result2_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[match] = " + match + ", " + "[exprIterationLiteral] = " + exprIterationLiteral + ", "
-					+ "[javaPackage] = " + javaPackage + ", " + "[exprRetGetKey] = " + exprRetGetKey + ", "
-					+ "[exprOutputSizeLiteral] = " + exprOutputSizeLiteral + ", " + "[kdaJcu] = " + kdaJcu + ", "
+					+ "[match] = " + match + ", " + "[javaPackage] = " + javaPackage + ", "
+					+ "[exprIterationLiteral] = " + exprIterationLiteral + ", " + "[exprRetGetKey] = " + exprRetGetKey
+					+ ", " + "[exprOutputSizeLiteral] = " + exprOutputSizeLiteral + ", " + "[kdaJcu] = " + kdaJcu + ", "
 					+ "[methodPerformEncryption] = " + methodPerformEncryption + ", " + "[sbcJcu] = " + sbcJcu + ", "
 					+ "[keyEncryption] = " + keyEncryption + ", " + "[dataEncryption] = " + dataEncryption + ", "
 					+ "[methodGetKey] = " + methodGetKey + ", " + "[exprAlgNameLiteral] = " + exprAlgNameLiteral + ", "
@@ -762,14 +763,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 			Object[] result4_black = PasswordBasedEncryptionImpl
 					.pattern_PasswordBasedEncryption_10_4_collectelementstobetranslated_blackBBBBBBBBBBBBBBBBBBBBBB(
-							match, exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
+							match, javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
 							methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey,
 							exprAlgNameLiteral, pwdDeclaration, methodPerformGetKey, statRetPerformEncryption,
 							exprKeyName, exprNameModePadding, methodEncryption, exprPwdName, exprDataName,
 							exprRetPerformEncryption, statRetGetKey);
 			if (result4_black == null) {
 				throw new RuntimeException("Pattern matching failed." + " Variables: " + "[match] = " + match + ", "
-						+ "[exprIterationLiteral] = " + exprIterationLiteral + ", " + "[javaPackage] = " + javaPackage
+						+ "[javaPackage] = " + javaPackage + ", " + "[exprIterationLiteral] = " + exprIterationLiteral
 						+ ", " + "[exprRetGetKey] = " + exprRetGetKey + ", " + "[exprOutputSizeLiteral] = "
 						+ exprOutputSizeLiteral + ", " + "[kdaJcu] = " + kdaJcu + ", " + "[methodPerformEncryption] = "
 						+ methodPerformEncryption + ", " + "[sbcJcu] = " + sbcJcu + ", " + "[keyEncryption] = "
@@ -784,7 +785,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			}
 			PasswordBasedEncryptionImpl
 					.pattern_PasswordBasedEncryption_10_4_collectelementstobetranslated_greenBBBBBBBBBBBBBBBBBBBBBBFFFFFFFFFFFFFFFFFFFF(
-							match, exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
+							match, javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
 							methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey,
 							exprAlgNameLiteral, pwdDeclaration, methodPerformGetKey, statRetPerformEncryption,
 							exprKeyName, exprNameModePadding, methodEncryption, exprPwdName, exprDataName,
@@ -812,14 +813,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 			Object[] result5_black = PasswordBasedEncryptionImpl
 					.pattern_PasswordBasedEncryption_10_5_collectcontextelements_blackBBBBBBBBBBBBBBBBBBBBBB(match,
-							exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
+							javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
 							methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey,
 							exprAlgNameLiteral, pwdDeclaration, methodPerformGetKey, statRetPerformEncryption,
 							exprKeyName, exprNameModePadding, methodEncryption, exprPwdName, exprDataName,
 							exprRetPerformEncryption, statRetGetKey);
 			if (result5_black == null) {
 				throw new RuntimeException("Pattern matching failed." + " Variables: " + "[match] = " + match + ", "
-						+ "[exprIterationLiteral] = " + exprIterationLiteral + ", " + "[javaPackage] = " + javaPackage
+						+ "[javaPackage] = " + javaPackage + ", " + "[exprIterationLiteral] = " + exprIterationLiteral
 						+ ", " + "[exprRetGetKey] = " + exprRetGetKey + ", " + "[exprOutputSizeLiteral] = "
 						+ exprOutputSizeLiteral + ", " + "[kdaJcu] = " + kdaJcu + ", " + "[methodPerformEncryption] = "
 						+ methodPerformEncryption + ", " + "[sbcJcu] = " + sbcJcu + ", " + "[keyEncryption] = "
@@ -835,7 +836,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			// 
 			PasswordBasedEncryptionImpl
 					.pattern_PasswordBasedEncryption_10_6_registerobjectstomatch_expressionBBBBBBBBBBBBBBBBBBBBBBB(this,
-							match, exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
+							match, javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
 							methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey,
 							exprAlgNameLiteral, pwdDeclaration, methodPerformGetKey, statRetPerformEncryption,
 							exprKeyName, exprNameModePadding, methodEncryption, exprPwdName, exprDataName,
@@ -861,8 +862,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
 					+ "[isApplicableMatch] = " + isApplicableMatch + ".");
 		}
-		JavaLiteral exprIterationLiteral = (JavaLiteral) result1_bindingAndBlack[0];
-		JavaPackage javaPackage = (JavaPackage) result1_bindingAndBlack[1];
+		JavaPackage javaPackage = (JavaPackage) result1_bindingAndBlack[0];
+		JavaLiteral exprIterationLiteral = (JavaLiteral) result1_bindingAndBlack[1];
 		JavaMethodInvocation exprRetGetKey = (JavaMethodInvocation) result1_bindingAndBlack[2];
 		JavaLiteral exprOutputSizeLiteral = (JavaLiteral) result1_bindingAndBlack[3];
 		JavaCompilationUnit kdaJcu = (JavaCompilationUnit) result1_bindingAndBlack[4];
@@ -895,14 +896,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 		Object[] result2_black = PasswordBasedEncryptionImpl
 				.pattern_PasswordBasedEncryption_11_2_collecttranslatedelements_blackBBBBBBBBBBBBBBBBBBBBBBBBBBB(
-						exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu, kdaJcu,
+						javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu, kdaJcu,
 						methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, t2c,
 						exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption,
 						exprKeyName, exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName,
 						exprRetPerformEncryption, statRetGetKey, kda2Jcu);
 		if (result2_black == null) {
-			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[exprIterationLiteral] = "
-					+ exprIterationLiteral + ", " + "[javaPackage] = " + javaPackage + ", " + "[exprRetGetKey] = "
+			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[javaPackage] = " + javaPackage
+					+ ", " + "[exprIterationLiteral] = " + exprIterationLiteral + ", " + "[exprRetGetKey] = "
 					+ exprRetGetKey + ", " + "[exprOutputSizeLiteral] = " + exprOutputSizeLiteral + ", "
 					+ "[sbc2Jcu] = " + sbc2Jcu + ", " + "[kdaJcu] = " + kdaJcu + ", " + "[methodPerformEncryption] = "
 					+ methodPerformEncryption + ", " + "[sbcJcu] = " + sbcJcu + ", " + "[keyEncryption] = "
@@ -919,7 +920,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		}
 		Object[] result2_green = PasswordBasedEncryptionImpl
 				.pattern_PasswordBasedEncryption_11_2_collecttranslatedelements_greenFBBBBBBBBBBBBBBBBBBBBBBBBBBB(
-						exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu, kdaJcu,
+						javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu, kdaJcu,
 						methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, t2c,
 						exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption,
 						exprKeyName, exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName,
@@ -928,21 +929,22 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 		Object[] result3_black = PasswordBasedEncryptionImpl
 				.pattern_PasswordBasedEncryption_11_3_bookkeepingforedges_blackBBBBBBBBBBBBBBBBBBBBBBBBBBBB(ruleresult,
-						exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu, kdaJcu,
+						javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu, kdaJcu,
 						methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, t2c,
 						exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption,
 						exprKeyName, exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName,
 						exprRetPerformEncryption, statRetGetKey, kda2Jcu);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[ruleresult] = " + ruleresult
-					+ ", " + "[exprIterationLiteral] = " + exprIterationLiteral + ", " + "[javaPackage] = "
-					+ javaPackage + ", " + "[exprRetGetKey] = " + exprRetGetKey + ", " + "[exprOutputSizeLiteral] = "
-					+ exprOutputSizeLiteral + ", " + "[sbc2Jcu] = " + sbc2Jcu + ", " + "[kdaJcu] = " + kdaJcu + ", "
-					+ "[methodPerformEncryption] = " + methodPerformEncryption + ", " + "[sbcJcu] = " + sbcJcu + ", "
-					+ "[keyEncryption] = " + keyEncryption + ", " + "[dataEncryption] = " + dataEncryption + ", "
-					+ "[methodGetKey] = " + methodGetKey + ", " + "[t2c] = " + t2c + ", " + "[exprAlgNameLiteral] = "
-					+ exprAlgNameLiteral + ", " + "[pwdDeclaration] = " + pwdDeclaration + ", " + "[kda] = " + kda
-					+ ", " + "[methodPerformGetKey] = " + methodPerformGetKey + ", " + "[statRetPerformEncryption] = "
+					+ ", " + "[javaPackage] = " + javaPackage + ", " + "[exprIterationLiteral] = "
+					+ exprIterationLiteral + ", " + "[exprRetGetKey] = " + exprRetGetKey + ", "
+					+ "[exprOutputSizeLiteral] = " + exprOutputSizeLiteral + ", " + "[sbc2Jcu] = " + sbc2Jcu + ", "
+					+ "[kdaJcu] = " + kdaJcu + ", " + "[methodPerformEncryption] = " + methodPerformEncryption + ", "
+					+ "[sbcJcu] = " + sbcJcu + ", " + "[keyEncryption] = " + keyEncryption + ", "
+					+ "[dataEncryption] = " + dataEncryption + ", " + "[methodGetKey] = " + methodGetKey + ", "
+					+ "[t2c] = " + t2c + ", " + "[exprAlgNameLiteral] = " + exprAlgNameLiteral + ", "
+					+ "[pwdDeclaration] = " + pwdDeclaration + ", " + "[kda] = " + kda + ", "
+					+ "[methodPerformGetKey] = " + methodPerformGetKey + ", " + "[statRetPerformEncryption] = "
 					+ statRetPerformEncryption + ", " + "[exprKeyName] = " + exprKeyName + ", "
 					+ "[exprNameModePadding] = " + exprNameModePadding + ", " + "[methodEncryption] = "
 					+ methodEncryption + ", " + "[task] = " + task + ", " + "[exprPwdName] = " + exprPwdName + ", "
@@ -952,7 +954,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		}
 		PasswordBasedEncryptionImpl
 				.pattern_PasswordBasedEncryption_11_3_bookkeepingforedges_greenBBBBBBBBBBBBBBBBBBBBBBBBBBBBFFFFFFFFFFFFFFFFFFFFFFFFFFFF(
-						ruleresult, exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu,
+						ruleresult, javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu,
 						kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, t2c,
 						exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption,
 						exprKeyName, exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName,
@@ -964,11 +966,11 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		//nothing EMoflonEdge statRetGetKey__exprRetGetKey____expr = (EMoflonEdge) result3_green[32];
 		//nothing EMoflonEdge kdaJcu__methodGetKey____methods = (EMoflonEdge) result3_green[33];
 		//nothing EMoflonEdge sbcJcu__methodEncryption____methods = (EMoflonEdge) result3_green[34];
-		//nothing EMoflonEdge t2c__task____source = (EMoflonEdge) result3_green[35];
-		//nothing EMoflonEdge exprRetPerformEncryption__exprDataName____arguments = (EMoflonEdge) result3_green[36];
-		//nothing EMoflonEdge methodEncryption__statRetPerformEncryption____statements = (EMoflonEdge) result3_green[37];
-		//nothing EMoflonEdge kda2Jcu__kda____source = (EMoflonEdge) result3_green[38];
-		//nothing EMoflonEdge task__kda____algorithms = (EMoflonEdge) result3_green[39];
+		//nothing EMoflonEdge exprRetPerformEncryption__exprDataName____arguments = (EMoflonEdge) result3_green[35];
+		//nothing EMoflonEdge t2c__task____source = (EMoflonEdge) result3_green[36];
+		//nothing EMoflonEdge task__kda____algorithms = (EMoflonEdge) result3_green[37];
+		//nothing EMoflonEdge methodEncryption__statRetPerformEncryption____statements = (EMoflonEdge) result3_green[38];
+		//nothing EMoflonEdge kda2Jcu__kda____source = (EMoflonEdge) result3_green[39];
 		//nothing EMoflonEdge sbc2Jcu__sbcJcu____target = (EMoflonEdge) result3_green[40];
 		//nothing EMoflonEdge methodEncryption__keyEncryption____params = (EMoflonEdge) result3_green[41];
 		//nothing EMoflonEdge methodGetKey__pwdDeclaration____params = (EMoflonEdge) result3_green[42];
@@ -981,8 +983,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		//nothing EMoflonEdge exprRetGetKey__exprOutputSizeLiteral____arguments = (EMoflonEdge) result3_green[49];
 		//nothing EMoflonEdge kdaJcu__methodPerformGetKey____methods = (EMoflonEdge) result3_green[50];
 		//nothing EMoflonEdge exprRetPerformEncryption__exprNameModePadding____arguments = (EMoflonEdge) result3_green[51];
-		//nothing EMoflonEdge sbcJcu__methodPerformEncryption____methods = (EMoflonEdge) result3_green[52];
-		//nothing EMoflonEdge sbc2Jcu__sbc____source = (EMoflonEdge) result3_green[53];
+		//nothing EMoflonEdge sbc2Jcu__sbc____source = (EMoflonEdge) result3_green[52];
+		//nothing EMoflonEdge sbcJcu__methodPerformEncryption____methods = (EMoflonEdge) result3_green[53];
 		//nothing EMoflonEdge exprRetGetKey__exprAlgNameLiteral____arguments = (EMoflonEdge) result3_green[54];
 		//nothing EMoflonEdge exprRetGetKey__exprIterationLiteral____arguments = (EMoflonEdge) result3_green[55];
 
@@ -990,7 +992,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		// 
 		PasswordBasedEncryptionImpl
 				.pattern_PasswordBasedEncryption_11_5_registerobjects_expressionBBBBBBBBBBBBBBBBBBBBBBBBBBBBB(this,
-						ruleresult, exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu,
+						ruleresult, javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu,
 						kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, t2c,
 						exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption,
 						exprKeyName, exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName,
@@ -1023,8 +1025,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			throw new RuntimeException(
 					"Binding in node core match failed." + " Variables: " + "[match] = " + match + ".");
 		}
-		JavaLiteral exprIterationLiteral = (JavaLiteral) result2_binding[0];
-		JavaPackage javaPackage = (JavaPackage) result2_binding[1];
+		JavaPackage javaPackage = (JavaPackage) result2_binding[0];
+		JavaLiteral exprIterationLiteral = (JavaLiteral) result2_binding[1];
 		JavaMethodInvocation exprRetGetKey = (JavaMethodInvocation) result2_binding[2];
 		JavaLiteral exprOutputSizeLiteral = (JavaLiteral) result2_binding[3];
 		JavaCompilationUnit kdaJcu = (JavaCompilationUnit) result2_binding[4];
@@ -1045,21 +1047,21 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		JavaMethodInvocation exprRetPerformEncryption = (JavaMethodInvocation) result2_binding[19];
 		JavaStatement statRetGetKey = (JavaStatement) result2_binding[20];
 		for (Object[] result2_black : PasswordBasedEncryptionImpl
-				.pattern_PasswordBasedEncryption_12_2_corematch_blackBBBBBBBBBBBBBBBBBBBBBB(exprIterationLiteral,
-						javaPackage, exprRetGetKey, exprOutputSizeLiteral, kdaJcu, methodPerformEncryption, sbcJcu,
-						keyEncryption, dataEncryption, methodGetKey, exprAlgNameLiteral, pwdDeclaration,
+				.pattern_PasswordBasedEncryption_12_2_corematch_blackBBBBBBBBBBBBBBBBBBBBBB(javaPackage,
+						exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, kdaJcu, methodPerformEncryption,
+						sbcJcu, keyEncryption, dataEncryption, methodGetKey, exprAlgNameLiteral, pwdDeclaration,
 						methodPerformGetKey, statRetPerformEncryption, exprKeyName, exprNameModePadding,
 						methodEncryption, exprPwdName, exprDataName, exprRetPerformEncryption, statRetGetKey, match)) {
 			// ForEach 
 			for (Object[] result3_black : PasswordBasedEncryptionImpl
-					.pattern_PasswordBasedEncryption_12_3_findcontext_blackBBBBBBBBBBBBBBBBBBBBB(exprIterationLiteral,
-							javaPackage, exprRetGetKey, exprOutputSizeLiteral, kdaJcu, methodPerformEncryption, sbcJcu,
-							keyEncryption, dataEncryption, methodGetKey, exprAlgNameLiteral, pwdDeclaration,
+					.pattern_PasswordBasedEncryption_12_3_findcontext_blackBBBBBBBBBBBBBBBBBBBBB(javaPackage,
+							exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, kdaJcu, methodPerformEncryption,
+							sbcJcu, keyEncryption, dataEncryption, methodGetKey, exprAlgNameLiteral, pwdDeclaration,
 							methodPerformGetKey, statRetPerformEncryption, exprKeyName, exprNameModePadding,
 							methodEncryption, exprPwdName, exprDataName, exprRetPerformEncryption, statRetGetKey)) {
 				Object[] result3_green = PasswordBasedEncryptionImpl
 						.pattern_PasswordBasedEncryption_12_3_findcontext_greenBBBBBBBBBBBBBBBBBBBBBFFFFFFFFFFFFFFFFFFFFF(
-								exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
+								javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
 								methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey,
 								exprAlgNameLiteral, pwdDeclaration, methodPerformGetKey, statRetPerformEncryption,
 								exprKeyName, exprNameModePadding, methodEncryption, exprPwdName, exprDataName,
@@ -1088,20 +1090,19 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 				Object[] result4_bindingAndBlack = PasswordBasedEncryptionImpl
 						.pattern_PasswordBasedEncryption_12_4_solveCSP_bindingAndBlackFBBBBBBBBBBBBBBBBBBBBBBB(this,
-								isApplicableMatch, exprIterationLiteral, javaPackage, exprRetGetKey,
+								isApplicableMatch, javaPackage, exprIterationLiteral, exprRetGetKey,
 								exprOutputSizeLiteral, kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption,
 								dataEncryption, methodGetKey, exprAlgNameLiteral, pwdDeclaration, methodPerformGetKey,
 								statRetPerformEncryption, exprKeyName, exprNameModePadding, methodEncryption,
 								exprPwdName, exprDataName, exprRetPerformEncryption, statRetGetKey);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-							+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[exprIterationLiteral] = "
-							+ exprIterationLiteral + ", " + "[javaPackage] = " + javaPackage + ", "
-							+ "[exprRetGetKey] = " + exprRetGetKey + ", " + "[exprOutputSizeLiteral] = "
-							+ exprOutputSizeLiteral + ", " + "[kdaJcu] = " + kdaJcu + ", "
-							+ "[methodPerformEncryption] = " + methodPerformEncryption + ", " + "[sbcJcu] = " + sbcJcu
-							+ ", " + "[keyEncryption] = " + keyEncryption + ", " + "[dataEncryption] = "
-							+ dataEncryption + ", " + "[methodGetKey] = " + methodGetKey + ", "
+							+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[javaPackage] = " + javaPackage
+							+ ", " + "[exprIterationLiteral] = " + exprIterationLiteral + ", " + "[exprRetGetKey] = "
+							+ exprRetGetKey + ", " + "[exprOutputSizeLiteral] = " + exprOutputSizeLiteral + ", "
+							+ "[kdaJcu] = " + kdaJcu + ", " + "[methodPerformEncryption] = " + methodPerformEncryption
+							+ ", " + "[sbcJcu] = " + sbcJcu + ", " + "[keyEncryption] = " + keyEncryption + ", "
+							+ "[dataEncryption] = " + dataEncryption + ", " + "[methodGetKey] = " + methodGetKey + ", "
 							+ "[exprAlgNameLiteral] = " + exprAlgNameLiteral + ", " + "[pwdDeclaration] = "
 							+ pwdDeclaration + ", " + "[methodPerformGetKey] = " + methodPerformGetKey + ", "
 							+ "[statRetPerformEncryption] = " + statRetPerformEncryption + ", " + "[exprKeyName] = "
@@ -1139,7 +1140,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjectsToMatch_BWD(Match match, JavaLiteral exprIterationLiteral, JavaPackage javaPackage,
+	public void registerObjectsToMatch_BWD(Match match, JavaPackage javaPackage, JavaLiteral exprIterationLiteral,
 			JavaMethodInvocation exprRetGetKey, JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu,
 			JavaOpaqueMethod methodPerformEncryption, JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption,
 			JavaVariableDeclaration dataEncryption, JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral,
@@ -1147,8 +1148,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaStatement statRetPerformEncryption, JavaName exprKeyName, JavaLiteral exprNameModePadding,
 			JavaWorkflowMethod methodEncryption, JavaName exprPwdName, JavaName exprDataName,
 			JavaMethodInvocation exprRetPerformEncryption, JavaStatement statRetGetKey) {
-		match.registerObject("exprIterationLiteral", exprIterationLiteral);
 		match.registerObject("javaPackage", javaPackage);
+		match.registerObject("exprIterationLiteral", exprIterationLiteral);
 		match.registerObject("exprRetGetKey", exprRetGetKey);
 		match.registerObject("exprOutputSizeLiteral", exprOutputSizeLiteral);
 		match.registerObject("kdaJcu", kdaJcu);
@@ -1176,7 +1177,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isAppropriate_solveCsp_BWD(Match match, JavaLiteral exprIterationLiteral, JavaPackage javaPackage,
+	public CSP isAppropriate_solveCsp_BWD(Match match, JavaPackage javaPackage, JavaLiteral exprIterationLiteral,
 			JavaMethodInvocation exprRetGetKey, JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu,
 			JavaOpaqueMethod methodPerformEncryption, JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption,
 			JavaVariableDeclaration dataEncryption, JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral,
@@ -1188,28 +1189,28 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 		// Create literals
 		Variable literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal0", true, csp);
-		literal0.setValue(1);
+		literal0.setValue(
+				"{\n  byte[] ivb=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(ivb);\n  IvParameterSpec iv=new IvParameterSpec(ivb);\n  Cipher c=Cipher.getInstance(encryptPassingArgument);\n  c.init(Cipher.ENCRYPT_MODE,key,iv);\n  byte[] res=c.doFinal(data);\n  byte[] ret=new byte[res.length + ivb.length];\n  System.arraycopy(ivb,0,ret,0,ivb.length);\n  System.arraycopy(res,0,ret,ivb.length,ret.length);\n  return ret;\n}\n");
 		literal0.setType("");
 		Variable literal1 = CSPFactoryHelper.eINSTANCE.createVariable("literal1", true, csp);
-		literal1.setValue(
-				"{\n  byte[] ivb=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(ivb);\n  IvParameterSpec iv=new IvParameterSpec(ivb);\n  Cipher c=Cipher.getInstance(encryptPassingArgument);\n  c.init(Cipher.ENCRYPT_MODE,key,iv);\n  byte[] res=c.doFinal(data);\n  byte[] ret=new byte[res.length + ivb.length];\n  System.arraycopy(ivb,0,ret,0,ivb.length);\n  System.arraycopy(res,0,ret,ivb.length,ret.length);\n  return ret;\n}\n");
+		literal1.setValue(1);
 		literal1.setType("");
 		Variable literal2 = CSPFactoryHelper.eINSTANCE.createVariable("literal2", true, csp);
-		literal2.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
+		literal2.setValue(
+				"InvalidKeyException,NoSuchAlgorithmException,NoSuchPaddingException,IllegalBlockSizeException,BadPaddingException,InvalidAlgorithmParameterException");
 		literal2.setType("");
 		Variable literal3 = CSPFactoryHelper.eINSTANCE.createVariable("literal3", true, csp);
-		literal3.setValue(
-				"InvalidKeyException,NoSuchAlgorithmException,NoSuchPaddingException,IllegalBlockSizeException,BadPaddingException,InvalidAlgorithmParameterException");
+		literal3.setValue("byte[] data,SecretKey key,String encryptPassingArgument");
 		literal3.setType("");
 		Variable literal4 = CSPFactoryHelper.eINSTANCE.createVariable("literal4", true, csp);
-		literal4.setValue(
-				"{\n  byte[] salt=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(salt);\n  PBEKeySpec spec=new PBEKeySpec(pwd,salt,iterations,outputSize);\n  SecretKeyFactory skf=SecretKeyFactory.getInstance(algName);\n  return new SecretKeySpec(skf.generateSecret(spec).getEncoded(),\"AES\");\n}\n");
+		literal4.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
 		literal4.setType("");
 		Variable literal5 = CSPFactoryHelper.eINSTANCE.createVariable("literal5", true, csp);
-		literal5.setValue("byte[] data,SecretKey key,String encryptPassingArgument");
+		literal5.setValue("Enc");
 		literal5.setType("");
 		Variable literal6 = CSPFactoryHelper.eINSTANCE.createVariable("literal6", true, csp);
-		literal6.setValue("Enc");
+		literal6.setValue(
+				"{\n  byte[] salt=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(salt);\n  PBEKeySpec spec=new PBEKeySpec(pwd,salt,iterations,outputSize);\n  SecretKeyFactory skf=SecretKeyFactory.getInstance(algName);\n  return new SecretKeySpec(skf.generateSecret(spec).getEncoded(),\"AES\");\n}\n");
 		literal6.setType("");
 		Variable literal7 = CSPFactoryHelper.eINSTANCE.createVariable("literal7", true, csp);
 		literal7.setValue(0);
@@ -1219,51 +1220,51 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		literal8.setType("");
 
 		// Create attribute variables
-		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.index", true, csp);
-		var_methodGetKey_index.setValue(methodGetKey.getIndex());
-		var_methodGetKey_index.setType("int");
-		Variable var_methodEncryption_index = CSPFactoryHelper.eINSTANCE.createVariable("methodEncryption.index", true,
-				csp);
-		var_methodEncryption_index.setValue(methodEncryption.getIndex());
-		var_methodEncryption_index.setType("int");
 		Variable var_methodPerformEncryption_body = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformEncryption.body", true, csp);
 		var_methodPerformEncryption_body.setValue(methodPerformEncryption.getBody());
 		var_methodPerformEncryption_body.setType("String");
-		Variable var_methodPerformGetKey_throws = CSPFactoryHelper.eINSTANCE
-				.createVariable("methodPerformGetKey.throws", true, csp);
-		var_methodPerformGetKey_throws.setValue(methodPerformGetKey.getThrows());
-		var_methodPerformGetKey_throws.setType("String");
+		Variable var_methodEncryption_index = CSPFactoryHelper.eINSTANCE.createVariable("methodEncryption.index", true,
+				csp);
+		var_methodEncryption_index.setValue(methodEncryption.getIndex());
+		var_methodEncryption_index.setType("int");
 		Variable var_methodPerformEncryption_throws = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformEncryption.throws", true, csp);
 		var_methodPerformEncryption_throws.setValue(methodPerformEncryption.getThrows());
 		var_methodPerformEncryption_throws.setType("String");
-		Variable var_methodPerformGetKey_body = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.body",
-				true, csp);
-		var_methodPerformGetKey_body.setValue(methodPerformGetKey.getBody());
-		var_methodPerformGetKey_body.setType("String");
-		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.throws", true, csp);
-		var_methodGetKey_throws.setValue(methodGetKey.getThrows());
-		var_methodGetKey_throws.setType("String");
 		Variable var_methodPerformEncryption_parameters = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformEncryption.parameters", true, csp);
 		var_methodPerformEncryption_parameters.setValue(methodPerformEncryption.getParameters());
 		var_methodPerformEncryption_parameters.setType("String");
-		Variable var_sbcJcu_name = CSPFactoryHelper.eINSTANCE.createVariable("sbcJcu.name", true, csp);
-		var_sbcJcu_name.setValue(sbcJcu.getName());
-		var_sbcJcu_name.setType("String");
 		Variable var_methodEncryption_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodEncryption.throws",
 				true, csp);
 		var_methodEncryption_throws.setValue(methodEncryption.getThrows());
 		var_methodEncryption_throws.setType("String");
-		Variable var_methodPerformEncryption_index = CSPFactoryHelper.eINSTANCE
-				.createVariable("methodPerformEncryption.index", true, csp);
-		var_methodPerformEncryption_index.setValue(methodPerformEncryption.getIndex());
-		var_methodPerformEncryption_index.setType("int");
+		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.index", true, csp);
+		var_methodGetKey_index.setValue(methodGetKey.getIndex());
+		var_methodGetKey_index.setType("int");
+		Variable var_methodPerformGetKey_throws = CSPFactoryHelper.eINSTANCE
+				.createVariable("methodPerformGetKey.throws", true, csp);
+		var_methodPerformGetKey_throws.setValue(methodPerformGetKey.getThrows());
+		var_methodPerformGetKey_throws.setType("String");
+		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.throws", true, csp);
+		var_methodGetKey_throws.setValue(methodGetKey.getThrows());
+		var_methodGetKey_throws.setType("String");
+		Variable var_sbcJcu_name = CSPFactoryHelper.eINSTANCE.createVariable("sbcJcu.name", true, csp);
+		var_sbcJcu_name.setValue(sbcJcu.getName());
+		var_sbcJcu_name.setType("String");
+		Variable var_methodPerformGetKey_body = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.body",
+				true, csp);
+		var_methodPerformGetKey_body.setValue(methodPerformGetKey.getBody());
+		var_methodPerformGetKey_body.setType("String");
 		Variable var_methodPerformGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.index",
 				true, csp);
 		var_methodPerformGetKey_index.setValue(methodPerformGetKey.getIndex());
 		var_methodPerformGetKey_index.setType("int");
+		Variable var_methodPerformEncryption_index = CSPFactoryHelper.eINSTANCE
+				.createVariable("methodPerformEncryption.index", true, csp);
+		var_methodPerformEncryption_index.setValue(methodPerformEncryption.getIndex());
+		var_methodPerformEncryption_index.setType("int");
 		Variable var_methodPerformGetKey_parameters = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformGetKey.parameters", true, csp);
 		var_methodPerformGetKey_parameters.setValue(methodPerformGetKey.getParameters());
@@ -1302,29 +1303,29 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 		// Solve CSP
 		setDefaultStringIfNull.setRuleName("NoRuleName");
-		setDefaultStringIfNull.solve(var_methodGetKey_index, literal0);
+		setDefaultStringIfNull.solve(var_methodPerformEncryption_body, literal0);
 		setDefaultStringIfNull_0.setRuleName("NoRuleName");
-		setDefaultStringIfNull_0.solve(var_methodEncryption_index, literal0);
+		setDefaultStringIfNull_0.solve(var_methodEncryption_index, literal1);
 		setDefaultStringIfNull_1.setRuleName("NoRuleName");
-		setDefaultStringIfNull_1.solve(var_methodPerformEncryption_body, literal1);
+		setDefaultStringIfNull_1.solve(var_methodPerformEncryption_throws, literal2);
 		setDefaultStringIfNull_2.setRuleName("NoRuleName");
-		setDefaultStringIfNull_2.solve(var_methodPerformGetKey_throws, literal2);
+		setDefaultStringIfNull_2.solve(var_methodPerformEncryption_parameters, literal3);
 		setDefaultStringIfNull_3.setRuleName("NoRuleName");
-		setDefaultStringIfNull_3.solve(var_methodPerformEncryption_throws, literal3);
+		setDefaultStringIfNull_3.solve(var_methodEncryption_throws, literal2);
 		setDefaultStringIfNull_4.setRuleName("NoRuleName");
-		setDefaultStringIfNull_4.solve(var_methodPerformGetKey_body, literal4);
+		setDefaultStringIfNull_4.solve(var_methodGetKey_index, literal1);
 		setDefaultStringIfNull_5.setRuleName("NoRuleName");
-		setDefaultStringIfNull_5.solve(var_methodGetKey_throws, literal2);
+		setDefaultStringIfNull_5.solve(var_methodPerformGetKey_throws, literal4);
 		setDefaultStringIfNull_6.setRuleName("NoRuleName");
-		setDefaultStringIfNull_6.solve(var_methodPerformEncryption_parameters, literal5);
+		setDefaultStringIfNull_6.solve(var_methodGetKey_throws, literal4);
 		setDefaultStringIfNull_7.setRuleName("NoRuleName");
-		setDefaultStringIfNull_7.solve(var_sbcJcu_name, literal6);
+		setDefaultStringIfNull_7.solve(var_sbcJcu_name, literal5);
 		setDefaultStringIfNull_8.setRuleName("NoRuleName");
-		setDefaultStringIfNull_8.solve(var_methodEncryption_throws, literal3);
+		setDefaultStringIfNull_8.solve(var_methodPerformGetKey_body, literal6);
 		setDefaultStringIfNull_9.setRuleName("NoRuleName");
-		setDefaultStringIfNull_9.solve(var_methodPerformEncryption_index, literal7);
+		setDefaultStringIfNull_9.solve(var_methodPerformGetKey_index, literal7);
 		setDefaultStringIfNull_10.setRuleName("NoRuleName");
-		setDefaultStringIfNull_10.solve(var_methodPerformGetKey_index, literal7);
+		setDefaultStringIfNull_10.solve(var_methodPerformEncryption_index, literal7);
 		setDefaultStringIfNull_11.setRuleName("NoRuleName");
 		setDefaultStringIfNull_11.solve(var_methodPerformGetKey_parameters, literal8);
 		return csp;
@@ -1344,8 +1345,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaLiteral exprIterationLiteral,
-			JavaPackage javaPackage, JavaMethodInvocation exprRetGetKey, JavaLiteral exprOutputSizeLiteral,
+	public CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaPackage javaPackage,
+			JavaLiteral exprIterationLiteral, JavaMethodInvocation exprRetGetKey, JavaLiteral exprOutputSizeLiteral,
 			JavaCompilationUnit kdaJcu, JavaOpaqueMethod methodPerformEncryption, JavaCompilationUnit sbcJcu,
 			JavaVariableDeclaration keyEncryption, JavaVariableDeclaration dataEncryption,
 			JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral, JavaVariableDeclaration pwdDeclaration,
@@ -1361,6 +1362,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		literal0.setType("");
 
 		// Create attribute variables
+		Variable var_exprAlgNameLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprAlgNameLiteral.value",
+				true, csp);
+		var_exprAlgNameLiteral_value.setValue(exprAlgNameLiteral.getValue());
+		var_exprAlgNameLiteral_value.setType("String");
 		Variable var_exprIterationLiteral_value = CSPFactoryHelper.eINSTANCE
 				.createVariable("exprIterationLiteral.value", true, csp);
 		var_exprIterationLiteral_value.setValue(exprIterationLiteral.getValue());
@@ -1372,10 +1377,6 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		Variable var_javaPackage_name = CSPFactoryHelper.eINSTANCE.createVariable("javaPackage.name", true, csp);
 		var_javaPackage_name.setValue(javaPackage.getName());
 		var_javaPackage_name.setType("String");
-		Variable var_exprAlgNameLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprAlgNameLiteral.value",
-				true, csp);
-		var_exprAlgNameLiteral_value.setValue(exprAlgNameLiteral.getValue());
-		var_exprAlgNameLiteral_value.setType("String");
 		Variable var_exprNameModePadding_value = CSPFactoryHelper.eINSTANCE.createVariable("exprNameModePadding.value",
 				true, csp);
 		var_exprNameModePadding_value.setValue(exprNameModePadding.getValue());
@@ -1384,12 +1385,12 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		// Create unbound variables
 		Variable var_task_package = CSPFactoryHelper.eINSTANCE.createVariable("task.package", csp);
 		var_task_package.setType("String");
+		Variable var_kda_name = CSPFactoryHelper.eINSTANCE.createVariable("kda.name", csp);
+		var_kda_name.setType("String");
 		Variable var_kda_iterations = CSPFactoryHelper.eINSTANCE.createVariable("kda.iterations", csp);
 		var_kda_iterations.setType("String");
 		Variable var_kda_outputSize = CSPFactoryHelper.eINSTANCE.createVariable("kda.outputSize", csp);
 		var_kda_outputSize.setType("String");
-		Variable var_kda_name = CSPFactoryHelper.eINSTANCE.createVariable("kda.name", csp);
-		var_kda_name.setType("String");
 		Variable var_sbc_name = CSPFactoryHelper.eINSTANCE.createVariable("sbc.name", csp);
 		var_sbc_name.setType("String");
 		Variable var_sbc_mode = CSPFactoryHelper.eINSTANCE.createVariable("sbc.mode", csp);
@@ -1418,17 +1419,17 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		eq.setRuleName("NoRuleName");
 		eq.solve(var_task_package, var_javaPackage_name);
 		eq_0.setRuleName("NoRuleName");
-		eq_0.solve(var_exprIterationLiteral_value, var_kda_iterations);
+		eq_0.solve(var_exprAlgNameLiteral_value, var_kda_name);
 		eq_1.setRuleName("NoRuleName");
-		eq_1.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
+		eq_1.solve(var_exprIterationLiteral_value, var_kda_iterations);
 		eq_2.setRuleName("NoRuleName");
-		eq_2.solve(var_exprAlgNameLiteral_value, var_kda_name);
+		eq_2.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
 		nameModePadding.setRuleName("NoRuleName");
 		nameModePadding.solve(var_sbc_name, var_sbc_mode, var_sbc_padding, var_exprNameModePadding_value);
 
 		// Snapshot pattern match on which CSP is solved
-		isApplicableMatch.registerObject("exprIterationLiteral", exprIterationLiteral);
 		isApplicableMatch.registerObject("javaPackage", javaPackage);
+		isApplicableMatch.registerObject("exprIterationLiteral", exprIterationLiteral);
 		isApplicableMatch.registerObject("exprRetGetKey", exprRetGetKey);
 		isApplicableMatch.registerObject("exprOutputSizeLiteral", exprOutputSizeLiteral);
 		isApplicableMatch.registerObject("kdaJcu", kdaJcu);
@@ -1465,15 +1466,15 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_BWD(PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject javaPackage,
+	public void registerObjects_BWD(PerformRuleResult ruleresult, EObject javaPackage, EObject exprIterationLiteral,
 			EObject exprRetGetKey, EObject exprOutputSizeLiteral, EObject sbc2Jcu, EObject kdaJcu,
 			EObject methodPerformEncryption, EObject sbcJcu, EObject keyEncryption, EObject dataEncryption,
 			EObject methodGetKey, EObject t2c, EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda,
 			EObject methodPerformGetKey, EObject statRetPerformEncryption, EObject exprKeyName,
 			EObject exprNameModePadding, EObject methodEncryption, EObject task, EObject exprPwdName, EObject sbc,
 			EObject exprDataName, EObject exprRetPerformEncryption, EObject statRetGetKey, EObject kda2Jcu) {
-		ruleresult.registerObject("exprIterationLiteral", exprIterationLiteral);
 		ruleresult.registerObject("javaPackage", javaPackage);
+		ruleresult.registerObject("exprIterationLiteral", exprIterationLiteral);
 		ruleresult.registerObject("exprRetGetKey", exprRetGetKey);
 		ruleresult.registerObject("exprOutputSizeLiteral", exprOutputSizeLiteral);
 		ruleresult.registerObject("sbc2Jcu", sbc2Jcu);
@@ -1509,10 +1510,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	 */
 	public boolean checkTypes_BWD(Match match) {
 		return true
-				&& org.moflon.util.eMoflonSDMUtil.getFQN(match.getObject("exprIterationLiteral").eClass())
-						.equals("SimpleJava.JavaLiteral.")
 				&& org.moflon.util.eMoflonSDMUtil.getFQN(match.getObject("javaPackage").eClass())
 						.equals("SimpleJava.JavaPackage.")
+				&& org.moflon.util.eMoflonSDMUtil.getFQN(match.getObject("exprIterationLiteral").eClass())
+						.equals("SimpleJava.JavaLiteral.")
 				&& org.moflon.util.eMoflonSDMUtil.getFQN(match.getObject("exprRetGetKey").eClass())
 						.equals("SimpleJava.JavaMethodInvocation.")
 				&& org.moflon.util.eMoflonSDMUtil.getFQN(match.getObject("exprOutputSizeLiteral").eClass())
@@ -1558,7 +1559,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_6(EMoflonEdge _edge_algorithms) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_9(EMoflonEdge _edge_algorithms) {
 
 		Object[] result1_bindingAndBlack = PasswordBasedEncryptionImpl
 				.pattern_PasswordBasedEncryption_20_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -1617,7 +1618,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_BWD_EMoflonEdge_8(EMoflonEdge _edge_arguments) {
+	public EObjectContainer isAppropriate_BWD_EMoflonEdge_12(EMoflonEdge _edge_arguments) {
 
 		Object[] result1_bindingAndBlack = PasswordBasedEncryptionImpl
 				.pattern_PasswordBasedEncryption_21_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -1635,8 +1636,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		for (Object[] result2_black : PasswordBasedEncryptionImpl
 				.pattern_PasswordBasedEncryption_21_2_testcorematchandDECs_blackFFFFFFFFFFFFFFFFFFFFFB(
 						_edge_arguments)) {
-			JavaLiteral exprIterationLiteral = (JavaLiteral) result2_black[0];
-			JavaPackage javaPackage = (JavaPackage) result2_black[1];
+			JavaPackage javaPackage = (JavaPackage) result2_black[0];
+			JavaLiteral exprIterationLiteral = (JavaLiteral) result2_black[1];
 			JavaMethodInvocation exprRetGetKey = (JavaMethodInvocation) result2_black[2];
 			JavaLiteral exprOutputSizeLiteral = (JavaLiteral) result2_black[3];
 			JavaCompilationUnit kdaJcu = (JavaCompilationUnit) result2_black[4];
@@ -1663,7 +1664,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			// 
 			if (PasswordBasedEncryptionImpl
 					.pattern_PasswordBasedEncryption_21_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBBBBBBBBBBBBBBBBBBBB(
-							this, match, exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral,
+							this, match, javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral,
 							kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey,
 							exprAlgNameLiteral, pwdDeclaration, methodPerformGetKey, statRetPerformEncryption,
 							exprKeyName, exprNameModePadding, methodEncryption, exprPwdName, exprDataName,
@@ -1729,12 +1730,12 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodPerformEncryption", "type", "byte[] ", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("methodPerformEncryption", "modifier", "private", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodPerformEncryption", "modifier", "private", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("methodPerformEncryption", "type", "byte[] ", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
@@ -1760,6 +1761,11 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			return ruleResult;
 		}
 
+		if (!__helper.hasExpectedValue("dataEncryption", "type", "byte[]", ComparingOperator.EQUAL)) {
+			ruleResult.setSuccess(false);
+			return ruleResult;
+		}
+
 		if (!__helper.hasExpectedValue("dataEncryption", "index", 0, ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
@@ -1770,22 +1776,17 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("dataEncryption", "type", "byte[]", ComparingOperator.EQUAL)) {
-			ruleResult.setSuccess(false);
-			return ruleResult;
-		}
-
 		if (!__helper.hasExpectedValue("methodGetKey", "modifier", "public", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodGetKey", "type", "SecretKey ", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("methodGetKey", "name", "getKey", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodGetKey", "name", "getKey", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("methodGetKey", "type", "SecretKey ", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
@@ -1810,12 +1811,12 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodPerformGetKey", "modifier", "private", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("methodPerformGetKey", "type", "SecretKey ", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodPerformGetKey", "type", "SecretKey ", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("methodPerformGetKey", "modifier", "private", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
@@ -1830,12 +1831,12 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("exprKeyName", "index", 1, ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("exprKeyName", "identifier", "key", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("exprKeyName", "identifier", "key", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("exprKeyName", "index", 1, ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
@@ -1850,12 +1851,12 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodEncryption", "name", "encrypt", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("methodEncryption", "modifier", "public", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodEncryption", "modifier", "public", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("methodEncryption", "name", "encrypt", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
@@ -1896,31 +1897,35 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			return ruleResult;
 		}
 
-		Variable var_literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal0.setValue(1);
-		var_literal0.setType("");
-
 		Variable var_methodEncryption_index = CSPFactoryHelper.eINSTANCE.createVariable("methodEncryption", true, csp);
 		var_methodEncryption_index.setValue(__helper.getValue("methodEncryption", "index"));
 		var_methodEncryption_index.setType("int");
 
+		Variable var_task_package = CSPFactoryHelper.eINSTANCE.createVariable("task", true, csp);
+		var_task_package.setValue(__helper.getValue("task", "package"));
+		var_task_package.setType("String");
+
+		Variable var_literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
+		var_literal0.setValue("Crypto");
+		var_literal0.setType("");
+
+		Variable var_methodPerformEncryption_parameters = CSPFactoryHelper.eINSTANCE
+				.createVariable("methodPerformEncryption", true, csp);
+		var_methodPerformEncryption_parameters.setValue(__helper.getValue("methodPerformEncryption", "parameters"));
+		var_methodPerformEncryption_parameters.setType("String");
+
 		Variable var_literal1 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal1.setValue(
-				"{\n  byte[] ivb=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(ivb);\n  IvParameterSpec iv=new IvParameterSpec(ivb);\n  Cipher c=Cipher.getInstance(encryptPassingArgument);\n  c.init(Cipher.ENCRYPT_MODE,key,iv);\n  byte[] res=c.doFinal(data);\n  byte[] ret=new byte[res.length + ivb.length];\n  System.arraycopy(ivb,0,ret,0,ivb.length);\n  System.arraycopy(res,0,ret,ivb.length,ret.length);\n  return ret;\n}\n");
+		var_literal1.setValue("byte[] data,SecretKey key,String encryptPassingArgument");
 		var_literal1.setType("");
 
-		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey", true, csp);
-		var_methodGetKey_index.setValue(__helper.getValue("methodGetKey", "index"));
-		var_methodGetKey_index.setType("int");
-
 		Variable var_literal2 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal2.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
+		var_literal2.setValue(
+				"{\n  byte[] ivb=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(ivb);\n  IvParameterSpec iv=new IvParameterSpec(ivb);\n  Cipher c=Cipher.getInstance(encryptPassingArgument);\n  c.init(Cipher.ENCRYPT_MODE,key,iv);\n  byte[] res=c.doFinal(data);\n  byte[] ret=new byte[res.length + ivb.length];\n  System.arraycopy(ivb,0,ret,0,ivb.length);\n  System.arraycopy(res,0,ret,ivb.length,ret.length);\n  return ret;\n}\n");
 		var_literal2.setType("");
 
-		Variable var_methodPerformEncryption_throws = CSPFactoryHelper.eINSTANCE
-				.createVariable("methodPerformEncryption", true, csp);
-		var_methodPerformEncryption_throws.setValue(__helper.getValue("methodPerformEncryption", "throws"));
-		var_methodPerformEncryption_throws.setType("String");
+		Variable var_methodEncryption_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodEncryption", true, csp);
+		var_methodEncryption_throws.setValue(__helper.getValue("methodEncryption", "throws"));
+		var_methodEncryption_throws.setType("String");
 
 		Variable var_literal3 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
 		var_literal3.setValue(
@@ -1933,22 +1938,26 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		var_methodPerformGetKey_throws.setType("String");
 
 		Variable var_literal4 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal4.setValue(
-				"{\n  byte[] salt=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(salt);\n  PBEKeySpec spec=new PBEKeySpec(pwd,salt,iterations,outputSize);\n  SecretKeyFactory skf=SecretKeyFactory.getInstance(algName);\n  return new SecretKeySpec(skf.generateSecret(spec).getEncoded(),\"AES\");\n}\n");
+		var_literal4.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
 		var_literal4.setType("");
+
+		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey", true, csp);
+		var_methodGetKey_index.setValue(__helper.getValue("methodGetKey", "index"));
+		var_methodGetKey_index.setType("int");
+
+		Variable var_methodPerformEncryption_throws = CSPFactoryHelper.eINSTANCE
+				.createVariable("methodPerformEncryption", true, csp);
+		var_methodPerformEncryption_throws.setValue(__helper.getValue("methodPerformEncryption", "throws"));
+		var_methodPerformEncryption_throws.setType("String");
+
+		Variable var_literal5 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
+		var_literal5.setValue(1);
+		var_literal5.setType("");
 
 		Variable var_methodPerformEncryption_body = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformEncryption",
 				true, csp);
 		var_methodPerformEncryption_body.setValue(__helper.getValue("methodPerformEncryption", "body"));
 		var_methodPerformEncryption_body.setType("String");
-
-		Variable var_task_package = CSPFactoryHelper.eINSTANCE.createVariable("task", true, csp);
-		var_task_package.setValue(__helper.getValue("task", "package"));
-		var_task_package.setType("String");
-
-		Variable var_literal5 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal5.setValue("byte[] data,SecretKey key,String encryptPassingArgument");
-		var_literal5.setType("");
 
 		Variable var_sbcJcu_name = CSPFactoryHelper.eINSTANCE.createVariable("sbcJcu", true, csp);
 		var_sbcJcu_name.setValue(__helper.getValue("sbcJcu", "name"));
@@ -1958,31 +1967,23 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		var_literal6.setValue("Enc");
 		var_literal6.setType("");
 
-		Variable var_methodPerformEncryption_parameters = CSPFactoryHelper.eINSTANCE
-				.createVariable("methodPerformEncryption", true, csp);
-		var_methodPerformEncryption_parameters.setValue(__helper.getValue("methodPerformEncryption", "parameters"));
-		var_methodPerformEncryption_parameters.setType("String");
-
-		Variable var_literal7 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal7.setValue("Crypto");
-		var_literal7.setType("");
-
-		Variable var_methodEncryption_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodEncryption", true, csp);
-		var_methodEncryption_throws.setValue(__helper.getValue("methodEncryption", "throws"));
-		var_methodEncryption_throws.setType("String");
-
-		Variable var_literal8 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal8.setValue(0);
-		var_literal8.setType("");
+		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey", true, csp);
+		var_methodGetKey_throws.setValue(__helper.getValue("methodGetKey", "throws"));
+		var_methodGetKey_throws.setType("String");
 
 		Variable var_methodPerformGetKey_body = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey", true,
 				csp);
 		var_methodPerformGetKey_body.setValue(__helper.getValue("methodPerformGetKey", "body"));
 		var_methodPerformGetKey_body.setType("String");
 
-		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey", true, csp);
-		var_methodGetKey_throws.setValue(__helper.getValue("methodGetKey", "throws"));
-		var_methodGetKey_throws.setType("String");
+		Variable var_literal7 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
+		var_literal7.setValue(
+				"{\n  byte[] salt=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(salt);\n  PBEKeySpec spec=new PBEKeySpec(pwd,salt,iterations,outputSize);\n  SecretKeyFactory skf=SecretKeyFactory.getInstance(algName);\n  return new SecretKeySpec(skf.generateSecret(spec).getEncoded(),\"AES\");\n}\n");
+		var_literal7.setType("");
+
+		Variable var_literal8 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
+		var_literal8.setValue(0);
+		var_literal8.setType("");
 
 		Variable var_methodPerformEncryption_index = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformEncryption", true, csp);
@@ -1994,18 +1995,27 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		var_methodPerformGetKey_index.setValue(__helper.getValue("methodPerformGetKey", "index"));
 		var_methodPerformGetKey_index.setType("int");
 
+		Variable var_kda_name = CSPFactoryHelper.eINSTANCE.createVariable("kda", true, csp);
+		var_kda_name.setValue(__helper.getValue("kda", "name"));
+		var_kda_name.setType("String");
+
+		Variable var_exprAlgNameLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprAlgNameLiteral", true,
+				csp);
+		var_exprAlgNameLiteral_value.setValue(__helper.getValue("exprAlgNameLiteral", "value"));
+		var_exprAlgNameLiteral_value.setType("String");
+
 		Variable var_kda_iterations = CSPFactoryHelper.eINSTANCE.createVariable("kda", true, csp);
 		var_kda_iterations.setValue(__helper.getValue("kda", "iterations"));
 		var_kda_iterations.setType("String");
+
+		Variable var_kda_outputSize = CSPFactoryHelper.eINSTANCE.createVariable("kda", true, csp);
+		var_kda_outputSize.setValue(__helper.getValue("kda", "outputSize"));
+		var_kda_outputSize.setType("String");
 
 		Variable var_exprIterationLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprIterationLiteral",
 				true, csp);
 		var_exprIterationLiteral_value.setValue(__helper.getValue("exprIterationLiteral", "value"));
 		var_exprIterationLiteral_value.setType("String");
-
-		Variable var_kda_outputSize = CSPFactoryHelper.eINSTANCE.createVariable("kda", true, csp);
-		var_kda_outputSize.setValue(__helper.getValue("kda", "outputSize"));
-		var_kda_outputSize.setType("String");
 
 		Variable var_exprOutputSizeLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprOutputSizeLiteral",
 				true, csp);
@@ -2016,23 +2026,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		var_javaPackage_name.setValue(__helper.getValue("javaPackage", "name"));
 		var_javaPackage_name.setType("String");
 
-		Variable var_kda_name = CSPFactoryHelper.eINSTANCE.createVariable("kda", true, csp);
-		var_kda_name.setValue(__helper.getValue("kda", "name"));
-		var_kda_name.setType("String");
-
-		Variable var_exprAlgNameLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprAlgNameLiteral", true,
-				csp);
-		var_exprAlgNameLiteral_value.setValue(__helper.getValue("exprAlgNameLiteral", "value"));
-		var_exprAlgNameLiteral_value.setType("String");
-
 		Variable var_exprNameModePadding_value = CSPFactoryHelper.eINSTANCE.createVariable("exprNameModePadding", true,
 				csp);
 		var_exprNameModePadding_value.setValue(__helper.getValue("exprNameModePadding", "value"));
 		var_exprNameModePadding_value.setType("String");
-
-		Variable var_sbc_padding = CSPFactoryHelper.eINSTANCE.createVariable("sbc", true, csp);
-		var_sbc_padding.setValue(__helper.getValue("sbc", "padding"));
-		var_sbc_padding.setType("String");
 
 		Variable var_sbc_name = CSPFactoryHelper.eINSTANCE.createVariable("sbc", true, csp);
 		var_sbc_name.setValue(__helper.getValue("sbc", "name"));
@@ -2042,14 +2039,18 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		var_sbc_mode.setValue(__helper.getValue("sbc", "mode"));
 		var_sbc_mode.setType("String");
 
-		Variable var_methodPerformGetKey_parameters = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey",
-				true, csp);
-		var_methodPerformGetKey_parameters.setValue(__helper.getValue("methodPerformGetKey", "parameters"));
-		var_methodPerformGetKey_parameters.setType("String");
+		Variable var_sbc_padding = CSPFactoryHelper.eINSTANCE.createVariable("sbc", true, csp);
+		var_sbc_padding.setValue(__helper.getValue("sbc", "padding"));
+		var_sbc_padding.setType("String");
 
 		Variable var_literal9 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
 		var_literal9.setValue("char [] pwd,String algName,int iterations,int outputSize");
 		var_literal9.setType("");
+
+		Variable var_methodPerformGetKey_parameters = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey",
+				true, csp);
+		var_methodPerformGetKey_parameters.setValue(__helper.getValue("methodPerformGetKey", "parameters"));
+		var_methodPerformGetKey_parameters.setType("String");
 
 		SetDefaultStringIfNull setDefaultStringIfNull0 = new SetDefaultStringIfNull();
 		csp.getConstraints().add(setDefaultStringIfNull0);
@@ -2109,55 +2110,55 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		csp.getConstraints().add(setDefaultStringIfNull18);
 
 		setDefaultStringIfNull0.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull0.solve(var_task_package, var_literal7);
+		setDefaultStringIfNull0.solve(var_task_package, var_literal0);
 
 		setDefaultStringIfNull1.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull1.solve(var_methodGetKey_index, var_literal0);
+		setDefaultStringIfNull1.solve(var_methodPerformEncryption_body, var_literal2);
 
 		setDefaultStringIfNull2.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull2.solve(var_methodEncryption_index, var_literal0);
+		setDefaultStringIfNull2.solve(var_methodEncryption_index, var_literal5);
 
 		setDefaultStringIfNull3.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull3.solve(var_methodPerformEncryption_body, var_literal1);
+		setDefaultStringIfNull3.solve(var_methodPerformEncryption_throws, var_literal3);
 
 		setDefaultStringIfNull4.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull4.solve(var_methodPerformGetKey_throws, var_literal2);
+		setDefaultStringIfNull4.solve(var_methodPerformEncryption_parameters, var_literal1);
 
 		setDefaultStringIfNull5.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull5.solve(var_methodPerformEncryption_throws, var_literal3);
+		setDefaultStringIfNull5.solve(var_methodEncryption_throws, var_literal3);
 
 		setDefaultStringIfNull6.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull6.solve(var_methodPerformGetKey_body, var_literal4);
+		setDefaultStringIfNull6.solve(var_methodGetKey_index, var_literal5);
 
 		setDefaultStringIfNull7.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull7.solve(var_methodGetKey_throws, var_literal2);
+		setDefaultStringIfNull7.solve(var_methodPerformGetKey_throws, var_literal4);
 
 		setDefaultStringIfNull8.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull8.solve(var_methodPerformEncryption_parameters, var_literal5);
+		setDefaultStringIfNull8.solve(var_methodGetKey_throws, var_literal4);
 
 		setDefaultStringIfNull9.setRuleName("PasswordBasedEncryption");
 		setDefaultStringIfNull9.solve(var_sbcJcu_name, var_literal6);
 
 		setDefaultStringIfNull10.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull10.solve(var_methodEncryption_throws, var_literal3);
+		setDefaultStringIfNull10.solve(var_methodPerformGetKey_body, var_literal7);
 
 		setDefaultStringIfNull11.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull11.solve(var_methodPerformEncryption_index, var_literal8);
+		setDefaultStringIfNull11.solve(var_methodPerformGetKey_index, var_literal8);
 
 		setDefaultStringIfNull12.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull12.solve(var_methodPerformGetKey_index, var_literal8);
+		setDefaultStringIfNull12.solve(var_methodPerformEncryption_index, var_literal8);
 
 		eq13.setRuleName("PasswordBasedEncryption");
-		eq13.solve(var_exprIterationLiteral_value, var_kda_iterations);
+		eq13.solve(var_exprAlgNameLiteral_value, var_kda_name);
 
 		eq14.setRuleName("PasswordBasedEncryption");
-		eq14.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
+		eq14.solve(var_exprIterationLiteral_value, var_kda_iterations);
 
 		eq15.setRuleName("PasswordBasedEncryption");
-		eq15.solve(var_task_package, var_javaPackage_name);
+		eq15.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
 
 		eq16.setRuleName("PasswordBasedEncryption");
-		eq16.solve(var_exprAlgNameLiteral_value, var_kda_name);
+		eq16.solve(var_task_package, var_javaPackage_name);
 
 		nameModePadding17.setRuleName("PasswordBasedEncryption");
 		nameModePadding17.solve(var_sbc_name, var_sbc_mode, var_sbc_padding, var_exprNameModePadding_value);
@@ -2168,63 +2169,63 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		if (csp.check()) {
 			ruleResult.setSuccess(true);
 		} else {
-			var_methodGetKey_index.setBound(false);
-			var_methodEncryption_index.setBound(false);
 			var_methodPerformEncryption_body.setBound(false);
-			var_methodPerformGetKey_throws.setBound(false);
+			var_methodEncryption_index.setBound(false);
 			var_methodPerformEncryption_throws.setBound(false);
-			var_methodPerformGetKey_body.setBound(false);
-			var_methodGetKey_throws.setBound(false);
 			var_methodPerformEncryption_parameters.setBound(false);
-			var_sbcJcu_name.setBound(false);
 			var_methodEncryption_throws.setBound(false);
-			var_methodPerformEncryption_index.setBound(false);
+			var_methodGetKey_index.setBound(false);
+			var_methodPerformGetKey_throws.setBound(false);
+			var_methodGetKey_throws.setBound(false);
+			var_sbcJcu_name.setBound(false);
+			var_methodPerformGetKey_body.setBound(false);
 			var_methodPerformGetKey_index.setBound(false);
+			var_methodPerformEncryption_index.setBound(false);
+			var_exprAlgNameLiteral_value.setBound(false);
 			var_exprIterationLiteral_value.setBound(false);
 			var_exprOutputSizeLiteral_value.setBound(false);
 			var_javaPackage_name.setBound(false);
-			var_exprAlgNameLiteral_value.setBound(false);
 			var_exprNameModePadding_value.setBound(false);
 			var_methodPerformGetKey_parameters.setBound(false);
-			setDefaultStringIfNull0.solve(var_task_package, var_literal7);
-			setDefaultStringIfNull1.solve(var_methodGetKey_index, var_literal0);
-			setDefaultStringIfNull2.solve(var_methodEncryption_index, var_literal0);
-			setDefaultStringIfNull3.solve(var_methodPerformEncryption_body, var_literal1);
-			setDefaultStringIfNull4.solve(var_methodPerformGetKey_throws, var_literal2);
-			setDefaultStringIfNull5.solve(var_methodPerformEncryption_throws, var_literal3);
-			setDefaultStringIfNull6.solve(var_methodPerformGetKey_body, var_literal4);
-			setDefaultStringIfNull7.solve(var_methodGetKey_throws, var_literal2);
-			setDefaultStringIfNull8.solve(var_methodPerformEncryption_parameters, var_literal5);
+			setDefaultStringIfNull0.solve(var_task_package, var_literal0);
+			setDefaultStringIfNull1.solve(var_methodPerformEncryption_body, var_literal2);
+			setDefaultStringIfNull2.solve(var_methodEncryption_index, var_literal5);
+			setDefaultStringIfNull3.solve(var_methodPerformEncryption_throws, var_literal3);
+			setDefaultStringIfNull4.solve(var_methodPerformEncryption_parameters, var_literal1);
+			setDefaultStringIfNull5.solve(var_methodEncryption_throws, var_literal3);
+			setDefaultStringIfNull6.solve(var_methodGetKey_index, var_literal5);
+			setDefaultStringIfNull7.solve(var_methodPerformGetKey_throws, var_literal4);
+			setDefaultStringIfNull8.solve(var_methodGetKey_throws, var_literal4);
 			setDefaultStringIfNull9.solve(var_sbcJcu_name, var_literal6);
-			setDefaultStringIfNull10.solve(var_methodEncryption_throws, var_literal3);
-			setDefaultStringIfNull11.solve(var_methodPerformEncryption_index, var_literal8);
-			setDefaultStringIfNull12.solve(var_methodPerformGetKey_index, var_literal8);
-			eq13.solve(var_exprIterationLiteral_value, var_kda_iterations);
-			eq14.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
-			eq15.solve(var_task_package, var_javaPackage_name);
-			eq16.solve(var_exprAlgNameLiteral_value, var_kda_name);
+			setDefaultStringIfNull10.solve(var_methodPerformGetKey_body, var_literal7);
+			setDefaultStringIfNull11.solve(var_methodPerformGetKey_index, var_literal8);
+			setDefaultStringIfNull12.solve(var_methodPerformEncryption_index, var_literal8);
+			eq13.solve(var_exprAlgNameLiteral_value, var_kda_name);
+			eq14.solve(var_exprIterationLiteral_value, var_kda_iterations);
+			eq15.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
+			eq16.solve(var_task_package, var_javaPackage_name);
 			nameModePadding17.solve(var_sbc_name, var_sbc_mode, var_sbc_padding, var_exprNameModePadding_value);
 			setDefaultStringIfNull18.solve(var_methodPerformGetKey_parameters, var_literal9);
 			if (csp.check()) {
 				ruleResult.setSuccess(true);
 				ruleResult.setRequiredChange(true);
-				__helper.setValue("methodGetKey", "index", var_methodGetKey_index.getValue());
-				__helper.setValue("methodEncryption", "index", var_methodEncryption_index.getValue());
 				__helper.setValue("methodPerformEncryption", "body", var_methodPerformEncryption_body.getValue());
-				__helper.setValue("methodPerformGetKey", "throws", var_methodPerformGetKey_throws.getValue());
+				__helper.setValue("methodEncryption", "index", var_methodEncryption_index.getValue());
 				__helper.setValue("methodPerformEncryption", "throws", var_methodPerformEncryption_throws.getValue());
-				__helper.setValue("methodPerformGetKey", "body", var_methodPerformGetKey_body.getValue());
-				__helper.setValue("methodGetKey", "throws", var_methodGetKey_throws.getValue());
 				__helper.setValue("methodPerformEncryption", "parameters",
 						var_methodPerformEncryption_parameters.getValue());
-				__helper.setValue("sbcJcu", "name", var_sbcJcu_name.getValue());
 				__helper.setValue("methodEncryption", "throws", var_methodEncryption_throws.getValue());
-				__helper.setValue("methodPerformEncryption", "index", var_methodPerformEncryption_index.getValue());
+				__helper.setValue("methodGetKey", "index", var_methodGetKey_index.getValue());
+				__helper.setValue("methodPerformGetKey", "throws", var_methodPerformGetKey_throws.getValue());
+				__helper.setValue("methodGetKey", "throws", var_methodGetKey_throws.getValue());
+				__helper.setValue("sbcJcu", "name", var_sbcJcu_name.getValue());
+				__helper.setValue("methodPerformGetKey", "body", var_methodPerformGetKey_body.getValue());
 				__helper.setValue("methodPerformGetKey", "index", var_methodPerformGetKey_index.getValue());
+				__helper.setValue("methodPerformEncryption", "index", var_methodPerformEncryption_index.getValue());
+				__helper.setValue("exprAlgNameLiteral", "value", var_exprAlgNameLiteral_value.getValue());
 				__helper.setValue("exprIterationLiteral", "value", var_exprIterationLiteral_value.getValue());
 				__helper.setValue("exprOutputSizeLiteral", "value", var_exprOutputSizeLiteral_value.getValue());
 				__helper.setValue("javaPackage", "name", var_javaPackage_name.getValue());
-				__helper.setValue("exprAlgNameLiteral", "value", var_exprAlgNameLiteral_value.getValue());
 				__helper.setValue("exprNameModePadding", "value", var_exprNameModePadding_value.getValue());
 				__helper.setValue("methodPerformGetKey", "parameters", var_methodPerformGetKey_parameters.getValue());
 			} else {
@@ -2271,12 +2272,12 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodPerformEncryption", "type", "byte[] ", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("methodPerformEncryption", "modifier", "private", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodPerformEncryption", "modifier", "private", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("methodPerformEncryption", "type", "byte[] ", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
@@ -2302,6 +2303,11 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			return ruleResult;
 		}
 
+		if (!__helper.hasExpectedValue("dataEncryption", "type", "byte[]", ComparingOperator.EQUAL)) {
+			ruleResult.setSuccess(false);
+			return ruleResult;
+		}
+
 		if (!__helper.hasExpectedValue("dataEncryption", "index", 0, ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
@@ -2312,22 +2318,17 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("dataEncryption", "type", "byte[]", ComparingOperator.EQUAL)) {
-			ruleResult.setSuccess(false);
-			return ruleResult;
-		}
-
 		if (!__helper.hasExpectedValue("methodGetKey", "modifier", "public", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodGetKey", "type", "SecretKey ", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("methodGetKey", "name", "getKey", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodGetKey", "name", "getKey", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("methodGetKey", "type", "SecretKey ", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
@@ -2352,12 +2353,12 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodPerformGetKey", "modifier", "private", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("methodPerformGetKey", "type", "SecretKey ", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodPerformGetKey", "type", "SecretKey ", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("methodPerformGetKey", "modifier", "private", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
@@ -2372,12 +2373,12 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("exprKeyName", "index", 1, ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("exprKeyName", "identifier", "key", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("exprKeyName", "identifier", "key", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("exprKeyName", "index", 1, ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
@@ -2392,12 +2393,12 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodEncryption", "name", "encrypt", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("methodEncryption", "modifier", "public", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodEncryption", "modifier", "public", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("methodEncryption", "name", "encrypt", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
@@ -2438,31 +2439,35 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			return ruleResult;
 		}
 
-		Variable var_literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal0.setValue(1);
-		var_literal0.setType("");
-
 		Variable var_methodEncryption_index = CSPFactoryHelper.eINSTANCE.createVariable("methodEncryption", true, csp);
 		var_methodEncryption_index.setValue(__helper.getValue("methodEncryption", "index"));
 		var_methodEncryption_index.setType("int");
 
+		Variable var_task_package = CSPFactoryHelper.eINSTANCE.createVariable("task", true, csp);
+		var_task_package.setValue(__helper.getValue("task", "package"));
+		var_task_package.setType("String");
+
+		Variable var_literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
+		var_literal0.setValue("Crypto");
+		var_literal0.setType("");
+
+		Variable var_methodPerformEncryption_parameters = CSPFactoryHelper.eINSTANCE
+				.createVariable("methodPerformEncryption", true, csp);
+		var_methodPerformEncryption_parameters.setValue(__helper.getValue("methodPerformEncryption", "parameters"));
+		var_methodPerformEncryption_parameters.setType("String");
+
 		Variable var_literal1 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal1.setValue(
-				"{\n  byte[] ivb=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(ivb);\n  IvParameterSpec iv=new IvParameterSpec(ivb);\n  Cipher c=Cipher.getInstance(encryptPassingArgument);\n  c.init(Cipher.ENCRYPT_MODE,key,iv);\n  byte[] res=c.doFinal(data);\n  byte[] ret=new byte[res.length + ivb.length];\n  System.arraycopy(ivb,0,ret,0,ivb.length);\n  System.arraycopy(res,0,ret,ivb.length,ret.length);\n  return ret;\n}\n");
+		var_literal1.setValue("byte[] data,SecretKey key,String encryptPassingArgument");
 		var_literal1.setType("");
 
-		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey", true, csp);
-		var_methodGetKey_index.setValue(__helper.getValue("methodGetKey", "index"));
-		var_methodGetKey_index.setType("int");
-
 		Variable var_literal2 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal2.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
+		var_literal2.setValue(
+				"{\n  byte[] ivb=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(ivb);\n  IvParameterSpec iv=new IvParameterSpec(ivb);\n  Cipher c=Cipher.getInstance(encryptPassingArgument);\n  c.init(Cipher.ENCRYPT_MODE,key,iv);\n  byte[] res=c.doFinal(data);\n  byte[] ret=new byte[res.length + ivb.length];\n  System.arraycopy(ivb,0,ret,0,ivb.length);\n  System.arraycopy(res,0,ret,ivb.length,ret.length);\n  return ret;\n}\n");
 		var_literal2.setType("");
 
-		Variable var_methodPerformEncryption_throws = CSPFactoryHelper.eINSTANCE
-				.createVariable("methodPerformEncryption", true, csp);
-		var_methodPerformEncryption_throws.setValue(__helper.getValue("methodPerformEncryption", "throws"));
-		var_methodPerformEncryption_throws.setType("String");
+		Variable var_methodEncryption_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodEncryption", true, csp);
+		var_methodEncryption_throws.setValue(__helper.getValue("methodEncryption", "throws"));
+		var_methodEncryption_throws.setType("String");
 
 		Variable var_literal3 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
 		var_literal3.setValue(
@@ -2475,22 +2480,26 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		var_methodPerformGetKey_throws.setType("String");
 
 		Variable var_literal4 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal4.setValue(
-				"{\n  byte[] salt=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(salt);\n  PBEKeySpec spec=new PBEKeySpec(pwd,salt,iterations,outputSize);\n  SecretKeyFactory skf=SecretKeyFactory.getInstance(algName);\n  return new SecretKeySpec(skf.generateSecret(spec).getEncoded(),\"AES\");\n}\n");
+		var_literal4.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
 		var_literal4.setType("");
+
+		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey", true, csp);
+		var_methodGetKey_index.setValue(__helper.getValue("methodGetKey", "index"));
+		var_methodGetKey_index.setType("int");
+
+		Variable var_methodPerformEncryption_throws = CSPFactoryHelper.eINSTANCE
+				.createVariable("methodPerformEncryption", true, csp);
+		var_methodPerformEncryption_throws.setValue(__helper.getValue("methodPerformEncryption", "throws"));
+		var_methodPerformEncryption_throws.setType("String");
+
+		Variable var_literal5 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
+		var_literal5.setValue(1);
+		var_literal5.setType("");
 
 		Variable var_methodPerformEncryption_body = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformEncryption",
 				true, csp);
 		var_methodPerformEncryption_body.setValue(__helper.getValue("methodPerformEncryption", "body"));
 		var_methodPerformEncryption_body.setType("String");
-
-		Variable var_task_package = CSPFactoryHelper.eINSTANCE.createVariable("task", true, csp);
-		var_task_package.setValue(__helper.getValue("task", "package"));
-		var_task_package.setType("String");
-
-		Variable var_literal5 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal5.setValue("byte[] data,SecretKey key,String encryptPassingArgument");
-		var_literal5.setType("");
 
 		Variable var_sbcJcu_name = CSPFactoryHelper.eINSTANCE.createVariable("sbcJcu", true, csp);
 		var_sbcJcu_name.setValue(__helper.getValue("sbcJcu", "name"));
@@ -2500,31 +2509,23 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		var_literal6.setValue("Enc");
 		var_literal6.setType("");
 
-		Variable var_methodPerformEncryption_parameters = CSPFactoryHelper.eINSTANCE
-				.createVariable("methodPerformEncryption", true, csp);
-		var_methodPerformEncryption_parameters.setValue(__helper.getValue("methodPerformEncryption", "parameters"));
-		var_methodPerformEncryption_parameters.setType("String");
-
-		Variable var_literal7 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal7.setValue("Crypto");
-		var_literal7.setType("");
-
-		Variable var_methodEncryption_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodEncryption", true, csp);
-		var_methodEncryption_throws.setValue(__helper.getValue("methodEncryption", "throws"));
-		var_methodEncryption_throws.setType("String");
-
-		Variable var_literal8 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal8.setValue(0);
-		var_literal8.setType("");
+		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey", true, csp);
+		var_methodGetKey_throws.setValue(__helper.getValue("methodGetKey", "throws"));
+		var_methodGetKey_throws.setType("String");
 
 		Variable var_methodPerformGetKey_body = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey", true,
 				csp);
 		var_methodPerformGetKey_body.setValue(__helper.getValue("methodPerformGetKey", "body"));
 		var_methodPerformGetKey_body.setType("String");
 
-		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey", true, csp);
-		var_methodGetKey_throws.setValue(__helper.getValue("methodGetKey", "throws"));
-		var_methodGetKey_throws.setType("String");
+		Variable var_literal7 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
+		var_literal7.setValue(
+				"{\n  byte[] salt=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(salt);\n  PBEKeySpec spec=new PBEKeySpec(pwd,salt,iterations,outputSize);\n  SecretKeyFactory skf=SecretKeyFactory.getInstance(algName);\n  return new SecretKeySpec(skf.generateSecret(spec).getEncoded(),\"AES\");\n}\n");
+		var_literal7.setType("");
+
+		Variable var_literal8 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
+		var_literal8.setValue(0);
+		var_literal8.setType("");
 
 		Variable var_methodPerformEncryption_index = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformEncryption", true, csp);
@@ -2536,18 +2537,27 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		var_methodPerformGetKey_index.setValue(__helper.getValue("methodPerformGetKey", "index"));
 		var_methodPerformGetKey_index.setType("int");
 
+		Variable var_kda_name = CSPFactoryHelper.eINSTANCE.createVariable("kda", true, csp);
+		var_kda_name.setValue(__helper.getValue("kda", "name"));
+		var_kda_name.setType("String");
+
+		Variable var_exprAlgNameLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprAlgNameLiteral", true,
+				csp);
+		var_exprAlgNameLiteral_value.setValue(__helper.getValue("exprAlgNameLiteral", "value"));
+		var_exprAlgNameLiteral_value.setType("String");
+
 		Variable var_kda_iterations = CSPFactoryHelper.eINSTANCE.createVariable("kda", true, csp);
 		var_kda_iterations.setValue(__helper.getValue("kda", "iterations"));
 		var_kda_iterations.setType("String");
+
+		Variable var_kda_outputSize = CSPFactoryHelper.eINSTANCE.createVariable("kda", true, csp);
+		var_kda_outputSize.setValue(__helper.getValue("kda", "outputSize"));
+		var_kda_outputSize.setType("String");
 
 		Variable var_exprIterationLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprIterationLiteral",
 				true, csp);
 		var_exprIterationLiteral_value.setValue(__helper.getValue("exprIterationLiteral", "value"));
 		var_exprIterationLiteral_value.setType("String");
-
-		Variable var_kda_outputSize = CSPFactoryHelper.eINSTANCE.createVariable("kda", true, csp);
-		var_kda_outputSize.setValue(__helper.getValue("kda", "outputSize"));
-		var_kda_outputSize.setType("String");
 
 		Variable var_exprOutputSizeLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprOutputSizeLiteral",
 				true, csp);
@@ -2558,23 +2568,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		var_javaPackage_name.setValue(__helper.getValue("javaPackage", "name"));
 		var_javaPackage_name.setType("String");
 
-		Variable var_kda_name = CSPFactoryHelper.eINSTANCE.createVariable("kda", true, csp);
-		var_kda_name.setValue(__helper.getValue("kda", "name"));
-		var_kda_name.setType("String");
-
-		Variable var_exprAlgNameLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprAlgNameLiteral", true,
-				csp);
-		var_exprAlgNameLiteral_value.setValue(__helper.getValue("exprAlgNameLiteral", "value"));
-		var_exprAlgNameLiteral_value.setType("String");
-
 		Variable var_exprNameModePadding_value = CSPFactoryHelper.eINSTANCE.createVariable("exprNameModePadding", true,
 				csp);
 		var_exprNameModePadding_value.setValue(__helper.getValue("exprNameModePadding", "value"));
 		var_exprNameModePadding_value.setType("String");
-
-		Variable var_sbc_padding = CSPFactoryHelper.eINSTANCE.createVariable("sbc", true, csp);
-		var_sbc_padding.setValue(__helper.getValue("sbc", "padding"));
-		var_sbc_padding.setType("String");
 
 		Variable var_sbc_name = CSPFactoryHelper.eINSTANCE.createVariable("sbc", true, csp);
 		var_sbc_name.setValue(__helper.getValue("sbc", "name"));
@@ -2584,14 +2581,18 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		var_sbc_mode.setValue(__helper.getValue("sbc", "mode"));
 		var_sbc_mode.setType("String");
 
-		Variable var_methodPerformGetKey_parameters = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey",
-				true, csp);
-		var_methodPerformGetKey_parameters.setValue(__helper.getValue("methodPerformGetKey", "parameters"));
-		var_methodPerformGetKey_parameters.setType("String");
+		Variable var_sbc_padding = CSPFactoryHelper.eINSTANCE.createVariable("sbc", true, csp);
+		var_sbc_padding.setValue(__helper.getValue("sbc", "padding"));
+		var_sbc_padding.setType("String");
 
 		Variable var_literal9 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
 		var_literal9.setValue("char [] pwd,String algName,int iterations,int outputSize");
 		var_literal9.setType("");
+
+		Variable var_methodPerformGetKey_parameters = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey",
+				true, csp);
+		var_methodPerformGetKey_parameters.setValue(__helper.getValue("methodPerformGetKey", "parameters"));
+		var_methodPerformGetKey_parameters.setType("String");
 
 		SetDefaultStringIfNull setDefaultStringIfNull0 = new SetDefaultStringIfNull();
 		csp.getConstraints().add(setDefaultStringIfNull0);
@@ -2651,58 +2652,58 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		csp.getConstraints().add(nameModePadding18);
 
 		setDefaultStringIfNull0.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull0.solve(var_methodGetKey_index, var_literal0);
+		setDefaultStringIfNull0.solve(var_methodPerformEncryption_body, var_literal2);
 
 		setDefaultStringIfNull1.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull1.solve(var_methodEncryption_index, var_literal0);
+		setDefaultStringIfNull1.solve(var_methodEncryption_index, var_literal5);
 
 		setDefaultStringIfNull2.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull2.solve(var_methodPerformEncryption_body, var_literal1);
+		setDefaultStringIfNull2.solve(var_methodPerformEncryption_throws, var_literal3);
 
 		setDefaultStringIfNull3.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull3.solve(var_methodPerformGetKey_throws, var_literal2);
+		setDefaultStringIfNull3.solve(var_methodPerformEncryption_parameters, var_literal1);
 
 		setDefaultStringIfNull4.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull4.solve(var_methodPerformEncryption_throws, var_literal3);
+		setDefaultStringIfNull4.solve(var_methodEncryption_throws, var_literal3);
 
 		setDefaultStringIfNull5.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull5.solve(var_methodPerformGetKey_body, var_literal4);
+		setDefaultStringIfNull5.solve(var_methodGetKey_index, var_literal5);
 
 		setDefaultStringIfNull6.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull6.solve(var_methodGetKey_throws, var_literal2);
+		setDefaultStringIfNull6.solve(var_methodPerformGetKey_throws, var_literal4);
 
 		setDefaultStringIfNull7.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull7.solve(var_methodPerformEncryption_parameters, var_literal5);
+		setDefaultStringIfNull7.solve(var_methodGetKey_throws, var_literal4);
 
 		setDefaultStringIfNull8.setRuleName("PasswordBasedEncryption");
 		setDefaultStringIfNull8.solve(var_sbcJcu_name, var_literal6);
 
 		setDefaultStringIfNull9.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull9.solve(var_methodEncryption_throws, var_literal3);
+		setDefaultStringIfNull9.solve(var_methodPerformGetKey_body, var_literal7);
 
 		setDefaultStringIfNull10.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull10.solve(var_methodPerformEncryption_index, var_literal8);
+		setDefaultStringIfNull10.solve(var_methodPerformGetKey_index, var_literal8);
 
 		setDefaultStringIfNull11.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull11.solve(var_methodPerformGetKey_index, var_literal8);
+		setDefaultStringIfNull11.solve(var_methodPerformEncryption_index, var_literal8);
 
 		setDefaultStringIfNull12.setRuleName("PasswordBasedEncryption");
 		setDefaultStringIfNull12.solve(var_methodPerformGetKey_parameters, var_literal9);
 
 		setDefaultStringIfNull13.setRuleName("PasswordBasedEncryption");
-		setDefaultStringIfNull13.solve(var_task_package, var_literal7);
+		setDefaultStringIfNull13.solve(var_task_package, var_literal0);
 
 		eq14.setRuleName("PasswordBasedEncryption");
 		eq14.solve(var_task_package, var_javaPackage_name);
 
 		eq15.setRuleName("PasswordBasedEncryption");
-		eq15.solve(var_exprIterationLiteral_value, var_kda_iterations);
+		eq15.solve(var_exprAlgNameLiteral_value, var_kda_name);
 
 		eq16.setRuleName("PasswordBasedEncryption");
-		eq16.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
+		eq16.solve(var_exprIterationLiteral_value, var_kda_iterations);
 
 		eq17.setRuleName("PasswordBasedEncryption");
-		eq17.solve(var_exprAlgNameLiteral_value, var_kda_name);
+		eq17.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
 
 		nameModePadding18.setRuleName("PasswordBasedEncryption");
 		nameModePadding18.solve(var_sbc_name, var_sbc_mode, var_sbc_padding, var_exprNameModePadding_value);
@@ -2712,42 +2713,42 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		} else {
 			var_task_package.setBound(false);
 			var_task_package.setBound(false);
+			var_kda_name.setBound(false);
 			var_kda_iterations.setBound(false);
 			var_kda_outputSize.setBound(false);
-			var_kda_name.setBound(false);
-			var_sbc_padding.setBound(false);
 			var_sbc_name.setBound(false);
 			var_sbc_mode.setBound(false);
-			setDefaultStringIfNull0.solve(var_methodGetKey_index, var_literal0);
-			setDefaultStringIfNull1.solve(var_methodEncryption_index, var_literal0);
-			setDefaultStringIfNull2.solve(var_methodPerformEncryption_body, var_literal1);
-			setDefaultStringIfNull3.solve(var_methodPerformGetKey_throws, var_literal2);
-			setDefaultStringIfNull4.solve(var_methodPerformEncryption_throws, var_literal3);
-			setDefaultStringIfNull5.solve(var_methodPerformGetKey_body, var_literal4);
-			setDefaultStringIfNull6.solve(var_methodGetKey_throws, var_literal2);
-			setDefaultStringIfNull7.solve(var_methodPerformEncryption_parameters, var_literal5);
+			var_sbc_padding.setBound(false);
+			setDefaultStringIfNull0.solve(var_methodPerformEncryption_body, var_literal2);
+			setDefaultStringIfNull1.solve(var_methodEncryption_index, var_literal5);
+			setDefaultStringIfNull2.solve(var_methodPerformEncryption_throws, var_literal3);
+			setDefaultStringIfNull3.solve(var_methodPerformEncryption_parameters, var_literal1);
+			setDefaultStringIfNull4.solve(var_methodEncryption_throws, var_literal3);
+			setDefaultStringIfNull5.solve(var_methodGetKey_index, var_literal5);
+			setDefaultStringIfNull6.solve(var_methodPerformGetKey_throws, var_literal4);
+			setDefaultStringIfNull7.solve(var_methodGetKey_throws, var_literal4);
 			setDefaultStringIfNull8.solve(var_sbcJcu_name, var_literal6);
-			setDefaultStringIfNull9.solve(var_methodEncryption_throws, var_literal3);
-			setDefaultStringIfNull10.solve(var_methodPerformEncryption_index, var_literal8);
-			setDefaultStringIfNull11.solve(var_methodPerformGetKey_index, var_literal8);
+			setDefaultStringIfNull9.solve(var_methodPerformGetKey_body, var_literal7);
+			setDefaultStringIfNull10.solve(var_methodPerformGetKey_index, var_literal8);
+			setDefaultStringIfNull11.solve(var_methodPerformEncryption_index, var_literal8);
 			setDefaultStringIfNull12.solve(var_methodPerformGetKey_parameters, var_literal9);
-			setDefaultStringIfNull13.solve(var_task_package, var_literal7);
+			setDefaultStringIfNull13.solve(var_task_package, var_literal0);
 			eq14.solve(var_task_package, var_javaPackage_name);
-			eq15.solve(var_exprIterationLiteral_value, var_kda_iterations);
-			eq16.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
-			eq17.solve(var_exprAlgNameLiteral_value, var_kda_name);
+			eq15.solve(var_exprAlgNameLiteral_value, var_kda_name);
+			eq16.solve(var_exprIterationLiteral_value, var_kda_iterations);
+			eq17.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
 			nameModePadding18.solve(var_sbc_name, var_sbc_mode, var_sbc_padding, var_exprNameModePadding_value);
 			if (csp.check()) {
 				ruleResult.setSuccess(true);
 				ruleResult.setRequiredChange(true);
 				__helper.setValue("task", "package", var_task_package.getValue());
 				__helper.setValue("task", "package", var_task_package.getValue());
+				__helper.setValue("kda", "name", var_kda_name.getValue());
 				__helper.setValue("kda", "iterations", var_kda_iterations.getValue());
 				__helper.setValue("kda", "outputSize", var_kda_outputSize.getValue());
-				__helper.setValue("kda", "name", var_kda_name.getValue());
-				__helper.setValue("sbc", "padding", var_sbc_padding.getValue());
 				__helper.setValue("sbc", "name", var_sbc_name.getValue());
 				__helper.setValue("sbc", "mode", var_sbc_mode.getValue());
+				__helper.setValue("sbc", "padding", var_sbc_padding.getValue());
 			} else {
 				ruleResult.setSuccess(false);
 				return ruleResult;
@@ -2778,8 +2779,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[sourceMatch] = " + sourceMatch
 					+ ", " + "[targetMatch] = " + targetMatch + ".");
 		}
-		JavaLiteral exprIterationLiteral = (JavaLiteral) result2_bindingAndBlack[0];
-		JavaPackage javaPackage = (JavaPackage) result2_bindingAndBlack[1];
+		JavaPackage javaPackage = (JavaPackage) result2_bindingAndBlack[0];
+		JavaLiteral exprIterationLiteral = (JavaLiteral) result2_bindingAndBlack[1];
 		JavaMethodInvocation exprRetGetKey = (JavaMethodInvocation) result2_bindingAndBlack[2];
 		JavaLiteral exprOutputSizeLiteral = (JavaLiteral) result2_bindingAndBlack[3];
 		JavaCompilationUnit kdaJcu = (JavaCompilationUnit) result2_bindingAndBlack[4];
@@ -2805,14 +2806,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 		Object[] result3_bindingAndBlack = PasswordBasedEncryptionImpl
 				.pattern_PasswordBasedEncryption_24_3_solvecsp_bindingAndBlackFBBBBBBBBBBBBBBBBBBBBBBBBBBB(this,
-						exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
+						javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
 						methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey,
 						exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption,
 						exprKeyName, exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName,
 						exprRetPerformEncryption, statRetGetKey, sourceMatch, targetMatch);
 		if (result3_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[exprIterationLiteral] = " + exprIterationLiteral + ", " + "[javaPackage] = " + javaPackage
+					+ "[javaPackage] = " + javaPackage + ", " + "[exprIterationLiteral] = " + exprIterationLiteral
 					+ ", " + "[exprRetGetKey] = " + exprRetGetKey + ", " + "[exprOutputSizeLiteral] = "
 					+ exprOutputSizeLiteral + ", " + "[kdaJcu] = " + kdaJcu + ", " + "[methodPerformEncryption] = "
 					+ methodPerformEncryption + ", " + "[sbcJcu] = " + sbcJcu + ", " + "[keyEncryption] = "
@@ -2840,14 +2841,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 				Object[] result6_black = PasswordBasedEncryptionImpl
 						.pattern_PasswordBasedEncryption_24_6_createcorrespondence_blackBBBBBBBBBBBBBBBBBBBBBBBBB(
-								exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
+								javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
 								methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey,
 								exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption,
 								exprKeyName, exprNameModePadding, methodEncryption, task, exprPwdName, sbc,
 								exprDataName, exprRetPerformEncryption, statRetGetKey, ccMatch);
 				if (result6_black == null) {
-					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[exprIterationLiteral] = "
-							+ exprIterationLiteral + ", " + "[javaPackage] = " + javaPackage + ", "
+					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[javaPackage] = "
+							+ javaPackage + ", " + "[exprIterationLiteral] = " + exprIterationLiteral + ", "
 							+ "[exprRetGetKey] = " + exprRetGetKey + ", " + "[exprOutputSizeLiteral] = "
 							+ exprOutputSizeLiteral + ", " + "[kdaJcu] = " + kdaJcu + ", "
 							+ "[methodPerformEncryption] = " + methodPerformEncryption + ", " + "[sbcJcu] = " + sbcJcu
@@ -2890,7 +2891,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_CC(JavaLiteral exprIterationLiteral, JavaPackage javaPackage,
+	public CSP isApplicable_solveCsp_CC(JavaPackage javaPackage, JavaLiteral exprIterationLiteral,
 			JavaMethodInvocation exprRetGetKey, JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu,
 			JavaOpaqueMethod methodPerformEncryption, JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption,
 			JavaVariableDeclaration dataEncryption, JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral,
@@ -2903,28 +2904,28 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 		// Create literals
 		Variable literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal0", true, csp);
-		literal0.setValue(1);
+		literal0.setValue(
+				"{\n  byte[] ivb=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(ivb);\n  IvParameterSpec iv=new IvParameterSpec(ivb);\n  Cipher c=Cipher.getInstance(encryptPassingArgument);\n  c.init(Cipher.ENCRYPT_MODE,key,iv);\n  byte[] res=c.doFinal(data);\n  byte[] ret=new byte[res.length + ivb.length];\n  System.arraycopy(ivb,0,ret,0,ivb.length);\n  System.arraycopy(res,0,ret,ivb.length,ret.length);\n  return ret;\n}\n");
 		literal0.setType("");
 		Variable literal1 = CSPFactoryHelper.eINSTANCE.createVariable("literal1", true, csp);
-		literal1.setValue(
-				"{\n  byte[] ivb=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(ivb);\n  IvParameterSpec iv=new IvParameterSpec(ivb);\n  Cipher c=Cipher.getInstance(encryptPassingArgument);\n  c.init(Cipher.ENCRYPT_MODE,key,iv);\n  byte[] res=c.doFinal(data);\n  byte[] ret=new byte[res.length + ivb.length];\n  System.arraycopy(ivb,0,ret,0,ivb.length);\n  System.arraycopy(res,0,ret,ivb.length,ret.length);\n  return ret;\n}\n");
+		literal1.setValue(1);
 		literal1.setType("");
 		Variable literal2 = CSPFactoryHelper.eINSTANCE.createVariable("literal2", true, csp);
-		literal2.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
+		literal2.setValue(
+				"InvalidKeyException,NoSuchAlgorithmException,NoSuchPaddingException,IllegalBlockSizeException,BadPaddingException,InvalidAlgorithmParameterException");
 		literal2.setType("");
 		Variable literal3 = CSPFactoryHelper.eINSTANCE.createVariable("literal3", true, csp);
-		literal3.setValue(
-				"InvalidKeyException,NoSuchAlgorithmException,NoSuchPaddingException,IllegalBlockSizeException,BadPaddingException,InvalidAlgorithmParameterException");
+		literal3.setValue("byte[] data,SecretKey key,String encryptPassingArgument");
 		literal3.setType("");
 		Variable literal4 = CSPFactoryHelper.eINSTANCE.createVariable("literal4", true, csp);
-		literal4.setValue(
-				"{\n  byte[] salt=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(salt);\n  PBEKeySpec spec=new PBEKeySpec(pwd,salt,iterations,outputSize);\n  SecretKeyFactory skf=SecretKeyFactory.getInstance(algName);\n  return new SecretKeySpec(skf.generateSecret(spec).getEncoded(),\"AES\");\n}\n");
+		literal4.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
 		literal4.setType("");
 		Variable literal5 = CSPFactoryHelper.eINSTANCE.createVariable("literal5", true, csp);
-		literal5.setValue("byte[] data,SecretKey key,String encryptPassingArgument");
+		literal5.setValue("Enc");
 		literal5.setType("");
 		Variable literal6 = CSPFactoryHelper.eINSTANCE.createVariable("literal6", true, csp);
-		literal6.setValue("Enc");
+		literal6.setValue(
+				"{\n  byte[] salt=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(salt);\n  PBEKeySpec spec=new PBEKeySpec(pwd,salt,iterations,outputSize);\n  SecretKeyFactory skf=SecretKeyFactory.getInstance(algName);\n  return new SecretKeySpec(skf.generateSecret(spec).getEncoded(),\"AES\");\n}\n");
 		literal6.setType("");
 		Variable literal7 = CSPFactoryHelper.eINSTANCE.createVariable("literal7", true, csp);
 		literal7.setValue(0);
@@ -2934,51 +2935,58 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		literal8.setType("");
 
 		// Create attribute variables
-		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.index", true, csp);
-		var_methodGetKey_index.setValue(methodGetKey.getIndex());
-		var_methodGetKey_index.setType("int");
-		Variable var_methodEncryption_index = CSPFactoryHelper.eINSTANCE.createVariable("methodEncryption.index", true,
-				csp);
-		var_methodEncryption_index.setValue(methodEncryption.getIndex());
-		var_methodEncryption_index.setType("int");
 		Variable var_methodPerformEncryption_body = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformEncryption.body", true, csp);
 		var_methodPerformEncryption_body.setValue(methodPerformEncryption.getBody());
 		var_methodPerformEncryption_body.setType("String");
-		Variable var_methodPerformGetKey_throws = CSPFactoryHelper.eINSTANCE
-				.createVariable("methodPerformGetKey.throws", true, csp);
-		var_methodPerformGetKey_throws.setValue(methodPerformGetKey.getThrows());
-		var_methodPerformGetKey_throws.setType("String");
+		Variable var_methodEncryption_index = CSPFactoryHelper.eINSTANCE.createVariable("methodEncryption.index", true,
+				csp);
+		var_methodEncryption_index.setValue(methodEncryption.getIndex());
+		var_methodEncryption_index.setType("int");
 		Variable var_methodPerformEncryption_throws = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformEncryption.throws", true, csp);
 		var_methodPerformEncryption_throws.setValue(methodPerformEncryption.getThrows());
 		var_methodPerformEncryption_throws.setType("String");
-		Variable var_methodPerformGetKey_body = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.body",
-				true, csp);
-		var_methodPerformGetKey_body.setValue(methodPerformGetKey.getBody());
-		var_methodPerformGetKey_body.setType("String");
-		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.throws", true, csp);
-		var_methodGetKey_throws.setValue(methodGetKey.getThrows());
-		var_methodGetKey_throws.setType("String");
 		Variable var_methodPerformEncryption_parameters = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformEncryption.parameters", true, csp);
 		var_methodPerformEncryption_parameters.setValue(methodPerformEncryption.getParameters());
 		var_methodPerformEncryption_parameters.setType("String");
-		Variable var_sbcJcu_name = CSPFactoryHelper.eINSTANCE.createVariable("sbcJcu.name", true, csp);
-		var_sbcJcu_name.setValue(sbcJcu.getName());
-		var_sbcJcu_name.setType("String");
 		Variable var_methodEncryption_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodEncryption.throws",
 				true, csp);
 		var_methodEncryption_throws.setValue(methodEncryption.getThrows());
 		var_methodEncryption_throws.setType("String");
-		Variable var_methodPerformEncryption_index = CSPFactoryHelper.eINSTANCE
-				.createVariable("methodPerformEncryption.index", true, csp);
-		var_methodPerformEncryption_index.setValue(methodPerformEncryption.getIndex());
-		var_methodPerformEncryption_index.setType("int");
+		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.index", true, csp);
+		var_methodGetKey_index.setValue(methodGetKey.getIndex());
+		var_methodGetKey_index.setType("int");
+		Variable var_methodPerformGetKey_throws = CSPFactoryHelper.eINSTANCE
+				.createVariable("methodPerformGetKey.throws", true, csp);
+		var_methodPerformGetKey_throws.setValue(methodPerformGetKey.getThrows());
+		var_methodPerformGetKey_throws.setType("String");
+		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.throws", true, csp);
+		var_methodGetKey_throws.setValue(methodGetKey.getThrows());
+		var_methodGetKey_throws.setType("String");
+		Variable var_sbcJcu_name = CSPFactoryHelper.eINSTANCE.createVariable("sbcJcu.name", true, csp);
+		var_sbcJcu_name.setValue(sbcJcu.getName());
+		var_sbcJcu_name.setType("String");
+		Variable var_methodPerformGetKey_body = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.body",
+				true, csp);
+		var_methodPerformGetKey_body.setValue(methodPerformGetKey.getBody());
+		var_methodPerformGetKey_body.setType("String");
 		Variable var_methodPerformGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.index",
 				true, csp);
 		var_methodPerformGetKey_index.setValue(methodPerformGetKey.getIndex());
 		var_methodPerformGetKey_index.setType("int");
+		Variable var_methodPerformEncryption_index = CSPFactoryHelper.eINSTANCE
+				.createVariable("methodPerformEncryption.index", true, csp);
+		var_methodPerformEncryption_index.setValue(methodPerformEncryption.getIndex());
+		var_methodPerformEncryption_index.setType("int");
+		Variable var_exprAlgNameLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprAlgNameLiteral.value",
+				true, csp);
+		var_exprAlgNameLiteral_value.setValue(exprAlgNameLiteral.getValue());
+		var_exprAlgNameLiteral_value.setType("String");
+		Variable var_kda_name = CSPFactoryHelper.eINSTANCE.createVariable("kda.name", true, csp);
+		var_kda_name.setValue(kda.getName());
+		var_kda_name.setType("String");
 		Variable var_exprIterationLiteral_value = CSPFactoryHelper.eINSTANCE
 				.createVariable("exprIterationLiteral.value", true, csp);
 		var_exprIterationLiteral_value.setValue(exprIterationLiteral.getValue());
@@ -2999,13 +3007,6 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		Variable var_javaPackage_name = CSPFactoryHelper.eINSTANCE.createVariable("javaPackage.name", true, csp);
 		var_javaPackage_name.setValue(javaPackage.getName());
 		var_javaPackage_name.setType("String");
-		Variable var_exprAlgNameLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprAlgNameLiteral.value",
-				true, csp);
-		var_exprAlgNameLiteral_value.setValue(exprAlgNameLiteral.getValue());
-		var_exprAlgNameLiteral_value.setType("String");
-		Variable var_kda_name = CSPFactoryHelper.eINSTANCE.createVariable("kda.name", true, csp);
-		var_kda_name.setValue(kda.getName());
-		var_kda_name.setType("String");
 		Variable var_sbc_name = CSPFactoryHelper.eINSTANCE.createVariable("sbc.name", true, csp);
 		var_sbc_name.setValue(sbc.getName());
 		var_sbc_name.setType("String");
@@ -3067,37 +3068,37 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 		// Solve CSP
 		setDefaultStringIfNull.setRuleName("NoRuleName");
-		setDefaultStringIfNull.solve(var_methodGetKey_index, literal0);
+		setDefaultStringIfNull.solve(var_methodPerformEncryption_body, literal0);
 		setDefaultStringIfNull_0.setRuleName("NoRuleName");
-		setDefaultStringIfNull_0.solve(var_methodEncryption_index, literal0);
+		setDefaultStringIfNull_0.solve(var_methodEncryption_index, literal1);
 		setDefaultStringIfNull_1.setRuleName("NoRuleName");
-		setDefaultStringIfNull_1.solve(var_methodPerformEncryption_body, literal1);
+		setDefaultStringIfNull_1.solve(var_methodPerformEncryption_throws, literal2);
 		setDefaultStringIfNull_2.setRuleName("NoRuleName");
-		setDefaultStringIfNull_2.solve(var_methodPerformGetKey_throws, literal2);
+		setDefaultStringIfNull_2.solve(var_methodPerformEncryption_parameters, literal3);
 		setDefaultStringIfNull_3.setRuleName("NoRuleName");
-		setDefaultStringIfNull_3.solve(var_methodPerformEncryption_throws, literal3);
+		setDefaultStringIfNull_3.solve(var_methodEncryption_throws, literal2);
 		setDefaultStringIfNull_4.setRuleName("NoRuleName");
-		setDefaultStringIfNull_4.solve(var_methodPerformGetKey_body, literal4);
+		setDefaultStringIfNull_4.solve(var_methodGetKey_index, literal1);
 		setDefaultStringIfNull_5.setRuleName("NoRuleName");
-		setDefaultStringIfNull_5.solve(var_methodGetKey_throws, literal2);
+		setDefaultStringIfNull_5.solve(var_methodPerformGetKey_throws, literal4);
 		setDefaultStringIfNull_6.setRuleName("NoRuleName");
-		setDefaultStringIfNull_6.solve(var_methodPerformEncryption_parameters, literal5);
+		setDefaultStringIfNull_6.solve(var_methodGetKey_throws, literal4);
 		setDefaultStringIfNull_7.setRuleName("NoRuleName");
-		setDefaultStringIfNull_7.solve(var_sbcJcu_name, literal6);
+		setDefaultStringIfNull_7.solve(var_sbcJcu_name, literal5);
 		setDefaultStringIfNull_8.setRuleName("NoRuleName");
-		setDefaultStringIfNull_8.solve(var_methodEncryption_throws, literal3);
+		setDefaultStringIfNull_8.solve(var_methodPerformGetKey_body, literal6);
 		setDefaultStringIfNull_9.setRuleName("NoRuleName");
-		setDefaultStringIfNull_9.solve(var_methodPerformEncryption_index, literal7);
+		setDefaultStringIfNull_9.solve(var_methodPerformGetKey_index, literal7);
 		setDefaultStringIfNull_10.setRuleName("NoRuleName");
-		setDefaultStringIfNull_10.solve(var_methodPerformGetKey_index, literal7);
+		setDefaultStringIfNull_10.solve(var_methodPerformEncryption_index, literal7);
 		eq.setRuleName("NoRuleName");
-		eq.solve(var_exprIterationLiteral_value, var_kda_iterations);
+		eq.solve(var_exprAlgNameLiteral_value, var_kda_name);
 		eq_0.setRuleName("NoRuleName");
-		eq_0.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
+		eq_0.solve(var_exprIterationLiteral_value, var_kda_iterations);
 		eq_1.setRuleName("NoRuleName");
-		eq_1.solve(var_task_package, var_javaPackage_name);
+		eq_1.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
 		eq_2.setRuleName("NoRuleName");
-		eq_2.solve(var_exprAlgNameLiteral_value, var_kda_name);
+		eq_2.solve(var_task_package, var_javaPackage_name);
 		nameModePadding.setRuleName("NoRuleName");
 		nameModePadding.solve(var_sbc_name, var_sbc_mode, var_sbc_padding, var_exprNameModePadding_value);
 		setDefaultStringIfNull_11.setRuleName("NoRuleName");
@@ -3137,7 +3138,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean checkDEC_BWD(JavaLiteral exprIterationLiteral, JavaPackage javaPackage,
+	public boolean checkDEC_BWD(JavaPackage javaPackage, JavaLiteral exprIterationLiteral,
 			JavaMethodInvocation exprRetGetKey, JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu,
 			JavaOpaqueMethod methodPerformEncryption, JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption,
 			JavaVariableDeclaration dataEncryption, JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral,
@@ -3146,9 +3147,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaWorkflowMethod methodEncryption, JavaName exprPwdName, JavaName exprDataName,
 			JavaMethodInvocation exprRetPerformEncryption, JavaStatement statRetGetKey) {// 
 		Object[] result1_black = PasswordBasedEncryptionImpl
-				.pattern_PasswordBasedEncryption_28_1_matchtggpattern_blackBBBBBBBBBBBBBBBBBBBBB(exprIterationLiteral,
-						javaPackage, exprRetGetKey, exprOutputSizeLiteral, kdaJcu, methodPerformEncryption, sbcJcu,
-						keyEncryption, dataEncryption, methodGetKey, exprAlgNameLiteral, pwdDeclaration,
+				.pattern_PasswordBasedEncryption_28_1_matchtggpattern_blackBBBBBBBBBBBBBBBBBBBBB(javaPackage,
+						exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, kdaJcu, methodPerformEncryption,
+						sbcJcu, keyEncryption, dataEncryption, methodGetKey, exprAlgNameLiteral, pwdDeclaration,
 						methodPerformGetKey, statRetPerformEncryption, exprKeyName, exprNameModePadding,
 						methodEncryption, exprPwdName, exprDataName, exprRetPerformEncryption, statRetGetKey);
 		if (result1_black != null) {
@@ -3208,8 +3209,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 				PasswordBasedEncryptionImpl
 						.pattern_PasswordBasedEncryption_29_6_perform_greenFFFFFFFFFFFFFFFFFFFFFFFFFFFBB(ruleResult,
 								csp);
-				//nothing JavaLiteral exprIterationLiteral = (JavaLiteral) result6_green[0];
-				//nothing JavaPackage javaPackage = (JavaPackage) result6_green[1];
+				//nothing JavaPackage javaPackage = (JavaPackage) result6_green[0];
+				//nothing JavaLiteral exprIterationLiteral = (JavaLiteral) result6_green[1];
 				//nothing JavaMethodInvocation exprRetGetKey = (JavaMethodInvocation) result6_green[2];
 				//nothing JavaLiteral exprOutputSizeLiteral = (JavaLiteral) result6_green[3];
 				//nothing SymmetricBlockCipherToJcu sbc2Jcu = (SymmetricBlockCipherToJcu) result6_green[4];
@@ -3255,31 +3256,31 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 		// Create literals
 		Variable literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal0", true, csp);
-		literal0.setValue(1);
+		literal0.setValue("Crypto");
 		literal0.setType("");
 		Variable literal1 = CSPFactoryHelper.eINSTANCE.createVariable("literal1", true, csp);
 		literal1.setValue(
 				"{\n  byte[] ivb=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(ivb);\n  IvParameterSpec iv=new IvParameterSpec(ivb);\n  Cipher c=Cipher.getInstance(encryptPassingArgument);\n  c.init(Cipher.ENCRYPT_MODE,key,iv);\n  byte[] res=c.doFinal(data);\n  byte[] ret=new byte[res.length + ivb.length];\n  System.arraycopy(ivb,0,ret,0,ivb.length);\n  System.arraycopy(res,0,ret,ivb.length,ret.length);\n  return ret;\n}\n");
 		literal1.setType("");
 		Variable literal2 = CSPFactoryHelper.eINSTANCE.createVariable("literal2", true, csp);
-		literal2.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
+		literal2.setValue(1);
 		literal2.setType("");
 		Variable literal3 = CSPFactoryHelper.eINSTANCE.createVariable("literal3", true, csp);
 		literal3.setValue(
 				"InvalidKeyException,NoSuchAlgorithmException,NoSuchPaddingException,IllegalBlockSizeException,BadPaddingException,InvalidAlgorithmParameterException");
 		literal3.setType("");
 		Variable literal4 = CSPFactoryHelper.eINSTANCE.createVariable("literal4", true, csp);
-		literal4.setValue(
-				"{\n  byte[] salt=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(salt);\n  PBEKeySpec spec=new PBEKeySpec(pwd,salt,iterations,outputSize);\n  SecretKeyFactory skf=SecretKeyFactory.getInstance(algName);\n  return new SecretKeySpec(skf.generateSecret(spec).getEncoded(),\"AES\");\n}\n");
+		literal4.setValue("byte[] data,SecretKey key,String encryptPassingArgument");
 		literal4.setType("");
 		Variable literal5 = CSPFactoryHelper.eINSTANCE.createVariable("literal5", true, csp);
-		literal5.setValue("Crypto");
+		literal5.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
 		literal5.setType("");
 		Variable literal6 = CSPFactoryHelper.eINSTANCE.createVariable("literal6", true, csp);
-		literal6.setValue("byte[] data,SecretKey key,String encryptPassingArgument");
+		literal6.setValue("Enc");
 		literal6.setType("");
 		Variable literal7 = CSPFactoryHelper.eINSTANCE.createVariable("literal7", true, csp);
-		literal7.setValue("Enc");
+		literal7.setValue(
+				"{\n  byte[] salt=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(salt);\n  PBEKeySpec spec=new PBEKeySpec(pwd,salt,iterations,outputSize);\n  SecretKeyFactory skf=SecretKeyFactory.getInstance(algName);\n  return new SecretKeySpec(skf.generateSecret(spec).getEncoded(),\"AES\");\n}\n");
 		literal7.setType("");
 		Variable literal8 = CSPFactoryHelper.eINSTANCE.createVariable("literal8", true, csp);
 		literal8.setValue(0);
@@ -3291,40 +3292,45 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		// Create attribute variables
 
 		// Create unbound variables
-		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.index", csp);
-		var_methodGetKey_index.setType("int");
-		Variable var_methodEncryption_index = CSPFactoryHelper.eINSTANCE.createVariable("methodEncryption.index", csp);
-		var_methodEncryption_index.setType("int");
+		Variable var_task_package = CSPFactoryHelper.eINSTANCE.createVariable("task.package", csp);
+		var_task_package.setType("String");
 		Variable var_methodPerformEncryption_body = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformEncryption.body", csp);
 		var_methodPerformEncryption_body.setType("String");
-		Variable var_methodPerformGetKey_throws = CSPFactoryHelper.eINSTANCE
-				.createVariable("methodPerformGetKey.throws", csp);
-		var_methodPerformGetKey_throws.setType("String");
+		Variable var_methodEncryption_index = CSPFactoryHelper.eINSTANCE.createVariable("methodEncryption.index", csp);
+		var_methodEncryption_index.setType("int");
 		Variable var_methodPerformEncryption_throws = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformEncryption.throws", csp);
 		var_methodPerformEncryption_throws.setType("String");
-		Variable var_methodPerformGetKey_body = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.body",
-				csp);
-		var_methodPerformGetKey_body.setType("String");
-		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.throws", csp);
-		var_methodGetKey_throws.setType("String");
-		Variable var_task_package = CSPFactoryHelper.eINSTANCE.createVariable("task.package", csp);
-		var_task_package.setType("String");
 		Variable var_methodPerformEncryption_parameters = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformEncryption.parameters", csp);
 		var_methodPerformEncryption_parameters.setType("String");
-		Variable var_sbcJcu_name = CSPFactoryHelper.eINSTANCE.createVariable("sbcJcu.name", csp);
-		var_sbcJcu_name.setType("String");
 		Variable var_methodEncryption_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodEncryption.throws",
 				csp);
 		var_methodEncryption_throws.setType("String");
-		Variable var_methodPerformEncryption_index = CSPFactoryHelper.eINSTANCE
-				.createVariable("methodPerformEncryption.index", csp);
-		var_methodPerformEncryption_index.setType("int");
+		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.index", csp);
+		var_methodGetKey_index.setType("int");
+		Variable var_methodPerformGetKey_throws = CSPFactoryHelper.eINSTANCE
+				.createVariable("methodPerformGetKey.throws", csp);
+		var_methodPerformGetKey_throws.setType("String");
+		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.throws", csp);
+		var_methodGetKey_throws.setType("String");
+		Variable var_sbcJcu_name = CSPFactoryHelper.eINSTANCE.createVariable("sbcJcu.name", csp);
+		var_sbcJcu_name.setType("String");
+		Variable var_methodPerformGetKey_body = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.body",
+				csp);
+		var_methodPerformGetKey_body.setType("String");
 		Variable var_methodPerformGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.index",
 				csp);
 		var_methodPerformGetKey_index.setType("int");
+		Variable var_methodPerformEncryption_index = CSPFactoryHelper.eINSTANCE
+				.createVariable("methodPerformEncryption.index", csp);
+		var_methodPerformEncryption_index.setType("int");
+		Variable var_exprAlgNameLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprAlgNameLiteral.value",
+				csp);
+		var_exprAlgNameLiteral_value.setType("String");
+		Variable var_kda_name = CSPFactoryHelper.eINSTANCE.createVariable("kda.name", csp);
+		var_kda_name.setType("String");
 		Variable var_exprIterationLiteral_value = CSPFactoryHelper.eINSTANCE
 				.createVariable("exprIterationLiteral.value", csp);
 		var_exprIterationLiteral_value.setType("String");
@@ -3337,11 +3343,6 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		var_kda_outputSize.setType("String");
 		Variable var_javaPackage_name = CSPFactoryHelper.eINSTANCE.createVariable("javaPackage.name", csp);
 		var_javaPackage_name.setType("String");
-		Variable var_exprAlgNameLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprAlgNameLiteral.value",
-				csp);
-		var_exprAlgNameLiteral_value.setType("String");
-		Variable var_kda_name = CSPFactoryHelper.eINSTANCE.createVariable("kda.name", csp);
-		var_kda_name.setType("String");
 		Variable var_sbc_name = CSPFactoryHelper.eINSTANCE.createVariable("sbc.name", csp);
 		var_sbc_name.setType("String");
 		Variable var_sbc_mode = CSPFactoryHelper.eINSTANCE.createVariable("sbc.mode", csp);
@@ -3398,43 +3399,43 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 		// Solve CSP
 		setDefaultStringIfNull.setRuleName("NoRuleName");
-		setDefaultStringIfNull.solve(var_methodGetKey_index, literal0);
+		setDefaultStringIfNull.solve(var_task_package, literal0);
 		setDefaultStringIfNull_0.setRuleName("NoRuleName");
-		setDefaultStringIfNull_0.solve(var_methodEncryption_index, literal0);
+		setDefaultStringIfNull_0.solve(var_methodPerformEncryption_body, literal1);
 		setDefaultStringIfNull_1.setRuleName("NoRuleName");
-		setDefaultStringIfNull_1.solve(var_methodPerformEncryption_body, literal1);
+		setDefaultStringIfNull_1.solve(var_methodEncryption_index, literal2);
 		setDefaultStringIfNull_2.setRuleName("NoRuleName");
-		setDefaultStringIfNull_2.solve(var_methodPerformGetKey_throws, literal2);
+		setDefaultStringIfNull_2.solve(var_methodPerformEncryption_throws, literal3);
 		setDefaultStringIfNull_3.setRuleName("NoRuleName");
-		setDefaultStringIfNull_3.solve(var_methodPerformEncryption_throws, literal3);
+		setDefaultStringIfNull_3.solve(var_methodPerformEncryption_parameters, literal4);
 		setDefaultStringIfNull_4.setRuleName("NoRuleName");
-		setDefaultStringIfNull_4.solve(var_methodPerformGetKey_body, literal4);
+		setDefaultStringIfNull_4.solve(var_methodEncryption_throws, literal3);
 		setDefaultStringIfNull_5.setRuleName("NoRuleName");
-		setDefaultStringIfNull_5.solve(var_methodGetKey_throws, literal2);
+		setDefaultStringIfNull_5.solve(var_methodGetKey_index, literal2);
 		setDefaultStringIfNull_6.setRuleName("NoRuleName");
-		setDefaultStringIfNull_6.solve(var_task_package, literal5);
+		setDefaultStringIfNull_6.solve(var_methodPerformGetKey_throws, literal5);
 		setDefaultStringIfNull_7.setRuleName("NoRuleName");
-		setDefaultStringIfNull_7.solve(var_methodPerformEncryption_parameters, literal6);
+		setDefaultStringIfNull_7.solve(var_methodGetKey_throws, literal5);
 		setDefaultStringIfNull_8.setRuleName("NoRuleName");
-		setDefaultStringIfNull_8.solve(var_sbcJcu_name, literal7);
+		setDefaultStringIfNull_8.solve(var_sbcJcu_name, literal6);
 		setDefaultStringIfNull_9.setRuleName("NoRuleName");
-		setDefaultStringIfNull_9.solve(var_methodEncryption_throws, literal3);
+		setDefaultStringIfNull_9.solve(var_methodPerformGetKey_body, literal7);
 		setDefaultStringIfNull_10.setRuleName("NoRuleName");
-		setDefaultStringIfNull_10.solve(var_methodPerformEncryption_index, literal8);
+		setDefaultStringIfNull_10.solve(var_methodPerformGetKey_index, literal8);
 		setDefaultStringIfNull_11.setRuleName("NoRuleName");
-		setDefaultStringIfNull_11.solve(var_methodPerformGetKey_index, literal8);
+		setDefaultStringIfNull_11.solve(var_methodPerformEncryption_index, literal8);
 		setDefaultStringIfNull_12.setRuleName("NoRuleName");
 		setDefaultStringIfNull_12.solve(var_methodPerformGetKey_parameters, literal9);
 		eq.setRuleName("NoRuleName");
 		eq.solve(var_task_package, var_javaPackage_name);
 		eq_0.setRuleName("NoRuleName");
-		eq_0.solve(var_exprIterationLiteral_value, var_kda_iterations);
+		eq_0.solve(var_exprAlgNameLiteral_value, var_kda_name);
 		nameModePadding.setRuleName("NoRuleName");
 		nameModePadding.solve(var_sbc_name, var_sbc_mode, var_sbc_padding, var_exprNameModePadding_value);
 		eq_1.setRuleName("NoRuleName");
-		eq_1.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
+		eq_1.solve(var_exprIterationLiteral_value, var_kda_iterations);
 		eq_2.setRuleName("NoRuleName");
-		eq_2.solve(var_exprAlgNameLiteral_value, var_kda_name);
+		eq_2.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
 
 		// Snapshot pattern match on which CSP is solved
 		return csp;
@@ -3493,9 +3494,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			return null;
 		case RulesPackage.PASSWORD_BASED_ENCRYPTION___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.PASSWORD_BASED_ENCRYPTION___IS_APPROPRIATE_BWD__MATCH_JAVALITERAL_JAVAPACKAGE_JAVAMETHODINVOCATION_JAVALITERAL_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT_JAVAVARIABLEDECLARATION_JAVAVARIABLEDECLARATION_JAVAWORKFLOWMETHOD_JAVALITERAL_JAVAVARIABLEDECLARATION_JAVAOPAQUEMETHOD_JAVASTATEMENT_JAVANAME_JAVALITERAL_JAVAWORKFLOWMETHOD_JAVANAME_JAVANAME_JAVAMETHODINVOCATION_JAVASTATEMENT:
-			return isAppropriate_BWD((Match) arguments.get(0), (JavaLiteral) arguments.get(1),
-					(JavaPackage) arguments.get(2), (JavaMethodInvocation) arguments.get(3),
+		case RulesPackage.PASSWORD_BASED_ENCRYPTION___IS_APPROPRIATE_BWD__MATCH_JAVAPACKAGE_JAVALITERAL_JAVAMETHODINVOCATION_JAVALITERAL_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT_JAVAVARIABLEDECLARATION_JAVAVARIABLEDECLARATION_JAVAWORKFLOWMETHOD_JAVALITERAL_JAVAVARIABLEDECLARATION_JAVAOPAQUEMETHOD_JAVASTATEMENT_JAVANAME_JAVALITERAL_JAVAWORKFLOWMETHOD_JAVANAME_JAVANAME_JAVAMETHODINVOCATION_JAVASTATEMENT:
+			return isAppropriate_BWD((Match) arguments.get(0), (JavaPackage) arguments.get(1),
+					(JavaLiteral) arguments.get(2), (JavaMethodInvocation) arguments.get(3),
 					(JavaLiteral) arguments.get(4), (JavaCompilationUnit) arguments.get(5),
 					(JavaOpaqueMethod) arguments.get(6), (JavaCompilationUnit) arguments.get(7),
 					(JavaVariableDeclaration) arguments.get(8), (JavaVariableDeclaration) arguments.get(9),
@@ -3508,9 +3509,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			return perform_BWD((IsApplicableMatch) arguments.get(0));
 		case RulesPackage.PASSWORD_BASED_ENCRYPTION___IS_APPLICABLE_BWD__MATCH:
 			return isApplicable_BWD((Match) arguments.get(0));
-		case RulesPackage.PASSWORD_BASED_ENCRYPTION___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_JAVALITERAL_JAVAPACKAGE_JAVAMETHODINVOCATION_JAVALITERAL_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT_JAVAVARIABLEDECLARATION_JAVAVARIABLEDECLARATION_JAVAWORKFLOWMETHOD_JAVALITERAL_JAVAVARIABLEDECLARATION_JAVAOPAQUEMETHOD_JAVASTATEMENT_JAVANAME_JAVALITERAL_JAVAWORKFLOWMETHOD_JAVANAME_JAVANAME_JAVAMETHODINVOCATION_JAVASTATEMENT:
-			registerObjectsToMatch_BWD((Match) arguments.get(0), (JavaLiteral) arguments.get(1),
-					(JavaPackage) arguments.get(2), (JavaMethodInvocation) arguments.get(3),
+		case RulesPackage.PASSWORD_BASED_ENCRYPTION___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_JAVAPACKAGE_JAVALITERAL_JAVAMETHODINVOCATION_JAVALITERAL_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT_JAVAVARIABLEDECLARATION_JAVAVARIABLEDECLARATION_JAVAWORKFLOWMETHOD_JAVALITERAL_JAVAVARIABLEDECLARATION_JAVAOPAQUEMETHOD_JAVASTATEMENT_JAVANAME_JAVALITERAL_JAVAWORKFLOWMETHOD_JAVANAME_JAVANAME_JAVAMETHODINVOCATION_JAVASTATEMENT:
+			registerObjectsToMatch_BWD((Match) arguments.get(0), (JavaPackage) arguments.get(1),
+					(JavaLiteral) arguments.get(2), (JavaMethodInvocation) arguments.get(3),
 					(JavaLiteral) arguments.get(4), (JavaCompilationUnit) arguments.get(5),
 					(JavaOpaqueMethod) arguments.get(6), (JavaCompilationUnit) arguments.get(7),
 					(JavaVariableDeclaration) arguments.get(8), (JavaVariableDeclaration) arguments.get(9),
@@ -3520,9 +3521,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 					(JavaWorkflowMethod) arguments.get(17), (JavaName) arguments.get(18), (JavaName) arguments.get(19),
 					(JavaMethodInvocation) arguments.get(20), (JavaStatement) arguments.get(21));
 			return null;
-		case RulesPackage.PASSWORD_BASED_ENCRYPTION___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_JAVALITERAL_JAVAPACKAGE_JAVAMETHODINVOCATION_JAVALITERAL_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT_JAVAVARIABLEDECLARATION_JAVAVARIABLEDECLARATION_JAVAWORKFLOWMETHOD_JAVALITERAL_JAVAVARIABLEDECLARATION_JAVAOPAQUEMETHOD_JAVASTATEMENT_JAVANAME_JAVALITERAL_JAVAWORKFLOWMETHOD_JAVANAME_JAVANAME_JAVAMETHODINVOCATION_JAVASTATEMENT:
-			return isAppropriate_solveCsp_BWD((Match) arguments.get(0), (JavaLiteral) arguments.get(1),
-					(JavaPackage) arguments.get(2), (JavaMethodInvocation) arguments.get(3),
+		case RulesPackage.PASSWORD_BASED_ENCRYPTION___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_JAVAPACKAGE_JAVALITERAL_JAVAMETHODINVOCATION_JAVALITERAL_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT_JAVAVARIABLEDECLARATION_JAVAVARIABLEDECLARATION_JAVAWORKFLOWMETHOD_JAVALITERAL_JAVAVARIABLEDECLARATION_JAVAOPAQUEMETHOD_JAVASTATEMENT_JAVANAME_JAVALITERAL_JAVAWORKFLOWMETHOD_JAVANAME_JAVANAME_JAVAMETHODINVOCATION_JAVASTATEMENT:
+			return isAppropriate_solveCsp_BWD((Match) arguments.get(0), (JavaPackage) arguments.get(1),
+					(JavaLiteral) arguments.get(2), (JavaMethodInvocation) arguments.get(3),
 					(JavaLiteral) arguments.get(4), (JavaCompilationUnit) arguments.get(5),
 					(JavaOpaqueMethod) arguments.get(6), (JavaCompilationUnit) arguments.get(7),
 					(JavaVariableDeclaration) arguments.get(8), (JavaVariableDeclaration) arguments.get(9),
@@ -3533,9 +3534,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 					(JavaMethodInvocation) arguments.get(20), (JavaStatement) arguments.get(21));
 		case RulesPackage.PASSWORD_BASED_ENCRYPTION___IS_APPROPRIATE_CHECK_CSP_BWD__CSP:
 			return isAppropriate_checkCsp_BWD((CSP) arguments.get(0));
-		case RulesPackage.PASSWORD_BASED_ENCRYPTION___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVALITERAL_JAVAPACKAGE_JAVAMETHODINVOCATION_JAVALITERAL_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT_JAVAVARIABLEDECLARATION_JAVAVARIABLEDECLARATION_JAVAWORKFLOWMETHOD_JAVALITERAL_JAVAVARIABLEDECLARATION_JAVAOPAQUEMETHOD_JAVASTATEMENT_JAVANAME_JAVALITERAL_JAVAWORKFLOWMETHOD_JAVANAME_JAVANAME_JAVAMETHODINVOCATION_JAVASTATEMENT:
-			return isApplicable_solveCsp_BWD((IsApplicableMatch) arguments.get(0), (JavaLiteral) arguments.get(1),
-					(JavaPackage) arguments.get(2), (JavaMethodInvocation) arguments.get(3),
+		case RulesPackage.PASSWORD_BASED_ENCRYPTION___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVAPACKAGE_JAVALITERAL_JAVAMETHODINVOCATION_JAVALITERAL_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT_JAVAVARIABLEDECLARATION_JAVAVARIABLEDECLARATION_JAVAWORKFLOWMETHOD_JAVALITERAL_JAVAVARIABLEDECLARATION_JAVAOPAQUEMETHOD_JAVASTATEMENT_JAVANAME_JAVALITERAL_JAVAWORKFLOWMETHOD_JAVANAME_JAVANAME_JAVAMETHODINVOCATION_JAVASTATEMENT:
+			return isApplicable_solveCsp_BWD((IsApplicableMatch) arguments.get(0), (JavaPackage) arguments.get(1),
+					(JavaLiteral) arguments.get(2), (JavaMethodInvocation) arguments.get(3),
 					(JavaLiteral) arguments.get(4), (JavaCompilationUnit) arguments.get(5),
 					(JavaOpaqueMethod) arguments.get(6), (JavaCompilationUnit) arguments.get(7),
 					(JavaVariableDeclaration) arguments.get(8), (JavaVariableDeclaration) arguments.get(9),
@@ -3560,18 +3561,18 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			return null;
 		case RulesPackage.PASSWORD_BASED_ENCRYPTION___CHECK_TYPES_BWD__MATCH:
 			return checkTypes_BWD((Match) arguments.get(0));
-		case RulesPackage.PASSWORD_BASED_ENCRYPTION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_6__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_6((EMoflonEdge) arguments.get(0));
-		case RulesPackage.PASSWORD_BASED_ENCRYPTION___IS_APPROPRIATE_BWD_EMOFLON_EDGE_8__EMOFLONEDGE:
-			return isAppropriate_BWD_EMoflonEdge_8((EMoflonEdge) arguments.get(0));
+		case RulesPackage.PASSWORD_BASED_ENCRYPTION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_9__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_9((EMoflonEdge) arguments.get(0));
+		case RulesPackage.PASSWORD_BASED_ENCRYPTION___IS_APPROPRIATE_BWD_EMOFLON_EDGE_12__EMOFLONEDGE:
+			return isAppropriate_BWD_EMoflonEdge_12((EMoflonEdge) arguments.get(0));
 		case RulesPackage.PASSWORD_BASED_ENCRYPTION___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.PASSWORD_BASED_ENCRYPTION___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH:
 			return checkAttributes_BWD((TripleMatch) arguments.get(0));
 		case RulesPackage.PASSWORD_BASED_ENCRYPTION___IS_APPLICABLE_CC__MATCH_MATCH:
 			return isApplicable_CC((Match) arguments.get(0), (Match) arguments.get(1));
-		case RulesPackage.PASSWORD_BASED_ENCRYPTION___IS_APPLICABLE_SOLVE_CSP_CC__JAVALITERAL_JAVAPACKAGE_JAVAMETHODINVOCATION_JAVALITERAL_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT_JAVAVARIABLEDECLARATION_JAVAVARIABLEDECLARATION_JAVAWORKFLOWMETHOD_JAVALITERAL_JAVAVARIABLEDECLARATION_KEYDERIVATIONALGORITHM_JAVAOPAQUEMETHOD_JAVASTATEMENT_JAVANAME_JAVALITERAL_JAVAWORKFLOWMETHOD_TASK_JAVANAME_SYMMETRICBLOCKCIPHER_JAVANAME_JAVAMETHODINVOCATION_JAVASTATEMENT_MATCH_MATCH:
-			return isApplicable_solveCsp_CC((JavaLiteral) arguments.get(0), (JavaPackage) arguments.get(1),
+		case RulesPackage.PASSWORD_BASED_ENCRYPTION___IS_APPLICABLE_SOLVE_CSP_CC__JAVAPACKAGE_JAVALITERAL_JAVAMETHODINVOCATION_JAVALITERAL_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT_JAVAVARIABLEDECLARATION_JAVAVARIABLEDECLARATION_JAVAWORKFLOWMETHOD_JAVALITERAL_JAVAVARIABLEDECLARATION_KEYDERIVATIONALGORITHM_JAVAOPAQUEMETHOD_JAVASTATEMENT_JAVANAME_JAVALITERAL_JAVAWORKFLOWMETHOD_TASK_JAVANAME_SYMMETRICBLOCKCIPHER_JAVANAME_JAVAMETHODINVOCATION_JAVASTATEMENT_MATCH_MATCH:
+			return isApplicable_solveCsp_CC((JavaPackage) arguments.get(0), (JavaLiteral) arguments.get(1),
 					(JavaMethodInvocation) arguments.get(2), (JavaLiteral) arguments.get(3),
 					(JavaCompilationUnit) arguments.get(4), (JavaOpaqueMethod) arguments.get(5),
 					(JavaCompilationUnit) arguments.get(6), (JavaVariableDeclaration) arguments.get(7),
@@ -3588,8 +3589,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		case RulesPackage.PASSWORD_BASED_ENCRYPTION___CHECK_DEC_FWD__KEYDERIVATIONALGORITHM_TASK_SYMMETRICBLOCKCIPHER:
 			return checkDEC_FWD((KeyDerivationAlgorithm) arguments.get(0), (Task) arguments.get(1),
 					(SymmetricBlockCipher) arguments.get(2));
-		case RulesPackage.PASSWORD_BASED_ENCRYPTION___CHECK_DEC_BWD__JAVALITERAL_JAVAPACKAGE_JAVAMETHODINVOCATION_JAVALITERAL_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT_JAVAVARIABLEDECLARATION_JAVAVARIABLEDECLARATION_JAVAWORKFLOWMETHOD_JAVALITERAL_JAVAVARIABLEDECLARATION_JAVAOPAQUEMETHOD_JAVASTATEMENT_JAVANAME_JAVALITERAL_JAVAWORKFLOWMETHOD_JAVANAME_JAVANAME_JAVAMETHODINVOCATION_JAVASTATEMENT:
-			return checkDEC_BWD((JavaLiteral) arguments.get(0), (JavaPackage) arguments.get(1),
+		case RulesPackage.PASSWORD_BASED_ENCRYPTION___CHECK_DEC_BWD__JAVAPACKAGE_JAVALITERAL_JAVAMETHODINVOCATION_JAVALITERAL_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT_JAVAVARIABLEDECLARATION_JAVAVARIABLEDECLARATION_JAVAWORKFLOWMETHOD_JAVALITERAL_JAVAVARIABLEDECLARATION_JAVAOPAQUEMETHOD_JAVASTATEMENT_JAVANAME_JAVALITERAL_JAVAWORKFLOWMETHOD_JAVANAME_JAVANAME_JAVAMETHODINVOCATION_JAVASTATEMENT:
+			return checkDEC_BWD((JavaPackage) arguments.get(0), (JavaLiteral) arguments.get(1),
 					(JavaMethodInvocation) arguments.get(2), (JavaLiteral) arguments.get(3),
 					(JavaCompilationUnit) arguments.get(4), (JavaOpaqueMethod) arguments.get(5),
 					(JavaCompilationUnit) arguments.get(6), (JavaVariableDeclaration) arguments.get(7),
@@ -3758,8 +3759,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 	public static final Object[] pattern_PasswordBasedEncryption_1_1_performtransformation_greenFFFFFFFFFFFFFFBFFFFFBFBFFFFB(
 			KeyDerivationAlgorithm kda, Task task, SymmetricBlockCipher sbc, CSP csp) {
-		JavaLiteral exprIterationLiteral = SimpleJavaFactory.eINSTANCE.createJavaLiteral();
 		JavaPackage javaPackage = SimpleJavaFactory.eINSTANCE.createJavaPackage();
+		JavaLiteral exprIterationLiteral = SimpleJavaFactory.eINSTANCE.createJavaLiteral();
 		JavaMethodInvocation exprRetGetKey = SimpleJavaFactory.eINSTANCE.createJavaMethodInvocation();
 		JavaLiteral exprOutputSizeLiteral = SimpleJavaFactory.eINSTANCE.createJavaLiteral();
 		SymmetricBlockCipherToJcu sbc2Jcu = CryptoConfigToJavaFactory.eINSTANCE.createSymmetricBlockCipherToJcu();
@@ -3782,15 +3783,15 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		JavaMethodInvocation exprRetPerformEncryption = SimpleJavaFactory.eINSTANCE.createJavaMethodInvocation();
 		JavaStatement statRetGetKey = SimpleJavaFactory.eINSTANCE.createJavaStatement();
 		KeyDerivationAlgorithmToJcu kda2Jcu = CryptoConfigToJavaFactory.eINSTANCE.createKeyDerivationAlgorithmToJcu();
+		Object _localVariable_0 = csp.getValue("javaPackage", "name");
 		int exprIterationLiteral_index_prime = Integer.valueOf(2);
-		Object _localVariable_0 = csp.getValue("exprIterationLiteral", "value");
-		Object _localVariable_1 = csp.getValue("javaPackage", "name");
+		Object _localVariable_1 = csp.getValue("exprIterationLiteral", "value");
 		String exprRetGetKey_name_prime = "performGetKey";
 		int exprOutputSizeLiteral_index_prime = Integer.valueOf(3);
 		Object _localVariable_2 = csp.getValue("exprOutputSizeLiteral", "value");
 		String kdaJcu_name_prime = "KeyDeriv";
-		String methodPerformEncryption_type_prime = "byte[] ";
 		String methodPerformEncryption_modifier_prime = "private";
+		String methodPerformEncryption_type_prime = "byte[] ";
 		String methodPerformEncryption_name_prime = "performEncryption";
 		Object _localVariable_3 = csp.getValue("methodPerformEncryption", "body");
 		Object _localVariable_4 = csp.getValue("methodPerformEncryption", "throws");
@@ -3800,12 +3801,12 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		int keyEncryption_index_prime = Integer.valueOf(1);
 		String keyEncryption_name_prime = "key";
 		String keyEncryption_type_prime = "SecretKey";
+		String dataEncryption_type_prime = "byte[]";
 		int dataEncryption_index_prime = Integer.valueOf(0);
 		String dataEncryption_name_prime = "data";
-		String dataEncryption_type_prime = "byte[]";
 		String methodGetKey_modifier_prime = "public";
-		String methodGetKey_type_prime = "SecretKey ";
 		String methodGetKey_name_prime = "getKey";
+		String methodGetKey_type_prime = "SecretKey ";
 		Object _localVariable_8 = csp.getValue("methodGetKey", "index");
 		Object _localVariable_9 = csp.getValue("methodGetKey", "throws");
 		int exprAlgNameLiteral_index_prime = Integer.valueOf(1);
@@ -3813,21 +3814,21 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		int pwdDeclaration_index_prime = Integer.valueOf(0);
 		String pwdDeclaration_type_prime = "char[]";
 		String pwdDeclaration_name_prime = "pwd";
-		String methodPerformGetKey_modifier_prime = "private";
 		String methodPerformGetKey_type_prime = "SecretKey ";
+		String methodPerformGetKey_modifier_prime = "private";
 		String methodPerformGetKey_name_prime = "performGetKey";
 		Object _localVariable_11 = csp.getValue("methodPerformGetKey", "throws");
 		Object _localVariable_12 = csp.getValue("methodPerformGetKey", "body");
 		Object _localVariable_13 = csp.getValue("methodPerformGetKey", "index");
 		Object _localVariable_14 = csp.getValue("methodPerformGetKey", "parameters");
 		boolean statRetPerformEncryption_return_prime = Boolean.valueOf(true);
-		int exprKeyName_index_prime = Integer.valueOf(1);
 		String exprKeyName_identifier_prime = "key";
+		int exprKeyName_index_prime = Integer.valueOf(1);
 		int exprNameModePadding_index_prime = Integer.valueOf(2);
 		Object _localVariable_15 = csp.getValue("exprNameModePadding", "value");
 		String methodEncryption_type_prime = "byte[] ";
-		String methodEncryption_name_prime = "encrypt";
 		String methodEncryption_modifier_prime = "public";
+		String methodEncryption_name_prime = "encrypt";
 		Object _localVariable_16 = csp.getValue("methodEncryption", "index");
 		Object _localVariable_17 = csp.getValue("methodEncryption", "throws");
 		String exprPwdName_identifier_prime = "pwd";
@@ -3862,15 +3863,15 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		statRetGetKey.setExpr(exprRetGetKey);
 		kda2Jcu.setSource(kda);
 		kda2Jcu.setTarget(kdaJcu);
+		String javaPackage_name_prime = (String) _localVariable_0;
 		exprIterationLiteral.setIndex(Integer.valueOf(exprIterationLiteral_index_prime));
-		String exprIterationLiteral_value_prime = (String) _localVariable_0;
-		String javaPackage_name_prime = (String) _localVariable_1;
+		String exprIterationLiteral_value_prime = (String) _localVariable_1;
 		exprRetGetKey.setName(exprRetGetKey_name_prime);
 		exprOutputSizeLiteral.setIndex(Integer.valueOf(exprOutputSizeLiteral_index_prime));
 		String exprOutputSizeLiteral_value_prime = (String) _localVariable_2;
 		kdaJcu.setName(kdaJcu_name_prime);
-		methodPerformEncryption.setType(methodPerformEncryption_type_prime);
 		methodPerformEncryption.setModifier(methodPerformEncryption_modifier_prime);
+		methodPerformEncryption.setType(methodPerformEncryption_type_prime);
 		methodPerformEncryption.setName(methodPerformEncryption_name_prime);
 		String methodPerformEncryption_body_prime = (String) _localVariable_3;
 		String methodPerformEncryption_throws_prime = (String) _localVariable_4;
@@ -3880,12 +3881,12 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		keyEncryption.setIndex(Integer.valueOf(keyEncryption_index_prime));
 		keyEncryption.setName(keyEncryption_name_prime);
 		keyEncryption.setType(keyEncryption_type_prime);
+		dataEncryption.setType(dataEncryption_type_prime);
 		dataEncryption.setIndex(Integer.valueOf(dataEncryption_index_prime));
 		dataEncryption.setName(dataEncryption_name_prime);
-		dataEncryption.setType(dataEncryption_type_prime);
 		methodGetKey.setModifier(methodGetKey_modifier_prime);
-		methodGetKey.setType(methodGetKey_type_prime);
 		methodGetKey.setName(methodGetKey_name_prime);
+		methodGetKey.setType(methodGetKey_type_prime);
 		int methodGetKey_index_prime = (int) _localVariable_8;
 		String methodGetKey_throws_prime = (String) _localVariable_9;
 		exprAlgNameLiteral.setIndex(Integer.valueOf(exprAlgNameLiteral_index_prime));
@@ -3893,21 +3894,21 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		pwdDeclaration.setIndex(Integer.valueOf(pwdDeclaration_index_prime));
 		pwdDeclaration.setType(pwdDeclaration_type_prime);
 		pwdDeclaration.setName(pwdDeclaration_name_prime);
-		methodPerformGetKey.setModifier(methodPerformGetKey_modifier_prime);
 		methodPerformGetKey.setType(methodPerformGetKey_type_prime);
+		methodPerformGetKey.setModifier(methodPerformGetKey_modifier_prime);
 		methodPerformGetKey.setName(methodPerformGetKey_name_prime);
 		String methodPerformGetKey_throws_prime = (String) _localVariable_11;
 		String methodPerformGetKey_body_prime = (String) _localVariable_12;
 		int methodPerformGetKey_index_prime = (int) _localVariable_13;
 		String methodPerformGetKey_parameters_prime = (String) _localVariable_14;
 		statRetPerformEncryption.setReturn(Boolean.valueOf(statRetPerformEncryption_return_prime));
-		exprKeyName.setIndex(Integer.valueOf(exprKeyName_index_prime));
 		exprKeyName.setIdentifier(exprKeyName_identifier_prime);
+		exprKeyName.setIndex(Integer.valueOf(exprKeyName_index_prime));
 		exprNameModePadding.setIndex(Integer.valueOf(exprNameModePadding_index_prime));
 		String exprNameModePadding_value_prime = (String) _localVariable_15;
 		methodEncryption.setType(methodEncryption_type_prime);
-		methodEncryption.setName(methodEncryption_name_prime);
 		methodEncryption.setModifier(methodEncryption_modifier_prime);
+		methodEncryption.setName(methodEncryption_name_prime);
 		int methodEncryption_index_prime = (int) _localVariable_16;
 		String methodEncryption_throws_prime = (String) _localVariable_17;
 		exprPwdName.setIdentifier(exprPwdName_identifier_prime);
@@ -3916,8 +3917,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		exprDataName.setIdentifier(exprDataName_identifier_prime);
 		exprRetPerformEncryption.setName(exprRetPerformEncryption_name_prime);
 		statRetGetKey.setReturn(Boolean.valueOf(statRetGetKey_return_prime));
-		exprIterationLiteral.setValue(exprIterationLiteral_value_prime);
 		javaPackage.setName(javaPackage_name_prime);
+		exprIterationLiteral.setValue(exprIterationLiteral_value_prime);
 		exprOutputSizeLiteral.setValue(exprOutputSizeLiteral_value_prime);
 		methodPerformEncryption.setBody(methodPerformEncryption_body_prime);
 		methodPerformEncryption.setThrows(methodPerformEncryption_throws_prime);
@@ -3934,7 +3935,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		exprNameModePadding.setValue(exprNameModePadding_value_prime);
 		methodEncryption.setIndex(Integer.valueOf(methodEncryption_index_prime));
 		methodEncryption.setThrows(methodEncryption_throws_prime);
-		return new Object[] { exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu, kdaJcu,
+		return new Object[] { javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu, kdaJcu,
 				methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, t2c, exprAlgNameLiteral,
 				pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption, exprKeyName, exprNameModePadding,
 				methodEncryption, task, exprPwdName, sbc, exprDataName, exprRetPerformEncryption, statRetGetKey,
@@ -3942,7 +3943,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_1_2_collecttranslatedelements_blackBBBBBBBBBBBBBBBBBBBBBBBBBBB(
-			JavaLiteral exprIterationLiteral, JavaPackage javaPackage, JavaMethodInvocation exprRetGetKey,
+			JavaPackage javaPackage, JavaLiteral exprIterationLiteral, JavaMethodInvocation exprRetGetKey,
 			JavaLiteral exprOutputSizeLiteral, SymmetricBlockCipherToJcu sbc2Jcu, JavaCompilationUnit kdaJcu,
 			JavaOpaqueMethod methodPerformEncryption, JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption,
 			JavaVariableDeclaration dataEncryption, JavaWorkflowMethod methodGetKey, TaskToJavaPackage t2c,
@@ -3969,8 +3970,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																	if (!exprDataName.equals(exprPwdName)) {
 																		if (!statRetGetKey
 																				.equals(statRetPerformEncryption)) {
-																			return new Object[] { exprIterationLiteral,
-																					javaPackage, exprRetGetKey,
+																			return new Object[] { javaPackage,
+																					exprIterationLiteral, exprRetGetKey,
 																					exprOutputSizeLiteral, sbc2Jcu,
 																					kdaJcu, methodPerformEncryption,
 																					sbcJcu, keyEncryption,
@@ -4004,7 +4005,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_1_2_collecttranslatedelements_greenFBBBBBBBBBBBBBBBBBBBBBBBBBBB(
-			JavaLiteral exprIterationLiteral, JavaPackage javaPackage, JavaMethodInvocation exprRetGetKey,
+			JavaPackage javaPackage, JavaLiteral exprIterationLiteral, JavaMethodInvocation exprRetGetKey,
 			JavaLiteral exprOutputSizeLiteral, SymmetricBlockCipherToJcu sbc2Jcu, JavaCompilationUnit kdaJcu,
 			JavaOpaqueMethod methodPerformEncryption, JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption,
 			JavaVariableDeclaration dataEncryption, JavaWorkflowMethod methodGetKey, TaskToJavaPackage t2c,
@@ -4014,8 +4015,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			SymmetricBlockCipher sbc, JavaName exprDataName, JavaMethodInvocation exprRetPerformEncryption,
 			JavaStatement statRetGetKey, KeyDerivationAlgorithmToJcu kda2Jcu) {
 		PerformRuleResult ruleresult = RuntimeFactory.eINSTANCE.createPerformRuleResult();
-		ruleresult.getCreatedElements().add(exprIterationLiteral);
 		ruleresult.getCreatedElements().add(javaPackage);
+		ruleresult.getCreatedElements().add(exprIterationLiteral);
 		ruleresult.getCreatedElements().add(exprRetGetKey);
 		ruleresult.getCreatedElements().add(exprOutputSizeLiteral);
 		ruleresult.getCreatedLinkElements().add(sbc2Jcu);
@@ -4041,7 +4042,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		ruleresult.getCreatedElements().add(exprRetPerformEncryption);
 		ruleresult.getCreatedElements().add(statRetGetKey);
 		ruleresult.getCreatedLinkElements().add(kda2Jcu);
-		return new Object[] { ruleresult, exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral,
+		return new Object[] { ruleresult, javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral,
 				sbc2Jcu, kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, t2c,
 				exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption, exprKeyName,
 				exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName, exprRetPerformEncryption,
@@ -4049,75 +4050,73 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_1_3_bookkeepingforedges_blackBBBBBBBBBBBBBBBBBBBBBBBBBBBB(
-			PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject javaPackage, EObject exprRetGetKey,
+			PerformRuleResult ruleresult, EObject javaPackage, EObject exprIterationLiteral, EObject exprRetGetKey,
 			EObject exprOutputSizeLiteral, EObject sbc2Jcu, EObject kdaJcu, EObject methodPerformEncryption,
 			EObject sbcJcu, EObject keyEncryption, EObject dataEncryption, EObject methodGetKey, EObject t2c,
 			EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda, EObject methodPerformGetKey,
 			EObject statRetPerformEncryption, EObject exprKeyName, EObject exprNameModePadding,
 			EObject methodEncryption, EObject task, EObject exprPwdName, EObject sbc, EObject exprDataName,
 			EObject exprRetPerformEncryption, EObject statRetGetKey, EObject kda2Jcu) {
-		if (!exprIterationLiteral.equals(javaPackage)) {
-			if (!exprIterationLiteral.equals(exprRetGetKey)) {
-				if (!exprIterationLiteral.equals(exprOutputSizeLiteral)) {
-					if (!exprIterationLiteral.equals(sbc2Jcu)) {
-						if (!exprIterationLiteral.equals(kdaJcu)) {
-							if (!exprIterationLiteral.equals(methodPerformEncryption)) {
-								if (!exprIterationLiteral.equals(sbcJcu)) {
-									if (!exprIterationLiteral.equals(keyEncryption)) {
-										if (!exprIterationLiteral.equals(methodGetKey)) {
-											if (!exprIterationLiteral.equals(t2c)) {
-												if (!exprIterationLiteral.equals(pwdDeclaration)) {
-													if (!exprIterationLiteral.equals(kda)) {
-														if (!exprIterationLiteral.equals(methodPerformGetKey)) {
-															if (!exprIterationLiteral
-																	.equals(statRetPerformEncryption)) {
-																if (!exprIterationLiteral.equals(exprKeyName)) {
-																	if (!exprIterationLiteral
-																			.equals(exprNameModePadding)) {
-																		if (!exprIterationLiteral
-																				.equals(methodEncryption)) {
-																			if (!exprIterationLiteral.equals(task)) {
-																				if (!exprIterationLiteral
-																						.equals(exprPwdName)) {
+		if (!javaPackage.equals(sbc2Jcu)) {
+			if (!javaPackage.equals(kdaJcu)) {
+				if (!javaPackage.equals(methodPerformEncryption)) {
+					if (!javaPackage.equals(sbcJcu)) {
+						if (!javaPackage.equals(keyEncryption)) {
+							if (!javaPackage.equals(methodGetKey)) {
+								if (!javaPackage.equals(t2c)) {
+									if (!javaPackage.equals(pwdDeclaration)) {
+										if (!javaPackage.equals(kda)) {
+											if (!javaPackage.equals(methodPerformGetKey)) {
+												if (!javaPackage.equals(statRetPerformEncryption)) {
+													if (!javaPackage.equals(methodEncryption)) {
+														if (!javaPackage.equals(task)) {
+															if (!javaPackage.equals(sbc)) {
+																if (!javaPackage.equals(statRetGetKey)) {
+																	if (!javaPackage.equals(kda2Jcu)) {
+																		if (!exprIterationLiteral.equals(javaPackage)) {
+																			if (!exprIterationLiteral
+																					.equals(exprRetGetKey)) {
+																				if (!exprIterationLiteral.equals(
+																						exprOutputSizeLiteral)) {
 																					if (!exprIterationLiteral
-																							.equals(sbc)) {
+																							.equals(sbc2Jcu)) {
 																						if (!exprIterationLiteral
-																								.equals(exprRetPerformEncryption)) {
+																								.equals(kdaJcu)) {
 																							if (!exprIterationLiteral
-																									.equals(statRetGetKey)) {
+																									.equals(methodPerformEncryption)) {
 																								if (!exprIterationLiteral
-																										.equals(kda2Jcu)) {
-																									if (!javaPackage
-																											.equals(sbc2Jcu)) {
-																										if (!javaPackage
-																												.equals(kdaJcu)) {
-																											if (!javaPackage
-																													.equals(methodPerformEncryption)) {
-																												if (!javaPackage
-																														.equals(sbcJcu)) {
-																													if (!javaPackage
-																															.equals(keyEncryption)) {
-																														if (!javaPackage
-																																.equals(methodGetKey)) {
-																															if (!javaPackage
-																																	.equals(t2c)) {
-																																if (!javaPackage
-																																		.equals(pwdDeclaration)) {
-																																	if (!javaPackage
-																																			.equals(kda)) {
-																																		if (!javaPackage
-																																				.equals(methodPerformGetKey)) {
-																																			if (!javaPackage
-																																					.equals(statRetPerformEncryption)) {
-																																				if (!javaPackage
-																																						.equals(methodEncryption)) {
-																																					if (!javaPackage
-																																							.equals(task)) {
-																																						if (!javaPackage
-																																								.equals(sbc)) {
-																																							if (!javaPackage
+																										.equals(sbcJcu)) {
+																									if (!exprIterationLiteral
+																											.equals(keyEncryption)) {
+																										if (!exprIterationLiteral
+																												.equals(methodGetKey)) {
+																											if (!exprIterationLiteral
+																													.equals(t2c)) {
+																												if (!exprIterationLiteral
+																														.equals(pwdDeclaration)) {
+																													if (!exprIterationLiteral
+																															.equals(kda)) {
+																														if (!exprIterationLiteral
+																																.equals(methodPerformGetKey)) {
+																															if (!exprIterationLiteral
+																																	.equals(statRetPerformEncryption)) {
+																																if (!exprIterationLiteral
+																																		.equals(exprKeyName)) {
+																																	if (!exprIterationLiteral
+																																			.equals(exprNameModePadding)) {
+																																		if (!exprIterationLiteral
+																																				.equals(methodEncryption)) {
+																																			if (!exprIterationLiteral
+																																					.equals(task)) {
+																																				if (!exprIterationLiteral
+																																						.equals(exprPwdName)) {
+																																					if (!exprIterationLiteral
+																																							.equals(sbc)) {
+																																						if (!exprIterationLiteral
+																																								.equals(exprRetPerformEncryption)) {
+																																							if (!exprIterationLiteral
 																																									.equals(statRetGetKey)) {
-																																								if (!javaPackage
+																																								if (!exprIterationLiteral
 																																										.equals(kda2Jcu)) {
 																																									if (!exprRetGetKey
 																																											.equals(javaPackage)) {
@@ -4282,9 +4281,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																																																																																									if (!keyEncryption
 																																																																																																																											.equals(statRetGetKey)) {
 																																																																																																																										if (!dataEncryption
-																																																																																																																												.equals(exprIterationLiteral)) {
+																																																																																																																												.equals(javaPackage)) {
 																																																																																																																											if (!dataEncryption
-																																																																																																																													.equals(javaPackage)) {
+																																																																																																																													.equals(exprIterationLiteral)) {
 																																																																																																																												if (!dataEncryption
 																																																																																																																														.equals(exprRetGetKey)) {
 																																																																																																																													if (!dataEncryption
@@ -4356,9 +4355,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																																																																																																																														if (!t2c.equals(
 																																																																																																																																																																task)) {
 																																																																																																																																																															if (!exprAlgNameLiteral
-																																																																																																																																																																	.equals(exprIterationLiteral)) {
+																																																																																																																																																																	.equals(javaPackage)) {
 																																																																																																																																																																if (!exprAlgNameLiteral
-																																																																																																																																																																		.equals(javaPackage)) {
+																																																																																																																																																																		.equals(exprIterationLiteral)) {
 																																																																																																																																																																	if (!exprAlgNameLiteral
 																																																																																																																																																																			.equals(exprRetGetKey)) {
 																																																																																																																																																																		if (!exprAlgNameLiteral
@@ -4628,9 +4627,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																																																																																																																																																																																																																																																																						if (!sbc.equals(
 																																																																																																																																																																																																																																																																																																								statRetGetKey)) {
 																																																																																																																																																																																																																																																																																																							if (!exprDataName
-																																																																																																																																																																																																																																																																																																									.equals(exprIterationLiteral)) {
+																																																																																																																																																																																																																																																																																																									.equals(javaPackage)) {
 																																																																																																																																																																																																																																																																																																								if (!exprDataName
-																																																																																																																																																																																																																																																																																																										.equals(javaPackage)) {
+																																																																																																																																																																																																																																																																																																										.equals(exprIterationLiteral)) {
 																																																																																																																																																																																																																																																																																																									if (!exprDataName
 																																																																																																																																																																																																																																																																																																											.equals(exprRetGetKey)) {
 																																																																																																																																																																																																																																																																																																										if (!exprDataName
@@ -4745,8 +4744,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																																																																																																																																																																																																																																																																																																																																		.equals(statRetGetKey)) {
 																																																																																																																																																																																																																																																																																																																																																																	return new Object[] {
 																																																																																																																																																																																																																																																																																																																																																																			ruleresult,
-																																																																																																																																																																																																																																																																																																																																																																			exprIterationLiteral,
 																																																																																																																																																																																																																																																																																																																																																																			javaPackage,
+																																																																																																																																																																																																																																																																																																																																																																			exprIterationLiteral,
 																																																																																																																																																																																																																																																																																																																																																																			exprRetGetKey,
 																																																																																																																																																																																																																																																																																																																																																																			exprOutputSizeLiteral,
 																																																																																																																																																																																																																																																																																																																																																																			sbc2Jcu,
@@ -5127,7 +5126,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_1_3_bookkeepingforedges_greenBBBBBBBBBBBBBBBBBBBBBBBBBBBBFFFFFFFFFFFFFFFFFFFFFFFFFFFF(
-			PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject javaPackage, EObject exprRetGetKey,
+			PerformRuleResult ruleresult, EObject javaPackage, EObject exprIterationLiteral, EObject exprRetGetKey,
 			EObject exprOutputSizeLiteral, EObject sbc2Jcu, EObject kdaJcu, EObject methodPerformEncryption,
 			EObject sbcJcu, EObject keyEncryption, EObject dataEncryption, EObject methodGetKey, EObject t2c,
 			EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda, EObject methodPerformGetKey,
@@ -5142,12 +5141,12 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		EMoflonEdge statRetGetKey__exprRetGetKey____expr = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge kdaJcu__methodGetKey____methods = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge sbcJcu__methodEncryption____methods = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge t2c__task____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge exprRetPerformEncryption__exprDataName____arguments = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge t2c__task____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge task__kda____algorithms = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge methodEncryption__statRetPerformEncryption____statements = RuntimeFactory.eINSTANCE
 				.createEMoflonEdge();
 		EMoflonEdge kda2Jcu__kda____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge task__kda____algorithms = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge sbc2Jcu__sbcJcu____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge methodEncryption__keyEncryption____params = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge methodGetKey__pwdDeclaration____params = RuntimeFactory.eINSTANCE.createEMoflonEdge();
@@ -5161,8 +5160,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		EMoflonEdge kdaJcu__methodPerformGetKey____methods = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge exprRetPerformEncryption__exprNameModePadding____arguments = RuntimeFactory.eINSTANCE
 				.createEMoflonEdge();
-		EMoflonEdge sbcJcu__methodPerformEncryption____methods = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge sbc2Jcu__sbc____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge sbcJcu__methodPerformEncryption____methods = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge exprRetGetKey__exprAlgNameLiteral____arguments = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge exprRetGetKey__exprIterationLiteral____arguments = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "PasswordBasedEncryption";
@@ -5173,11 +5172,11 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		String statRetGetKey__exprRetGetKey____expr_name_prime = "expr";
 		String kdaJcu__methodGetKey____methods_name_prime = "methods";
 		String sbcJcu__methodEncryption____methods_name_prime = "methods";
-		String t2c__task____source_name_prime = "source";
 		String exprRetPerformEncryption__exprDataName____arguments_name_prime = "arguments";
+		String t2c__task____source_name_prime = "source";
+		String task__kda____algorithms_name_prime = "algorithms";
 		String methodEncryption__statRetPerformEncryption____statements_name_prime = "statements";
 		String kda2Jcu__kda____source_name_prime = "source";
-		String task__kda____algorithms_name_prime = "algorithms";
 		String sbc2Jcu__sbcJcu____target_name_prime = "target";
 		String methodEncryption__keyEncryption____params_name_prime = "params";
 		String methodGetKey__pwdDeclaration____params_name_prime = "params";
@@ -5190,8 +5189,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		String exprRetGetKey__exprOutputSizeLiteral____arguments_name_prime = "arguments";
 		String kdaJcu__methodPerformGetKey____methods_name_prime = "methods";
 		String exprRetPerformEncryption__exprNameModePadding____arguments_name_prime = "arguments";
-		String sbcJcu__methodPerformEncryption____methods_name_prime = "methods";
 		String sbc2Jcu__sbc____source_name_prime = "source";
+		String sbcJcu__methodPerformEncryption____methods_name_prime = "methods";
 		String exprRetGetKey__exprAlgNameLiteral____arguments_name_prime = "arguments";
 		String exprRetGetKey__exprIterationLiteral____arguments_name_prime = "arguments";
 		exprRetPerformEncryption__exprKeyName____arguments.setSrc(exprRetPerformEncryption);
@@ -5215,21 +5214,21 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		sbcJcu__methodEncryption____methods.setSrc(sbcJcu);
 		sbcJcu__methodEncryption____methods.setTrg(methodEncryption);
 		ruleresult.getCreatedEdges().add(sbcJcu__methodEncryption____methods);
-		t2c__task____source.setSrc(t2c);
-		t2c__task____source.setTrg(task);
-		ruleresult.getCreatedEdges().add(t2c__task____source);
 		exprRetPerformEncryption__exprDataName____arguments.setSrc(exprRetPerformEncryption);
 		exprRetPerformEncryption__exprDataName____arguments.setTrg(exprDataName);
 		ruleresult.getCreatedEdges().add(exprRetPerformEncryption__exprDataName____arguments);
+		t2c__task____source.setSrc(t2c);
+		t2c__task____source.setTrg(task);
+		ruleresult.getCreatedEdges().add(t2c__task____source);
+		task__kda____algorithms.setSrc(task);
+		task__kda____algorithms.setTrg(kda);
+		ruleresult.getTranslatedEdges().add(task__kda____algorithms);
 		methodEncryption__statRetPerformEncryption____statements.setSrc(methodEncryption);
 		methodEncryption__statRetPerformEncryption____statements.setTrg(statRetPerformEncryption);
 		ruleresult.getCreatedEdges().add(methodEncryption__statRetPerformEncryption____statements);
 		kda2Jcu__kda____source.setSrc(kda2Jcu);
 		kda2Jcu__kda____source.setTrg(kda);
 		ruleresult.getCreatedEdges().add(kda2Jcu__kda____source);
-		task__kda____algorithms.setSrc(task);
-		task__kda____algorithms.setTrg(kda);
-		ruleresult.getTranslatedEdges().add(task__kda____algorithms);
 		sbc2Jcu__sbcJcu____target.setSrc(sbc2Jcu);
 		sbc2Jcu__sbcJcu____target.setTrg(sbcJcu);
 		ruleresult.getCreatedEdges().add(sbc2Jcu__sbcJcu____target);
@@ -5266,12 +5265,12 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		exprRetPerformEncryption__exprNameModePadding____arguments.setSrc(exprRetPerformEncryption);
 		exprRetPerformEncryption__exprNameModePadding____arguments.setTrg(exprNameModePadding);
 		ruleresult.getCreatedEdges().add(exprRetPerformEncryption__exprNameModePadding____arguments);
-		sbcJcu__methodPerformEncryption____methods.setSrc(sbcJcu);
-		sbcJcu__methodPerformEncryption____methods.setTrg(methodPerformEncryption);
-		ruleresult.getCreatedEdges().add(sbcJcu__methodPerformEncryption____methods);
 		sbc2Jcu__sbc____source.setSrc(sbc2Jcu);
 		sbc2Jcu__sbc____source.setTrg(sbc);
 		ruleresult.getCreatedEdges().add(sbc2Jcu__sbc____source);
+		sbcJcu__methodPerformEncryption____methods.setSrc(sbcJcu);
+		sbcJcu__methodPerformEncryption____methods.setTrg(methodPerformEncryption);
+		ruleresult.getCreatedEdges().add(sbcJcu__methodPerformEncryption____methods);
 		exprRetGetKey__exprAlgNameLiteral____arguments.setSrc(exprRetGetKey);
 		exprRetGetKey__exprAlgNameLiteral____arguments.setTrg(exprAlgNameLiteral);
 		ruleresult.getCreatedEdges().add(exprRetGetKey__exprAlgNameLiteral____arguments);
@@ -5288,13 +5287,13 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		statRetGetKey__exprRetGetKey____expr.setName(statRetGetKey__exprRetGetKey____expr_name_prime);
 		kdaJcu__methodGetKey____methods.setName(kdaJcu__methodGetKey____methods_name_prime);
 		sbcJcu__methodEncryption____methods.setName(sbcJcu__methodEncryption____methods_name_prime);
-		t2c__task____source.setName(t2c__task____source_name_prime);
 		exprRetPerformEncryption__exprDataName____arguments
 				.setName(exprRetPerformEncryption__exprDataName____arguments_name_prime);
+		t2c__task____source.setName(t2c__task____source_name_prime);
+		task__kda____algorithms.setName(task__kda____algorithms_name_prime);
 		methodEncryption__statRetPerformEncryption____statements
 				.setName(methodEncryption__statRetPerformEncryption____statements_name_prime);
 		kda2Jcu__kda____source.setName(kda2Jcu__kda____source_name_prime);
-		task__kda____algorithms.setName(task__kda____algorithms_name_prime);
 		sbc2Jcu__sbcJcu____target.setName(sbc2Jcu__sbcJcu____target_name_prime);
 		methodEncryption__keyEncryption____params.setName(methodEncryption__keyEncryption____params_name_prime);
 		methodGetKey__pwdDeclaration____params.setName(methodGetKey__pwdDeclaration____params_name_prime);
@@ -5309,40 +5308,41 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		kdaJcu__methodPerformGetKey____methods.setName(kdaJcu__methodPerformGetKey____methods_name_prime);
 		exprRetPerformEncryption__exprNameModePadding____arguments
 				.setName(exprRetPerformEncryption__exprNameModePadding____arguments_name_prime);
-		sbcJcu__methodPerformEncryption____methods.setName(sbcJcu__methodPerformEncryption____methods_name_prime);
 		sbc2Jcu__sbc____source.setName(sbc2Jcu__sbc____source_name_prime);
+		sbcJcu__methodPerformEncryption____methods.setName(sbcJcu__methodPerformEncryption____methods_name_prime);
 		exprRetGetKey__exprAlgNameLiteral____arguments
 				.setName(exprRetGetKey__exprAlgNameLiteral____arguments_name_prime);
 		exprRetGetKey__exprIterationLiteral____arguments
 				.setName(exprRetGetKey__exprIterationLiteral____arguments_name_prime);
-		return new Object[] { ruleresult, exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral,
+		return new Object[] { ruleresult, javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral,
 				sbc2Jcu, kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, t2c,
 				exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption, exprKeyName,
 				exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName, exprRetPerformEncryption,
 				statRetGetKey, kda2Jcu, exprRetPerformEncryption__exprKeyName____arguments,
 				methodGetKey__statRetGetKey____statements, exprRetGetKey__exprPwdName____arguments,
 				statRetPerformEncryption__exprRetPerformEncryption____expr, statRetGetKey__exprRetGetKey____expr,
-				kdaJcu__methodGetKey____methods, sbcJcu__methodEncryption____methods, t2c__task____source,
-				exprRetPerformEncryption__exprDataName____arguments,
+				kdaJcu__methodGetKey____methods, sbcJcu__methodEncryption____methods,
+				exprRetPerformEncryption__exprDataName____arguments, t2c__task____source, task__kda____algorithms,
 				methodEncryption__statRetPerformEncryption____statements, kda2Jcu__kda____source,
-				task__kda____algorithms, sbc2Jcu__sbcJcu____target, methodEncryption__keyEncryption____params,
+				sbc2Jcu__sbcJcu____target, methodEncryption__keyEncryption____params,
 				methodGetKey__pwdDeclaration____params, javaPackage__sbcJcu____cunits, javaPackage__kdaJcu____cunits,
 				task__sbc____algorithms, kda2Jcu__kdaJcu____target, methodEncryption__dataEncryption____params,
 				t2c__javaPackage____target, exprRetGetKey__exprOutputSizeLiteral____arguments,
 				kdaJcu__methodPerformGetKey____methods, exprRetPerformEncryption__exprNameModePadding____arguments,
-				sbcJcu__methodPerformEncryption____methods, sbc2Jcu__sbc____source,
+				sbc2Jcu__sbc____source, sbcJcu__methodPerformEncryption____methods,
 				exprRetGetKey__exprAlgNameLiteral____arguments, exprRetGetKey__exprIterationLiteral____arguments };
 	}
 
 	public static final void pattern_PasswordBasedEncryption_1_5_registerobjects_expressionBBBBBBBBBBBBBBBBBBBBBBBBBBBBB(
-			PasswordBasedEncryption _this, PerformRuleResult ruleresult, EObject exprIterationLiteral,
-			EObject javaPackage, EObject exprRetGetKey, EObject exprOutputSizeLiteral, EObject sbc2Jcu, EObject kdaJcu,
-			EObject methodPerformEncryption, EObject sbcJcu, EObject keyEncryption, EObject dataEncryption,
-			EObject methodGetKey, EObject t2c, EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda,
-			EObject methodPerformGetKey, EObject statRetPerformEncryption, EObject exprKeyName,
-			EObject exprNameModePadding, EObject methodEncryption, EObject task, EObject exprPwdName, EObject sbc,
-			EObject exprDataName, EObject exprRetPerformEncryption, EObject statRetGetKey, EObject kda2Jcu) {
-		_this.registerObjects_FWD(ruleresult, exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral,
+			PasswordBasedEncryption _this, PerformRuleResult ruleresult, EObject javaPackage,
+			EObject exprIterationLiteral, EObject exprRetGetKey, EObject exprOutputSizeLiteral, EObject sbc2Jcu,
+			EObject kdaJcu, EObject methodPerformEncryption, EObject sbcJcu, EObject keyEncryption,
+			EObject dataEncryption, EObject methodGetKey, EObject t2c, EObject exprAlgNameLiteral,
+			EObject pwdDeclaration, EObject kda, EObject methodPerformGetKey, EObject statRetPerformEncryption,
+			EObject exprKeyName, EObject exprNameModePadding, EObject methodEncryption, EObject task,
+			EObject exprPwdName, EObject sbc, EObject exprDataName, EObject exprRetPerformEncryption,
+			EObject statRetGetKey, EObject kda2Jcu) {
+		_this.registerObjects_FWD(ruleresult, javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral,
 				sbc2Jcu, kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, t2c,
 				exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption, exprKeyName,
 				exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName, exprRetPerformEncryption,
@@ -5536,7 +5536,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_10_1_initialbindings_blackBBBBBBBBBBBBBBBBBBBBBBB(
-			PasswordBasedEncryption _this, Match match, JavaLiteral exprIterationLiteral, JavaPackage javaPackage,
+			PasswordBasedEncryption _this, Match match, JavaPackage javaPackage, JavaLiteral exprIterationLiteral,
 			JavaMethodInvocation exprRetGetKey, JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu,
 			JavaOpaqueMethod methodPerformEncryption, JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption,
 			JavaVariableDeclaration dataEncryption, JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral,
@@ -5563,7 +5563,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																		if (!statRetGetKey
 																				.equals(statRetPerformEncryption)) {
 																			return new Object[] { _this, match,
-																					exprIterationLiteral, javaPackage,
+																					javaPackage, exprIterationLiteral,
 																					exprRetGetKey,
 																					exprOutputSizeLiteral, kdaJcu,
 																					methodPerformEncryption, sbcJcu,
@@ -5597,7 +5597,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_10_2_SolveCSP_bindingFBBBBBBBBBBBBBBBBBBBBBBB(
-			PasswordBasedEncryption _this, Match match, JavaLiteral exprIterationLiteral, JavaPackage javaPackage,
+			PasswordBasedEncryption _this, Match match, JavaPackage javaPackage, JavaLiteral exprIterationLiteral,
 			JavaMethodInvocation exprRetGetKey, JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu,
 			JavaOpaqueMethod methodPerformEncryption, JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption,
 			JavaVariableDeclaration dataEncryption, JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral,
@@ -5605,14 +5605,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaStatement statRetPerformEncryption, JavaName exprKeyName, JavaLiteral exprNameModePadding,
 			JavaWorkflowMethod methodEncryption, JavaName exprPwdName, JavaName exprDataName,
 			JavaMethodInvocation exprRetPerformEncryption, JavaStatement statRetGetKey) {
-		CSP _localVariable_0 = _this.isAppropriate_solveCsp_BWD(match, exprIterationLiteral, javaPackage, exprRetGetKey,
+		CSP _localVariable_0 = _this.isAppropriate_solveCsp_BWD(match, javaPackage, exprIterationLiteral, exprRetGetKey,
 				exprOutputSizeLiteral, kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption,
 				methodGetKey, exprAlgNameLiteral, pwdDeclaration, methodPerformGetKey, statRetPerformEncryption,
 				exprKeyName, exprNameModePadding, methodEncryption, exprPwdName, exprDataName, exprRetPerformEncryption,
 				statRetGetKey);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, match, exprIterationLiteral, javaPackage, exprRetGetKey,
+			return new Object[] { csp, _this, match, javaPackage, exprIterationLiteral, exprRetGetKey,
 					exprOutputSizeLiteral, kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption,
 					methodGetKey, exprAlgNameLiteral, pwdDeclaration, methodPerformGetKey, statRetPerformEncryption,
 					exprKeyName, exprNameModePadding, methodEncryption, exprPwdName, exprDataName,
@@ -5626,7 +5626,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_10_2_SolveCSP_bindingAndBlackFBBBBBBBBBBBBBBBBBBBBBBB(
-			PasswordBasedEncryption _this, Match match, JavaLiteral exprIterationLiteral, JavaPackage javaPackage,
+			PasswordBasedEncryption _this, Match match, JavaPackage javaPackage, JavaLiteral exprIterationLiteral,
 			JavaMethodInvocation exprRetGetKey, JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu,
 			JavaOpaqueMethod methodPerformEncryption, JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption,
 			JavaVariableDeclaration dataEncryption, JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral,
@@ -5635,7 +5635,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaWorkflowMethod methodEncryption, JavaName exprPwdName, JavaName exprDataName,
 			JavaMethodInvocation exprRetPerformEncryption, JavaStatement statRetGetKey) {
 		Object[] result_pattern_PasswordBasedEncryption_10_2_SolveCSP_binding = pattern_PasswordBasedEncryption_10_2_SolveCSP_bindingFBBBBBBBBBBBBBBBBBBBBBBB(
-				_this, match, exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
+				_this, match, javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
 				methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, exprAlgNameLiteral,
 				pwdDeclaration, methodPerformGetKey, statRetPerformEncryption, exprKeyName, exprNameModePadding,
 				methodEncryption, exprPwdName, exprDataName, exprRetPerformEncryption, statRetGetKey);
@@ -5646,7 +5646,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 					csp);
 			if (result_pattern_PasswordBasedEncryption_10_2_SolveCSP_black != null) {
 
-				return new Object[] { csp, _this, match, exprIterationLiteral, javaPackage, exprRetGetKey,
+				return new Object[] { csp, _this, match, javaPackage, exprIterationLiteral, exprRetGetKey,
 						exprOutputSizeLiteral, kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption,
 						methodGetKey, exprAlgNameLiteral, pwdDeclaration, methodPerformGetKey, statRetPerformEncryption,
 						exprKeyName, exprNameModePadding, methodEncryption, exprPwdName, exprDataName,
@@ -5664,7 +5664,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_10_4_collectelementstobetranslated_blackBBBBBBBBBBBBBBBBBBBBBB(
-			Match match, JavaLiteral exprIterationLiteral, JavaPackage javaPackage, JavaMethodInvocation exprRetGetKey,
+			Match match, JavaPackage javaPackage, JavaLiteral exprIterationLiteral, JavaMethodInvocation exprRetGetKey,
 			JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu, JavaOpaqueMethod methodPerformEncryption,
 			JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption, JavaVariableDeclaration dataEncryption,
 			JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral, JavaVariableDeclaration pwdDeclaration,
@@ -5689,9 +5689,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																	if (!exprDataName.equals(exprPwdName)) {
 																		if (!statRetGetKey
 																				.equals(statRetPerformEncryption)) {
-																			return new Object[] { match,
-																					exprIterationLiteral, javaPackage,
-																					exprRetGetKey,
+																			return new Object[] { match, javaPackage,
+																					exprIterationLiteral, exprRetGetKey,
 																					exprOutputSizeLiteral, kdaJcu,
 																					methodPerformEncryption, sbcJcu,
 																					keyEncryption, dataEncryption,
@@ -5724,7 +5723,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_10_4_collectelementstobetranslated_greenBBBBBBBBBBBBBBBBBBBBBBFFFFFFFFFFFFFFFFFFFF(
-			Match match, JavaLiteral exprIterationLiteral, JavaPackage javaPackage, JavaMethodInvocation exprRetGetKey,
+			Match match, JavaPackage javaPackage, JavaLiteral exprIterationLiteral, JavaMethodInvocation exprRetGetKey,
 			JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu, JavaOpaqueMethod methodPerformEncryption,
 			JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption, JavaVariableDeclaration dataEncryption,
 			JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral, JavaVariableDeclaration pwdDeclaration,
@@ -5754,8 +5753,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		EMoflonEdge sbcJcu__methodPerformEncryption____methods = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge exprRetGetKey__exprAlgNameLiteral____arguments = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge exprRetGetKey__exprIterationLiteral____arguments = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		match.getToBeTranslatedNodes().add(exprIterationLiteral);
 		match.getToBeTranslatedNodes().add(javaPackage);
+		match.getToBeTranslatedNodes().add(exprIterationLiteral);
 		match.getToBeTranslatedNodes().add(exprRetGetKey);
 		match.getToBeTranslatedNodes().add(exprOutputSizeLiteral);
 		match.getToBeTranslatedNodes().add(kdaJcu);
@@ -5883,7 +5882,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 				.setName(exprRetGetKey__exprAlgNameLiteral____arguments_name_prime);
 		exprRetGetKey__exprIterationLiteral____arguments
 				.setName(exprRetGetKey__exprIterationLiteral____arguments_name_prime);
-		return new Object[] { match, exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
+		return new Object[] { match, javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
 				methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, exprAlgNameLiteral,
 				pwdDeclaration, methodPerformGetKey, statRetPerformEncryption, exprKeyName, exprNameModePadding,
 				methodEncryption, exprPwdName, exprDataName, exprRetPerformEncryption, statRetGetKey,
@@ -5900,7 +5899,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_10_5_collectcontextelements_blackBBBBBBBBBBBBBBBBBBBBBB(
-			Match match, JavaLiteral exprIterationLiteral, JavaPackage javaPackage, JavaMethodInvocation exprRetGetKey,
+			Match match, JavaPackage javaPackage, JavaLiteral exprIterationLiteral, JavaMethodInvocation exprRetGetKey,
 			JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu, JavaOpaqueMethod methodPerformEncryption,
 			JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption, JavaVariableDeclaration dataEncryption,
 			JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral, JavaVariableDeclaration pwdDeclaration,
@@ -5925,9 +5924,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																	if (!exprDataName.equals(exprPwdName)) {
 																		if (!statRetGetKey
 																				.equals(statRetPerformEncryption)) {
-																			return new Object[] { match,
-																					exprIterationLiteral, javaPackage,
-																					exprRetGetKey,
+																			return new Object[] { match, javaPackage,
+																					exprIterationLiteral, exprRetGetKey,
 																					exprOutputSizeLiteral, kdaJcu,
 																					methodPerformEncryption, sbcJcu,
 																					keyEncryption, dataEncryption,
@@ -5960,7 +5958,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final void pattern_PasswordBasedEncryption_10_6_registerobjectstomatch_expressionBBBBBBBBBBBBBBBBBBBBBBB(
-			PasswordBasedEncryption _this, Match match, JavaLiteral exprIterationLiteral, JavaPackage javaPackage,
+			PasswordBasedEncryption _this, Match match, JavaPackage javaPackage, JavaLiteral exprIterationLiteral,
 			JavaMethodInvocation exprRetGetKey, JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu,
 			JavaOpaqueMethod methodPerformEncryption, JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption,
 			JavaVariableDeclaration dataEncryption, JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral,
@@ -5968,7 +5966,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaStatement statRetPerformEncryption, JavaName exprKeyName, JavaLiteral exprNameModePadding,
 			JavaWorkflowMethod methodEncryption, JavaName exprPwdName, JavaName exprDataName,
 			JavaMethodInvocation exprRetPerformEncryption, JavaStatement statRetGetKey) {
-		_this.registerObjectsToMatch_BWD(match, exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral,
+		_this.registerObjectsToMatch_BWD(match, javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral,
 				kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey,
 				exprAlgNameLiteral, pwdDeclaration, methodPerformGetKey, statRetPerformEncryption, exprKeyName,
 				exprNameModePadding, methodEncryption, exprPwdName, exprDataName, exprRetPerformEncryption,
@@ -5988,8 +5986,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 	public static final Object[] pattern_PasswordBasedEncryption_11_1_performtransformation_bindingFFFFFFFFFFFFFFFFFFFFFB(
 			IsApplicableMatch isApplicableMatch) {
-		EObject _localVariable_0 = isApplicableMatch.getObject("exprIterationLiteral");
-		EObject _localVariable_1 = isApplicableMatch.getObject("javaPackage");
+		EObject _localVariable_0 = isApplicableMatch.getObject("javaPackage");
+		EObject _localVariable_1 = isApplicableMatch.getObject("exprIterationLiteral");
 		EObject _localVariable_2 = isApplicableMatch.getObject("exprRetGetKey");
 		EObject _localVariable_3 = isApplicableMatch.getObject("exprOutputSizeLiteral");
 		EObject _localVariable_4 = isApplicableMatch.getObject("kdaJcu");
@@ -6009,8 +6007,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		EObject _localVariable_18 = isApplicableMatch.getObject("exprDataName");
 		EObject _localVariable_19 = isApplicableMatch.getObject("exprRetPerformEncryption");
 		EObject _localVariable_20 = isApplicableMatch.getObject("statRetGetKey");
-		EObject tmpExprIterationLiteral = _localVariable_0;
-		EObject tmpJavaPackage = _localVariable_1;
+		EObject tmpJavaPackage = _localVariable_0;
+		EObject tmpExprIterationLiteral = _localVariable_1;
 		EObject tmpExprRetGetKey = _localVariable_2;
 		EObject tmpExprOutputSizeLiteral = _localVariable_3;
 		EObject tmpKdaJcu = _localVariable_4;
@@ -6030,10 +6028,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		EObject tmpExprDataName = _localVariable_18;
 		EObject tmpExprRetPerformEncryption = _localVariable_19;
 		EObject tmpStatRetGetKey = _localVariable_20;
-		if (tmpExprIterationLiteral instanceof JavaLiteral) {
-			JavaLiteral exprIterationLiteral = (JavaLiteral) tmpExprIterationLiteral;
-			if (tmpJavaPackage instanceof JavaPackage) {
-				JavaPackage javaPackage = (JavaPackage) tmpJavaPackage;
+		if (tmpJavaPackage instanceof JavaPackage) {
+			JavaPackage javaPackage = (JavaPackage) tmpJavaPackage;
+			if (tmpExprIterationLiteral instanceof JavaLiteral) {
+				JavaLiteral exprIterationLiteral = (JavaLiteral) tmpExprIterationLiteral;
 				if (tmpExprRetGetKey instanceof JavaMethodInvocation) {
 					JavaMethodInvocation exprRetGetKey = (JavaMethodInvocation) tmpExprRetGetKey;
 					if (tmpExprOutputSizeLiteral instanceof JavaLiteral) {
@@ -6073,8 +6071,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																						if (tmpStatRetGetKey instanceof JavaStatement) {
 																							JavaStatement statRetGetKey = (JavaStatement) tmpStatRetGetKey;
 																							return new Object[] {
-																									exprIterationLiteral,
 																									javaPackage,
+																									exprIterationLiteral,
 																									exprRetGetKey,
 																									exprOutputSizeLiteral,
 																									kdaJcu,
@@ -6120,7 +6118,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_11_1_performtransformation_blackBBBBBBBBBBBBBBBBBBBBBFBB(
-			JavaLiteral exprIterationLiteral, JavaPackage javaPackage, JavaMethodInvocation exprRetGetKey,
+			JavaPackage javaPackage, JavaLiteral exprIterationLiteral, JavaMethodInvocation exprRetGetKey,
 			JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu, JavaOpaqueMethod methodPerformEncryption,
 			JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption, JavaVariableDeclaration dataEncryption,
 			JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral, JavaVariableDeclaration pwdDeclaration,
@@ -6150,9 +6148,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																					.getAttributeInfo()) {
 																				if (tmpCsp instanceof CSP) {
 																					CSP csp = (CSP) tmpCsp;
-																					return new Object[] {
+																					return new Object[] { javaPackage,
 																							exprIterationLiteral,
-																							javaPackage, exprRetGetKey,
+																							exprRetGetKey,
 																							exprOutputSizeLiteral,
 																							kdaJcu,
 																							methodPerformEncryption,
@@ -6197,8 +6195,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		Object[] result_pattern_PasswordBasedEncryption_11_1_performtransformation_binding = pattern_PasswordBasedEncryption_11_1_performtransformation_bindingFFFFFFFFFFFFFFFFFFFFFB(
 				isApplicableMatch);
 		if (result_pattern_PasswordBasedEncryption_11_1_performtransformation_binding != null) {
-			JavaLiteral exprIterationLiteral = (JavaLiteral) result_pattern_PasswordBasedEncryption_11_1_performtransformation_binding[0];
-			JavaPackage javaPackage = (JavaPackage) result_pattern_PasswordBasedEncryption_11_1_performtransformation_binding[1];
+			JavaPackage javaPackage = (JavaPackage) result_pattern_PasswordBasedEncryption_11_1_performtransformation_binding[0];
+			JavaLiteral exprIterationLiteral = (JavaLiteral) result_pattern_PasswordBasedEncryption_11_1_performtransformation_binding[1];
 			JavaMethodInvocation exprRetGetKey = (JavaMethodInvocation) result_pattern_PasswordBasedEncryption_11_1_performtransformation_binding[2];
 			JavaLiteral exprOutputSizeLiteral = (JavaLiteral) result_pattern_PasswordBasedEncryption_11_1_performtransformation_binding[3];
 			JavaCompilationUnit kdaJcu = (JavaCompilationUnit) result_pattern_PasswordBasedEncryption_11_1_performtransformation_binding[4];
@@ -6220,7 +6218,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaStatement statRetGetKey = (JavaStatement) result_pattern_PasswordBasedEncryption_11_1_performtransformation_binding[20];
 
 			Object[] result_pattern_PasswordBasedEncryption_11_1_performtransformation_black = pattern_PasswordBasedEncryption_11_1_performtransformation_blackBBBBBBBBBBBBBBBBBBBBBFBB(
-					exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
+					javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
 					methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, exprAlgNameLiteral,
 					pwdDeclaration, methodPerformGetKey, statRetPerformEncryption, exprKeyName, exprNameModePadding,
 					methodEncryption, exprPwdName, exprDataName, exprRetPerformEncryption, statRetGetKey, _this,
@@ -6228,7 +6226,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			if (result_pattern_PasswordBasedEncryption_11_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_PasswordBasedEncryption_11_1_performtransformation_black[21];
 
-				return new Object[] { exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
+				return new Object[] { javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
 						methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey,
 						exprAlgNameLiteral, pwdDeclaration, methodPerformGetKey, statRetPerformEncryption, exprKeyName,
 						exprNameModePadding, methodEncryption, exprPwdName, exprDataName, exprRetPerformEncryption,
@@ -6246,9 +6244,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		Task task = CryptoAPIConfigFactory.eINSTANCE.createTask();
 		SymmetricBlockCipher sbc = CryptoAPIConfigFactory.eINSTANCE.createSymmetricBlockCipher();
 		KeyDerivationAlgorithmToJcu kda2Jcu = CryptoConfigToJavaFactory.eINSTANCE.createKeyDerivationAlgorithmToJcu();
-		Object _localVariable_0 = csp.getValue("kda", "iterations");
-		Object _localVariable_1 = csp.getValue("kda", "outputSize");
-		Object _localVariable_2 = csp.getValue("kda", "name");
+		Object _localVariable_0 = csp.getValue("kda", "name");
+		Object _localVariable_1 = csp.getValue("kda", "iterations");
+		Object _localVariable_2 = csp.getValue("kda", "outputSize");
 		String task_description_prime = "PasswordBasedEncryption";
 		Object _localVariable_3 = csp.getValue("task", "package");
 		Object _localVariable_4 = csp.getValue("sbc", "name");
@@ -6262,17 +6260,17 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		sbc2Jcu.setSource(sbc);
 		kda2Jcu.setSource(kda);
 		kda2Jcu.setTarget(kdaJcu);
-		String kda_iterations_prime = (String) _localVariable_0;
-		String kda_outputSize_prime = (String) _localVariable_1;
-		String kda_name_prime = (String) _localVariable_2;
+		String kda_name_prime = (String) _localVariable_0;
+		String kda_iterations_prime = (String) _localVariable_1;
+		String kda_outputSize_prime = (String) _localVariable_2;
 		task.setDescription(task_description_prime);
 		String task_package_prime = (String) _localVariable_3;
 		String sbc_name_prime = (String) _localVariable_4;
 		String sbc_mode_prime = (String) _localVariable_5;
 		String sbc_padding_prime = (String) _localVariable_6;
+		kda.setName(kda_name_prime);
 		kda.setIterations(kda_iterations_prime);
 		kda.setOutputSize(kda_outputSize_prime);
-		kda.setName(kda_name_prime);
 		task.setPackage(task_package_prime);
 		sbc.setName(sbc_name_prime);
 		sbc.setMode(sbc_mode_prime);
@@ -6281,7 +6279,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_11_2_collecttranslatedelements_blackBBBBBBBBBBBBBBBBBBBBBBBBBBB(
-			JavaLiteral exprIterationLiteral, JavaPackage javaPackage, JavaMethodInvocation exprRetGetKey,
+			JavaPackage javaPackage, JavaLiteral exprIterationLiteral, JavaMethodInvocation exprRetGetKey,
 			JavaLiteral exprOutputSizeLiteral, SymmetricBlockCipherToJcu sbc2Jcu, JavaCompilationUnit kdaJcu,
 			JavaOpaqueMethod methodPerformEncryption, JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption,
 			JavaVariableDeclaration dataEncryption, JavaWorkflowMethod methodGetKey, TaskToJavaPackage t2c,
@@ -6308,8 +6306,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																	if (!exprDataName.equals(exprPwdName)) {
 																		if (!statRetGetKey
 																				.equals(statRetPerformEncryption)) {
-																			return new Object[] { exprIterationLiteral,
-																					javaPackage, exprRetGetKey,
+																			return new Object[] { javaPackage,
+																					exprIterationLiteral, exprRetGetKey,
 																					exprOutputSizeLiteral, sbc2Jcu,
 																					kdaJcu, methodPerformEncryption,
 																					sbcJcu, keyEncryption,
@@ -6343,7 +6341,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_11_2_collecttranslatedelements_greenFBBBBBBBBBBBBBBBBBBBBBBBBBBB(
-			JavaLiteral exprIterationLiteral, JavaPackage javaPackage, JavaMethodInvocation exprRetGetKey,
+			JavaPackage javaPackage, JavaLiteral exprIterationLiteral, JavaMethodInvocation exprRetGetKey,
 			JavaLiteral exprOutputSizeLiteral, SymmetricBlockCipherToJcu sbc2Jcu, JavaCompilationUnit kdaJcu,
 			JavaOpaqueMethod methodPerformEncryption, JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption,
 			JavaVariableDeclaration dataEncryption, JavaWorkflowMethod methodGetKey, TaskToJavaPackage t2c,
@@ -6353,8 +6351,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			SymmetricBlockCipher sbc, JavaName exprDataName, JavaMethodInvocation exprRetPerformEncryption,
 			JavaStatement statRetGetKey, KeyDerivationAlgorithmToJcu kda2Jcu) {
 		PerformRuleResult ruleresult = RuntimeFactory.eINSTANCE.createPerformRuleResult();
-		ruleresult.getTranslatedElements().add(exprIterationLiteral);
 		ruleresult.getTranslatedElements().add(javaPackage);
+		ruleresult.getTranslatedElements().add(exprIterationLiteral);
 		ruleresult.getTranslatedElements().add(exprRetGetKey);
 		ruleresult.getTranslatedElements().add(exprOutputSizeLiteral);
 		ruleresult.getCreatedLinkElements().add(sbc2Jcu);
@@ -6380,7 +6378,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		ruleresult.getTranslatedElements().add(exprRetPerformEncryption);
 		ruleresult.getTranslatedElements().add(statRetGetKey);
 		ruleresult.getCreatedLinkElements().add(kda2Jcu);
-		return new Object[] { ruleresult, exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral,
+		return new Object[] { ruleresult, javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral,
 				sbc2Jcu, kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, t2c,
 				exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption, exprKeyName,
 				exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName, exprRetPerformEncryption,
@@ -6388,75 +6386,73 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_11_3_bookkeepingforedges_blackBBBBBBBBBBBBBBBBBBBBBBBBBBBB(
-			PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject javaPackage, EObject exprRetGetKey,
+			PerformRuleResult ruleresult, EObject javaPackage, EObject exprIterationLiteral, EObject exprRetGetKey,
 			EObject exprOutputSizeLiteral, EObject sbc2Jcu, EObject kdaJcu, EObject methodPerformEncryption,
 			EObject sbcJcu, EObject keyEncryption, EObject dataEncryption, EObject methodGetKey, EObject t2c,
 			EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda, EObject methodPerformGetKey,
 			EObject statRetPerformEncryption, EObject exprKeyName, EObject exprNameModePadding,
 			EObject methodEncryption, EObject task, EObject exprPwdName, EObject sbc, EObject exprDataName,
 			EObject exprRetPerformEncryption, EObject statRetGetKey, EObject kda2Jcu) {
-		if (!exprIterationLiteral.equals(javaPackage)) {
-			if (!exprIterationLiteral.equals(exprRetGetKey)) {
-				if (!exprIterationLiteral.equals(exprOutputSizeLiteral)) {
-					if (!exprIterationLiteral.equals(sbc2Jcu)) {
-						if (!exprIterationLiteral.equals(kdaJcu)) {
-							if (!exprIterationLiteral.equals(methodPerformEncryption)) {
-								if (!exprIterationLiteral.equals(sbcJcu)) {
-									if (!exprIterationLiteral.equals(keyEncryption)) {
-										if (!exprIterationLiteral.equals(methodGetKey)) {
-											if (!exprIterationLiteral.equals(t2c)) {
-												if (!exprIterationLiteral.equals(pwdDeclaration)) {
-													if (!exprIterationLiteral.equals(kda)) {
-														if (!exprIterationLiteral.equals(methodPerformGetKey)) {
-															if (!exprIterationLiteral
-																	.equals(statRetPerformEncryption)) {
-																if (!exprIterationLiteral.equals(exprKeyName)) {
-																	if (!exprIterationLiteral
-																			.equals(exprNameModePadding)) {
-																		if (!exprIterationLiteral
-																				.equals(methodEncryption)) {
-																			if (!exprIterationLiteral.equals(task)) {
-																				if (!exprIterationLiteral
-																						.equals(exprPwdName)) {
+		if (!javaPackage.equals(sbc2Jcu)) {
+			if (!javaPackage.equals(kdaJcu)) {
+				if (!javaPackage.equals(methodPerformEncryption)) {
+					if (!javaPackage.equals(sbcJcu)) {
+						if (!javaPackage.equals(keyEncryption)) {
+							if (!javaPackage.equals(methodGetKey)) {
+								if (!javaPackage.equals(t2c)) {
+									if (!javaPackage.equals(pwdDeclaration)) {
+										if (!javaPackage.equals(kda)) {
+											if (!javaPackage.equals(methodPerformGetKey)) {
+												if (!javaPackage.equals(statRetPerformEncryption)) {
+													if (!javaPackage.equals(methodEncryption)) {
+														if (!javaPackage.equals(task)) {
+															if (!javaPackage.equals(sbc)) {
+																if (!javaPackage.equals(statRetGetKey)) {
+																	if (!javaPackage.equals(kda2Jcu)) {
+																		if (!exprIterationLiteral.equals(javaPackage)) {
+																			if (!exprIterationLiteral
+																					.equals(exprRetGetKey)) {
+																				if (!exprIterationLiteral.equals(
+																						exprOutputSizeLiteral)) {
 																					if (!exprIterationLiteral
-																							.equals(sbc)) {
+																							.equals(sbc2Jcu)) {
 																						if (!exprIterationLiteral
-																								.equals(exprRetPerformEncryption)) {
+																								.equals(kdaJcu)) {
 																							if (!exprIterationLiteral
-																									.equals(statRetGetKey)) {
+																									.equals(methodPerformEncryption)) {
 																								if (!exprIterationLiteral
-																										.equals(kda2Jcu)) {
-																									if (!javaPackage
-																											.equals(sbc2Jcu)) {
-																										if (!javaPackage
-																												.equals(kdaJcu)) {
-																											if (!javaPackage
-																													.equals(methodPerformEncryption)) {
-																												if (!javaPackage
-																														.equals(sbcJcu)) {
-																													if (!javaPackage
-																															.equals(keyEncryption)) {
-																														if (!javaPackage
-																																.equals(methodGetKey)) {
-																															if (!javaPackage
-																																	.equals(t2c)) {
-																																if (!javaPackage
-																																		.equals(pwdDeclaration)) {
-																																	if (!javaPackage
-																																			.equals(kda)) {
-																																		if (!javaPackage
-																																				.equals(methodPerformGetKey)) {
-																																			if (!javaPackage
-																																					.equals(statRetPerformEncryption)) {
-																																				if (!javaPackage
-																																						.equals(methodEncryption)) {
-																																					if (!javaPackage
-																																							.equals(task)) {
-																																						if (!javaPackage
-																																								.equals(sbc)) {
-																																							if (!javaPackage
+																										.equals(sbcJcu)) {
+																									if (!exprIterationLiteral
+																											.equals(keyEncryption)) {
+																										if (!exprIterationLiteral
+																												.equals(methodGetKey)) {
+																											if (!exprIterationLiteral
+																													.equals(t2c)) {
+																												if (!exprIterationLiteral
+																														.equals(pwdDeclaration)) {
+																													if (!exprIterationLiteral
+																															.equals(kda)) {
+																														if (!exprIterationLiteral
+																																.equals(methodPerformGetKey)) {
+																															if (!exprIterationLiteral
+																																	.equals(statRetPerformEncryption)) {
+																																if (!exprIterationLiteral
+																																		.equals(exprKeyName)) {
+																																	if (!exprIterationLiteral
+																																			.equals(exprNameModePadding)) {
+																																		if (!exprIterationLiteral
+																																				.equals(methodEncryption)) {
+																																			if (!exprIterationLiteral
+																																					.equals(task)) {
+																																				if (!exprIterationLiteral
+																																						.equals(exprPwdName)) {
+																																					if (!exprIterationLiteral
+																																							.equals(sbc)) {
+																																						if (!exprIterationLiteral
+																																								.equals(exprRetPerformEncryption)) {
+																																							if (!exprIterationLiteral
 																																									.equals(statRetGetKey)) {
-																																								if (!javaPackage
+																																								if (!exprIterationLiteral
 																																										.equals(kda2Jcu)) {
 																																									if (!exprRetGetKey
 																																											.equals(javaPackage)) {
@@ -6621,9 +6617,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																																																																																									if (!keyEncryption
 																																																																																																																											.equals(statRetGetKey)) {
 																																																																																																																										if (!dataEncryption
-																																																																																																																												.equals(exprIterationLiteral)) {
+																																																																																																																												.equals(javaPackage)) {
 																																																																																																																											if (!dataEncryption
-																																																																																																																													.equals(javaPackage)) {
+																																																																																																																													.equals(exprIterationLiteral)) {
 																																																																																																																												if (!dataEncryption
 																																																																																																																														.equals(exprRetGetKey)) {
 																																																																																																																													if (!dataEncryption
@@ -6695,9 +6691,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																																																																																																																														if (!t2c.equals(
 																																																																																																																																																																task)) {
 																																																																																																																																																															if (!exprAlgNameLiteral
-																																																																																																																																																																	.equals(exprIterationLiteral)) {
+																																																																																																																																																																	.equals(javaPackage)) {
 																																																																																																																																																																if (!exprAlgNameLiteral
-																																																																																																																																																																		.equals(javaPackage)) {
+																																																																																																																																																																		.equals(exprIterationLiteral)) {
 																																																																																																																																																																	if (!exprAlgNameLiteral
 																																																																																																																																																																			.equals(exprRetGetKey)) {
 																																																																																																																																																																		if (!exprAlgNameLiteral
@@ -6967,9 +6963,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																																																																																																																																																																																																																																																																						if (!sbc.equals(
 																																																																																																																																																																																																																																																																																																								statRetGetKey)) {
 																																																																																																																																																																																																																																																																																																							if (!exprDataName
-																																																																																																																																																																																																																																																																																																									.equals(exprIterationLiteral)) {
+																																																																																																																																																																																																																																																																																																									.equals(javaPackage)) {
 																																																																																																																																																																																																																																																																																																								if (!exprDataName
-																																																																																																																																																																																																																																																																																																										.equals(javaPackage)) {
+																																																																																																																																																																																																																																																																																																										.equals(exprIterationLiteral)) {
 																																																																																																																																																																																																																																																																																																									if (!exprDataName
 																																																																																																																																																																																																																																																																																																											.equals(exprRetGetKey)) {
 																																																																																																																																																																																																																																																																																																										if (!exprDataName
@@ -7084,8 +7080,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																																																																																																																																																																																																																																																																																																																																		.equals(statRetGetKey)) {
 																																																																																																																																																																																																																																																																																																																																																																	return new Object[] {
 																																																																																																																																																																																																																																																																																																																																																																			ruleresult,
-																																																																																																																																																																																																																																																																																																																																																																			exprIterationLiteral,
 																																																																																																																																																																																																																																																																																																																																																																			javaPackage,
+																																																																																																																																																																																																																																																																																																																																																																			exprIterationLiteral,
 																																																																																																																																																																																																																																																																																																																																																																			exprRetGetKey,
 																																																																																																																																																																																																																																																																																																																																																																			exprOutputSizeLiteral,
 																																																																																																																																																																																																																																																																																																																																																																			sbc2Jcu,
@@ -7466,7 +7462,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_11_3_bookkeepingforedges_greenBBBBBBBBBBBBBBBBBBBBBBBBBBBBFFFFFFFFFFFFFFFFFFFFFFFFFFFF(
-			PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject javaPackage, EObject exprRetGetKey,
+			PerformRuleResult ruleresult, EObject javaPackage, EObject exprIterationLiteral, EObject exprRetGetKey,
 			EObject exprOutputSizeLiteral, EObject sbc2Jcu, EObject kdaJcu, EObject methodPerformEncryption,
 			EObject sbcJcu, EObject keyEncryption, EObject dataEncryption, EObject methodGetKey, EObject t2c,
 			EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda, EObject methodPerformGetKey,
@@ -7481,12 +7477,12 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		EMoflonEdge statRetGetKey__exprRetGetKey____expr = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge kdaJcu__methodGetKey____methods = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge sbcJcu__methodEncryption____methods = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge t2c__task____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge exprRetPerformEncryption__exprDataName____arguments = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge t2c__task____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge task__kda____algorithms = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge methodEncryption__statRetPerformEncryption____statements = RuntimeFactory.eINSTANCE
 				.createEMoflonEdge();
 		EMoflonEdge kda2Jcu__kda____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge task__kda____algorithms = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge sbc2Jcu__sbcJcu____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge methodEncryption__keyEncryption____params = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge methodGetKey__pwdDeclaration____params = RuntimeFactory.eINSTANCE.createEMoflonEdge();
@@ -7500,8 +7496,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		EMoflonEdge kdaJcu__methodPerformGetKey____methods = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge exprRetPerformEncryption__exprNameModePadding____arguments = RuntimeFactory.eINSTANCE
 				.createEMoflonEdge();
-		EMoflonEdge sbcJcu__methodPerformEncryption____methods = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge sbc2Jcu__sbc____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge sbcJcu__methodPerformEncryption____methods = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge exprRetGetKey__exprAlgNameLiteral____arguments = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge exprRetGetKey__exprIterationLiteral____arguments = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "PasswordBasedEncryption";
@@ -7512,11 +7508,11 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		String statRetGetKey__exprRetGetKey____expr_name_prime = "expr";
 		String kdaJcu__methodGetKey____methods_name_prime = "methods";
 		String sbcJcu__methodEncryption____methods_name_prime = "methods";
-		String t2c__task____source_name_prime = "source";
 		String exprRetPerformEncryption__exprDataName____arguments_name_prime = "arguments";
+		String t2c__task____source_name_prime = "source";
+		String task__kda____algorithms_name_prime = "algorithms";
 		String methodEncryption__statRetPerformEncryption____statements_name_prime = "statements";
 		String kda2Jcu__kda____source_name_prime = "source";
-		String task__kda____algorithms_name_prime = "algorithms";
 		String sbc2Jcu__sbcJcu____target_name_prime = "target";
 		String methodEncryption__keyEncryption____params_name_prime = "params";
 		String methodGetKey__pwdDeclaration____params_name_prime = "params";
@@ -7529,8 +7525,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		String exprRetGetKey__exprOutputSizeLiteral____arguments_name_prime = "arguments";
 		String kdaJcu__methodPerformGetKey____methods_name_prime = "methods";
 		String exprRetPerformEncryption__exprNameModePadding____arguments_name_prime = "arguments";
-		String sbcJcu__methodPerformEncryption____methods_name_prime = "methods";
 		String sbc2Jcu__sbc____source_name_prime = "source";
+		String sbcJcu__methodPerformEncryption____methods_name_prime = "methods";
 		String exprRetGetKey__exprAlgNameLiteral____arguments_name_prime = "arguments";
 		String exprRetGetKey__exprIterationLiteral____arguments_name_prime = "arguments";
 		exprRetPerformEncryption__exprKeyName____arguments.setSrc(exprRetPerformEncryption);
@@ -7554,21 +7550,21 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		sbcJcu__methodEncryption____methods.setSrc(sbcJcu);
 		sbcJcu__methodEncryption____methods.setTrg(methodEncryption);
 		ruleresult.getTranslatedEdges().add(sbcJcu__methodEncryption____methods);
-		t2c__task____source.setSrc(t2c);
-		t2c__task____source.setTrg(task);
-		ruleresult.getCreatedEdges().add(t2c__task____source);
 		exprRetPerformEncryption__exprDataName____arguments.setSrc(exprRetPerformEncryption);
 		exprRetPerformEncryption__exprDataName____arguments.setTrg(exprDataName);
 		ruleresult.getTranslatedEdges().add(exprRetPerformEncryption__exprDataName____arguments);
+		t2c__task____source.setSrc(t2c);
+		t2c__task____source.setTrg(task);
+		ruleresult.getCreatedEdges().add(t2c__task____source);
+		task__kda____algorithms.setSrc(task);
+		task__kda____algorithms.setTrg(kda);
+		ruleresult.getCreatedEdges().add(task__kda____algorithms);
 		methodEncryption__statRetPerformEncryption____statements.setSrc(methodEncryption);
 		methodEncryption__statRetPerformEncryption____statements.setTrg(statRetPerformEncryption);
 		ruleresult.getTranslatedEdges().add(methodEncryption__statRetPerformEncryption____statements);
 		kda2Jcu__kda____source.setSrc(kda2Jcu);
 		kda2Jcu__kda____source.setTrg(kda);
 		ruleresult.getCreatedEdges().add(kda2Jcu__kda____source);
-		task__kda____algorithms.setSrc(task);
-		task__kda____algorithms.setTrg(kda);
-		ruleresult.getCreatedEdges().add(task__kda____algorithms);
 		sbc2Jcu__sbcJcu____target.setSrc(sbc2Jcu);
 		sbc2Jcu__sbcJcu____target.setTrg(sbcJcu);
 		ruleresult.getCreatedEdges().add(sbc2Jcu__sbcJcu____target);
@@ -7605,12 +7601,12 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		exprRetPerformEncryption__exprNameModePadding____arguments.setSrc(exprRetPerformEncryption);
 		exprRetPerformEncryption__exprNameModePadding____arguments.setTrg(exprNameModePadding);
 		ruleresult.getTranslatedEdges().add(exprRetPerformEncryption__exprNameModePadding____arguments);
-		sbcJcu__methodPerformEncryption____methods.setSrc(sbcJcu);
-		sbcJcu__methodPerformEncryption____methods.setTrg(methodPerformEncryption);
-		ruleresult.getTranslatedEdges().add(sbcJcu__methodPerformEncryption____methods);
 		sbc2Jcu__sbc____source.setSrc(sbc2Jcu);
 		sbc2Jcu__sbc____source.setTrg(sbc);
 		ruleresult.getCreatedEdges().add(sbc2Jcu__sbc____source);
+		sbcJcu__methodPerformEncryption____methods.setSrc(sbcJcu);
+		sbcJcu__methodPerformEncryption____methods.setTrg(methodPerformEncryption);
+		ruleresult.getTranslatedEdges().add(sbcJcu__methodPerformEncryption____methods);
 		exprRetGetKey__exprAlgNameLiteral____arguments.setSrc(exprRetGetKey);
 		exprRetGetKey__exprAlgNameLiteral____arguments.setTrg(exprAlgNameLiteral);
 		ruleresult.getTranslatedEdges().add(exprRetGetKey__exprAlgNameLiteral____arguments);
@@ -7627,13 +7623,13 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		statRetGetKey__exprRetGetKey____expr.setName(statRetGetKey__exprRetGetKey____expr_name_prime);
 		kdaJcu__methodGetKey____methods.setName(kdaJcu__methodGetKey____methods_name_prime);
 		sbcJcu__methodEncryption____methods.setName(sbcJcu__methodEncryption____methods_name_prime);
-		t2c__task____source.setName(t2c__task____source_name_prime);
 		exprRetPerformEncryption__exprDataName____arguments
 				.setName(exprRetPerformEncryption__exprDataName____arguments_name_prime);
+		t2c__task____source.setName(t2c__task____source_name_prime);
+		task__kda____algorithms.setName(task__kda____algorithms_name_prime);
 		methodEncryption__statRetPerformEncryption____statements
 				.setName(methodEncryption__statRetPerformEncryption____statements_name_prime);
 		kda2Jcu__kda____source.setName(kda2Jcu__kda____source_name_prime);
-		task__kda____algorithms.setName(task__kda____algorithms_name_prime);
 		sbc2Jcu__sbcJcu____target.setName(sbc2Jcu__sbcJcu____target_name_prime);
 		methodEncryption__keyEncryption____params.setName(methodEncryption__keyEncryption____params_name_prime);
 		methodGetKey__pwdDeclaration____params.setName(methodGetKey__pwdDeclaration____params_name_prime);
@@ -7648,40 +7644,41 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		kdaJcu__methodPerformGetKey____methods.setName(kdaJcu__methodPerformGetKey____methods_name_prime);
 		exprRetPerformEncryption__exprNameModePadding____arguments
 				.setName(exprRetPerformEncryption__exprNameModePadding____arguments_name_prime);
-		sbcJcu__methodPerformEncryption____methods.setName(sbcJcu__methodPerformEncryption____methods_name_prime);
 		sbc2Jcu__sbc____source.setName(sbc2Jcu__sbc____source_name_prime);
+		sbcJcu__methodPerformEncryption____methods.setName(sbcJcu__methodPerformEncryption____methods_name_prime);
 		exprRetGetKey__exprAlgNameLiteral____arguments
 				.setName(exprRetGetKey__exprAlgNameLiteral____arguments_name_prime);
 		exprRetGetKey__exprIterationLiteral____arguments
 				.setName(exprRetGetKey__exprIterationLiteral____arguments_name_prime);
-		return new Object[] { ruleresult, exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral,
+		return new Object[] { ruleresult, javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral,
 				sbc2Jcu, kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, t2c,
 				exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption, exprKeyName,
 				exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName, exprRetPerformEncryption,
 				statRetGetKey, kda2Jcu, exprRetPerformEncryption__exprKeyName____arguments,
 				methodGetKey__statRetGetKey____statements, exprRetGetKey__exprPwdName____arguments,
 				statRetPerformEncryption__exprRetPerformEncryption____expr, statRetGetKey__exprRetGetKey____expr,
-				kdaJcu__methodGetKey____methods, sbcJcu__methodEncryption____methods, t2c__task____source,
-				exprRetPerformEncryption__exprDataName____arguments,
+				kdaJcu__methodGetKey____methods, sbcJcu__methodEncryption____methods,
+				exprRetPerformEncryption__exprDataName____arguments, t2c__task____source, task__kda____algorithms,
 				methodEncryption__statRetPerformEncryption____statements, kda2Jcu__kda____source,
-				task__kda____algorithms, sbc2Jcu__sbcJcu____target, methodEncryption__keyEncryption____params,
+				sbc2Jcu__sbcJcu____target, methodEncryption__keyEncryption____params,
 				methodGetKey__pwdDeclaration____params, javaPackage__sbcJcu____cunits, javaPackage__kdaJcu____cunits,
 				task__sbc____algorithms, kda2Jcu__kdaJcu____target, methodEncryption__dataEncryption____params,
 				t2c__javaPackage____target, exprRetGetKey__exprOutputSizeLiteral____arguments,
 				kdaJcu__methodPerformGetKey____methods, exprRetPerformEncryption__exprNameModePadding____arguments,
-				sbcJcu__methodPerformEncryption____methods, sbc2Jcu__sbc____source,
+				sbc2Jcu__sbc____source, sbcJcu__methodPerformEncryption____methods,
 				exprRetGetKey__exprAlgNameLiteral____arguments, exprRetGetKey__exprIterationLiteral____arguments };
 	}
 
 	public static final void pattern_PasswordBasedEncryption_11_5_registerobjects_expressionBBBBBBBBBBBBBBBBBBBBBBBBBBBBB(
-			PasswordBasedEncryption _this, PerformRuleResult ruleresult, EObject exprIterationLiteral,
-			EObject javaPackage, EObject exprRetGetKey, EObject exprOutputSizeLiteral, EObject sbc2Jcu, EObject kdaJcu,
-			EObject methodPerformEncryption, EObject sbcJcu, EObject keyEncryption, EObject dataEncryption,
-			EObject methodGetKey, EObject t2c, EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda,
-			EObject methodPerformGetKey, EObject statRetPerformEncryption, EObject exprKeyName,
-			EObject exprNameModePadding, EObject methodEncryption, EObject task, EObject exprPwdName, EObject sbc,
-			EObject exprDataName, EObject exprRetPerformEncryption, EObject statRetGetKey, EObject kda2Jcu) {
-		_this.registerObjects_BWD(ruleresult, exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral,
+			PasswordBasedEncryption _this, PerformRuleResult ruleresult, EObject javaPackage,
+			EObject exprIterationLiteral, EObject exprRetGetKey, EObject exprOutputSizeLiteral, EObject sbc2Jcu,
+			EObject kdaJcu, EObject methodPerformEncryption, EObject sbcJcu, EObject keyEncryption,
+			EObject dataEncryption, EObject methodGetKey, EObject t2c, EObject exprAlgNameLiteral,
+			EObject pwdDeclaration, EObject kda, EObject methodPerformGetKey, EObject statRetPerformEncryption,
+			EObject exprKeyName, EObject exprNameModePadding, EObject methodEncryption, EObject task,
+			EObject exprPwdName, EObject sbc, EObject exprDataName, EObject exprRetPerformEncryption,
+			EObject statRetGetKey, EObject kda2Jcu) {
+		_this.registerObjects_BWD(ruleresult, javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral,
 				sbc2Jcu, kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, t2c,
 				exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption, exprKeyName,
 				exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName, exprRetPerformEncryption,
@@ -7748,8 +7745,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 	public static final Object[] pattern_PasswordBasedEncryption_12_2_corematch_bindingFFFFFFFFFFFFFFFFFFFFFB(
 			Match match) {
-		EObject _localVariable_0 = match.getObject("exprIterationLiteral");
-		EObject _localVariable_1 = match.getObject("javaPackage");
+		EObject _localVariable_0 = match.getObject("javaPackage");
+		EObject _localVariable_1 = match.getObject("exprIterationLiteral");
 		EObject _localVariable_2 = match.getObject("exprRetGetKey");
 		EObject _localVariable_3 = match.getObject("exprOutputSizeLiteral");
 		EObject _localVariable_4 = match.getObject("kdaJcu");
@@ -7769,8 +7766,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		EObject _localVariable_18 = match.getObject("exprDataName");
 		EObject _localVariable_19 = match.getObject("exprRetPerformEncryption");
 		EObject _localVariable_20 = match.getObject("statRetGetKey");
-		EObject tmpExprIterationLiteral = _localVariable_0;
-		EObject tmpJavaPackage = _localVariable_1;
+		EObject tmpJavaPackage = _localVariable_0;
+		EObject tmpExprIterationLiteral = _localVariable_1;
 		EObject tmpExprRetGetKey = _localVariable_2;
 		EObject tmpExprOutputSizeLiteral = _localVariable_3;
 		EObject tmpKdaJcu = _localVariable_4;
@@ -7790,10 +7787,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		EObject tmpExprDataName = _localVariable_18;
 		EObject tmpExprRetPerformEncryption = _localVariable_19;
 		EObject tmpStatRetGetKey = _localVariable_20;
-		if (tmpExprIterationLiteral instanceof JavaLiteral) {
-			JavaLiteral exprIterationLiteral = (JavaLiteral) tmpExprIterationLiteral;
-			if (tmpJavaPackage instanceof JavaPackage) {
-				JavaPackage javaPackage = (JavaPackage) tmpJavaPackage;
+		if (tmpJavaPackage instanceof JavaPackage) {
+			JavaPackage javaPackage = (JavaPackage) tmpJavaPackage;
+			if (tmpExprIterationLiteral instanceof JavaLiteral) {
+				JavaLiteral exprIterationLiteral = (JavaLiteral) tmpExprIterationLiteral;
 				if (tmpExprRetGetKey instanceof JavaMethodInvocation) {
 					JavaMethodInvocation exprRetGetKey = (JavaMethodInvocation) tmpExprRetGetKey;
 					if (tmpExprOutputSizeLiteral instanceof JavaLiteral) {
@@ -7833,8 +7830,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																						if (tmpStatRetGetKey instanceof JavaStatement) {
 																							JavaStatement statRetGetKey = (JavaStatement) tmpStatRetGetKey;
 																							return new Object[] {
-																									exprIterationLiteral,
 																									javaPackage,
+																									exprIterationLiteral,
 																									exprRetGetKey,
 																									exprOutputSizeLiteral,
 																									kdaJcu,
@@ -7880,7 +7877,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Iterable<Object[]> pattern_PasswordBasedEncryption_12_2_corematch_blackBBBBBBBBBBBBBBBBBBBBBB(
-			JavaLiteral exprIterationLiteral, JavaPackage javaPackage, JavaMethodInvocation exprRetGetKey,
+			JavaPackage javaPackage, JavaLiteral exprIterationLiteral, JavaMethodInvocation exprRetGetKey,
 			JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu, JavaOpaqueMethod methodPerformEncryption,
 			JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption, JavaVariableDeclaration dataEncryption,
 			JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral, JavaVariableDeclaration pwdDeclaration,
@@ -7926,14 +7923,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																								.getName();
 																						if (kdaJcu_name
 																								.equals("KeyDeriv")) {
-																							String methodPerformEncryption_type = methodPerformEncryption
-																									.getType();
-																							if (methodPerformEncryption_type
-																									.equals("byte[] ")) {
-																								String methodPerformEncryption_modifier = methodPerformEncryption
-																										.getModifier();
-																								if (methodPerformEncryption_modifier
-																										.equals("private")) {
+																							String methodPerformEncryption_modifier = methodPerformEncryption
+																									.getModifier();
+																							if (methodPerformEncryption_modifier
+																									.equals("private")) {
+																								String methodPerformEncryption_type = methodPerformEncryption
+																										.getType();
+																								if (methodPerformEncryption_type
+																										.equals("byte[] ")) {
 																									String methodPerformEncryption_name = methodPerformEncryption
 																											.getName();
 																									if (methodPerformEncryption_name
@@ -7954,34 +7951,34 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																														.getType();
 																												if (keyEncryption_type
 																														.equals("SecretKey")) {
-																													int dataEncryption_index = dataEncryption
-																															.getIndex();
-																													if (Integer
-																															.valueOf(
-																																	dataEncryption_index)
-																															.equals(Integer
-																																	.valueOf(
-																																			0))) {
-																														String dataEncryption_name = dataEncryption
-																																.getName();
-																														if (dataEncryption_name
-																																.equals("data")) {
-																															String dataEncryption_type = dataEncryption
-																																	.getType();
-																															if (dataEncryption_type
-																																	.equals("byte[]")) {
+																													String dataEncryption_type = dataEncryption
+																															.getType();
+																													if (dataEncryption_type
+																															.equals("byte[]")) {
+																														int dataEncryption_index = dataEncryption
+																																.getIndex();
+																														if (Integer
+																																.valueOf(
+																																		dataEncryption_index)
+																																.equals(Integer
+																																		.valueOf(
+																																				0))) {
+																															String dataEncryption_name = dataEncryption
+																																	.getName();
+																															if (dataEncryption_name
+																																	.equals("data")) {
 																																String methodGetKey_modifier = methodGetKey
 																																		.getModifier();
 																																if (methodGetKey_modifier
 																																		.equals("public")) {
-																																	String methodGetKey_type = methodGetKey
-																																			.getType();
-																																	if (methodGetKey_type
-																																			.equals("SecretKey ")) {
-																																		String methodGetKey_name = methodGetKey
-																																				.getName();
-																																		if (methodGetKey_name
-																																				.equals("getKey")) {
+																																	String methodGetKey_name = methodGetKey
+																																			.getName();
+																																	if (methodGetKey_name
+																																			.equals("getKey")) {
+																																		String methodGetKey_type = methodGetKey
+																																				.getType();
+																																		if (methodGetKey_type
+																																				.equals("SecretKey ")) {
 																																			int exprAlgNameLiteral_index = exprAlgNameLiteral
 																																					.getIndex();
 																																			if (Integer
@@ -8006,14 +8003,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																								.getName();
 																																						if (pwdDeclaration_name
 																																								.equals("pwd")) {
-																																							String methodPerformGetKey_modifier = methodPerformGetKey
-																																									.getModifier();
-																																							if (methodPerformGetKey_modifier
-																																									.equals("private")) {
-																																								String methodPerformGetKey_type = methodPerformGetKey
-																																										.getType();
-																																								if (methodPerformGetKey_type
-																																										.equals("SecretKey ")) {
+																																							String methodPerformGetKey_type = methodPerformGetKey
+																																									.getType();
+																																							if (methodPerformGetKey_type
+																																									.equals("SecretKey ")) {
+																																								String methodPerformGetKey_modifier = methodPerformGetKey
+																																										.getModifier();
+																																								if (methodPerformGetKey_modifier
+																																										.equals("private")) {
 																																									String methodPerformGetKey_name = methodPerformGetKey
 																																											.getName();
 																																									if (methodPerformGetKey_name
@@ -8026,18 +8023,18 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																												.equals(Boolean
 																																														.valueOf(
 																																																true))) {
-																																											int exprKeyName_index = exprKeyName
-																																													.getIndex();
-																																											if (Integer
-																																													.valueOf(
-																																															exprKeyName_index)
-																																													.equals(Integer
-																																															.valueOf(
-																																																	1))) {
-																																												String exprKeyName_identifier = exprKeyName
-																																														.getIdentifier();
-																																												if (exprKeyName_identifier
-																																														.equals("key")) {
+																																											String exprKeyName_identifier = exprKeyName
+																																													.getIdentifier();
+																																											if (exprKeyName_identifier
+																																													.equals("key")) {
+																																												int exprKeyName_index = exprKeyName
+																																														.getIndex();
+																																												if (Integer
+																																														.valueOf(
+																																																exprKeyName_index)
+																																														.equals(Integer
+																																																.valueOf(
+																																																		1))) {
 																																													int exprNameModePadding_index = exprNameModePadding
 																																															.getIndex();
 																																													if (Integer
@@ -8050,14 +8047,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																.getType();
 																																														if (methodEncryption_type
 																																																.equals("byte[] ")) {
-																																															String methodEncryption_name = methodEncryption
-																																																	.getName();
-																																															if (methodEncryption_name
-																																																	.equals("encrypt")) {
-																																																String methodEncryption_modifier = methodEncryption
-																																																		.getModifier();
-																																																if (methodEncryption_modifier
-																																																		.equals("public")) {
+																																															String methodEncryption_modifier = methodEncryption
+																																																	.getModifier();
+																																															if (methodEncryption_modifier
+																																																	.equals("public")) {
+																																																String methodEncryption_name = methodEncryption
+																																																		.getName();
+																																																if (methodEncryption_name
+																																																		.equals("encrypt")) {
 																																																	String exprPwdName_identifier = exprPwdName
 																																																			.getIdentifier();
 																																																	if (exprPwdName_identifier
@@ -8096,8 +8093,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																												true))) {
 																																																							_result.add(
 																																																									new Object[] {
-																																																											exprIterationLiteral,
 																																																											javaPackage,
+																																																											exprIterationLiteral,
 																																																											exprRetGetKey,
 																																																											exprOutputSizeLiteral,
 																																																											kdaJcu,
@@ -8211,7 +8208,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Iterable<Object[]> pattern_PasswordBasedEncryption_12_3_findcontext_blackBBBBBBBBBBBBBBBBBBBBB(
-			JavaLiteral exprIterationLiteral, JavaPackage javaPackage, JavaMethodInvocation exprRetGetKey,
+			JavaPackage javaPackage, JavaLiteral exprIterationLiteral, JavaMethodInvocation exprRetGetKey,
 			JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu, JavaOpaqueMethod methodPerformEncryption,
 			JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption, JavaVariableDeclaration dataEncryption,
 			JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral, JavaVariableDeclaration pwdDeclaration,
@@ -8332,14 +8329,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																												.getName();
 																																										if (kdaJcu_name
 																																												.equals("KeyDeriv")) {
-																																											String methodPerformEncryption_type = methodPerformEncryption
-																																													.getType();
-																																											if (methodPerformEncryption_type
-																																													.equals("byte[] ")) {
-																																												String methodPerformEncryption_modifier = methodPerformEncryption
-																																														.getModifier();
-																																												if (methodPerformEncryption_modifier
-																																														.equals("private")) {
+																																											String methodPerformEncryption_modifier = methodPerformEncryption
+																																													.getModifier();
+																																											if (methodPerformEncryption_modifier
+																																													.equals("private")) {
+																																												String methodPerformEncryption_type = methodPerformEncryption
+																																														.getType();
+																																												if (methodPerformEncryption_type
+																																														.equals("byte[] ")) {
 																																													String methodPerformEncryption_name = methodPerformEncryption
 																																															.getName();
 																																													if (methodPerformEncryption_name
@@ -8360,34 +8357,34 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																		.getType();
 																																																if (keyEncryption_type
 																																																		.equals("SecretKey")) {
-																																																	int dataEncryption_index = dataEncryption
-																																																			.getIndex();
-																																																	if (Integer
-																																																			.valueOf(
-																																																					dataEncryption_index)
-																																																			.equals(Integer
-																																																					.valueOf(
-																																																							0))) {
-																																																		String dataEncryption_name = dataEncryption
-																																																				.getName();
-																																																		if (dataEncryption_name
-																																																				.equals("data")) {
-																																																			String dataEncryption_type = dataEncryption
-																																																					.getType();
-																																																			if (dataEncryption_type
-																																																					.equals("byte[]")) {
+																																																	String dataEncryption_type = dataEncryption
+																																																			.getType();
+																																																	if (dataEncryption_type
+																																																			.equals("byte[]")) {
+																																																		int dataEncryption_index = dataEncryption
+																																																				.getIndex();
+																																																		if (Integer
+																																																				.valueOf(
+																																																						dataEncryption_index)
+																																																				.equals(Integer
+																																																						.valueOf(
+																																																								0))) {
+																																																			String dataEncryption_name = dataEncryption
+																																																					.getName();
+																																																			if (dataEncryption_name
+																																																					.equals("data")) {
 																																																				String methodGetKey_modifier = methodGetKey
 																																																						.getModifier();
 																																																				if (methodGetKey_modifier
 																																																						.equals("public")) {
-																																																					String methodGetKey_type = methodGetKey
-																																																							.getType();
-																																																					if (methodGetKey_type
-																																																							.equals("SecretKey ")) {
-																																																						String methodGetKey_name = methodGetKey
-																																																								.getName();
-																																																						if (methodGetKey_name
-																																																								.equals("getKey")) {
+																																																					String methodGetKey_name = methodGetKey
+																																																							.getName();
+																																																					if (methodGetKey_name
+																																																							.equals("getKey")) {
+																																																						String methodGetKey_type = methodGetKey
+																																																								.getType();
+																																																						if (methodGetKey_type
+																																																								.equals("SecretKey ")) {
 																																																							int exprAlgNameLiteral_index = exprAlgNameLiteral
 																																																									.getIndex();
 																																																							if (Integer
@@ -8412,14 +8409,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																												.getName();
 																																																										if (pwdDeclaration_name
 																																																												.equals("pwd")) {
-																																																											String methodPerformGetKey_modifier = methodPerformGetKey
-																																																													.getModifier();
-																																																											if (methodPerformGetKey_modifier
-																																																													.equals("private")) {
-																																																												String methodPerformGetKey_type = methodPerformGetKey
-																																																														.getType();
-																																																												if (methodPerformGetKey_type
-																																																														.equals("SecretKey ")) {
+																																																											String methodPerformGetKey_type = methodPerformGetKey
+																																																													.getType();
+																																																											if (methodPerformGetKey_type
+																																																													.equals("SecretKey ")) {
+																																																												String methodPerformGetKey_modifier = methodPerformGetKey
+																																																														.getModifier();
+																																																												if (methodPerformGetKey_modifier
+																																																														.equals("private")) {
 																																																													String methodPerformGetKey_name = methodPerformGetKey
 																																																															.getName();
 																																																													if (methodPerformGetKey_name
@@ -8432,18 +8429,18 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																																.equals(Boolean
 																																																																		.valueOf(
 																																																																				true))) {
-																																																															int exprKeyName_index = exprKeyName
-																																																																	.getIndex();
-																																																															if (Integer
-																																																																	.valueOf(
-																																																																			exprKeyName_index)
-																																																																	.equals(Integer
-																																																																			.valueOf(
-																																																																					1))) {
-																																																																String exprKeyName_identifier = exprKeyName
-																																																																		.getIdentifier();
-																																																																if (exprKeyName_identifier
-																																																																		.equals("key")) {
+																																																															String exprKeyName_identifier = exprKeyName
+																																																																	.getIdentifier();
+																																																															if (exprKeyName_identifier
+																																																																	.equals("key")) {
+																																																																int exprKeyName_index = exprKeyName
+																																																																		.getIndex();
+																																																																if (Integer
+																																																																		.valueOf(
+																																																																				exprKeyName_index)
+																																																																		.equals(Integer
+																																																																				.valueOf(
+																																																																						1))) {
 																																																																	int exprNameModePadding_index = exprNameModePadding
 																																																																			.getIndex();
 																																																																	if (Integer
@@ -8456,14 +8453,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																																				.getType();
 																																																																		if (methodEncryption_type
 																																																																				.equals("byte[] ")) {
-																																																																			String methodEncryption_name = methodEncryption
-																																																																					.getName();
-																																																																			if (methodEncryption_name
-																																																																					.equals("encrypt")) {
-																																																																				String methodEncryption_modifier = methodEncryption
-																																																																						.getModifier();
-																																																																				if (methodEncryption_modifier
-																																																																						.equals("public")) {
+																																																																			String methodEncryption_modifier = methodEncryption
+																																																																					.getModifier();
+																																																																			if (methodEncryption_modifier
+																																																																					.equals("public")) {
+																																																																				String methodEncryption_name = methodEncryption
+																																																																						.getName();
+																																																																				if (methodEncryption_name
+																																																																						.equals("encrypt")) {
 																																																																					String exprPwdName_identifier = exprPwdName
 																																																																							.getIdentifier();
 																																																																					if (exprPwdName_identifier
@@ -8502,8 +8499,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																																																true))) {
 																																																																											_result.add(
 																																																																													new Object[] {
-																																																																															exprIterationLiteral,
 																																																																															javaPackage,
+																																																																															exprIterationLiteral,
 																																																																															exprRetGetKey,
 																																																																															exprOutputSizeLiteral,
 																																																																															kdaJcu,
@@ -8636,7 +8633,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_12_3_findcontext_greenBBBBBBBBBBBBBBBBBBBBBFFFFFFFFFFFFFFFFFFFFF(
-			JavaLiteral exprIterationLiteral, JavaPackage javaPackage, JavaMethodInvocation exprRetGetKey,
+			JavaPackage javaPackage, JavaLiteral exprIterationLiteral, JavaMethodInvocation exprRetGetKey,
 			JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu, JavaOpaqueMethod methodPerformEncryption,
 			JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption, JavaVariableDeclaration dataEncryption,
 			JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral, JavaVariableDeclaration pwdDeclaration,
@@ -8687,8 +8684,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		String sbcJcu__methodPerformEncryption____methods_name_prime = "methods";
 		String exprRetGetKey__exprAlgNameLiteral____arguments_name_prime = "arguments";
 		String exprRetGetKey__exprIterationLiteral____arguments_name_prime = "arguments";
-		isApplicableMatch.getAllContextElements().add(exprIterationLiteral);
 		isApplicableMatch.getAllContextElements().add(javaPackage);
+		isApplicableMatch.getAllContextElements().add(exprIterationLiteral);
 		isApplicableMatch.getAllContextElements().add(exprRetGetKey);
 		isApplicableMatch.getAllContextElements().add(exprOutputSizeLiteral);
 		isApplicableMatch.getAllContextElements().add(kdaJcu);
@@ -8796,7 +8793,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 				.setName(exprRetGetKey__exprAlgNameLiteral____arguments_name_prime);
 		exprRetGetKey__exprIterationLiteral____arguments
 				.setName(exprRetGetKey__exprIterationLiteral____arguments_name_prime);
-		return new Object[] { exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
+		return new Object[] { javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
 				methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, exprAlgNameLiteral,
 				pwdDeclaration, methodPerformGetKey, statRetPerformEncryption, exprKeyName, exprNameModePadding,
 				methodEncryption, exprPwdName, exprDataName, exprRetPerformEncryption, statRetGetKey, isApplicableMatch,
@@ -8813,22 +8810,22 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_12_4_solveCSP_bindingFBBBBBBBBBBBBBBBBBBBBBBB(
-			PasswordBasedEncryption _this, IsApplicableMatch isApplicableMatch, JavaLiteral exprIterationLiteral,
-			JavaPackage javaPackage, JavaMethodInvocation exprRetGetKey, JavaLiteral exprOutputSizeLiteral,
+			PasswordBasedEncryption _this, IsApplicableMatch isApplicableMatch, JavaPackage javaPackage,
+			JavaLiteral exprIterationLiteral, JavaMethodInvocation exprRetGetKey, JavaLiteral exprOutputSizeLiteral,
 			JavaCompilationUnit kdaJcu, JavaOpaqueMethod methodPerformEncryption, JavaCompilationUnit sbcJcu,
 			JavaVariableDeclaration keyEncryption, JavaVariableDeclaration dataEncryption,
 			JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral, JavaVariableDeclaration pwdDeclaration,
 			JavaOpaqueMethod methodPerformGetKey, JavaStatement statRetPerformEncryption, JavaName exprKeyName,
 			JavaLiteral exprNameModePadding, JavaWorkflowMethod methodEncryption, JavaName exprPwdName,
 			JavaName exprDataName, JavaMethodInvocation exprRetPerformEncryption, JavaStatement statRetGetKey) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_BWD(isApplicableMatch, exprIterationLiteral, javaPackage,
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_BWD(isApplicableMatch, javaPackage, exprIterationLiteral,
 				exprRetGetKey, exprOutputSizeLiteral, kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption,
 				dataEncryption, methodGetKey, exprAlgNameLiteral, pwdDeclaration, methodPerformGetKey,
 				statRetPerformEncryption, exprKeyName, exprNameModePadding, methodEncryption, exprPwdName, exprDataName,
 				exprRetPerformEncryption, statRetGetKey);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, exprIterationLiteral, javaPackage, exprRetGetKey,
+			return new Object[] { csp, _this, isApplicableMatch, javaPackage, exprIterationLiteral, exprRetGetKey,
 					exprOutputSizeLiteral, kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption,
 					methodGetKey, exprAlgNameLiteral, pwdDeclaration, methodPerformGetKey, statRetPerformEncryption,
 					exprKeyName, exprNameModePadding, methodEncryption, exprPwdName, exprDataName,
@@ -8842,8 +8839,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_12_4_solveCSP_bindingAndBlackFBBBBBBBBBBBBBBBBBBBBBBB(
-			PasswordBasedEncryption _this, IsApplicableMatch isApplicableMatch, JavaLiteral exprIterationLiteral,
-			JavaPackage javaPackage, JavaMethodInvocation exprRetGetKey, JavaLiteral exprOutputSizeLiteral,
+			PasswordBasedEncryption _this, IsApplicableMatch isApplicableMatch, JavaPackage javaPackage,
+			JavaLiteral exprIterationLiteral, JavaMethodInvocation exprRetGetKey, JavaLiteral exprOutputSizeLiteral,
 			JavaCompilationUnit kdaJcu, JavaOpaqueMethod methodPerformEncryption, JavaCompilationUnit sbcJcu,
 			JavaVariableDeclaration keyEncryption, JavaVariableDeclaration dataEncryption,
 			JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral, JavaVariableDeclaration pwdDeclaration,
@@ -8851,7 +8848,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaLiteral exprNameModePadding, JavaWorkflowMethod methodEncryption, JavaName exprPwdName,
 			JavaName exprDataName, JavaMethodInvocation exprRetPerformEncryption, JavaStatement statRetGetKey) {
 		Object[] result_pattern_PasswordBasedEncryption_12_4_solveCSP_binding = pattern_PasswordBasedEncryption_12_4_solveCSP_bindingFBBBBBBBBBBBBBBBBBBBBBBB(
-				_this, isApplicableMatch, exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral,
+				_this, isApplicableMatch, javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral,
 				kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey,
 				exprAlgNameLiteral, pwdDeclaration, methodPerformGetKey, statRetPerformEncryption, exprKeyName,
 				exprNameModePadding, methodEncryption, exprPwdName, exprDataName, exprRetPerformEncryption,
@@ -8863,7 +8860,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 					csp);
 			if (result_pattern_PasswordBasedEncryption_12_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, exprIterationLiteral, javaPackage, exprRetGetKey,
+				return new Object[] { csp, _this, isApplicableMatch, javaPackage, exprIterationLiteral, exprRetGetKey,
 						exprOutputSizeLiteral, kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption,
 						methodGetKey, exprAlgNameLiteral, pwdDeclaration, methodPerformGetKey, statRetPerformEncryption,
 						exprKeyName, exprNameModePadding, methodEncryption, exprPwdName, exprDataName,
@@ -8957,9 +8954,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 	public static final Object[] pattern_PasswordBasedEncryption_20_2_testcorematchandDECs_black_nac_0BBB(Task task,
 			KeyDerivationAlgorithm kda, SymmetricBlockCipher sbc) {
-		for (Algorithm __DEC_task_algorithms_816845 : task.getAlgorithms()) {
-			if (!kda.equals(__DEC_task_algorithms_816845)) {
-				if (!sbc.equals(__DEC_task_algorithms_816845)) {
+		for (Algorithm __DEC_task_algorithms_7857 : task.getAlgorithms()) {
+			if (!kda.equals(__DEC_task_algorithms_7857)) {
+				if (!sbc.equals(__DEC_task_algorithms_7857)) {
 					return new Object[] { task, kda, sbc };
 				}
 			}
@@ -9098,13 +9095,12 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_21_2_testcorematchandDECs_black_nac_0BBB(
-			JavaLiteral exprIterationLiteral, JavaStatement statRetPerformEncryption, JavaStatement statRetGetKey) {
-		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_exprIterationLiteral_expr_829293 : org.moflon.core.utilities.eMoflonEMFUtil
-					.getOppositeReferenceTyped(exprIterationLiteral, JavaStatement.class, "expr")) {
-				if (!statRetPerformEncryption.equals(__DEC_exprIterationLiteral_expr_829293)) {
-					if (!statRetGetKey.equals(__DEC_exprIterationLiteral_expr_829293)) {
-						return new Object[] { exprIterationLiteral, statRetPerformEncryption, statRetGetKey };
+			JavaPackage javaPackage, JavaCompilationUnit kdaJcu, JavaCompilationUnit sbcJcu) {
+		if (!kdaJcu.equals(sbcJcu)) {
+			for (JavaCompilationUnit __DEC_javaPackage_cunits_581998 : javaPackage.getCunits()) {
+				if (!kdaJcu.equals(__DEC_javaPackage_cunits_581998)) {
+					if (!sbcJcu.equals(__DEC_javaPackage_cunits_581998)) {
+						return new Object[] { javaPackage, kdaJcu, sbcJcu };
 					}
 				}
 			}
@@ -9113,12 +9109,13 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_21_2_testcorematchandDECs_black_nac_1BBB(
-			JavaPackage javaPackage, JavaCompilationUnit kdaJcu, JavaCompilationUnit sbcJcu) {
-		if (!kdaJcu.equals(sbcJcu)) {
-			for (JavaCompilationUnit __DEC_javaPackage_cunits_806890 : javaPackage.getCunits()) {
-				if (!kdaJcu.equals(__DEC_javaPackage_cunits_806890)) {
-					if (!sbcJcu.equals(__DEC_javaPackage_cunits_806890)) {
-						return new Object[] { javaPackage, kdaJcu, sbcJcu };
+			JavaLiteral exprIterationLiteral, JavaStatement statRetPerformEncryption, JavaStatement statRetGetKey) {
+		if (!statRetGetKey.equals(statRetPerformEncryption)) {
+			for (JavaStatement __DEC_exprIterationLiteral_expr_470383 : org.moflon.core.utilities.eMoflonEMFUtil
+					.getOppositeReferenceTyped(exprIterationLiteral, JavaStatement.class, "expr")) {
+				if (!statRetPerformEncryption.equals(__DEC_exprIterationLiteral_expr_470383)) {
+					if (!statRetGetKey.equals(__DEC_exprIterationLiteral_expr_470383)) {
+						return new Object[] { exprIterationLiteral, statRetPerformEncryption, statRetGetKey };
 					}
 				}
 			}
@@ -9129,10 +9126,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	public static final Object[] pattern_PasswordBasedEncryption_21_2_testcorematchandDECs_black_nac_2BB(
 			JavaMethodInvocation exprRetGetKey, JavaMethodInvocation exprRetPerformEncryption) {
 		if (!exprRetGetKey.equals(exprRetPerformEncryption)) {
-			for (JavaMethodInvocation __DEC_exprRetGetKey_arguments_643162 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaMethodInvocation __DEC_exprRetGetKey_arguments_515447 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(exprRetGetKey, JavaMethodInvocation.class, "arguments")) {
-				if (!exprRetGetKey.equals(__DEC_exprRetGetKey_arguments_643162)) {
-					if (!exprRetPerformEncryption.equals(__DEC_exprRetGetKey_arguments_643162)) {
+				if (!exprRetGetKey.equals(__DEC_exprRetGetKey_arguments_515447)) {
+					if (!exprRetPerformEncryption.equals(__DEC_exprRetGetKey_arguments_515447)) {
 						return new Object[] { exprRetGetKey, exprRetPerformEncryption };
 					}
 				}
@@ -9144,10 +9141,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	public static final Object[] pattern_PasswordBasedEncryption_21_2_testcorematchandDECs_black_nac_3BBB(
 			JavaLiteral exprOutputSizeLiteral, JavaStatement statRetPerformEncryption, JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_exprOutputSizeLiteral_expr_174958 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaStatement __DEC_exprOutputSizeLiteral_expr_919750 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(exprOutputSizeLiteral, JavaStatement.class, "expr")) {
-				if (!statRetPerformEncryption.equals(__DEC_exprOutputSizeLiteral_expr_174958)) {
-					if (!statRetGetKey.equals(__DEC_exprOutputSizeLiteral_expr_174958)) {
+				if (!statRetPerformEncryption.equals(__DEC_exprOutputSizeLiteral_expr_919750)) {
+					if (!statRetGetKey.equals(__DEC_exprOutputSizeLiteral_expr_919750)) {
 						return new Object[] { exprOutputSizeLiteral, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -9160,10 +9157,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaVariableDeclaration keyEncryption, JavaStatement statRetPerformEncryption,
 			JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_keyEncryption_expr_815188 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaStatement __DEC_keyEncryption_expr_52375 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(keyEncryption, JavaStatement.class, "expr")) {
-				if (!statRetPerformEncryption.equals(__DEC_keyEncryption_expr_815188)) {
-					if (!statRetGetKey.equals(__DEC_keyEncryption_expr_815188)) {
+				if (!statRetPerformEncryption.equals(__DEC_keyEncryption_expr_52375)) {
+					if (!statRetGetKey.equals(__DEC_keyEncryption_expr_52375)) {
 						return new Object[] { keyEncryption, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -9176,10 +9173,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaVariableDeclaration keyEncryption, JavaMethodInvocation exprRetGetKey,
 			JavaMethodInvocation exprRetPerformEncryption) {
 		if (!exprRetGetKey.equals(exprRetPerformEncryption)) {
-			for (JavaMethodInvocation __DEC_keyEncryption_arguments_18593 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaMethodInvocation __DEC_keyEncryption_arguments_577674 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(keyEncryption, JavaMethodInvocation.class, "arguments")) {
-				if (!exprRetGetKey.equals(__DEC_keyEncryption_arguments_18593)) {
-					if (!exprRetPerformEncryption.equals(__DEC_keyEncryption_arguments_18593)) {
+				if (!exprRetGetKey.equals(__DEC_keyEncryption_arguments_577674)) {
+					if (!exprRetPerformEncryption.equals(__DEC_keyEncryption_arguments_577674)) {
 						return new Object[] { keyEncryption, exprRetGetKey, exprRetPerformEncryption };
 					}
 				}
@@ -9192,10 +9189,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaVariableDeclaration dataEncryption, JavaStatement statRetPerformEncryption,
 			JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_dataEncryption_expr_843319 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaStatement __DEC_dataEncryption_expr_209546 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(dataEncryption, JavaStatement.class, "expr")) {
-				if (!statRetPerformEncryption.equals(__DEC_dataEncryption_expr_843319)) {
-					if (!statRetGetKey.equals(__DEC_dataEncryption_expr_843319)) {
+				if (!statRetPerformEncryption.equals(__DEC_dataEncryption_expr_209546)) {
+					if (!statRetGetKey.equals(__DEC_dataEncryption_expr_209546)) {
 						return new Object[] { dataEncryption, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -9208,10 +9205,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaVariableDeclaration dataEncryption, JavaMethodInvocation exprRetGetKey,
 			JavaMethodInvocation exprRetPerformEncryption) {
 		if (!exprRetGetKey.equals(exprRetPerformEncryption)) {
-			for (JavaMethodInvocation __DEC_dataEncryption_arguments_589902 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaMethodInvocation __DEC_dataEncryption_arguments_716867 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(dataEncryption, JavaMethodInvocation.class, "arguments")) {
-				if (!exprRetGetKey.equals(__DEC_dataEncryption_arguments_589902)) {
-					if (!exprRetPerformEncryption.equals(__DEC_dataEncryption_arguments_589902)) {
+				if (!exprRetGetKey.equals(__DEC_dataEncryption_arguments_716867)) {
+					if (!exprRetPerformEncryption.equals(__DEC_dataEncryption_arguments_716867)) {
 						return new Object[] { dataEncryption, exprRetGetKey, exprRetPerformEncryption };
 					}
 				}
@@ -9223,9 +9220,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	public static final Object[] pattern_PasswordBasedEncryption_21_2_testcorematchandDECs_black_nac_8BBB(
 			JavaWorkflowMethod methodGetKey, JavaStatement statRetPerformEncryption, JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_methodGetKey_statements_612257 : methodGetKey.getStatements()) {
-				if (!statRetPerformEncryption.equals(__DEC_methodGetKey_statements_612257)) {
-					if (!statRetGetKey.equals(__DEC_methodGetKey_statements_612257)) {
+			for (JavaStatement __DEC_methodGetKey_statements_610455 : methodGetKey.getStatements()) {
+				if (!statRetPerformEncryption.equals(__DEC_methodGetKey_statements_610455)) {
+					if (!statRetGetKey.equals(__DEC_methodGetKey_statements_610455)) {
 						return new Object[] { methodGetKey, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -9237,10 +9234,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	public static final Object[] pattern_PasswordBasedEncryption_21_2_testcorematchandDECs_black_nac_9BBB(
 			JavaLiteral exprAlgNameLiteral, JavaStatement statRetPerformEncryption, JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_exprAlgNameLiteral_expr_418082 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaStatement __DEC_exprAlgNameLiteral_expr_880534 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(exprAlgNameLiteral, JavaStatement.class, "expr")) {
-				if (!statRetPerformEncryption.equals(__DEC_exprAlgNameLiteral_expr_418082)) {
-					if (!statRetGetKey.equals(__DEC_exprAlgNameLiteral_expr_418082)) {
+				if (!statRetPerformEncryption.equals(__DEC_exprAlgNameLiteral_expr_880534)) {
+					if (!statRetGetKey.equals(__DEC_exprAlgNameLiteral_expr_880534)) {
 						return new Object[] { exprAlgNameLiteral, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -9253,10 +9250,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaVariableDeclaration pwdDeclaration, JavaStatement statRetPerformEncryption,
 			JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_pwdDeclaration_expr_829518 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaStatement __DEC_pwdDeclaration_expr_595001 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(pwdDeclaration, JavaStatement.class, "expr")) {
-				if (!statRetPerformEncryption.equals(__DEC_pwdDeclaration_expr_829518)) {
-					if (!statRetGetKey.equals(__DEC_pwdDeclaration_expr_829518)) {
+				if (!statRetPerformEncryption.equals(__DEC_pwdDeclaration_expr_595001)) {
+					if (!statRetGetKey.equals(__DEC_pwdDeclaration_expr_595001)) {
 						return new Object[] { pwdDeclaration, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -9269,10 +9266,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaVariableDeclaration pwdDeclaration, JavaMethodInvocation exprRetGetKey,
 			JavaMethodInvocation exprRetPerformEncryption) {
 		if (!exprRetGetKey.equals(exprRetPerformEncryption)) {
-			for (JavaMethodInvocation __DEC_pwdDeclaration_arguments_680956 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaMethodInvocation __DEC_pwdDeclaration_arguments_224619 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(pwdDeclaration, JavaMethodInvocation.class, "arguments")) {
-				if (!exprRetGetKey.equals(__DEC_pwdDeclaration_arguments_680956)) {
-					if (!exprRetPerformEncryption.equals(__DEC_pwdDeclaration_arguments_680956)) {
+				if (!exprRetGetKey.equals(__DEC_pwdDeclaration_arguments_224619)) {
+					if (!exprRetPerformEncryption.equals(__DEC_pwdDeclaration_arguments_224619)) {
 						return new Object[] { pwdDeclaration, exprRetGetKey, exprRetPerformEncryption };
 					}
 				}
@@ -9284,10 +9281,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	public static final Object[] pattern_PasswordBasedEncryption_21_2_testcorematchandDECs_black_nac_12BBB(
 			JavaName exprKeyName, JavaStatement statRetPerformEncryption, JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_exprKeyName_expr_493924 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaStatement __DEC_exprKeyName_expr_838410 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(exprKeyName, JavaStatement.class, "expr")) {
-				if (!statRetPerformEncryption.equals(__DEC_exprKeyName_expr_493924)) {
-					if (!statRetGetKey.equals(__DEC_exprKeyName_expr_493924)) {
+				if (!statRetPerformEncryption.equals(__DEC_exprKeyName_expr_838410)) {
+					if (!statRetGetKey.equals(__DEC_exprKeyName_expr_838410)) {
 						return new Object[] { exprKeyName, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -9299,10 +9296,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	public static final Object[] pattern_PasswordBasedEncryption_21_2_testcorematchandDECs_black_nac_13BBB(
 			JavaLiteral exprNameModePadding, JavaStatement statRetPerformEncryption, JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_exprNameModePadding_expr_996642 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaStatement __DEC_exprNameModePadding_expr_332334 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(exprNameModePadding, JavaStatement.class, "expr")) {
-				if (!statRetPerformEncryption.equals(__DEC_exprNameModePadding_expr_996642)) {
-					if (!statRetGetKey.equals(__DEC_exprNameModePadding_expr_996642)) {
+				if (!statRetPerformEncryption.equals(__DEC_exprNameModePadding_expr_332334)) {
+					if (!statRetGetKey.equals(__DEC_exprNameModePadding_expr_332334)) {
 						return new Object[] { exprNameModePadding, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -9314,9 +9311,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	public static final Object[] pattern_PasswordBasedEncryption_21_2_testcorematchandDECs_black_nac_14BBB(
 			JavaWorkflowMethod methodEncryption, JavaStatement statRetPerformEncryption, JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_methodEncryption_statements_747644 : methodEncryption.getStatements()) {
-				if (!statRetPerformEncryption.equals(__DEC_methodEncryption_statements_747644)) {
-					if (!statRetGetKey.equals(__DEC_methodEncryption_statements_747644)) {
+			for (JavaStatement __DEC_methodEncryption_statements_704186 : methodEncryption.getStatements()) {
+				if (!statRetPerformEncryption.equals(__DEC_methodEncryption_statements_704186)) {
+					if (!statRetGetKey.equals(__DEC_methodEncryption_statements_704186)) {
 						return new Object[] { methodEncryption, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -9328,10 +9325,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	public static final Object[] pattern_PasswordBasedEncryption_21_2_testcorematchandDECs_black_nac_15BBB(
 			JavaName exprPwdName, JavaStatement statRetPerformEncryption, JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_exprPwdName_expr_832670 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaStatement __DEC_exprPwdName_expr_78652 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(exprPwdName, JavaStatement.class, "expr")) {
-				if (!statRetPerformEncryption.equals(__DEC_exprPwdName_expr_832670)) {
-					if (!statRetGetKey.equals(__DEC_exprPwdName_expr_832670)) {
+				if (!statRetPerformEncryption.equals(__DEC_exprPwdName_expr_78652)) {
+					if (!statRetGetKey.equals(__DEC_exprPwdName_expr_78652)) {
 						return new Object[] { exprPwdName, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -9343,10 +9340,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	public static final Object[] pattern_PasswordBasedEncryption_21_2_testcorematchandDECs_black_nac_16BBB(
 			JavaName exprDataName, JavaStatement statRetPerformEncryption, JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_exprDataName_expr_414269 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaStatement __DEC_exprDataName_expr_345423 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(exprDataName, JavaStatement.class, "expr")) {
-				if (!statRetPerformEncryption.equals(__DEC_exprDataName_expr_414269)) {
-					if (!statRetGetKey.equals(__DEC_exprDataName_expr_414269)) {
+				if (!statRetPerformEncryption.equals(__DEC_exprDataName_expr_345423)) {
+					if (!statRetGetKey.equals(__DEC_exprDataName_expr_345423)) {
 						return new Object[] { exprDataName, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -9358,10 +9355,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	public static final Object[] pattern_PasswordBasedEncryption_21_2_testcorematchandDECs_black_nac_17BB(
 			JavaMethodInvocation exprRetPerformEncryption, JavaMethodInvocation exprRetGetKey) {
 		if (!exprRetGetKey.equals(exprRetPerformEncryption)) {
-			for (JavaMethodInvocation __DEC_exprRetPerformEncryption_arguments_141669 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaMethodInvocation __DEC_exprRetPerformEncryption_arguments_204113 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(exprRetPerformEncryption, JavaMethodInvocation.class, "arguments")) {
-				if (!exprRetPerformEncryption.equals(__DEC_exprRetPerformEncryption_arguments_141669)) {
-					if (!exprRetGetKey.equals(__DEC_exprRetPerformEncryption_arguments_141669)) {
+				if (!exprRetPerformEncryption.equals(__DEC_exprRetPerformEncryption_arguments_204113)) {
+					if (!exprRetGetKey.equals(__DEC_exprRetPerformEncryption_arguments_204113)) {
 						return new Object[] { exprRetPerformEncryption, exprRetGetKey };
 					}
 				}
@@ -9614,10 +9611,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 				if (exprRetPerformEncryption.getArguments().contains(exprKeyName)) {
 					String exprRetPerformEncryption_name = exprRetPerformEncryption.getName();
 					if (exprRetPerformEncryption_name.equals("performEncryption")) {
-						int exprKeyName_index = exprKeyName.getIndex();
-						if (Integer.valueOf(exprKeyName_index).equals(Integer.valueOf(1))) {
-							String exprKeyName_identifier = exprKeyName.getIdentifier();
-							if (exprKeyName_identifier.equals("key")) {
+						String exprKeyName_identifier = exprKeyName.getIdentifier();
+						if (exprKeyName_identifier.equals("key")) {
+							int exprKeyName_index = exprKeyName.getIndex();
+							if (Integer.valueOf(exprKeyName_index).equals(Integer.valueOf(1))) {
 								for (JavaExpression tmpExprDataName : exprRetPerformEncryption.getArguments()) {
 									if (tmpExprDataName instanceof JavaName) {
 										JavaName exprDataName = (JavaName) tmpExprDataName;
@@ -9660,14 +9657,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																								.getType();
 																						if (methodEncryption_type
 																								.equals("byte[] ")) {
-																							String methodEncryption_name = methodEncryption
-																									.getName();
-																							if (methodEncryption_name
-																									.equals("encrypt")) {
-																								String methodEncryption_modifier = methodEncryption
-																										.getModifier();
-																								if (methodEncryption_modifier
-																										.equals("public")) {
+																							String methodEncryption_modifier = methodEncryption
+																									.getModifier();
+																							if (methodEncryption_modifier
+																									.equals("public")) {
+																								String methodEncryption_name = methodEncryption
+																										.getName();
+																								if (methodEncryption_name
+																										.equals("encrypt")) {
 																									for (JavaVariableDeclaration keyEncryption : methodEncryption
 																											.getParams()) {
 																										int keyEncryption_index = keyEncryption
@@ -9696,22 +9693,22 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																	.getParams()) {
 																																if (!dataEncryption
 																																		.equals(keyEncryption)) {
-																																	int dataEncryption_index = dataEncryption
-																																			.getIndex();
-																																	if (Integer
-																																			.valueOf(
-																																					dataEncryption_index)
-																																			.equals(Integer
-																																					.valueOf(
-																																							0))) {
-																																		String dataEncryption_name = dataEncryption
-																																				.getName();
-																																		if (dataEncryption_name
-																																				.equals("data")) {
-																																			String dataEncryption_type = dataEncryption
-																																					.getType();
-																																			if (dataEncryption_type
-																																					.equals("byte[]")) {
+																																	String dataEncryption_type = dataEncryption
+																																			.getType();
+																																	if (dataEncryption_type
+																																			.equals("byte[]")) {
+																																		int dataEncryption_index = dataEncryption
+																																				.getIndex();
+																																		if (Integer
+																																				.valueOf(
+																																						dataEncryption_index)
+																																				.equals(Integer
+																																						.valueOf(
+																																								0))) {
+																																			String dataEncryption_name = dataEncryption
+																																					.getName();
+																																			if (dataEncryption_name
+																																					.equals("data")) {
 																																				if (pattern_PasswordBasedEncryption_21_2_testcorematchandDECs_black_nac_26BB(
 																																						statRetPerformEncryption,
 																																						dataEncryption) == null) {
@@ -9727,14 +9724,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																									.getMethods()) {
 																																								if (tmpMethodPerformEncryption instanceof JavaOpaqueMethod) {
 																																									JavaOpaqueMethod methodPerformEncryption = (JavaOpaqueMethod) tmpMethodPerformEncryption;
-																																									String methodPerformEncryption_type = methodPerformEncryption
-																																											.getType();
-																																									if (methodPerformEncryption_type
-																																											.equals("byte[] ")) {
-																																										String methodPerformEncryption_modifier = methodPerformEncryption
-																																												.getModifier();
-																																										if (methodPerformEncryption_modifier
-																																												.equals("private")) {
+																																									String methodPerformEncryption_modifier = methodPerformEncryption
+																																											.getModifier();
+																																									if (methodPerformEncryption_modifier
+																																											.equals("private")) {
+																																										String methodPerformEncryption_type = methodPerformEncryption
+																																												.getType();
+																																										if (methodPerformEncryption_type
+																																												.equals("byte[] ")) {
 																																											String methodPerformEncryption_name = methodPerformEncryption
 																																													.getName();
 																																											if (methodPerformEncryption_name
@@ -9752,7 +9749,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																	.getName();
 																																															if (kdaJcu_name
 																																																	.equals("KeyDeriv")) {
-																																																if (pattern_PasswordBasedEncryption_21_2_testcorematchandDECs_black_nac_1BBB(
+																																																if (pattern_PasswordBasedEncryption_21_2_testcorematchandDECs_black_nac_0BBB(
 																																																		javaPackage,
 																																																		kdaJcu,
 																																																		sbcJcu) == null) {
@@ -9766,14 +9763,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																						.getModifier();
 																																																				if (methodGetKey_modifier
 																																																						.equals("public")) {
-																																																					String methodGetKey_type = methodGetKey
-																																																							.getType();
-																																																					if (methodGetKey_type
-																																																							.equals("SecretKey ")) {
-																																																						String methodGetKey_name = methodGetKey
-																																																								.getName();
-																																																						if (methodGetKey_name
-																																																								.equals("getKey")) {
+																																																					String methodGetKey_name = methodGetKey
+																																																							.getName();
+																																																					if (methodGetKey_name
+																																																							.equals("getKey")) {
+																																																						String methodGetKey_type = methodGetKey
+																																																								.getType();
+																																																						if (methodGetKey_type
+																																																								.equals("SecretKey ")) {
 																																																							if (pattern_PasswordBasedEncryption_21_2_testcorematchandDECs_black_nac_30BB(
 																																																									methodGetKey,
 																																																									statRetPerformEncryption) == null) {
@@ -9783,14 +9780,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																										JavaOpaqueMethod methodPerformGetKey = (JavaOpaqueMethod) tmpMethodPerformGetKey;
 																																																										if (!methodPerformEncryption
 																																																												.equals(methodPerformGetKey)) {
-																																																											String methodPerformGetKey_modifier = methodPerformGetKey
-																																																													.getModifier();
-																																																											if (methodPerformGetKey_modifier
-																																																													.equals("private")) {
-																																																												String methodPerformGetKey_type = methodPerformGetKey
-																																																														.getType();
-																																																												if (methodPerformGetKey_type
-																																																														.equals("SecretKey ")) {
+																																																											String methodPerformGetKey_type = methodPerformGetKey
+																																																													.getType();
+																																																											if (methodPerformGetKey_type
+																																																													.equals("SecretKey ")) {
+																																																												String methodPerformGetKey_modifier = methodPerformGetKey
+																																																														.getModifier();
+																																																												if (methodPerformGetKey_modifier
+																																																														.equals("private")) {
 																																																													String methodPerformGetKey_name = methodPerformGetKey
 																																																															.getName();
 																																																													if (methodPerformGetKey_name
@@ -10026,7 +10023,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																																																																																																			.equals(Integer
 																																																																																																																																					.valueOf(
 																																																																																																																																							2))) {
-																																																																																																																																		if (pattern_PasswordBasedEncryption_21_2_testcorematchandDECs_black_nac_0BBB(
+																																																																																																																																		if (pattern_PasswordBasedEncryption_21_2_testcorematchandDECs_black_nac_1BBB(
 																																																																																																																																				exprIterationLiteral,
 																																																																																																																																				statRetPerformEncryption,
 																																																																																																																																				statRetGetKey) == null) {
@@ -10038,8 +10035,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																																																																																																						exprIterationLiteral) == null) {
 																																																																																																																																					_result.add(
 																																																																																																																																							new Object[] {
-																																																																																																																																									exprIterationLiteral,
 																																																																																																																																									javaPackage,
+																																																																																																																																									exprIterationLiteral,
 																																																																																																																																									exprRetGetKey,
 																																																																																																																																									exprOutputSizeLiteral,
 																																																																																																																																									kdaJcu,
@@ -10243,7 +10240,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final boolean pattern_PasswordBasedEncryption_21_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBBBBBBBBBBBBBBBBBBBB(
-			PasswordBasedEncryption _this, Match match, JavaLiteral exprIterationLiteral, JavaPackage javaPackage,
+			PasswordBasedEncryption _this, Match match, JavaPackage javaPackage, JavaLiteral exprIterationLiteral,
 			JavaMethodInvocation exprRetGetKey, JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu,
 			JavaOpaqueMethod methodPerformEncryption, JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption,
 			JavaVariableDeclaration dataEncryption, JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral,
@@ -10251,7 +10248,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaStatement statRetPerformEncryption, JavaName exprKeyName, JavaLiteral exprNameModePadding,
 			JavaWorkflowMethod methodEncryption, JavaName exprPwdName, JavaName exprDataName,
 			JavaMethodInvocation exprRetPerformEncryption, JavaStatement statRetGetKey) {
-		boolean _localVariable_0 = _this.isAppropriate_BWD(match, exprIterationLiteral, javaPackage, exprRetGetKey,
+		boolean _localVariable_0 = _this.isAppropriate_BWD(match, javaPackage, exprIterationLiteral, exprRetGetKey,
 				exprOutputSizeLiteral, kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption,
 				methodGetKey, exprAlgNameLiteral, pwdDeclaration, methodPerformGetKey, statRetPerformEncryption,
 				exprKeyName, exprNameModePadding, methodEncryption, exprPwdName, exprDataName, exprRetPerformEncryption,
@@ -10299,8 +10296,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 	public static final Object[] pattern_PasswordBasedEncryption_24_2_matchsrctrgcontext_bindingFFFFFFFFFFFFFFFFFFFFFFFFBB(
 			Match targetMatch, Match sourceMatch) {
-		EObject _localVariable_0 = targetMatch.getObject("exprIterationLiteral");
-		EObject _localVariable_1 = targetMatch.getObject("javaPackage");
+		EObject _localVariable_0 = targetMatch.getObject("javaPackage");
+		EObject _localVariable_1 = targetMatch.getObject("exprIterationLiteral");
 		EObject _localVariable_2 = targetMatch.getObject("exprRetGetKey");
 		EObject _localVariable_3 = targetMatch.getObject("exprOutputSizeLiteral");
 		EObject _localVariable_4 = targetMatch.getObject("kdaJcu");
@@ -10323,8 +10320,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		EObject _localVariable_21 = targetMatch.getObject("exprDataName");
 		EObject _localVariable_22 = targetMatch.getObject("exprRetPerformEncryption");
 		EObject _localVariable_23 = targetMatch.getObject("statRetGetKey");
-		EObject tmpExprIterationLiteral = _localVariable_0;
-		EObject tmpJavaPackage = _localVariable_1;
+		EObject tmpJavaPackage = _localVariable_0;
+		EObject tmpExprIterationLiteral = _localVariable_1;
 		EObject tmpExprRetGetKey = _localVariable_2;
 		EObject tmpExprOutputSizeLiteral = _localVariable_3;
 		EObject tmpKdaJcu = _localVariable_4;
@@ -10347,10 +10344,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		EObject tmpExprDataName = _localVariable_21;
 		EObject tmpExprRetPerformEncryption = _localVariable_22;
 		EObject tmpStatRetGetKey = _localVariable_23;
-		if (tmpExprIterationLiteral instanceof JavaLiteral) {
-			JavaLiteral exprIterationLiteral = (JavaLiteral) tmpExprIterationLiteral;
-			if (tmpJavaPackage instanceof JavaPackage) {
-				JavaPackage javaPackage = (JavaPackage) tmpJavaPackage;
+		if (tmpJavaPackage instanceof JavaPackage) {
+			JavaPackage javaPackage = (JavaPackage) tmpJavaPackage;
+			if (tmpExprIterationLiteral instanceof JavaLiteral) {
+				JavaLiteral exprIterationLiteral = (JavaLiteral) tmpExprIterationLiteral;
 				if (tmpExprRetGetKey instanceof JavaMethodInvocation) {
 					JavaMethodInvocation exprRetGetKey = (JavaMethodInvocation) tmpExprRetGetKey;
 					if (tmpExprOutputSizeLiteral instanceof JavaLiteral) {
@@ -10396,8 +10393,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																									if (tmpStatRetGetKey instanceof JavaStatement) {
 																										JavaStatement statRetGetKey = (JavaStatement) tmpStatRetGetKey;
 																										return new Object[] {
-																												exprIterationLiteral,
 																												javaPackage,
+																												exprIterationLiteral,
 																												exprRetGetKey,
 																												exprOutputSizeLiteral,
 																												kdaJcu,
@@ -10450,7 +10447,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_24_2_matchsrctrgcontext_blackBBBBBBBBBBBBBBBBBBBBBBBBBB(
-			JavaLiteral exprIterationLiteral, JavaPackage javaPackage, JavaMethodInvocation exprRetGetKey,
+			JavaPackage javaPackage, JavaLiteral exprIterationLiteral, JavaMethodInvocation exprRetGetKey,
 			JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu, JavaOpaqueMethod methodPerformEncryption,
 			JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption, JavaVariableDeclaration dataEncryption,
 			JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral, JavaVariableDeclaration pwdDeclaration,
@@ -10497,14 +10494,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																									.getName();
 																							if (kdaJcu_name.equals(
 																									"KeyDeriv")) {
-																								String methodPerformEncryption_type = methodPerformEncryption
-																										.getType();
-																								if (methodPerformEncryption_type
-																										.equals("byte[] ")) {
-																									String methodPerformEncryption_modifier = methodPerformEncryption
-																											.getModifier();
-																									if (methodPerformEncryption_modifier
-																											.equals("private")) {
+																								String methodPerformEncryption_modifier = methodPerformEncryption
+																										.getModifier();
+																								if (methodPerformEncryption_modifier
+																										.equals("private")) {
+																									String methodPerformEncryption_type = methodPerformEncryption
+																											.getType();
+																									if (methodPerformEncryption_type
+																											.equals("byte[] ")) {
 																										String methodPerformEncryption_name = methodPerformEncryption
 																												.getName();
 																										if (methodPerformEncryption_name
@@ -10525,34 +10522,34 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																															.getType();
 																													if (keyEncryption_type
 																															.equals("SecretKey")) {
-																														int dataEncryption_index = dataEncryption
-																																.getIndex();
-																														if (Integer
-																																.valueOf(
-																																		dataEncryption_index)
-																																.equals(Integer
-																																		.valueOf(
-																																				0))) {
-																															String dataEncryption_name = dataEncryption
-																																	.getName();
-																															if (dataEncryption_name
-																																	.equals("data")) {
-																																String dataEncryption_type = dataEncryption
-																																		.getType();
-																																if (dataEncryption_type
-																																		.equals("byte[]")) {
+																														String dataEncryption_type = dataEncryption
+																																.getType();
+																														if (dataEncryption_type
+																																.equals("byte[]")) {
+																															int dataEncryption_index = dataEncryption
+																																	.getIndex();
+																															if (Integer
+																																	.valueOf(
+																																			dataEncryption_index)
+																																	.equals(Integer
+																																			.valueOf(
+																																					0))) {
+																																String dataEncryption_name = dataEncryption
+																																		.getName();
+																																if (dataEncryption_name
+																																		.equals("data")) {
 																																	String methodGetKey_modifier = methodGetKey
 																																			.getModifier();
 																																	if (methodGetKey_modifier
 																																			.equals("public")) {
-																																		String methodGetKey_type = methodGetKey
-																																				.getType();
-																																		if (methodGetKey_type
-																																				.equals("SecretKey ")) {
-																																			String methodGetKey_name = methodGetKey
-																																					.getName();
-																																			if (methodGetKey_name
-																																					.equals("getKey")) {
+																																		String methodGetKey_name = methodGetKey
+																																				.getName();
+																																		if (methodGetKey_name
+																																				.equals("getKey")) {
+																																			String methodGetKey_type = methodGetKey
+																																					.getType();
+																																			if (methodGetKey_type
+																																					.equals("SecretKey ")) {
 																																				int exprAlgNameLiteral_index = exprAlgNameLiteral
 																																						.getIndex();
 																																				if (Integer
@@ -10577,14 +10574,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																									.getName();
 																																							if (pwdDeclaration_name
 																																									.equals("pwd")) {
-																																								String methodPerformGetKey_modifier = methodPerformGetKey
-																																										.getModifier();
-																																								if (methodPerformGetKey_modifier
-																																										.equals("private")) {
-																																									String methodPerformGetKey_type = methodPerformGetKey
-																																											.getType();
-																																									if (methodPerformGetKey_type
-																																											.equals("SecretKey ")) {
+																																								String methodPerformGetKey_type = methodPerformGetKey
+																																										.getType();
+																																								if (methodPerformGetKey_type
+																																										.equals("SecretKey ")) {
+																																									String methodPerformGetKey_modifier = methodPerformGetKey
+																																											.getModifier();
+																																									if (methodPerformGetKey_modifier
+																																											.equals("private")) {
 																																										String methodPerformGetKey_name = methodPerformGetKey
 																																												.getName();
 																																										if (methodPerformGetKey_name
@@ -10597,18 +10594,18 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																													.equals(Boolean
 																																															.valueOf(
 																																																	true))) {
-																																												int exprKeyName_index = exprKeyName
-																																														.getIndex();
-																																												if (Integer
-																																														.valueOf(
-																																																exprKeyName_index)
-																																														.equals(Integer
-																																																.valueOf(
-																																																		1))) {
-																																													String exprKeyName_identifier = exprKeyName
-																																															.getIdentifier();
-																																													if (exprKeyName_identifier
-																																															.equals("key")) {
+																																												String exprKeyName_identifier = exprKeyName
+																																														.getIdentifier();
+																																												if (exprKeyName_identifier
+																																														.equals("key")) {
+																																													int exprKeyName_index = exprKeyName
+																																															.getIndex();
+																																													if (Integer
+																																															.valueOf(
+																																																	exprKeyName_index)
+																																															.equals(Integer
+																																																	.valueOf(
+																																																			1))) {
 																																														int exprNameModePadding_index = exprNameModePadding
 																																																.getIndex();
 																																														if (Integer
@@ -10621,14 +10618,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																	.getType();
 																																															if (methodEncryption_type
 																																																	.equals("byte[] ")) {
-																																																String methodEncryption_name = methodEncryption
-																																																		.getName();
-																																																if (methodEncryption_name
-																																																		.equals("encrypt")) {
-																																																	String methodEncryption_modifier = methodEncryption
-																																																			.getModifier();
-																																																	if (methodEncryption_modifier
-																																																			.equals("public")) {
+																																																String methodEncryption_modifier = methodEncryption
+																																																		.getModifier();
+																																																if (methodEncryption_modifier
+																																																		.equals("public")) {
+																																																	String methodEncryption_name = methodEncryption
+																																																			.getName();
+																																																	if (methodEncryption_name
+																																																			.equals("encrypt")) {
 																																																		String task_description = task
 																																																				.getDescription();
 																																																		if (task_description
@@ -10670,8 +10667,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																												.valueOf(
 																																																														true))) {
 																																																									return new Object[] {
-																																																											exprIterationLiteral,
 																																																											javaPackage,
+																																																											exprIterationLiteral,
 																																																											exprRetGetKey,
 																																																											exprOutputSizeLiteral,
 																																																											kdaJcu,
@@ -10796,8 +10793,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		Object[] result_pattern_PasswordBasedEncryption_24_2_matchsrctrgcontext_binding = pattern_PasswordBasedEncryption_24_2_matchsrctrgcontext_bindingFFFFFFFFFFFFFFFFFFFFFFFFBB(
 				targetMatch, sourceMatch);
 		if (result_pattern_PasswordBasedEncryption_24_2_matchsrctrgcontext_binding != null) {
-			JavaLiteral exprIterationLiteral = (JavaLiteral) result_pattern_PasswordBasedEncryption_24_2_matchsrctrgcontext_binding[0];
-			JavaPackage javaPackage = (JavaPackage) result_pattern_PasswordBasedEncryption_24_2_matchsrctrgcontext_binding[1];
+			JavaPackage javaPackage = (JavaPackage) result_pattern_PasswordBasedEncryption_24_2_matchsrctrgcontext_binding[0];
+			JavaLiteral exprIterationLiteral = (JavaLiteral) result_pattern_PasswordBasedEncryption_24_2_matchsrctrgcontext_binding[1];
 			JavaMethodInvocation exprRetGetKey = (JavaMethodInvocation) result_pattern_PasswordBasedEncryption_24_2_matchsrctrgcontext_binding[2];
 			JavaLiteral exprOutputSizeLiteral = (JavaLiteral) result_pattern_PasswordBasedEncryption_24_2_matchsrctrgcontext_binding[3];
 			JavaCompilationUnit kdaJcu = (JavaCompilationUnit) result_pattern_PasswordBasedEncryption_24_2_matchsrctrgcontext_binding[4];
@@ -10822,14 +10819,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaStatement statRetGetKey = (JavaStatement) result_pattern_PasswordBasedEncryption_24_2_matchsrctrgcontext_binding[23];
 
 			Object[] result_pattern_PasswordBasedEncryption_24_2_matchsrctrgcontext_black = pattern_PasswordBasedEncryption_24_2_matchsrctrgcontext_blackBBBBBBBBBBBBBBBBBBBBBBBBBB(
-					exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
+					javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
 					methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, exprAlgNameLiteral,
 					pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption, exprKeyName,
 					exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName,
 					exprRetPerformEncryption, statRetGetKey, sourceMatch, targetMatch);
 			if (result_pattern_PasswordBasedEncryption_24_2_matchsrctrgcontext_black != null) {
 
-				return new Object[] { exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
+				return new Object[] { javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
 						methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey,
 						exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption,
 						exprKeyName, exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName,
@@ -10840,7 +10837,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_24_3_solvecsp_bindingFBBBBBBBBBBBBBBBBBBBBBBBBBBB(
-			PasswordBasedEncryption _this, JavaLiteral exprIterationLiteral, JavaPackage javaPackage,
+			PasswordBasedEncryption _this, JavaPackage javaPackage, JavaLiteral exprIterationLiteral,
 			JavaMethodInvocation exprRetGetKey, JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu,
 			JavaOpaqueMethod methodPerformEncryption, JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption,
 			JavaVariableDeclaration dataEncryption, JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral,
@@ -10849,14 +10846,14 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaWorkflowMethod methodEncryption, Task task, JavaName exprPwdName, SymmetricBlockCipher sbc,
 			JavaName exprDataName, JavaMethodInvocation exprRetPerformEncryption, JavaStatement statRetGetKey,
 			Match sourceMatch, Match targetMatch) {
-		CSP _localVariable_24 = _this.isApplicable_solveCsp_CC(exprIterationLiteral, javaPackage, exprRetGetKey,
+		CSP _localVariable_24 = _this.isApplicable_solveCsp_CC(javaPackage, exprIterationLiteral, exprRetGetKey,
 				exprOutputSizeLiteral, kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption,
 				methodGetKey, exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption,
 				exprKeyName, exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName,
 				exprRetPerformEncryption, statRetGetKey, sourceMatch, targetMatch);
 		CSP csp = _localVariable_24;
 		if (csp != null) {
-			return new Object[] { csp, _this, exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral,
+			return new Object[] { csp, _this, javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral,
 					kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey,
 					exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption, exprKeyName,
 					exprNameModePadding, methodEncryption, task, exprPwdName, sbc, exprDataName,
@@ -10870,7 +10867,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_24_3_solvecsp_bindingAndBlackFBBBBBBBBBBBBBBBBBBBBBBBBBBB(
-			PasswordBasedEncryption _this, JavaLiteral exprIterationLiteral, JavaPackage javaPackage,
+			PasswordBasedEncryption _this, JavaPackage javaPackage, JavaLiteral exprIterationLiteral,
 			JavaMethodInvocation exprRetGetKey, JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu,
 			JavaOpaqueMethod methodPerformEncryption, JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption,
 			JavaVariableDeclaration dataEncryption, JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral,
@@ -10880,7 +10877,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaName exprDataName, JavaMethodInvocation exprRetPerformEncryption, JavaStatement statRetGetKey,
 			Match sourceMatch, Match targetMatch) {
 		Object[] result_pattern_PasswordBasedEncryption_24_3_solvecsp_binding = pattern_PasswordBasedEncryption_24_3_solvecsp_bindingFBBBBBBBBBBBBBBBBBBBBBBBBBBB(
-				_this, exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
+				_this, javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, kdaJcu,
 				methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, exprAlgNameLiteral,
 				pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption, exprKeyName, exprNameModePadding,
 				methodEncryption, task, exprPwdName, sbc, exprDataName, exprRetPerformEncryption, statRetGetKey,
@@ -10892,7 +10889,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 					csp);
 			if (result_pattern_PasswordBasedEncryption_24_3_solvecsp_black != null) {
 
-				return new Object[] { csp, _this, exprIterationLiteral, javaPackage, exprRetGetKey,
+				return new Object[] { csp, _this, javaPackage, exprIterationLiteral, exprRetGetKey,
 						exprOutputSizeLiteral, kdaJcu, methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption,
 						methodGetKey, exprAlgNameLiteral, pwdDeclaration, kda, methodPerformGetKey,
 						statRetPerformEncryption, exprKeyName, exprNameModePadding, methodEncryption, task, exprPwdName,
@@ -10928,7 +10925,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_24_6_createcorrespondence_blackBBBBBBBBBBBBBBBBBBBBBBBBB(
-			JavaLiteral exprIterationLiteral, JavaPackage javaPackage, JavaMethodInvocation exprRetGetKey,
+			JavaPackage javaPackage, JavaLiteral exprIterationLiteral, JavaMethodInvocation exprRetGetKey,
 			JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu, JavaOpaqueMethod methodPerformEncryption,
 			JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption, JavaVariableDeclaration dataEncryption,
 			JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral, JavaVariableDeclaration pwdDeclaration,
@@ -10954,8 +10951,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																	if (!exprDataName.equals(exprPwdName)) {
 																		if (!statRetGetKey
 																				.equals(statRetPerformEncryption)) {
-																			return new Object[] { exprIterationLiteral,
-																					javaPackage, exprRetGetKey,
+																			return new Object[] { javaPackage,
+																					exprIterationLiteral, exprRetGetKey,
 																					exprOutputSizeLiteral, kdaJcu,
 																					methodPerformEncryption, sbcJcu,
 																					keyEncryption, dataEncryption,
@@ -11029,9 +11026,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 	public static final Object[] pattern_PasswordBasedEncryption_27_1_matchtggpattern_black_nac_0BBB(Task task,
 			KeyDerivationAlgorithm kda, SymmetricBlockCipher sbc) {
-		for (Algorithm __DEC_task_algorithms_26244 : task.getAlgorithms()) {
-			if (!kda.equals(__DEC_task_algorithms_26244)) {
-				if (!sbc.equals(__DEC_task_algorithms_26244)) {
+		for (Algorithm __DEC_task_algorithms_326746 : task.getAlgorithms()) {
+			if (!kda.equals(__DEC_task_algorithms_326746)) {
+				if (!sbc.equals(__DEC_task_algorithms_326746)) {
 					return new Object[] { task, kda, sbc };
 				}
 			}
@@ -11068,13 +11065,12 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_28_1_matchtggpattern_black_nac_0BBB(
-			JavaLiteral exprIterationLiteral, JavaStatement statRetPerformEncryption, JavaStatement statRetGetKey) {
-		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_exprIterationLiteral_expr_352772 : org.moflon.core.utilities.eMoflonEMFUtil
-					.getOppositeReferenceTyped(exprIterationLiteral, JavaStatement.class, "expr")) {
-				if (!statRetPerformEncryption.equals(__DEC_exprIterationLiteral_expr_352772)) {
-					if (!statRetGetKey.equals(__DEC_exprIterationLiteral_expr_352772)) {
-						return new Object[] { exprIterationLiteral, statRetPerformEncryption, statRetGetKey };
+			JavaPackage javaPackage, JavaCompilationUnit kdaJcu, JavaCompilationUnit sbcJcu) {
+		if (!kdaJcu.equals(sbcJcu)) {
+			for (JavaCompilationUnit __DEC_javaPackage_cunits_859575 : javaPackage.getCunits()) {
+				if (!kdaJcu.equals(__DEC_javaPackage_cunits_859575)) {
+					if (!sbcJcu.equals(__DEC_javaPackage_cunits_859575)) {
+						return new Object[] { javaPackage, kdaJcu, sbcJcu };
 					}
 				}
 			}
@@ -11083,12 +11079,13 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_28_1_matchtggpattern_black_nac_1BBB(
-			JavaPackage javaPackage, JavaCompilationUnit kdaJcu, JavaCompilationUnit sbcJcu) {
-		if (!kdaJcu.equals(sbcJcu)) {
-			for (JavaCompilationUnit __DEC_javaPackage_cunits_713982 : javaPackage.getCunits()) {
-				if (!kdaJcu.equals(__DEC_javaPackage_cunits_713982)) {
-					if (!sbcJcu.equals(__DEC_javaPackage_cunits_713982)) {
-						return new Object[] { javaPackage, kdaJcu, sbcJcu };
+			JavaLiteral exprIterationLiteral, JavaStatement statRetPerformEncryption, JavaStatement statRetGetKey) {
+		if (!statRetGetKey.equals(statRetPerformEncryption)) {
+			for (JavaStatement __DEC_exprIterationLiteral_expr_525333 : org.moflon.core.utilities.eMoflonEMFUtil
+					.getOppositeReferenceTyped(exprIterationLiteral, JavaStatement.class, "expr")) {
+				if (!statRetPerformEncryption.equals(__DEC_exprIterationLiteral_expr_525333)) {
+					if (!statRetGetKey.equals(__DEC_exprIterationLiteral_expr_525333)) {
+						return new Object[] { exprIterationLiteral, statRetPerformEncryption, statRetGetKey };
 					}
 				}
 			}
@@ -11099,10 +11096,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	public static final Object[] pattern_PasswordBasedEncryption_28_1_matchtggpattern_black_nac_2BB(
 			JavaMethodInvocation exprRetGetKey, JavaMethodInvocation exprRetPerformEncryption) {
 		if (!exprRetGetKey.equals(exprRetPerformEncryption)) {
-			for (JavaMethodInvocation __DEC_exprRetGetKey_arguments_230074 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaMethodInvocation __DEC_exprRetGetKey_arguments_988721 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(exprRetGetKey, JavaMethodInvocation.class, "arguments")) {
-				if (!exprRetGetKey.equals(__DEC_exprRetGetKey_arguments_230074)) {
-					if (!exprRetPerformEncryption.equals(__DEC_exprRetGetKey_arguments_230074)) {
+				if (!exprRetGetKey.equals(__DEC_exprRetGetKey_arguments_988721)) {
+					if (!exprRetPerformEncryption.equals(__DEC_exprRetGetKey_arguments_988721)) {
 						return new Object[] { exprRetGetKey, exprRetPerformEncryption };
 					}
 				}
@@ -11114,10 +11111,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	public static final Object[] pattern_PasswordBasedEncryption_28_1_matchtggpattern_black_nac_3BBB(
 			JavaLiteral exprOutputSizeLiteral, JavaStatement statRetPerformEncryption, JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_exprOutputSizeLiteral_expr_47959 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaStatement __DEC_exprOutputSizeLiteral_expr_484055 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(exprOutputSizeLiteral, JavaStatement.class, "expr")) {
-				if (!statRetPerformEncryption.equals(__DEC_exprOutputSizeLiteral_expr_47959)) {
-					if (!statRetGetKey.equals(__DEC_exprOutputSizeLiteral_expr_47959)) {
+				if (!statRetPerformEncryption.equals(__DEC_exprOutputSizeLiteral_expr_484055)) {
+					if (!statRetGetKey.equals(__DEC_exprOutputSizeLiteral_expr_484055)) {
 						return new Object[] { exprOutputSizeLiteral, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -11130,10 +11127,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaVariableDeclaration keyEncryption, JavaStatement statRetPerformEncryption,
 			JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_keyEncryption_expr_181113 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaStatement __DEC_keyEncryption_expr_286644 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(keyEncryption, JavaStatement.class, "expr")) {
-				if (!statRetPerformEncryption.equals(__DEC_keyEncryption_expr_181113)) {
-					if (!statRetGetKey.equals(__DEC_keyEncryption_expr_181113)) {
+				if (!statRetPerformEncryption.equals(__DEC_keyEncryption_expr_286644)) {
+					if (!statRetGetKey.equals(__DEC_keyEncryption_expr_286644)) {
 						return new Object[] { keyEncryption, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -11146,10 +11143,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaVariableDeclaration keyEncryption, JavaMethodInvocation exprRetGetKey,
 			JavaMethodInvocation exprRetPerformEncryption) {
 		if (!exprRetGetKey.equals(exprRetPerformEncryption)) {
-			for (JavaMethodInvocation __DEC_keyEncryption_arguments_764030 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaMethodInvocation __DEC_keyEncryption_arguments_907245 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(keyEncryption, JavaMethodInvocation.class, "arguments")) {
-				if (!exprRetGetKey.equals(__DEC_keyEncryption_arguments_764030)) {
-					if (!exprRetPerformEncryption.equals(__DEC_keyEncryption_arguments_764030)) {
+				if (!exprRetGetKey.equals(__DEC_keyEncryption_arguments_907245)) {
+					if (!exprRetPerformEncryption.equals(__DEC_keyEncryption_arguments_907245)) {
 						return new Object[] { keyEncryption, exprRetGetKey, exprRetPerformEncryption };
 					}
 				}
@@ -11162,10 +11159,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaVariableDeclaration dataEncryption, JavaStatement statRetPerformEncryption,
 			JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_dataEncryption_expr_677236 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaStatement __DEC_dataEncryption_expr_517837 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(dataEncryption, JavaStatement.class, "expr")) {
-				if (!statRetPerformEncryption.equals(__DEC_dataEncryption_expr_677236)) {
-					if (!statRetGetKey.equals(__DEC_dataEncryption_expr_677236)) {
+				if (!statRetPerformEncryption.equals(__DEC_dataEncryption_expr_517837)) {
+					if (!statRetGetKey.equals(__DEC_dataEncryption_expr_517837)) {
 						return new Object[] { dataEncryption, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -11178,10 +11175,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaVariableDeclaration dataEncryption, JavaMethodInvocation exprRetGetKey,
 			JavaMethodInvocation exprRetPerformEncryption) {
 		if (!exprRetGetKey.equals(exprRetPerformEncryption)) {
-			for (JavaMethodInvocation __DEC_dataEncryption_arguments_950426 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaMethodInvocation __DEC_dataEncryption_arguments_242529 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(dataEncryption, JavaMethodInvocation.class, "arguments")) {
-				if (!exprRetGetKey.equals(__DEC_dataEncryption_arguments_950426)) {
-					if (!exprRetPerformEncryption.equals(__DEC_dataEncryption_arguments_950426)) {
+				if (!exprRetGetKey.equals(__DEC_dataEncryption_arguments_242529)) {
+					if (!exprRetPerformEncryption.equals(__DEC_dataEncryption_arguments_242529)) {
 						return new Object[] { dataEncryption, exprRetGetKey, exprRetPerformEncryption };
 					}
 				}
@@ -11193,9 +11190,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	public static final Object[] pattern_PasswordBasedEncryption_28_1_matchtggpattern_black_nac_8BBB(
 			JavaWorkflowMethod methodGetKey, JavaStatement statRetPerformEncryption, JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_methodGetKey_statements_745591 : methodGetKey.getStatements()) {
-				if (!statRetPerformEncryption.equals(__DEC_methodGetKey_statements_745591)) {
-					if (!statRetGetKey.equals(__DEC_methodGetKey_statements_745591)) {
+			for (JavaStatement __DEC_methodGetKey_statements_135859 : methodGetKey.getStatements()) {
+				if (!statRetPerformEncryption.equals(__DEC_methodGetKey_statements_135859)) {
+					if (!statRetGetKey.equals(__DEC_methodGetKey_statements_135859)) {
 						return new Object[] { methodGetKey, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -11207,10 +11204,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	public static final Object[] pattern_PasswordBasedEncryption_28_1_matchtggpattern_black_nac_9BBB(
 			JavaLiteral exprAlgNameLiteral, JavaStatement statRetPerformEncryption, JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_exprAlgNameLiteral_expr_781744 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaStatement __DEC_exprAlgNameLiteral_expr_197485 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(exprAlgNameLiteral, JavaStatement.class, "expr")) {
-				if (!statRetPerformEncryption.equals(__DEC_exprAlgNameLiteral_expr_781744)) {
-					if (!statRetGetKey.equals(__DEC_exprAlgNameLiteral_expr_781744)) {
+				if (!statRetPerformEncryption.equals(__DEC_exprAlgNameLiteral_expr_197485)) {
+					if (!statRetGetKey.equals(__DEC_exprAlgNameLiteral_expr_197485)) {
 						return new Object[] { exprAlgNameLiteral, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -11223,10 +11220,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaVariableDeclaration pwdDeclaration, JavaStatement statRetPerformEncryption,
 			JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_pwdDeclaration_expr_737275 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaStatement __DEC_pwdDeclaration_expr_698272 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(pwdDeclaration, JavaStatement.class, "expr")) {
-				if (!statRetPerformEncryption.equals(__DEC_pwdDeclaration_expr_737275)) {
-					if (!statRetGetKey.equals(__DEC_pwdDeclaration_expr_737275)) {
+				if (!statRetPerformEncryption.equals(__DEC_pwdDeclaration_expr_698272)) {
+					if (!statRetGetKey.equals(__DEC_pwdDeclaration_expr_698272)) {
 						return new Object[] { pwdDeclaration, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -11239,10 +11236,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 			JavaVariableDeclaration pwdDeclaration, JavaMethodInvocation exprRetGetKey,
 			JavaMethodInvocation exprRetPerformEncryption) {
 		if (!exprRetGetKey.equals(exprRetPerformEncryption)) {
-			for (JavaMethodInvocation __DEC_pwdDeclaration_arguments_261160 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaMethodInvocation __DEC_pwdDeclaration_arguments_672544 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(pwdDeclaration, JavaMethodInvocation.class, "arguments")) {
-				if (!exprRetGetKey.equals(__DEC_pwdDeclaration_arguments_261160)) {
-					if (!exprRetPerformEncryption.equals(__DEC_pwdDeclaration_arguments_261160)) {
+				if (!exprRetGetKey.equals(__DEC_pwdDeclaration_arguments_672544)) {
+					if (!exprRetPerformEncryption.equals(__DEC_pwdDeclaration_arguments_672544)) {
 						return new Object[] { pwdDeclaration, exprRetGetKey, exprRetPerformEncryption };
 					}
 				}
@@ -11254,10 +11251,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	public static final Object[] pattern_PasswordBasedEncryption_28_1_matchtggpattern_black_nac_12BBB(
 			JavaName exprKeyName, JavaStatement statRetPerformEncryption, JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_exprKeyName_expr_759060 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaStatement __DEC_exprKeyName_expr_137125 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(exprKeyName, JavaStatement.class, "expr")) {
-				if (!statRetPerformEncryption.equals(__DEC_exprKeyName_expr_759060)) {
-					if (!statRetGetKey.equals(__DEC_exprKeyName_expr_759060)) {
+				if (!statRetPerformEncryption.equals(__DEC_exprKeyName_expr_137125)) {
+					if (!statRetGetKey.equals(__DEC_exprKeyName_expr_137125)) {
 						return new Object[] { exprKeyName, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -11269,10 +11266,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	public static final Object[] pattern_PasswordBasedEncryption_28_1_matchtggpattern_black_nac_13BBB(
 			JavaLiteral exprNameModePadding, JavaStatement statRetPerformEncryption, JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_exprNameModePadding_expr_860707 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaStatement __DEC_exprNameModePadding_expr_44569 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(exprNameModePadding, JavaStatement.class, "expr")) {
-				if (!statRetPerformEncryption.equals(__DEC_exprNameModePadding_expr_860707)) {
-					if (!statRetGetKey.equals(__DEC_exprNameModePadding_expr_860707)) {
+				if (!statRetPerformEncryption.equals(__DEC_exprNameModePadding_expr_44569)) {
+					if (!statRetGetKey.equals(__DEC_exprNameModePadding_expr_44569)) {
 						return new Object[] { exprNameModePadding, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -11284,9 +11281,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	public static final Object[] pattern_PasswordBasedEncryption_28_1_matchtggpattern_black_nac_14BBB(
 			JavaWorkflowMethod methodEncryption, JavaStatement statRetPerformEncryption, JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_methodEncryption_statements_637351 : methodEncryption.getStatements()) {
-				if (!statRetPerformEncryption.equals(__DEC_methodEncryption_statements_637351)) {
-					if (!statRetGetKey.equals(__DEC_methodEncryption_statements_637351)) {
+			for (JavaStatement __DEC_methodEncryption_statements_690163 : methodEncryption.getStatements()) {
+				if (!statRetPerformEncryption.equals(__DEC_methodEncryption_statements_690163)) {
+					if (!statRetGetKey.equals(__DEC_methodEncryption_statements_690163)) {
 						return new Object[] { methodEncryption, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -11298,10 +11295,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	public static final Object[] pattern_PasswordBasedEncryption_28_1_matchtggpattern_black_nac_15BBB(
 			JavaName exprPwdName, JavaStatement statRetPerformEncryption, JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_exprPwdName_expr_531435 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaStatement __DEC_exprPwdName_expr_161285 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(exprPwdName, JavaStatement.class, "expr")) {
-				if (!statRetPerformEncryption.equals(__DEC_exprPwdName_expr_531435)) {
-					if (!statRetGetKey.equals(__DEC_exprPwdName_expr_531435)) {
+				if (!statRetPerformEncryption.equals(__DEC_exprPwdName_expr_161285)) {
+					if (!statRetGetKey.equals(__DEC_exprPwdName_expr_161285)) {
 						return new Object[] { exprPwdName, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -11313,10 +11310,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	public static final Object[] pattern_PasswordBasedEncryption_28_1_matchtggpattern_black_nac_16BBB(
 			JavaName exprDataName, JavaStatement statRetPerformEncryption, JavaStatement statRetGetKey) {
 		if (!statRetGetKey.equals(statRetPerformEncryption)) {
-			for (JavaStatement __DEC_exprDataName_expr_365817 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaStatement __DEC_exprDataName_expr_852527 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(exprDataName, JavaStatement.class, "expr")) {
-				if (!statRetPerformEncryption.equals(__DEC_exprDataName_expr_365817)) {
-					if (!statRetGetKey.equals(__DEC_exprDataName_expr_365817)) {
+				if (!statRetPerformEncryption.equals(__DEC_exprDataName_expr_852527)) {
+					if (!statRetGetKey.equals(__DEC_exprDataName_expr_852527)) {
 						return new Object[] { exprDataName, statRetPerformEncryption, statRetGetKey };
 					}
 				}
@@ -11328,10 +11325,10 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	public static final Object[] pattern_PasswordBasedEncryption_28_1_matchtggpattern_black_nac_17BB(
 			JavaMethodInvocation exprRetPerformEncryption, JavaMethodInvocation exprRetGetKey) {
 		if (!exprRetGetKey.equals(exprRetPerformEncryption)) {
-			for (JavaMethodInvocation __DEC_exprRetPerformEncryption_arguments_171331 : org.moflon.core.utilities.eMoflonEMFUtil
+			for (JavaMethodInvocation __DEC_exprRetPerformEncryption_arguments_252449 : org.moflon.core.utilities.eMoflonEMFUtil
 					.getOppositeReferenceTyped(exprRetPerformEncryption, JavaMethodInvocation.class, "arguments")) {
-				if (!exprRetPerformEncryption.equals(__DEC_exprRetPerformEncryption_arguments_171331)) {
-					if (!exprRetGetKey.equals(__DEC_exprRetPerformEncryption_arguments_171331)) {
+				if (!exprRetPerformEncryption.equals(__DEC_exprRetPerformEncryption_arguments_252449)) {
+					if (!exprRetGetKey.equals(__DEC_exprRetPerformEncryption_arguments_252449)) {
 						return new Object[] { exprRetPerformEncryption, exprRetGetKey };
 					}
 				}
@@ -11573,7 +11570,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 	}
 
 	public static final Object[] pattern_PasswordBasedEncryption_28_1_matchtggpattern_blackBBBBBBBBBBBBBBBBBBBBB(
-			JavaLiteral exprIterationLiteral, JavaPackage javaPackage, JavaMethodInvocation exprRetGetKey,
+			JavaPackage javaPackage, JavaLiteral exprIterationLiteral, JavaMethodInvocation exprRetGetKey,
 			JavaLiteral exprOutputSizeLiteral, JavaCompilationUnit kdaJcu, JavaOpaqueMethod methodPerformEncryption,
 			JavaCompilationUnit sbcJcu, JavaVariableDeclaration keyEncryption, JavaVariableDeclaration dataEncryption,
 			JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral, JavaVariableDeclaration pwdDeclaration,
@@ -11670,13 +11667,13 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																								.contains(
 																																										exprIterationLiteral)) {
 																																							if (pattern_PasswordBasedEncryption_28_1_matchtggpattern_black_nac_0BBB(
-																																									exprIterationLiteral,
-																																									statRetPerformEncryption,
-																																									statRetGetKey) == null) {
+																																									javaPackage,
+																																									kdaJcu,
+																																									sbcJcu) == null) {
 																																								if (pattern_PasswordBasedEncryption_28_1_matchtggpattern_black_nac_1BBB(
-																																										javaPackage,
-																																										kdaJcu,
-																																										sbcJcu) == null) {
+																																										exprIterationLiteral,
+																																										statRetPerformEncryption,
+																																										statRetGetKey) == null) {
 																																									if (pattern_PasswordBasedEncryption_28_1_matchtggpattern_black_nac_2BB(
 																																											exprRetGetKey,
 																																											exprRetPerformEncryption) == null) {
@@ -11827,8 +11824,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 																																																																																							exprRetGetKey,
 																																																																																							exprRetPerformEncryption) == null) {
 																																																																																						return new Object[] {
-																																																																																								exprIterationLiteral,
 																																																																																								javaPackage,
+																																																																																								exprIterationLiteral,
 																																																																																								exprRetGetKey,
 																																																																																								exprOutputSizeLiteral,
 																																																																																								kdaJcu,
@@ -11947,32 +11944,32 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		String exprRetGetKey_name_prime = "performGetKey";
 		int exprOutputSizeLiteral_index_prime = Integer.valueOf(3);
 		String kdaJcu_name_prime = "KeyDeriv";
-		String methodPerformEncryption_type_prime = "byte[] ";
 		String methodPerformEncryption_modifier_prime = "private";
+		String methodPerformEncryption_type_prime = "byte[] ";
 		String methodPerformEncryption_name_prime = "performEncryption";
 		int keyEncryption_index_prime = Integer.valueOf(1);
 		String keyEncryption_name_prime = "key";
 		String keyEncryption_type_prime = "SecretKey";
+		String dataEncryption_type_prime = "byte[]";
 		int dataEncryption_index_prime = Integer.valueOf(0);
 		String dataEncryption_name_prime = "data";
-		String dataEncryption_type_prime = "byte[]";
 		String methodGetKey_modifier_prime = "public";
-		String methodGetKey_type_prime = "SecretKey ";
 		String methodGetKey_name_prime = "getKey";
+		String methodGetKey_type_prime = "SecretKey ";
 		int exprAlgNameLiteral_index_prime = Integer.valueOf(1);
 		int pwdDeclaration_index_prime = Integer.valueOf(0);
 		String pwdDeclaration_type_prime = "char[]";
 		String pwdDeclaration_name_prime = "pwd";
-		String methodPerformGetKey_modifier_prime = "private";
 		String methodPerformGetKey_type_prime = "SecretKey ";
+		String methodPerformGetKey_modifier_prime = "private";
 		String methodPerformGetKey_name_prime = "performGetKey";
 		boolean statRetPerformEncryption_return_prime = Boolean.valueOf(true);
-		int exprKeyName_index_prime = Integer.valueOf(1);
 		String exprKeyName_identifier_prime = "key";
+		int exprKeyName_index_prime = Integer.valueOf(1);
 		int exprNameModePadding_index_prime = Integer.valueOf(2);
 		String methodEncryption_type_prime = "byte[] ";
-		String methodEncryption_name_prime = "encrypt";
 		String methodEncryption_modifier_prime = "public";
+		String methodEncryption_name_prime = "encrypt";
 		String exprPwdName_identifier_prime = "pwd";
 		int exprPwdName_index_prime = Integer.valueOf(0);
 		int exprDataName_index_prime = Integer.valueOf(0);
@@ -11983,32 +11980,32 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		exprRetGetKey.setName(exprRetGetKey_name_prime);
 		exprOutputSizeLiteral.setIndex(Integer.valueOf(exprOutputSizeLiteral_index_prime));
 		kdaJcu.setName(kdaJcu_name_prime);
-		methodPerformEncryption.setType(methodPerformEncryption_type_prime);
 		methodPerformEncryption.setModifier(methodPerformEncryption_modifier_prime);
+		methodPerformEncryption.setType(methodPerformEncryption_type_prime);
 		methodPerformEncryption.setName(methodPerformEncryption_name_prime);
 		keyEncryption.setIndex(Integer.valueOf(keyEncryption_index_prime));
 		keyEncryption.setName(keyEncryption_name_prime);
 		keyEncryption.setType(keyEncryption_type_prime);
+		dataEncryption.setType(dataEncryption_type_prime);
 		dataEncryption.setIndex(Integer.valueOf(dataEncryption_index_prime));
 		dataEncryption.setName(dataEncryption_name_prime);
-		dataEncryption.setType(dataEncryption_type_prime);
 		methodGetKey.setModifier(methodGetKey_modifier_prime);
-		methodGetKey.setType(methodGetKey_type_prime);
 		methodGetKey.setName(methodGetKey_name_prime);
+		methodGetKey.setType(methodGetKey_type_prime);
 		exprAlgNameLiteral.setIndex(Integer.valueOf(exprAlgNameLiteral_index_prime));
 		pwdDeclaration.setIndex(Integer.valueOf(pwdDeclaration_index_prime));
 		pwdDeclaration.setType(pwdDeclaration_type_prime);
 		pwdDeclaration.setName(pwdDeclaration_name_prime);
-		methodPerformGetKey.setModifier(methodPerformGetKey_modifier_prime);
 		methodPerformGetKey.setType(methodPerformGetKey_type_prime);
+		methodPerformGetKey.setModifier(methodPerformGetKey_modifier_prime);
 		methodPerformGetKey.setName(methodPerformGetKey_name_prime);
 		statRetPerformEncryption.setReturn(Boolean.valueOf(statRetPerformEncryption_return_prime));
-		exprKeyName.setIndex(Integer.valueOf(exprKeyName_index_prime));
 		exprKeyName.setIdentifier(exprKeyName_identifier_prime);
+		exprKeyName.setIndex(Integer.valueOf(exprKeyName_index_prime));
 		exprNameModePadding.setIndex(Integer.valueOf(exprNameModePadding_index_prime));
 		methodEncryption.setType(methodEncryption_type_prime);
-		methodEncryption.setName(methodEncryption_name_prime);
 		methodEncryption.setModifier(methodEncryption_modifier_prime);
+		methodEncryption.setName(methodEncryption_name_prime);
 		exprPwdName.setIdentifier(exprPwdName_identifier_prime);
 		exprPwdName.setIndex(Integer.valueOf(exprPwdName_index_prime));
 		exprDataName.setIndex(Integer.valueOf(exprDataName_index_prime));
@@ -12094,8 +12091,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 
 	public static final Object[] pattern_PasswordBasedEncryption_29_6_perform_greenFFFFFFFFFFFFFFFFFFFFFFFFFFFBB(
 			ModelgeneratorRuleResult ruleResult, CSP csp) {
-		JavaLiteral exprIterationLiteral = SimpleJavaFactory.eINSTANCE.createJavaLiteral();
 		JavaPackage javaPackage = SimpleJavaFactory.eINSTANCE.createJavaPackage();
+		JavaLiteral exprIterationLiteral = SimpleJavaFactory.eINSTANCE.createJavaLiteral();
 		JavaMethodInvocation exprRetGetKey = SimpleJavaFactory.eINSTANCE.createJavaMethodInvocation();
 		JavaLiteral exprOutputSizeLiteral = SimpleJavaFactory.eINSTANCE.createJavaLiteral();
 		SymmetricBlockCipherToJcu sbc2Jcu = CryptoConfigToJavaFactory.eINSTANCE.createSymmetricBlockCipherToJcu();
@@ -12121,15 +12118,15 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		JavaMethodInvocation exprRetPerformEncryption = SimpleJavaFactory.eINSTANCE.createJavaMethodInvocation();
 		JavaStatement statRetGetKey = SimpleJavaFactory.eINSTANCE.createJavaStatement();
 		KeyDerivationAlgorithmToJcu kda2Jcu = CryptoConfigToJavaFactory.eINSTANCE.createKeyDerivationAlgorithmToJcu();
+		Object _localVariable_0 = csp.getValue("javaPackage", "name");
 		int exprIterationLiteral_index_prime = Integer.valueOf(2);
-		Object _localVariable_0 = csp.getValue("exprIterationLiteral", "value");
-		Object _localVariable_1 = csp.getValue("javaPackage", "name");
+		Object _localVariable_1 = csp.getValue("exprIterationLiteral", "value");
 		String exprRetGetKey_name_prime = "performGetKey";
 		int exprOutputSizeLiteral_index_prime = Integer.valueOf(3);
 		Object _localVariable_2 = csp.getValue("exprOutputSizeLiteral", "value");
 		String kdaJcu_name_prime = "KeyDeriv";
-		String methodPerformEncryption_type_prime = "byte[] ";
 		String methodPerformEncryption_modifier_prime = "private";
+		String methodPerformEncryption_type_prime = "byte[] ";
 		String methodPerformEncryption_name_prime = "performEncryption";
 		Object _localVariable_3 = csp.getValue("methodPerformEncryption", "body");
 		Object _localVariable_4 = csp.getValue("methodPerformEncryption", "throws");
@@ -12139,12 +12136,12 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		int keyEncryption_index_prime = Integer.valueOf(1);
 		String keyEncryption_name_prime = "key";
 		String keyEncryption_type_prime = "SecretKey";
+		String dataEncryption_type_prime = "byte[]";
 		int dataEncryption_index_prime = Integer.valueOf(0);
 		String dataEncryption_name_prime = "data";
-		String dataEncryption_type_prime = "byte[]";
 		String methodGetKey_modifier_prime = "public";
-		String methodGetKey_type_prime = "SecretKey ";
 		String methodGetKey_name_prime = "getKey";
+		String methodGetKey_type_prime = "SecretKey ";
 		Object _localVariable_8 = csp.getValue("methodGetKey", "index");
 		Object _localVariable_9 = csp.getValue("methodGetKey", "throws");
 		int exprAlgNameLiteral_index_prime = Integer.valueOf(1);
@@ -12152,24 +12149,24 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		int pwdDeclaration_index_prime = Integer.valueOf(0);
 		String pwdDeclaration_type_prime = "char[]";
 		String pwdDeclaration_name_prime = "pwd";
-		Object _localVariable_11 = csp.getValue("kda", "iterations");
-		Object _localVariable_12 = csp.getValue("kda", "outputSize");
-		Object _localVariable_13 = csp.getValue("kda", "name");
-		String methodPerformGetKey_modifier_prime = "private";
+		Object _localVariable_11 = csp.getValue("kda", "name");
+		Object _localVariable_12 = csp.getValue("kda", "iterations");
+		Object _localVariable_13 = csp.getValue("kda", "outputSize");
 		String methodPerformGetKey_type_prime = "SecretKey ";
+		String methodPerformGetKey_modifier_prime = "private";
 		String methodPerformGetKey_name_prime = "performGetKey";
 		Object _localVariable_14 = csp.getValue("methodPerformGetKey", "throws");
 		Object _localVariable_15 = csp.getValue("methodPerformGetKey", "body");
 		Object _localVariable_16 = csp.getValue("methodPerformGetKey", "index");
 		Object _localVariable_17 = csp.getValue("methodPerformGetKey", "parameters");
 		boolean statRetPerformEncryption_return_prime = Boolean.valueOf(true);
-		int exprKeyName_index_prime = Integer.valueOf(1);
 		String exprKeyName_identifier_prime = "key";
+		int exprKeyName_index_prime = Integer.valueOf(1);
 		int exprNameModePadding_index_prime = Integer.valueOf(2);
 		Object _localVariable_18 = csp.getValue("exprNameModePadding", "value");
 		String methodEncryption_type_prime = "byte[] ";
-		String methodEncryption_name_prime = "encrypt";
 		String methodEncryption_modifier_prime = "public";
+		String methodEncryption_name_prime = "encrypt";
 		Object _localVariable_19 = csp.getValue("methodEncryption", "index");
 		Object _localVariable_20 = csp.getValue("methodEncryption", "throws");
 		String task_description_prime = "PasswordBasedEncryption";
@@ -12185,8 +12182,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		boolean statRetGetKey_return_prime = Boolean.valueOf(true);
 		boolean ruleResult_success_prime = Boolean.valueOf(true);
 		int _localVariable_25 = ruleResult.getIncrementedPerformCount();
-		ruleResult.getTargetObjects().add(exprIterationLiteral);
 		ruleResult.getTargetObjects().add(javaPackage);
+		ruleResult.getTargetObjects().add(exprIterationLiteral);
 		exprRetGetKey.getArguments().add(exprIterationLiteral);
 		ruleResult.getTargetObjects().add(exprRetGetKey);
 		exprRetGetKey.getArguments().add(exprOutputSizeLiteral);
@@ -12240,15 +12237,15 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		kda2Jcu.setSource(kda);
 		kda2Jcu.setTarget(kdaJcu);
 		ruleResult.getCorrObjects().add(kda2Jcu);
+		String javaPackage_name_prime = (String) _localVariable_0;
 		exprIterationLiteral.setIndex(Integer.valueOf(exprIterationLiteral_index_prime));
-		String exprIterationLiteral_value_prime = (String) _localVariable_0;
-		String javaPackage_name_prime = (String) _localVariable_1;
+		String exprIterationLiteral_value_prime = (String) _localVariable_1;
 		exprRetGetKey.setName(exprRetGetKey_name_prime);
 		exprOutputSizeLiteral.setIndex(Integer.valueOf(exprOutputSizeLiteral_index_prime));
 		String exprOutputSizeLiteral_value_prime = (String) _localVariable_2;
 		kdaJcu.setName(kdaJcu_name_prime);
-		methodPerformEncryption.setType(methodPerformEncryption_type_prime);
 		methodPerformEncryption.setModifier(methodPerformEncryption_modifier_prime);
+		methodPerformEncryption.setType(methodPerformEncryption_type_prime);
 		methodPerformEncryption.setName(methodPerformEncryption_name_prime);
 		String methodPerformEncryption_body_prime = (String) _localVariable_3;
 		String methodPerformEncryption_throws_prime = (String) _localVariable_4;
@@ -12258,12 +12255,12 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		keyEncryption.setIndex(Integer.valueOf(keyEncryption_index_prime));
 		keyEncryption.setName(keyEncryption_name_prime);
 		keyEncryption.setType(keyEncryption_type_prime);
+		dataEncryption.setType(dataEncryption_type_prime);
 		dataEncryption.setIndex(Integer.valueOf(dataEncryption_index_prime));
 		dataEncryption.setName(dataEncryption_name_prime);
-		dataEncryption.setType(dataEncryption_type_prime);
 		methodGetKey.setModifier(methodGetKey_modifier_prime);
-		methodGetKey.setType(methodGetKey_type_prime);
 		methodGetKey.setName(methodGetKey_name_prime);
+		methodGetKey.setType(methodGetKey_type_prime);
 		int methodGetKey_index_prime = (int) _localVariable_8;
 		String methodGetKey_throws_prime = (String) _localVariable_9;
 		exprAlgNameLiteral.setIndex(Integer.valueOf(exprAlgNameLiteral_index_prime));
@@ -12271,24 +12268,24 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		pwdDeclaration.setIndex(Integer.valueOf(pwdDeclaration_index_prime));
 		pwdDeclaration.setType(pwdDeclaration_type_prime);
 		pwdDeclaration.setName(pwdDeclaration_name_prime);
-		String kda_iterations_prime = (String) _localVariable_11;
-		String kda_outputSize_prime = (String) _localVariable_12;
-		String kda_name_prime = (String) _localVariable_13;
-		methodPerformGetKey.setModifier(methodPerformGetKey_modifier_prime);
+		String kda_name_prime = (String) _localVariable_11;
+		String kda_iterations_prime = (String) _localVariable_12;
+		String kda_outputSize_prime = (String) _localVariable_13;
 		methodPerformGetKey.setType(methodPerformGetKey_type_prime);
+		methodPerformGetKey.setModifier(methodPerformGetKey_modifier_prime);
 		methodPerformGetKey.setName(methodPerformGetKey_name_prime);
 		String methodPerformGetKey_throws_prime = (String) _localVariable_14;
 		String methodPerformGetKey_body_prime = (String) _localVariable_15;
 		int methodPerformGetKey_index_prime = (int) _localVariable_16;
 		String methodPerformGetKey_parameters_prime = (String) _localVariable_17;
 		statRetPerformEncryption.setReturn(Boolean.valueOf(statRetPerformEncryption_return_prime));
-		exprKeyName.setIndex(Integer.valueOf(exprKeyName_index_prime));
 		exprKeyName.setIdentifier(exprKeyName_identifier_prime);
+		exprKeyName.setIndex(Integer.valueOf(exprKeyName_index_prime));
 		exprNameModePadding.setIndex(Integer.valueOf(exprNameModePadding_index_prime));
 		String exprNameModePadding_value_prime = (String) _localVariable_18;
 		methodEncryption.setType(methodEncryption_type_prime);
-		methodEncryption.setName(methodEncryption_name_prime);
 		methodEncryption.setModifier(methodEncryption_modifier_prime);
+		methodEncryption.setName(methodEncryption_name_prime);
 		int methodEncryption_index_prime = (int) _localVariable_19;
 		String methodEncryption_throws_prime = (String) _localVariable_20;
 		task.setDescription(task_description_prime);
@@ -12304,8 +12301,8 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		statRetGetKey.setReturn(Boolean.valueOf(statRetGetKey_return_prime));
 		ruleResult.setSuccess(Boolean.valueOf(ruleResult_success_prime));
 		int ruleResult_performCount_prime = Integer.valueOf(_localVariable_25);
-		exprIterationLiteral.setValue(exprIterationLiteral_value_prime);
 		javaPackage.setName(javaPackage_name_prime);
+		exprIterationLiteral.setValue(exprIterationLiteral_value_prime);
 		exprOutputSizeLiteral.setValue(exprOutputSizeLiteral_value_prime);
 		methodPerformEncryption.setBody(methodPerformEncryption_body_prime);
 		methodPerformEncryption.setThrows(methodPerformEncryption_throws_prime);
@@ -12315,9 +12312,9 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		methodGetKey.setIndex(Integer.valueOf(methodGetKey_index_prime));
 		methodGetKey.setThrows(methodGetKey_throws_prime);
 		exprAlgNameLiteral.setValue(exprAlgNameLiteral_value_prime);
+		kda.setName(kda_name_prime);
 		kda.setIterations(kda_iterations_prime);
 		kda.setOutputSize(kda_outputSize_prime);
-		kda.setName(kda_name_prime);
 		methodPerformGetKey.setThrows(methodPerformGetKey_throws_prime);
 		methodPerformGetKey.setBody(methodPerformGetKey_body_prime);
 		methodPerformGetKey.setIndex(Integer.valueOf(methodPerformGetKey_index_prime));
@@ -12330,7 +12327,7 @@ public class PasswordBasedEncryptionImpl extends AbstractRuleImpl implements Pas
 		sbc.setMode(sbc_mode_prime);
 		sbc.setPadding(sbc_padding_prime);
 		ruleResult.setPerformCount(Integer.valueOf(ruleResult_performCount_prime));
-		return new Object[] { exprIterationLiteral, javaPackage, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu, kdaJcu,
+		return new Object[] { javaPackage, exprIterationLiteral, exprRetGetKey, exprOutputSizeLiteral, sbc2Jcu, kdaJcu,
 				methodPerformEncryption, sbcJcu, keyEncryption, dataEncryption, methodGetKey, t2c, exprAlgNameLiteral,
 				pwdDeclaration, kda, methodPerformGetKey, statRetPerformEncryption, exprKeyName, exprNameModePadding,
 				methodEncryption, task, exprPwdName, sbc, exprDataName, exprRetPerformEncryption, statRetGetKey,

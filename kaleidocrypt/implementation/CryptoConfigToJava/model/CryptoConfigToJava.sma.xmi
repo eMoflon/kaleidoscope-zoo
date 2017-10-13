@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="ASCII"?>
 <analysis:StaticAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:analysis="platform:/plugin/org.moflon.tgg.language/model/Language.ecore#//analysis">
   <sourceRules>
-    <rules ruleName="IgnoreMethodInvocationArgument" ignore="true">
-      <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreMethodInvocationArgument/checkDEC_FWD"/>
-    </rules>
     <rules ruleName="SecurePasswordTask">
       <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SecurePasswordTask/isAppropriate_FWD_EMoflonEdge_5"/>
       <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SecurePasswordTask/checkDEC_FWD"/>
-    </rules>
-    <rules ruleName="IgnoreParameterRule" ignore="true">
-      <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkDEC_FWD"/>
-    </rules>
-    <rules ruleName="PasswordBasedEncryption">
-      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/isAppropriate_FWD_EMoflonEdge_6"/>
-      <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/checkDEC_FWD"/>
     </rules>
     <rules ruleName="PerformGetKeyMethod" ignore="true">
       <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PerformGetKeyMethod/checkDEC_FWD"/>
     </rules>
     <rules ruleName="SymmetricEncryptionTask">
-      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_FWD_EMoflonEdge_7"/>
+      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_FWD_EMoflonEdge_6"/>
       <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_FWD"/>
     </rules>
     <rules ruleName="SymmetricBlockCipherImportToImport">
-      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_FWD_EMoflonEdge_8"/>
+      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_FWD_EMoflonEdge_7"/>
       <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/checkDEC_FWD"/>
     </rules>
-    <rules ruleName="KeyDerivationAlgorithmImportToImport">
-      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_FWD_EMoflonEdge_9"/>
-      <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkDEC_FWD"/>
+    <rules ruleName="IgnoreMethodInvocationArgument" ignore="true">
+      <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreMethodInvocationArgument/checkDEC_FWD"/>
     </rules>
     <rules ruleName="IgnoreOpaqueMethod" ignore="true">
       <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkDEC_FWD"/>
     </rules>
-  </sourceRules>
-  <targetRules>
-    <rules ruleName="IgnoreMethodInvocationArgument">
-      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreMethodInvocationArgument/isAppropriate_BWD_EMoflonEdge_5"/>
-      <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreMethodInvocationArgument/checkDEC_BWD"/>
+    <rules ruleName="KeyDerivationAlgorithmImportToImport">
+      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_FWD_EMoflonEdge_8"/>
+      <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkDEC_FWD"/>
     </rules>
-    <rules ruleName="SecurePasswordTask">
-      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SecurePasswordTask/isAppropriate_BWD_EMoflonEdge_6"/>
-      <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SecurePasswordTask/checkDEC_BWD"/>
-    </rules>
-    <rules ruleName="IgnoreParameterRule">
-      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_BWD_EMoflonEdge_7"/>
-      <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkDEC_BWD"/>
+    <rules ruleName="IgnoreParameterRule" ignore="true">
+      <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkDEC_FWD"/>
     </rules>
     <rules ruleName="PasswordBasedEncryption">
-      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/isAppropriate_BWD_EMoflonEdge_8"/>
-      <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/checkDEC_BWD"/>
+      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/isAppropriate_FWD_EMoflonEdge_9"/>
+      <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/checkDEC_FWD"/>
+    </rules>
+  </sourceRules>
+  <targetRules>
+    <rules ruleName="SecurePasswordTask">
+      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SecurePasswordTask/isAppropriate_BWD_EMoflonEdge_5"/>
+      <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SecurePasswordTask/checkDEC_BWD"/>
     </rules>
     <rules ruleName="PerformGetKeyMethod">
       <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PerformGetKeyMethod/isAppropriate_BWD_JavaOpaqueMethod_0"/>
       <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PerformGetKeyMethod/checkDEC_BWD"/>
     </rules>
     <rules ruleName="SymmetricEncryptionTask">
-      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD_EMoflonEdge_9"/>
+      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD_EMoflonEdge_6"/>
       <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD"/>
     </rules>
     <rules ruleName="SymmetricBlockCipherImportToImport">
-      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_BWD_EMoflonEdge_10"/>
+      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_BWD_EMoflonEdge_7"/>
       <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/checkDEC_BWD"/>
     </rules>
-    <rules ruleName="KeyDerivationAlgorithmImportToImport">
-      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_BWD_EMoflonEdge_11"/>
-      <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkDEC_BWD"/>
+    <rules ruleName="IgnoreMethodInvocationArgument">
+      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreMethodInvocationArgument/isAppropriate_BWD_EMoflonEdge_8"/>
+      <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreMethodInvocationArgument/checkDEC_BWD"/>
     </rules>
     <rules ruleName="IgnoreOpaqueMethod">
-      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_BWD_EMoflonEdge_12"/>
+      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_BWD_EMoflonEdge_9"/>
       <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkDEC_BWD"/>
+    </rules>
+    <rules ruleName="KeyDerivationAlgorithmImportToImport">
+      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_BWD_EMoflonEdge_10"/>
+      <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkDEC_BWD"/>
+    </rules>
+    <rules ruleName="IgnoreParameterRule">
+      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_BWD_EMoflonEdge_11"/>
+      <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkDEC_BWD"/>
+    </rules>
+    <rules ruleName="PasswordBasedEncryption">
+      <isAppropriateMethods href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/isAppropriate_BWD_EMoflonEdge_12"/>
+      <checkDECMethod href="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/checkDEC_BWD"/>
     </rules>
   </targetRules>
 </analysis:StaticAnalysis>

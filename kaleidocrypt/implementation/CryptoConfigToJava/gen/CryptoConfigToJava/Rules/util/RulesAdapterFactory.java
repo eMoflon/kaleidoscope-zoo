@@ -69,23 +69,8 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected RulesSwitch<Adapter> modelSwitch = new RulesSwitch<Adapter>() {
 		@Override
-		public Adapter caseIgnoreMethodInvocationArgument(IgnoreMethodInvocationArgument object) {
-			return createIgnoreMethodInvocationArgumentAdapter();
-		}
-
-		@Override
 		public Adapter caseSecurePasswordTask(SecurePasswordTask object) {
 			return createSecurePasswordTaskAdapter();
-		}
-
-		@Override
-		public Adapter caseIgnoreParameterRule(IgnoreParameterRule object) {
-			return createIgnoreParameterRuleAdapter();
-		}
-
-		@Override
-		public Adapter casePasswordBasedEncryption(PasswordBasedEncryption object) {
-			return createPasswordBasedEncryptionAdapter();
 		}
 
 		@Override
@@ -104,13 +89,28 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseKeyDerivationAlgorithmImportToImport(KeyDerivationAlgorithmImportToImport object) {
-			return createKeyDerivationAlgorithmImportToImportAdapter();
+		public Adapter caseIgnoreMethodInvocationArgument(IgnoreMethodInvocationArgument object) {
+			return createIgnoreMethodInvocationArgumentAdapter();
 		}
 
 		@Override
 		public Adapter caseIgnoreOpaqueMethod(IgnoreOpaqueMethod object) {
 			return createIgnoreOpaqueMethodAdapter();
+		}
+
+		@Override
+		public Adapter caseKeyDerivationAlgorithmImportToImport(KeyDerivationAlgorithmImportToImport object) {
+			return createKeyDerivationAlgorithmImportToImportAdapter();
+		}
+
+		@Override
+		public Adapter caseIgnoreParameterRule(IgnoreParameterRule object) {
+			return createIgnoreParameterRuleAdapter();
+		}
+
+		@Override
+		public Adapter casePasswordBasedEncryption(PasswordBasedEncryption object) {
+			return createPasswordBasedEncryptionAdapter();
 		}
 
 		@Override
@@ -138,20 +138,6 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument <em>Ignore Method Invocation Argument</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument
-	 * @generated
-	 */
-	public Adapter createIgnoreMethodInvocationArgumentAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.Rules.SecurePasswordTask <em>Secure Password Task</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -162,34 +148,6 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSecurePasswordTaskAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.Rules.IgnoreParameterRule <em>Ignore Parameter Rule</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see CryptoConfigToJava.Rules.IgnoreParameterRule
-	 * @generated
-	 */
-	public Adapter createIgnoreParameterRuleAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.Rules.PasswordBasedEncryption <em>Password Based Encryption</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see CryptoConfigToJava.Rules.PasswordBasedEncryption
-	 * @generated
-	 */
-	public Adapter createPasswordBasedEncryptionAdapter() {
 		return null;
 	}
 
@@ -236,16 +194,16 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport <em>Key Derivation Algorithm Import To Import</em>}'.
+	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument <em>Ignore Method Invocation Argument</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport
+	 * @see CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument
 	 * @generated
 	 */
-	public Adapter createKeyDerivationAlgorithmImportToImportAdapter() {
+	public Adapter createIgnoreMethodInvocationArgumentAdapter() {
 		return null;
 	}
 
@@ -260,6 +218,48 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIgnoreOpaqueMethodAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport <em>Key Derivation Algorithm Import To Import</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport
+	 * @generated
+	 */
+	public Adapter createKeyDerivationAlgorithmImportToImportAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.Rules.IgnoreParameterRule <em>Ignore Parameter Rule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see CryptoConfigToJava.Rules.IgnoreParameterRule
+	 * @generated
+	 */
+	public Adapter createIgnoreParameterRuleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.Rules.PasswordBasedEncryption <em>Password Based Encryption</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see CryptoConfigToJava.Rules.PasswordBasedEncryption
+	 * @generated
+	 */
+	public Adapter createPasswordBasedEncryptionAdapter() {
 		return null;
 	}
 

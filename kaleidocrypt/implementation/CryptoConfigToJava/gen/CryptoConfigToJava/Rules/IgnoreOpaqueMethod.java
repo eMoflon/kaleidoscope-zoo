@@ -178,7 +178,7 @@ public interface IgnoreOpaqueMethod extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_BWD_EMoflonEdge_12(EMoflonEdge _edge_methods);
+	EObjectContainer isAppropriate_BWD_EMoflonEdge_9(EMoflonEdge _edge_methods);
 
 	/**
 	 * <!-- begin-user-doc -->

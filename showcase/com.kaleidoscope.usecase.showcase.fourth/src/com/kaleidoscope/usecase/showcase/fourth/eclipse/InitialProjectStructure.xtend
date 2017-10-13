@@ -21,11 +21,15 @@ class InitialProjectStructure extends com.kaleidoscope.usecase.showcase.first.ec
 		import Persons.Person;
 		import Persons.PersonContainer;
 		import Persons.PersonsFactory;
+		import Persons.impl.PersonsPackageImpl;
+		import Employees.impl.EmployeesPackageImpl;
 		
 		public class App {
 		
 			public static void main(String[] args) {
 				BasicConfigurator.configure();
+				PersonsPackageImpl.init();
+				EmployeesPackageImpl.init();
 				
 				OpaqueDelta<PersonContainer> delta = (m) -> {
 					Person newPersonTesla = PersonsFactory.eINSTANCE.createPerson();

@@ -524,12 +524,12 @@ public class PerformGetKeyMethodImpl extends AbstractRuleImpl implements Perform
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		if (!__helper.hasExpectedValue("methodPerformGetKey", "modifier", "private", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("methodPerformGetKey", "type", "SecretKey ", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodPerformGetKey", "type", "SecretKey ", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("methodPerformGetKey", "modifier", "private", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
@@ -539,14 +539,14 @@ public class PerformGetKeyMethodImpl extends AbstractRuleImpl implements Perform
 			return ruleResult;
 		}
 
+		Variable var_literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
+		var_literal0.setValue("char [] pwd,String algName,int iterations,int outputSize");
+		var_literal0.setType("");
+
 		Variable var_methodPerformGetKey_parameters = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey",
 				true, csp);
 		var_methodPerformGetKey_parameters.setValue(__helper.getValue("methodPerformGetKey", "parameters"));
 		var_methodPerformGetKey_parameters.setType("String");
-
-		Variable var_literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal0.setValue("char [] pwd,String algName,int iterations,int outputSize");
-		var_literal0.setType("");
 
 		SetDefaultStringIfNull setDefaultStringIfNull0 = new SetDefaultStringIfNull();
 		csp.getConstraints().add(setDefaultStringIfNull0);
@@ -587,12 +587,12 @@ public class PerformGetKeyMethodImpl extends AbstractRuleImpl implements Perform
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		if (!__helper.hasExpectedValue("methodPerformGetKey", "modifier", "private", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("methodPerformGetKey", "type", "SecretKey ", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodPerformGetKey", "type", "SecretKey ", ComparingOperator.EQUAL)) {
+		if (!__helper.hasExpectedValue("methodPerformGetKey", "modifier", "private", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
@@ -602,14 +602,14 @@ public class PerformGetKeyMethodImpl extends AbstractRuleImpl implements Perform
 			return ruleResult;
 		}
 
+		Variable var_literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
+		var_literal0.setValue("char [] pwd,String algName,int iterations,int outputSize");
+		var_literal0.setType("");
+
 		Variable var_methodPerformGetKey_parameters = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey",
 				true, csp);
 		var_methodPerformGetKey_parameters.setValue(__helper.getValue("methodPerformGetKey", "parameters"));
 		var_methodPerformGetKey_parameters.setType("String");
-
-		Variable var_literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal0.setValue("char [] pwd,String algName,int iterations,int outputSize");
-		var_literal0.setType("");
 
 		SetDefaultStringIfNull setDefaultStringIfNull0 = new SetDefaultStringIfNull();
 		csp.getConstraints().add(setDefaultStringIfNull0);
@@ -1208,10 +1208,10 @@ public class PerformGetKeyMethodImpl extends AbstractRuleImpl implements Perform
 	public static final Iterable<Object[]> pattern_PerformGetKeyMethod_9_2_corematch_blackBB(
 			JavaOpaqueMethod methodPerformGetKey, Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		String methodPerformGetKey_modifier = methodPerformGetKey.getModifier();
-		if (methodPerformGetKey_modifier.equals("private")) {
-			String methodPerformGetKey_type = methodPerformGetKey.getType();
-			if (methodPerformGetKey_type.equals("SecretKey ")) {
+		String methodPerformGetKey_type = methodPerformGetKey.getType();
+		if (methodPerformGetKey_type.equals("SecretKey ")) {
+			String methodPerformGetKey_modifier = methodPerformGetKey.getModifier();
+			if (methodPerformGetKey_modifier.equals("private")) {
 				String methodPerformGetKey_name = methodPerformGetKey.getName();
 				if (methodPerformGetKey_name.equals("performGetKey")) {
 					_result.add(new Object[] { methodPerformGetKey, match });
@@ -1227,10 +1227,10 @@ public class PerformGetKeyMethodImpl extends AbstractRuleImpl implements Perform
 	public static final Iterable<Object[]> pattern_PerformGetKeyMethod_9_3_findcontext_blackB(
 			JavaOpaqueMethod methodPerformGetKey) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		String methodPerformGetKey_modifier = methodPerformGetKey.getModifier();
-		if (methodPerformGetKey_modifier.equals("private")) {
-			String methodPerformGetKey_type = methodPerformGetKey.getType();
-			if (methodPerformGetKey_type.equals("SecretKey ")) {
+		String methodPerformGetKey_type = methodPerformGetKey.getType();
+		if (methodPerformGetKey_type.equals("SecretKey ")) {
+			String methodPerformGetKey_modifier = methodPerformGetKey.getModifier();
+			if (methodPerformGetKey_modifier.equals("private")) {
 				String methodPerformGetKey_name = methodPerformGetKey.getName();
 				if (methodPerformGetKey_name.equals("performGetKey")) {
 					_result.add(new Object[] { methodPerformGetKey });
@@ -1365,7 +1365,7 @@ public class PerformGetKeyMethodImpl extends AbstractRuleImpl implements Perform
 
 	public static final Object[] pattern_PerformGetKeyMethod_17_2_testcorematchandDECs_black_nac_0B(
 			JavaOpaqueMethod methodPerformGetKey) {
-		for (JavaCompilationUnit __DEC_methodPerformGetKey_methods_180822 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaCompilationUnit __DEC_methodPerformGetKey_methods_445976 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(methodPerformGetKey, JavaCompilationUnit.class, "methods")) {
 			return new Object[] { methodPerformGetKey };
 		}
@@ -1375,10 +1375,10 @@ public class PerformGetKeyMethodImpl extends AbstractRuleImpl implements Perform
 	public static final Iterable<Object[]> pattern_PerformGetKeyMethod_17_2_testcorematchandDECs_blackB(
 			JavaOpaqueMethod methodPerformGetKey) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		String methodPerformGetKey_modifier = methodPerformGetKey.getModifier();
-		if (methodPerformGetKey_modifier.equals("private")) {
-			String methodPerformGetKey_type = methodPerformGetKey.getType();
-			if (methodPerformGetKey_type.equals("SecretKey ")) {
+		String methodPerformGetKey_type = methodPerformGetKey.getType();
+		if (methodPerformGetKey_type.equals("SecretKey ")) {
+			String methodPerformGetKey_modifier = methodPerformGetKey.getModifier();
+			if (methodPerformGetKey_modifier.equals("private")) {
 				String methodPerformGetKey_name = methodPerformGetKey.getName();
 				if (methodPerformGetKey_name.equals("performGetKey")) {
 					if (pattern_PerformGetKeyMethod_17_2_testcorematchandDECs_black_nac_0B(
@@ -1460,10 +1460,10 @@ public class PerformGetKeyMethodImpl extends AbstractRuleImpl implements Perform
 	public static final Object[] pattern_PerformGetKeyMethod_20_2_matchsrctrgcontext_blackBBB(
 			JavaOpaqueMethod methodPerformGetKey, Match sourceMatch, Match targetMatch) {
 		if (!sourceMatch.equals(targetMatch)) {
-			String methodPerformGetKey_modifier = methodPerformGetKey.getModifier();
-			if (methodPerformGetKey_modifier.equals("private")) {
-				String methodPerformGetKey_type = methodPerformGetKey.getType();
-				if (methodPerformGetKey_type.equals("SecretKey ")) {
+			String methodPerformGetKey_type = methodPerformGetKey.getType();
+			if (methodPerformGetKey_type.equals("SecretKey ")) {
+				String methodPerformGetKey_modifier = methodPerformGetKey.getModifier();
+				if (methodPerformGetKey_modifier.equals("private")) {
 					String methodPerformGetKey_name = methodPerformGetKey.getName();
 					if (methodPerformGetKey_name.equals("performGetKey")) {
 						return new Object[] { methodPerformGetKey, sourceMatch, targetMatch };
@@ -1588,7 +1588,7 @@ public class PerformGetKeyMethodImpl extends AbstractRuleImpl implements Perform
 
 	public static final Object[] pattern_PerformGetKeyMethod_24_1_matchtggpattern_black_nac_0B(
 			JavaOpaqueMethod methodPerformGetKey) {
-		for (JavaCompilationUnit __DEC_methodPerformGetKey_methods_671813 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaCompilationUnit __DEC_methodPerformGetKey_methods_363611 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(methodPerformGetKey, JavaCompilationUnit.class, "methods")) {
 			return new Object[] { methodPerformGetKey };
 		}
@@ -1605,11 +1605,11 @@ public class PerformGetKeyMethodImpl extends AbstractRuleImpl implements Perform
 
 	public static final Object[] pattern_PerformGetKeyMethod_24_1_matchtggpattern_greenB(
 			JavaOpaqueMethod methodPerformGetKey) {
-		String methodPerformGetKey_modifier_prime = "private";
 		String methodPerformGetKey_type_prime = "SecretKey ";
+		String methodPerformGetKey_modifier_prime = "private";
 		String methodPerformGetKey_name_prime = "performGetKey";
-		methodPerformGetKey.setModifier(methodPerformGetKey_modifier_prime);
 		methodPerformGetKey.setType(methodPerformGetKey_type_prime);
+		methodPerformGetKey.setModifier(methodPerformGetKey_modifier_prime);
 		methodPerformGetKey.setName(methodPerformGetKey_name_prime);
 		return new Object[] { methodPerformGetKey };
 	}
@@ -1685,15 +1685,15 @@ public class PerformGetKeyMethodImpl extends AbstractRuleImpl implements Perform
 	public static final Object[] pattern_PerformGetKeyMethod_25_6_perform_greenFBB(ModelgeneratorRuleResult ruleResult,
 			CSP csp) {
 		JavaOpaqueMethod methodPerformGetKey = SimpleJavaFactory.eINSTANCE.createJavaOpaqueMethod();
-		String methodPerformGetKey_modifier_prime = "private";
 		String methodPerformGetKey_type_prime = "SecretKey ";
+		String methodPerformGetKey_modifier_prime = "private";
 		String methodPerformGetKey_name_prime = "performGetKey";
 		Object _localVariable_0 = csp.getValue("methodPerformGetKey", "parameters");
 		boolean ruleResult_success_prime = Boolean.valueOf(true);
 		int _localVariable_1 = ruleResult.getIncrementedPerformCount();
 		ruleResult.getTargetObjects().add(methodPerformGetKey);
-		methodPerformGetKey.setModifier(methodPerformGetKey_modifier_prime);
 		methodPerformGetKey.setType(methodPerformGetKey_type_prime);
+		methodPerformGetKey.setModifier(methodPerformGetKey_modifier_prime);
 		methodPerformGetKey.setName(methodPerformGetKey_name_prime);
 		String methodPerformGetKey_parameters_prime = (String) _localVariable_0;
 		ruleResult.setSuccess(Boolean.valueOf(ruleResult_success_prime));

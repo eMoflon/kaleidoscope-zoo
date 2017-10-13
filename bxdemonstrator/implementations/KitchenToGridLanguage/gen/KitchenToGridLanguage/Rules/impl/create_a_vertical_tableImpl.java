@@ -890,10 +890,6 @@ public class create_a_vertical_tableImpl extends AbstractRuleImpl implements cre
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		Variable var_grid_blockSize = CSPFactoryHelper.eINSTANCE.createVariable("grid", true, csp);
-		var_grid_blockSize.setValue(__helper.getValue("grid", "blockSize"));
-		var_grid_blockSize.setType("double");
-
 		Variable var_firstBlock_yIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock", true, csp);
 		var_firstBlock_yIndex.setValue(__helper.getValue("firstBlock", "yIndex"));
 		var_firstBlock_yIndex.setType("int");
@@ -902,13 +898,17 @@ public class create_a_vertical_tableImpl extends AbstractRuleImpl implements cre
 		var_item_yPos.setValue(__helper.getValue("item", "yPos"));
 		var_item_yPos.setType("double");
 
-		Variable var_item_xPos = CSPFactoryHelper.eINSTANCE.createVariable("item", true, csp);
-		var_item_xPos.setValue(__helper.getValue("item", "xPos"));
-		var_item_xPos.setType("double");
+		Variable var_grid_blockSize = CSPFactoryHelper.eINSTANCE.createVariable("grid", true, csp);
+		var_grid_blockSize.setValue(__helper.getValue("grid", "blockSize"));
+		var_grid_blockSize.setType("double");
 
 		Variable var_firstBlock_xIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock", true, csp);
 		var_firstBlock_xIndex.setValue(__helper.getValue("firstBlock", "xIndex"));
 		var_firstBlock_xIndex.setType("int");
+
+		Variable var_item_xPos = CSPFactoryHelper.eINSTANCE.createVariable("item", true, csp);
+		var_item_xPos.setValue(__helper.getValue("item", "xPos"));
+		var_item_xPos.setType("double");
 
 		PosToIndex posToIndex0 = new PosToIndex();
 		csp.getConstraints().add(posToIndex0);
@@ -958,10 +958,6 @@ public class create_a_vertical_tableImpl extends AbstractRuleImpl implements cre
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		Variable var_grid_blockSize = CSPFactoryHelper.eINSTANCE.createVariable("grid", true, csp);
-		var_grid_blockSize.setValue(__helper.getValue("grid", "blockSize"));
-		var_grid_blockSize.setType("double");
-
 		Variable var_firstBlock_yIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock", true, csp);
 		var_firstBlock_yIndex.setValue(__helper.getValue("firstBlock", "yIndex"));
 		var_firstBlock_yIndex.setType("int");
@@ -970,13 +966,17 @@ public class create_a_vertical_tableImpl extends AbstractRuleImpl implements cre
 		var_item_yPos.setValue(__helper.getValue("item", "yPos"));
 		var_item_yPos.setType("double");
 
-		Variable var_item_xPos = CSPFactoryHelper.eINSTANCE.createVariable("item", true, csp);
-		var_item_xPos.setValue(__helper.getValue("item", "xPos"));
-		var_item_xPos.setType("double");
+		Variable var_grid_blockSize = CSPFactoryHelper.eINSTANCE.createVariable("grid", true, csp);
+		var_grid_blockSize.setValue(__helper.getValue("grid", "blockSize"));
+		var_grid_blockSize.setType("double");
 
 		Variable var_firstBlock_xIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock", true, csp);
 		var_firstBlock_xIndex.setValue(__helper.getValue("firstBlock", "xIndex"));
 		var_firstBlock_xIndex.setType("int");
+
+		Variable var_item_xPos = CSPFactoryHelper.eINSTANCE.createVariable("item", true, csp);
+		var_item_xPos.setValue(__helper.getValue("item", "xPos"));
+		var_item_xPos.setType("double");
 
 		PosToIndex posToIndex0 = new PosToIndex();
 		csp.getConstraints().add(posToIndex0);
