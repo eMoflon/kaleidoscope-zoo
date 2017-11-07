@@ -19,7 +19,7 @@ A delta on the source model must be propagated via `syncForward(delta)`, a delta
 This scenario is:
 - __Persistent__ meaning that all models are saved to file and the synchronisation can be continued even after shutting down completely.
 
-The difference compared to the first scenario is the way delta are specified.
+The difference compared to the first scenario is the way deltas are specified.
 The `Main` class contains a programmatically defined `Opaque Delta`, which is applied as a change on the source/target model and propagated to the target/source model. 
-This demonstrates that it is possible to easily swap Delta types and how they are specified (here Operational to Opaque) without affecting the rest of the framework. 
+This demonstrates that it is possible to easily swap delta types and how they are specified (here operational to opaque) without affecting the rest of the framework. 
 To see how the framework is configured, take a look at `src/com/kaleidoscope/usecase/showcase/fourth/controller/ControllerModule.java`

@@ -89,7 +89,7 @@ public class OnlineChangeDetector<Model> implements OnlineDeltaDiscoverer<Model>
 	}
 
 	private void handleMove(EObject notifier, Object newValue) {
-		// delta.moveNodeOp(notifier, newValue);
+
 	}
 
 	private void handleChange(EObject notifier, Object oldValue, Object newValue, Notification notification) {
@@ -102,7 +102,6 @@ public class OnlineChangeDetector<Model> implements OnlineDeltaDiscoverer<Model>
 			handleAddition(notifier, (EObject) newValue, (EReference) notification.getFeature());
 			handleDeletion(notifier, (EObject) oldValue, (EReference) notification.getFeature());
 		}
-
 	}
 
 	private void handleDeletion(EObject notifier, EObject oldValue, EReference reference) {
@@ -151,16 +150,6 @@ public class OnlineChangeDetector<Model> implements OnlineDeltaDiscoverer<Model>
 
 			addedEObject.eAdapters().add(this);
 		}
-
-		/*
-		 * if (isConnectedToModel(addedEObject) &&
-		 * delta.getDeletedNodes().contains(addedEObject))
-		 * delta.getDeletedNodes().remove(addedEObject);
-		 * 
-		 * if (isConnectedToModel(notifier) &&
-		 * delta.getDeletedNodes().contains(notifier))
-		 * delta.getDeletedNodes().remove(notifier);
-		 */
 	}
 
 	@Override
@@ -234,6 +223,5 @@ public class OnlineChangeDetector<Model> implements OnlineDeltaDiscoverer<Model>
 	@Override
 	public void stop() {
 		removeDeltaListeners(root);
-
 	}
 }
