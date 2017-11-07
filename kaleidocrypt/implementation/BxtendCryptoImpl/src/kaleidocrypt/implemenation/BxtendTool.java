@@ -3,7 +3,7 @@ package kaleidocrypt.implemenation;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
-import java.util.Optional;
+import java.util.Objects;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -36,14 +36,19 @@ public class BxtendTool
 	private String sourceModelFileName = "fwd.src.xmi";
 	private String targetModelFileName = "fwd.trg.xmi";
 	private String corrModelFileName = "fwd.corr.xmi";
-	private Optional<Path> initialSourceModelPath;
+	
+	private Task initialTask;
+	private JavaPackage initialJavaPackage;
 	private ResourceSet set;
+	private Path persistenceDirectory;
 
 
-	public BxtendTool(ResourceSet resourceSet, Optional<Path> initialSourceModelPath) {
+	public BxtendTool(Task initialTask, JavaPackage initialJavaPackage, Path persistenceDirectory) {
 
-		this.set = resourceSet;
-		this.initialSourceModelPath = initialSourceModelPath;
+		this.initialTask = initialTask;
+		this.initialJavaPackage = initialJavaPackage;
+		this.persistenceDirectory = persistenceDirectory;
+		
 		set = new ResourceSetImpl();
 		set.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION,
 				new XMIResourceFactoryImpl());
@@ -56,10 +61,20 @@ public class BxtendTool
 	@Override
 	public void initialize() {
 
-		initialSourceModelPath.ifPresent((p) -> {
-			sourceModel = (Task) loadModel(sourceResource, p.toAbsolutePath().toString());
+		if(isStatePersisted(persistenceDirectory))
+			return;
+				
+		if(initialTask != null) {
+			
+			sourceModel = initialTask;
+			sourceResource.getContents().add(sourceModel);			
 			syncForward(new OperationalDelta());
-		});
+		
+		}else if(initialJavaPackage != null) {
+			targetModel = initialJavaPackage;
+			targetResource.getContents().add(targetModel);			
+			syncBackward(new OperationalDelta());
+		}			
 	}
 
 	@Override
@@ -67,8 +82,23 @@ public class BxtendTool
 
 	}
 
+	private boolean isStatePersisted(Path persistenceDirectory) {
+		
+		File sourceModelFile = persistenceDirectory.resolve(sourceModelFileName).toFile();
+		File targetModelFile = persistenceDirectory.resolve(targetModelFileName).toFile();
+		File correspondentModelFile = persistenceDirectory.resolve(corrModelFileName).toFile();
+		
+		if(!sourceModelFile.exists() || !targetModelFile.exists() || !correspondentModelFile.exists())
+			return false;
+		
+		return true;
+	}
 	@Override
 	public void restoreState(Path persistenceDirectory) {
+		
+		if(!isStatePersisted(persistenceDirectory))
+			return;
+		
 		sourceModel = (Task) loadModel(sourceResource, persistenceDirectory.resolve(sourceModelFileName).toString());
 		targetModel = (JavaPackage) loadModel(targetResource,persistenceDirectory.resolve(targetModelFileName).toString());
 		corrModel = (Transformation) loadModel(corrResource,persistenceDirectory.resolve(corrModelFileName).toString());
@@ -141,6 +171,7 @@ public class BxtendTool
 
 	private URI createFileURI(final String pathToXMIFile, final boolean mustExist) {
 		File filePath = new File(pathToXMIFile);
+		
 		if (!filePath.exists() && mustExist)
 			throw new IllegalArgumentException(pathToXMIFile + " does not exist.");
 

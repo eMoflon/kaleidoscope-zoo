@@ -56,57 +56,27 @@ public class CryptoConfigToJavaFactoryImpl extends EFactoryImpl implements Crypt
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case CryptoConfigToJavaPackage.IMPORT_TO_IMPORT:
-			return createImportToImport();
-		case CryptoConfigToJavaPackage.KEY_DERIVATION_ALGORITHM_TO_METHOD:
-			return createKeyDerivationAlgorithmToMethod();
-		case CryptoConfigToJavaPackage.TASK_TO_JAVA_PACKAGE:
-			return createTaskToJavaPackage();
 		case CryptoConfigToJavaPackage.KEY_DERIVATION_ALGORITHM_TO_JCU:
 			return createKeyDerivationAlgorithmToJcu();
-		case CryptoConfigToJavaPackage.TASK_TO_JAVA_COMPILATION_UNIT:
-			return createTaskToJavaCompilationUnit();
+		case CryptoConfigToJavaPackage.ALGORITHM_TO_JAVA_COMPILATION_UNIT:
+			return createAlgorithmToJavaCompilationUnit();
+		case CryptoConfigToJavaPackage.TASK_TO_JAVA_PACKAGE:
+			return createTaskToJavaPackage();
 		case CryptoConfigToJavaPackage.ALGORITHM_TO_JCU:
 			return createAlgorithmToJcu();
 		case CryptoConfigToJavaPackage.SYMMETRIC_BLOCK_CIPHER_TO_METHOD:
 			return createSymmetricBlockCipherToMethod();
+		case CryptoConfigToJavaPackage.IMPORT_TO_IMPORT:
+			return createImportToImport();
+		case CryptoConfigToJavaPackage.TASK_TO_JAVA_COMPILATION_UNIT:
+			return createTaskToJavaCompilationUnit();
+		case CryptoConfigToJavaPackage.KEY_DERIVATION_ALGORITHM_TO_METHOD:
+			return createKeyDerivationAlgorithmToMethod();
 		case CryptoConfigToJavaPackage.SYMMETRIC_BLOCK_CIPHER_TO_JCU:
 			return createSymmetricBlockCipherToJcu();
-		case CryptoConfigToJavaPackage.ALGORITHM_TO_JAVA_COMPILATION_UNIT:
-			return createAlgorithmToJavaCompilationUnit();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ImportToImport createImportToImport() {
-		ImportToImportImpl importToImport = new ImportToImportImpl();
-		return importToImport;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public KeyDerivationAlgorithmToMethod createKeyDerivationAlgorithmToMethod() {
-		KeyDerivationAlgorithmToMethodImpl keyDerivationAlgorithmToMethod = new KeyDerivationAlgorithmToMethodImpl();
-		return keyDerivationAlgorithmToMethod;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TaskToJavaPackage createTaskToJavaPackage() {
-		TaskToJavaPackageImpl taskToJavaPackage = new TaskToJavaPackageImpl();
-		return taskToJavaPackage;
 	}
 
 	/**
@@ -124,9 +94,19 @@ public class CryptoConfigToJavaFactoryImpl extends EFactoryImpl implements Crypt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TaskToJavaCompilationUnit createTaskToJavaCompilationUnit() {
-		TaskToJavaCompilationUnitImpl taskToJavaCompilationUnit = new TaskToJavaCompilationUnitImpl();
-		return taskToJavaCompilationUnit;
+	public AlgorithmToJavaCompilationUnit createAlgorithmToJavaCompilationUnit() {
+		AlgorithmToJavaCompilationUnitImpl algorithmToJavaCompilationUnit = new AlgorithmToJavaCompilationUnitImpl();
+		return algorithmToJavaCompilationUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TaskToJavaPackage createTaskToJavaPackage() {
+		TaskToJavaPackageImpl taskToJavaPackage = new TaskToJavaPackageImpl();
+		return taskToJavaPackage;
 	}
 
 	/**
@@ -154,9 +134,9 @@ public class CryptoConfigToJavaFactoryImpl extends EFactoryImpl implements Crypt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SymmetricBlockCipherToJcu createSymmetricBlockCipherToJcu() {
-		SymmetricBlockCipherToJcuImpl symmetricBlockCipherToJcu = new SymmetricBlockCipherToJcuImpl();
-		return symmetricBlockCipherToJcu;
+	public ImportToImport createImportToImport() {
+		ImportToImportImpl importToImport = new ImportToImportImpl();
+		return importToImport;
 	}
 
 	/**
@@ -164,9 +144,29 @@ public class CryptoConfigToJavaFactoryImpl extends EFactoryImpl implements Crypt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AlgorithmToJavaCompilationUnit createAlgorithmToJavaCompilationUnit() {
-		AlgorithmToJavaCompilationUnitImpl algorithmToJavaCompilationUnit = new AlgorithmToJavaCompilationUnitImpl();
-		return algorithmToJavaCompilationUnit;
+	public TaskToJavaCompilationUnit createTaskToJavaCompilationUnit() {
+		TaskToJavaCompilationUnitImpl taskToJavaCompilationUnit = new TaskToJavaCompilationUnitImpl();
+		return taskToJavaCompilationUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public KeyDerivationAlgorithmToMethod createKeyDerivationAlgorithmToMethod() {
+		KeyDerivationAlgorithmToMethodImpl keyDerivationAlgorithmToMethod = new KeyDerivationAlgorithmToMethodImpl();
+		return keyDerivationAlgorithmToMethod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SymmetricBlockCipherToJcu createSymmetricBlockCipherToJcu() {
+		SymmetricBlockCipherToJcuImpl symmetricBlockCipherToJcu = new SymmetricBlockCipherToJcuImpl();
+		return symmetricBlockCipherToJcu;
 	}
 
 	/**

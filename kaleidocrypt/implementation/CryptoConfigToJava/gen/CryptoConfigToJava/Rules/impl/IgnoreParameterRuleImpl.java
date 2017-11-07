@@ -1317,7 +1317,7 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 
 	public static final Object[] pattern_IgnoreParameterRule_17_2_testcorematchandDECs_black_nac_0B(
 			JavaVariableDeclaration var) {
-		for (JavaStatement __DEC_var_expr_644603 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaStatement __DEC_var_expr_765714 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(var, JavaStatement.class, "expr")) {
 			return new Object[] { var };
 		}
@@ -1326,7 +1326,7 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 
 	public static final Object[] pattern_IgnoreParameterRule_17_2_testcorematchandDECs_black_nac_1B(
 			JavaVariableDeclaration var) {
-		for (JavaMethodInvocation __DEC_var_arguments_978510 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaMethodInvocation __DEC_var_arguments_728108 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(var, JavaMethodInvocation.class, "arguments")) {
 			return new Object[] { var };
 		}
@@ -1545,7 +1545,7 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 
 	public static final Object[] pattern_IgnoreParameterRule_24_1_matchtggpattern_black_nac_0B(
 			JavaVariableDeclaration var) {
-		for (JavaStatement __DEC_var_expr_836590 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaStatement __DEC_var_expr_335873 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(var, JavaStatement.class, "expr")) {
 			return new Object[] { var };
 		}
@@ -1554,7 +1554,7 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 
 	public static final Object[] pattern_IgnoreParameterRule_24_1_matchtggpattern_black_nac_1B(
 			JavaVariableDeclaration var) {
-		for (JavaMethodInvocation __DEC_var_arguments_799294 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaMethodInvocation __DEC_var_arguments_832811 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(var, JavaMethodInvocation.class, "arguments")) {
 			return new Object[] { var };
 		}

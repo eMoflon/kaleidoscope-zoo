@@ -122,8 +122,9 @@ public interface PasswordBasedEncryption extends EObject, AbstractRule {
 			EObject methodPerformEncryption, EObject sbcJcu, EObject keyEncryption, EObject dataEncryption,
 			EObject methodGetKey, EObject t2c, EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda,
 			EObject methodPerformGetKey, EObject statRetPerformEncryption, EObject exprKeyName,
-			EObject exprNameModePadding, EObject methodEncryption, EObject task, EObject exprPwdName, EObject sbc,
-			EObject exprDataName, EObject exprRetPerformEncryption, EObject statRetGetKey, EObject kda2Jcu);
+			EObject exprNameModePadding, EObject methodEncryption, EObject task, EObject exprPwdName,
+			EObject exprDataName, EObject sbc, EObject exprRetPerformEncryption, EObject statRetGetKey,
+			EObject kda2Jcu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -236,8 +237,9 @@ public interface PasswordBasedEncryption extends EObject, AbstractRule {
 			EObject methodPerformEncryption, EObject sbcJcu, EObject keyEncryption, EObject dataEncryption,
 			EObject methodGetKey, EObject t2c, EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda,
 			EObject methodPerformGetKey, EObject statRetPerformEncryption, EObject exprKeyName,
-			EObject exprNameModePadding, EObject methodEncryption, EObject task, EObject exprPwdName, EObject sbc,
-			EObject exprDataName, EObject exprRetPerformEncryption, EObject statRetGetKey, EObject kda2Jcu);
+			EObject exprNameModePadding, EObject methodEncryption, EObject task, EObject exprPwdName,
+			EObject exprDataName, EObject sbc, EObject exprRetPerformEncryption, EObject statRetGetKey,
+			EObject kda2Jcu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -299,8 +301,8 @@ public interface PasswordBasedEncryption extends EObject, AbstractRule {
 			JavaVariableDeclaration dataEncryption, JavaWorkflowMethod methodGetKey, JavaLiteral exprAlgNameLiteral,
 			JavaVariableDeclaration pwdDeclaration, KeyDerivationAlgorithm kda, JavaOpaqueMethod methodPerformGetKey,
 			JavaStatement statRetPerformEncryption, JavaName exprKeyName, JavaLiteral exprNameModePadding,
-			JavaWorkflowMethod methodEncryption, Task task, JavaName exprPwdName, SymmetricBlockCipher sbc,
-			JavaName exprDataName, JavaMethodInvocation exprRetPerformEncryption, JavaStatement statRetGetKey,
+			JavaWorkflowMethod methodEncryption, Task task, JavaName exprPwdName, JavaName exprDataName,
+			SymmetricBlockCipher sbc, JavaMethodInvocation exprRetPerformEncryption, JavaStatement statRetGetKey,
 			Match sourceMatch, Match targetMatch);
 
 	/**

@@ -97,7 +97,7 @@ public interface IgnoreMethodInvocationArgument extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_BWD(Match match, JavaMethodInvocation jmi, JavaExpression argument);
+	boolean isAppropriate_BWD(Match match, JavaExpression argument, JavaMethodInvocation jmi);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -121,7 +121,7 @@ public interface IgnoreMethodInvocationArgument extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_BWD(Match match, JavaMethodInvocation jmi, JavaExpression argument);
+	void registerObjectsToMatch_BWD(Match match, JavaExpression argument, JavaMethodInvocation jmi);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,7 +129,7 @@ public interface IgnoreMethodInvocationArgument extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_BWD(Match match, JavaMethodInvocation jmi, JavaExpression argument);
+	CSP isAppropriate_solveCsp_BWD(Match match, JavaExpression argument, JavaMethodInvocation jmi);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -145,8 +145,8 @@ public interface IgnoreMethodInvocationArgument extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaMethodInvocation jmi,
-			JavaExpression argument);
+	CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaExpression argument,
+			JavaMethodInvocation jmi);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -162,7 +162,7 @@ public interface IgnoreMethodInvocationArgument extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_BWD(PerformRuleResult ruleresult, EObject jmi, EObject argument);
+	void registerObjects_BWD(PerformRuleResult ruleresult, EObject argument, EObject jmi);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -178,7 +178,7 @@ public interface IgnoreMethodInvocationArgument extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_BWD_EMoflonEdge_8(EMoflonEdge _edge_arguments);
+	EObjectContainer isAppropriate_BWD_EMoflonEdge_9(EMoflonEdge _edge_arguments);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -210,7 +210,7 @@ public interface IgnoreMethodInvocationArgument extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_CC(JavaMethodInvocation jmi, JavaExpression argument, Match sourceMatch,
+	CSP isApplicable_solveCsp_CC(JavaExpression argument, JavaMethodInvocation jmi, Match sourceMatch,
 			Match targetMatch);
 
 	/**
@@ -235,7 +235,7 @@ public interface IgnoreMethodInvocationArgument extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_BWD(JavaMethodInvocation jmi, JavaExpression argument);
+	boolean checkDEC_BWD(JavaExpression argument, JavaMethodInvocation jmi);
 
 	/**
 	 * <!-- begin-user-doc -->

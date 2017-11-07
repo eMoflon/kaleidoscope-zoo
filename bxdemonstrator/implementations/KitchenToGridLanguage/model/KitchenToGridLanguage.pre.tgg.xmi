@@ -3,270 +3,278 @@
   <domain name="Source" metamodel="//@metamodel.1" type="SOURCE"/>
   <domain name="Target" metamodel="//@metamodel.2" type="TARGET"/>
   <domain name="Correspondence" metamodel="//@metamodel.0"/>
-  <tggRule name="CreateHorizontalItem" refines="//@tggRule.2" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" abstractRule="true">
+  <tggRule name="create_a_sink" refines="//@tggRule.7" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
     <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="firstBlock" outgoingLink="//@tggRule.0/@linkVariable.0" domain="//@domain.0">
       <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block"/>
     </objectVariable>
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="secondBlock" incomingLink="//@tggRule.0/@linkVariable.0" domain="//@domain.0">
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="item" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//Sink"/>
+    </objectVariable>
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="noBlock" incomingLink="//@tggRule.0/@linkVariable.0" bindingSemantics="NEGATIVE" domain="//@domain.0">
       <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block"/>
     </objectVariable>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="e" target="//@tggRule.0/@objectVariable.1" source="//@tggRule.0/@objectVariable.0" domain="//@domain.0">
-      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/e"/>
-    </linkVariable>
-    <csp/>
-  </tggRule>
-  <tggRule name="SocketToGroup" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="kitchenToGrid" outgoingLink="//@tggRule.1/@linkVariable.0 //@tggRule.1/@linkVariable.4" domain="//@domain.2">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//KitchenToGridCorr"/>
-    </objectVariable>
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="group" incomingLink="//@tggRule.1/@linkVariable.1 //@tggRule.1/@linkVariable.3" bindingOperator="CREATE" domain="//@domain.0">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Group"/>
-    </objectVariable>
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="grid" incomingLink="//@tggRule.1/@linkVariable.0" outgoingLink="//@tggRule.1/@linkVariable.1" domain="//@domain.0">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Grid"/>
-    </objectVariable>
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="itemSocket" incomingLink="//@tggRule.1/@linkVariable.2 //@tggRule.1/@linkVariable.5" bindingOperator="CREATE" domain="//@domain.1">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//ItemSocket"/>
-    </objectVariable>
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="socketToGroup" outgoingLink="//@tggRule.1/@linkVariable.2 //@tggRule.1/@linkVariable.3" bindingOperator="CREATE" domain="//@domain.2">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//SocketToGroupCorr"/>
-    </objectVariable>
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="kitchen" incomingLink="//@tggRule.1/@linkVariable.4" outgoingLink="//@tggRule.1/@linkVariable.5" domain="//@domain.1">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//Kitchen"/>
-    </objectVariable>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="source" target="//@tggRule.1/@objectVariable.2" source="//@tggRule.1/@objectVariable.0" domain="//@domain.2"/>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="groups" target="//@tggRule.1/@objectVariable.1" source="//@tggRule.1/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.0">
-      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Grid/groups"/>
-    </linkVariable>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="target" target="//@tggRule.1/@objectVariable.3" source="//@tggRule.1/@objectVariable.4" bindingOperator="CREATE" domain="//@domain.2">
-      <type href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//SocketToGroupCorr/target"/>
-    </linkVariable>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="source" target="//@tggRule.1/@objectVariable.1" source="//@tggRule.1/@objectVariable.4" bindingOperator="CREATE" domain="//@domain.2">
-      <type href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//SocketToGroupCorr/source"/>
-    </linkVariable>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="target" target="//@tggRule.1/@objectVariable.5" source="//@tggRule.1/@objectVariable.0" domain="//@domain.2"/>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="itemSockets" target="//@tggRule.1/@objectVariable.3" source="//@tggRule.1/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.1">
-      <type href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//Kitchen/itemSockets"/>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="w" target="//@tggRule.0/@objectVariable.2" source="//@tggRule.0/@objectVariable.0" domain="//@domain.0">
+      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/w"/>
     </linkVariable>
     <csp>
-      <constraints variables="//@tggRule.1/@csp/@variables.0" name="setId" userDefined="true">
-        <signature type="EInt"/>
-        <allowedAdornments value="B"/>
-        <allowedAdornments value="F"/>
+      <constraints variables="//@tggRule.0/@csp/@variables.1 //@tggRule.0/@csp/@variables.0" name="eq">
+        <signature type=""/>
+        <signature type="" index="1"/>
+        <allowedAdornments value="FB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="BB"/>
+        <modelgenAdornments value="FF"/>
+        <modelgenAdornments value="BF"/>
+        <modelgenAdornments value="BB"/>
+        <modelgenAdornments value="FB"/>
       </constraints>
-      <variables xsi:type="csp:AttributeVariable" attribute="id" objectVariable="itemSocket"/>
+      <variables xsi:type="csp:Literal" bound="true" value="ACED000574000130"/>
+      <variables xsi:type="csp:AttributeVariable" attribute="xIndex" objectVariable="firstBlock"/>
     </csp>
   </tggRule>
-  <tggRule name="CreateItemWithTwoBlocks" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" abstractRule="true">
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="group" incomingLink="//@tggRule.2/@linkVariable.2 //@tggRule.2/@linkVariable.5" outgoingLink="//@tggRule.2/@linkVariable.1 //@tggRule.2/@linkVariable.7" domain="//@domain.0">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Group"/>
+  <tggRule name="create_a_horizontal_table" refines="//@tggRule.7" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="item" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//Table"/>
     </objectVariable>
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="noGroup1" incomingLink="//@tggRule.2/@linkVariable.8" bindingSemantics="NEGATIVE" domain="//@domain.0">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Group"/>
-    </objectVariable>
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="grid" outgoingLink="//@tggRule.2/@linkVariable.0 //@tggRule.2/@linkVariable.2 //@tggRule.2/@linkVariable.3" domain="//@domain.0">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Grid"/>
-    </objectVariable>
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="item" incomingLink="//@tggRule.2/@linkVariable.4" bindingOperator="CREATE" domain="//@domain.1">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//Item"/>
-    </objectVariable>
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="noGroup2" incomingLink="//@tggRule.2/@linkVariable.6" bindingSemantics="NEGATIVE" domain="//@domain.0">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Group"/>
-    </objectVariable>
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="itemSocket" incomingLink="//@tggRule.2/@linkVariable.9" outgoingLink="//@tggRule.2/@linkVariable.4" domain="//@domain.1">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//ItemSocket"/>
-    </objectVariable>
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="firstBlock" incomingLink="//@tggRule.2/@linkVariable.0 //@tggRule.2/@linkVariable.7" outgoingLink="//@tggRule.2/@linkVariable.8" domain="//@domain.0">
+    <csp/>
+  </tggRule>
+  <tggRule name="create_a_fridge" refines="//@tggRule.5" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="noBlock" incomingLink="//@tggRule.2/@linkVariable.0" bindingSemantics="NEGATIVE" domain="//@domain.0">
       <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block"/>
     </objectVariable>
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="socketToGroup" outgoingLink="//@tggRule.2/@linkVariable.5 //@tggRule.2/@linkVariable.9" domain="//@domain.2">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//SocketToGroupCorr"/>
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="item" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//Fridge"/>
     </objectVariable>
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="secondBlock" incomingLink="//@tggRule.2/@linkVariable.1 //@tggRule.2/@linkVariable.3" outgoingLink="//@tggRule.2/@linkVariable.6" domain="//@domain.0">
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="firstBlock" outgoingLink="//@tggRule.2/@linkVariable.0" domain="//@domain.0">
       <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block"/>
     </objectVariable>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="blocks" target="//@tggRule.2/@objectVariable.6" source="//@tggRule.2/@objectVariable.2" domain="//@domain.0">
-      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Grid/blocks"/>
-    </linkVariable>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="occupies" target="//@tggRule.2/@objectVariable.8" source="//@tggRule.2/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.0">
-      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Group/occupies"/>
-    </linkVariable>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="groups" target="//@tggRule.2/@objectVariable.0" source="//@tggRule.2/@objectVariable.2" domain="//@domain.0">
-      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Grid/groups"/>
-    </linkVariable>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="blocks" target="//@tggRule.2/@objectVariable.8" source="//@tggRule.2/@objectVariable.2" domain="//@domain.0">
-      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Grid/blocks"/>
-    </linkVariable>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="item" target="//@tggRule.2/@objectVariable.3" source="//@tggRule.2/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.1">
-      <type href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//ItemSocket/item"/>
-    </linkVariable>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="source" target="//@tggRule.2/@objectVariable.0" source="//@tggRule.2/@objectVariable.7" domain="//@domain.2">
-      <type href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//SocketToGroupCorr/source"/>
-    </linkVariable>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="isOccupiedBy" target="//@tggRule.2/@objectVariable.4" source="//@tggRule.2/@objectVariable.8" domain="//@domain.0">
-      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/isOccupiedBy"/>
-    </linkVariable>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="occupies" target="//@tggRule.2/@objectVariable.6" source="//@tggRule.2/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.0">
-      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Group/occupies"/>
-    </linkVariable>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="isOccupiedBy" target="//@tggRule.2/@objectVariable.1" source="//@tggRule.2/@objectVariable.6" domain="//@domain.0">
-      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/isOccupiedBy"/>
-    </linkVariable>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="target" target="//@tggRule.2/@objectVariable.5" source="//@tggRule.2/@objectVariable.7" domain="//@domain.2">
-      <type href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//SocketToGroupCorr/target"/>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="n" target="//@tggRule.2/@objectVariable.0" source="//@tggRule.2/@objectVariable.2" domain="//@domain.0">
+      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/n"/>
     </linkVariable>
     <csp>
-      <constraints variables="//@tggRule.2/@csp/@variables.2 //@tggRule.2/@csp/@variables.1 //@tggRule.2/@csp/@variables.0" name="posToIndex" userDefined="true">
-        <signature type="EDouble"/>
-        <signature type="EDouble" index="1"/>
-        <signature type="EInt" index="2"/>
-        <allowedAdornments value="BBF"/>
-        <allowedAdornments value="BFB"/>
-        <allowedAdornments value="BBB"/>
-      </constraints>
-      <constraints variables="//@tggRule.2/@csp/@variables.2 //@tggRule.2/@csp/@variables.4 //@tggRule.2/@csp/@variables.3" name="posToIndex" userDefined="true">
-        <signature type="EDouble"/>
-        <signature type="EDouble" index="1"/>
-        <signature type="EInt" index="2"/>
-        <allowedAdornments value="BBF"/>
-        <allowedAdornments value="BFB"/>
-        <allowedAdornments value="BBB"/>
+      <constraints variables="//@tggRule.2/@csp/@variables.0 //@tggRule.2/@csp/@variables.1" name="eq">
+        <signature type=""/>
+        <signature type="" index="1"/>
+        <allowedAdornments value="FB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="BB"/>
+        <modelgenAdornments value="FF"/>
+        <modelgenAdornments value="BF"/>
+        <modelgenAdornments value="BB"/>
+        <modelgenAdornments value="FB"/>
       </constraints>
       <variables xsi:type="csp:AttributeVariable" attribute="yIndex" objectVariable="firstBlock"/>
-      <variables xsi:type="csp:AttributeVariable" attribute="yPos" objectVariable="item"/>
-      <variables xsi:type="csp:AttributeVariable" attribute="blockSize" objectVariable="grid"/>
-      <variables xsi:type="csp:AttributeVariable" attribute="xIndex" objectVariable="firstBlock"/>
-      <variables xsi:type="csp:AttributeVariable" attribute="xPos" objectVariable="item"/>
+      <variables xsi:type="csp:Literal" bound="true" value="ACED000574000130"/>
     </csp>
   </tggRule>
   <tggRule name="KitchenToGridRule" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="kitchen" incomingLink="//@tggRule.3/@linkVariable.0" bindingOperator="CREATE" domain="//@domain.1">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//Kitchen"/>
-    </objectVariable>
     <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="kitchenToGrid" outgoingLink="//@tggRule.3/@linkVariable.0 //@tggRule.3/@linkVariable.1" bindingOperator="CREATE" domain="//@domain.2">
       <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//KitchenToGridCorr"/>
     </objectVariable>
     <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="grid" incomingLink="//@tggRule.3/@linkVariable.1" bindingOperator="CREATE" domain="//@domain.0">
       <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Grid"/>
     </objectVariable>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="target" target="//@tggRule.3/@objectVariable.0" source="//@tggRule.3/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.2"/>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="source" target="//@tggRule.3/@objectVariable.2" source="//@tggRule.3/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.2"/>
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="kitchen" incomingLink="//@tggRule.3/@linkVariable.0" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//Kitchen"/>
+    </objectVariable>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="target" target="//@tggRule.3/@objectVariable.2" source="//@tggRule.3/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//KitchenToGridCorr/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="source" target="//@tggRule.3/@objectVariable.1" source="//@tggRule.3/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//KitchenToGridCorr/source"/>
+    </linkVariable>
     <csp>
       <constraints variables="//@tggRule.3/@csp/@variables.0 //@tggRule.3/@csp/@variables.1" name="setDefaultNumber">
-        <signature type="Number"/>
         <signature type="Number" index="1"/>
-        <allowedAdornments value="FB"/>
+        <signature type="Number"/>
         <allowedAdornments value="BB"/>
-        <modelgenAdornments value="FB"/>
+        <allowedAdornments value="FB"/>
         <modelgenAdornments value="FF"/>
+        <modelgenAdornments value="FB"/>
         <modelgenAdornments value="BB"/>
       </constraints>
-      <constraints variables="//@tggRule.3/@csp/@variables.2 //@tggRule.3/@csp/@variables.1" name="setDefaultNumber">
-        <signature type="Number"/>
+      <constraints variables="//@tggRule.3/@csp/@variables.2 //@tggRule.3/@csp/@variables.3" name="setDefaultNumber">
         <signature type="Number" index="1"/>
-        <allowedAdornments value="FB"/>
+        <signature type="Number"/>
         <allowedAdornments value="BB"/>
-        <modelgenAdornments value="FB"/>
+        <allowedAdornments value="FB"/>
         <modelgenAdornments value="FF"/>
+        <modelgenAdornments value="FB"/>
         <modelgenAdornments value="BB"/>
       </constraints>
       <constraints variables="//@tggRule.3/@csp/@variables.4 //@tggRule.3/@csp/@variables.3" name="setDefaultNumber">
-        <signature type="Number"/>
         <signature type="Number" index="1"/>
-        <allowedAdornments value="FB"/>
+        <signature type="Number"/>
         <allowedAdornments value="BB"/>
-        <modelgenAdornments value="FB"/>
+        <allowedAdornments value="FB"/>
         <modelgenAdornments value="FF"/>
+        <modelgenAdornments value="FB"/>
         <modelgenAdornments value="BB"/>
       </constraints>
+      <variables xsi:type="csp:AttributeVariable" attribute="blockSize" objectVariable="grid"/>
+      <variables xsi:type="csp:Literal" bound="true" value="ACED0005740003313030"/>
       <variables xsi:type="csp:AttributeVariable" attribute="xSize" objectVariable="kitchen"/>
       <variables xsi:type="csp:Literal" bound="true" value="ACED0005740003353030"/>
       <variables xsi:type="csp:AttributeVariable" attribute="ySize" objectVariable="kitchen"/>
-      <variables xsi:type="csp:Literal" bound="true" value="ACED0005740003313030"/>
-      <variables xsi:type="csp:AttributeVariable" attribute="blockSize" objectVariable="grid"/>
     </csp>
   </tggRule>
-  <tggRule name="create_a_sink" refines="//@tggRule.0" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="noBlock" incomingLink="//@tggRule.4/@linkVariable.0" bindingSemantics="NEGATIVE" domain="//@domain.0">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block"/>
-    </objectVariable>
+  <tggRule name="create_a_vertical_table" refines="//@tggRule.5" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
     <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="item" bindingOperator="CREATE" domain="//@domain.1">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//Sink"/>
+      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//Table"/>
     </objectVariable>
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="firstBlock" outgoingLink="//@tggRule.4/@linkVariable.0" domain="//@domain.0">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block"/>
-    </objectVariable>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="w" target="//@tggRule.4/@objectVariable.0" source="//@tggRule.4/@objectVariable.2" domain="//@domain.0">
-      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/w"/>
-    </linkVariable>
-    <csp>
-      <constraints variables="//@tggRule.4/@csp/@variables.0 //@tggRule.4/@csp/@variables.1" name="eq">
-        <signature type="" index="1"/>
-        <signature type=""/>
-        <allowedAdornments value="BF"/>
-        <allowedAdornments value="FB"/>
-        <allowedAdornments value="BB"/>
-        <modelgenAdornments value="FF"/>
-        <modelgenAdornments value="FB"/>
-        <modelgenAdornments value="BF"/>
-        <modelgenAdornments value="BB"/>
-      </constraints>
-      <variables xsi:type="csp:AttributeVariable" attribute="xIndex" objectVariable="firstBlock"/>
-      <variables xsi:type="csp:Literal" bound="true" value="ACED000574000130"/>
-    </csp>
+    <csp/>
   </tggRule>
-  <tggRule name="create_a_fridge" refines="//@tggRule.8" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+  <tggRule name="CreateVerticalItem" refines="//@tggRule.8" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" abstractRule="true">
     <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="firstBlock" outgoingLink="//@tggRule.5/@linkVariable.0" domain="//@domain.0">
       <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block"/>
     </objectVariable>
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="item" bindingOperator="CREATE" domain="//@domain.1">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//Fridge"/>
-    </objectVariable>
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="noBlock" incomingLink="//@tggRule.5/@linkVariable.0" bindingSemantics="NEGATIVE" domain="//@domain.0">
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="secondBlock" incomingLink="//@tggRule.5/@linkVariable.0" domain="//@domain.0">
       <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block"/>
     </objectVariable>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="n" target="//@tggRule.5/@objectVariable.2" source="//@tggRule.5/@objectVariable.0" domain="//@domain.0">
-      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/n"/>
-    </linkVariable>
-    <csp>
-      <constraints variables="//@tggRule.5/@csp/@variables.1 //@tggRule.5/@csp/@variables.0" name="eq">
-        <signature type="" index="1"/>
-        <signature type=""/>
-        <allowedAdornments value="BF"/>
-        <allowedAdornments value="FB"/>
-        <allowedAdornments value="BB"/>
-        <modelgenAdornments value="FF"/>
-        <modelgenAdornments value="FB"/>
-        <modelgenAdornments value="BF"/>
-        <modelgenAdornments value="BB"/>
-      </constraints>
-      <variables xsi:type="csp:Literal" bound="true" value="ACED000574000130"/>
-      <variables xsi:type="csp:AttributeVariable" attribute="yIndex" objectVariable="firstBlock"/>
-    </csp>
-  </tggRule>
-  <tggRule name="create_a_horizontal_table" refines="//@tggRule.0" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="item" bindingOperator="CREATE" domain="//@domain.1">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//Table"/>
-    </objectVariable>
-    <csp/>
-  </tggRule>
-  <tggRule name="create_a_vertical_table" refines="//@tggRule.8" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="item" bindingOperator="CREATE" domain="//@domain.1">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//Table"/>
-    </objectVariable>
-    <csp/>
-  </tggRule>
-  <tggRule name="CreateVerticalItem" refines="//@tggRule.2" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" abstractRule="true">
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="secondBlock" incomingLink="//@tggRule.8/@linkVariable.0" domain="//@domain.0">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block"/>
-    </objectVariable>
-    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="firstBlock" outgoingLink="//@tggRule.8/@linkVariable.0" domain="//@domain.0">
-      <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block"/>
-    </objectVariable>
-    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="s" target="//@tggRule.8/@objectVariable.0" source="//@tggRule.8/@objectVariable.1" domain="//@domain.0">
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="s" target="//@tggRule.5/@objectVariable.1" source="//@tggRule.5/@objectVariable.0" domain="//@domain.0">
       <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/s"/>
     </linkVariable>
     <csp/>
+  </tggRule>
+  <tggRule name="SocketToGroup" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="group" incomingLink="//@tggRule.6/@linkVariable.3 //@tggRule.6/@linkVariable.5" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Group"/>
+    </objectVariable>
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="itemSocket" incomingLink="//@tggRule.6/@linkVariable.0 //@tggRule.6/@linkVariable.4" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//ItemSocket"/>
+    </objectVariable>
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="kitchenToGrid" outgoingLink="//@tggRule.6/@linkVariable.1 //@tggRule.6/@linkVariable.2" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//KitchenToGridCorr"/>
+    </objectVariable>
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="kitchen" incomingLink="//@tggRule.6/@linkVariable.1" outgoingLink="//@tggRule.6/@linkVariable.0" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//Kitchen"/>
+    </objectVariable>
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="grid" incomingLink="//@tggRule.6/@linkVariable.2" outgoingLink="//@tggRule.6/@linkVariable.5" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Grid"/>
+    </objectVariable>
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="socketToGroup" outgoingLink="//@tggRule.6/@linkVariable.3 //@tggRule.6/@linkVariable.4" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//SocketToGroupCorr"/>
+    </objectVariable>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="itemSockets" target="//@tggRule.6/@objectVariable.1" source="//@tggRule.6/@objectVariable.3" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//Kitchen/itemSockets"/>
+    </linkVariable>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="target" target="//@tggRule.6/@objectVariable.3" source="//@tggRule.6/@objectVariable.2" domain="//@domain.2">
+      <type href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//KitchenToGridCorr/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="source" target="//@tggRule.6/@objectVariable.4" source="//@tggRule.6/@objectVariable.2" domain="//@domain.2">
+      <type href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//KitchenToGridCorr/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="source" target="//@tggRule.6/@objectVariable.0" source="//@tggRule.6/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//SocketToGroupCorr/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="target" target="//@tggRule.6/@objectVariable.1" source="//@tggRule.6/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//SocketToGroupCorr/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="groups" target="//@tggRule.6/@objectVariable.0" source="//@tggRule.6/@objectVariable.4" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Grid/groups"/>
+    </linkVariable>
+    <csp>
+      <constraints variables="//@tggRule.6/@csp/@variables.0" name="setId" userDefined="true">
+        <signature type="EInt"/>
+        <allowedAdornments value="F"/>
+        <allowedAdornments value="B"/>
+      </constraints>
+      <variables xsi:type="csp:AttributeVariable" attribute="id" objectVariable="itemSocket"/>
+    </csp>
+  </tggRule>
+  <tggRule name="CreateHorizontalItem" refines="//@tggRule.8" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" abstractRule="true">
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="firstBlock" outgoingLink="//@tggRule.7/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block"/>
+    </objectVariable>
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="secondBlock" incomingLink="//@tggRule.7/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block"/>
+    </objectVariable>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="e" target="//@tggRule.7/@objectVariable.1" source="//@tggRule.7/@objectVariable.0" domain="//@domain.0">
+      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/e"/>
+    </linkVariable>
+    <csp/>
+  </tggRule>
+  <tggRule name="CreateItemWithTwoBlocks" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1" abstractRule="true">
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="item" incomingLink="//@tggRule.8/@linkVariable.4" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//Item"/>
+    </objectVariable>
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="socketToGroup" outgoingLink="//@tggRule.8/@linkVariable.3 //@tggRule.8/@linkVariable.5" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//SocketToGroupCorr"/>
+    </objectVariable>
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="firstBlock" incomingLink="//@tggRule.8/@linkVariable.8 //@tggRule.8/@linkVariable.6" outgoingLink="//@tggRule.8/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block"/>
+    </objectVariable>
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="secondBlock" incomingLink="//@tggRule.8/@linkVariable.1 //@tggRule.8/@linkVariable.9" outgoingLink="//@tggRule.8/@linkVariable.2" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block"/>
+    </objectVariable>
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="noGroup1" incomingLink="//@tggRule.8/@linkVariable.0" bindingSemantics="NEGATIVE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Group"/>
+    </objectVariable>
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="group" incomingLink="//@tggRule.8/@linkVariable.5 //@tggRule.8/@linkVariable.7" outgoingLink="//@tggRule.8/@linkVariable.1 //@tggRule.8/@linkVariable.6" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Group"/>
+    </objectVariable>
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="itemSocket" incomingLink="//@tggRule.8/@linkVariable.3" outgoingLink="//@tggRule.8/@linkVariable.4" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//ItemSocket"/>
+    </objectVariable>
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="noGroup2" incomingLink="//@tggRule.8/@linkVariable.2" bindingSemantics="NEGATIVE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Group"/>
+    </objectVariable>
+    <objectVariable xsi:type="org.moflon.tgg.language:TGGObjectVariable" name="grid" outgoingLink="//@tggRule.8/@linkVariable.7 //@tggRule.8/@linkVariable.8 //@tggRule.8/@linkVariable.9" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Grid"/>
+    </objectVariable>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="isOccupiedBy" target="//@tggRule.8/@objectVariable.4" source="//@tggRule.8/@objectVariable.2" domain="//@domain.0">
+      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/isOccupiedBy"/>
+    </linkVariable>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="occupies" target="//@tggRule.8/@objectVariable.3" source="//@tggRule.8/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Group/occupies"/>
+    </linkVariable>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="isOccupiedBy" target="//@tggRule.8/@objectVariable.7" source="//@tggRule.8/@objectVariable.3" domain="//@domain.0">
+      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/isOccupiedBy"/>
+    </linkVariable>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="target" target="//@tggRule.8/@objectVariable.6" source="//@tggRule.8/@objectVariable.1" domain="//@domain.2">
+      <type href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//SocketToGroupCorr/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="item" target="//@tggRule.8/@objectVariable.0" source="//@tggRule.8/@objectVariable.6" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/KitchenLanguage/model/KitchenLanguage.ecore#//ItemSocket/item"/>
+    </linkVariable>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="source" target="//@tggRule.8/@objectVariable.5" source="//@tggRule.8/@objectVariable.1" domain="//@domain.2">
+      <type href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#//SocketToGroupCorr/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="occupies" target="//@tggRule.8/@objectVariable.2" source="//@tggRule.8/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Group/occupies"/>
+    </linkVariable>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="groups" target="//@tggRule.8/@objectVariable.5" source="//@tggRule.8/@objectVariable.8" domain="//@domain.0">
+      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Grid/groups"/>
+    </linkVariable>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="blocks" target="//@tggRule.8/@objectVariable.2" source="//@tggRule.8/@objectVariable.8" domain="//@domain.0">
+      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Grid/blocks"/>
+    </linkVariable>
+    <linkVariable xsi:type="org.moflon.tgg.language:TGGLinkVariable" name="blocks" target="//@tggRule.8/@objectVariable.3" source="//@tggRule.8/@objectVariable.8" domain="//@domain.0">
+      <type href="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Grid/blocks"/>
+    </linkVariable>
+    <csp>
+      <constraints variables="//@tggRule.8/@csp/@variables.0 //@tggRule.8/@csp/@variables.4 //@tggRule.8/@csp/@variables.1" name="posToIndex" userDefined="true">
+        <signature type="EInt" index="2"/>
+        <signature type="EDouble"/>
+        <signature type="EDouble" index="1"/>
+        <allowedAdornments value="BBF"/>
+        <allowedAdornments value="BFB"/>
+        <allowedAdornments value="BBB"/>
+      </constraints>
+      <constraints variables="//@tggRule.8/@csp/@variables.0 //@tggRule.8/@csp/@variables.3 //@tggRule.8/@csp/@variables.2" name="posToIndex" userDefined="true">
+        <signature type="EInt" index="2"/>
+        <signature type="EDouble"/>
+        <signature type="EDouble" index="1"/>
+        <allowedAdornments value="BBF"/>
+        <allowedAdornments value="BFB"/>
+        <allowedAdornments value="BBB"/>
+      </constraints>
+      <variables xsi:type="csp:AttributeVariable" attribute="blockSize" objectVariable="grid"/>
+      <variables xsi:type="csp:AttributeVariable" attribute="yIndex" objectVariable="firstBlock"/>
+      <variables xsi:type="csp:AttributeVariable" attribute="xIndex" objectVariable="firstBlock"/>
+      <variables xsi:type="csp:AttributeVariable" attribute="xPos" objectVariable="item"/>
+      <variables xsi:type="csp:AttributeVariable" attribute="yPos" objectVariable="item"/>
+    </csp>
   </tggRule>
   <metamodel name="KitchenToGridLanguage">
     <outermostPackage href="platform:/plugin/KitchenToGridLanguage/model/KitchenToGridLanguage.ecore#/"/>

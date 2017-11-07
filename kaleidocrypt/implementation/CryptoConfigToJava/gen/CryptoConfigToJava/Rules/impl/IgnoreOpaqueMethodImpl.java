@@ -202,46 +202,46 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isAppropriate_BWD(Match match, JavaCompilationUnit jcu, JavaOpaqueMethod method) {
+	public boolean isAppropriate_BWD(Match match, JavaOpaqueMethod method, JavaCompilationUnit jcu) {
 
 		Object[] result1_black = IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_7_1_initialbindings_blackBBBB(this,
-				match, jcu, method);
+				match, method, jcu);
 		if (result1_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[match] = " + match + ", " + "[jcu] = " + jcu + ", " + "[method] = " + method + ".");
+					+ "[match] = " + match + ", " + "[method] = " + method + ", " + "[jcu] = " + jcu + ".");
 		}
 
 		Object[] result2_bindingAndBlack = IgnoreOpaqueMethodImpl
-				.pattern_IgnoreOpaqueMethod_7_2_SolveCSP_bindingAndBlackFBBBB(this, match, jcu, method);
+				.pattern_IgnoreOpaqueMethod_7_2_SolveCSP_bindingAndBlackFBBBB(this, match, method, jcu);
 		if (result2_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[match] = " + match + ", " + "[jcu] = " + jcu + ", " + "[method] = " + method + ".");
+					+ "[match] = " + match + ", " + "[method] = " + method + ", " + "[jcu] = " + jcu + ".");
 		}
 		CSP csp = (CSP) result2_bindingAndBlack[0];
 		// 
 		if (IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_7_3_CheckCSP_expressionFBB(this, csp)) {
 
 			Object[] result4_black = IgnoreOpaqueMethodImpl
-					.pattern_IgnoreOpaqueMethod_7_4_collectelementstobetranslated_blackBBB(match, jcu, method);
+					.pattern_IgnoreOpaqueMethod_7_4_collectelementstobetranslated_blackBBB(match, method, jcu);
 			if (result4_black == null) {
 				throw new RuntimeException("Pattern matching failed." + " Variables: " + "[match] = " + match + ", "
-						+ "[jcu] = " + jcu + ", " + "[method] = " + method + ".");
+						+ "[method] = " + method + ", " + "[jcu] = " + jcu + ".");
 			}
-			IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_7_4_collectelementstobetranslated_greenBBBF(match, jcu,
-					method);
+			IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_7_4_collectelementstobetranslated_greenBBBF(match, method,
+					jcu);
 			//nothing EMoflonEdge jcu__method____methods = (EMoflonEdge) result4_green[3];
 
 			Object[] result5_black = IgnoreOpaqueMethodImpl
-					.pattern_IgnoreOpaqueMethod_7_5_collectcontextelements_blackBBB(match, jcu, method);
+					.pattern_IgnoreOpaqueMethod_7_5_collectcontextelements_blackBBB(match, method, jcu);
 			if (result5_black == null) {
 				throw new RuntimeException("Pattern matching failed." + " Variables: " + "[match] = " + match + ", "
-						+ "[jcu] = " + jcu + ", " + "[method] = " + method + ".");
+						+ "[method] = " + method + ", " + "[jcu] = " + jcu + ".");
 			}
 			IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_7_5_collectcontextelements_greenBB(match, jcu);
 
 			// 
 			IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_7_6_registerobjectstomatch_expressionBBBB(this, match,
-					jcu, method);
+					method, jcu);
 			return IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_7_7_expressionF();
 		} else {
 			return IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_7_8_expressionF();
@@ -262,8 +262,8 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
 					+ "[isApplicableMatch] = " + isApplicableMatch + ".");
 		}
-		JavaCompilationUnit jcu = (JavaCompilationUnit) result1_bindingAndBlack[0];
-		JavaOpaqueMethod method = (JavaOpaqueMethod) result1_bindingAndBlack[1];
+		JavaOpaqueMethod method = (JavaOpaqueMethod) result1_bindingAndBlack[0];
+		JavaCompilationUnit jcu = (JavaCompilationUnit) result1_bindingAndBlack[1];
 		//nothing CSP csp = (CSP) result1_bindingAndBlack[2];
 
 		Object[] result2_black = IgnoreOpaqueMethodImpl
@@ -276,18 +276,18 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		Object[] result3_black = IgnoreOpaqueMethodImpl
-				.pattern_IgnoreOpaqueMethod_8_3_bookkeepingforedges_blackBBB(ruleresult, jcu, method);
+				.pattern_IgnoreOpaqueMethod_8_3_bookkeepingforedges_blackBBB(ruleresult, method, jcu);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[ruleresult] = " + ruleresult
-					+ ", " + "[jcu] = " + jcu + ", " + "[method] = " + method + ".");
+					+ ", " + "[method] = " + method + ", " + "[jcu] = " + jcu + ".");
 		}
-		IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_8_3_bookkeepingforedges_greenBBBF(ruleresult, jcu, method);
+		IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_8_3_bookkeepingforedges_greenBBBF(ruleresult, method, jcu);
 		//nothing EMoflonEdge jcu__method____methods = (EMoflonEdge) result3_green[3];
 
 		// 
 		// 
-		IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_8_5_registerobjects_expressionBBBB(this, ruleresult, jcu,
-				method);
+		IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_8_5_registerobjects_expressionBBBB(this, ruleresult, method,
+				jcu);
 		return IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_8_6_expressionFB(ruleresult);
 	}
 
@@ -315,25 +315,25 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 			throw new RuntimeException(
 					"Binding in node core match failed." + " Variables: " + "[match] = " + match + ".");
 		}
-		JavaCompilationUnit jcu = (JavaCompilationUnit) result2_binding[0];
-		JavaOpaqueMethod method = (JavaOpaqueMethod) result2_binding[1];
-		for (Object[] result2_black : IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_9_2_corematch_blackBBB(jcu,
-				method, match)) {
+		JavaOpaqueMethod method = (JavaOpaqueMethod) result2_binding[0];
+		JavaCompilationUnit jcu = (JavaCompilationUnit) result2_binding[1];
+		for (Object[] result2_black : IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_9_2_corematch_blackBBB(method,
+				jcu, match)) {
 			// ForEach 
-			for (Object[] result3_black : IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_9_3_findcontext_blackBB(jcu,
-					method)) {
+			for (Object[] result3_black : IgnoreOpaqueMethodImpl
+					.pattern_IgnoreOpaqueMethod_9_3_findcontext_blackBB(method, jcu)) {
 				Object[] result3_green = IgnoreOpaqueMethodImpl
-						.pattern_IgnoreOpaqueMethod_9_3_findcontext_greenBBFF(jcu, method);
+						.pattern_IgnoreOpaqueMethod_9_3_findcontext_greenBBFF(method, jcu);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[2];
 				//nothing EMoflonEdge jcu__method____methods = (EMoflonEdge) result3_green[3];
 
 				Object[] result4_bindingAndBlack = IgnoreOpaqueMethodImpl
-						.pattern_IgnoreOpaqueMethod_9_4_solveCSP_bindingAndBlackFBBBB(this, isApplicableMatch, jcu,
-								method);
+						.pattern_IgnoreOpaqueMethod_9_4_solveCSP_bindingAndBlackFBBBB(this, isApplicableMatch, method,
+								jcu);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-							+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[jcu] = " + jcu + ", "
-							+ "[method] = " + method + ".");
+							+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[method] = " + method + ", "
+							+ "[jcu] = " + jcu + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// 
@@ -362,9 +362,9 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjectsToMatch_BWD(Match match, JavaCompilationUnit jcu, JavaOpaqueMethod method) {
-		match.registerObject("jcu", jcu);
+	public void registerObjectsToMatch_BWD(Match match, JavaOpaqueMethod method, JavaCompilationUnit jcu) {
 		match.registerObject("method", method);
+		match.registerObject("jcu", jcu);
 
 	}
 
@@ -373,7 +373,7 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isAppropriate_solveCsp_BWD(Match match, JavaCompilationUnit jcu, JavaOpaqueMethod method) {// Create CSP
+	public CSP isAppropriate_solveCsp_BWD(Match match, JavaOpaqueMethod method, JavaCompilationUnit jcu) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
 		// Create literals
@@ -402,8 +402,8 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaCompilationUnit jcu,
-			JavaOpaqueMethod method) {// Create CSP
+	public CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaOpaqueMethod method,
+			JavaCompilationUnit jcu) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -418,8 +418,8 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 		// Solve CSP
 
 		// Snapshot pattern match on which CSP is solved
-		isApplicableMatch.registerObject("jcu", jcu);
 		isApplicableMatch.registerObject("method", method);
+		isApplicableMatch.registerObject("jcu", jcu);
 		return csp;
 	}
 
@@ -437,9 +437,9 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_BWD(PerformRuleResult ruleresult, EObject jcu, EObject method) {
-		ruleresult.registerObject("jcu", jcu);
+	public void registerObjects_BWD(PerformRuleResult ruleresult, EObject method, EObject jcu) {
 		ruleresult.registerObject("method", method);
+		ruleresult.registerObject("jcu", jcu);
 
 	}
 
@@ -458,7 +458,7 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_BWD_EMoflonEdge_9(EMoflonEdge _edge_methods) {
+	public EObjectContainer isAppropriate_BWD_EMoflonEdge_7(EMoflonEdge _edge_methods) {
 
 		Object[] result1_bindingAndBlack = IgnoreOpaqueMethodImpl
 				.pattern_IgnoreOpaqueMethod_17_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -474,8 +474,8 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 		// ForEach 
 		for (Object[] result2_black : IgnoreOpaqueMethodImpl
 				.pattern_IgnoreOpaqueMethod_17_2_testcorematchandDECs_blackFFB(_edge_methods)) {
-			JavaCompilationUnit jcu = (JavaCompilationUnit) result2_black[0];
-			JavaOpaqueMethod method = (JavaOpaqueMethod) result2_black[1];
+			JavaOpaqueMethod method = (JavaOpaqueMethod) result2_black[0];
+			JavaCompilationUnit jcu = (JavaCompilationUnit) result2_black[1];
 			Object[] result2_green = IgnoreOpaqueMethodImpl
 					.pattern_IgnoreOpaqueMethod_17_2_testcorematchandDECs_greenFB(__eClass);
 			Match match = (Match) result2_green[0];
@@ -483,7 +483,7 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 			// 
 			if (IgnoreOpaqueMethodImpl
 					.pattern_IgnoreOpaqueMethod_17_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBB(this,
-							match, jcu, method)) {
+							match, method, jcu)) {
 				// 
 				if (IgnoreOpaqueMethodImpl
 						.pattern_IgnoreOpaqueMethod_17_4_Ensurethatthecorrecttypesofelementsarematched_expressionFBB(
@@ -590,15 +590,15 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[sourceMatch] = " + sourceMatch
 					+ ", " + "[targetMatch] = " + targetMatch + ".");
 		}
-		JavaCompilationUnit jcu = (JavaCompilationUnit) result2_bindingAndBlack[0];
-		JavaOpaqueMethod method = (JavaOpaqueMethod) result2_bindingAndBlack[1];
+		JavaOpaqueMethod method = (JavaOpaqueMethod) result2_bindingAndBlack[0];
+		JavaCompilationUnit jcu = (JavaCompilationUnit) result2_bindingAndBlack[1];
 
 		Object[] result3_bindingAndBlack = IgnoreOpaqueMethodImpl
-				.pattern_IgnoreOpaqueMethod_20_3_solvecsp_bindingAndBlackFBBBBB(this, jcu, method, sourceMatch,
+				.pattern_IgnoreOpaqueMethod_20_3_solvecsp_bindingAndBlackFBBBBB(this, method, jcu, sourceMatch,
 						targetMatch);
 		if (result3_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[jcu] = " + jcu + ", " + "[method] = " + method + ", " + "[sourceMatch] = " + sourceMatch + ", "
+					+ "[method] = " + method + ", " + "[jcu] = " + jcu + ", " + "[sourceMatch] = " + sourceMatch + ", "
 					+ "[targetMatch] = " + targetMatch + ".");
 		}
 		CSP csp = (CSP) result3_bindingAndBlack[0];
@@ -612,10 +612,10 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 				CCMatch ccMatch = (CCMatch) result5_green[2];
 
 				Object[] result6_black = IgnoreOpaqueMethodImpl
-						.pattern_IgnoreOpaqueMethod_20_6_createcorrespondence_blackBBB(jcu, method, ccMatch);
+						.pattern_IgnoreOpaqueMethod_20_6_createcorrespondence_blackBBB(method, jcu, ccMatch);
 				if (result6_black == null) {
-					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[jcu] = " + jcu + ", "
-							+ "[method] = " + method + ", " + "[ccMatch] = " + ccMatch + ".");
+					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[method] = " + method
+							+ ", " + "[jcu] = " + jcu + ", " + "[ccMatch] = " + ccMatch + ".");
 				}
 
 				Object[] result7_black = IgnoreOpaqueMethodImpl
@@ -638,7 +638,7 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_CC(JavaCompilationUnit jcu, JavaOpaqueMethod method, Match sourceMatch,
+	public CSP isApplicable_solveCsp_CC(JavaOpaqueMethod method, JavaCompilationUnit jcu, Match sourceMatch,
 			Match targetMatch) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
@@ -678,9 +678,9 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean checkDEC_BWD(JavaCompilationUnit jcu, JavaOpaqueMethod method) {// 
-		Object[] result1_black = IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_24_1_matchtggpattern_blackBB(jcu,
-				method);
+	public boolean checkDEC_BWD(JavaOpaqueMethod method, JavaCompilationUnit jcu) {// 
+		Object[] result1_black = IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_24_1_matchtggpattern_blackBB(method,
+				jcu);
 		if (result1_black != null) {
 			return IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_24_2_expressionF();
 		} else {
@@ -732,8 +732,8 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 						throw new RuntimeException("Pattern matching failed." + " Variables: " + "[jcu] = " + jcu + ", "
 								+ "[ruleResult] = " + ruleResult + ".");
 					}
-					IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_25_6_perform_greenBFB(jcu, ruleResult);
-					//nothing JavaOpaqueMethod method = (JavaOpaqueMethod) result6_green[1];
+					IgnoreOpaqueMethodImpl.pattern_IgnoreOpaqueMethod_25_6_perform_greenFBB(jcu, ruleResult);
+					//nothing JavaOpaqueMethod method = (JavaOpaqueMethod) result6_green[0];
 
 				} else {
 				}
@@ -802,25 +802,25 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 			return isAppropriate_checkCsp_FWD((CSP) arguments.get(0));
 		case RulesPackage.IGNORE_OPAQUE_METHOD___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_BWD__MATCH_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD:
-			return isAppropriate_BWD((Match) arguments.get(0), (JavaCompilationUnit) arguments.get(1),
-					(JavaOpaqueMethod) arguments.get(2));
+		case RulesPackage.IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_BWD__MATCH_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT:
+			return isAppropriate_BWD((Match) arguments.get(0), (JavaOpaqueMethod) arguments.get(1),
+					(JavaCompilationUnit) arguments.get(2));
 		case RulesPackage.IGNORE_OPAQUE_METHOD___PERFORM_BWD__ISAPPLICABLEMATCH:
 			return perform_BWD((IsApplicableMatch) arguments.get(0));
 		case RulesPackage.IGNORE_OPAQUE_METHOD___IS_APPLICABLE_BWD__MATCH:
 			return isApplicable_BWD((Match) arguments.get(0));
-		case RulesPackage.IGNORE_OPAQUE_METHOD___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD:
-			registerObjectsToMatch_BWD((Match) arguments.get(0), (JavaCompilationUnit) arguments.get(1),
-					(JavaOpaqueMethod) arguments.get(2));
+		case RulesPackage.IGNORE_OPAQUE_METHOD___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT:
+			registerObjectsToMatch_BWD((Match) arguments.get(0), (JavaOpaqueMethod) arguments.get(1),
+					(JavaCompilationUnit) arguments.get(2));
 			return null;
-		case RulesPackage.IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD:
-			return isAppropriate_solveCsp_BWD((Match) arguments.get(0), (JavaCompilationUnit) arguments.get(1),
-					(JavaOpaqueMethod) arguments.get(2));
+		case RulesPackage.IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT:
+			return isAppropriate_solveCsp_BWD((Match) arguments.get(0), (JavaOpaqueMethod) arguments.get(1),
+					(JavaCompilationUnit) arguments.get(2));
 		case RulesPackage.IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_CHECK_CSP_BWD__CSP:
 			return isAppropriate_checkCsp_BWD((CSP) arguments.get(0));
-		case RulesPackage.IGNORE_OPAQUE_METHOD___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD:
-			return isApplicable_solveCsp_BWD((IsApplicableMatch) arguments.get(0),
-					(JavaCompilationUnit) arguments.get(1), (JavaOpaqueMethod) arguments.get(2));
+		case RulesPackage.IGNORE_OPAQUE_METHOD___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT:
+			return isApplicable_solveCsp_BWD((IsApplicableMatch) arguments.get(0), (JavaOpaqueMethod) arguments.get(1),
+					(JavaCompilationUnit) arguments.get(2));
 		case RulesPackage.IGNORE_OPAQUE_METHOD___IS_APPLICABLE_CHECK_CSP_BWD__CSP:
 			return isApplicable_checkCsp_BWD((CSP) arguments.get(0));
 		case RulesPackage.IGNORE_OPAQUE_METHOD___REGISTER_OBJECTS_BWD__PERFORMRULERESULT_EOBJECT_EOBJECT:
@@ -829,23 +829,23 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 			return null;
 		case RulesPackage.IGNORE_OPAQUE_METHOD___CHECK_TYPES_BWD__MATCH:
 			return checkTypes_BWD((Match) arguments.get(0));
-		case RulesPackage.IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_BWD_EMOFLON_EDGE_9__EMOFLONEDGE:
-			return isAppropriate_BWD_EMoflonEdge_9((EMoflonEdge) arguments.get(0));
+		case RulesPackage.IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_BWD_EMOFLON_EDGE_7__EMOFLONEDGE:
+			return isAppropriate_BWD_EMoflonEdge_7((EMoflonEdge) arguments.get(0));
 		case RulesPackage.IGNORE_OPAQUE_METHOD___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.IGNORE_OPAQUE_METHOD___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH:
 			return checkAttributes_BWD((TripleMatch) arguments.get(0));
 		case RulesPackage.IGNORE_OPAQUE_METHOD___IS_APPLICABLE_CC__MATCH_MATCH:
 			return isApplicable_CC((Match) arguments.get(0), (Match) arguments.get(1));
-		case RulesPackage.IGNORE_OPAQUE_METHOD___IS_APPLICABLE_SOLVE_CSP_CC__JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD_MATCH_MATCH:
-			return isApplicable_solveCsp_CC((JavaCompilationUnit) arguments.get(0), (JavaOpaqueMethod) arguments.get(1),
+		case RulesPackage.IGNORE_OPAQUE_METHOD___IS_APPLICABLE_SOLVE_CSP_CC__JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT_MATCH_MATCH:
+			return isApplicable_solveCsp_CC((JavaOpaqueMethod) arguments.get(0), (JavaCompilationUnit) arguments.get(1),
 					(Match) arguments.get(2), (Match) arguments.get(3));
 		case RulesPackage.IGNORE_OPAQUE_METHOD___IS_APPLICABLE_CHECK_CSP_CC__CSP:
 			return isApplicable_checkCsp_CC((CSP) arguments.get(0));
 		case RulesPackage.IGNORE_OPAQUE_METHOD___CHECK_DEC_FWD:
 			return checkDEC_FWD();
-		case RulesPackage.IGNORE_OPAQUE_METHOD___CHECK_DEC_BWD__JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD:
-			return checkDEC_BWD((JavaCompilationUnit) arguments.get(0), (JavaOpaqueMethod) arguments.get(1));
+		case RulesPackage.IGNORE_OPAQUE_METHOD___CHECK_DEC_BWD__JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT:
+			return checkDEC_BWD((JavaOpaqueMethod) arguments.get(0), (JavaCompilationUnit) arguments.get(1));
 		case RulesPackage.IGNORE_OPAQUE_METHOD___GENERATE_MODEL__RULEENTRYCONTAINER_JAVACOMPILATIONUNIT:
 			return generateModel((RuleEntryContainer) arguments.get(0), (JavaCompilationUnit) arguments.get(1));
 		case RulesPackage.IGNORE_OPAQUE_METHOD___GENERATE_MODEL_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVACOMPILATIONUNIT_MODELGENERATORRULERESULT:
@@ -925,16 +925,16 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 	}
 
 	public static final Object[] pattern_IgnoreOpaqueMethod_7_1_initialbindings_blackBBBB(IgnoreOpaqueMethod _this,
-			Match match, JavaCompilationUnit jcu, JavaOpaqueMethod method) {
-		return new Object[] { _this, match, jcu, method };
+			Match match, JavaOpaqueMethod method, JavaCompilationUnit jcu) {
+		return new Object[] { _this, match, method, jcu };
 	}
 
 	public static final Object[] pattern_IgnoreOpaqueMethod_7_2_SolveCSP_bindingFBBBB(IgnoreOpaqueMethod _this,
-			Match match, JavaCompilationUnit jcu, JavaOpaqueMethod method) {
-		CSP _localVariable_0 = _this.isAppropriate_solveCsp_BWD(match, jcu, method);
+			Match match, JavaOpaqueMethod method, JavaCompilationUnit jcu) {
+		CSP _localVariable_0 = _this.isAppropriate_solveCsp_BWD(match, method, jcu);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, match, jcu, method };
+			return new Object[] { csp, _this, match, method, jcu };
 		}
 		return null;
 	}
@@ -944,9 +944,9 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 	}
 
 	public static final Object[] pattern_IgnoreOpaqueMethod_7_2_SolveCSP_bindingAndBlackFBBBB(IgnoreOpaqueMethod _this,
-			Match match, JavaCompilationUnit jcu, JavaOpaqueMethod method) {
+			Match match, JavaOpaqueMethod method, JavaCompilationUnit jcu) {
 		Object[] result_pattern_IgnoreOpaqueMethod_7_2_SolveCSP_binding = pattern_IgnoreOpaqueMethod_7_2_SolveCSP_bindingFBBBB(
-				_this, match, jcu, method);
+				_this, match, method, jcu);
 		if (result_pattern_IgnoreOpaqueMethod_7_2_SolveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_IgnoreOpaqueMethod_7_2_SolveCSP_binding[0];
 
@@ -954,7 +954,7 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 					csp);
 			if (result_pattern_IgnoreOpaqueMethod_7_2_SolveCSP_black != null) {
 
-				return new Object[] { csp, _this, match, jcu, method };
+				return new Object[] { csp, _this, match, method, jcu };
 			}
 		}
 		return null;
@@ -968,12 +968,12 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 	}
 
 	public static final Object[] pattern_IgnoreOpaqueMethod_7_4_collectelementstobetranslated_blackBBB(Match match,
-			JavaCompilationUnit jcu, JavaOpaqueMethod method) {
-		return new Object[] { match, jcu, method };
+			JavaOpaqueMethod method, JavaCompilationUnit jcu) {
+		return new Object[] { match, method, jcu };
 	}
 
 	public static final Object[] pattern_IgnoreOpaqueMethod_7_4_collectelementstobetranslated_greenBBBF(Match match,
-			JavaCompilationUnit jcu, JavaOpaqueMethod method) {
+			JavaOpaqueMethod method, JavaCompilationUnit jcu) {
 		EMoflonEdge jcu__method____methods = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		match.getToBeTranslatedNodes().add(method);
 		String jcu__method____methods_name_prime = "methods";
@@ -981,12 +981,12 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 		jcu__method____methods.setTrg(method);
 		match.getToBeTranslatedEdges().add(jcu__method____methods);
 		jcu__method____methods.setName(jcu__method____methods_name_prime);
-		return new Object[] { match, jcu, method, jcu__method____methods };
+		return new Object[] { match, method, jcu, jcu__method____methods };
 	}
 
 	public static final Object[] pattern_IgnoreOpaqueMethod_7_5_collectcontextelements_blackBBB(Match match,
-			JavaCompilationUnit jcu, JavaOpaqueMethod method) {
-		return new Object[] { match, jcu, method };
+			JavaOpaqueMethod method, JavaCompilationUnit jcu) {
+		return new Object[] { match, method, jcu };
 	}
 
 	public static final Object[] pattern_IgnoreOpaqueMethod_7_5_collectcontextelements_greenBB(Match match,
@@ -996,8 +996,8 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 	}
 
 	public static final void pattern_IgnoreOpaqueMethod_7_6_registerobjectstomatch_expressionBBBB(
-			IgnoreOpaqueMethod _this, Match match, JavaCompilationUnit jcu, JavaOpaqueMethod method) {
-		_this.registerObjectsToMatch_BWD(match, jcu, method);
+			IgnoreOpaqueMethod _this, Match match, JavaOpaqueMethod method, JavaCompilationUnit jcu) {
+		_this.registerObjectsToMatch_BWD(match, method, jcu);
 
 	}
 
@@ -1013,27 +1013,27 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 
 	public static final Object[] pattern_IgnoreOpaqueMethod_8_1_performtransformation_bindingFFB(
 			IsApplicableMatch isApplicableMatch) {
-		EObject _localVariable_0 = isApplicableMatch.getObject("jcu");
-		EObject _localVariable_1 = isApplicableMatch.getObject("method");
-		EObject tmpJcu = _localVariable_0;
-		EObject tmpMethod = _localVariable_1;
-		if (tmpJcu instanceof JavaCompilationUnit) {
-			JavaCompilationUnit jcu = (JavaCompilationUnit) tmpJcu;
-			if (tmpMethod instanceof JavaOpaqueMethod) {
-				JavaOpaqueMethod method = (JavaOpaqueMethod) tmpMethod;
-				return new Object[] { jcu, method, isApplicableMatch };
+		EObject _localVariable_0 = isApplicableMatch.getObject("method");
+		EObject _localVariable_1 = isApplicableMatch.getObject("jcu");
+		EObject tmpMethod = _localVariable_0;
+		EObject tmpJcu = _localVariable_1;
+		if (tmpMethod instanceof JavaOpaqueMethod) {
+			JavaOpaqueMethod method = (JavaOpaqueMethod) tmpMethod;
+			if (tmpJcu instanceof JavaCompilationUnit) {
+				JavaCompilationUnit jcu = (JavaCompilationUnit) tmpJcu;
+				return new Object[] { method, jcu, isApplicableMatch };
 			}
 		}
 		return null;
 	}
 
 	public static final Object[] pattern_IgnoreOpaqueMethod_8_1_performtransformation_blackBBFBB(
-			JavaCompilationUnit jcu, JavaOpaqueMethod method, IgnoreOpaqueMethod _this,
+			JavaOpaqueMethod method, JavaCompilationUnit jcu, IgnoreOpaqueMethod _this,
 			IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { jcu, method, csp, _this, isApplicableMatch };
+				return new Object[] { method, jcu, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
@@ -1044,15 +1044,15 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 		Object[] result_pattern_IgnoreOpaqueMethod_8_1_performtransformation_binding = pattern_IgnoreOpaqueMethod_8_1_performtransformation_bindingFFB(
 				isApplicableMatch);
 		if (result_pattern_IgnoreOpaqueMethod_8_1_performtransformation_binding != null) {
-			JavaCompilationUnit jcu = (JavaCompilationUnit) result_pattern_IgnoreOpaqueMethod_8_1_performtransformation_binding[0];
-			JavaOpaqueMethod method = (JavaOpaqueMethod) result_pattern_IgnoreOpaqueMethod_8_1_performtransformation_binding[1];
+			JavaOpaqueMethod method = (JavaOpaqueMethod) result_pattern_IgnoreOpaqueMethod_8_1_performtransformation_binding[0];
+			JavaCompilationUnit jcu = (JavaCompilationUnit) result_pattern_IgnoreOpaqueMethod_8_1_performtransformation_binding[1];
 
 			Object[] result_pattern_IgnoreOpaqueMethod_8_1_performtransformation_black = pattern_IgnoreOpaqueMethod_8_1_performtransformation_blackBBFBB(
-					jcu, method, _this, isApplicableMatch);
+					method, jcu, _this, isApplicableMatch);
 			if (result_pattern_IgnoreOpaqueMethod_8_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_IgnoreOpaqueMethod_8_1_performtransformation_black[2];
 
-				return new Object[] { jcu, method, csp, _this, isApplicableMatch };
+				return new Object[] { method, jcu, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
@@ -1071,15 +1071,15 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 	}
 
 	public static final Object[] pattern_IgnoreOpaqueMethod_8_3_bookkeepingforedges_blackBBB(
-			PerformRuleResult ruleresult, EObject jcu, EObject method) {
+			PerformRuleResult ruleresult, EObject method, EObject jcu) {
 		if (!jcu.equals(method)) {
-			return new Object[] { ruleresult, jcu, method };
+			return new Object[] { ruleresult, method, jcu };
 		}
 		return null;
 	}
 
 	public static final Object[] pattern_IgnoreOpaqueMethod_8_3_bookkeepingforedges_greenBBBF(
-			PerformRuleResult ruleresult, EObject jcu, EObject method) {
+			PerformRuleResult ruleresult, EObject method, EObject jcu) {
 		EMoflonEdge jcu__method____methods = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "IgnoreOpaqueMethod";
 		String jcu__method____methods_name_prime = "methods";
@@ -1088,12 +1088,12 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 		ruleresult.getTranslatedEdges().add(jcu__method____methods);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
 		jcu__method____methods.setName(jcu__method____methods_name_prime);
-		return new Object[] { ruleresult, jcu, method, jcu__method____methods };
+		return new Object[] { ruleresult, method, jcu, jcu__method____methods };
 	}
 
 	public static final void pattern_IgnoreOpaqueMethod_8_5_registerobjects_expressionBBBB(IgnoreOpaqueMethod _this,
-			PerformRuleResult ruleresult, EObject jcu, EObject method) {
-		_this.registerObjects_BWD(ruleresult, jcu, method);
+			PerformRuleResult ruleresult, EObject method, EObject jcu) {
+		_this.registerObjects_BWD(ruleresult, method, jcu);
 
 	}
 
@@ -1153,56 +1153,56 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 	}
 
 	public static final Object[] pattern_IgnoreOpaqueMethod_9_2_corematch_bindingFFB(Match match) {
-		EObject _localVariable_0 = match.getObject("jcu");
-		EObject _localVariable_1 = match.getObject("method");
-		EObject tmpJcu = _localVariable_0;
-		EObject tmpMethod = _localVariable_1;
-		if (tmpJcu instanceof JavaCompilationUnit) {
-			JavaCompilationUnit jcu = (JavaCompilationUnit) tmpJcu;
-			if (tmpMethod instanceof JavaOpaqueMethod) {
-				JavaOpaqueMethod method = (JavaOpaqueMethod) tmpMethod;
-				return new Object[] { jcu, method, match };
+		EObject _localVariable_0 = match.getObject("method");
+		EObject _localVariable_1 = match.getObject("jcu");
+		EObject tmpMethod = _localVariable_0;
+		EObject tmpJcu = _localVariable_1;
+		if (tmpMethod instanceof JavaOpaqueMethod) {
+			JavaOpaqueMethod method = (JavaOpaqueMethod) tmpMethod;
+			if (tmpJcu instanceof JavaCompilationUnit) {
+				JavaCompilationUnit jcu = (JavaCompilationUnit) tmpJcu;
+				return new Object[] { method, jcu, match };
 			}
 		}
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_IgnoreOpaqueMethod_9_2_corematch_blackBBB(JavaCompilationUnit jcu,
-			JavaOpaqueMethod method, Match match) {
+	public static final Iterable<Object[]> pattern_IgnoreOpaqueMethod_9_2_corematch_blackBBB(JavaOpaqueMethod method,
+			JavaCompilationUnit jcu, Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		_result.add(new Object[] { jcu, method, match });
+		_result.add(new Object[] { method, jcu, match });
 		return _result;
 	}
 
-	public static final Iterable<Object[]> pattern_IgnoreOpaqueMethod_9_3_findcontext_blackBB(JavaCompilationUnit jcu,
-			JavaOpaqueMethod method) {
+	public static final Iterable<Object[]> pattern_IgnoreOpaqueMethod_9_3_findcontext_blackBB(JavaOpaqueMethod method,
+			JavaCompilationUnit jcu) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		if (jcu.getMethods().contains(method)) {
-			_result.add(new Object[] { jcu, method });
+			_result.add(new Object[] { method, jcu });
 		}
 		return _result;
 	}
 
-	public static final Object[] pattern_IgnoreOpaqueMethod_9_3_findcontext_greenBBFF(JavaCompilationUnit jcu,
-			JavaOpaqueMethod method) {
+	public static final Object[] pattern_IgnoreOpaqueMethod_9_3_findcontext_greenBBFF(JavaOpaqueMethod method,
+			JavaCompilationUnit jcu) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
 		EMoflonEdge jcu__method____methods = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String jcu__method____methods_name_prime = "methods";
-		isApplicableMatch.getAllContextElements().add(jcu);
 		isApplicableMatch.getAllContextElements().add(method);
+		isApplicableMatch.getAllContextElements().add(jcu);
 		jcu__method____methods.setSrc(jcu);
 		jcu__method____methods.setTrg(method);
 		isApplicableMatch.getAllContextElements().add(jcu__method____methods);
 		jcu__method____methods.setName(jcu__method____methods_name_prime);
-		return new Object[] { jcu, method, isApplicableMatch, jcu__method____methods };
+		return new Object[] { method, jcu, isApplicableMatch, jcu__method____methods };
 	}
 
 	public static final Object[] pattern_IgnoreOpaqueMethod_9_4_solveCSP_bindingFBBBB(IgnoreOpaqueMethod _this,
-			IsApplicableMatch isApplicableMatch, JavaCompilationUnit jcu, JavaOpaqueMethod method) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_BWD(isApplicableMatch, jcu, method);
+			IsApplicableMatch isApplicableMatch, JavaOpaqueMethod method, JavaCompilationUnit jcu) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_BWD(isApplicableMatch, method, jcu);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, jcu, method };
+			return new Object[] { csp, _this, isApplicableMatch, method, jcu };
 		}
 		return null;
 	}
@@ -1212,9 +1212,9 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 	}
 
 	public static final Object[] pattern_IgnoreOpaqueMethod_9_4_solveCSP_bindingAndBlackFBBBB(IgnoreOpaqueMethod _this,
-			IsApplicableMatch isApplicableMatch, JavaCompilationUnit jcu, JavaOpaqueMethod method) {
+			IsApplicableMatch isApplicableMatch, JavaOpaqueMethod method, JavaCompilationUnit jcu) {
 		Object[] result_pattern_IgnoreOpaqueMethod_9_4_solveCSP_binding = pattern_IgnoreOpaqueMethod_9_4_solveCSP_bindingFBBBB(
-				_this, isApplicableMatch, jcu, method);
+				_this, isApplicableMatch, method, jcu);
 		if (result_pattern_IgnoreOpaqueMethod_9_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_IgnoreOpaqueMethod_9_4_solveCSP_binding[0];
 
@@ -1222,7 +1222,7 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 					csp);
 			if (result_pattern_IgnoreOpaqueMethod_9_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, jcu, method };
+				return new Object[] { csp, _this, isApplicableMatch, method, jcu };
 			}
 		}
 		return null;
@@ -1320,7 +1320,7 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 			if (tmpMethod instanceof JavaOpaqueMethod) {
 				JavaOpaqueMethod method = (JavaOpaqueMethod) tmpMethod;
 				if (jcu.getMethods().contains(method)) {
-					_result.add(new Object[] { jcu, method, _edge_methods });
+					_result.add(new Object[] { method, jcu, _edge_methods });
 				}
 			}
 
@@ -1339,8 +1339,8 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 	}
 
 	public static final boolean pattern_IgnoreOpaqueMethod_17_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBB(
-			IgnoreOpaqueMethod _this, Match match, JavaCompilationUnit jcu, JavaOpaqueMethod method) {
-		boolean _localVariable_0 = _this.isAppropriate_BWD(match, jcu, method);
+			IgnoreOpaqueMethod _this, Match match, JavaOpaqueMethod method, JavaCompilationUnit jcu) {
+		boolean _localVariable_0 = _this.isAppropriate_BWD(match, method, jcu);
 		boolean _result = Boolean.valueOf(_localVariable_0);
 		return _result;
 	}
@@ -1383,24 +1383,24 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 	}
 
 	public static final Object[] pattern_IgnoreOpaqueMethod_20_2_matchsrctrgcontext_bindingFFB(Match targetMatch) {
-		EObject _localVariable_0 = targetMatch.getObject("jcu");
-		EObject _localVariable_1 = targetMatch.getObject("method");
-		EObject tmpJcu = _localVariable_0;
-		EObject tmpMethod = _localVariable_1;
-		if (tmpJcu instanceof JavaCompilationUnit) {
-			JavaCompilationUnit jcu = (JavaCompilationUnit) tmpJcu;
-			if (tmpMethod instanceof JavaOpaqueMethod) {
-				JavaOpaqueMethod method = (JavaOpaqueMethod) tmpMethod;
-				return new Object[] { jcu, method, targetMatch };
+		EObject _localVariable_0 = targetMatch.getObject("method");
+		EObject _localVariable_1 = targetMatch.getObject("jcu");
+		EObject tmpMethod = _localVariable_0;
+		EObject tmpJcu = _localVariable_1;
+		if (tmpMethod instanceof JavaOpaqueMethod) {
+			JavaOpaqueMethod method = (JavaOpaqueMethod) tmpMethod;
+			if (tmpJcu instanceof JavaCompilationUnit) {
+				JavaCompilationUnit jcu = (JavaCompilationUnit) tmpJcu;
+				return new Object[] { method, jcu, targetMatch };
 			}
 		}
 		return null;
 	}
 
-	public static final Object[] pattern_IgnoreOpaqueMethod_20_2_matchsrctrgcontext_blackBBBB(JavaCompilationUnit jcu,
-			JavaOpaqueMethod method, Match sourceMatch, Match targetMatch) {
+	public static final Object[] pattern_IgnoreOpaqueMethod_20_2_matchsrctrgcontext_blackBBBB(JavaOpaqueMethod method,
+			JavaCompilationUnit jcu, Match sourceMatch, Match targetMatch) {
 		if (!sourceMatch.equals(targetMatch)) {
-			return new Object[] { jcu, method, sourceMatch, targetMatch };
+			return new Object[] { method, jcu, sourceMatch, targetMatch };
 		}
 		return null;
 	}
@@ -1410,25 +1410,25 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 		Object[] result_pattern_IgnoreOpaqueMethod_20_2_matchsrctrgcontext_binding = pattern_IgnoreOpaqueMethod_20_2_matchsrctrgcontext_bindingFFB(
 				targetMatch);
 		if (result_pattern_IgnoreOpaqueMethod_20_2_matchsrctrgcontext_binding != null) {
-			JavaCompilationUnit jcu = (JavaCompilationUnit) result_pattern_IgnoreOpaqueMethod_20_2_matchsrctrgcontext_binding[0];
-			JavaOpaqueMethod method = (JavaOpaqueMethod) result_pattern_IgnoreOpaqueMethod_20_2_matchsrctrgcontext_binding[1];
+			JavaOpaqueMethod method = (JavaOpaqueMethod) result_pattern_IgnoreOpaqueMethod_20_2_matchsrctrgcontext_binding[0];
+			JavaCompilationUnit jcu = (JavaCompilationUnit) result_pattern_IgnoreOpaqueMethod_20_2_matchsrctrgcontext_binding[1];
 
 			Object[] result_pattern_IgnoreOpaqueMethod_20_2_matchsrctrgcontext_black = pattern_IgnoreOpaqueMethod_20_2_matchsrctrgcontext_blackBBBB(
-					jcu, method, sourceMatch, targetMatch);
+					method, jcu, sourceMatch, targetMatch);
 			if (result_pattern_IgnoreOpaqueMethod_20_2_matchsrctrgcontext_black != null) {
 
-				return new Object[] { jcu, method, sourceMatch, targetMatch };
+				return new Object[] { method, jcu, sourceMatch, targetMatch };
 			}
 		}
 		return null;
 	}
 
 	public static final Object[] pattern_IgnoreOpaqueMethod_20_3_solvecsp_bindingFBBBBB(IgnoreOpaqueMethod _this,
-			JavaCompilationUnit jcu, JavaOpaqueMethod method, Match sourceMatch, Match targetMatch) {
-		CSP _localVariable_2 = _this.isApplicable_solveCsp_CC(jcu, method, sourceMatch, targetMatch);
+			JavaOpaqueMethod method, JavaCompilationUnit jcu, Match sourceMatch, Match targetMatch) {
+		CSP _localVariable_2 = _this.isApplicable_solveCsp_CC(method, jcu, sourceMatch, targetMatch);
 		CSP csp = _localVariable_2;
 		if (csp != null) {
-			return new Object[] { csp, _this, jcu, method, sourceMatch, targetMatch };
+			return new Object[] { csp, _this, method, jcu, sourceMatch, targetMatch };
 		}
 		return null;
 	}
@@ -1438,10 +1438,10 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 	}
 
 	public static final Object[] pattern_IgnoreOpaqueMethod_20_3_solvecsp_bindingAndBlackFBBBBB(
-			IgnoreOpaqueMethod _this, JavaCompilationUnit jcu, JavaOpaqueMethod method, Match sourceMatch,
+			IgnoreOpaqueMethod _this, JavaOpaqueMethod method, JavaCompilationUnit jcu, Match sourceMatch,
 			Match targetMatch) {
 		Object[] result_pattern_IgnoreOpaqueMethod_20_3_solvecsp_binding = pattern_IgnoreOpaqueMethod_20_3_solvecsp_bindingFBBBBB(
-				_this, jcu, method, sourceMatch, targetMatch);
+				_this, method, jcu, sourceMatch, targetMatch);
 		if (result_pattern_IgnoreOpaqueMethod_20_3_solvecsp_binding != null) {
 			CSP csp = (CSP) result_pattern_IgnoreOpaqueMethod_20_3_solvecsp_binding[0];
 
@@ -1449,7 +1449,7 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 					csp);
 			if (result_pattern_IgnoreOpaqueMethod_20_3_solvecsp_black != null) {
 
-				return new Object[] { csp, _this, jcu, method, sourceMatch, targetMatch };
+				return new Object[] { csp, _this, method, jcu, sourceMatch, targetMatch };
 			}
 		}
 		return null;
@@ -1480,9 +1480,9 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 		return new Object[] { sourceMatch, targetMatch, ccMatch };
 	}
 
-	public static final Object[] pattern_IgnoreOpaqueMethod_20_6_createcorrespondence_blackBBB(JavaCompilationUnit jcu,
-			JavaOpaqueMethod method, CCMatch ccMatch) {
-		return new Object[] { jcu, method, ccMatch };
+	public static final Object[] pattern_IgnoreOpaqueMethod_20_6_createcorrespondence_blackBBB(JavaOpaqueMethod method,
+			JavaCompilationUnit jcu, CCMatch ccMatch) {
+		return new Object[] { method, jcu, ccMatch };
 	}
 
 	public static final Object[] pattern_IgnoreOpaqueMethod_20_7_addtoreturnedresult_blackBB(
@@ -1516,10 +1516,10 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 		return _result;
 	}
 
-	public static final Object[] pattern_IgnoreOpaqueMethod_24_1_matchtggpattern_blackBB(JavaCompilationUnit jcu,
-			JavaOpaqueMethod method) {
+	public static final Object[] pattern_IgnoreOpaqueMethod_24_1_matchtggpattern_blackBB(JavaOpaqueMethod method,
+			JavaCompilationUnit jcu) {
 		if (jcu.getMethods().contains(method)) {
-			return new Object[] { jcu, method };
+			return new Object[] { method, jcu };
 		}
 		return null;
 	}
@@ -1617,7 +1617,7 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 		return new Object[] { jcu, ruleResult };
 	}
 
-	public static final Object[] pattern_IgnoreOpaqueMethod_25_6_perform_greenBFB(JavaCompilationUnit jcu,
+	public static final Object[] pattern_IgnoreOpaqueMethod_25_6_perform_greenFBB(JavaCompilationUnit jcu,
 			ModelgeneratorRuleResult ruleResult) {
 		JavaOpaqueMethod method = SimpleJavaFactory.eINSTANCE.createJavaOpaqueMethod();
 		boolean ruleResult_success_prime = Boolean.valueOf(true);
@@ -1627,7 +1627,7 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 		ruleResult.setSuccess(Boolean.valueOf(ruleResult_success_prime));
 		int ruleResult_performCount_prime = Integer.valueOf(_localVariable_0);
 		ruleResult.setPerformCount(Integer.valueOf(ruleResult_performCount_prime));
-		return new Object[] { jcu, method, ruleResult };
+		return new Object[] { method, jcu, ruleResult };
 	}
 
 	public static final ModelgeneratorRuleResult pattern_IgnoreOpaqueMethod_25_7_expressionFB(

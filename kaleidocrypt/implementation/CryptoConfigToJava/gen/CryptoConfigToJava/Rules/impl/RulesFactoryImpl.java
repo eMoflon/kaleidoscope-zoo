@@ -55,20 +55,20 @@ public class RulesFactoryImpl extends EFactoryImpl implements RulesFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case RulesPackage.SECURE_PASSWORD_TASK:
-			return createSecurePasswordTask();
-		case RulesPackage.PERFORM_GET_KEY_METHOD:
-			return createPerformGetKeyMethod();
-		case RulesPackage.SYMMETRIC_ENCRYPTION_TASK:
-			return createSymmetricEncryptionTask();
 		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT:
 			return createSymmetricBlockCipherImportToImport();
-		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT:
-			return createIgnoreMethodInvocationArgument();
+		case RulesPackage.SECURE_PASSWORD_TASK:
+			return createSecurePasswordTask();
 		case RulesPackage.IGNORE_OPAQUE_METHOD:
 			return createIgnoreOpaqueMethod();
 		case RulesPackage.KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT:
 			return createKeyDerivationAlgorithmImportToImport();
+		case RulesPackage.PERFORM_GET_KEY_METHOD:
+			return createPerformGetKeyMethod();
+		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT:
+			return createIgnoreMethodInvocationArgument();
+		case RulesPackage.SYMMETRIC_ENCRYPTION_TASK:
+			return createSymmetricEncryptionTask();
 		case RulesPackage.IGNORE_PARAMETER_RULE:
 			return createIgnoreParameterRule();
 		case RulesPackage.PASSWORD_BASED_ENCRYPTION:
@@ -76,36 +76,6 @@ public class RulesFactoryImpl extends EFactoryImpl implements RulesFactory {
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SecurePasswordTask createSecurePasswordTask() {
-		SecurePasswordTaskImpl securePasswordTask = new SecurePasswordTaskImpl();
-		return securePasswordTask;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PerformGetKeyMethod createPerformGetKeyMethod() {
-		PerformGetKeyMethodImpl performGetKeyMethod = new PerformGetKeyMethodImpl();
-		return performGetKeyMethod;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SymmetricEncryptionTask createSymmetricEncryptionTask() {
-		SymmetricEncryptionTaskImpl symmetricEncryptionTask = new SymmetricEncryptionTaskImpl();
-		return symmetricEncryptionTask;
 	}
 
 	/**
@@ -123,9 +93,9 @@ public class RulesFactoryImpl extends EFactoryImpl implements RulesFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IgnoreMethodInvocationArgument createIgnoreMethodInvocationArgument() {
-		IgnoreMethodInvocationArgumentImpl ignoreMethodInvocationArgument = new IgnoreMethodInvocationArgumentImpl();
-		return ignoreMethodInvocationArgument;
+	public SecurePasswordTask createSecurePasswordTask() {
+		SecurePasswordTaskImpl securePasswordTask = new SecurePasswordTaskImpl();
+		return securePasswordTask;
 	}
 
 	/**
@@ -146,6 +116,36 @@ public class RulesFactoryImpl extends EFactoryImpl implements RulesFactory {
 	public KeyDerivationAlgorithmImportToImport createKeyDerivationAlgorithmImportToImport() {
 		KeyDerivationAlgorithmImportToImportImpl keyDerivationAlgorithmImportToImport = new KeyDerivationAlgorithmImportToImportImpl();
 		return keyDerivationAlgorithmImportToImport;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PerformGetKeyMethod createPerformGetKeyMethod() {
+		PerformGetKeyMethodImpl performGetKeyMethod = new PerformGetKeyMethodImpl();
+		return performGetKeyMethod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IgnoreMethodInvocationArgument createIgnoreMethodInvocationArgument() {
+		IgnoreMethodInvocationArgumentImpl ignoreMethodInvocationArgument = new IgnoreMethodInvocationArgumentImpl();
+		return ignoreMethodInvocationArgument;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SymmetricEncryptionTask createSymmetricEncryptionTask() {
+		SymmetricEncryptionTaskImpl symmetricEncryptionTask = new SymmetricEncryptionTaskImpl();
+		return symmetricEncryptionTask;
 	}
 
 	/**

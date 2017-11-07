@@ -2,9 +2,7 @@ package org;
 
 import java.net.URL;
 import java.nio.file.Path;
-import java.util.List;
-import java.util.Optional;
-import kaleidocrypt.implemenation.BxtendTool;
+
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.moflon.core.utilities.MoflonUtilitiesActivator;
 
@@ -26,57 +24,62 @@ import CryptoAPIConfig.Task;
 import CryptoConfigToJava.CryptoConfigToJavaPackage;
 import CryptoConfigToJava.org.moflon.EMoflonTool;
 import SimpleJava.JavaPackage;
+import kaleidocrypt.implemenation.BxtendTool;
 
 public class ControllerModule extends AbstractModule{
 
-	private ResourceSet set;
-	private Path sourceArtefactAdapterUnparsePath;
-	private Path targetArtefactAdapterPackageRoot;
-	private Path destination;
-	private Optional<Path> initialSourceModelPath;
-	private final BxTool bxTool = BxTool.BXTEND;
+	private ResourceSet set;	
+	private final BxTool bxTool = BxTool.EMOFLON;
 	
-	public ControllerModule(ResourceSet set, Path destination, Path sourceArtefactAdapterUnparsePath, Path targetArtefactAdapterPackageRoot, Optional<Path> initialSourceModelPath) {
-		this.set = set;
-		this.sourceArtefactAdapterUnparsePath = sourceArtefactAdapterUnparsePath;
-		this.targetArtefactAdapterPackageRoot = targetArtefactAdapterPackageRoot;
-		this.destination = destination;
-		this.initialSourceModelPath = initialSourceModelPath;
+	private Path sourceArtefactPath;
+	private Path targetArtefactPath;
+	private Path persisanceDestination;
+	
+	public ControllerModule(ResourceSet set, Path sourceArtefactPath, Path targetArtefactPath, Path persistanceDestination) {
+		this.set = set;		
+		this.persisanceDestination = persistanceDestination;
+		this.sourceArtefactPath = sourceArtefactPath;
+		this.targetArtefactPath = targetArtefactPath;
 	}
 	
 	@Provides @Src
 	ArtefactAdapter<Task, Path> provideSourceArtefactAdapter() {		
-		return new XMIArtefactAdapter<Task>(sourceArtefactAdapterUnparsePath);
+		return new XMIArtefactAdapter<Task>(sourceArtefactPath);
 	}
 
 	@Provides @Trg
-	ArtefactAdapter<JavaPackage, List<Path>> provideTargetArtefactAdapter() {
-		return new JavaArtefactAdapter(targetArtefactAdapterPackageRoot);
+	ArtefactAdapter<JavaPackage, Path> provideTargetArtefactAdapter() {
+		return new JavaArtefactAdapter(targetArtefactPath);
 	}
 	
 	@Provides
 	PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path>provideSynchroniser(){
 		
-		URL pathToTGGtransProjet  = MoflonUtilitiesActivator.getPathRelToPlugIn(".", "CryptoConfigToJava"); 
 		PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path>tool;
 		
+		XMIArtefactAdapter<Task> sourceArtefactAdapter = new XMIArtefactAdapter<Task>(sourceArtefactPath);
+		sourceArtefactAdapter.parse();			
+		
+		ArtefactAdapter<JavaPackage, Path> targetArtefactAdapter = new JavaArtefactAdapter(targetArtefactPath);
+		targetArtefactAdapter.parse();
+		
 		if(bxTool.equals(BxTool.EMOFLON)) {
-			
-			tool = new EMoflonTool(CryptoConfigToJavaPackage.eINSTANCE, pathToTGGtransProjet.getPath(), set, initialSourceModelPath);
+		
+			URL pathToTGGtransProjet  = MoflonUtilitiesActivator.getPathRelToPlugIn(".", "CryptoConfigToJava"); 
+			tool = new EMoflonTool(CryptoConfigToJavaPackage.eINSTANCE, pathToTGGtransProjet.getPath(), set
+																									,sourceArtefactAdapter.getModel().orElse(null)
+																									, targetArtefactAdapter.getModel().orElse(null)
+																									, persisanceDestination);
 		}
 		else if(bxTool.equals(BxTool.BXTEND)){
 			
-			tool = new BxtendTool(set, initialSourceModelPath);
+			tool = new BxtendTool(sourceArtefactAdapter.getModel().orElse(null), targetArtefactAdapter.getModel().orElse(null), persisanceDestination);
 		}
 		else {
-			tool = null;
+			throw new IllegalArgumentException("Bx tool has to be chosen!");
 		}
 				
 		tool.initialize();
-		
-		initialSourceModelPath.ifPresent((i) -> {
-			tool.persistState(destination);
-		});
 		
 		return tool;
 	}
@@ -84,7 +87,7 @@ public class ControllerModule extends AbstractModule{
 	protected void configure() {
 		bind(new TypeLiteral<OfflineDeltaDiscoverer<Task, OperationalDelta>>() {}). annotatedWith(Src.class).to(new TypeLiteral<EMFCompareDeltaDiscoverer<Task>>() {});
 		bind(new TypeLiteral<OfflineDeltaDiscoverer<JavaPackage, OperationalDelta>>() {}). annotatedWith(Trg.class).to(new TypeLiteral<EMFCompareDeltaDiscoverer<JavaPackage>>() {});
-		bind(Path.class).annotatedWith(Dest.class).toInstance(destination);
+		bind(Path.class).annotatedWith(Dest.class).toInstance(persisanceDestination);
 	}
 	
 }

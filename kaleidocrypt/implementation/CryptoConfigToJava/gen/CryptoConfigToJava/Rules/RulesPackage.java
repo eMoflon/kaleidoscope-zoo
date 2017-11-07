@@ -58,6 +58,354 @@ public interface RulesPackage extends EPackage {
 	RulesPackage eINSTANCE = CryptoConfigToJava.Rules.impl.RulesPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link CryptoConfigToJava.Rules.impl.SymmetricBlockCipherImportToImportImpl <em>Symmetric Block Cipher Import To Import</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see CryptoConfigToJava.Rules.impl.SymmetricBlockCipherImportToImportImpl
+	 * @see CryptoConfigToJava.Rules.impl.RulesPackageImpl#getSymmetricBlockCipherImportToImport()
+	 * @generated
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Symmetric Block Cipher Import To Import</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT_FEATURE_COUNT = RuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_FWD__MATCH_IMPORT_SYMMETRICBLOCKCIPHER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 0;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___PERFORM_FWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 1;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 2;
+
+	/**
+	 * The operation id for the '<em>Register Objects To Match FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_IMPORT_SYMMETRICBLOCKCIPHER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate solve Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_IMPORT_SYMMETRICBLOCKCIPHER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate check Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 5;
+
+	/**
+	 * The operation id for the '<em>Is Applicable solve Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_IMPORT_SYMMETRICBLOCKCIPHER_SYMMETRICBLOCKCIPHERTOJCU_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 6;
+
+	/**
+	 * The operation id for the '<em>Is Applicable check Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 7;
+
+	/**
+	 * The operation id for the '<em>Register Objects FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 8;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 9;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_BWD__MATCH_JAVAIMPORT_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 10;
+
+	/**
+	 * The operation id for the '<em>Perform BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___PERFORM_BWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 11;
+
+	/**
+	 * The operation id for the '<em>Is Applicable BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_BWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 12;
+
+	/**
+	 * The operation id for the '<em>Register Objects To Match BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_JAVAIMPORT_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 13;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate solve Csp BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_JAVAIMPORT_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 14;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate check Csp BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 15;
+
+	/**
+	 * The operation id for the '<em>Is Applicable solve Csp BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_SYMMETRICBLOCKCIPHER_JAVAIMPORT_SYMMETRICBLOCKCIPHERTOJCU_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 16;
+
+	/**
+	 * The operation id for the '<em>Is Applicable check Csp BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 17;
+
+	/**
+	 * The operation id for the '<em>Register Objects BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___REGISTER_OBJECTS_BWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 18;
+
+	/**
+	 * The operation id for the '<em>Check Types BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___CHECK_TYPES_BWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 19;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 5</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_FWD_EMOFLON_EDGE_5__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 20;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate BWD EMoflon Edge 5</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_BWD_EMOFLON_EDGE_5__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 21;
+
+	/**
+	 * The operation id for the '<em>Check Attributes FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 22;
+
+	/**
+	 * The operation id for the '<em>Check Attributes BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 23;
+
+	/**
+	 * The operation id for the '<em>Is Applicable CC</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_CC__MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 24;
+
+	/**
+	 * The operation id for the '<em>Is Applicable solve Csp CC</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_CC__IMPORT_SYMMETRICBLOCKCIPHER_JAVAIMPORT_JAVACOMPILATIONUNIT_MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 25;
+
+	/**
+	 * The operation id for the '<em>Is Applicable check Csp CC</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_CHECK_CSP_CC__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 26;
+
+	/**
+	 * The operation id for the '<em>Check DEC FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___CHECK_DEC_FWD__IMPORT_SYMMETRICBLOCKCIPHER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 27;
+
+	/**
+	 * The operation id for the '<em>Check DEC BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___CHECK_DEC_BWD__JAVAIMPORT_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 28;
+
+	/**
+	 * The operation id for the '<em>Generate Model</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___GENERATE_MODEL__RULEENTRYCONTAINER_SYMMETRICBLOCKCIPHERTOJCU = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 29;
+
+	/**
+	 * The operation id for the '<em>Generate Model solve Csp BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___GENERATE_MODEL_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_SYMMETRICBLOCKCIPHER_SYMMETRICBLOCKCIPHERTOJCU_JAVACOMPILATIONUNIT_MODELGENERATORRULERESULT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 30;
+
+	/**
+	 * The operation id for the '<em>Generate Model check Csp BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___GENERATE_MODEL_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 31;
+
+	/**
+	 * The number of operations of the '<em>Symmetric Block Cipher Import To Import</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 32;
+
+	/**
 	 * The meta object id for the '{@link CryptoConfigToJava.Rules.impl.SecurePasswordTaskImpl <em>Secure Password Task</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,7 +413,7 @@ public interface RulesPackage extends EPackage {
 	 * @see CryptoConfigToJava.Rules.impl.RulesPackageImpl#getSecurePasswordTask()
 	 * @generated
 	 */
-	int SECURE_PASSWORD_TASK = 0;
+	int SECURE_PASSWORD_TASK = 1;
 
 	/**
 	 * The number of structural features of the '<em>Secure Password Task</em>' class.
@@ -267,23 +615,23 @@ public interface RulesPackage extends EPackage {
 	int SECURE_PASSWORD_TASK___CHECK_TYPES_BWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 19;
 
 	/**
-	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 5</em>' operation.
+	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 6</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SECURE_PASSWORD_TASK___IS_APPROPRIATE_FWD_EMOFLON_EDGE_5__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SECURE_PASSWORD_TASK___IS_APPROPRIATE_FWD_EMOFLON_EDGE_6__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 20;
 
 	/**
-	 * The operation id for the '<em>Is Appropriate BWD EMoflon Edge 5</em>' operation.
+	 * The operation id for the '<em>Is Appropriate BWD EMoflon Edge 6</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SECURE_PASSWORD_TASK___IS_APPROPRIATE_BWD_EMOFLON_EDGE_5__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SECURE_PASSWORD_TASK___IS_APPROPRIATE_BWD_EMOFLON_EDGE_6__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 21;
 
 	/**
@@ -320,7 +668,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SECURE_PASSWORD_TASK___IS_APPLICABLE_SOLVE_CSP_CC__JAVALITERAL_JAVAPACKAGE_JAVALITERAL_JAVAVARIABLEDECLARATION_JAVAMETHODINVOCATION_KEYDERIVATIONALGORITHM_JAVAOPAQUEMETHOD_JAVALITERAL_TASK_JAVANAME_JAVASTATEMENT_JAVAWORKFLOWMETHOD_JAVACOMPILATIONUNIT_MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SECURE_PASSWORD_TASK___IS_APPLICABLE_SOLVE_CSP_CC__JAVALITERAL_JAVAPACKAGE_JAVALITERAL_JAVAVARIABLEDECLARATION_KEYDERIVATIONALGORITHM_JAVAMETHODINVOCATION_JAVAOPAQUEMETHOD_JAVALITERAL_TASK_JAVANAME_JAVASTATEMENT_JAVAWORKFLOWMETHOD_JAVACOMPILATIONUNIT_MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 25;
 
 	/**
@@ -390,6 +738,644 @@ public interface RulesPackage extends EPackage {
 	int SECURE_PASSWORD_TASK_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 32;
 
 	/**
+	 * The meta object id for the '{@link CryptoConfigToJava.Rules.impl.IgnoreOpaqueMethodImpl <em>Ignore Opaque Method</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see CryptoConfigToJava.Rules.impl.IgnoreOpaqueMethodImpl
+	 * @see CryptoConfigToJava.Rules.impl.RulesPackageImpl#getIgnoreOpaqueMethod()
+	 * @generated
+	 */
+	int IGNORE_OPAQUE_METHOD = 2;
+
+	/**
+	 * The number of structural features of the '<em>Ignore Opaque Method</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD_FEATURE_COUNT = RuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___PERFORM_FWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___IS_APPLICABLE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Register Objects To Match FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate solve Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate check Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 6;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_BWD__MATCH_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 7;
+
+	/**
+	 * The operation id for the '<em>Perform BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___PERFORM_BWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 8;
+
+	/**
+	 * The operation id for the '<em>Is Applicable BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___IS_APPLICABLE_BWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
+
+	/**
+	 * The operation id for the '<em>Register Objects To Match BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 10;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate solve Csp BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 11;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate check Csp BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 12;
+
+	/**
+	 * The operation id for the '<em>Is Applicable solve Csp BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 13;
+
+	/**
+	 * The operation id for the '<em>Is Applicable check Csp BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___IS_APPLICABLE_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 14;
+
+	/**
+	 * The operation id for the '<em>Register Objects BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___REGISTER_OBJECTS_BWD__PERFORMRULERESULT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 15;
+
+	/**
+	 * The operation id for the '<em>Check Types BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___CHECK_TYPES_BWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 16;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate BWD EMoflon Edge 7</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_BWD_EMOFLON_EDGE_7__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 17;
+
+	/**
+	 * The operation id for the '<em>Check Attributes FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 18;
+
+	/**
+	 * The operation id for the '<em>Check Attributes BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 19;
+
+	/**
+	 * The operation id for the '<em>Is Applicable CC</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___IS_APPLICABLE_CC__MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 20;
+
+	/**
+	 * The operation id for the '<em>Is Applicable solve Csp CC</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___IS_APPLICABLE_SOLVE_CSP_CC__JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT_MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 21;
+
+	/**
+	 * The operation id for the '<em>Is Applicable check Csp CC</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___IS_APPLICABLE_CHECK_CSP_CC__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 22;
+
+	/**
+	 * The operation id for the '<em>Check DEC FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___CHECK_DEC_FWD = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 23;
+
+	/**
+	 * The operation id for the '<em>Check DEC BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___CHECK_DEC_BWD__JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 24;
+
+	/**
+	 * The operation id for the '<em>Generate Model</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___GENERATE_MODEL__RULEENTRYCONTAINER_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 25;
+
+	/**
+	 * The operation id for the '<em>Generate Model solve Csp BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___GENERATE_MODEL_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVACOMPILATIONUNIT_MODELGENERATORRULERESULT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 26;
+
+	/**
+	 * The operation id for the '<em>Generate Model check Csp BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD___GENERATE_MODEL_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 27;
+
+	/**
+	 * The number of operations of the '<em>Ignore Opaque Method</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IGNORE_OPAQUE_METHOD_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 28;
+
+	/**
+	 * The meta object id for the '{@link CryptoConfigToJava.Rules.impl.KeyDerivationAlgorithmImportToImportImpl <em>Key Derivation Algorithm Import To Import</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see CryptoConfigToJava.Rules.impl.KeyDerivationAlgorithmImportToImportImpl
+	 * @see CryptoConfigToJava.Rules.impl.RulesPackageImpl#getKeyDerivationAlgorithmImportToImport()
+	 * @generated
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT = 3;
+
+	/**
+	 * The number of structural features of the '<em>Key Derivation Algorithm Import To Import</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT_FEATURE_COUNT = RuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_FWD__MATCH_KEYDERIVATIONALGORITHM_IMPORT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 0;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___PERFORM_FWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 1;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 2;
+
+	/**
+	 * The operation id for the '<em>Register Objects To Match FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_KEYDERIVATIONALGORITHM_IMPORT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate solve Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_KEYDERIVATIONALGORITHM_IMPORT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate check Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 5;
+
+	/**
+	 * The operation id for the '<em>Is Applicable solve Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_JAVACOMPILATIONUNIT_KEYDERIVATIONALGORITHMTOJCU_KEYDERIVATIONALGORITHM_IMPORT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 6;
+
+	/**
+	 * The operation id for the '<em>Is Applicable check Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 7;
+
+	/**
+	 * The operation id for the '<em>Register Objects FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 8;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 9;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_BWD__MATCH_JAVAIMPORT_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 10;
+
+	/**
+	 * The operation id for the '<em>Perform BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___PERFORM_BWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 11;
+
+	/**
+	 * The operation id for the '<em>Is Applicable BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_BWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 12;
+
+	/**
+	 * The operation id for the '<em>Register Objects To Match BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_JAVAIMPORT_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 13;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate solve Csp BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_JAVAIMPORT_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 14;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate check Csp BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 15;
+
+	/**
+	 * The operation id for the '<em>Is Applicable solve Csp BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVAIMPORT_JAVACOMPILATIONUNIT_KEYDERIVATIONALGORITHMTOJCU_KEYDERIVATIONALGORITHM = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 16;
+
+	/**
+	 * The operation id for the '<em>Is Applicable check Csp BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 17;
+
+	/**
+	 * The operation id for the '<em>Register Objects BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___REGISTER_OBJECTS_BWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 18;
+
+	/**
+	 * The operation id for the '<em>Check Types BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___CHECK_TYPES_BWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 19;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 7</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_FWD_EMOFLON_EDGE_7__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 20;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate BWD EMoflon Edge 8</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_BWD_EMOFLON_EDGE_8__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 21;
+
+	/**
+	 * The operation id for the '<em>Check Attributes FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 22;
+
+	/**
+	 * The operation id for the '<em>Check Attributes BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 23;
+
+	/**
+	 * The operation id for the '<em>Is Applicable CC</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_CC__MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 24;
+
+	/**
+	 * The operation id for the '<em>Is Applicable solve Csp CC</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_CC__JAVAIMPORT_JAVACOMPILATIONUNIT_KEYDERIVATIONALGORITHM_IMPORT_MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 25;
+
+	/**
+	 * The operation id for the '<em>Is Applicable check Csp CC</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_CHECK_CSP_CC__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 26;
+
+	/**
+	 * The operation id for the '<em>Check DEC FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___CHECK_DEC_FWD__KEYDERIVATIONALGORITHM_IMPORT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 27;
+
+	/**
+	 * The operation id for the '<em>Check DEC BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___CHECK_DEC_BWD__JAVAIMPORT_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 28;
+
+	/**
+	 * The operation id for the '<em>Generate Model</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___GENERATE_MODEL__RULEENTRYCONTAINER_KEYDERIVATIONALGORITHMTOJCU = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 29;
+
+	/**
+	 * The operation id for the '<em>Generate Model solve Csp BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___GENERATE_MODEL_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVACOMPILATIONUNIT_KEYDERIVATIONALGORITHMTOJCU_KEYDERIVATIONALGORITHM_MODELGENERATORRULERESULT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 30;
+
+	/**
+	 * The operation id for the '<em>Generate Model check Csp BWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___GENERATE_MODEL_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 31;
+
+	/**
+	 * The number of operations of the '<em>Key Derivation Algorithm Import To Import</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 32;
+
+	/**
 	 * The meta object id for the '{@link CryptoConfigToJava.Rules.impl.PerformGetKeyMethodImpl <em>Perform Get Key Method</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -397,7 +1383,7 @@ public interface RulesPackage extends EPackage {
 	 * @see CryptoConfigToJava.Rules.impl.RulesPackageImpl#getPerformGetKeyMethod()
 	 * @generated
 	 */
-	int PERFORM_GET_KEY_METHOD = 1;
+	int PERFORM_GET_KEY_METHOD = 4;
 
 	/**
 	 * The number of structural features of the '<em>Perform Get Key Method</em>' class.
@@ -679,693 +1665,6 @@ public interface RulesPackage extends EPackage {
 	int PERFORM_GET_KEY_METHOD_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 28;
 
 	/**
-	 * The meta object id for the '{@link CryptoConfigToJava.Rules.impl.SymmetricEncryptionTaskImpl <em>Symmetric Encryption Task</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see CryptoConfigToJava.Rules.impl.SymmetricEncryptionTaskImpl
-	 * @see CryptoConfigToJava.Rules.impl.RulesPackageImpl#getSymmetricEncryptionTask()
-	 * @generated
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK = 2;
-
-	/**
-	 * The number of structural features of the '<em>Symmetric Encryption Task</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK_FEATURE_COUNT = RuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___IS_APPROPRIATE_FWD__MATCH_TASK_SYMMETRICBLOCKCIPHER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 0;
-
-	/**
-	 * The operation id for the '<em>Perform FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___PERFORM_FWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___IS_APPLICABLE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Register Objects To Match FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_TASK_SYMMETRICBLOCKCIPHER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 3;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate solve Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_TASK_SYMMETRICBLOCKCIPHER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 4;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate check Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___IS_APPROPRIATE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 5;
-
-	/**
-	 * The operation id for the '<em>Is Applicable solve Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_TASK_SYMMETRICBLOCKCIPHER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 6;
-
-	/**
-	 * The operation id for the '<em>Is Applicable check Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___IS_APPLICABLE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
-
-	/**
-	 * The operation id for the '<em>Register Objects FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 8;
-
-	/**
-	 * The operation id for the '<em>Check Types FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___IS_APPROPRIATE_BWD__MATCH_JAVANAME_JAVAWORKFLOWMETHOD_JAVACOMPILATIONUNIT_JAVAMETHODINVOCATION_JAVAOPAQUEMETHOD_JAVAVARIABLEDECLARATION_JAVANAME_JAVAVARIABLEDECLARATION_JAVALITERAL_JAVASTATEMENT_JAVAPACKAGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 10;
-
-	/**
-	 * The operation id for the '<em>Perform BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___PERFORM_BWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 11;
-
-	/**
-	 * The operation id for the '<em>Is Applicable BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___IS_APPLICABLE_BWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 12;
-
-	/**
-	 * The operation id for the '<em>Register Objects To Match BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_JAVANAME_JAVAWORKFLOWMETHOD_JAVACOMPILATIONUNIT_JAVAMETHODINVOCATION_JAVAOPAQUEMETHOD_JAVAVARIABLEDECLARATION_JAVANAME_JAVAVARIABLEDECLARATION_JAVALITERAL_JAVASTATEMENT_JAVAPACKAGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 13;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate solve Csp BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_JAVANAME_JAVAWORKFLOWMETHOD_JAVACOMPILATIONUNIT_JAVAMETHODINVOCATION_JAVAOPAQUEMETHOD_JAVAVARIABLEDECLARATION_JAVANAME_JAVAVARIABLEDECLARATION_JAVALITERAL_JAVASTATEMENT_JAVAPACKAGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 14;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate check Csp BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___IS_APPROPRIATE_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 15;
-
-	/**
-	 * The operation id for the '<em>Is Applicable solve Csp BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVANAME_JAVAWORKFLOWMETHOD_JAVACOMPILATIONUNIT_JAVAMETHODINVOCATION_JAVAOPAQUEMETHOD_JAVAVARIABLEDECLARATION_JAVANAME_JAVAVARIABLEDECLARATION_JAVALITERAL_JAVASTATEMENT_JAVAPACKAGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 16;
-
-	/**
-	 * The operation id for the '<em>Is Applicable check Csp BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___IS_APPLICABLE_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 17;
-
-	/**
-	 * The operation id for the '<em>Register Objects BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___REGISTER_OBJECTS_BWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 18;
-
-	/**
-	 * The operation id for the '<em>Check Types BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___CHECK_TYPES_BWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 19;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 6</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___IS_APPROPRIATE_FWD_EMOFLON_EDGE_6__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 20;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate BWD EMoflon Edge 6</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___IS_APPROPRIATE_BWD_EMOFLON_EDGE_6__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 21;
-
-	/**
-	 * The operation id for the '<em>Check Attributes FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 22;
-
-	/**
-	 * The operation id for the '<em>Check Attributes BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 23;
-
-	/**
-	 * The operation id for the '<em>Is Applicable CC</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___IS_APPLICABLE_CC__MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 24;
-
-	/**
-	 * The operation id for the '<em>Is Applicable solve Csp CC</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___IS_APPLICABLE_SOLVE_CSP_CC__JAVANAME_JAVAWORKFLOWMETHOD_JAVACOMPILATIONUNIT_TASK_JAVAMETHODINVOCATION_JAVAOPAQUEMETHOD_JAVAVARIABLEDECLARATION_JAVANAME_JAVAVARIABLEDECLARATION_SYMMETRICBLOCKCIPHER_JAVALITERAL_JAVASTATEMENT_JAVAPACKAGE_MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 25;
-
-	/**
-	 * The operation id for the '<em>Is Applicable check Csp CC</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___IS_APPLICABLE_CHECK_CSP_CC__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 26;
-
-	/**
-	 * The operation id for the '<em>Check DEC FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___CHECK_DEC_FWD__TASK_SYMMETRICBLOCKCIPHER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 27;
-
-	/**
-	 * The operation id for the '<em>Check DEC BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___CHECK_DEC_BWD__JAVANAME_JAVAWORKFLOWMETHOD_JAVACOMPILATIONUNIT_JAVAMETHODINVOCATION_JAVAOPAQUEMETHOD_JAVAVARIABLEDECLARATION_JAVANAME_JAVAVARIABLEDECLARATION_JAVALITERAL_JAVASTATEMENT_JAVAPACKAGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 28;
-
-	/**
-	 * The operation id for the '<em>Generate Model</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___GENERATE_MODEL__RULEENTRYCONTAINER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 29;
-
-	/**
-	 * The operation id for the '<em>Generate Model solve Csp BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___GENERATE_MODEL_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_MODELGENERATORRULERESULT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 30;
-
-	/**
-	 * The operation id for the '<em>Generate Model check Csp BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK___GENERATE_MODEL_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 31;
-
-	/**
-	 * The number of operations of the '<em>Symmetric Encryption Task</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_ENCRYPTION_TASK_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 32;
-
-	/**
-	 * The meta object id for the '{@link CryptoConfigToJava.Rules.impl.SymmetricBlockCipherImportToImportImpl <em>Symmetric Block Cipher Import To Import</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see CryptoConfigToJava.Rules.impl.SymmetricBlockCipherImportToImportImpl
-	 * @see CryptoConfigToJava.Rules.impl.RulesPackageImpl#getSymmetricBlockCipherImportToImport()
-	 * @generated
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT = 3;
-
-	/**
-	 * The number of structural features of the '<em>Symmetric Block Cipher Import To Import</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT_FEATURE_COUNT = RuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_FWD__MATCH_IMPORT_SYMMETRICBLOCKCIPHER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 0;
-
-	/**
-	 * The operation id for the '<em>Perform FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___PERFORM_FWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 1;
-
-	/**
-	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 2;
-
-	/**
-	 * The operation id for the '<em>Register Objects To Match FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_IMPORT_SYMMETRICBLOCKCIPHER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 3;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate solve Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_IMPORT_SYMMETRICBLOCKCIPHER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 4;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate check Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 5;
-
-	/**
-	 * The operation id for the '<em>Is Applicable solve Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_JAVACOMPILATIONUNIT_IMPORT_SYMMETRICBLOCKCIPHERTOJCU_SYMMETRICBLOCKCIPHER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 6;
-
-	/**
-	 * The operation id for the '<em>Is Applicable check Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 7;
-
-	/**
-	 * The operation id for the '<em>Register Objects FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 8;
-
-	/**
-	 * The operation id for the '<em>Check Types FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 9;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_BWD__MATCH_JAVAIMPORT_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 10;
-
-	/**
-	 * The operation id for the '<em>Perform BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___PERFORM_BWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 11;
-
-	/**
-	 * The operation id for the '<em>Is Applicable BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_BWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 12;
-
-	/**
-	 * The operation id for the '<em>Register Objects To Match BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_JAVAIMPORT_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 13;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate solve Csp BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_JAVAIMPORT_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 14;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate check Csp BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 15;
-
-	/**
-	 * The operation id for the '<em>Is Applicable solve Csp BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVAIMPORT_JAVACOMPILATIONUNIT_SYMMETRICBLOCKCIPHERTOJCU_SYMMETRICBLOCKCIPHER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 16;
-
-	/**
-	 * The operation id for the '<em>Is Applicable check Csp BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 17;
-
-	/**
-	 * The operation id for the '<em>Register Objects BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___REGISTER_OBJECTS_BWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 18;
-
-	/**
-	 * The operation id for the '<em>Check Types BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___CHECK_TYPES_BWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 19;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 7</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_FWD_EMOFLON_EDGE_7__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 20;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate BWD EMoflon Edge 7</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPROPRIATE_BWD_EMOFLON_EDGE_7__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 21;
-
-	/**
-	 * The operation id for the '<em>Check Attributes FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 22;
-
-	/**
-	 * The operation id for the '<em>Check Attributes BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 23;
-
-	/**
-	 * The operation id for the '<em>Is Applicable CC</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_CC__MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 24;
-
-	/**
-	 * The operation id for the '<em>Is Applicable solve Csp CC</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_CC__JAVAIMPORT_JAVACOMPILATIONUNIT_IMPORT_SYMMETRICBLOCKCIPHER_MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 25;
-
-	/**
-	 * The operation id for the '<em>Is Applicable check Csp CC</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___IS_APPLICABLE_CHECK_CSP_CC__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 26;
-
-	/**
-	 * The operation id for the '<em>Check DEC FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___CHECK_DEC_FWD__IMPORT_SYMMETRICBLOCKCIPHER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 27;
-
-	/**
-	 * The operation id for the '<em>Check DEC BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___CHECK_DEC_BWD__JAVAIMPORT_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 28;
-
-	/**
-	 * The operation id for the '<em>Generate Model</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___GENERATE_MODEL__RULEENTRYCONTAINER_SYMMETRICBLOCKCIPHERTOJCU = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 29;
-
-	/**
-	 * The operation id for the '<em>Generate Model solve Csp BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___GENERATE_MODEL_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVACOMPILATIONUNIT_SYMMETRICBLOCKCIPHERTOJCU_SYMMETRICBLOCKCIPHER_MODELGENERATORRULERESULT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 30;
-
-	/**
-	 * The operation id for the '<em>Generate Model check Csp BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT___GENERATE_MODEL_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 31;
-
-	/**
-	 * The number of operations of the '<em>Symmetric Block Cipher Import To Import</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 32;
-
-	/**
 	 * The meta object id for the '{@link CryptoConfigToJava.Rules.impl.IgnoreMethodInvocationArgumentImpl <em>Ignore Method Invocation Argument</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1373,7 +1672,7 @@ public interface RulesPackage extends EPackage {
 	 * @see CryptoConfigToJava.Rules.impl.RulesPackageImpl#getIgnoreMethodInvocationArgument()
 	 * @generated
 	 */
-	int IGNORE_METHOD_INVOCATION_ARGUMENT = 4;
+	int IGNORE_METHOD_INVOCATION_ARGUMENT = 5;
 
 	/**
 	 * The number of structural features of the '<em>Ignore Method Invocation Argument</em>' class.
@@ -1459,7 +1758,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPROPRIATE_BWD__MATCH_JAVAMETHODINVOCATION_JAVAEXPRESSION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPROPRIATE_BWD__MATCH_JAVAEXPRESSION_JAVAMETHODINVOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 7;
 
 	/**
@@ -1488,7 +1787,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGNORE_METHOD_INVOCATION_ARGUMENT___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_JAVAMETHODINVOCATION_JAVAEXPRESSION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int IGNORE_METHOD_INVOCATION_ARGUMENT___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_JAVAEXPRESSION_JAVAMETHODINVOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 10;
 
 	/**
@@ -1498,7 +1797,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_JAVAMETHODINVOCATION_JAVAEXPRESSION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_JAVAEXPRESSION_JAVAMETHODINVOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 11;
 
 	/**
@@ -1518,7 +1817,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVAMETHODINVOCATION_JAVAEXPRESSION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVAEXPRESSION_JAVAMETHODINVOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 13;
 
 	/**
@@ -1551,13 +1850,13 @@ public interface RulesPackage extends EPackage {
 	int IGNORE_METHOD_INVOCATION_ARGUMENT___CHECK_TYPES_BWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 16;
 
 	/**
-	 * The operation id for the '<em>Is Appropriate BWD EMoflon Edge 8</em>' operation.
+	 * The operation id for the '<em>Is Appropriate BWD EMoflon Edge 9</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPROPRIATE_BWD_EMOFLON_EDGE_8__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPROPRIATE_BWD_EMOFLON_EDGE_9__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 17;
 
 	/**
@@ -1597,7 +1896,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPLICABLE_SOLVE_CSP_CC__JAVAMETHODINVOCATION_JAVAEXPRESSION_MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPLICABLE_SOLVE_CSP_CC__JAVAEXPRESSION_JAVAMETHODINVOCATION_MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 21;
 
 	/**
@@ -1626,7 +1925,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGNORE_METHOD_INVOCATION_ARGUMENT___CHECK_DEC_BWD__JAVAMETHODINVOCATION_JAVAEXPRESSION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int IGNORE_METHOD_INVOCATION_ARGUMENT___CHECK_DEC_BWD__JAVAEXPRESSION_JAVAMETHODINVOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 24;
 
 	/**
@@ -1669,23 +1968,23 @@ public interface RulesPackage extends EPackage {
 	int IGNORE_METHOD_INVOCATION_ARGUMENT_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 28;
 
 	/**
-	 * The meta object id for the '{@link CryptoConfigToJava.Rules.impl.IgnoreOpaqueMethodImpl <em>Ignore Opaque Method</em>}' class.
+	 * The meta object id for the '{@link CryptoConfigToJava.Rules.impl.SymmetricEncryptionTaskImpl <em>Symmetric Encryption Task</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see CryptoConfigToJava.Rules.impl.IgnoreOpaqueMethodImpl
-	 * @see CryptoConfigToJava.Rules.impl.RulesPackageImpl#getIgnoreOpaqueMethod()
+	 * @see CryptoConfigToJava.Rules.impl.SymmetricEncryptionTaskImpl
+	 * @see CryptoConfigToJava.Rules.impl.RulesPackageImpl#getSymmetricEncryptionTask()
 	 * @generated
 	 */
-	int IGNORE_OPAQUE_METHOD = 5;
+	int SYMMETRIC_ENCRYPTION_TASK = 6;
 
 	/**
-	 * The number of structural features of the '<em>Ignore Opaque Method</em>' class.
+	 * The number of structural features of the '<em>Symmetric Encryption Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IGNORE_OPAQUE_METHOD_FEATURE_COUNT = RuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+	int SYMMETRIC_ENCRYPTION_TASK_FEATURE_COUNT = RuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
@@ -1694,297 +1993,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Perform FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___PERFORM_FWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___IS_APPLICABLE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Register Objects To Match FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate solve Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 4;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate check Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
-
-	/**
-	 * The operation id for the '<em>Check Types FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 6;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_BWD__MATCH_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 7;
-
-	/**
-	 * The operation id for the '<em>Perform BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___PERFORM_BWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 8;
-
-	/**
-	 * The operation id for the '<em>Is Applicable BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___IS_APPLICABLE_BWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
-
-	/**
-	 * The operation id for the '<em>Register Objects To Match BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 10;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate solve Csp BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 11;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate check Csp BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 12;
-
-	/**
-	 * The operation id for the '<em>Is Applicable solve Csp BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 13;
-
-	/**
-	 * The operation id for the '<em>Is Applicable check Csp BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___IS_APPLICABLE_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 14;
-
-	/**
-	 * The operation id for the '<em>Register Objects BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___REGISTER_OBJECTS_BWD__PERFORMRULERESULT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 15;
-
-	/**
-	 * The operation id for the '<em>Check Types BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___CHECK_TYPES_BWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 16;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate BWD EMoflon Edge 9</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_BWD_EMOFLON_EDGE_9__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 17;
-
-	/**
-	 * The operation id for the '<em>Check Attributes FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 18;
-
-	/**
-	 * The operation id for the '<em>Check Attributes BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 19;
-
-	/**
-	 * The operation id for the '<em>Is Applicable CC</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___IS_APPLICABLE_CC__MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 20;
-
-	/**
-	 * The operation id for the '<em>Is Applicable solve Csp CC</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___IS_APPLICABLE_SOLVE_CSP_CC__JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD_MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 21;
-
-	/**
-	 * The operation id for the '<em>Is Applicable check Csp CC</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___IS_APPLICABLE_CHECK_CSP_CC__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 22;
-
-	/**
-	 * The operation id for the '<em>Check DEC FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___CHECK_DEC_FWD = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 23;
-
-	/**
-	 * The operation id for the '<em>Check DEC BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___CHECK_DEC_BWD__JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 24;
-
-	/**
-	 * The operation id for the '<em>Generate Model</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___GENERATE_MODEL__RULEENTRYCONTAINER_JAVACOMPILATIONUNIT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 25;
-
-	/**
-	 * The operation id for the '<em>Generate Model solve Csp BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___GENERATE_MODEL_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVACOMPILATIONUNIT_MODELGENERATORRULERESULT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 26;
-
-	/**
-	 * The operation id for the '<em>Generate Model check Csp BWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD___GENERATE_MODEL_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 27;
-
-	/**
-	 * The number of operations of the '<em>Ignore Opaque Method</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IGNORE_OPAQUE_METHOD_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 28;
-
-	/**
-	 * The meta object id for the '{@link CryptoConfigToJava.Rules.impl.KeyDerivationAlgorithmImportToImportImpl <em>Key Derivation Algorithm Import To Import</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see CryptoConfigToJava.Rules.impl.KeyDerivationAlgorithmImportToImportImpl
-	 * @see CryptoConfigToJava.Rules.impl.RulesPackageImpl#getKeyDerivationAlgorithmImportToImport()
-	 * @generated
-	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT = 6;
-
-	/**
-	 * The number of structural features of the '<em>Key Derivation Algorithm Import To Import</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT_FEATURE_COUNT = RuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_FWD__MATCH_IMPORT_KEYDERIVATIONALGORITHM = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___IS_APPROPRIATE_FWD__MATCH_SYMMETRICBLOCKCIPHER_TASK = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 0;
 
 	/**
@@ -1994,8 +2003,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___PERFORM_FWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 1;
+	int SYMMETRIC_ENCRYPTION_TASK___PERFORM_FWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
@@ -2004,8 +2012,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 2;
+	int SYMMETRIC_ENCRYPTION_TASK___IS_APPLICABLE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Register Objects To Match FWD</em>' operation.
@@ -2014,7 +2021,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_IMPORT_KEYDERIVATIONALGORITHM = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_SYMMETRICBLOCKCIPHER_TASK = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 3;
 
 	/**
@@ -2024,7 +2031,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_IMPORT_KEYDERIVATIONALGORITHM = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_SYMMETRICBLOCKCIPHER_TASK = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 4;
 
 	/**
@@ -2034,7 +2041,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___IS_APPROPRIATE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 5;
 
 	/**
@@ -2044,7 +2051,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_IMPORT_KEYDERIVATIONALGORITHMTOJCU_JAVACOMPILATIONUNIT_KEYDERIVATIONALGORITHM = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_SYMMETRICBLOCKCIPHER_TASK = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 6;
 
 	/**
@@ -2054,8 +2061,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 7;
+	int SYMMETRIC_ENCRYPTION_TASK___IS_APPLICABLE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Register Objects FWD</em>' operation.
@@ -2064,7 +2070,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 8;
 
 	/**
@@ -2074,8 +2080,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 9;
+	int SYMMETRIC_ENCRYPTION_TASK___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Is Appropriate BWD</em>' operation.
@@ -2084,7 +2089,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_BWD__MATCH_JAVACOMPILATIONUNIT_JAVAIMPORT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___IS_APPROPRIATE_BWD__MATCH_JAVAWORKFLOWMETHOD_JAVAMETHODINVOCATION_JAVAVARIABLEDECLARATION_JAVAPACKAGE_JAVANAME_JAVANAME_JAVALITERAL_JAVASTATEMENT_JAVACOMPILATIONUNIT_JAVAVARIABLEDECLARATION_JAVAOPAQUEMETHOD = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 10;
 
 	/**
@@ -2094,8 +2099,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___PERFORM_BWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 11;
+	int SYMMETRIC_ENCRYPTION_TASK___PERFORM_BWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 11;
 
 	/**
 	 * The operation id for the '<em>Is Applicable BWD</em>' operation.
@@ -2104,8 +2108,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_BWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 12;
+	int SYMMETRIC_ENCRYPTION_TASK___IS_APPLICABLE_BWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 12;
 
 	/**
 	 * The operation id for the '<em>Register Objects To Match BWD</em>' operation.
@@ -2114,7 +2117,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_JAVACOMPILATIONUNIT_JAVAIMPORT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_JAVAWORKFLOWMETHOD_JAVAMETHODINVOCATION_JAVAVARIABLEDECLARATION_JAVAPACKAGE_JAVANAME_JAVANAME_JAVALITERAL_JAVASTATEMENT_JAVACOMPILATIONUNIT_JAVAVARIABLEDECLARATION_JAVAOPAQUEMETHOD = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 13;
 
 	/**
@@ -2124,7 +2127,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_JAVACOMPILATIONUNIT_JAVAIMPORT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_JAVAWORKFLOWMETHOD_JAVAMETHODINVOCATION_JAVAVARIABLEDECLARATION_JAVAPACKAGE_JAVANAME_JAVANAME_JAVALITERAL_JAVASTATEMENT_JAVACOMPILATIONUNIT_JAVAVARIABLEDECLARATION_JAVAOPAQUEMETHOD = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 14;
 
 	/**
@@ -2134,7 +2137,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___IS_APPROPRIATE_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 15;
 
 	/**
@@ -2144,7 +2147,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_KEYDERIVATIONALGORITHMTOJCU_JAVACOMPILATIONUNIT_KEYDERIVATIONALGORITHM_JAVAIMPORT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVAWORKFLOWMETHOD_JAVAMETHODINVOCATION_JAVAVARIABLEDECLARATION_JAVAPACKAGE_JAVANAME_JAVANAME_JAVALITERAL_JAVASTATEMENT_JAVACOMPILATIONUNIT_JAVAVARIABLEDECLARATION_JAVAOPAQUEMETHOD = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 16;
 
 	/**
@@ -2154,7 +2157,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___IS_APPLICABLE_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 17;
 
 	/**
@@ -2164,7 +2167,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___REGISTER_OBJECTS_BWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___REGISTER_OBJECTS_BWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 18;
 
 	/**
@@ -2174,8 +2177,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___CHECK_TYPES_BWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 19;
+	int SYMMETRIC_ENCRYPTION_TASK___CHECK_TYPES_BWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 19;
 
 	/**
 	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 8</em>' operation.
@@ -2184,7 +2186,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_FWD_EMOFLON_EDGE_8__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___IS_APPROPRIATE_FWD_EMOFLON_EDGE_8__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 20;
 
 	/**
@@ -2194,7 +2196,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPROPRIATE_BWD_EMOFLON_EDGE_10__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___IS_APPROPRIATE_BWD_EMOFLON_EDGE_10__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 21;
 
 	/**
@@ -2204,7 +2206,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 22;
 
 	/**
@@ -2214,7 +2216,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 23;
 
 	/**
@@ -2224,8 +2226,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_CC__MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 24;
+	int SYMMETRIC_ENCRYPTION_TASK___IS_APPLICABLE_CC__MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 24;
 
 	/**
 	 * The operation id for the '<em>Is Applicable solve Csp CC</em>' operation.
@@ -2234,7 +2235,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_SOLVE_CSP_CC__IMPORT_JAVACOMPILATIONUNIT_KEYDERIVATIONALGORITHM_JAVAIMPORT_MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___IS_APPLICABLE_SOLVE_CSP_CC__JAVAWORKFLOWMETHOD_JAVAMETHODINVOCATION_SYMMETRICBLOCKCIPHER_JAVAVARIABLEDECLARATION_JAVAPACKAGE_JAVANAME_JAVANAME_JAVALITERAL_JAVASTATEMENT_JAVACOMPILATIONUNIT_TASK_JAVAVARIABLEDECLARATION_JAVAOPAQUEMETHOD_MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 25;
 
 	/**
@@ -2244,8 +2245,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___IS_APPLICABLE_CHECK_CSP_CC__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 26;
+	int SYMMETRIC_ENCRYPTION_TASK___IS_APPLICABLE_CHECK_CSP_CC__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 26;
 
 	/**
 	 * The operation id for the '<em>Check DEC FWD</em>' operation.
@@ -2254,7 +2254,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___CHECK_DEC_FWD__IMPORT_KEYDERIVATIONALGORITHM = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___CHECK_DEC_FWD__SYMMETRICBLOCKCIPHER_TASK = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 27;
 
 	/**
@@ -2264,7 +2264,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___CHECK_DEC_BWD__JAVACOMPILATIONUNIT_JAVAIMPORT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___CHECK_DEC_BWD__JAVAWORKFLOWMETHOD_JAVAMETHODINVOCATION_JAVAVARIABLEDECLARATION_JAVAPACKAGE_JAVANAME_JAVANAME_JAVALITERAL_JAVASTATEMENT_JAVACOMPILATIONUNIT_JAVAVARIABLEDECLARATION_JAVAOPAQUEMETHOD = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 28;
 
 	/**
@@ -2274,7 +2274,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___GENERATE_MODEL__RULEENTRYCONTAINER_KEYDERIVATIONALGORITHMTOJCU = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___GENERATE_MODEL__RULEENTRYCONTAINER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 29;
 
 	/**
@@ -2284,7 +2284,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___GENERATE_MODEL_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_KEYDERIVATIONALGORITHMTOJCU_JAVACOMPILATIONUNIT_KEYDERIVATIONALGORITHM_MODELGENERATORRULERESULT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___GENERATE_MODEL_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_MODELGENERATORRULERESULT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 30;
 
 	/**
@@ -2294,17 +2294,17 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT___GENERATE_MODEL_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SYMMETRIC_ENCRYPTION_TASK___GENERATE_MODEL_CHECK_CSP_BWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 31;
 
 	/**
-	 * The number of operations of the '<em>Key Derivation Algorithm Import To Import</em>' class.
+	 * The number of operations of the '<em>Symmetric Encryption Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KEY_DERIVATION_ALGORITHM_IMPORT_TO_IMPORT_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 32;
+	int SYMMETRIC_ENCRYPTION_TASK_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 32;
 
 	/**
 	 * The meta object id for the '{@link CryptoConfigToJava.Rules.impl.IgnoreParameterRuleImpl <em>Ignore Parameter Rule</em>}' class.
@@ -2864,7 +2864,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PASSWORD_BASED_ENCRYPTION___IS_APPLICABLE_SOLVE_CSP_CC__JAVAPACKAGE_JAVALITERAL_JAVAMETHODINVOCATION_JAVALITERAL_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT_JAVAVARIABLEDECLARATION_JAVAVARIABLEDECLARATION_JAVAWORKFLOWMETHOD_JAVALITERAL_JAVAVARIABLEDECLARATION_KEYDERIVATIONALGORITHM_JAVAOPAQUEMETHOD_JAVASTATEMENT_JAVANAME_JAVALITERAL_JAVAWORKFLOWMETHOD_TASK_JAVANAME_SYMMETRICBLOCKCIPHER_JAVANAME_JAVAMETHODINVOCATION_JAVASTATEMENT_MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int PASSWORD_BASED_ENCRYPTION___IS_APPLICABLE_SOLVE_CSP_CC__JAVAPACKAGE_JAVALITERAL_JAVAMETHODINVOCATION_JAVALITERAL_JAVACOMPILATIONUNIT_JAVAOPAQUEMETHOD_JAVACOMPILATIONUNIT_JAVAVARIABLEDECLARATION_JAVAVARIABLEDECLARATION_JAVAWORKFLOWMETHOD_JAVALITERAL_JAVAVARIABLEDECLARATION_KEYDERIVATIONALGORITHM_JAVAOPAQUEMETHOD_JAVASTATEMENT_JAVANAME_JAVALITERAL_JAVAWORKFLOWMETHOD_TASK_JAVANAME_JAVANAME_SYMMETRICBLOCKCIPHER_JAVAMETHODINVOCATION_JAVASTATEMENT_MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 25;
 
 	/**
@@ -2934,6 +2934,336 @@ public interface RulesPackage extends EPackage {
 	 * @ordered
 	 */
 	int PASSWORD_BASED_ENCRYPTION_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 32;
+
+	/**
+	 * Returns the meta object for class '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport <em>Symmetric Block Cipher Import To Import</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Symmetric Block Cipher Import To Import</em>'.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport
+	 * @generated
+	 */
+	EClass getSymmetricBlockCipherImportToImport();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_FWD__Match_Import_SymmetricBlockCipher();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_FWD(org.moflon.tgg.runtime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_FWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher) <em>Register Objects To Match FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Register Objects To Match FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__RegisterObjectsToMatch_FWD__Match_Import_SymmetricBlockCipher();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher) <em>Is Appropriate solve Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate solve Csp FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_solveCsp_FWD__Match_Import_SymmetricBlockCipher();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate check Csp FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_checkCsp_FWD__CSP();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher, CryptoConfigToJava.SymmetricBlockCipherToJcu, SimpleJava.JavaCompilationUnit) <em>Is Applicable solve Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable solve Csp FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher, CryptoConfigToJava.SymmetricBlockCipherToJcu, SimpleJava.JavaCompilationUnit)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__IsApplicable_solveCsp_FWD__IsApplicableMatch_Import_SymmetricBlockCipher_SymmetricBlockCipherToJcu_JavaCompilationUnit();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable check Csp FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__IsApplicable_checkCsp_FWD__CSP();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Register Objects FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkTypes_FWD(org.moflon.tgg.runtime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkTypes_FWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit) <em>Is Appropriate BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_BWD__Match_JavaImport_JavaCompilationUnit();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#perform_BWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#perform_BWD(org.moflon.tgg.runtime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__Perform_BWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_BWD(org.moflon.tgg.runtime.Match) <em>Is Applicable BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_BWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__IsApplicable_BWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#registerObjectsToMatch_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit) <em>Register Objects To Match BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Register Objects To Match BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#registerObjectsToMatch_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__RegisterObjectsToMatch_BWD__Match_JavaImport_JavaCompilationUnit();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_solveCsp_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit) <em>Is Appropriate solve Csp BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate solve Csp BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_solveCsp_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_solveCsp_BWD__Match_JavaImport_JavaCompilationUnit();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate check Csp BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_checkCsp_BWD__CSP();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, CryptoAPIConfig.SymmetricBlockCipher, SimpleJava.JavaImport, CryptoConfigToJava.SymmetricBlockCipherToJcu, SimpleJava.JavaCompilationUnit) <em>Is Applicable solve Csp BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable solve Csp BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, CryptoAPIConfig.SymmetricBlockCipher, SimpleJava.JavaImport, CryptoConfigToJava.SymmetricBlockCipherToJcu, SimpleJava.JavaCompilationUnit)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__IsApplicable_solveCsp_BWD__IsApplicableMatch_SymmetricBlockCipher_JavaImport_SymmetricBlockCipherToJcu_JavaCompilationUnit();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable check Csp BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__IsApplicable_checkCsp_BWD__CSP();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#registerObjects_BWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Register Objects BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#registerObjects_BWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkTypes_BWD(org.moflon.tgg.runtime.Match) <em>Check Types BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkTypes_BWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__CheckTypes_BWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_FWD_EMoflonEdge_5(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 5</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 5</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_FWD_EMoflonEdge_5(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_FWD_EMoflonEdge_5__EMoflonEdge();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_BWD_EMoflonEdge_5(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate BWD EMoflon Edge 5</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate BWD EMoflon Edge 5</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_BWD_EMoflonEdge_5(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_BWD_EMoflonEdge_5__EMoflonEdge();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Attributes FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__CheckAttributes_FWD__TripleMatch();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkAttributes_BWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Attributes BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkAttributes_BWD(org.moflon.tgg.runtime.TripleMatch)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__CheckAttributes_BWD__TripleMatch();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable CC</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable CC</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__IsApplicable_CC__Match_Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_solveCsp_CC(CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable solve Csp CC</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable solve Csp CC</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_solveCsp_CC(CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__IsApplicable_solveCsp_CC__Import_SymmetricBlockCipher_JavaImport_JavaCompilationUnit_Match_Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_checkCsp_CC(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp CC</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable check Csp CC</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_checkCsp_CC(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__IsApplicable_checkCsp_CC__CSP();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkDEC_FWD(CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher) <em>Check DEC FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check DEC FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkDEC_FWD(CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__CheckDEC_FWD__Import_SymmetricBlockCipher();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkDEC_BWD(SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit) <em>Check DEC BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check DEC BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkDEC_BWD(SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__CheckDEC_BWD__JavaImport_JavaCompilationUnit();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#generateModel(org.moflon.tgg.language.modelgenerator.RuleEntryContainer, CryptoConfigToJava.SymmetricBlockCipherToJcu) <em>Generate Model</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Generate Model</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#generateModel(org.moflon.tgg.language.modelgenerator.RuleEntryContainer, CryptoConfigToJava.SymmetricBlockCipherToJcu)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__GenerateModel__RuleEntryContainer_SymmetricBlockCipherToJcu();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#generateModel_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, CryptoAPIConfig.SymmetricBlockCipher, CryptoConfigToJava.SymmetricBlockCipherToJcu, SimpleJava.JavaCompilationUnit, org.moflon.tgg.runtime.ModelgeneratorRuleResult) <em>Generate Model solve Csp BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Generate Model solve Csp BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#generateModel_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, CryptoAPIConfig.SymmetricBlockCipher, CryptoConfigToJava.SymmetricBlockCipherToJcu, SimpleJava.JavaCompilationUnit, org.moflon.tgg.runtime.ModelgeneratorRuleResult)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__GenerateModel_solveCsp_BWD__IsApplicableMatch_SymmetricBlockCipher_SymmetricBlockCipherToJcu_JavaCompilationUnit_ModelgeneratorRuleResult();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#generateModel_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Generate Model check Csp BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Generate Model check Csp BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#generateModel_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getSymmetricBlockCipherImportToImport__GenerateModel_checkCsp_BWD__CSP();
 
 	/**
 	 * Returns the meta object for class '{@link CryptoConfigToJava.Rules.SecurePasswordTask <em>Secure Password Task</em>}'.
@@ -3146,24 +3476,24 @@ public interface RulesPackage extends EPackage {
 	EOperation getSecurePasswordTask__CheckTypes_BWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SecurePasswordTask#isAppropriate_FWD_EMoflonEdge_5(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 5</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SecurePasswordTask#isAppropriate_FWD_EMoflonEdge_6(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 6</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 5</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SecurePasswordTask#isAppropriate_FWD_EMoflonEdge_5(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 6</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SecurePasswordTask#isAppropriate_FWD_EMoflonEdge_6(org.moflon.tgg.runtime.EMoflonEdge)
 	 * @generated
 	 */
-	EOperation getSecurePasswordTask__IsAppropriate_FWD_EMoflonEdge_5__EMoflonEdge();
+	EOperation getSecurePasswordTask__IsAppropriate_FWD_EMoflonEdge_6__EMoflonEdge();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SecurePasswordTask#isAppropriate_BWD_EMoflonEdge_5(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate BWD EMoflon Edge 5</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SecurePasswordTask#isAppropriate_BWD_EMoflonEdge_6(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate BWD EMoflon Edge 6</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate BWD EMoflon Edge 5</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SecurePasswordTask#isAppropriate_BWD_EMoflonEdge_5(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @return the meta object for the '<em>Is Appropriate BWD EMoflon Edge 6</em>' operation.
+	 * @see CryptoConfigToJava.Rules.SecurePasswordTask#isAppropriate_BWD_EMoflonEdge_6(org.moflon.tgg.runtime.EMoflonEdge)
 	 * @generated
 	 */
-	EOperation getSecurePasswordTask__IsAppropriate_BWD_EMoflonEdge_5__EMoflonEdge();
+	EOperation getSecurePasswordTask__IsAppropriate_BWD_EMoflonEdge_6__EMoflonEdge();
 
 	/**
 	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SecurePasswordTask#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
@@ -3196,14 +3526,14 @@ public interface RulesPackage extends EPackage {
 	EOperation getSecurePasswordTask__IsApplicable_CC__Match_Match();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SecurePasswordTask#isApplicable_solveCsp_CC(SimpleJava.JavaLiteral, SimpleJava.JavaPackage, SimpleJava.JavaLiteral, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaMethodInvocation, CryptoAPIConfig.KeyDerivationAlgorithm, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaLiteral, CryptoAPIConfig.Task, SimpleJava.JavaName, SimpleJava.JavaStatement, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaCompilationUnit, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable solve Csp CC</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SecurePasswordTask#isApplicable_solveCsp_CC(SimpleJava.JavaLiteral, SimpleJava.JavaPackage, SimpleJava.JavaLiteral, SimpleJava.JavaVariableDeclaration, CryptoAPIConfig.KeyDerivationAlgorithm, SimpleJava.JavaMethodInvocation, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaLiteral, CryptoAPIConfig.Task, SimpleJava.JavaName, SimpleJava.JavaStatement, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaCompilationUnit, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable solve Csp CC</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable solve Csp CC</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SecurePasswordTask#isApplicable_solveCsp_CC(SimpleJava.JavaLiteral, SimpleJava.JavaPackage, SimpleJava.JavaLiteral, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaMethodInvocation, CryptoAPIConfig.KeyDerivationAlgorithm, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaLiteral, CryptoAPIConfig.Task, SimpleJava.JavaName, SimpleJava.JavaStatement, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaCompilationUnit, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
+	 * @see CryptoConfigToJava.Rules.SecurePasswordTask#isApplicable_solveCsp_CC(SimpleJava.JavaLiteral, SimpleJava.JavaPackage, SimpleJava.JavaLiteral, SimpleJava.JavaVariableDeclaration, CryptoAPIConfig.KeyDerivationAlgorithm, SimpleJava.JavaMethodInvocation, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaLiteral, CryptoAPIConfig.Task, SimpleJava.JavaName, SimpleJava.JavaStatement, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaCompilationUnit, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
 	 * @generated
 	 */
-	EOperation getSecurePasswordTask__IsApplicable_solveCsp_CC__JavaLiteral_JavaPackage_JavaLiteral_JavaVariableDeclaration_JavaMethodInvocation_KeyDerivationAlgorithm_JavaOpaqueMethod_JavaLiteral_Task_JavaName_JavaStatement_JavaWorkflowMethod_JavaCompilationUnit_Match_Match();
+	EOperation getSecurePasswordTask__IsApplicable_solveCsp_CC__JavaLiteral_JavaPackage_JavaLiteral_JavaVariableDeclaration_KeyDerivationAlgorithm_JavaMethodInvocation_JavaOpaqueMethod_JavaLiteral_Task_JavaName_JavaStatement_JavaWorkflowMethod_JavaCompilationUnit_Match_Match();
 
 	/**
 	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SecurePasswordTask#isApplicable_checkCsp_CC(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp CC</em>}' operation.
@@ -3264,6 +3594,626 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getSecurePasswordTask__GenerateModel_checkCsp_BWD__CSP();
+
+	/**
+	 * Returns the meta object for class '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod <em>Ignore Opaque Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Ignore Opaque Method</em>'.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod
+	 * @generated
+	 */
+	EClass getIgnoreOpaqueMethod();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_FWD(org.moflon.tgg.runtime.Match) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_FWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__IsAppropriate_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_FWD(org.moflon.tgg.runtime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_FWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match) <em>Register Objects To Match FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Register Objects To Match FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__RegisterObjectsToMatch_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match) <em>Is Appropriate solve Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate solve Csp FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__IsAppropriate_solveCsp_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate check Csp FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__IsAppropriate_checkCsp_FWD__CSP();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkTypes_FWD(org.moflon.tgg.runtime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkTypes_FWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaCompilationUnit) <em>Is Appropriate BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaCompilationUnit)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__IsAppropriate_BWD__Match_JavaOpaqueMethod_JavaCompilationUnit();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#perform_BWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#perform_BWD(org.moflon.tgg.runtime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__Perform_BWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_BWD(org.moflon.tgg.runtime.Match) <em>Is Applicable BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_BWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__IsApplicable_BWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#registerObjectsToMatch_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaCompilationUnit) <em>Register Objects To Match BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Register Objects To Match BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#registerObjectsToMatch_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaCompilationUnit)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__RegisterObjectsToMatch_BWD__Match_JavaOpaqueMethod_JavaCompilationUnit();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_solveCsp_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaCompilationUnit) <em>Is Appropriate solve Csp BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate solve Csp BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_solveCsp_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaCompilationUnit)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__IsAppropriate_solveCsp_BWD__Match_JavaOpaqueMethod_JavaCompilationUnit();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate check Csp BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__IsAppropriate_checkCsp_BWD__CSP();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaCompilationUnit) <em>Is Applicable solve Csp BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable solve Csp BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaCompilationUnit)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaOpaqueMethod_JavaCompilationUnit();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable check Csp BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__IsApplicable_checkCsp_BWD__CSP();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#registerObjects_BWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Register Objects BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#registerObjects_BWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__RegisterObjects_BWD__PerformRuleResult_EObject_EObject();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkTypes_BWD(org.moflon.tgg.runtime.Match) <em>Check Types BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkTypes_BWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__CheckTypes_BWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_BWD_EMoflonEdge_7(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate BWD EMoflon Edge 7</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate BWD EMoflon Edge 7</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_BWD_EMoflonEdge_7(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__IsAppropriate_BWD_EMoflonEdge_7__EMoflonEdge();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Attributes FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__CheckAttributes_FWD__TripleMatch();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkAttributes_BWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Attributes BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkAttributes_BWD(org.moflon.tgg.runtime.TripleMatch)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__CheckAttributes_BWD__TripleMatch();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable CC</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable CC</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__IsApplicable_CC__Match_Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_solveCsp_CC(SimpleJava.JavaOpaqueMethod, SimpleJava.JavaCompilationUnit, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable solve Csp CC</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable solve Csp CC</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_solveCsp_CC(SimpleJava.JavaOpaqueMethod, SimpleJava.JavaCompilationUnit, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__IsApplicable_solveCsp_CC__JavaOpaqueMethod_JavaCompilationUnit_Match_Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_checkCsp_CC(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp CC</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable check Csp CC</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_checkCsp_CC(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__IsApplicable_checkCsp_CC__CSP();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkDEC_FWD() <em>Check DEC FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check DEC FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkDEC_FWD()
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__CheckDEC_FWD();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkDEC_BWD(SimpleJava.JavaOpaqueMethod, SimpleJava.JavaCompilationUnit) <em>Check DEC BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check DEC BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkDEC_BWD(SimpleJava.JavaOpaqueMethod, SimpleJava.JavaCompilationUnit)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__CheckDEC_BWD__JavaOpaqueMethod_JavaCompilationUnit();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#generateModel(org.moflon.tgg.language.modelgenerator.RuleEntryContainer, SimpleJava.JavaCompilationUnit) <em>Generate Model</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Generate Model</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#generateModel(org.moflon.tgg.language.modelgenerator.RuleEntryContainer, SimpleJava.JavaCompilationUnit)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__GenerateModel__RuleEntryContainer_JavaCompilationUnit();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#generateModel_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaCompilationUnit, org.moflon.tgg.runtime.ModelgeneratorRuleResult) <em>Generate Model solve Csp BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Generate Model solve Csp BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#generateModel_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaCompilationUnit, org.moflon.tgg.runtime.ModelgeneratorRuleResult)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__GenerateModel_solveCsp_BWD__IsApplicableMatch_JavaCompilationUnit_ModelgeneratorRuleResult();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#generateModel_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Generate Model check Csp BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Generate Model check Csp BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#generateModel_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getIgnoreOpaqueMethod__GenerateModel_checkCsp_BWD__CSP();
+
+	/**
+	 * Returns the meta object for class '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport <em>Key Derivation Algorithm Import To Import</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Key Derivation Algorithm Import To Import</em>'.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport
+	 * @generated
+	 */
+	EClass getKeyDerivationAlgorithmImportToImport();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.KeyDerivationAlgorithm, CryptoAPIConfig.Import) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.KeyDerivationAlgorithm, CryptoAPIConfig.Import)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_FWD__Match_KeyDerivationAlgorithm_Import();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_FWD(org.moflon.tgg.runtime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_FWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.KeyDerivationAlgorithm, CryptoAPIConfig.Import) <em>Register Objects To Match FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Register Objects To Match FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.KeyDerivationAlgorithm, CryptoAPIConfig.Import)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjectsToMatch_FWD__Match_KeyDerivationAlgorithm_Import();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.KeyDerivationAlgorithm, CryptoAPIConfig.Import) <em>Is Appropriate solve Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate solve Csp FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.KeyDerivationAlgorithm, CryptoAPIConfig.Import)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_solveCsp_FWD__Match_KeyDerivationAlgorithm_Import();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate check Csp FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_checkCsp_FWD__CSP();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaCompilationUnit, CryptoConfigToJava.KeyDerivationAlgorithmToJcu, CryptoAPIConfig.KeyDerivationAlgorithm, CryptoAPIConfig.Import) <em>Is Applicable solve Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable solve Csp FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaCompilationUnit, CryptoConfigToJava.KeyDerivationAlgorithmToJcu, CryptoAPIConfig.KeyDerivationAlgorithm, CryptoAPIConfig.Import)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_solveCsp_FWD__IsApplicableMatch_JavaCompilationUnit_KeyDerivationAlgorithmToJcu_KeyDerivationAlgorithm_Import();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable check Csp FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_checkCsp_FWD__CSP();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Register Objects FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkTypes_FWD(org.moflon.tgg.runtime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkTypes_FWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit) <em>Is Appropriate BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_BWD__Match_JavaImport_JavaCompilationUnit();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#perform_BWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#perform_BWD(org.moflon.tgg.runtime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__Perform_BWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_BWD(org.moflon.tgg.runtime.Match) <em>Is Applicable BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_BWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_BWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#registerObjectsToMatch_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit) <em>Register Objects To Match BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Register Objects To Match BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#registerObjectsToMatch_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjectsToMatch_BWD__Match_JavaImport_JavaCompilationUnit();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_solveCsp_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit) <em>Is Appropriate solve Csp BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate solve Csp BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_solveCsp_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_solveCsp_BWD__Match_JavaImport_JavaCompilationUnit();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate check Csp BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_checkCsp_BWD__CSP();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit, CryptoConfigToJava.KeyDerivationAlgorithmToJcu, CryptoAPIConfig.KeyDerivationAlgorithm) <em>Is Applicable solve Csp BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable solve Csp BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit, CryptoConfigToJava.KeyDerivationAlgorithmToJcu, CryptoAPIConfig.KeyDerivationAlgorithm)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaImport_JavaCompilationUnit_KeyDerivationAlgorithmToJcu_KeyDerivationAlgorithm();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable check Csp BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_checkCsp_BWD__CSP();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#registerObjects_BWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Register Objects BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#registerObjects_BWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkTypes_BWD(org.moflon.tgg.runtime.Match) <em>Check Types BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkTypes_BWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__CheckTypes_BWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_FWD_EMoflonEdge_7(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 7</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 7</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_FWD_EMoflonEdge_7(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_FWD_EMoflonEdge_7__EMoflonEdge();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_BWD_EMoflonEdge_8(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate BWD EMoflon Edge 8</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate BWD EMoflon Edge 8</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_BWD_EMoflonEdge_8(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_BWD_EMoflonEdge_8__EMoflonEdge();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Attributes FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__CheckAttributes_FWD__TripleMatch();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkAttributes_BWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Attributes BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkAttributes_BWD(org.moflon.tgg.runtime.TripleMatch)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__CheckAttributes_BWD__TripleMatch();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable CC</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable CC</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_CC__Match_Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_solveCsp_CC(SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit, CryptoAPIConfig.KeyDerivationAlgorithm, CryptoAPIConfig.Import, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable solve Csp CC</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable solve Csp CC</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_solveCsp_CC(SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit, CryptoAPIConfig.KeyDerivationAlgorithm, CryptoAPIConfig.Import, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_solveCsp_CC__JavaImport_JavaCompilationUnit_KeyDerivationAlgorithm_Import_Match_Match();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_checkCsp_CC(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp CC</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable check Csp CC</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_checkCsp_CC(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_checkCsp_CC__CSP();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkDEC_FWD(CryptoAPIConfig.KeyDerivationAlgorithm, CryptoAPIConfig.Import) <em>Check DEC FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check DEC FWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkDEC_FWD(CryptoAPIConfig.KeyDerivationAlgorithm, CryptoAPIConfig.Import)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__CheckDEC_FWD__KeyDerivationAlgorithm_Import();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkDEC_BWD(SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit) <em>Check DEC BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check DEC BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkDEC_BWD(SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__CheckDEC_BWD__JavaImport_JavaCompilationUnit();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#generateModel(org.moflon.tgg.language.modelgenerator.RuleEntryContainer, CryptoConfigToJava.KeyDerivationAlgorithmToJcu) <em>Generate Model</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Generate Model</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#generateModel(org.moflon.tgg.language.modelgenerator.RuleEntryContainer, CryptoConfigToJava.KeyDerivationAlgorithmToJcu)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__GenerateModel__RuleEntryContainer_KeyDerivationAlgorithmToJcu();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#generateModel_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaCompilationUnit, CryptoConfigToJava.KeyDerivationAlgorithmToJcu, CryptoAPIConfig.KeyDerivationAlgorithm, org.moflon.tgg.runtime.ModelgeneratorRuleResult) <em>Generate Model solve Csp BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Generate Model solve Csp BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#generateModel_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaCompilationUnit, CryptoConfigToJava.KeyDerivationAlgorithmToJcu, CryptoAPIConfig.KeyDerivationAlgorithm, org.moflon.tgg.runtime.ModelgeneratorRuleResult)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__GenerateModel_solveCsp_BWD__IsApplicableMatch_JavaCompilationUnit_KeyDerivationAlgorithmToJcu_KeyDerivationAlgorithm_ModelgeneratorRuleResult();
+
+	/**
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#generateModel_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Generate Model check Csp BWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Generate Model check Csp BWD</em>' operation.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#generateModel_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getKeyDerivationAlgorithmImportToImport__GenerateModel_checkCsp_BWD__CSP();
 
 	/**
 	 * Returns the meta object for class '{@link CryptoConfigToJava.Rules.PerformGetKeyMethod <em>Perform Get Key Method</em>}'.
@@ -3556,666 +4506,6 @@ public interface RulesPackage extends EPackage {
 	EOperation getPerformGetKeyMethod__GenerateModel_checkCsp_BWD__CSP();
 
 	/**
-	 * Returns the meta object for class '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask <em>Symmetric Encryption Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Symmetric Encryption Task</em>'.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask
-	 * @generated
-	 */
-	EClass getSymmetricEncryptionTask();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Task, CryptoAPIConfig.SymmetricBlockCipher) <em>Is Appropriate FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Task, CryptoAPIConfig.SymmetricBlockCipher)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__IsAppropriate_FWD__Match_Task_SymmetricBlockCipher();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Perform FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__Perform_FWD__IsApplicableMatch();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_FWD(org.moflon.tgg.runtime.Match) <em>Is Applicable FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_FWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__IsApplicable_FWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Task, CryptoAPIConfig.SymmetricBlockCipher) <em>Register Objects To Match FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Register Objects To Match FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Task, CryptoAPIConfig.SymmetricBlockCipher)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__RegisterObjectsToMatch_FWD__Match_Task_SymmetricBlockCipher();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Task, CryptoAPIConfig.SymmetricBlockCipher) <em>Is Appropriate solve Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate solve Csp FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Task, CryptoAPIConfig.SymmetricBlockCipher)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__IsAppropriate_solveCsp_FWD__Match_Task_SymmetricBlockCipher();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate check Csp FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__IsAppropriate_checkCsp_FWD__CSP();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, CryptoAPIConfig.Task, CryptoAPIConfig.SymmetricBlockCipher) <em>Is Applicable solve Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable solve Csp FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, CryptoAPIConfig.Task, CryptoAPIConfig.SymmetricBlockCipher)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__IsApplicable_solveCsp_FWD__IsApplicableMatch_Task_SymmetricBlockCipher();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable check Csp FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__IsApplicable_checkCsp_FWD__CSP();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Register Objects FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkTypes_FWD(org.moflon.tgg.runtime.Match) <em>Check Types FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkTypes_FWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__CheckTypes_FWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaName, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaCompilationUnit, SimpleJava.JavaMethodInvocation, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaName, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaPackage) <em>Is Appropriate BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaName, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaCompilationUnit, SimpleJava.JavaMethodInvocation, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaName, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaPackage)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__IsAppropriate_BWD__Match_JavaName_JavaWorkflowMethod_JavaCompilationUnit_JavaMethodInvocation_JavaOpaqueMethod_JavaVariableDeclaration_JavaName_JavaVariableDeclaration_JavaLiteral_JavaStatement_JavaPackage();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#perform_BWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Perform BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#perform_BWD(org.moflon.tgg.runtime.IsApplicableMatch)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__Perform_BWD__IsApplicableMatch();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_BWD(org.moflon.tgg.runtime.Match) <em>Is Applicable BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_BWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__IsApplicable_BWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#registerObjectsToMatch_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaName, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaCompilationUnit, SimpleJava.JavaMethodInvocation, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaName, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaPackage) <em>Register Objects To Match BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Register Objects To Match BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#registerObjectsToMatch_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaName, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaCompilationUnit, SimpleJava.JavaMethodInvocation, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaName, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaPackage)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__RegisterObjectsToMatch_BWD__Match_JavaName_JavaWorkflowMethod_JavaCompilationUnit_JavaMethodInvocation_JavaOpaqueMethod_JavaVariableDeclaration_JavaName_JavaVariableDeclaration_JavaLiteral_JavaStatement_JavaPackage();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_solveCsp_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaName, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaCompilationUnit, SimpleJava.JavaMethodInvocation, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaName, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaPackage) <em>Is Appropriate solve Csp BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate solve Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_solveCsp_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaName, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaCompilationUnit, SimpleJava.JavaMethodInvocation, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaName, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaPackage)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__IsAppropriate_solveCsp_BWD__Match_JavaName_JavaWorkflowMethod_JavaCompilationUnit_JavaMethodInvocation_JavaOpaqueMethod_JavaVariableDeclaration_JavaName_JavaVariableDeclaration_JavaLiteral_JavaStatement_JavaPackage();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate check Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__IsAppropriate_checkCsp_BWD__CSP();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaName, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaCompilationUnit, SimpleJava.JavaMethodInvocation, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaName, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaPackage) <em>Is Applicable solve Csp BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable solve Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaName, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaCompilationUnit, SimpleJava.JavaMethodInvocation, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaName, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaPackage)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaName_JavaWorkflowMethod_JavaCompilationUnit_JavaMethodInvocation_JavaOpaqueMethod_JavaVariableDeclaration_JavaName_JavaVariableDeclaration_JavaLiteral_JavaStatement_JavaPackage();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable check Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__IsApplicable_checkCsp_BWD__CSP();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#registerObjects_BWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Register Objects BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#registerObjects_BWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkTypes_BWD(org.moflon.tgg.runtime.Match) <em>Check Types BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Types BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkTypes_BWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__CheckTypes_BWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_FWD_EMoflonEdge_6(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 6</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 6</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_FWD_EMoflonEdge_6(org.moflon.tgg.runtime.EMoflonEdge)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__IsAppropriate_FWD_EMoflonEdge_6__EMoflonEdge();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_BWD_EMoflonEdge_6(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate BWD EMoflon Edge 6</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate BWD EMoflon Edge 6</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_BWD_EMoflonEdge_6(org.moflon.tgg.runtime.EMoflonEdge)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__IsAppropriate_BWD_EMoflonEdge_6__EMoflonEdge();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Attributes FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__CheckAttributes_FWD__TripleMatch();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkAttributes_BWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Attributes BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkAttributes_BWD(org.moflon.tgg.runtime.TripleMatch)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__CheckAttributes_BWD__TripleMatch();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable CC</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable CC</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__IsApplicable_CC__Match_Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_solveCsp_CC(SimpleJava.JavaName, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaCompilationUnit, CryptoAPIConfig.Task, SimpleJava.JavaMethodInvocation, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaName, SimpleJava.JavaVariableDeclaration, CryptoAPIConfig.SymmetricBlockCipher, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaPackage, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable solve Csp CC</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable solve Csp CC</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_solveCsp_CC(SimpleJava.JavaName, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaCompilationUnit, CryptoAPIConfig.Task, SimpleJava.JavaMethodInvocation, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaName, SimpleJava.JavaVariableDeclaration, CryptoAPIConfig.SymmetricBlockCipher, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaPackage, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__IsApplicable_solveCsp_CC__JavaName_JavaWorkflowMethod_JavaCompilationUnit_Task_JavaMethodInvocation_JavaOpaqueMethod_JavaVariableDeclaration_JavaName_JavaVariableDeclaration_SymmetricBlockCipher_JavaLiteral_JavaStatement_JavaPackage_Match_Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_checkCsp_CC(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp CC</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable check Csp CC</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_checkCsp_CC(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__IsApplicable_checkCsp_CC__CSP();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkDEC_FWD(CryptoAPIConfig.Task, CryptoAPIConfig.SymmetricBlockCipher) <em>Check DEC FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check DEC FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkDEC_FWD(CryptoAPIConfig.Task, CryptoAPIConfig.SymmetricBlockCipher)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__CheckDEC_FWD__Task_SymmetricBlockCipher();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkDEC_BWD(SimpleJava.JavaName, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaCompilationUnit, SimpleJava.JavaMethodInvocation, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaName, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaPackage) <em>Check DEC BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check DEC BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkDEC_BWD(SimpleJava.JavaName, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaCompilationUnit, SimpleJava.JavaMethodInvocation, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaName, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaPackage)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__CheckDEC_BWD__JavaName_JavaWorkflowMethod_JavaCompilationUnit_JavaMethodInvocation_JavaOpaqueMethod_JavaVariableDeclaration_JavaName_JavaVariableDeclaration_JavaLiteral_JavaStatement_JavaPackage();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#generateModel(org.moflon.tgg.language.modelgenerator.RuleEntryContainer) <em>Generate Model</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Generate Model</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#generateModel(org.moflon.tgg.language.modelgenerator.RuleEntryContainer)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__GenerateModel__RuleEntryContainer();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#generateModel_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, org.moflon.tgg.runtime.ModelgeneratorRuleResult) <em>Generate Model solve Csp BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Generate Model solve Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#generateModel_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, org.moflon.tgg.runtime.ModelgeneratorRuleResult)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__GenerateModel_solveCsp_BWD__IsApplicableMatch_ModelgeneratorRuleResult();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#generateModel_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Generate Model check Csp BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Generate Model check Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#generateModel_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getSymmetricEncryptionTask__GenerateModel_checkCsp_BWD__CSP();
-
-	/**
-	 * Returns the meta object for class '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport <em>Symmetric Block Cipher Import To Import</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Symmetric Block Cipher Import To Import</em>'.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport
-	 * @generated
-	 */
-	EClass getSymmetricBlockCipherImportToImport();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher) <em>Is Appropriate FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_FWD__Match_Import_SymmetricBlockCipher();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Perform FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__Perform_FWD__IsApplicableMatch();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_FWD(org.moflon.tgg.runtime.Match) <em>Is Applicable FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_FWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__IsApplicable_FWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher) <em>Register Objects To Match FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Register Objects To Match FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__RegisterObjectsToMatch_FWD__Match_Import_SymmetricBlockCipher();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher) <em>Is Appropriate solve Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate solve Csp FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_solveCsp_FWD__Match_Import_SymmetricBlockCipher();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate check Csp FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_checkCsp_FWD__CSP();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaCompilationUnit, CryptoAPIConfig.Import, CryptoConfigToJava.SymmetricBlockCipherToJcu, CryptoAPIConfig.SymmetricBlockCipher) <em>Is Applicable solve Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable solve Csp FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaCompilationUnit, CryptoAPIConfig.Import, CryptoConfigToJava.SymmetricBlockCipherToJcu, CryptoAPIConfig.SymmetricBlockCipher)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__IsApplicable_solveCsp_FWD__IsApplicableMatch_JavaCompilationUnit_Import_SymmetricBlockCipherToJcu_SymmetricBlockCipher();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable check Csp FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__IsApplicable_checkCsp_FWD__CSP();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Register Objects FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkTypes_FWD(org.moflon.tgg.runtime.Match) <em>Check Types FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkTypes_FWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__CheckTypes_FWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit) <em>Is Appropriate BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_BWD__Match_JavaImport_JavaCompilationUnit();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#perform_BWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Perform BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#perform_BWD(org.moflon.tgg.runtime.IsApplicableMatch)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__Perform_BWD__IsApplicableMatch();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_BWD(org.moflon.tgg.runtime.Match) <em>Is Applicable BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_BWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__IsApplicable_BWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#registerObjectsToMatch_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit) <em>Register Objects To Match BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Register Objects To Match BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#registerObjectsToMatch_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__RegisterObjectsToMatch_BWD__Match_JavaImport_JavaCompilationUnit();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_solveCsp_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit) <em>Is Appropriate solve Csp BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate solve Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_solveCsp_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_solveCsp_BWD__Match_JavaImport_JavaCompilationUnit();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate check Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_checkCsp_BWD__CSP();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit, CryptoConfigToJava.SymmetricBlockCipherToJcu, CryptoAPIConfig.SymmetricBlockCipher) <em>Is Applicable solve Csp BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable solve Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit, CryptoConfigToJava.SymmetricBlockCipherToJcu, CryptoAPIConfig.SymmetricBlockCipher)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaImport_JavaCompilationUnit_SymmetricBlockCipherToJcu_SymmetricBlockCipher();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable check Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__IsApplicable_checkCsp_BWD__CSP();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#registerObjects_BWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Register Objects BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#registerObjects_BWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkTypes_BWD(org.moflon.tgg.runtime.Match) <em>Check Types BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Types BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkTypes_BWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__CheckTypes_BWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_FWD_EMoflonEdge_7(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 7</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 7</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_FWD_EMoflonEdge_7(org.moflon.tgg.runtime.EMoflonEdge)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_FWD_EMoflonEdge_7__EMoflonEdge();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_BWD_EMoflonEdge_7(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate BWD EMoflon Edge 7</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate BWD EMoflon Edge 7</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isAppropriate_BWD_EMoflonEdge_7(org.moflon.tgg.runtime.EMoflonEdge)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_BWD_EMoflonEdge_7__EMoflonEdge();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Attributes FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__CheckAttributes_FWD__TripleMatch();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkAttributes_BWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Attributes BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkAttributes_BWD(org.moflon.tgg.runtime.TripleMatch)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__CheckAttributes_BWD__TripleMatch();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable CC</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable CC</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__IsApplicable_CC__Match_Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_solveCsp_CC(SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit, CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable solve Csp CC</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable solve Csp CC</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_solveCsp_CC(SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit, CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__IsApplicable_solveCsp_CC__JavaImport_JavaCompilationUnit_Import_SymmetricBlockCipher_Match_Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_checkCsp_CC(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp CC</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable check Csp CC</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#isApplicable_checkCsp_CC(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__IsApplicable_checkCsp_CC__CSP();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkDEC_FWD(CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher) <em>Check DEC FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check DEC FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkDEC_FWD(CryptoAPIConfig.Import, CryptoAPIConfig.SymmetricBlockCipher)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__CheckDEC_FWD__Import_SymmetricBlockCipher();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkDEC_BWD(SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit) <em>Check DEC BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check DEC BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#checkDEC_BWD(SimpleJava.JavaImport, SimpleJava.JavaCompilationUnit)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__CheckDEC_BWD__JavaImport_JavaCompilationUnit();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#generateModel(org.moflon.tgg.language.modelgenerator.RuleEntryContainer, CryptoConfigToJava.SymmetricBlockCipherToJcu) <em>Generate Model</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Generate Model</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#generateModel(org.moflon.tgg.language.modelgenerator.RuleEntryContainer, CryptoConfigToJava.SymmetricBlockCipherToJcu)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__GenerateModel__RuleEntryContainer_SymmetricBlockCipherToJcu();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#generateModel_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaCompilationUnit, CryptoConfigToJava.SymmetricBlockCipherToJcu, CryptoAPIConfig.SymmetricBlockCipher, org.moflon.tgg.runtime.ModelgeneratorRuleResult) <em>Generate Model solve Csp BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Generate Model solve Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#generateModel_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaCompilationUnit, CryptoConfigToJava.SymmetricBlockCipherToJcu, CryptoAPIConfig.SymmetricBlockCipher, org.moflon.tgg.runtime.ModelgeneratorRuleResult)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__GenerateModel_solveCsp_BWD__IsApplicableMatch_JavaCompilationUnit_SymmetricBlockCipherToJcu_SymmetricBlockCipher_ModelgeneratorRuleResult();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#generateModel_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Generate Model check Csp BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Generate Model check Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport#generateModel_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getSymmetricBlockCipherImportToImport__GenerateModel_checkCsp_BWD__CSP();
-
-	/**
 	 * Returns the meta object for class '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument <em>Ignore Method Invocation Argument</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4296,14 +4586,14 @@ public interface RulesPackage extends EPackage {
 	EOperation getIgnoreMethodInvocationArgument__CheckTypes_FWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isAppropriate_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaMethodInvocation, SimpleJava.JavaExpression) <em>Is Appropriate BWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isAppropriate_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaExpression, SimpleJava.JavaMethodInvocation) <em>Is Appropriate BWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isAppropriate_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaMethodInvocation, SimpleJava.JavaExpression)
+	 * @see CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isAppropriate_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaExpression, SimpleJava.JavaMethodInvocation)
 	 * @generated
 	 */
-	EOperation getIgnoreMethodInvocationArgument__IsAppropriate_BWD__Match_JavaMethodInvocation_JavaExpression();
+	EOperation getIgnoreMethodInvocationArgument__IsAppropriate_BWD__Match_JavaExpression_JavaMethodInvocation();
 
 	/**
 	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#perform_BWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform BWD</em>}' operation.
@@ -4326,24 +4616,24 @@ public interface RulesPackage extends EPackage {
 	EOperation getIgnoreMethodInvocationArgument__IsApplicable_BWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#registerObjectsToMatch_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaMethodInvocation, SimpleJava.JavaExpression) <em>Register Objects To Match BWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#registerObjectsToMatch_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaExpression, SimpleJava.JavaMethodInvocation) <em>Register Objects To Match BWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Register Objects To Match BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#registerObjectsToMatch_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaMethodInvocation, SimpleJava.JavaExpression)
+	 * @see CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#registerObjectsToMatch_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaExpression, SimpleJava.JavaMethodInvocation)
 	 * @generated
 	 */
-	EOperation getIgnoreMethodInvocationArgument__RegisterObjectsToMatch_BWD__Match_JavaMethodInvocation_JavaExpression();
+	EOperation getIgnoreMethodInvocationArgument__RegisterObjectsToMatch_BWD__Match_JavaExpression_JavaMethodInvocation();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isAppropriate_solveCsp_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaMethodInvocation, SimpleJava.JavaExpression) <em>Is Appropriate solve Csp BWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isAppropriate_solveCsp_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaExpression, SimpleJava.JavaMethodInvocation) <em>Is Appropriate solve Csp BWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate solve Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isAppropriate_solveCsp_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaMethodInvocation, SimpleJava.JavaExpression)
+	 * @see CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isAppropriate_solveCsp_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaExpression, SimpleJava.JavaMethodInvocation)
 	 * @generated
 	 */
-	EOperation getIgnoreMethodInvocationArgument__IsAppropriate_solveCsp_BWD__Match_JavaMethodInvocation_JavaExpression();
+	EOperation getIgnoreMethodInvocationArgument__IsAppropriate_solveCsp_BWD__Match_JavaExpression_JavaMethodInvocation();
 
 	/**
 	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isAppropriate_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp BWD</em>}' operation.
@@ -4356,14 +4646,14 @@ public interface RulesPackage extends EPackage {
 	EOperation getIgnoreMethodInvocationArgument__IsAppropriate_checkCsp_BWD__CSP();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isApplicable_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaMethodInvocation, SimpleJava.JavaExpression) <em>Is Applicable solve Csp BWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isApplicable_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaExpression, SimpleJava.JavaMethodInvocation) <em>Is Applicable solve Csp BWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable solve Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isApplicable_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaMethodInvocation, SimpleJava.JavaExpression)
+	 * @see CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isApplicable_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaExpression, SimpleJava.JavaMethodInvocation)
 	 * @generated
 	 */
-	EOperation getIgnoreMethodInvocationArgument__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaMethodInvocation_JavaExpression();
+	EOperation getIgnoreMethodInvocationArgument__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaExpression_JavaMethodInvocation();
 
 	/**
 	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isApplicable_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp BWD</em>}' operation.
@@ -4396,14 +4686,14 @@ public interface RulesPackage extends EPackage {
 	EOperation getIgnoreMethodInvocationArgument__CheckTypes_BWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isAppropriate_BWD_EMoflonEdge_8(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate BWD EMoflon Edge 8</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isAppropriate_BWD_EMoflonEdge_9(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate BWD EMoflon Edge 9</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate BWD EMoflon Edge 8</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isAppropriate_BWD_EMoflonEdge_8(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @return the meta object for the '<em>Is Appropriate BWD EMoflon Edge 9</em>' operation.
+	 * @see CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isAppropriate_BWD_EMoflonEdge_9(org.moflon.tgg.runtime.EMoflonEdge)
 	 * @generated
 	 */
-	EOperation getIgnoreMethodInvocationArgument__IsAppropriate_BWD_EMoflonEdge_8__EMoflonEdge();
+	EOperation getIgnoreMethodInvocationArgument__IsAppropriate_BWD_EMoflonEdge_9__EMoflonEdge();
 
 	/**
 	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
@@ -4436,14 +4726,14 @@ public interface RulesPackage extends EPackage {
 	EOperation getIgnoreMethodInvocationArgument__IsApplicable_CC__Match_Match();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isApplicable_solveCsp_CC(SimpleJava.JavaMethodInvocation, SimpleJava.JavaExpression, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable solve Csp CC</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isApplicable_solveCsp_CC(SimpleJava.JavaExpression, SimpleJava.JavaMethodInvocation, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable solve Csp CC</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable solve Csp CC</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isApplicable_solveCsp_CC(SimpleJava.JavaMethodInvocation, SimpleJava.JavaExpression, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
+	 * @see CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isApplicable_solveCsp_CC(SimpleJava.JavaExpression, SimpleJava.JavaMethodInvocation, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
 	 * @generated
 	 */
-	EOperation getIgnoreMethodInvocationArgument__IsApplicable_solveCsp_CC__JavaMethodInvocation_JavaExpression_Match_Match();
+	EOperation getIgnoreMethodInvocationArgument__IsApplicable_solveCsp_CC__JavaExpression_JavaMethodInvocation_Match_Match();
 
 	/**
 	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#isApplicable_checkCsp_CC(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp CC</em>}' operation.
@@ -4466,14 +4756,14 @@ public interface RulesPackage extends EPackage {
 	EOperation getIgnoreMethodInvocationArgument__CheckDEC_FWD();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#checkDEC_BWD(SimpleJava.JavaMethodInvocation, SimpleJava.JavaExpression) <em>Check DEC BWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#checkDEC_BWD(SimpleJava.JavaExpression, SimpleJava.JavaMethodInvocation) <em>Check DEC BWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check DEC BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#checkDEC_BWD(SimpleJava.JavaMethodInvocation, SimpleJava.JavaExpression)
+	 * @see CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#checkDEC_BWD(SimpleJava.JavaExpression, SimpleJava.JavaMethodInvocation)
 	 * @generated
 	 */
-	EOperation getIgnoreMethodInvocationArgument__CheckDEC_BWD__JavaMethodInvocation_JavaExpression();
+	EOperation getIgnoreMethodInvocationArgument__CheckDEC_BWD__JavaExpression_JavaMethodInvocation();
 
 	/**
 	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument#generateModel(org.moflon.tgg.language.modelgenerator.RuleEntryContainer, SimpleJava.JavaMethodInvocation) <em>Generate Model</em>}' operation.
@@ -4506,624 +4796,334 @@ public interface RulesPackage extends EPackage {
 	EOperation getIgnoreMethodInvocationArgument__GenerateModel_checkCsp_BWD__CSP();
 
 	/**
-	 * Returns the meta object for class '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod <em>Ignore Opaque Method</em>}'.
+	 * Returns the meta object for class '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask <em>Symmetric Encryption Task</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Ignore Opaque Method</em>'.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod
+	 * @return the meta object for class '<em>Symmetric Encryption Task</em>'.
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask
 	 * @generated
 	 */
-	EClass getIgnoreOpaqueMethod();
+	EClass getSymmetricEncryptionTask();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_FWD(org.moflon.tgg.runtime.Match) <em>Is Appropriate FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_FWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__IsAppropriate_FWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Perform FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__Perform_FWD__IsApplicableMatch();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_FWD(org.moflon.tgg.runtime.Match) <em>Is Applicable FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_FWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__IsApplicable_FWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match) <em>Register Objects To Match FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Register Objects To Match FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__RegisterObjectsToMatch_FWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match) <em>Is Appropriate solve Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate solve Csp FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__IsAppropriate_solveCsp_FWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate check Csp FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__IsAppropriate_checkCsp_FWD__CSP();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkTypes_FWD(org.moflon.tgg.runtime.Match) <em>Check Types FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkTypes_FWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__CheckTypes_FWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaCompilationUnit, SimpleJava.JavaOpaqueMethod) <em>Is Appropriate BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaCompilationUnit, SimpleJava.JavaOpaqueMethod)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__IsAppropriate_BWD__Match_JavaCompilationUnit_JavaOpaqueMethod();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#perform_BWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Perform BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#perform_BWD(org.moflon.tgg.runtime.IsApplicableMatch)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__Perform_BWD__IsApplicableMatch();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_BWD(org.moflon.tgg.runtime.Match) <em>Is Applicable BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_BWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__IsApplicable_BWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#registerObjectsToMatch_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaCompilationUnit, SimpleJava.JavaOpaqueMethod) <em>Register Objects To Match BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Register Objects To Match BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#registerObjectsToMatch_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaCompilationUnit, SimpleJava.JavaOpaqueMethod)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__RegisterObjectsToMatch_BWD__Match_JavaCompilationUnit_JavaOpaqueMethod();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_solveCsp_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaCompilationUnit, SimpleJava.JavaOpaqueMethod) <em>Is Appropriate solve Csp BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate solve Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_solveCsp_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaCompilationUnit, SimpleJava.JavaOpaqueMethod)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__IsAppropriate_solveCsp_BWD__Match_JavaCompilationUnit_JavaOpaqueMethod();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate check Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__IsAppropriate_checkCsp_BWD__CSP();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaCompilationUnit, SimpleJava.JavaOpaqueMethod) <em>Is Applicable solve Csp BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable solve Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaCompilationUnit, SimpleJava.JavaOpaqueMethod)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaCompilationUnit_JavaOpaqueMethod();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable check Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__IsApplicable_checkCsp_BWD__CSP();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#registerObjects_BWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Register Objects BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#registerObjects_BWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__RegisterObjects_BWD__PerformRuleResult_EObject_EObject();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkTypes_BWD(org.moflon.tgg.runtime.Match) <em>Check Types BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Types BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkTypes_BWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__CheckTypes_BWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_BWD_EMoflonEdge_9(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate BWD EMoflon Edge 9</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate BWD EMoflon Edge 9</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isAppropriate_BWD_EMoflonEdge_9(org.moflon.tgg.runtime.EMoflonEdge)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__IsAppropriate_BWD_EMoflonEdge_9__EMoflonEdge();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Attributes FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__CheckAttributes_FWD__TripleMatch();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkAttributes_BWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Attributes BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkAttributes_BWD(org.moflon.tgg.runtime.TripleMatch)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__CheckAttributes_BWD__TripleMatch();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable CC</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable CC</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__IsApplicable_CC__Match_Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_solveCsp_CC(SimpleJava.JavaCompilationUnit, SimpleJava.JavaOpaqueMethod, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable solve Csp CC</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable solve Csp CC</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_solveCsp_CC(SimpleJava.JavaCompilationUnit, SimpleJava.JavaOpaqueMethod, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__IsApplicable_solveCsp_CC__JavaCompilationUnit_JavaOpaqueMethod_Match_Match();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_checkCsp_CC(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp CC</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable check Csp CC</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#isApplicable_checkCsp_CC(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__IsApplicable_checkCsp_CC__CSP();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkDEC_FWD() <em>Check DEC FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check DEC FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkDEC_FWD()
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__CheckDEC_FWD();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkDEC_BWD(SimpleJava.JavaCompilationUnit, SimpleJava.JavaOpaqueMethod) <em>Check DEC BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check DEC BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#checkDEC_BWD(SimpleJava.JavaCompilationUnit, SimpleJava.JavaOpaqueMethod)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__CheckDEC_BWD__JavaCompilationUnit_JavaOpaqueMethod();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#generateModel(org.moflon.tgg.language.modelgenerator.RuleEntryContainer, SimpleJava.JavaCompilationUnit) <em>Generate Model</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Generate Model</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#generateModel(org.moflon.tgg.language.modelgenerator.RuleEntryContainer, SimpleJava.JavaCompilationUnit)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__GenerateModel__RuleEntryContainer_JavaCompilationUnit();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#generateModel_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaCompilationUnit, org.moflon.tgg.runtime.ModelgeneratorRuleResult) <em>Generate Model solve Csp BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Generate Model solve Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#generateModel_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaCompilationUnit, org.moflon.tgg.runtime.ModelgeneratorRuleResult)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__GenerateModel_solveCsp_BWD__IsApplicableMatch_JavaCompilationUnit_ModelgeneratorRuleResult();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.IgnoreOpaqueMethod#generateModel_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Generate Model check Csp BWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Generate Model check Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.IgnoreOpaqueMethod#generateModel_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getIgnoreOpaqueMethod__GenerateModel_checkCsp_BWD__CSP();
-
-	/**
-	 * Returns the meta object for class '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport <em>Key Derivation Algorithm Import To Import</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Key Derivation Algorithm Import To Import</em>'.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport
-	 * @generated
-	 */
-	EClass getKeyDerivationAlgorithmImportToImport();
-
-	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Import, CryptoAPIConfig.KeyDerivationAlgorithm) <em>Is Appropriate FWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.SymmetricBlockCipher, CryptoAPIConfig.Task) <em>Is Appropriate FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Import, CryptoAPIConfig.KeyDerivationAlgorithm)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.SymmetricBlockCipher, CryptoAPIConfig.Task)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_FWD__Match_Import_KeyDerivationAlgorithm();
+	EOperation getSymmetricEncryptionTask__IsAppropriate_FWD__Match_SymmetricBlockCipher_Task();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Perform FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__Perform_FWD__IsApplicableMatch();
+	EOperation getSymmetricEncryptionTask__Perform_FWD__IsApplicableMatch();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_FWD(org.moflon.tgg.runtime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_FWD(org.moflon.tgg.runtime.Match) <em>Is Applicable FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_FWD(org.moflon.tgg.runtime.Match)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_FWD(org.moflon.tgg.runtime.Match)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_FWD__Match();
+	EOperation getSymmetricEncryptionTask__IsApplicable_FWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Import, CryptoAPIConfig.KeyDerivationAlgorithm) <em>Register Objects To Match FWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.SymmetricBlockCipher, CryptoAPIConfig.Task) <em>Register Objects To Match FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Register Objects To Match FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Import, CryptoAPIConfig.KeyDerivationAlgorithm)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.SymmetricBlockCipher, CryptoAPIConfig.Task)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjectsToMatch_FWD__Match_Import_KeyDerivationAlgorithm();
+	EOperation getSymmetricEncryptionTask__RegisterObjectsToMatch_FWD__Match_SymmetricBlockCipher_Task();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Import, CryptoAPIConfig.KeyDerivationAlgorithm) <em>Is Appropriate solve Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.SymmetricBlockCipher, CryptoAPIConfig.Task) <em>Is Appropriate solve Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate solve Csp FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.Import, CryptoAPIConfig.KeyDerivationAlgorithm)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, CryptoAPIConfig.SymmetricBlockCipher, CryptoAPIConfig.Task)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_solveCsp_FWD__Match_Import_KeyDerivationAlgorithm();
+	EOperation getSymmetricEncryptionTask__IsAppropriate_solveCsp_FWD__Match_SymmetricBlockCipher_Task();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate check Csp FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_checkCsp_FWD__CSP();
+	EOperation getSymmetricEncryptionTask__IsAppropriate_checkCsp_FWD__CSP();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, CryptoAPIConfig.Import, CryptoConfigToJava.KeyDerivationAlgorithmToJcu, SimpleJava.JavaCompilationUnit, CryptoAPIConfig.KeyDerivationAlgorithm) <em>Is Applicable solve Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, CryptoAPIConfig.SymmetricBlockCipher, CryptoAPIConfig.Task) <em>Is Applicable solve Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable solve Csp FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, CryptoAPIConfig.Import, CryptoConfigToJava.KeyDerivationAlgorithmToJcu, SimpleJava.JavaCompilationUnit, CryptoAPIConfig.KeyDerivationAlgorithm)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, CryptoAPIConfig.SymmetricBlockCipher, CryptoAPIConfig.Task)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_solveCsp_FWD__IsApplicableMatch_Import_KeyDerivationAlgorithmToJcu_JavaCompilationUnit_KeyDerivationAlgorithm();
+	EOperation getSymmetricEncryptionTask__IsApplicable_solveCsp_FWD__IsApplicableMatch_SymmetricBlockCipher_Task();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable check Csp FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_checkCsp_FWD__CSP();
+	EOperation getSymmetricEncryptionTask__IsApplicable_checkCsp_FWD__CSP();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects FWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Register Objects FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject();
+	EOperation getSymmetricEncryptionTask__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkTypes_FWD(org.moflon.tgg.runtime.Match) <em>Check Types FWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkTypes_FWD(org.moflon.tgg.runtime.Match) <em>Check Types FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkTypes_FWD(org.moflon.tgg.runtime.Match)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkTypes_FWD(org.moflon.tgg.runtime.Match)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__CheckTypes_FWD__Match();
+	EOperation getSymmetricEncryptionTask__CheckTypes_FWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaCompilationUnit, SimpleJava.JavaImport) <em>Is Appropriate BWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaMethodInvocation, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaPackage, SimpleJava.JavaName, SimpleJava.JavaName, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaCompilationUnit, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaOpaqueMethod) <em>Is Appropriate BWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaCompilationUnit, SimpleJava.JavaImport)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaMethodInvocation, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaPackage, SimpleJava.JavaName, SimpleJava.JavaName, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaCompilationUnit, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaOpaqueMethod)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_BWD__Match_JavaCompilationUnit_JavaImport();
+	EOperation getSymmetricEncryptionTask__IsAppropriate_BWD__Match_JavaWorkflowMethod_JavaMethodInvocation_JavaVariableDeclaration_JavaPackage_JavaName_JavaName_JavaLiteral_JavaStatement_JavaCompilationUnit_JavaVariableDeclaration_JavaOpaqueMethod();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#perform_BWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform BWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#perform_BWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform BWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Perform BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#perform_BWD(org.moflon.tgg.runtime.IsApplicableMatch)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#perform_BWD(org.moflon.tgg.runtime.IsApplicableMatch)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__Perform_BWD__IsApplicableMatch();
+	EOperation getSymmetricEncryptionTask__Perform_BWD__IsApplicableMatch();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_BWD(org.moflon.tgg.runtime.Match) <em>Is Applicable BWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_BWD(org.moflon.tgg.runtime.Match) <em>Is Applicable BWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_BWD(org.moflon.tgg.runtime.Match)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_BWD(org.moflon.tgg.runtime.Match)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_BWD__Match();
+	EOperation getSymmetricEncryptionTask__IsApplicable_BWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#registerObjectsToMatch_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaCompilationUnit, SimpleJava.JavaImport) <em>Register Objects To Match BWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#registerObjectsToMatch_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaMethodInvocation, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaPackage, SimpleJava.JavaName, SimpleJava.JavaName, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaCompilationUnit, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaOpaqueMethod) <em>Register Objects To Match BWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Register Objects To Match BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#registerObjectsToMatch_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaCompilationUnit, SimpleJava.JavaImport)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#registerObjectsToMatch_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaMethodInvocation, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaPackage, SimpleJava.JavaName, SimpleJava.JavaName, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaCompilationUnit, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaOpaqueMethod)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjectsToMatch_BWD__Match_JavaCompilationUnit_JavaImport();
+	EOperation getSymmetricEncryptionTask__RegisterObjectsToMatch_BWD__Match_JavaWorkflowMethod_JavaMethodInvocation_JavaVariableDeclaration_JavaPackage_JavaName_JavaName_JavaLiteral_JavaStatement_JavaCompilationUnit_JavaVariableDeclaration_JavaOpaqueMethod();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_solveCsp_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaCompilationUnit, SimpleJava.JavaImport) <em>Is Appropriate solve Csp BWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_solveCsp_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaMethodInvocation, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaPackage, SimpleJava.JavaName, SimpleJava.JavaName, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaCompilationUnit, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaOpaqueMethod) <em>Is Appropriate solve Csp BWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate solve Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_solveCsp_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaCompilationUnit, SimpleJava.JavaImport)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_solveCsp_BWD(org.moflon.tgg.runtime.Match, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaMethodInvocation, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaPackage, SimpleJava.JavaName, SimpleJava.JavaName, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaCompilationUnit, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaOpaqueMethod)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_solveCsp_BWD__Match_JavaCompilationUnit_JavaImport();
+	EOperation getSymmetricEncryptionTask__IsAppropriate_solveCsp_BWD__Match_JavaWorkflowMethod_JavaMethodInvocation_JavaVariableDeclaration_JavaPackage_JavaName_JavaName_JavaLiteral_JavaStatement_JavaCompilationUnit_JavaVariableDeclaration_JavaOpaqueMethod();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp BWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp BWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate check Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_checkCsp_BWD__CSP();
+	EOperation getSymmetricEncryptionTask__IsAppropriate_checkCsp_BWD__CSP();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, CryptoConfigToJava.KeyDerivationAlgorithmToJcu, SimpleJava.JavaCompilationUnit, CryptoAPIConfig.KeyDerivationAlgorithm, SimpleJava.JavaImport) <em>Is Applicable solve Csp BWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaMethodInvocation, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaPackage, SimpleJava.JavaName, SimpleJava.JavaName, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaCompilationUnit, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaOpaqueMethod) <em>Is Applicable solve Csp BWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable solve Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, CryptoConfigToJava.KeyDerivationAlgorithmToJcu, SimpleJava.JavaCompilationUnit, CryptoAPIConfig.KeyDerivationAlgorithm, SimpleJava.JavaImport)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaMethodInvocation, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaPackage, SimpleJava.JavaName, SimpleJava.JavaName, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaCompilationUnit, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaOpaqueMethod)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_solveCsp_BWD__IsApplicableMatch_KeyDerivationAlgorithmToJcu_JavaCompilationUnit_KeyDerivationAlgorithm_JavaImport();
+	EOperation getSymmetricEncryptionTask__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaWorkflowMethod_JavaMethodInvocation_JavaVariableDeclaration_JavaPackage_JavaName_JavaName_JavaLiteral_JavaStatement_JavaCompilationUnit_JavaVariableDeclaration_JavaOpaqueMethod();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp BWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp BWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable check Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_checkCsp_BWD__CSP();
+	EOperation getSymmetricEncryptionTask__IsApplicable_checkCsp_BWD__CSP();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#registerObjects_BWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects BWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#registerObjects_BWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects BWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Register Objects BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#registerObjects_BWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#registerObjects_BWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject();
+	EOperation getSymmetricEncryptionTask__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkTypes_BWD(org.moflon.tgg.runtime.Match) <em>Check Types BWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkTypes_BWD(org.moflon.tgg.runtime.Match) <em>Check Types BWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Types BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkTypes_BWD(org.moflon.tgg.runtime.Match)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkTypes_BWD(org.moflon.tgg.runtime.Match)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__CheckTypes_BWD__Match();
+	EOperation getSymmetricEncryptionTask__CheckTypes_BWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_FWD_EMoflonEdge_8(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 8</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_FWD_EMoflonEdge_8(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 8</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 8</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_FWD_EMoflonEdge_8(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_FWD_EMoflonEdge_8(org.moflon.tgg.runtime.EMoflonEdge)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_FWD_EMoflonEdge_8__EMoflonEdge();
+	EOperation getSymmetricEncryptionTask__IsAppropriate_FWD_EMoflonEdge_8__EMoflonEdge();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_BWD_EMoflonEdge_10(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate BWD EMoflon Edge 10</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_BWD_EMoflonEdge_10(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate BWD EMoflon Edge 10</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate BWD EMoflon Edge 10</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isAppropriate_BWD_EMoflonEdge_10(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isAppropriate_BWD_EMoflonEdge_10(org.moflon.tgg.runtime.EMoflonEdge)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_BWD_EMoflonEdge_10__EMoflonEdge();
+	EOperation getSymmetricEncryptionTask__IsAppropriate_BWD_EMoflonEdge_10__EMoflonEdge();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Attributes FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__CheckAttributes_FWD__TripleMatch();
+	EOperation getSymmetricEncryptionTask__CheckAttributes_FWD__TripleMatch();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkAttributes_BWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes BWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkAttributes_BWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes BWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Attributes BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkAttributes_BWD(org.moflon.tgg.runtime.TripleMatch)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkAttributes_BWD(org.moflon.tgg.runtime.TripleMatch)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__CheckAttributes_BWD__TripleMatch();
+	EOperation getSymmetricEncryptionTask__CheckAttributes_BWD__TripleMatch();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable CC</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable CC</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable CC</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_CC__Match_Match();
+	EOperation getSymmetricEncryptionTask__IsApplicable_CC__Match_Match();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_solveCsp_CC(CryptoAPIConfig.Import, SimpleJava.JavaCompilationUnit, CryptoAPIConfig.KeyDerivationAlgorithm, SimpleJava.JavaImport, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable solve Csp CC</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_solveCsp_CC(SimpleJava.JavaWorkflowMethod, SimpleJava.JavaMethodInvocation, CryptoAPIConfig.SymmetricBlockCipher, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaPackage, SimpleJava.JavaName, SimpleJava.JavaName, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaCompilationUnit, CryptoAPIConfig.Task, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaOpaqueMethod, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable solve Csp CC</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable solve Csp CC</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_solveCsp_CC(CryptoAPIConfig.Import, SimpleJava.JavaCompilationUnit, CryptoAPIConfig.KeyDerivationAlgorithm, SimpleJava.JavaImport, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_solveCsp_CC(SimpleJava.JavaWorkflowMethod, SimpleJava.JavaMethodInvocation, CryptoAPIConfig.SymmetricBlockCipher, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaPackage, SimpleJava.JavaName, SimpleJava.JavaName, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaCompilationUnit, CryptoAPIConfig.Task, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaOpaqueMethod, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_solveCsp_CC__Import_JavaCompilationUnit_KeyDerivationAlgorithm_JavaImport_Match_Match();
+	EOperation getSymmetricEncryptionTask__IsApplicable_solveCsp_CC__JavaWorkflowMethod_JavaMethodInvocation_SymmetricBlockCipher_JavaVariableDeclaration_JavaPackage_JavaName_JavaName_JavaLiteral_JavaStatement_JavaCompilationUnit_Task_JavaVariableDeclaration_JavaOpaqueMethod_Match_Match();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_checkCsp_CC(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp CC</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_checkCsp_CC(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp CC</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable check Csp CC</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#isApplicable_checkCsp_CC(org.moflon.tgg.language.csp.CSP)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#isApplicable_checkCsp_CC(org.moflon.tgg.language.csp.CSP)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_checkCsp_CC__CSP();
+	EOperation getSymmetricEncryptionTask__IsApplicable_checkCsp_CC__CSP();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkDEC_FWD(CryptoAPIConfig.Import, CryptoAPIConfig.KeyDerivationAlgorithm) <em>Check DEC FWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkDEC_FWD(CryptoAPIConfig.SymmetricBlockCipher, CryptoAPIConfig.Task) <em>Check DEC FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check DEC FWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkDEC_FWD(CryptoAPIConfig.Import, CryptoAPIConfig.KeyDerivationAlgorithm)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkDEC_FWD(CryptoAPIConfig.SymmetricBlockCipher, CryptoAPIConfig.Task)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__CheckDEC_FWD__Import_KeyDerivationAlgorithm();
+	EOperation getSymmetricEncryptionTask__CheckDEC_FWD__SymmetricBlockCipher_Task();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkDEC_BWD(SimpleJava.JavaCompilationUnit, SimpleJava.JavaImport) <em>Check DEC BWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkDEC_BWD(SimpleJava.JavaWorkflowMethod, SimpleJava.JavaMethodInvocation, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaPackage, SimpleJava.JavaName, SimpleJava.JavaName, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaCompilationUnit, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaOpaqueMethod) <em>Check DEC BWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check DEC BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#checkDEC_BWD(SimpleJava.JavaCompilationUnit, SimpleJava.JavaImport)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#checkDEC_BWD(SimpleJava.JavaWorkflowMethod, SimpleJava.JavaMethodInvocation, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaPackage, SimpleJava.JavaName, SimpleJava.JavaName, SimpleJava.JavaLiteral, SimpleJava.JavaStatement, SimpleJava.JavaCompilationUnit, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaOpaqueMethod)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__CheckDEC_BWD__JavaCompilationUnit_JavaImport();
+	EOperation getSymmetricEncryptionTask__CheckDEC_BWD__JavaWorkflowMethod_JavaMethodInvocation_JavaVariableDeclaration_JavaPackage_JavaName_JavaName_JavaLiteral_JavaStatement_JavaCompilationUnit_JavaVariableDeclaration_JavaOpaqueMethod();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#generateModel(org.moflon.tgg.language.modelgenerator.RuleEntryContainer, CryptoConfigToJava.KeyDerivationAlgorithmToJcu) <em>Generate Model</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#generateModel(org.moflon.tgg.language.modelgenerator.RuleEntryContainer) <em>Generate Model</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Generate Model</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#generateModel(org.moflon.tgg.language.modelgenerator.RuleEntryContainer, CryptoConfigToJava.KeyDerivationAlgorithmToJcu)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#generateModel(org.moflon.tgg.language.modelgenerator.RuleEntryContainer)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__GenerateModel__RuleEntryContainer_KeyDerivationAlgorithmToJcu();
+	EOperation getSymmetricEncryptionTask__GenerateModel__RuleEntryContainer();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#generateModel_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, CryptoConfigToJava.KeyDerivationAlgorithmToJcu, SimpleJava.JavaCompilationUnit, CryptoAPIConfig.KeyDerivationAlgorithm, org.moflon.tgg.runtime.ModelgeneratorRuleResult) <em>Generate Model solve Csp BWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#generateModel_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, org.moflon.tgg.runtime.ModelgeneratorRuleResult) <em>Generate Model solve Csp BWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Generate Model solve Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#generateModel_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, CryptoConfigToJava.KeyDerivationAlgorithmToJcu, SimpleJava.JavaCompilationUnit, CryptoAPIConfig.KeyDerivationAlgorithm, org.moflon.tgg.runtime.ModelgeneratorRuleResult)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#generateModel_solveCsp_BWD(org.moflon.tgg.runtime.IsApplicableMatch, org.moflon.tgg.runtime.ModelgeneratorRuleResult)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__GenerateModel_solveCsp_BWD__IsApplicableMatch_KeyDerivationAlgorithmToJcu_JavaCompilationUnit_KeyDerivationAlgorithm_ModelgeneratorRuleResult();
+	EOperation getSymmetricEncryptionTask__GenerateModel_solveCsp_BWD__IsApplicableMatch_ModelgeneratorRuleResult();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#generateModel_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Generate Model check Csp BWD</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.SymmetricEncryptionTask#generateModel_checkCsp_BWD(org.moflon.tgg.language.csp.CSP) <em>Generate Model check Csp BWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Generate Model check Csp BWD</em>' operation.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport#generateModel_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
+	 * @see CryptoConfigToJava.Rules.SymmetricEncryptionTask#generateModel_checkCsp_BWD(org.moflon.tgg.language.csp.CSP)
 	 * @generated
 	 */
-	EOperation getKeyDerivationAlgorithmImportToImport__GenerateModel_checkCsp_BWD__CSP();
+	EOperation getSymmetricEncryptionTask__GenerateModel_checkCsp_BWD__CSP();
 
 	/**
 	 * Returns the meta object for class '{@link CryptoConfigToJava.Rules.IgnoreParameterRule <em>Ignore Parameter Rule</em>}'.
@@ -5676,14 +5676,14 @@ public interface RulesPackage extends EPackage {
 	EOperation getPasswordBasedEncryption__IsApplicable_CC__Match_Match();
 
 	/**
-	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.PasswordBasedEncryption#isApplicable_solveCsp_CC(SimpleJava.JavaPackage, SimpleJava.JavaLiteral, SimpleJava.JavaMethodInvocation, SimpleJava.JavaLiteral, SimpleJava.JavaCompilationUnit, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaCompilationUnit, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaLiteral, SimpleJava.JavaVariableDeclaration, CryptoAPIConfig.KeyDerivationAlgorithm, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaStatement, SimpleJava.JavaName, SimpleJava.JavaLiteral, SimpleJava.JavaWorkflowMethod, CryptoAPIConfig.Task, SimpleJava.JavaName, CryptoAPIConfig.SymmetricBlockCipher, SimpleJava.JavaName, SimpleJava.JavaMethodInvocation, SimpleJava.JavaStatement, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable solve Csp CC</em>}' operation.
+	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.PasswordBasedEncryption#isApplicable_solveCsp_CC(SimpleJava.JavaPackage, SimpleJava.JavaLiteral, SimpleJava.JavaMethodInvocation, SimpleJava.JavaLiteral, SimpleJava.JavaCompilationUnit, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaCompilationUnit, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaLiteral, SimpleJava.JavaVariableDeclaration, CryptoAPIConfig.KeyDerivationAlgorithm, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaStatement, SimpleJava.JavaName, SimpleJava.JavaLiteral, SimpleJava.JavaWorkflowMethod, CryptoAPIConfig.Task, SimpleJava.JavaName, SimpleJava.JavaName, CryptoAPIConfig.SymmetricBlockCipher, SimpleJava.JavaMethodInvocation, SimpleJava.JavaStatement, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable solve Csp CC</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable solve Csp CC</em>' operation.
-	 * @see CryptoConfigToJava.Rules.PasswordBasedEncryption#isApplicable_solveCsp_CC(SimpleJava.JavaPackage, SimpleJava.JavaLiteral, SimpleJava.JavaMethodInvocation, SimpleJava.JavaLiteral, SimpleJava.JavaCompilationUnit, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaCompilationUnit, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaLiteral, SimpleJava.JavaVariableDeclaration, CryptoAPIConfig.KeyDerivationAlgorithm, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaStatement, SimpleJava.JavaName, SimpleJava.JavaLiteral, SimpleJava.JavaWorkflowMethod, CryptoAPIConfig.Task, SimpleJava.JavaName, CryptoAPIConfig.SymmetricBlockCipher, SimpleJava.JavaName, SimpleJava.JavaMethodInvocation, SimpleJava.JavaStatement, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
+	 * @see CryptoConfigToJava.Rules.PasswordBasedEncryption#isApplicable_solveCsp_CC(SimpleJava.JavaPackage, SimpleJava.JavaLiteral, SimpleJava.JavaMethodInvocation, SimpleJava.JavaLiteral, SimpleJava.JavaCompilationUnit, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaCompilationUnit, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaVariableDeclaration, SimpleJava.JavaWorkflowMethod, SimpleJava.JavaLiteral, SimpleJava.JavaVariableDeclaration, CryptoAPIConfig.KeyDerivationAlgorithm, SimpleJava.JavaOpaqueMethod, SimpleJava.JavaStatement, SimpleJava.JavaName, SimpleJava.JavaLiteral, SimpleJava.JavaWorkflowMethod, CryptoAPIConfig.Task, SimpleJava.JavaName, SimpleJava.JavaName, CryptoAPIConfig.SymmetricBlockCipher, SimpleJava.JavaMethodInvocation, SimpleJava.JavaStatement, org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
 	 * @generated
 	 */
-	EOperation getPasswordBasedEncryption__IsApplicable_solveCsp_CC__JavaPackage_JavaLiteral_JavaMethodInvocation_JavaLiteral_JavaCompilationUnit_JavaOpaqueMethod_JavaCompilationUnit_JavaVariableDeclaration_JavaVariableDeclaration_JavaWorkflowMethod_JavaLiteral_JavaVariableDeclaration_KeyDerivationAlgorithm_JavaOpaqueMethod_JavaStatement_JavaName_JavaLiteral_JavaWorkflowMethod_Task_JavaName_SymmetricBlockCipher_JavaName_JavaMethodInvocation_JavaStatement_Match_Match();
+	EOperation getPasswordBasedEncryption__IsApplicable_solveCsp_CC__JavaPackage_JavaLiteral_JavaMethodInvocation_JavaLiteral_JavaCompilationUnit_JavaOpaqueMethod_JavaCompilationUnit_JavaVariableDeclaration_JavaVariableDeclaration_JavaWorkflowMethod_JavaLiteral_JavaVariableDeclaration_KeyDerivationAlgorithm_JavaOpaqueMethod_JavaStatement_JavaName_JavaLiteral_JavaWorkflowMethod_Task_JavaName_JavaName_SymmetricBlockCipher_JavaMethodInvocation_JavaStatement_Match_Match();
 
 	/**
 	 * Returns the meta object for the '{@link CryptoConfigToJava.Rules.PasswordBasedEncryption#isApplicable_checkCsp_CC(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp CC</em>}' operation.

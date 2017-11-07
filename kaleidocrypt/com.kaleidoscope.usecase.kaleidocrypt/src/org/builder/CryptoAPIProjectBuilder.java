@@ -1,14 +1,14 @@
 package org.builder;
 
+
+import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
-import java.util.Set;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.ControllerModule;
 import org.apache.log4j.BasicConfigurator;
@@ -45,14 +45,20 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 	
 	private IProject project;
 	private Path projectPath;
+	private final ResourceSet set;	
 	
-	private ConfigJavaFilesRelation configJavaFilesRelation;
-	private final ResourceSet set;
-	
+	// every configuration path is related to one java package path
+	private HashMap<String, String> confPathToJavaPackagePath = new HashMap<String, String>();
 	private static final Logger logger = Logger.getLogger(CryptoAPIProjectBuilder.class);
 	
+	private void initializeConfFilenameToJavaPackage() {
+		
+		confPathToJavaPackagePath.put(Paths.get("models", "SymmEnc.xmi").toString(),  Paths.get("src", "crypto").toString());
+	}
 	
 	public CryptoAPIProjectBuilder() {
+		
+		initializeConfFilenameToJavaPackage();
 		set = new ResourceSetImpl();
 		set.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());
 	    BasicConfigurator.configure();
@@ -69,33 +75,20 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		logger.info("Build is being performed.");
 		
 		project = getProject();
-		projectPath = Paths.get(project.getLocation().toString());
-		
-		this.configJavaFilesRelation  = new ConfigJavaFilesRelation(project);
+		projectPath = Paths.get(project.getLocation().toString());		
 		
 		switch (kind) {
-		case CLEAN_BUILD:
-			performClean();
-			break;
-		case FULL_BUILD:
-			logger.info("Performing full build!");
-			
-			configJavaFilesRelation.reconstructRelations();
-			Set<String> configurationModelsName = configJavaFilesRelation.getAllConfigurationModels();
-			
-			for (String configurationModelName : configurationModelsName) {
-				// performs forward transformation on every configuration model for which  
-				// there isn't corresponding java model
-				if(configJavaFilesRelation.getJavaFiles(configurationModelName).isEmpty()){ 
-					//syncForward(configurationModelName);	
-				}
-			}
-			break;
-		case AUTO_BUILD:
-		case INCREMENTAL_BUILD:
-			generateFilesIfchangeIsRelevant();
-		default:
-			break;
+			case CLEAN_BUILD:
+				performClean();
+				break;
+			case FULL_BUILD:
+				logger.info("Performing full build!");
+				break;
+			case AUTO_BUILD:
+			case INCREMENTAL_BUILD:
+				generateFilesIfchangeIsRelevant();
+			default:
+				break;
 		}
 		return null;
 	}
@@ -113,22 +106,37 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 	 * each time a user performs a change inside the /models/config.xmi file and saves the file. 
 	 * @throws CoreException
 	 */
-	private void syncForward(String configFileName, Optional<Path> initialSourceModelPath)throws CoreException{
+	
+	private String getSyncPersistanceDestinationRelPath(String sourceArtefactRelativeFilePath) {
 		
-		logger.info("Sync a java model with the configuration model " + configFileName + " is performed!");
+		String splitter = File.separator.replace("\\","\\\\");
+		String[] filePathSegments = sourceArtefactRelativeFilePath.split(splitter);
+		List<String> filePathSegmentsList = new ArrayList<String>(Arrays.asList(filePathSegments));
 		
-		Path persistenceDestination = projectPath.resolve(Paths.get("models", "gen", configFileName));
-		Path configAbsPath = projectPath.resolve(Paths.get("models", configFileName + ".xmi"));
+		filePathSegmentsList.add(filePathSegments.length - 1, "gen");
 		
-		Injector injector = Guice.createInjector(new ControllerModule(set, persistenceDestination, null, projectPath, initialSourceModelPath));
-		PersistentStateBasedController<Task, Path, JavaPackage, List<Path>, String, OperationalDelta, OperationalDelta, Path> controller = 
-				injector.getInstance(Key.get(new TypeLiteral<PersistentStateBasedController<Task, Path, JavaPackage, List<Path>, String, OperationalDelta, OperationalDelta, Path>>(){}));
+		return  String.join(File.separator, filePathSegmentsList);
+	}
+	private void syncForward(IResource sourceArtefactResource, int kindOfChange)throws CoreException{
 		
+		logger.info("Sync a java model with the configuration model is performed!");
 		
-		controller.syncForward(configAbsPath);
+		String sourceArtefactRelativeFilePath = sourceArtefactResource.getProjectRelativePath().toOSString();
+		String targetArtefactRelativeFilePath = confPathToJavaPackagePath.get(sourceArtefactRelativeFilePath);
+		String syncPersistaneDestinationRelativePath = getSyncPersistanceDestinationRelPath(sourceArtefactRelativeFilePath);
+		
+		Injector injector = Guice.createInjector(new ControllerModule(set,
+																	  projectPath.resolve(sourceArtefactRelativeFilePath),
+																	  projectPath.resolve(targetArtefactRelativeFilePath),
+																	  projectPath.resolve(syncPersistaneDestinationRelativePath)));
+		
+		PersistentStateBasedController<Task, Path, JavaPackage, Path, String, OperationalDelta, OperationalDelta, Path> controller = 
+				injector.getInstance(Key.get(new TypeLiteral<PersistentStateBasedController<Task, Path, JavaPackage, Path, String, OperationalDelta, OperationalDelta, Path>>(){}));
+		
+		controller.syncForward(projectPath.resolve(sourceArtefactRelativeFilePath));
 		
 		refreshProject();
-		logger.info("Sync a java model with the configuration model " + configFileName + " is done!");
+		logger.info("Sync a java model with the configuration model is done!");
 	}
 	
 	/**
@@ -136,29 +144,58 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 	 * each time a user performs a change inside the /src/java.xmi file and saves the file. 
 	 * @throws CoreException
 	 */
-	private void syncBackward(String configFileName)throws CoreException{
-		logger.info("Sync configuration model " + configFileName + " with a java model is performed!");
+	private void syncBackward(IResource targetArtefactResource, int kindOfChange)throws CoreException{
+		logger.info("Sync configuration model  with a java model is performed!");
 		
-		ArrayList<Path>javaFilePaths = configJavaFilesRelation.getJavaFiles(configFileName);	
-		Path absConfigFilePath = projectPath.resolve(Paths.get("models", configFileName + ".xmi"));
-		Path persistenceDestination = projectPath.resolve(Paths.get("models", "gen", configFileName));
+		String targetArtefactRelativeFilePath = targetArtefactResource.getProjectRelativePath().toOSString();
+		String sourceArtefactRelativeFilePath = confPathToJavaPackagePath.entrySet().stream()
+																					.filter(e -> e.getValue().equals(targetArtefactRelativeFilePath))
+																					.findFirst()
+																					.get()
+																					.getKey();
+		String syncPersistaneDestinationRelativePath = getSyncPersistanceDestinationRelPath(sourceArtefactRelativeFilePath);
 		
-		Injector injector = Guice.createInjector(new ControllerModule(set, persistenceDestination, absConfigFilePath, projectPath, Optional.empty()));
-		PersistentStateBasedController<Task, Path, JavaPackage, List<Path>, String, OperationalDelta, OperationalDelta, Path> controller = 
-				injector.getInstance(Key.get(new TypeLiteral<PersistentStateBasedController<Task, Path, JavaPackage, List<Path>, String, OperationalDelta, OperationalDelta, Path>>(){}));
+		Injector injector = Guice.createInjector(new ControllerModule(set,
+																	  projectPath.resolve(sourceArtefactRelativeFilePath),
+																	  projectPath.resolve(targetArtefactRelativeFilePath),
+																	  projectPath.resolve(syncPersistaneDestinationRelativePath)));
 		
-		controller.syncBackward(javaFilePaths);
+		PersistentStateBasedController<Task, Path, JavaPackage, Path, String, OperationalDelta, OperationalDelta, Path> controller = 
+				injector.getInstance(Key.get(new TypeLiteral<PersistentStateBasedController<Task, Path, JavaPackage, Path, String, OperationalDelta, OperationalDelta, Path>>(){}));
+		
+		controller.syncBackward(projectPath.resolve(targetArtefactRelativeFilePath));
 		
 		refreshProject();
-		logger.info("Sync configuration model " + configFileName + " with a java model is done!");
+		logger.info("Sync configuration model  with a java model is done!");
 	}
 	private void refreshProject() throws CoreException{
 		project.getFolder("src").refreshLocal(IResource.DEPTH_INFINITE, null);
 		project.getFolder("models").refreshLocal(IResource.DEPTH_INFINITE, null);
-		configJavaFilesRelation.reconstructRelations();
 		
 	}
 	
+	protected boolean isResourceTargetArtefact(IResource resource) {
+		
+		String changedResourceRelativeFilePath= resource.getProjectRelativePath().toOSString();
+		boolean isResourceTargetArtefact = confPathToJavaPackagePath.containsValue(changedResourceRelativeFilePath);
+		
+		return isResourceTargetArtefact;
+	}
+	protected boolean isResourceSourceArtefact(IResource resource) {
+		
+		String changedResourceRelativeFilePath= resource.getProjectRelativePath().toOSString();
+		boolean isResourceSourceArtefact = confPathToJavaPackagePath.containsKey(changedResourceRelativeFilePath);
+		
+		return isResourceSourceArtefact;
+	}
+	protected boolean isResourceToBeIgnored(IResource resource) {
+		
+		if(resource.getName().equals("bin")){
+			return true;
+		}
+		
+		return false;
+	}
 	/**
 	 * It is called for every change in a project. The method ignores changes in files that are located inside a bin folder.
 	 * The methods responses only on changes inside the config files or .java. After the change is detected depending on the file, 
@@ -167,50 +204,24 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 	 */
 	@Override
 	public boolean visit(IResourceDelta delta) throws CoreException {
+		IResource changedResource = delta.getResource();
 		
-		Pattern configFilePattern = Pattern.compile("models/[a-zA-Z]*[.]xmi", Pattern.CASE_INSENSITIVE);
-		Pattern javaFilePattern = Pattern.compile(".+[.]java", Pattern.CASE_INSENSITIVE);
+		delta.getKind();
+		//IResourceDelta.ADDED;
 		
-		String relFilePath = delta.getResource().getProjectRelativePath().toString();
-		Path absFilePath = projectPath.resolve(Paths.get(relFilePath));
-		
-		Matcher configFileMatcher = configFilePattern.matcher(relFilePath);
-	    Matcher javaFileMatcher = javaFilePattern.matcher(relFilePath);
-	    		
-		if(delta.getResource().getName().equals("bin")){
+		if(isResourceToBeIgnored(changedResource)) {
 			return false;
 		}
 		
-		if(delta.getResource().getType() != IResource.FILE)
-			return true;		
+		if(isResourceSourceArtefact(changedResource)) {
 		
-		String fileName =delta.getResource().getFullPath().removeFileExtension().lastSegment(); 
-		configJavaFilesRelation.reconstructRelations();
-		
-		if(configFileMatcher.matches()){
+			syncForward(changedResource, delta.getKind());
 			
-			if(delta.getKind() == IResourceDelta.ADDED){
-				
-				logger.info("ADDED change on a configuration model is detected!");					
-				syncForward(fileName, Optional.of(absFilePath));	
-			}
-			if(delta.getKind() == IResourceDelta.CHANGED  && 
-				configJavaFilesRelation.configurationExists(fileName)){
-		
-				logger.info("CHANGED change on a configuration model is detected!");
-				syncForward(fileName, Optional.empty());				
-			}
+		}else if(isResourceTargetArtefact(changedResource)) {
 			
-		}else if(javaFileMatcher.matches() && 
-				configJavaFilesRelation.javaFileExists(absFilePath)){
-			
-			if(delta.getKind() == IResourceDelta.CHANGED){
-				logger.info("CHANGED change on the java file is detected!");
-				String configFileName = configJavaFilesRelation.getConfigurationModel(absFilePath);
-				syncBackward(configFileName);
-			}			
-			
+			syncBackward(changedResource, delta.getKind());
 		}
+		
 		return true;
 	}
 }

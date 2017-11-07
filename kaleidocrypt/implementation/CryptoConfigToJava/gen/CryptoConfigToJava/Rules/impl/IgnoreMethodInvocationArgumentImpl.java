@@ -205,20 +205,20 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isAppropriate_BWD(Match match, JavaMethodInvocation jmi, JavaExpression argument) {
+	public boolean isAppropriate_BWD(Match match, JavaExpression argument, JavaMethodInvocation jmi) {
 
 		Object[] result1_black = IgnoreMethodInvocationArgumentImpl
-				.pattern_IgnoreMethodInvocationArgument_7_1_initialbindings_blackBBBB(this, match, jmi, argument);
+				.pattern_IgnoreMethodInvocationArgument_7_1_initialbindings_blackBBBB(this, match, argument, jmi);
 		if (result1_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[match] = " + match + ", " + "[jmi] = " + jmi + ", " + "[argument] = " + argument + ".");
+					+ "[match] = " + match + ", " + "[argument] = " + argument + ", " + "[jmi] = " + jmi + ".");
 		}
 
 		Object[] result2_bindingAndBlack = IgnoreMethodInvocationArgumentImpl
-				.pattern_IgnoreMethodInvocationArgument_7_2_SolveCSP_bindingAndBlackFBBBB(this, match, jmi, argument);
+				.pattern_IgnoreMethodInvocationArgument_7_2_SolveCSP_bindingAndBlackFBBBB(this, match, argument, jmi);
 		if (result2_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[match] = " + match + ", " + "[jmi] = " + jmi + ", " + "[argument] = " + argument + ".");
+					+ "[match] = " + match + ", " + "[argument] = " + argument + ", " + "[jmi] = " + jmi + ".");
 		}
 		CSP csp = (CSP) result2_bindingAndBlack[0];
 		// 
@@ -226,30 +226,30 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 				csp)) {
 
 			Object[] result4_black = IgnoreMethodInvocationArgumentImpl
-					.pattern_IgnoreMethodInvocationArgument_7_4_collectelementstobetranslated_blackBBB(match, jmi,
-							argument);
+					.pattern_IgnoreMethodInvocationArgument_7_4_collectelementstobetranslated_blackBBB(match, argument,
+							jmi);
 			if (result4_black == null) {
 				throw new RuntimeException("Pattern matching failed." + " Variables: " + "[match] = " + match + ", "
-						+ "[jmi] = " + jmi + ", " + "[argument] = " + argument + ".");
+						+ "[argument] = " + argument + ", " + "[jmi] = " + jmi + ".");
 			}
 			IgnoreMethodInvocationArgumentImpl
-					.pattern_IgnoreMethodInvocationArgument_7_4_collectelementstobetranslated_greenBBBF(match, jmi,
-							argument);
+					.pattern_IgnoreMethodInvocationArgument_7_4_collectelementstobetranslated_greenBBBF(match, argument,
+							jmi);
 			//nothing EMoflonEdge jmi__argument____arguments = (EMoflonEdge) result4_green[3];
 
 			Object[] result5_black = IgnoreMethodInvocationArgumentImpl
-					.pattern_IgnoreMethodInvocationArgument_7_5_collectcontextelements_blackBBB(match, jmi, argument);
+					.pattern_IgnoreMethodInvocationArgument_7_5_collectcontextelements_blackBBB(match, argument, jmi);
 			if (result5_black == null) {
 				throw new RuntimeException("Pattern matching failed." + " Variables: " + "[match] = " + match + ", "
-						+ "[jmi] = " + jmi + ", " + "[argument] = " + argument + ".");
+						+ "[argument] = " + argument + ", " + "[jmi] = " + jmi + ".");
 			}
 			IgnoreMethodInvocationArgumentImpl
 					.pattern_IgnoreMethodInvocationArgument_7_5_collectcontextelements_greenBB(match, jmi);
 
 			// 
 			IgnoreMethodInvocationArgumentImpl
-					.pattern_IgnoreMethodInvocationArgument_7_6_registerobjectstomatch_expressionBBBB(this, match, jmi,
-							argument);
+					.pattern_IgnoreMethodInvocationArgument_7_6_registerobjectstomatch_expressionBBBB(this, match,
+							argument, jmi);
 			return IgnoreMethodInvocationArgumentImpl.pattern_IgnoreMethodInvocationArgument_7_7_expressionF();
 		} else {
 			return IgnoreMethodInvocationArgumentImpl.pattern_IgnoreMethodInvocationArgument_7_8_expressionF();
@@ -271,8 +271,8 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
 					+ "[isApplicableMatch] = " + isApplicableMatch + ".");
 		}
-		JavaMethodInvocation jmi = (JavaMethodInvocation) result1_bindingAndBlack[0];
-		JavaExpression argument = (JavaExpression) result1_bindingAndBlack[1];
+		JavaExpression argument = (JavaExpression) result1_bindingAndBlack[0];
+		JavaMethodInvocation jmi = (JavaMethodInvocation) result1_bindingAndBlack[1];
 		//nothing CSP csp = (CSP) result1_bindingAndBlack[2];
 
 		Object[] result2_black = IgnoreMethodInvocationArgumentImpl
@@ -285,19 +285,19 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		Object[] result3_black = IgnoreMethodInvocationArgumentImpl
-				.pattern_IgnoreMethodInvocationArgument_8_3_bookkeepingforedges_blackBBB(ruleresult, jmi, argument);
+				.pattern_IgnoreMethodInvocationArgument_8_3_bookkeepingforedges_blackBBB(ruleresult, argument, jmi);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[ruleresult] = " + ruleresult
-					+ ", " + "[jmi] = " + jmi + ", " + "[argument] = " + argument + ".");
+					+ ", " + "[argument] = " + argument + ", " + "[jmi] = " + jmi + ".");
 		}
 		IgnoreMethodInvocationArgumentImpl
-				.pattern_IgnoreMethodInvocationArgument_8_3_bookkeepingforedges_greenBBBF(ruleresult, jmi, argument);
+				.pattern_IgnoreMethodInvocationArgument_8_3_bookkeepingforedges_greenBBBF(ruleresult, argument, jmi);
 		//nothing EMoflonEdge jmi__argument____arguments = (EMoflonEdge) result3_green[3];
 
 		// 
 		// 
 		IgnoreMethodInvocationArgumentImpl.pattern_IgnoreMethodInvocationArgument_8_5_registerobjects_expressionBBBB(
-				this, ruleresult, jmi, argument);
+				this, ruleresult, argument, jmi);
 		return IgnoreMethodInvocationArgumentImpl.pattern_IgnoreMethodInvocationArgument_8_6_expressionFB(ruleresult);
 	}
 
@@ -326,25 +326,25 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 			throw new RuntimeException(
 					"Binding in node core match failed." + " Variables: " + "[match] = " + match + ".");
 		}
-		JavaMethodInvocation jmi = (JavaMethodInvocation) result2_binding[0];
-		JavaExpression argument = (JavaExpression) result2_binding[1];
+		JavaExpression argument = (JavaExpression) result2_binding[0];
+		JavaMethodInvocation jmi = (JavaMethodInvocation) result2_binding[1];
 		for (Object[] result2_black : IgnoreMethodInvocationArgumentImpl
-				.pattern_IgnoreMethodInvocationArgument_9_2_corematch_blackBBB(jmi, argument, match)) {
+				.pattern_IgnoreMethodInvocationArgument_9_2_corematch_blackBBB(argument, jmi, match)) {
 			// ForEach 
 			for (Object[] result3_black : IgnoreMethodInvocationArgumentImpl
-					.pattern_IgnoreMethodInvocationArgument_9_3_findcontext_blackBB(jmi, argument)) {
+					.pattern_IgnoreMethodInvocationArgument_9_3_findcontext_blackBB(argument, jmi)) {
 				Object[] result3_green = IgnoreMethodInvocationArgumentImpl
-						.pattern_IgnoreMethodInvocationArgument_9_3_findcontext_greenBBFF(jmi, argument);
+						.pattern_IgnoreMethodInvocationArgument_9_3_findcontext_greenBBFF(argument, jmi);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[2];
 				//nothing EMoflonEdge jmi__argument____arguments = (EMoflonEdge) result3_green[3];
 
 				Object[] result4_bindingAndBlack = IgnoreMethodInvocationArgumentImpl
 						.pattern_IgnoreMethodInvocationArgument_9_4_solveCSP_bindingAndBlackFBBBB(this,
-								isApplicableMatch, jmi, argument);
+								isApplicableMatch, argument, jmi);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-							+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[jmi] = " + jmi + ", "
-							+ "[argument] = " + argument + ".");
+							+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[argument] = " + argument + ", "
+							+ "[jmi] = " + jmi + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// 
@@ -376,9 +376,9 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjectsToMatch_BWD(Match match, JavaMethodInvocation jmi, JavaExpression argument) {
-		match.registerObject("jmi", jmi);
+	public void registerObjectsToMatch_BWD(Match match, JavaExpression argument, JavaMethodInvocation jmi) {
 		match.registerObject("argument", argument);
+		match.registerObject("jmi", jmi);
 
 	}
 
@@ -387,7 +387,7 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isAppropriate_solveCsp_BWD(Match match, JavaMethodInvocation jmi, JavaExpression argument) {// Create CSP
+	public CSP isAppropriate_solveCsp_BWD(Match match, JavaExpression argument, JavaMethodInvocation jmi) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
 		// Create literals
@@ -416,8 +416,8 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaMethodInvocation jmi,
-			JavaExpression argument) {// Create CSP
+	public CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaExpression argument,
+			JavaMethodInvocation jmi) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -432,8 +432,8 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 		// Solve CSP
 
 		// Snapshot pattern match on which CSP is solved
-		isApplicableMatch.registerObject("jmi", jmi);
 		isApplicableMatch.registerObject("argument", argument);
+		isApplicableMatch.registerObject("jmi", jmi);
 		return csp;
 	}
 
@@ -451,9 +451,9 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_BWD(PerformRuleResult ruleresult, EObject jmi, EObject argument) {
-		ruleresult.registerObject("jmi", jmi);
+	public void registerObjects_BWD(PerformRuleResult ruleresult, EObject argument, EObject jmi) {
 		ruleresult.registerObject("argument", argument);
+		ruleresult.registerObject("jmi", jmi);
 
 	}
 
@@ -472,7 +472,7 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_BWD_EMoflonEdge_8(EMoflonEdge _edge_arguments) {
+	public EObjectContainer isAppropriate_BWD_EMoflonEdge_9(EMoflonEdge _edge_arguments) {
 
 		Object[] result1_bindingAndBlack = IgnoreMethodInvocationArgumentImpl
 				.pattern_IgnoreMethodInvocationArgument_17_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -489,8 +489,8 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 		// ForEach 
 		for (Object[] result2_black : IgnoreMethodInvocationArgumentImpl
 				.pattern_IgnoreMethodInvocationArgument_17_2_testcorematchandDECs_blackFFB(_edge_arguments)) {
-			JavaMethodInvocation jmi = (JavaMethodInvocation) result2_black[0];
-			JavaExpression argument = (JavaExpression) result2_black[1];
+			JavaExpression argument = (JavaExpression) result2_black[0];
+			JavaMethodInvocation jmi = (JavaMethodInvocation) result2_black[1];
 			Object[] result2_green = IgnoreMethodInvocationArgumentImpl
 					.pattern_IgnoreMethodInvocationArgument_17_2_testcorematchandDECs_greenFB(__eClass);
 			Match match = (Match) result2_green[0];
@@ -498,7 +498,7 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 			// 
 			if (IgnoreMethodInvocationArgumentImpl
 					.pattern_IgnoreMethodInvocationArgument_17_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBB(
-							this, match, jmi, argument)) {
+							this, match, argument, jmi)) {
 				// 
 				if (IgnoreMethodInvocationArgumentImpl
 						.pattern_IgnoreMethodInvocationArgument_17_4_Ensurethatthecorrecttypesofelementsarematched_expressionFBB(
@@ -609,15 +609,15 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[sourceMatch] = " + sourceMatch
 					+ ", " + "[targetMatch] = " + targetMatch + ".");
 		}
-		JavaMethodInvocation jmi = (JavaMethodInvocation) result2_bindingAndBlack[0];
-		JavaExpression argument = (JavaExpression) result2_bindingAndBlack[1];
+		JavaExpression argument = (JavaExpression) result2_bindingAndBlack[0];
+		JavaMethodInvocation jmi = (JavaMethodInvocation) result2_bindingAndBlack[1];
 
 		Object[] result3_bindingAndBlack = IgnoreMethodInvocationArgumentImpl
-				.pattern_IgnoreMethodInvocationArgument_20_3_solvecsp_bindingAndBlackFBBBBB(this, jmi, argument,
+				.pattern_IgnoreMethodInvocationArgument_20_3_solvecsp_bindingAndBlackFBBBBB(this, argument, jmi,
 						sourceMatch, targetMatch);
 		if (result3_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[jmi] = " + jmi + ", " + "[argument] = " + argument + ", " + "[sourceMatch] = " + sourceMatch
+					+ "[argument] = " + argument + ", " + "[jmi] = " + jmi + ", " + "[sourceMatch] = " + sourceMatch
 					+ ", " + "[targetMatch] = " + targetMatch + ".");
 		}
 		CSP csp = (CSP) result3_bindingAndBlack[0];
@@ -632,11 +632,11 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 				CCMatch ccMatch = (CCMatch) result5_green[2];
 
 				Object[] result6_black = IgnoreMethodInvocationArgumentImpl
-						.pattern_IgnoreMethodInvocationArgument_20_6_createcorrespondence_blackBBB(jmi, argument,
+						.pattern_IgnoreMethodInvocationArgument_20_6_createcorrespondence_blackBBB(argument, jmi,
 								ccMatch);
 				if (result6_black == null) {
-					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[jmi] = " + jmi + ", "
-							+ "[argument] = " + argument + ", " + "[ccMatch] = " + ccMatch + ".");
+					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[argument] = " + argument
+							+ ", " + "[jmi] = " + jmi + ", " + "[ccMatch] = " + ccMatch + ".");
 				}
 
 				Object[] result7_black = IgnoreMethodInvocationArgumentImpl
@@ -660,7 +660,7 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_CC(JavaMethodInvocation jmi, JavaExpression argument, Match sourceMatch,
+	public CSP isApplicable_solveCsp_CC(JavaExpression argument, JavaMethodInvocation jmi, Match sourceMatch,
 			Match targetMatch) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
@@ -700,9 +700,9 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean checkDEC_BWD(JavaMethodInvocation jmi, JavaExpression argument) {// 
+	public boolean checkDEC_BWD(JavaExpression argument, JavaMethodInvocation jmi) {// 
 		Object[] result1_black = IgnoreMethodInvocationArgumentImpl
-				.pattern_IgnoreMethodInvocationArgument_24_1_matchtggpattern_blackBB(jmi, argument);
+				.pattern_IgnoreMethodInvocationArgument_24_1_matchtggpattern_blackBB(argument, jmi);
 		if (result1_black != null) {
 			return IgnoreMethodInvocationArgumentImpl.pattern_IgnoreMethodInvocationArgument_24_2_expressionF();
 		} else {
@@ -759,9 +759,9 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 						throw new RuntimeException("Pattern matching failed." + " Variables: " + "[jmi] = " + jmi + ", "
 								+ "[ruleResult] = " + ruleResult + ".");
 					}
-					IgnoreMethodInvocationArgumentImpl.pattern_IgnoreMethodInvocationArgument_25_6_perform_greenBFB(jmi,
+					IgnoreMethodInvocationArgumentImpl.pattern_IgnoreMethodInvocationArgument_25_6_perform_greenFBB(jmi,
 							ruleResult);
-					//nothing JavaExpression argument = (JavaExpression) result6_green[1];
+					//nothing JavaExpression argument = (JavaExpression) result6_green[0];
 
 				} else {
 				}
@@ -830,25 +830,25 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 			return isAppropriate_checkCsp_FWD((CSP) arguments.get(0));
 		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPROPRIATE_BWD__MATCH_JAVAMETHODINVOCATION_JAVAEXPRESSION:
-			return isAppropriate_BWD((Match) arguments.get(0), (JavaMethodInvocation) arguments.get(1),
-					(JavaExpression) arguments.get(2));
+		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPROPRIATE_BWD__MATCH_JAVAEXPRESSION_JAVAMETHODINVOCATION:
+			return isAppropriate_BWD((Match) arguments.get(0), (JavaExpression) arguments.get(1),
+					(JavaMethodInvocation) arguments.get(2));
 		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___PERFORM_BWD__ISAPPLICABLEMATCH:
 			return perform_BWD((IsApplicableMatch) arguments.get(0));
 		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPLICABLE_BWD__MATCH:
 			return isApplicable_BWD((Match) arguments.get(0));
-		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_JAVAMETHODINVOCATION_JAVAEXPRESSION:
-			registerObjectsToMatch_BWD((Match) arguments.get(0), (JavaMethodInvocation) arguments.get(1),
-					(JavaExpression) arguments.get(2));
+		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_JAVAEXPRESSION_JAVAMETHODINVOCATION:
+			registerObjectsToMatch_BWD((Match) arguments.get(0), (JavaExpression) arguments.get(1),
+					(JavaMethodInvocation) arguments.get(2));
 			return null;
-		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_JAVAMETHODINVOCATION_JAVAEXPRESSION:
-			return isAppropriate_solveCsp_BWD((Match) arguments.get(0), (JavaMethodInvocation) arguments.get(1),
-					(JavaExpression) arguments.get(2));
+		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_JAVAEXPRESSION_JAVAMETHODINVOCATION:
+			return isAppropriate_solveCsp_BWD((Match) arguments.get(0), (JavaExpression) arguments.get(1),
+					(JavaMethodInvocation) arguments.get(2));
 		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPROPRIATE_CHECK_CSP_BWD__CSP:
 			return isAppropriate_checkCsp_BWD((CSP) arguments.get(0));
-		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVAMETHODINVOCATION_JAVAEXPRESSION:
-			return isApplicable_solveCsp_BWD((IsApplicableMatch) arguments.get(0),
-					(JavaMethodInvocation) arguments.get(1), (JavaExpression) arguments.get(2));
+		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVAEXPRESSION_JAVAMETHODINVOCATION:
+			return isApplicable_solveCsp_BWD((IsApplicableMatch) arguments.get(0), (JavaExpression) arguments.get(1),
+					(JavaMethodInvocation) arguments.get(2));
 		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPLICABLE_CHECK_CSP_BWD__CSP:
 			return isApplicable_checkCsp_BWD((CSP) arguments.get(0));
 		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___REGISTER_OBJECTS_BWD__PERFORMRULERESULT_EOBJECT_EOBJECT:
@@ -857,23 +857,23 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 			return null;
 		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___CHECK_TYPES_BWD__MATCH:
 			return checkTypes_BWD((Match) arguments.get(0));
-		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPROPRIATE_BWD_EMOFLON_EDGE_8__EMOFLONEDGE:
-			return isAppropriate_BWD_EMoflonEdge_8((EMoflonEdge) arguments.get(0));
+		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPROPRIATE_BWD_EMOFLON_EDGE_9__EMOFLONEDGE:
+			return isAppropriate_BWD_EMoflonEdge_9((EMoflonEdge) arguments.get(0));
 		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH:
 			return checkAttributes_BWD((TripleMatch) arguments.get(0));
 		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPLICABLE_CC__MATCH_MATCH:
 			return isApplicable_CC((Match) arguments.get(0), (Match) arguments.get(1));
-		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPLICABLE_SOLVE_CSP_CC__JAVAMETHODINVOCATION_JAVAEXPRESSION_MATCH_MATCH:
-			return isApplicable_solveCsp_CC((JavaMethodInvocation) arguments.get(0), (JavaExpression) arguments.get(1),
+		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPLICABLE_SOLVE_CSP_CC__JAVAEXPRESSION_JAVAMETHODINVOCATION_MATCH_MATCH:
+			return isApplicable_solveCsp_CC((JavaExpression) arguments.get(0), (JavaMethodInvocation) arguments.get(1),
 					(Match) arguments.get(2), (Match) arguments.get(3));
 		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPLICABLE_CHECK_CSP_CC__CSP:
 			return isApplicable_checkCsp_CC((CSP) arguments.get(0));
 		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___CHECK_DEC_FWD:
 			return checkDEC_FWD();
-		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___CHECK_DEC_BWD__JAVAMETHODINVOCATION_JAVAEXPRESSION:
-			return checkDEC_BWD((JavaMethodInvocation) arguments.get(0), (JavaExpression) arguments.get(1));
+		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___CHECK_DEC_BWD__JAVAEXPRESSION_JAVAMETHODINVOCATION:
+			return checkDEC_BWD((JavaExpression) arguments.get(0), (JavaMethodInvocation) arguments.get(1));
 		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___GENERATE_MODEL__RULEENTRYCONTAINER_JAVAMETHODINVOCATION:
 			return generateModel((RuleEntryContainer) arguments.get(0), (JavaMethodInvocation) arguments.get(1));
 		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___GENERATE_MODEL_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVAMETHODINVOCATION_MODELGENERATORRULERESULT:
@@ -954,19 +954,19 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 	}
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_7_1_initialbindings_blackBBBB(
-			IgnoreMethodInvocationArgument _this, Match match, JavaMethodInvocation jmi, JavaExpression argument) {
+			IgnoreMethodInvocationArgument _this, Match match, JavaExpression argument, JavaMethodInvocation jmi) {
 		if (!argument.equals(jmi)) {
-			return new Object[] { _this, match, jmi, argument };
+			return new Object[] { _this, match, argument, jmi };
 		}
 		return null;
 	}
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_7_2_SolveCSP_bindingFBBBB(
-			IgnoreMethodInvocationArgument _this, Match match, JavaMethodInvocation jmi, JavaExpression argument) {
-		CSP _localVariable_0 = _this.isAppropriate_solveCsp_BWD(match, jmi, argument);
+			IgnoreMethodInvocationArgument _this, Match match, JavaExpression argument, JavaMethodInvocation jmi) {
+		CSP _localVariable_0 = _this.isAppropriate_solveCsp_BWD(match, argument, jmi);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, match, jmi, argument };
+			return new Object[] { csp, _this, match, argument, jmi };
 		}
 		return null;
 	}
@@ -976,9 +976,9 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 	}
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_7_2_SolveCSP_bindingAndBlackFBBBB(
-			IgnoreMethodInvocationArgument _this, Match match, JavaMethodInvocation jmi, JavaExpression argument) {
+			IgnoreMethodInvocationArgument _this, Match match, JavaExpression argument, JavaMethodInvocation jmi) {
 		Object[] result_pattern_IgnoreMethodInvocationArgument_7_2_SolveCSP_binding = pattern_IgnoreMethodInvocationArgument_7_2_SolveCSP_bindingFBBBB(
-				_this, match, jmi, argument);
+				_this, match, argument, jmi);
 		if (result_pattern_IgnoreMethodInvocationArgument_7_2_SolveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_IgnoreMethodInvocationArgument_7_2_SolveCSP_binding[0];
 
@@ -986,7 +986,7 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 					csp);
 			if (result_pattern_IgnoreMethodInvocationArgument_7_2_SolveCSP_black != null) {
 
-				return new Object[] { csp, _this, match, jmi, argument };
+				return new Object[] { csp, _this, match, argument, jmi };
 			}
 		}
 		return null;
@@ -1000,15 +1000,15 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 	}
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_7_4_collectelementstobetranslated_blackBBB(
-			Match match, JavaMethodInvocation jmi, JavaExpression argument) {
+			Match match, JavaExpression argument, JavaMethodInvocation jmi) {
 		if (!argument.equals(jmi)) {
-			return new Object[] { match, jmi, argument };
+			return new Object[] { match, argument, jmi };
 		}
 		return null;
 	}
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_7_4_collectelementstobetranslated_greenBBBF(
-			Match match, JavaMethodInvocation jmi, JavaExpression argument) {
+			Match match, JavaExpression argument, JavaMethodInvocation jmi) {
 		EMoflonEdge jmi__argument____arguments = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		match.getToBeTranslatedNodes().add(argument);
 		String jmi__argument____arguments_name_prime = "arguments";
@@ -1016,13 +1016,13 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 		jmi__argument____arguments.setTrg(argument);
 		match.getToBeTranslatedEdges().add(jmi__argument____arguments);
 		jmi__argument____arguments.setName(jmi__argument____arguments_name_prime);
-		return new Object[] { match, jmi, argument, jmi__argument____arguments };
+		return new Object[] { match, argument, jmi, jmi__argument____arguments };
 	}
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_7_5_collectcontextelements_blackBBB(Match match,
-			JavaMethodInvocation jmi, JavaExpression argument) {
+			JavaExpression argument, JavaMethodInvocation jmi) {
 		if (!argument.equals(jmi)) {
-			return new Object[] { match, jmi, argument };
+			return new Object[] { match, argument, jmi };
 		}
 		return null;
 	}
@@ -1034,8 +1034,8 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 	}
 
 	public static final void pattern_IgnoreMethodInvocationArgument_7_6_registerobjectstomatch_expressionBBBB(
-			IgnoreMethodInvocationArgument _this, Match match, JavaMethodInvocation jmi, JavaExpression argument) {
-		_this.registerObjectsToMatch_BWD(match, jmi, argument);
+			IgnoreMethodInvocationArgument _this, Match match, JavaExpression argument, JavaMethodInvocation jmi) {
+		_this.registerObjectsToMatch_BWD(match, argument, jmi);
 
 	}
 
@@ -1051,28 +1051,28 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_8_1_performtransformation_bindingFFB(
 			IsApplicableMatch isApplicableMatch) {
-		EObject _localVariable_0 = isApplicableMatch.getObject("jmi");
-		EObject _localVariable_1 = isApplicableMatch.getObject("argument");
-		EObject tmpJmi = _localVariable_0;
-		EObject tmpArgument = _localVariable_1;
-		if (tmpJmi instanceof JavaMethodInvocation) {
-			JavaMethodInvocation jmi = (JavaMethodInvocation) tmpJmi;
-			if (tmpArgument instanceof JavaExpression) {
-				JavaExpression argument = (JavaExpression) tmpArgument;
-				return new Object[] { jmi, argument, isApplicableMatch };
+		EObject _localVariable_0 = isApplicableMatch.getObject("argument");
+		EObject _localVariable_1 = isApplicableMatch.getObject("jmi");
+		EObject tmpArgument = _localVariable_0;
+		EObject tmpJmi = _localVariable_1;
+		if (tmpArgument instanceof JavaExpression) {
+			JavaExpression argument = (JavaExpression) tmpArgument;
+			if (tmpJmi instanceof JavaMethodInvocation) {
+				JavaMethodInvocation jmi = (JavaMethodInvocation) tmpJmi;
+				return new Object[] { argument, jmi, isApplicableMatch };
 			}
 		}
 		return null;
 	}
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_8_1_performtransformation_blackBBFBB(
-			JavaMethodInvocation jmi, JavaExpression argument, IgnoreMethodInvocationArgument _this,
+			JavaExpression argument, JavaMethodInvocation jmi, IgnoreMethodInvocationArgument _this,
 			IsApplicableMatch isApplicableMatch) {
 		if (!argument.equals(jmi)) {
 			for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 				if (tmpCsp instanceof CSP) {
 					CSP csp = (CSP) tmpCsp;
-					return new Object[] { jmi, argument, csp, _this, isApplicableMatch };
+					return new Object[] { argument, jmi, csp, _this, isApplicableMatch };
 				}
 			}
 		}
@@ -1084,15 +1084,15 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 		Object[] result_pattern_IgnoreMethodInvocationArgument_8_1_performtransformation_binding = pattern_IgnoreMethodInvocationArgument_8_1_performtransformation_bindingFFB(
 				isApplicableMatch);
 		if (result_pattern_IgnoreMethodInvocationArgument_8_1_performtransformation_binding != null) {
-			JavaMethodInvocation jmi = (JavaMethodInvocation) result_pattern_IgnoreMethodInvocationArgument_8_1_performtransformation_binding[0];
-			JavaExpression argument = (JavaExpression) result_pattern_IgnoreMethodInvocationArgument_8_1_performtransformation_binding[1];
+			JavaExpression argument = (JavaExpression) result_pattern_IgnoreMethodInvocationArgument_8_1_performtransformation_binding[0];
+			JavaMethodInvocation jmi = (JavaMethodInvocation) result_pattern_IgnoreMethodInvocationArgument_8_1_performtransformation_binding[1];
 
 			Object[] result_pattern_IgnoreMethodInvocationArgument_8_1_performtransformation_black = pattern_IgnoreMethodInvocationArgument_8_1_performtransformation_blackBBFBB(
-					jmi, argument, _this, isApplicableMatch);
+					argument, jmi, _this, isApplicableMatch);
 			if (result_pattern_IgnoreMethodInvocationArgument_8_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_IgnoreMethodInvocationArgument_8_1_performtransformation_black[2];
 
-				return new Object[] { jmi, argument, csp, _this, isApplicableMatch };
+				return new Object[] { argument, jmi, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
@@ -1111,15 +1111,15 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 	}
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_8_3_bookkeepingforedges_blackBBB(
-			PerformRuleResult ruleresult, EObject jmi, EObject argument) {
+			PerformRuleResult ruleresult, EObject argument, EObject jmi) {
 		if (!argument.equals(jmi)) {
-			return new Object[] { ruleresult, jmi, argument };
+			return new Object[] { ruleresult, argument, jmi };
 		}
 		return null;
 	}
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_8_3_bookkeepingforedges_greenBBBF(
-			PerformRuleResult ruleresult, EObject jmi, EObject argument) {
+			PerformRuleResult ruleresult, EObject argument, EObject jmi) {
 		EMoflonEdge jmi__argument____arguments = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "IgnoreMethodInvocationArgument";
 		String jmi__argument____arguments_name_prime = "arguments";
@@ -1128,12 +1128,12 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 		ruleresult.getTranslatedEdges().add(jmi__argument____arguments);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
 		jmi__argument____arguments.setName(jmi__argument____arguments_name_prime);
-		return new Object[] { ruleresult, jmi, argument, jmi__argument____arguments };
+		return new Object[] { ruleresult, argument, jmi, jmi__argument____arguments };
 	}
 
 	public static final void pattern_IgnoreMethodInvocationArgument_8_5_registerobjects_expressionBBBB(
-			IgnoreMethodInvocationArgument _this, PerformRuleResult ruleresult, EObject jmi, EObject argument) {
-		_this.registerObjects_BWD(ruleresult, jmi, argument);
+			IgnoreMethodInvocationArgument _this, PerformRuleResult ruleresult, EObject argument, EObject jmi) {
+		_this.registerObjects_BWD(ruleresult, argument, jmi);
 
 	}
 
@@ -1195,61 +1195,61 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 	}
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_9_2_corematch_bindingFFB(Match match) {
-		EObject _localVariable_0 = match.getObject("jmi");
-		EObject _localVariable_1 = match.getObject("argument");
-		EObject tmpJmi = _localVariable_0;
-		EObject tmpArgument = _localVariable_1;
-		if (tmpJmi instanceof JavaMethodInvocation) {
-			JavaMethodInvocation jmi = (JavaMethodInvocation) tmpJmi;
-			if (tmpArgument instanceof JavaExpression) {
-				JavaExpression argument = (JavaExpression) tmpArgument;
-				return new Object[] { jmi, argument, match };
+		EObject _localVariable_0 = match.getObject("argument");
+		EObject _localVariable_1 = match.getObject("jmi");
+		EObject tmpArgument = _localVariable_0;
+		EObject tmpJmi = _localVariable_1;
+		if (tmpArgument instanceof JavaExpression) {
+			JavaExpression argument = (JavaExpression) tmpArgument;
+			if (tmpJmi instanceof JavaMethodInvocation) {
+				JavaMethodInvocation jmi = (JavaMethodInvocation) tmpJmi;
+				return new Object[] { argument, jmi, match };
 			}
 		}
 		return null;
 	}
 
 	public static final Iterable<Object[]> pattern_IgnoreMethodInvocationArgument_9_2_corematch_blackBBB(
-			JavaMethodInvocation jmi, JavaExpression argument, Match match) {
+			JavaExpression argument, JavaMethodInvocation jmi, Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		if (!argument.equals(jmi)) {
-			_result.add(new Object[] { jmi, argument, match });
+			_result.add(new Object[] { argument, jmi, match });
 		}
 		return _result;
 	}
 
 	public static final Iterable<Object[]> pattern_IgnoreMethodInvocationArgument_9_3_findcontext_blackBB(
-			JavaMethodInvocation jmi, JavaExpression argument) {
+			JavaExpression argument, JavaMethodInvocation jmi) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		if (!argument.equals(jmi)) {
 			if (jmi.getArguments().contains(argument)) {
-				_result.add(new Object[] { jmi, argument });
+				_result.add(new Object[] { argument, jmi });
 			}
 		}
 		return _result;
 	}
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_9_3_findcontext_greenBBFF(
-			JavaMethodInvocation jmi, JavaExpression argument) {
+			JavaExpression argument, JavaMethodInvocation jmi) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
 		EMoflonEdge jmi__argument____arguments = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String jmi__argument____arguments_name_prime = "arguments";
-		isApplicableMatch.getAllContextElements().add(jmi);
 		isApplicableMatch.getAllContextElements().add(argument);
+		isApplicableMatch.getAllContextElements().add(jmi);
 		jmi__argument____arguments.setSrc(jmi);
 		jmi__argument____arguments.setTrg(argument);
 		isApplicableMatch.getAllContextElements().add(jmi__argument____arguments);
 		jmi__argument____arguments.setName(jmi__argument____arguments_name_prime);
-		return new Object[] { jmi, argument, isApplicableMatch, jmi__argument____arguments };
+		return new Object[] { argument, jmi, isApplicableMatch, jmi__argument____arguments };
 	}
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_9_4_solveCSP_bindingFBBBB(
-			IgnoreMethodInvocationArgument _this, IsApplicableMatch isApplicableMatch, JavaMethodInvocation jmi,
-			JavaExpression argument) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_BWD(isApplicableMatch, jmi, argument);
+			IgnoreMethodInvocationArgument _this, IsApplicableMatch isApplicableMatch, JavaExpression argument,
+			JavaMethodInvocation jmi) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_BWD(isApplicableMatch, argument, jmi);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, jmi, argument };
+			return new Object[] { csp, _this, isApplicableMatch, argument, jmi };
 		}
 		return null;
 	}
@@ -1259,10 +1259,10 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 	}
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_9_4_solveCSP_bindingAndBlackFBBBB(
-			IgnoreMethodInvocationArgument _this, IsApplicableMatch isApplicableMatch, JavaMethodInvocation jmi,
-			JavaExpression argument) {
+			IgnoreMethodInvocationArgument _this, IsApplicableMatch isApplicableMatch, JavaExpression argument,
+			JavaMethodInvocation jmi) {
 		Object[] result_pattern_IgnoreMethodInvocationArgument_9_4_solveCSP_binding = pattern_IgnoreMethodInvocationArgument_9_4_solveCSP_bindingFBBBB(
-				_this, isApplicableMatch, jmi, argument);
+				_this, isApplicableMatch, argument, jmi);
 		if (result_pattern_IgnoreMethodInvocationArgument_9_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_IgnoreMethodInvocationArgument_9_4_solveCSP_binding[0];
 
@@ -1270,7 +1270,7 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 					csp);
 			if (result_pattern_IgnoreMethodInvocationArgument_9_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, jmi, argument };
+				return new Object[] { csp, _this, isApplicableMatch, argument, jmi };
 			}
 		}
 		return null;
@@ -1360,7 +1360,7 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_17_2_testcorematchandDECs_black_nac_0B(
 			JavaExpression argument) {
-		for (JavaStatement __DEC_argument_expr_341043 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaStatement __DEC_argument_expr_212926 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(argument, JavaStatement.class, "expr")) {
 			return new Object[] { argument };
 		}
@@ -1380,7 +1380,7 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 					if (jmi.getArguments().contains(argument)) {
 						if (pattern_IgnoreMethodInvocationArgument_17_2_testcorematchandDECs_black_nac_0B(
 								argument) == null) {
-							_result.add(new Object[] { jmi, argument, _edge_arguments });
+							_result.add(new Object[] { argument, jmi, _edge_arguments });
 						}
 					}
 				}
@@ -1402,8 +1402,8 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 	}
 
 	public static final boolean pattern_IgnoreMethodInvocationArgument_17_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBB(
-			IgnoreMethodInvocationArgument _this, Match match, JavaMethodInvocation jmi, JavaExpression argument) {
-		boolean _localVariable_0 = _this.isAppropriate_BWD(match, jmi, argument);
+			IgnoreMethodInvocationArgument _this, Match match, JavaExpression argument, JavaMethodInvocation jmi) {
+		boolean _localVariable_0 = _this.isAppropriate_BWD(match, argument, jmi);
 		boolean _result = Boolean.valueOf(_localVariable_0);
 		return _result;
 	}
@@ -1449,25 +1449,25 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_20_2_matchsrctrgcontext_bindingFFB(
 			Match targetMatch) {
-		EObject _localVariable_0 = targetMatch.getObject("jmi");
-		EObject _localVariable_1 = targetMatch.getObject("argument");
-		EObject tmpJmi = _localVariable_0;
-		EObject tmpArgument = _localVariable_1;
-		if (tmpJmi instanceof JavaMethodInvocation) {
-			JavaMethodInvocation jmi = (JavaMethodInvocation) tmpJmi;
-			if (tmpArgument instanceof JavaExpression) {
-				JavaExpression argument = (JavaExpression) tmpArgument;
-				return new Object[] { jmi, argument, targetMatch };
+		EObject _localVariable_0 = targetMatch.getObject("argument");
+		EObject _localVariable_1 = targetMatch.getObject("jmi");
+		EObject tmpArgument = _localVariable_0;
+		EObject tmpJmi = _localVariable_1;
+		if (tmpArgument instanceof JavaExpression) {
+			JavaExpression argument = (JavaExpression) tmpArgument;
+			if (tmpJmi instanceof JavaMethodInvocation) {
+				JavaMethodInvocation jmi = (JavaMethodInvocation) tmpJmi;
+				return new Object[] { argument, jmi, targetMatch };
 			}
 		}
 		return null;
 	}
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_20_2_matchsrctrgcontext_blackBBBB(
-			JavaMethodInvocation jmi, JavaExpression argument, Match sourceMatch, Match targetMatch) {
+			JavaExpression argument, JavaMethodInvocation jmi, Match sourceMatch, Match targetMatch) {
 		if (!argument.equals(jmi)) {
 			if (!sourceMatch.equals(targetMatch)) {
-				return new Object[] { jmi, argument, sourceMatch, targetMatch };
+				return new Object[] { argument, jmi, sourceMatch, targetMatch };
 			}
 		}
 		return null;
@@ -1478,26 +1478,26 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 		Object[] result_pattern_IgnoreMethodInvocationArgument_20_2_matchsrctrgcontext_binding = pattern_IgnoreMethodInvocationArgument_20_2_matchsrctrgcontext_bindingFFB(
 				targetMatch);
 		if (result_pattern_IgnoreMethodInvocationArgument_20_2_matchsrctrgcontext_binding != null) {
-			JavaMethodInvocation jmi = (JavaMethodInvocation) result_pattern_IgnoreMethodInvocationArgument_20_2_matchsrctrgcontext_binding[0];
-			JavaExpression argument = (JavaExpression) result_pattern_IgnoreMethodInvocationArgument_20_2_matchsrctrgcontext_binding[1];
+			JavaExpression argument = (JavaExpression) result_pattern_IgnoreMethodInvocationArgument_20_2_matchsrctrgcontext_binding[0];
+			JavaMethodInvocation jmi = (JavaMethodInvocation) result_pattern_IgnoreMethodInvocationArgument_20_2_matchsrctrgcontext_binding[1];
 
 			Object[] result_pattern_IgnoreMethodInvocationArgument_20_2_matchsrctrgcontext_black = pattern_IgnoreMethodInvocationArgument_20_2_matchsrctrgcontext_blackBBBB(
-					jmi, argument, sourceMatch, targetMatch);
+					argument, jmi, sourceMatch, targetMatch);
 			if (result_pattern_IgnoreMethodInvocationArgument_20_2_matchsrctrgcontext_black != null) {
 
-				return new Object[] { jmi, argument, sourceMatch, targetMatch };
+				return new Object[] { argument, jmi, sourceMatch, targetMatch };
 			}
 		}
 		return null;
 	}
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_20_3_solvecsp_bindingFBBBBB(
-			IgnoreMethodInvocationArgument _this, JavaMethodInvocation jmi, JavaExpression argument, Match sourceMatch,
+			IgnoreMethodInvocationArgument _this, JavaExpression argument, JavaMethodInvocation jmi, Match sourceMatch,
 			Match targetMatch) {
-		CSP _localVariable_2 = _this.isApplicable_solveCsp_CC(jmi, argument, sourceMatch, targetMatch);
+		CSP _localVariable_2 = _this.isApplicable_solveCsp_CC(argument, jmi, sourceMatch, targetMatch);
 		CSP csp = _localVariable_2;
 		if (csp != null) {
-			return new Object[] { csp, _this, jmi, argument, sourceMatch, targetMatch };
+			return new Object[] { csp, _this, argument, jmi, sourceMatch, targetMatch };
 		}
 		return null;
 	}
@@ -1507,10 +1507,10 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 	}
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_20_3_solvecsp_bindingAndBlackFBBBBB(
-			IgnoreMethodInvocationArgument _this, JavaMethodInvocation jmi, JavaExpression argument, Match sourceMatch,
+			IgnoreMethodInvocationArgument _this, JavaExpression argument, JavaMethodInvocation jmi, Match sourceMatch,
 			Match targetMatch) {
 		Object[] result_pattern_IgnoreMethodInvocationArgument_20_3_solvecsp_binding = pattern_IgnoreMethodInvocationArgument_20_3_solvecsp_bindingFBBBBB(
-				_this, jmi, argument, sourceMatch, targetMatch);
+				_this, argument, jmi, sourceMatch, targetMatch);
 		if (result_pattern_IgnoreMethodInvocationArgument_20_3_solvecsp_binding != null) {
 			CSP csp = (CSP) result_pattern_IgnoreMethodInvocationArgument_20_3_solvecsp_binding[0];
 
@@ -1518,7 +1518,7 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 					csp);
 			if (result_pattern_IgnoreMethodInvocationArgument_20_3_solvecsp_black != null) {
 
-				return new Object[] { csp, _this, jmi, argument, sourceMatch, targetMatch };
+				return new Object[] { csp, _this, argument, jmi, sourceMatch, targetMatch };
 			}
 		}
 		return null;
@@ -1550,9 +1550,9 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 	}
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_20_6_createcorrespondence_blackBBB(
-			JavaMethodInvocation jmi, JavaExpression argument, CCMatch ccMatch) {
+			JavaExpression argument, JavaMethodInvocation jmi, CCMatch ccMatch) {
 		if (!argument.equals(jmi)) {
-			return new Object[] { jmi, argument, ccMatch };
+			return new Object[] { argument, jmi, ccMatch };
 		}
 		return null;
 	}
@@ -1590,7 +1590,7 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_24_1_matchtggpattern_black_nac_0B(
 			JavaExpression argument) {
-		for (JavaStatement __DEC_argument_expr_298565 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaStatement __DEC_argument_expr_776851 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(argument, JavaStatement.class, "expr")) {
 			return new Object[] { argument };
 		}
@@ -1598,11 +1598,11 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 	}
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_24_1_matchtggpattern_blackBB(
-			JavaMethodInvocation jmi, JavaExpression argument) {
+			JavaExpression argument, JavaMethodInvocation jmi) {
 		if (!argument.equals(jmi)) {
 			if (jmi.getArguments().contains(argument)) {
 				if (pattern_IgnoreMethodInvocationArgument_24_1_matchtggpattern_black_nac_0B(argument) == null) {
-					return new Object[] { jmi, argument };
+					return new Object[] { argument, jmi };
 				}
 			}
 		}
@@ -1707,7 +1707,7 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 		return new Object[] { jmi, ruleResult };
 	}
 
-	public static final Object[] pattern_IgnoreMethodInvocationArgument_25_6_perform_greenBFB(JavaMethodInvocation jmi,
+	public static final Object[] pattern_IgnoreMethodInvocationArgument_25_6_perform_greenFBB(JavaMethodInvocation jmi,
 			ModelgeneratorRuleResult ruleResult) {
 		JavaExpression argument = SimpleJavaFactory.eINSTANCE.createJavaExpression();
 		boolean ruleResult_success_prime = Boolean.valueOf(true);
@@ -1717,7 +1717,7 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 		ruleResult.setSuccess(Boolean.valueOf(ruleResult_success_prime));
 		int ruleResult_performCount_prime = Integer.valueOf(_localVariable_0);
 		ruleResult.setPerformCount(Integer.valueOf(ruleResult_performCount_prime));
-		return new Object[] { jmi, argument, ruleResult };
+		return new Object[] { argument, jmi, ruleResult };
 	}
 
 	public static final ModelgeneratorRuleResult pattern_IgnoreMethodInvocationArgument_25_7_expressionFB(

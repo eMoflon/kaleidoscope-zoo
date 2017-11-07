@@ -40,27 +40,6 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass securePasswordTaskEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass performGetKeyMethodEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass symmetricEncryptionTaskEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass symmetricBlockCipherImportToImportEClass = null;
 
 	/**
@@ -68,7 +47,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass ignoreMethodInvocationArgumentEClass = null;
+	private EClass securePasswordTaskEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -83,6 +62,27 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * @generated
 	 */
 	private EClass keyDerivationAlgorithmImportToImportEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass performGetKeyMethodEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ignoreMethodInvocationArgumentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass symmetricEncryptionTaskEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -179,10 +179,311 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSymmetricBlockCipherImportToImport() {
+		if (symmetricBlockCipherImportToImportEClass == null) {
+			symmetricBlockCipherImportToImportEClass = (EClass) EPackage.Registry.INSTANCE
+					.getEPackage(RulesPackage.eNS_URI).getEClassifiers().get(0);
+		}
+		return symmetricBlockCipherImportToImportEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_FWD__Match_Import_SymmetricBlockCipher() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__Perform_FWD__IsApplicableMatch() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_FWD__Match() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__RegisterObjectsToMatch_FWD__Match_Import_SymmetricBlockCipher() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_solveCsp_FWD__Match_Import_SymmetricBlockCipher() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_checkCsp_FWD__CSP() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_solveCsp_FWD__IsApplicableMatch_Import_SymmetricBlockCipher_SymmetricBlockCipherToJcu_JavaCompilationUnit() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_checkCsp_FWD__CSP() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__CheckTypes_FWD__Match() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_BWD__Match_JavaImport_JavaCompilationUnit() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__Perform_BWD__IsApplicableMatch() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_BWD__Match() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__RegisterObjectsToMatch_BWD__Match_JavaImport_JavaCompilationUnit() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_solveCsp_BWD__Match_JavaImport_JavaCompilationUnit() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_checkCsp_BWD__CSP() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_solveCsp_BWD__IsApplicableMatch_SymmetricBlockCipher_JavaImport_SymmetricBlockCipherToJcu_JavaCompilationUnit() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_checkCsp_BWD__CSP() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(17);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(18);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__CheckTypes_BWD__Match() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(19);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_FWD_EMoflonEdge_5__EMoflonEdge() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(20);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_BWD_EMoflonEdge_5__EMoflonEdge() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(21);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__CheckAttributes_FWD__TripleMatch() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(22);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__CheckAttributes_BWD__TripleMatch() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(23);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_CC__Match_Match() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(24);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_solveCsp_CC__Import_SymmetricBlockCipher_JavaImport_JavaCompilationUnit_Match_Match() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(25);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_checkCsp_CC__CSP() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(26);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__CheckDEC_FWD__Import_SymmetricBlockCipher() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(27);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__CheckDEC_BWD__JavaImport_JavaCompilationUnit() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(28);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__GenerateModel__RuleEntryContainer_SymmetricBlockCipherToJcu() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(29);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__GenerateModel_solveCsp_BWD__IsApplicableMatch_SymmetricBlockCipher_SymmetricBlockCipherToJcu_JavaCompilationUnit_ModelgeneratorRuleResult() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(30);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__GenerateModel_checkCsp_BWD__CSP() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(31);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSecurePasswordTask() {
 		if (securePasswordTaskEClass == null) {
 			securePasswordTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
-					.getEClassifiers().get(0);
+					.getEClassifiers().get(1);
 		}
 		return securePasswordTaskEClass;
 	}
@@ -372,7 +673,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSecurePasswordTask__IsAppropriate_FWD_EMoflonEdge_5__EMoflonEdge() {
+	public EOperation getSecurePasswordTask__IsAppropriate_FWD_EMoflonEdge_6__EMoflonEdge() {
 		return getSecurePasswordTask().getEOperations().get(20);
 	}
 
@@ -381,7 +682,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSecurePasswordTask__IsAppropriate_BWD_EMoflonEdge_5__EMoflonEdge() {
+	public EOperation getSecurePasswordTask__IsAppropriate_BWD_EMoflonEdge_6__EMoflonEdge() {
 		return getSecurePasswordTask().getEOperations().get(21);
 	}
 
@@ -417,7 +718,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSecurePasswordTask__IsApplicable_solveCsp_CC__JavaLiteral_JavaPackage_JavaLiteral_JavaVariableDeclaration_JavaMethodInvocation_KeyDerivationAlgorithm_JavaOpaqueMethod_JavaLiteral_Task_JavaName_JavaStatement_JavaWorkflowMethod_JavaCompilationUnit_Match_Match() {
+	public EOperation getSecurePasswordTask__IsApplicable_solveCsp_CC__JavaLiteral_JavaPackage_JavaLiteral_JavaVariableDeclaration_KeyDerivationAlgorithm_JavaMethodInvocation_JavaOpaqueMethod_JavaLiteral_Task_JavaName_JavaStatement_JavaWorkflowMethod_JavaCompilationUnit_Match_Match() {
 		return getSecurePasswordTask().getEOperations().get(25);
 	}
 
@@ -480,10 +781,576 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getIgnoreOpaqueMethod() {
+		if (ignoreOpaqueMethodEClass == null) {
+			ignoreOpaqueMethodEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
+					.getEClassifiers().get(2);
+		}
+		return ignoreOpaqueMethodEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__IsAppropriate_FWD__Match() {
+		return getIgnoreOpaqueMethod().getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__Perform_FWD__IsApplicableMatch() {
+		return getIgnoreOpaqueMethod().getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__IsApplicable_FWD__Match() {
+		return getIgnoreOpaqueMethod().getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__RegisterObjectsToMatch_FWD__Match() {
+		return getIgnoreOpaqueMethod().getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__IsAppropriate_solveCsp_FWD__Match() {
+		return getIgnoreOpaqueMethod().getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__IsAppropriate_checkCsp_FWD__CSP() {
+		return getIgnoreOpaqueMethod().getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__CheckTypes_FWD__Match() {
+		return getIgnoreOpaqueMethod().getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__IsAppropriate_BWD__Match_JavaOpaqueMethod_JavaCompilationUnit() {
+		return getIgnoreOpaqueMethod().getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__Perform_BWD__IsApplicableMatch() {
+		return getIgnoreOpaqueMethod().getEOperations().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__IsApplicable_BWD__Match() {
+		return getIgnoreOpaqueMethod().getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__RegisterObjectsToMatch_BWD__Match_JavaOpaqueMethod_JavaCompilationUnit() {
+		return getIgnoreOpaqueMethod().getEOperations().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__IsAppropriate_solveCsp_BWD__Match_JavaOpaqueMethod_JavaCompilationUnit() {
+		return getIgnoreOpaqueMethod().getEOperations().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__IsAppropriate_checkCsp_BWD__CSP() {
+		return getIgnoreOpaqueMethod().getEOperations().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaOpaqueMethod_JavaCompilationUnit() {
+		return getIgnoreOpaqueMethod().getEOperations().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__IsApplicable_checkCsp_BWD__CSP() {
+		return getIgnoreOpaqueMethod().getEOperations().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__RegisterObjects_BWD__PerformRuleResult_EObject_EObject() {
+		return getIgnoreOpaqueMethod().getEOperations().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__CheckTypes_BWD__Match() {
+		return getIgnoreOpaqueMethod().getEOperations().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__IsAppropriate_BWD_EMoflonEdge_7__EMoflonEdge() {
+		return getIgnoreOpaqueMethod().getEOperations().get(17);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__CheckAttributes_FWD__TripleMatch() {
+		return getIgnoreOpaqueMethod().getEOperations().get(18);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__CheckAttributes_BWD__TripleMatch() {
+		return getIgnoreOpaqueMethod().getEOperations().get(19);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__IsApplicable_CC__Match_Match() {
+		return getIgnoreOpaqueMethod().getEOperations().get(20);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__IsApplicable_solveCsp_CC__JavaOpaqueMethod_JavaCompilationUnit_Match_Match() {
+		return getIgnoreOpaqueMethod().getEOperations().get(21);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__IsApplicable_checkCsp_CC__CSP() {
+		return getIgnoreOpaqueMethod().getEOperations().get(22);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__CheckDEC_FWD() {
+		return getIgnoreOpaqueMethod().getEOperations().get(23);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__CheckDEC_BWD__JavaOpaqueMethod_JavaCompilationUnit() {
+		return getIgnoreOpaqueMethod().getEOperations().get(24);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__GenerateModel__RuleEntryContainer_JavaCompilationUnit() {
+		return getIgnoreOpaqueMethod().getEOperations().get(25);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__GenerateModel_solveCsp_BWD__IsApplicableMatch_JavaCompilationUnit_ModelgeneratorRuleResult() {
+		return getIgnoreOpaqueMethod().getEOperations().get(26);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreOpaqueMethod__GenerateModel_checkCsp_BWD__CSP() {
+		return getIgnoreOpaqueMethod().getEOperations().get(27);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getKeyDerivationAlgorithmImportToImport() {
+		if (keyDerivationAlgorithmImportToImportEClass == null) {
+			keyDerivationAlgorithmImportToImportEClass = (EClass) EPackage.Registry.INSTANCE
+					.getEPackage(RulesPackage.eNS_URI).getEClassifiers().get(3);
+		}
+		return keyDerivationAlgorithmImportToImportEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_FWD__Match_KeyDerivationAlgorithm_Import() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__Perform_FWD__IsApplicableMatch() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_FWD__Match() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjectsToMatch_FWD__Match_KeyDerivationAlgorithm_Import() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_solveCsp_FWD__Match_KeyDerivationAlgorithm_Import() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_checkCsp_FWD__CSP() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_solveCsp_FWD__IsApplicableMatch_JavaCompilationUnit_KeyDerivationAlgorithmToJcu_KeyDerivationAlgorithm_Import() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_checkCsp_FWD__CSP() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__CheckTypes_FWD__Match() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_BWD__Match_JavaImport_JavaCompilationUnit() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__Perform_BWD__IsApplicableMatch() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_BWD__Match() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjectsToMatch_BWD__Match_JavaImport_JavaCompilationUnit() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_solveCsp_BWD__Match_JavaImport_JavaCompilationUnit() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_checkCsp_BWD__CSP() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaImport_JavaCompilationUnit_KeyDerivationAlgorithmToJcu_KeyDerivationAlgorithm() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_checkCsp_BWD__CSP() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(17);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(18);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__CheckTypes_BWD__Match() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(19);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_FWD_EMoflonEdge_7__EMoflonEdge() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(20);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_BWD_EMoflonEdge_8__EMoflonEdge() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(21);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__CheckAttributes_FWD__TripleMatch() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(22);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__CheckAttributes_BWD__TripleMatch() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(23);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_CC__Match_Match() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(24);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_solveCsp_CC__JavaImport_JavaCompilationUnit_KeyDerivationAlgorithm_Import_Match_Match() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(25);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_checkCsp_CC__CSP() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(26);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__CheckDEC_FWD__KeyDerivationAlgorithm_Import() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(27);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__CheckDEC_BWD__JavaImport_JavaCompilationUnit() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(28);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__GenerateModel__RuleEntryContainer_KeyDerivationAlgorithmToJcu() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(29);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__GenerateModel_solveCsp_BWD__IsApplicableMatch_JavaCompilationUnit_KeyDerivationAlgorithmToJcu_KeyDerivationAlgorithm_ModelgeneratorRuleResult() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(30);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__GenerateModel_checkCsp_BWD__CSP() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(31);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPerformGetKeyMethod() {
 		if (performGetKeyMethodEClass == null) {
 			performGetKeyMethodEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
-					.getEClassifiers().get(1);
+					.getEClassifiers().get(4);
 		}
 		return performGetKeyMethodEClass;
 	}
@@ -745,612 +1612,10 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymmetricEncryptionTask() {
-		if (symmetricEncryptionTaskEClass == null) {
-			symmetricEncryptionTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
-					.getEClassifiers().get(2);
-		}
-		return symmetricEncryptionTaskEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__IsAppropriate_FWD__Match_Task_SymmetricBlockCipher() {
-		return getSymmetricEncryptionTask().getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__Perform_FWD__IsApplicableMatch() {
-		return getSymmetricEncryptionTask().getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__IsApplicable_FWD__Match() {
-		return getSymmetricEncryptionTask().getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__RegisterObjectsToMatch_FWD__Match_Task_SymmetricBlockCipher() {
-		return getSymmetricEncryptionTask().getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__IsAppropriate_solveCsp_FWD__Match_Task_SymmetricBlockCipher() {
-		return getSymmetricEncryptionTask().getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__IsAppropriate_checkCsp_FWD__CSP() {
-		return getSymmetricEncryptionTask().getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__IsApplicable_solveCsp_FWD__IsApplicableMatch_Task_SymmetricBlockCipher() {
-		return getSymmetricEncryptionTask().getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__IsApplicable_checkCsp_FWD__CSP() {
-		return getSymmetricEncryptionTask().getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getSymmetricEncryptionTask().getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__CheckTypes_FWD__Match() {
-		return getSymmetricEncryptionTask().getEOperations().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__IsAppropriate_BWD__Match_JavaName_JavaWorkflowMethod_JavaCompilationUnit_JavaMethodInvocation_JavaOpaqueMethod_JavaVariableDeclaration_JavaName_JavaVariableDeclaration_JavaLiteral_JavaStatement_JavaPackage() {
-		return getSymmetricEncryptionTask().getEOperations().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__Perform_BWD__IsApplicableMatch() {
-		return getSymmetricEncryptionTask().getEOperations().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__IsApplicable_BWD__Match() {
-		return getSymmetricEncryptionTask().getEOperations().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__RegisterObjectsToMatch_BWD__Match_JavaName_JavaWorkflowMethod_JavaCompilationUnit_JavaMethodInvocation_JavaOpaqueMethod_JavaVariableDeclaration_JavaName_JavaVariableDeclaration_JavaLiteral_JavaStatement_JavaPackage() {
-		return getSymmetricEncryptionTask().getEOperations().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__IsAppropriate_solveCsp_BWD__Match_JavaName_JavaWorkflowMethod_JavaCompilationUnit_JavaMethodInvocation_JavaOpaqueMethod_JavaVariableDeclaration_JavaName_JavaVariableDeclaration_JavaLiteral_JavaStatement_JavaPackage() {
-		return getSymmetricEncryptionTask().getEOperations().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__IsAppropriate_checkCsp_BWD__CSP() {
-		return getSymmetricEncryptionTask().getEOperations().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaName_JavaWorkflowMethod_JavaCompilationUnit_JavaMethodInvocation_JavaOpaqueMethod_JavaVariableDeclaration_JavaName_JavaVariableDeclaration_JavaLiteral_JavaStatement_JavaPackage() {
-		return getSymmetricEncryptionTask().getEOperations().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__IsApplicable_checkCsp_BWD__CSP() {
-		return getSymmetricEncryptionTask().getEOperations().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getSymmetricEncryptionTask().getEOperations().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__CheckTypes_BWD__Match() {
-		return getSymmetricEncryptionTask().getEOperations().get(19);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__IsAppropriate_FWD_EMoflonEdge_6__EMoflonEdge() {
-		return getSymmetricEncryptionTask().getEOperations().get(20);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__IsAppropriate_BWD_EMoflonEdge_6__EMoflonEdge() {
-		return getSymmetricEncryptionTask().getEOperations().get(21);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__CheckAttributes_FWD__TripleMatch() {
-		return getSymmetricEncryptionTask().getEOperations().get(22);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__CheckAttributes_BWD__TripleMatch() {
-		return getSymmetricEncryptionTask().getEOperations().get(23);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__IsApplicable_CC__Match_Match() {
-		return getSymmetricEncryptionTask().getEOperations().get(24);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__IsApplicable_solveCsp_CC__JavaName_JavaWorkflowMethod_JavaCompilationUnit_Task_JavaMethodInvocation_JavaOpaqueMethod_JavaVariableDeclaration_JavaName_JavaVariableDeclaration_SymmetricBlockCipher_JavaLiteral_JavaStatement_JavaPackage_Match_Match() {
-		return getSymmetricEncryptionTask().getEOperations().get(25);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__IsApplicable_checkCsp_CC__CSP() {
-		return getSymmetricEncryptionTask().getEOperations().get(26);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__CheckDEC_FWD__Task_SymmetricBlockCipher() {
-		return getSymmetricEncryptionTask().getEOperations().get(27);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__CheckDEC_BWD__JavaName_JavaWorkflowMethod_JavaCompilationUnit_JavaMethodInvocation_JavaOpaqueMethod_JavaVariableDeclaration_JavaName_JavaVariableDeclaration_JavaLiteral_JavaStatement_JavaPackage() {
-		return getSymmetricEncryptionTask().getEOperations().get(28);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__GenerateModel__RuleEntryContainer() {
-		return getSymmetricEncryptionTask().getEOperations().get(29);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__GenerateModel_solveCsp_BWD__IsApplicableMatch_ModelgeneratorRuleResult() {
-		return getSymmetricEncryptionTask().getEOperations().get(30);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricEncryptionTask__GenerateModel_checkCsp_BWD__CSP() {
-		return getSymmetricEncryptionTask().getEOperations().get(31);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSymmetricBlockCipherImportToImport() {
-		if (symmetricBlockCipherImportToImportEClass == null) {
-			symmetricBlockCipherImportToImportEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(RulesPackage.eNS_URI).getEClassifiers().get(3);
-		}
-		return symmetricBlockCipherImportToImportEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_FWD__Match_Import_SymmetricBlockCipher() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__Perform_FWD__IsApplicableMatch() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_FWD__Match() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__RegisterObjectsToMatch_FWD__Match_Import_SymmetricBlockCipher() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_solveCsp_FWD__Match_Import_SymmetricBlockCipher() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_checkCsp_FWD__CSP() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_solveCsp_FWD__IsApplicableMatch_JavaCompilationUnit_Import_SymmetricBlockCipherToJcu_SymmetricBlockCipher() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_checkCsp_FWD__CSP() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__CheckTypes_FWD__Match() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_BWD__Match_JavaImport_JavaCompilationUnit() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__Perform_BWD__IsApplicableMatch() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_BWD__Match() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__RegisterObjectsToMatch_BWD__Match_JavaImport_JavaCompilationUnit() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_solveCsp_BWD__Match_JavaImport_JavaCompilationUnit() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_checkCsp_BWD__CSP() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaImport_JavaCompilationUnit_SymmetricBlockCipherToJcu_SymmetricBlockCipher() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_checkCsp_BWD__CSP() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__CheckTypes_BWD__Match() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(19);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_FWD_EMoflonEdge_7__EMoflonEdge() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(20);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_BWD_EMoflonEdge_7__EMoflonEdge() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(21);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__CheckAttributes_FWD__TripleMatch() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(22);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__CheckAttributes_BWD__TripleMatch() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(23);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_CC__Match_Match() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(24);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_solveCsp_CC__JavaImport_JavaCompilationUnit_Import_SymmetricBlockCipher_Match_Match() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(25);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_checkCsp_CC__CSP() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(26);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__CheckDEC_FWD__Import_SymmetricBlockCipher() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(27);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__CheckDEC_BWD__JavaImport_JavaCompilationUnit() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(28);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__GenerateModel__RuleEntryContainer_SymmetricBlockCipherToJcu() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(29);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__GenerateModel_solveCsp_BWD__IsApplicableMatch_JavaCompilationUnit_SymmetricBlockCipherToJcu_SymmetricBlockCipher_ModelgeneratorRuleResult() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(30);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymmetricBlockCipherImportToImport__GenerateModel_checkCsp_BWD__CSP() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(31);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getIgnoreMethodInvocationArgument() {
 		if (ignoreMethodInvocationArgumentEClass == null) {
 			ignoreMethodInvocationArgumentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
-					.getEClassifiers().get(4);
+					.getEClassifiers().get(5);
 		}
 		return ignoreMethodInvocationArgumentEClass;
 	}
@@ -1423,7 +1688,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreMethodInvocationArgument__IsAppropriate_BWD__Match_JavaMethodInvocation_JavaExpression() {
+	public EOperation getIgnoreMethodInvocationArgument__IsAppropriate_BWD__Match_JavaExpression_JavaMethodInvocation() {
 		return getIgnoreMethodInvocationArgument().getEOperations().get(7);
 	}
 
@@ -1450,7 +1715,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreMethodInvocationArgument__RegisterObjectsToMatch_BWD__Match_JavaMethodInvocation_JavaExpression() {
+	public EOperation getIgnoreMethodInvocationArgument__RegisterObjectsToMatch_BWD__Match_JavaExpression_JavaMethodInvocation() {
 		return getIgnoreMethodInvocationArgument().getEOperations().get(10);
 	}
 
@@ -1459,7 +1724,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreMethodInvocationArgument__IsAppropriate_solveCsp_BWD__Match_JavaMethodInvocation_JavaExpression() {
+	public EOperation getIgnoreMethodInvocationArgument__IsAppropriate_solveCsp_BWD__Match_JavaExpression_JavaMethodInvocation() {
 		return getIgnoreMethodInvocationArgument().getEOperations().get(11);
 	}
 
@@ -1477,7 +1742,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreMethodInvocationArgument__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaMethodInvocation_JavaExpression() {
+	public EOperation getIgnoreMethodInvocationArgument__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaExpression_JavaMethodInvocation() {
 		return getIgnoreMethodInvocationArgument().getEOperations().get(13);
 	}
 
@@ -1513,7 +1778,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreMethodInvocationArgument__IsAppropriate_BWD_EMoflonEdge_8__EMoflonEdge() {
+	public EOperation getIgnoreMethodInvocationArgument__IsAppropriate_BWD_EMoflonEdge_9__EMoflonEdge() {
 		return getIgnoreMethodInvocationArgument().getEOperations().get(17);
 	}
 
@@ -1549,7 +1814,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreMethodInvocationArgument__IsApplicable_solveCsp_CC__JavaMethodInvocation_JavaExpression_Match_Match() {
+	public EOperation getIgnoreMethodInvocationArgument__IsApplicable_solveCsp_CC__JavaExpression_JavaMethodInvocation_Match_Match() {
 		return getIgnoreMethodInvocationArgument().getEOperations().get(21);
 	}
 
@@ -1576,7 +1841,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreMethodInvocationArgument__CheckDEC_BWD__JavaMethodInvocation_JavaExpression() {
+	public EOperation getIgnoreMethodInvocationArgument__CheckDEC_BWD__JavaExpression_JavaMethodInvocation() {
 		return getIgnoreMethodInvocationArgument().getEOperations().get(24);
 	}
 
@@ -1612,12 +1877,12 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIgnoreOpaqueMethod() {
-		if (ignoreOpaqueMethodEClass == null) {
-			ignoreOpaqueMethodEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
-					.getEClassifiers().get(5);
+	public EClass getSymmetricEncryptionTask() {
+		if (symmetricEncryptionTaskEClass == null) {
+			symmetricEncryptionTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
+					.getEClassifiers().get(6);
 		}
-		return ignoreOpaqueMethodEClass;
+		return symmetricEncryptionTaskEClass;
 	}
 
 	/**
@@ -1625,8 +1890,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__IsAppropriate_FWD__Match() {
-		return getIgnoreOpaqueMethod().getEOperations().get(0);
+	public EOperation getSymmetricEncryptionTask__IsAppropriate_FWD__Match_SymmetricBlockCipher_Task() {
+		return getSymmetricEncryptionTask().getEOperations().get(0);
 	}
 
 	/**
@@ -1634,8 +1899,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__Perform_FWD__IsApplicableMatch() {
-		return getIgnoreOpaqueMethod().getEOperations().get(1);
+	public EOperation getSymmetricEncryptionTask__Perform_FWD__IsApplicableMatch() {
+		return getSymmetricEncryptionTask().getEOperations().get(1);
 	}
 
 	/**
@@ -1643,8 +1908,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__IsApplicable_FWD__Match() {
-		return getIgnoreOpaqueMethod().getEOperations().get(2);
+	public EOperation getSymmetricEncryptionTask__IsApplicable_FWD__Match() {
+		return getSymmetricEncryptionTask().getEOperations().get(2);
 	}
 
 	/**
@@ -1652,8 +1917,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__RegisterObjectsToMatch_FWD__Match() {
-		return getIgnoreOpaqueMethod().getEOperations().get(3);
+	public EOperation getSymmetricEncryptionTask__RegisterObjectsToMatch_FWD__Match_SymmetricBlockCipher_Task() {
+		return getSymmetricEncryptionTask().getEOperations().get(3);
 	}
 
 	/**
@@ -1661,8 +1926,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__IsAppropriate_solveCsp_FWD__Match() {
-		return getIgnoreOpaqueMethod().getEOperations().get(4);
+	public EOperation getSymmetricEncryptionTask__IsAppropriate_solveCsp_FWD__Match_SymmetricBlockCipher_Task() {
+		return getSymmetricEncryptionTask().getEOperations().get(4);
 	}
 
 	/**
@@ -1670,8 +1935,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__IsAppropriate_checkCsp_FWD__CSP() {
-		return getIgnoreOpaqueMethod().getEOperations().get(5);
+	public EOperation getSymmetricEncryptionTask__IsAppropriate_checkCsp_FWD__CSP() {
+		return getSymmetricEncryptionTask().getEOperations().get(5);
 	}
 
 	/**
@@ -1679,8 +1944,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__CheckTypes_FWD__Match() {
-		return getIgnoreOpaqueMethod().getEOperations().get(6);
+	public EOperation getSymmetricEncryptionTask__IsApplicable_solveCsp_FWD__IsApplicableMatch_SymmetricBlockCipher_Task() {
+		return getSymmetricEncryptionTask().getEOperations().get(6);
 	}
 
 	/**
@@ -1688,8 +1953,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__IsAppropriate_BWD__Match_JavaCompilationUnit_JavaOpaqueMethod() {
-		return getIgnoreOpaqueMethod().getEOperations().get(7);
+	public EOperation getSymmetricEncryptionTask__IsApplicable_checkCsp_FWD__CSP() {
+		return getSymmetricEncryptionTask().getEOperations().get(7);
 	}
 
 	/**
@@ -1697,8 +1962,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__Perform_BWD__IsApplicableMatch() {
-		return getIgnoreOpaqueMethod().getEOperations().get(8);
+	public EOperation getSymmetricEncryptionTask__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getSymmetricEncryptionTask().getEOperations().get(8);
 	}
 
 	/**
@@ -1706,8 +1971,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__IsApplicable_BWD__Match() {
-		return getIgnoreOpaqueMethod().getEOperations().get(9);
+	public EOperation getSymmetricEncryptionTask__CheckTypes_FWD__Match() {
+		return getSymmetricEncryptionTask().getEOperations().get(9);
 	}
 
 	/**
@@ -1715,8 +1980,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__RegisterObjectsToMatch_BWD__Match_JavaCompilationUnit_JavaOpaqueMethod() {
-		return getIgnoreOpaqueMethod().getEOperations().get(10);
+	public EOperation getSymmetricEncryptionTask__IsAppropriate_BWD__Match_JavaWorkflowMethod_JavaMethodInvocation_JavaVariableDeclaration_JavaPackage_JavaName_JavaName_JavaLiteral_JavaStatement_JavaCompilationUnit_JavaVariableDeclaration_JavaOpaqueMethod() {
+		return getSymmetricEncryptionTask().getEOperations().get(10);
 	}
 
 	/**
@@ -1724,8 +1989,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__IsAppropriate_solveCsp_BWD__Match_JavaCompilationUnit_JavaOpaqueMethod() {
-		return getIgnoreOpaqueMethod().getEOperations().get(11);
+	public EOperation getSymmetricEncryptionTask__Perform_BWD__IsApplicableMatch() {
+		return getSymmetricEncryptionTask().getEOperations().get(11);
 	}
 
 	/**
@@ -1733,8 +1998,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__IsAppropriate_checkCsp_BWD__CSP() {
-		return getIgnoreOpaqueMethod().getEOperations().get(12);
+	public EOperation getSymmetricEncryptionTask__IsApplicable_BWD__Match() {
+		return getSymmetricEncryptionTask().getEOperations().get(12);
 	}
 
 	/**
@@ -1742,8 +2007,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaCompilationUnit_JavaOpaqueMethod() {
-		return getIgnoreOpaqueMethod().getEOperations().get(13);
+	public EOperation getSymmetricEncryptionTask__RegisterObjectsToMatch_BWD__Match_JavaWorkflowMethod_JavaMethodInvocation_JavaVariableDeclaration_JavaPackage_JavaName_JavaName_JavaLiteral_JavaStatement_JavaCompilationUnit_JavaVariableDeclaration_JavaOpaqueMethod() {
+		return getSymmetricEncryptionTask().getEOperations().get(13);
 	}
 
 	/**
@@ -1751,8 +2016,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__IsApplicable_checkCsp_BWD__CSP() {
-		return getIgnoreOpaqueMethod().getEOperations().get(14);
+	public EOperation getSymmetricEncryptionTask__IsAppropriate_solveCsp_BWD__Match_JavaWorkflowMethod_JavaMethodInvocation_JavaVariableDeclaration_JavaPackage_JavaName_JavaName_JavaLiteral_JavaStatement_JavaCompilationUnit_JavaVariableDeclaration_JavaOpaqueMethod() {
+		return getSymmetricEncryptionTask().getEOperations().get(14);
 	}
 
 	/**
@@ -1760,8 +2025,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__RegisterObjects_BWD__PerformRuleResult_EObject_EObject() {
-		return getIgnoreOpaqueMethod().getEOperations().get(15);
+	public EOperation getSymmetricEncryptionTask__IsAppropriate_checkCsp_BWD__CSP() {
+		return getSymmetricEncryptionTask().getEOperations().get(15);
 	}
 
 	/**
@@ -1769,8 +2034,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__CheckTypes_BWD__Match() {
-		return getIgnoreOpaqueMethod().getEOperations().get(16);
+	public EOperation getSymmetricEncryptionTask__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaWorkflowMethod_JavaMethodInvocation_JavaVariableDeclaration_JavaPackage_JavaName_JavaName_JavaLiteral_JavaStatement_JavaCompilationUnit_JavaVariableDeclaration_JavaOpaqueMethod() {
+		return getSymmetricEncryptionTask().getEOperations().get(16);
 	}
 
 	/**
@@ -1778,8 +2043,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__IsAppropriate_BWD_EMoflonEdge_9__EMoflonEdge() {
-		return getIgnoreOpaqueMethod().getEOperations().get(17);
+	public EOperation getSymmetricEncryptionTask__IsApplicable_checkCsp_BWD__CSP() {
+		return getSymmetricEncryptionTask().getEOperations().get(17);
 	}
 
 	/**
@@ -1787,8 +2052,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__CheckAttributes_FWD__TripleMatch() {
-		return getIgnoreOpaqueMethod().getEOperations().get(18);
+	public EOperation getSymmetricEncryptionTask__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getSymmetricEncryptionTask().getEOperations().get(18);
 	}
 
 	/**
@@ -1796,8 +2061,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__CheckAttributes_BWD__TripleMatch() {
-		return getIgnoreOpaqueMethod().getEOperations().get(19);
+	public EOperation getSymmetricEncryptionTask__CheckTypes_BWD__Match() {
+		return getSymmetricEncryptionTask().getEOperations().get(19);
 	}
 
 	/**
@@ -1805,8 +2070,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__IsApplicable_CC__Match_Match() {
-		return getIgnoreOpaqueMethod().getEOperations().get(20);
+	public EOperation getSymmetricEncryptionTask__IsAppropriate_FWD_EMoflonEdge_8__EMoflonEdge() {
+		return getSymmetricEncryptionTask().getEOperations().get(20);
 	}
 
 	/**
@@ -1814,8 +2079,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__IsApplicable_solveCsp_CC__JavaCompilationUnit_JavaOpaqueMethod_Match_Match() {
-		return getIgnoreOpaqueMethod().getEOperations().get(21);
+	public EOperation getSymmetricEncryptionTask__IsAppropriate_BWD_EMoflonEdge_10__EMoflonEdge() {
+		return getSymmetricEncryptionTask().getEOperations().get(21);
 	}
 
 	/**
@@ -1823,8 +2088,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__IsApplicable_checkCsp_CC__CSP() {
-		return getIgnoreOpaqueMethod().getEOperations().get(22);
+	public EOperation getSymmetricEncryptionTask__CheckAttributes_FWD__TripleMatch() {
+		return getSymmetricEncryptionTask().getEOperations().get(22);
 	}
 
 	/**
@@ -1832,8 +2097,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__CheckDEC_FWD() {
-		return getIgnoreOpaqueMethod().getEOperations().get(23);
+	public EOperation getSymmetricEncryptionTask__CheckAttributes_BWD__TripleMatch() {
+		return getSymmetricEncryptionTask().getEOperations().get(23);
 	}
 
 	/**
@@ -1841,8 +2106,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__CheckDEC_BWD__JavaCompilationUnit_JavaOpaqueMethod() {
-		return getIgnoreOpaqueMethod().getEOperations().get(24);
+	public EOperation getSymmetricEncryptionTask__IsApplicable_CC__Match_Match() {
+		return getSymmetricEncryptionTask().getEOperations().get(24);
 	}
 
 	/**
@@ -1850,8 +2115,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__GenerateModel__RuleEntryContainer_JavaCompilationUnit() {
-		return getIgnoreOpaqueMethod().getEOperations().get(25);
+	public EOperation getSymmetricEncryptionTask__IsApplicable_solveCsp_CC__JavaWorkflowMethod_JavaMethodInvocation_SymmetricBlockCipher_JavaVariableDeclaration_JavaPackage_JavaName_JavaName_JavaLiteral_JavaStatement_JavaCompilationUnit_Task_JavaVariableDeclaration_JavaOpaqueMethod_Match_Match() {
+		return getSymmetricEncryptionTask().getEOperations().get(25);
 	}
 
 	/**
@@ -1859,8 +2124,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__GenerateModel_solveCsp_BWD__IsApplicableMatch_JavaCompilationUnit_ModelgeneratorRuleResult() {
-		return getIgnoreOpaqueMethod().getEOperations().get(26);
+	public EOperation getSymmetricEncryptionTask__IsApplicable_checkCsp_CC__CSP() {
+		return getSymmetricEncryptionTask().getEOperations().get(26);
 	}
 
 	/**
@@ -1868,8 +2133,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__GenerateModel_checkCsp_BWD__CSP() {
-		return getIgnoreOpaqueMethod().getEOperations().get(27);
+	public EOperation getSymmetricEncryptionTask__CheckDEC_FWD__SymmetricBlockCipher_Task() {
+		return getSymmetricEncryptionTask().getEOperations().get(27);
 	}
 
 	/**
@@ -1877,12 +2142,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getKeyDerivationAlgorithmImportToImport() {
-		if (keyDerivationAlgorithmImportToImportEClass == null) {
-			keyDerivationAlgorithmImportToImportEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(RulesPackage.eNS_URI).getEClassifiers().get(6);
-		}
-		return keyDerivationAlgorithmImportToImportEClass;
+	public EOperation getSymmetricEncryptionTask__CheckDEC_BWD__JavaWorkflowMethod_JavaMethodInvocation_JavaVariableDeclaration_JavaPackage_JavaName_JavaName_JavaLiteral_JavaStatement_JavaCompilationUnit_JavaVariableDeclaration_JavaOpaqueMethod() {
+		return getSymmetricEncryptionTask().getEOperations().get(28);
 	}
 
 	/**
@@ -1890,8 +2151,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_FWD__Match_Import_KeyDerivationAlgorithm() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(0);
+	public EOperation getSymmetricEncryptionTask__GenerateModel__RuleEntryContainer() {
+		return getSymmetricEncryptionTask().getEOperations().get(29);
 	}
 
 	/**
@@ -1899,8 +2160,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__Perform_FWD__IsApplicableMatch() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(1);
+	public EOperation getSymmetricEncryptionTask__GenerateModel_solveCsp_BWD__IsApplicableMatch_ModelgeneratorRuleResult() {
+		return getSymmetricEncryptionTask().getEOperations().get(30);
 	}
 
 	/**
@@ -1908,269 +2169,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_FWD__Match() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjectsToMatch_FWD__Match_Import_KeyDerivationAlgorithm() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_solveCsp_FWD__Match_Import_KeyDerivationAlgorithm() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_checkCsp_FWD__CSP() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_solveCsp_FWD__IsApplicableMatch_Import_KeyDerivationAlgorithmToJcu_JavaCompilationUnit_KeyDerivationAlgorithm() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_checkCsp_FWD__CSP() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__CheckTypes_FWD__Match() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_BWD__Match_JavaCompilationUnit_JavaImport() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__Perform_BWD__IsApplicableMatch() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_BWD__Match() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjectsToMatch_BWD__Match_JavaCompilationUnit_JavaImport() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_solveCsp_BWD__Match_JavaCompilationUnit_JavaImport() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_checkCsp_BWD__CSP() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_solveCsp_BWD__IsApplicableMatch_KeyDerivationAlgorithmToJcu_JavaCompilationUnit_KeyDerivationAlgorithm_JavaImport() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_checkCsp_BWD__CSP() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__CheckTypes_BWD__Match() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(19);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_FWD_EMoflonEdge_8__EMoflonEdge() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(20);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_BWD_EMoflonEdge_10__EMoflonEdge() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(21);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__CheckAttributes_FWD__TripleMatch() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(22);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__CheckAttributes_BWD__TripleMatch() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(23);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_CC__Match_Match() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(24);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_solveCsp_CC__Import_JavaCompilationUnit_KeyDerivationAlgorithm_JavaImport_Match_Match() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(25);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_checkCsp_CC__CSP() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(26);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__CheckDEC_FWD__Import_KeyDerivationAlgorithm() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(27);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__CheckDEC_BWD__JavaCompilationUnit_JavaImport() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(28);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__GenerateModel__RuleEntryContainer_KeyDerivationAlgorithmToJcu() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(29);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__GenerateModel_solveCsp_BWD__IsApplicableMatch_KeyDerivationAlgorithmToJcu_JavaCompilationUnit_KeyDerivationAlgorithm_ModelgeneratorRuleResult() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(30);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__GenerateModel_checkCsp_BWD__CSP() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(31);
+	public EOperation getSymmetricEncryptionTask__GenerateModel_checkCsp_BWD__CSP() {
+		return getSymmetricEncryptionTask().getEOperations().get(31);
 	}
 
 	/**
@@ -2681,7 +2681,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPasswordBasedEncryption__IsApplicable_solveCsp_CC__JavaPackage_JavaLiteral_JavaMethodInvocation_JavaLiteral_JavaCompilationUnit_JavaOpaqueMethod_JavaCompilationUnit_JavaVariableDeclaration_JavaVariableDeclaration_JavaWorkflowMethod_JavaLiteral_JavaVariableDeclaration_KeyDerivationAlgorithm_JavaOpaqueMethod_JavaStatement_JavaName_JavaLiteral_JavaWorkflowMethod_Task_JavaName_SymmetricBlockCipher_JavaName_JavaMethodInvocation_JavaStatement_Match_Match() {
+	public EOperation getPasswordBasedEncryption__IsApplicable_solveCsp_CC__JavaPackage_JavaLiteral_JavaMethodInvocation_JavaLiteral_JavaCompilationUnit_JavaOpaqueMethod_JavaCompilationUnit_JavaVariableDeclaration_JavaVariableDeclaration_JavaWorkflowMethod_JavaLiteral_JavaVariableDeclaration_KeyDerivationAlgorithm_JavaOpaqueMethod_JavaStatement_JavaName_JavaLiteral_JavaWorkflowMethod_Task_JavaName_JavaName_SymmetricBlockCipher_JavaMethodInvocation_JavaStatement_Match_Match() {
 		return getPasswordBasedEncryption().getEOperations().get(25);
 	}
 

@@ -68,33 +68,6 @@ public class RulesSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-		case RulesPackage.SECURE_PASSWORD_TASK: {
-			SecurePasswordTask securePasswordTask = (SecurePasswordTask) theEObject;
-			T result = caseSecurePasswordTask(securePasswordTask);
-			if (result == null)
-				result = caseAbstractRule(securePasswordTask);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RulesPackage.PERFORM_GET_KEY_METHOD: {
-			PerformGetKeyMethod performGetKeyMethod = (PerformGetKeyMethod) theEObject;
-			T result = casePerformGetKeyMethod(performGetKeyMethod);
-			if (result == null)
-				result = caseAbstractRule(performGetKeyMethod);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RulesPackage.SYMMETRIC_ENCRYPTION_TASK: {
-			SymmetricEncryptionTask symmetricEncryptionTask = (SymmetricEncryptionTask) theEObject;
-			T result = caseSymmetricEncryptionTask(symmetricEncryptionTask);
-			if (result == null)
-				result = caseAbstractRule(symmetricEncryptionTask);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case RulesPackage.SYMMETRIC_BLOCK_CIPHER_IMPORT_TO_IMPORT: {
 			SymmetricBlockCipherImportToImport symmetricBlockCipherImportToImport = (SymmetricBlockCipherImportToImport) theEObject;
 			T result = caseSymmetricBlockCipherImportToImport(symmetricBlockCipherImportToImport);
@@ -104,11 +77,11 @@ public class RulesSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT: {
-			IgnoreMethodInvocationArgument ignoreMethodInvocationArgument = (IgnoreMethodInvocationArgument) theEObject;
-			T result = caseIgnoreMethodInvocationArgument(ignoreMethodInvocationArgument);
+		case RulesPackage.SECURE_PASSWORD_TASK: {
+			SecurePasswordTask securePasswordTask = (SecurePasswordTask) theEObject;
+			T result = caseSecurePasswordTask(securePasswordTask);
 			if (result == null)
-				result = caseAbstractRule(ignoreMethodInvocationArgument);
+				result = caseAbstractRule(securePasswordTask);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -127,6 +100,33 @@ public class RulesSwitch<T> extends Switch<T> {
 			T result = caseKeyDerivationAlgorithmImportToImport(keyDerivationAlgorithmImportToImport);
 			if (result == null)
 				result = caseAbstractRule(keyDerivationAlgorithmImportToImport);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case RulesPackage.PERFORM_GET_KEY_METHOD: {
+			PerformGetKeyMethod performGetKeyMethod = (PerformGetKeyMethod) theEObject;
+			T result = casePerformGetKeyMethod(performGetKeyMethod);
+			if (result == null)
+				result = caseAbstractRule(performGetKeyMethod);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT: {
+			IgnoreMethodInvocationArgument ignoreMethodInvocationArgument = (IgnoreMethodInvocationArgument) theEObject;
+			T result = caseIgnoreMethodInvocationArgument(ignoreMethodInvocationArgument);
+			if (result == null)
+				result = caseAbstractRule(ignoreMethodInvocationArgument);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case RulesPackage.SYMMETRIC_ENCRYPTION_TASK: {
+			SymmetricEncryptionTask symmetricEncryptionTask = (SymmetricEncryptionTask) theEObject;
+			T result = caseSymmetricEncryptionTask(symmetricEncryptionTask);
+			if (result == null)
+				result = caseAbstractRule(symmetricEncryptionTask);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -155,51 +155,6 @@ public class RulesSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Secure Password Task</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Secure Password Task</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSecurePasswordTask(SecurePasswordTask object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Perform Get Key Method</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Perform Get Key Method</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePerformGetKeyMethod(PerformGetKeyMethod object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Symmetric Encryption Task</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symmetric Encryption Task</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSymmetricEncryptionTask(SymmetricEncryptionTask object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Symmetric Block Cipher Import To Import</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -215,17 +170,17 @@ public class RulesSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Ignore Method Invocation Argument</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Secure Password Task</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Ignore Method Invocation Argument</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Secure Password Task</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIgnoreMethodInvocationArgument(IgnoreMethodInvocationArgument object) {
+	public T caseSecurePasswordTask(SecurePasswordTask object) {
 		return null;
 	}
 
@@ -256,6 +211,51 @@ public class RulesSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseKeyDerivationAlgorithmImportToImport(KeyDerivationAlgorithmImportToImport object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Perform Get Key Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Perform Get Key Method</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePerformGetKeyMethod(PerformGetKeyMethod object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ignore Method Invocation Argument</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ignore Method Invocation Argument</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIgnoreMethodInvocationArgument(IgnoreMethodInvocationArgument object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Symmetric Encryption Task</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Symmetric Encryption Task</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSymmetricEncryptionTask(SymmetricEncryptionTask object) {
 		return null;
 	}
 
