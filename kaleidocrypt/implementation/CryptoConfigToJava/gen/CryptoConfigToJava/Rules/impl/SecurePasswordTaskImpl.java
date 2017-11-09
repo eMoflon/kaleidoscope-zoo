@@ -170,8 +170,8 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		Object[] result1_green = SecurePasswordTaskImpl
 				.pattern_SecurePasswordTask_1_1_performtransformation_greenFFFFFBFFFFBFFFFB(kda, task, csp);
 		JavaLiteral exprIterationLiteral = (JavaLiteral) result1_green[0];
-		TaskToJavaPackage t2c = (TaskToJavaPackage) result1_green[1];
-		JavaPackage javaPackage = (JavaPackage) result1_green[2];
+		JavaPackage javaPackage = (JavaPackage) result1_green[1];
+		TaskToJavaPackage t2c = (TaskToJavaPackage) result1_green[2];
 		JavaLiteral exprAlgNameLiteral = (JavaLiteral) result1_green[3];
 		JavaVariableDeclaration pwdDeclaration = (JavaVariableDeclaration) result1_green[4];
 		JavaMethodInvocation exprRetGetKey = (JavaMethodInvocation) result1_green[6];
@@ -185,11 +185,11 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 		Object[] result2_black = SecurePasswordTaskImpl
 				.pattern_SecurePasswordTask_1_2_collecttranslatedelements_blackBBBBBBBBBBBBBBB(exprIterationLiteral,
-						t2c, javaPackage, exprAlgNameLiteral, pwdDeclaration, kda, exprRetGetKey, methodPerformGetKey,
+						javaPackage, t2c, exprAlgNameLiteral, pwdDeclaration, kda, exprRetGetKey, methodPerformGetKey,
 						exprOutputSizeLiteral, tc, task, exprPwdName, statRetGetKey, methodGetKey, jcu);
 		if (result2_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[exprIterationLiteral] = "
-					+ exprIterationLiteral + ", " + "[t2c] = " + t2c + ", " + "[javaPackage] = " + javaPackage + ", "
+					+ exprIterationLiteral + ", " + "[javaPackage] = " + javaPackage + ", " + "[t2c] = " + t2c + ", "
 					+ "[exprAlgNameLiteral] = " + exprAlgNameLiteral + ", " + "[pwdDeclaration] = " + pwdDeclaration
 					+ ", " + "[kda] = " + kda + ", " + "[exprRetGetKey] = " + exprRetGetKey + ", "
 					+ "[methodPerformGetKey] = " + methodPerformGetKey + ", " + "[exprOutputSizeLiteral] = "
@@ -199,27 +199,27 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		}
 		Object[] result2_green = SecurePasswordTaskImpl
 				.pattern_SecurePasswordTask_1_2_collecttranslatedelements_greenFBBBBBBBBBBBBBBB(exprIterationLiteral,
-						t2c, javaPackage, exprAlgNameLiteral, pwdDeclaration, kda, exprRetGetKey, methodPerformGetKey,
+						javaPackage, t2c, exprAlgNameLiteral, pwdDeclaration, kda, exprRetGetKey, methodPerformGetKey,
 						exprOutputSizeLiteral, tc, task, exprPwdName, statRetGetKey, methodGetKey, jcu);
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		Object[] result3_black = SecurePasswordTaskImpl
 				.pattern_SecurePasswordTask_1_3_bookkeepingforedges_blackBBBBBBBBBBBBBBBB(ruleresult,
-						exprIterationLiteral, t2c, javaPackage, exprAlgNameLiteral, pwdDeclaration, kda, exprRetGetKey,
+						exprIterationLiteral, javaPackage, t2c, exprAlgNameLiteral, pwdDeclaration, kda, exprRetGetKey,
 						methodPerformGetKey, exprOutputSizeLiteral, tc, task, exprPwdName, statRetGetKey, methodGetKey,
 						jcu);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[ruleresult] = " + ruleresult
-					+ ", " + "[exprIterationLiteral] = " + exprIterationLiteral + ", " + "[t2c] = " + t2c + ", "
-					+ "[javaPackage] = " + javaPackage + ", " + "[exprAlgNameLiteral] = " + exprAlgNameLiteral + ", "
-					+ "[pwdDeclaration] = " + pwdDeclaration + ", " + "[kda] = " + kda + ", " + "[exprRetGetKey] = "
-					+ exprRetGetKey + ", " + "[methodPerformGetKey] = " + methodPerformGetKey + ", "
-					+ "[exprOutputSizeLiteral] = " + exprOutputSizeLiteral + ", " + "[tc] = " + tc + ", " + "[task] = "
-					+ task + ", " + "[exprPwdName] = " + exprPwdName + ", " + "[statRetGetKey] = " + statRetGetKey
-					+ ", " + "[methodGetKey] = " + methodGetKey + ", " + "[jcu] = " + jcu + ".");
+					+ ", " + "[exprIterationLiteral] = " + exprIterationLiteral + ", " + "[javaPackage] = "
+					+ javaPackage + ", " + "[t2c] = " + t2c + ", " + "[exprAlgNameLiteral] = " + exprAlgNameLiteral
+					+ ", " + "[pwdDeclaration] = " + pwdDeclaration + ", " + "[kda] = " + kda + ", "
+					+ "[exprRetGetKey] = " + exprRetGetKey + ", " + "[methodPerformGetKey] = " + methodPerformGetKey
+					+ ", " + "[exprOutputSizeLiteral] = " + exprOutputSizeLiteral + ", " + "[tc] = " + tc + ", "
+					+ "[task] = " + task + ", " + "[exprPwdName] = " + exprPwdName + ", " + "[statRetGetKey] = "
+					+ statRetGetKey + ", " + "[methodGetKey] = " + methodGetKey + ", " + "[jcu] = " + jcu + ".");
 		}
 		SecurePasswordTaskImpl.pattern_SecurePasswordTask_1_3_bookkeepingforedges_greenBBBBBBBBBBBBBBBBFFFFFFFFFFFFFFF(
-				ruleresult, exprIterationLiteral, t2c, javaPackage, exprAlgNameLiteral, pwdDeclaration, kda,
+				ruleresult, exprIterationLiteral, javaPackage, t2c, exprAlgNameLiteral, pwdDeclaration, kda,
 				exprRetGetKey, methodPerformGetKey, exprOutputSizeLiteral, tc, task, exprPwdName, statRetGetKey,
 				methodGetKey, jcu);
 		//nothing EMoflonEdge javaPackage__jcu____cunits = (EMoflonEdge) result3_green[16];
@@ -241,7 +241,7 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		// 
 		// 
 		SecurePasswordTaskImpl.pattern_SecurePasswordTask_1_5_registerobjects_expressionBBBBBBBBBBBBBBBBB(this,
-				ruleresult, exprIterationLiteral, t2c, javaPackage, exprAlgNameLiteral, pwdDeclaration, kda,
+				ruleresult, exprIterationLiteral, javaPackage, t2c, exprAlgNameLiteral, pwdDeclaration, kda,
 				exprRetGetKey, methodPerformGetKey, exprOutputSizeLiteral, tc, task, exprPwdName, statRetGetKey,
 				methodGetKey, jcu);
 		return SecurePasswordTaskImpl.pattern_SecurePasswordTask_1_6_expressionFB(ruleresult);
@@ -375,13 +375,13 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 		// Create literals
 		Variable literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal0", true, csp);
-		literal0.setValue(0);
+		literal0.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
 		literal0.setType("");
 		Variable literal1 = CSPFactoryHelper.eINSTANCE.createVariable("literal1", true, csp);
-		literal1.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
+		literal1.setValue(1);
 		literal1.setType("");
 		Variable literal2 = CSPFactoryHelper.eINSTANCE.createVariable("literal2", true, csp);
-		literal2.setValue(1);
+		literal2.setValue(0);
 		literal2.setType("");
 		Variable literal3 = CSPFactoryHelper.eINSTANCE.createVariable("literal3", true, csp);
 		literal3.setValue(
@@ -392,44 +392,44 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		literal4.setType("");
 
 		// Create attribute variables
-		Variable var_kda_iterations = CSPFactoryHelper.eINSTANCE.createVariable("kda.iterations", true, csp);
-		var_kda_iterations.setValue(kda.getIterations());
-		var_kda_iterations.setType("String");
 		Variable var_kda_name = CSPFactoryHelper.eINSTANCE.createVariable("kda.name", true, csp);
 		var_kda_name.setValue(kda.getName());
 		var_kda_name.setType("String");
-		Variable var_kda_outputSize = CSPFactoryHelper.eINSTANCE.createVariable("kda.outputSize", true, csp);
-		var_kda_outputSize.setValue(kda.getOutputSize());
-		var_kda_outputSize.setType("String");
 		Variable var_task_package = CSPFactoryHelper.eINSTANCE.createVariable("task.package", true, csp);
 		var_task_package.setValue(task.getPackage());
 		var_task_package.setType("String");
+		Variable var_kda_iterations = CSPFactoryHelper.eINSTANCE.createVariable("kda.iterations", true, csp);
+		var_kda_iterations.setValue(kda.getIterations());
+		var_kda_iterations.setType("String");
+		Variable var_kda_outputSize = CSPFactoryHelper.eINSTANCE.createVariable("kda.outputSize", true, csp);
+		var_kda_outputSize.setValue(kda.getOutputSize());
+		var_kda_outputSize.setType("String");
 
 		// Create unbound variables
-		Variable var_methodPerformGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.index",
-				csp);
-		var_methodPerformGetKey_index.setType("int");
+		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.throws", csp);
+		var_methodGetKey_throws.setType("String");
+		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.index", csp);
+		var_methodGetKey_index.setType("int");
 		Variable var_methodPerformGetKey_throws = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformGetKey.throws", csp);
 		var_methodPerformGetKey_throws.setType("String");
-		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.index", csp);
-		var_methodGetKey_index.setType("int");
-		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.throws", csp);
-		var_methodGetKey_throws.setType("String");
+		Variable var_methodPerformGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.index",
+				csp);
+		var_methodPerformGetKey_index.setType("int");
 		Variable var_methodPerformGetKey_body = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.body",
 				csp);
 		var_methodPerformGetKey_body.setType("String");
-		Variable var_exprIterationLiteral_value = CSPFactoryHelper.eINSTANCE
-				.createVariable("exprIterationLiteral.value", csp);
-		var_exprIterationLiteral_value.setType("String");
 		Variable var_exprAlgNameLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprAlgNameLiteral.value",
 				csp);
 		var_exprAlgNameLiteral_value.setType("String");
+		Variable var_javaPackage_name = CSPFactoryHelper.eINSTANCE.createVariable("javaPackage.name", csp);
+		var_javaPackage_name.setType("String");
+		Variable var_exprIterationLiteral_value = CSPFactoryHelper.eINSTANCE
+				.createVariable("exprIterationLiteral.value", csp);
+		var_exprIterationLiteral_value.setType("String");
 		Variable var_exprOutputSizeLiteral_value = CSPFactoryHelper.eINSTANCE
 				.createVariable("exprOutputSizeLiteral.value", csp);
 		var_exprOutputSizeLiteral_value.setType("String");
-		Variable var_javaPackage_name = CSPFactoryHelper.eINSTANCE.createVariable("javaPackage.name", csp);
-		var_javaPackage_name.setType("String");
 		Variable var_methodPerformGetKey_parameters = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformGetKey.parameters", csp);
 		var_methodPerformGetKey_parameters.setType("String");
@@ -459,23 +459,23 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 		// Solve CSP
 		setDefaultStringIfNull.setRuleName("NoRuleName");
-		setDefaultStringIfNull.solve(var_methodPerformGetKey_index, literal0);
+		setDefaultStringIfNull.solve(var_methodGetKey_throws, literal0);
 		setDefaultStringIfNull_0.setRuleName("NoRuleName");
-		setDefaultStringIfNull_0.solve(var_methodPerformGetKey_throws, literal1);
+		setDefaultStringIfNull_0.solve(var_methodGetKey_index, literal1);
 		setDefaultStringIfNull_1.setRuleName("NoRuleName");
-		setDefaultStringIfNull_1.solve(var_methodGetKey_index, literal2);
+		setDefaultStringIfNull_1.solve(var_methodPerformGetKey_throws, literal0);
 		setDefaultStringIfNull_2.setRuleName("NoRuleName");
-		setDefaultStringIfNull_2.solve(var_methodGetKey_throws, literal1);
+		setDefaultStringIfNull_2.solve(var_methodPerformGetKey_index, literal2);
 		setDefaultStringIfNull_3.setRuleName("NoRuleName");
 		setDefaultStringIfNull_3.solve(var_methodPerformGetKey_body, literal3);
 		eq.setRuleName("NoRuleName");
-		eq.solve(var_exprIterationLiteral_value, var_kda_iterations);
+		eq.solve(var_exprAlgNameLiteral_value, var_kda_name);
 		eq_0.setRuleName("NoRuleName");
-		eq_0.solve(var_exprAlgNameLiteral_value, var_kda_name);
+		eq_0.solve(var_task_package, var_javaPackage_name);
 		eq_1.setRuleName("NoRuleName");
-		eq_1.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
+		eq_1.solve(var_exprIterationLiteral_value, var_kda_iterations);
 		eq_2.setRuleName("NoRuleName");
-		eq_2.solve(var_task_package, var_javaPackage_name);
+		eq_2.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
 		setDefaultStringIfNull_4.setRuleName("NoRuleName");
 		setDefaultStringIfNull_4.solve(var_methodPerformGetKey_parameters, literal4);
 
@@ -499,13 +499,13 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject t2c,
-			EObject javaPackage, EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda, EObject exprRetGetKey,
+	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject javaPackage,
+			EObject t2c, EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda, EObject exprRetGetKey,
 			EObject methodPerformGetKey, EObject exprOutputSizeLiteral, EObject tc, EObject task, EObject exprPwdName,
 			EObject statRetGetKey, EObject methodGetKey, EObject jcu) {
 		ruleresult.registerObject("exprIterationLiteral", exprIterationLiteral);
-		ruleresult.registerObject("t2c", t2c);
 		ruleresult.registerObject("javaPackage", javaPackage);
+		ruleresult.registerObject("t2c", t2c);
 		ruleresult.registerObject("exprAlgNameLiteral", exprAlgNameLiteral);
 		ruleresult.registerObject("pwdDeclaration", pwdDeclaration);
 		ruleresult.registerObject("kda", kda);
@@ -654,19 +654,19 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		JavaCompilationUnit jcu = (JavaCompilationUnit) result1_bindingAndBlack[10];
 		CSP csp = (CSP) result1_bindingAndBlack[11];
 		Object[] result1_green = SecurePasswordTaskImpl
-				.pattern_SecurePasswordTask_11_1_performtransformation_greenFBFFFBB(javaPackage, jcu, csp);
-		TaskToJavaPackage t2c = (TaskToJavaPackage) result1_green[0];
+				.pattern_SecurePasswordTask_11_1_performtransformation_greenBFFFFBB(javaPackage, jcu, csp);
+		TaskToJavaPackage t2c = (TaskToJavaPackage) result1_green[1];
 		KeyDerivationAlgorithm kda = (KeyDerivationAlgorithm) result1_green[2];
 		KeyDerivationAlgorithmToJcu tc = (KeyDerivationAlgorithmToJcu) result1_green[3];
 		Task task = (Task) result1_green[4];
 
 		Object[] result2_black = SecurePasswordTaskImpl
 				.pattern_SecurePasswordTask_11_2_collecttranslatedelements_blackBBBBBBBBBBBBBBB(exprIterationLiteral,
-						t2c, javaPackage, exprAlgNameLiteral, pwdDeclaration, kda, exprRetGetKey, methodPerformGetKey,
+						javaPackage, t2c, exprAlgNameLiteral, pwdDeclaration, kda, exprRetGetKey, methodPerformGetKey,
 						exprOutputSizeLiteral, tc, task, exprPwdName, statRetGetKey, methodGetKey, jcu);
 		if (result2_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[exprIterationLiteral] = "
-					+ exprIterationLiteral + ", " + "[t2c] = " + t2c + ", " + "[javaPackage] = " + javaPackage + ", "
+					+ exprIterationLiteral + ", " + "[javaPackage] = " + javaPackage + ", " + "[t2c] = " + t2c + ", "
 					+ "[exprAlgNameLiteral] = " + exprAlgNameLiteral + ", " + "[pwdDeclaration] = " + pwdDeclaration
 					+ ", " + "[kda] = " + kda + ", " + "[exprRetGetKey] = " + exprRetGetKey + ", "
 					+ "[methodPerformGetKey] = " + methodPerformGetKey + ", " + "[exprOutputSizeLiteral] = "
@@ -676,27 +676,27 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		}
 		Object[] result2_green = SecurePasswordTaskImpl
 				.pattern_SecurePasswordTask_11_2_collecttranslatedelements_greenFBBBBBBBBBBBBBBB(exprIterationLiteral,
-						t2c, javaPackage, exprAlgNameLiteral, pwdDeclaration, kda, exprRetGetKey, methodPerformGetKey,
+						javaPackage, t2c, exprAlgNameLiteral, pwdDeclaration, kda, exprRetGetKey, methodPerformGetKey,
 						exprOutputSizeLiteral, tc, task, exprPwdName, statRetGetKey, methodGetKey, jcu);
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		Object[] result3_black = SecurePasswordTaskImpl
 				.pattern_SecurePasswordTask_11_3_bookkeepingforedges_blackBBBBBBBBBBBBBBBB(ruleresult,
-						exprIterationLiteral, t2c, javaPackage, exprAlgNameLiteral, pwdDeclaration, kda, exprRetGetKey,
+						exprIterationLiteral, javaPackage, t2c, exprAlgNameLiteral, pwdDeclaration, kda, exprRetGetKey,
 						methodPerformGetKey, exprOutputSizeLiteral, tc, task, exprPwdName, statRetGetKey, methodGetKey,
 						jcu);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[ruleresult] = " + ruleresult
-					+ ", " + "[exprIterationLiteral] = " + exprIterationLiteral + ", " + "[t2c] = " + t2c + ", "
-					+ "[javaPackage] = " + javaPackage + ", " + "[exprAlgNameLiteral] = " + exprAlgNameLiteral + ", "
-					+ "[pwdDeclaration] = " + pwdDeclaration + ", " + "[kda] = " + kda + ", " + "[exprRetGetKey] = "
-					+ exprRetGetKey + ", " + "[methodPerformGetKey] = " + methodPerformGetKey + ", "
-					+ "[exprOutputSizeLiteral] = " + exprOutputSizeLiteral + ", " + "[tc] = " + tc + ", " + "[task] = "
-					+ task + ", " + "[exprPwdName] = " + exprPwdName + ", " + "[statRetGetKey] = " + statRetGetKey
-					+ ", " + "[methodGetKey] = " + methodGetKey + ", " + "[jcu] = " + jcu + ".");
+					+ ", " + "[exprIterationLiteral] = " + exprIterationLiteral + ", " + "[javaPackage] = "
+					+ javaPackage + ", " + "[t2c] = " + t2c + ", " + "[exprAlgNameLiteral] = " + exprAlgNameLiteral
+					+ ", " + "[pwdDeclaration] = " + pwdDeclaration + ", " + "[kda] = " + kda + ", "
+					+ "[exprRetGetKey] = " + exprRetGetKey + ", " + "[methodPerformGetKey] = " + methodPerformGetKey
+					+ ", " + "[exprOutputSizeLiteral] = " + exprOutputSizeLiteral + ", " + "[tc] = " + tc + ", "
+					+ "[task] = " + task + ", " + "[exprPwdName] = " + exprPwdName + ", " + "[statRetGetKey] = "
+					+ statRetGetKey + ", " + "[methodGetKey] = " + methodGetKey + ", " + "[jcu] = " + jcu + ".");
 		}
 		SecurePasswordTaskImpl.pattern_SecurePasswordTask_11_3_bookkeepingforedges_greenBBBBBBBBBBBBBBBBFFFFFFFFFFFFFFF(
-				ruleresult, exprIterationLiteral, t2c, javaPackage, exprAlgNameLiteral, pwdDeclaration, kda,
+				ruleresult, exprIterationLiteral, javaPackage, t2c, exprAlgNameLiteral, pwdDeclaration, kda,
 				exprRetGetKey, methodPerformGetKey, exprOutputSizeLiteral, tc, task, exprPwdName, statRetGetKey,
 				methodGetKey, jcu);
 		//nothing EMoflonEdge javaPackage__jcu____cunits = (EMoflonEdge) result3_green[16];
@@ -718,7 +718,7 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		// 
 		// 
 		SecurePasswordTaskImpl.pattern_SecurePasswordTask_11_5_registerobjects_expressionBBBBBBBBBBBBBBBBB(this,
-				ruleresult, exprIterationLiteral, t2c, javaPackage, exprAlgNameLiteral, pwdDeclaration, kda,
+				ruleresult, exprIterationLiteral, javaPackage, t2c, exprAlgNameLiteral, pwdDeclaration, kda,
 				exprRetGetKey, methodPerformGetKey, exprOutputSizeLiteral, tc, task, exprPwdName, statRetGetKey,
 				methodGetKey, jcu);
 		return SecurePasswordTaskImpl.pattern_SecurePasswordTask_11_6_expressionFB(ruleresult);
@@ -860,13 +860,13 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 		// Create literals
 		Variable literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal0", true, csp);
-		literal0.setValue(0);
+		literal0.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
 		literal0.setType("");
 		Variable literal1 = CSPFactoryHelper.eINSTANCE.createVariable("literal1", true, csp);
-		literal1.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
+		literal1.setValue(1);
 		literal1.setType("");
 		Variable literal2 = CSPFactoryHelper.eINSTANCE.createVariable("literal2", true, csp);
-		literal2.setValue(1);
+		literal2.setValue(0);
 		literal2.setType("");
 		Variable literal3 = CSPFactoryHelper.eINSTANCE.createVariable("literal3", true, csp);
 		literal3.setValue(
@@ -877,20 +877,20 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		literal4.setType("");
 
 		// Create attribute variables
-		Variable var_methodPerformGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.index",
-				true, csp);
-		var_methodPerformGetKey_index.setValue(methodPerformGetKey.getIndex());
-		var_methodPerformGetKey_index.setType("int");
+		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.throws", true, csp);
+		var_methodGetKey_throws.setValue(methodGetKey.getThrows());
+		var_methodGetKey_throws.setType("String");
+		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.index", true, csp);
+		var_methodGetKey_index.setValue(methodGetKey.getIndex());
+		var_methodGetKey_index.setType("int");
 		Variable var_methodPerformGetKey_throws = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformGetKey.throws", true, csp);
 		var_methodPerformGetKey_throws.setValue(methodPerformGetKey.getThrows());
 		var_methodPerformGetKey_throws.setType("String");
-		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.index", true, csp);
-		var_methodGetKey_index.setValue(methodGetKey.getIndex());
-		var_methodGetKey_index.setType("int");
-		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.throws", true, csp);
-		var_methodGetKey_throws.setValue(methodGetKey.getThrows());
-		var_methodGetKey_throws.setType("String");
+		Variable var_methodPerformGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.index",
+				true, csp);
+		var_methodPerformGetKey_index.setValue(methodPerformGetKey.getIndex());
+		var_methodPerformGetKey_index.setType("int");
 		Variable var_methodPerformGetKey_body = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.body",
 				true, csp);
 		var_methodPerformGetKey_body.setValue(methodPerformGetKey.getBody());
@@ -919,13 +919,13 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 		// Solve CSP
 		setDefaultStringIfNull.setRuleName("NoRuleName");
-		setDefaultStringIfNull.solve(var_methodPerformGetKey_index, literal0);
+		setDefaultStringIfNull.solve(var_methodGetKey_throws, literal0);
 		setDefaultStringIfNull_0.setRuleName("NoRuleName");
-		setDefaultStringIfNull_0.solve(var_methodPerformGetKey_throws, literal1);
+		setDefaultStringIfNull_0.solve(var_methodGetKey_index, literal1);
 		setDefaultStringIfNull_1.setRuleName("NoRuleName");
-		setDefaultStringIfNull_1.solve(var_methodGetKey_index, literal2);
+		setDefaultStringIfNull_1.solve(var_methodPerformGetKey_throws, literal0);
 		setDefaultStringIfNull_2.setRuleName("NoRuleName");
-		setDefaultStringIfNull_2.solve(var_methodGetKey_throws, literal1);
+		setDefaultStringIfNull_2.solve(var_methodPerformGetKey_index, literal2);
 		setDefaultStringIfNull_3.setRuleName("NoRuleName");
 		setDefaultStringIfNull_3.solve(var_methodPerformGetKey_body, literal3);
 		setDefaultStringIfNull_4.setRuleName("NoRuleName");
@@ -961,29 +961,29 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		literal0.setType("");
 
 		// Create attribute variables
-		Variable var_exprIterationLiteral_value = CSPFactoryHelper.eINSTANCE
-				.createVariable("exprIterationLiteral.value", true, csp);
-		var_exprIterationLiteral_value.setValue(exprIterationLiteral.getValue());
-		var_exprIterationLiteral_value.setType("String");
 		Variable var_exprAlgNameLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprAlgNameLiteral.value",
 				true, csp);
 		var_exprAlgNameLiteral_value.setValue(exprAlgNameLiteral.getValue());
 		var_exprAlgNameLiteral_value.setType("String");
+		Variable var_javaPackage_name = CSPFactoryHelper.eINSTANCE.createVariable("javaPackage.name", true, csp);
+		var_javaPackage_name.setValue(javaPackage.getName());
+		var_javaPackage_name.setType("String");
+		Variable var_exprIterationLiteral_value = CSPFactoryHelper.eINSTANCE
+				.createVariable("exprIterationLiteral.value", true, csp);
+		var_exprIterationLiteral_value.setValue(exprIterationLiteral.getValue());
+		var_exprIterationLiteral_value.setType("String");
 		Variable var_exprOutputSizeLiteral_value = CSPFactoryHelper.eINSTANCE
 				.createVariable("exprOutputSizeLiteral.value", true, csp);
 		var_exprOutputSizeLiteral_value.setValue(exprOutputSizeLiteral.getValue());
 		var_exprOutputSizeLiteral_value.setType("String");
-		Variable var_javaPackage_name = CSPFactoryHelper.eINSTANCE.createVariable("javaPackage.name", true, csp);
-		var_javaPackage_name.setValue(javaPackage.getName());
-		var_javaPackage_name.setType("String");
 
 		// Create unbound variables
 		Variable var_task_package = CSPFactoryHelper.eINSTANCE.createVariable("task.package", csp);
 		var_task_package.setType("String");
-		Variable var_kda_iterations = CSPFactoryHelper.eINSTANCE.createVariable("kda.iterations", csp);
-		var_kda_iterations.setType("String");
 		Variable var_kda_name = CSPFactoryHelper.eINSTANCE.createVariable("kda.name", csp);
 		var_kda_name.setType("String");
+		Variable var_kda_iterations = CSPFactoryHelper.eINSTANCE.createVariable("kda.iterations", csp);
+		var_kda_iterations.setType("String");
 		Variable var_kda_outputSize = CSPFactoryHelper.eINSTANCE.createVariable("kda.outputSize", csp);
 		var_kda_outputSize.setType("String");
 
@@ -1006,9 +1006,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		eq.setRuleName("NoRuleName");
 		eq.solve(var_task_package, var_javaPackage_name);
 		eq_0.setRuleName("NoRuleName");
-		eq_0.solve(var_exprIterationLiteral_value, var_kda_iterations);
+		eq_0.solve(var_exprAlgNameLiteral_value, var_kda_name);
 		eq_1.setRuleName("NoRuleName");
-		eq_1.solve(var_exprAlgNameLiteral_value, var_kda_name);
+		eq_1.solve(var_exprIterationLiteral_value, var_kda_iterations);
 		eq_2.setRuleName("NoRuleName");
 		eq_2.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
 
@@ -1041,13 +1041,13 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_BWD(PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject t2c,
-			EObject javaPackage, EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda, EObject exprRetGetKey,
+	public void registerObjects_BWD(PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject javaPackage,
+			EObject t2c, EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda, EObject exprRetGetKey,
 			EObject methodPerformGetKey, EObject exprOutputSizeLiteral, EObject tc, EObject task, EObject exprPwdName,
 			EObject statRetGetKey, EObject methodGetKey, EObject jcu) {
 		ruleresult.registerObject("exprIterationLiteral", exprIterationLiteral);
-		ruleresult.registerObject("t2c", t2c);
 		ruleresult.registerObject("javaPackage", javaPackage);
+		ruleresult.registerObject("t2c", t2c);
 		ruleresult.registerObject("exprAlgNameLiteral", exprAlgNameLiteral);
 		ruleresult.registerObject("pwdDeclaration", pwdDeclaration);
 		ruleresult.registerObject("kda", kda);
@@ -1099,7 +1099,7 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_6(EMoflonEdge _edge_algorithms) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_1(EMoflonEdge _edge_algorithms) {
 
 		Object[] result1_bindingAndBlack = SecurePasswordTaskImpl
 				.pattern_SecurePasswordTask_20_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -1156,7 +1156,7 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_BWD_EMoflonEdge_6(EMoflonEdge _edge_cunits) {
+	public EObjectContainer isAppropriate_BWD_EMoflonEdge_3(EMoflonEdge _edge_cunits) {
 
 		Object[] result1_bindingAndBlack = SecurePasswordTaskImpl
 				.pattern_SecurePasswordTask_21_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -1264,17 +1264,17 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodPerformGetKey", "type", "SecretKey ", ComparingOperator.EQUAL)) {
-			ruleResult.setSuccess(false);
-			return ruleResult;
-		}
-
 		if (!__helper.hasExpectedValue("methodPerformGetKey", "name", "performGetKey", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
 
 		if (!__helper.hasExpectedValue("methodPerformGetKey", "modifier", "private", ComparingOperator.EQUAL)) {
+			ruleResult.setSuccess(false);
+			return ruleResult;
+		}
+
+		if (!__helper.hasExpectedValue("methodPerformGetKey", "type", "SecretKey ", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
@@ -1304,11 +1304,6 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodGetKey", "type", "SecretKey ", ComparingOperator.EQUAL)) {
-			ruleResult.setSuccess(false);
-			return ruleResult;
-		}
-
 		if (!__helper.hasExpectedValue("methodGetKey", "name", "getKey", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
@@ -1319,98 +1314,103 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 			return ruleResult;
 		}
 
+		if (!__helper.hasExpectedValue("methodGetKey", "type", "SecretKey ", ComparingOperator.EQUAL)) {
+			ruleResult.setSuccess(false);
+			return ruleResult;
+		}
+
 		if (!__helper.hasExpectedValue("jcu", "name", "KeyDeriv", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
 
-		Variable var_methodPerformGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey", true,
-				csp);
-		var_methodPerformGetKey_index.setValue(__helper.getValue("methodPerformGetKey", "index"));
-		var_methodPerformGetKey_index.setType("int");
-
 		Variable var_literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal0.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
+		var_literal0.setValue(1);
 		var_literal0.setType("");
 
 		Variable var_literal1 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal1.setValue(0);
+		var_literal1.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
 		var_literal1.setType("");
 
-		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey", true, csp);
-		var_methodGetKey_index.setValue(__helper.getValue("methodGetKey", "index"));
-		var_methodGetKey_index.setType("int");
+		Variable var_literal2 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
+		var_literal2.setValue("Crypto");
+		var_literal2.setType("");
+
+		Variable var_task_package = CSPFactoryHelper.eINSTANCE.createVariable("task", true, csp);
+		var_task_package.setValue(__helper.getValue("task", "package"));
+		var_task_package.setType("String");
 
 		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey", true, csp);
 		var_methodGetKey_throws.setValue(__helper.getValue("methodGetKey", "throws"));
 		var_methodGetKey_throws.setType("String");
-
-		Variable var_literal2 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal2.setValue(1);
-		var_literal2.setType("");
 
 		Variable var_methodPerformGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey", true,
 				csp);
 		var_methodPerformGetKey_throws.setValue(__helper.getValue("methodPerformGetKey", "throws"));
 		var_methodPerformGetKey_throws.setType("String");
 
+		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey", true, csp);
+		var_methodGetKey_index.setValue(__helper.getValue("methodGetKey", "index"));
+		var_methodGetKey_index.setType("int");
+
+		Variable var_methodPerformGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey", true,
+				csp);
+		var_methodPerformGetKey_index.setValue(__helper.getValue("methodPerformGetKey", "index"));
+		var_methodPerformGetKey_index.setType("int");
+
 		Variable var_literal3 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal3.setValue(
-				"{\n  byte[] salt=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(salt);\n  PBEKeySpec spec=new PBEKeySpec(pwd,salt,iterations,outputSize);\n  SecretKeyFactory skf=SecretKeyFactory.getInstance(algName);\n  return new SecretKeySpec(skf.generateSecret(spec).getEncoded(),\"AES\");\n}\n");
+		var_literal3.setValue(0);
 		var_literal3.setType("");
+
+		Variable var_literal4 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
+		var_literal4.setValue(
+				"{\n  byte[] salt=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(salt);\n  PBEKeySpec spec=new PBEKeySpec(pwd,salt,iterations,outputSize);\n  SecretKeyFactory skf=SecretKeyFactory.getInstance(algName);\n  return new SecretKeySpec(skf.generateSecret(spec).getEncoded(),\"AES\");\n}\n");
+		var_literal4.setType("");
 
 		Variable var_methodPerformGetKey_body = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey", true,
 				csp);
 		var_methodPerformGetKey_body.setValue(__helper.getValue("methodPerformGetKey", "body"));
 		var_methodPerformGetKey_body.setType("String");
 
-		Variable var_task_package = CSPFactoryHelper.eINSTANCE.createVariable("task", true, csp);
-		var_task_package.setValue(__helper.getValue("task", "package"));
-		var_task_package.setType("String");
+		Variable var_exprAlgNameLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprAlgNameLiteral", true,
+				csp);
+		var_exprAlgNameLiteral_value.setValue(__helper.getValue("exprAlgNameLiteral", "value"));
+		var_exprAlgNameLiteral_value.setType("String");
 
-		Variable var_literal4 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal4.setValue("Crypto");
-		var_literal4.setType("");
+		Variable var_kda_name = CSPFactoryHelper.eINSTANCE.createVariable("kda", true, csp);
+		var_kda_name.setValue(__helper.getValue("kda", "name"));
+		var_kda_name.setType("String");
 
 		Variable var_exprIterationLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprIterationLiteral",
 				true, csp);
 		var_exprIterationLiteral_value.setValue(__helper.getValue("exprIterationLiteral", "value"));
 		var_exprIterationLiteral_value.setType("String");
 
+		Variable var_kda_outputSize = CSPFactoryHelper.eINSTANCE.createVariable("kda", true, csp);
+		var_kda_outputSize.setValue(__helper.getValue("kda", "outputSize"));
+		var_kda_outputSize.setType("String");
+
 		Variable var_kda_iterations = CSPFactoryHelper.eINSTANCE.createVariable("kda", true, csp);
 		var_kda_iterations.setValue(__helper.getValue("kda", "iterations"));
 		var_kda_iterations.setType("String");
 
-		Variable var_kda_name = CSPFactoryHelper.eINSTANCE.createVariable("kda", true, csp);
-		var_kda_name.setValue(__helper.getValue("kda", "name"));
-		var_kda_name.setType("String");
-
-		Variable var_exprAlgNameLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprAlgNameLiteral", true,
-				csp);
-		var_exprAlgNameLiteral_value.setValue(__helper.getValue("exprAlgNameLiteral", "value"));
-		var_exprAlgNameLiteral_value.setType("String");
-
-		Variable var_kda_outputSize = CSPFactoryHelper.eINSTANCE.createVariable("kda", true, csp);
-		var_kda_outputSize.setValue(__helper.getValue("kda", "outputSize"));
-		var_kda_outputSize.setType("String");
+		Variable var_javaPackage_name = CSPFactoryHelper.eINSTANCE.createVariable("javaPackage", true, csp);
+		var_javaPackage_name.setValue(__helper.getValue("javaPackage", "name"));
+		var_javaPackage_name.setType("String");
 
 		Variable var_exprOutputSizeLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprOutputSizeLiteral",
 				true, csp);
 		var_exprOutputSizeLiteral_value.setValue(__helper.getValue("exprOutputSizeLiteral", "value"));
 		var_exprOutputSizeLiteral_value.setType("String");
 
-		Variable var_javaPackage_name = CSPFactoryHelper.eINSTANCE.createVariable("javaPackage", true, csp);
-		var_javaPackage_name.setValue(__helper.getValue("javaPackage", "name"));
-		var_javaPackage_name.setType("String");
+		Variable var_literal5 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
+		var_literal5.setValue("char [] pwd,String algName,int iterations,int outputSize");
+		var_literal5.setType("");
 
 		Variable var_methodPerformGetKey_parameters = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey",
 				true, csp);
 		var_methodPerformGetKey_parameters.setValue(__helper.getValue("methodPerformGetKey", "parameters"));
 		var_methodPerformGetKey_parameters.setType("String");
-
-		Variable var_literal5 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal5.setValue("char [] pwd,String algName,int iterations,int outputSize");
-		var_literal5.setType("");
 
 		SetDefaultStringIfNull setDefaultStringIfNull0 = new SetDefaultStringIfNull();
 		csp.getConstraints().add(setDefaultStringIfNull0);
@@ -1446,34 +1446,34 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		csp.getConstraints().add(setDefaultStringIfNull10);
 
 		setDefaultStringIfNull0.setRuleName("SecurePasswordTask");
-		setDefaultStringIfNull0.solve(var_task_package, var_literal4);
+		setDefaultStringIfNull0.solve(var_task_package, var_literal2);
 
 		setDefaultStringIfNull1.setRuleName("SecurePasswordTask");
-		setDefaultStringIfNull1.solve(var_methodPerformGetKey_index, var_literal1);
+		setDefaultStringIfNull1.solve(var_methodGetKey_throws, var_literal1);
 
 		setDefaultStringIfNull2.setRuleName("SecurePasswordTask");
-		setDefaultStringIfNull2.solve(var_methodPerformGetKey_throws, var_literal0);
+		setDefaultStringIfNull2.solve(var_methodGetKey_index, var_literal0);
 
 		setDefaultStringIfNull3.setRuleName("SecurePasswordTask");
-		setDefaultStringIfNull3.solve(var_methodGetKey_index, var_literal2);
+		setDefaultStringIfNull3.solve(var_methodPerformGetKey_throws, var_literal1);
 
 		setDefaultStringIfNull4.setRuleName("SecurePasswordTask");
-		setDefaultStringIfNull4.solve(var_methodGetKey_throws, var_literal0);
+		setDefaultStringIfNull4.solve(var_methodPerformGetKey_index, var_literal3);
 
 		setDefaultStringIfNull5.setRuleName("SecurePasswordTask");
-		setDefaultStringIfNull5.solve(var_methodPerformGetKey_body, var_literal3);
+		setDefaultStringIfNull5.solve(var_methodPerformGetKey_body, var_literal4);
 
 		eq6.setRuleName("SecurePasswordTask");
-		eq6.solve(var_exprIterationLiteral_value, var_kda_iterations);
+		eq6.solve(var_exprAlgNameLiteral_value, var_kda_name);
 
 		eq7.setRuleName("SecurePasswordTask");
-		eq7.solve(var_exprAlgNameLiteral_value, var_kda_name);
+		eq7.solve(var_task_package, var_javaPackage_name);
 
 		eq8.setRuleName("SecurePasswordTask");
-		eq8.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
+		eq8.solve(var_exprIterationLiteral_value, var_kda_iterations);
 
 		eq9.setRuleName("SecurePasswordTask");
-		eq9.solve(var_task_package, var_javaPackage_name);
+		eq9.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
 
 		setDefaultStringIfNull10.setRuleName("SecurePasswordTask");
 		setDefaultStringIfNull10.solve(var_methodPerformGetKey_parameters, var_literal5);
@@ -1481,39 +1481,39 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		if (csp.check()) {
 			ruleResult.setSuccess(true);
 		} else {
-			var_methodPerformGetKey_index.setBound(false);
-			var_methodPerformGetKey_throws.setBound(false);
-			var_methodGetKey_index.setBound(false);
 			var_methodGetKey_throws.setBound(false);
+			var_methodGetKey_index.setBound(false);
+			var_methodPerformGetKey_throws.setBound(false);
+			var_methodPerformGetKey_index.setBound(false);
 			var_methodPerformGetKey_body.setBound(false);
-			var_exprIterationLiteral_value.setBound(false);
 			var_exprAlgNameLiteral_value.setBound(false);
-			var_exprOutputSizeLiteral_value.setBound(false);
 			var_javaPackage_name.setBound(false);
+			var_exprIterationLiteral_value.setBound(false);
+			var_exprOutputSizeLiteral_value.setBound(false);
 			var_methodPerformGetKey_parameters.setBound(false);
-			setDefaultStringIfNull0.solve(var_task_package, var_literal4);
-			setDefaultStringIfNull1.solve(var_methodPerformGetKey_index, var_literal1);
-			setDefaultStringIfNull2.solve(var_methodPerformGetKey_throws, var_literal0);
-			setDefaultStringIfNull3.solve(var_methodGetKey_index, var_literal2);
-			setDefaultStringIfNull4.solve(var_methodGetKey_throws, var_literal0);
-			setDefaultStringIfNull5.solve(var_methodPerformGetKey_body, var_literal3);
-			eq6.solve(var_exprIterationLiteral_value, var_kda_iterations);
-			eq7.solve(var_exprAlgNameLiteral_value, var_kda_name);
-			eq8.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
-			eq9.solve(var_task_package, var_javaPackage_name);
+			setDefaultStringIfNull0.solve(var_task_package, var_literal2);
+			setDefaultStringIfNull1.solve(var_methodGetKey_throws, var_literal1);
+			setDefaultStringIfNull2.solve(var_methodGetKey_index, var_literal0);
+			setDefaultStringIfNull3.solve(var_methodPerformGetKey_throws, var_literal1);
+			setDefaultStringIfNull4.solve(var_methodPerformGetKey_index, var_literal3);
+			setDefaultStringIfNull5.solve(var_methodPerformGetKey_body, var_literal4);
+			eq6.solve(var_exprAlgNameLiteral_value, var_kda_name);
+			eq7.solve(var_task_package, var_javaPackage_name);
+			eq8.solve(var_exprIterationLiteral_value, var_kda_iterations);
+			eq9.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
 			setDefaultStringIfNull10.solve(var_methodPerformGetKey_parameters, var_literal5);
 			if (csp.check()) {
 				ruleResult.setSuccess(true);
 				ruleResult.setRequiredChange(true);
-				__helper.setValue("methodPerformGetKey", "index", var_methodPerformGetKey_index.getValue());
-				__helper.setValue("methodPerformGetKey", "throws", var_methodPerformGetKey_throws.getValue());
-				__helper.setValue("methodGetKey", "index", var_methodGetKey_index.getValue());
 				__helper.setValue("methodGetKey", "throws", var_methodGetKey_throws.getValue());
+				__helper.setValue("methodGetKey", "index", var_methodGetKey_index.getValue());
+				__helper.setValue("methodPerformGetKey", "throws", var_methodPerformGetKey_throws.getValue());
+				__helper.setValue("methodPerformGetKey", "index", var_methodPerformGetKey_index.getValue());
 				__helper.setValue("methodPerformGetKey", "body", var_methodPerformGetKey_body.getValue());
-				__helper.setValue("exprIterationLiteral", "value", var_exprIterationLiteral_value.getValue());
 				__helper.setValue("exprAlgNameLiteral", "value", var_exprAlgNameLiteral_value.getValue());
-				__helper.setValue("exprOutputSizeLiteral", "value", var_exprOutputSizeLiteral_value.getValue());
 				__helper.setValue("javaPackage", "name", var_javaPackage_name.getValue());
+				__helper.setValue("exprIterationLiteral", "value", var_exprIterationLiteral_value.getValue());
+				__helper.setValue("exprOutputSizeLiteral", "value", var_exprOutputSizeLiteral_value.getValue());
 				__helper.setValue("methodPerformGetKey", "parameters", var_methodPerformGetKey_parameters.getValue());
 			} else {
 				ruleResult.setSuccess(false);
@@ -1569,17 +1569,17 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodPerformGetKey", "type", "SecretKey ", ComparingOperator.EQUAL)) {
-			ruleResult.setSuccess(false);
-			return ruleResult;
-		}
-
 		if (!__helper.hasExpectedValue("methodPerformGetKey", "name", "performGetKey", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
 
 		if (!__helper.hasExpectedValue("methodPerformGetKey", "modifier", "private", ComparingOperator.EQUAL)) {
+			ruleResult.setSuccess(false);
+			return ruleResult;
+		}
+
+		if (!__helper.hasExpectedValue("methodPerformGetKey", "type", "SecretKey ", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
@@ -1609,11 +1609,6 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 			return ruleResult;
 		}
 
-		if (!__helper.hasExpectedValue("methodGetKey", "type", "SecretKey ", ComparingOperator.EQUAL)) {
-			ruleResult.setSuccess(false);
-			return ruleResult;
-		}
-
 		if (!__helper.hasExpectedValue("methodGetKey", "name", "getKey", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
@@ -1624,98 +1619,103 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 			return ruleResult;
 		}
 
+		if (!__helper.hasExpectedValue("methodGetKey", "type", "SecretKey ", ComparingOperator.EQUAL)) {
+			ruleResult.setSuccess(false);
+			return ruleResult;
+		}
+
 		if (!__helper.hasExpectedValue("jcu", "name", "KeyDeriv", ComparingOperator.EQUAL)) {
 			ruleResult.setSuccess(false);
 			return ruleResult;
 		}
 
-		Variable var_methodPerformGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey", true,
-				csp);
-		var_methodPerformGetKey_index.setValue(__helper.getValue("methodPerformGetKey", "index"));
-		var_methodPerformGetKey_index.setType("int");
-
 		Variable var_literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal0.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
+		var_literal0.setValue(1);
 		var_literal0.setType("");
 
 		Variable var_literal1 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal1.setValue(0);
+		var_literal1.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
 		var_literal1.setType("");
 
-		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey", true, csp);
-		var_methodGetKey_index.setValue(__helper.getValue("methodGetKey", "index"));
-		var_methodGetKey_index.setType("int");
+		Variable var_literal2 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
+		var_literal2.setValue("Crypto");
+		var_literal2.setType("");
+
+		Variable var_task_package = CSPFactoryHelper.eINSTANCE.createVariable("task", true, csp);
+		var_task_package.setValue(__helper.getValue("task", "package"));
+		var_task_package.setType("String");
 
 		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey", true, csp);
 		var_methodGetKey_throws.setValue(__helper.getValue("methodGetKey", "throws"));
 		var_methodGetKey_throws.setType("String");
-
-		Variable var_literal2 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal2.setValue(1);
-		var_literal2.setType("");
 
 		Variable var_methodPerformGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey", true,
 				csp);
 		var_methodPerformGetKey_throws.setValue(__helper.getValue("methodPerformGetKey", "throws"));
 		var_methodPerformGetKey_throws.setType("String");
 
+		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey", true, csp);
+		var_methodGetKey_index.setValue(__helper.getValue("methodGetKey", "index"));
+		var_methodGetKey_index.setType("int");
+
+		Variable var_methodPerformGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey", true,
+				csp);
+		var_methodPerformGetKey_index.setValue(__helper.getValue("methodPerformGetKey", "index"));
+		var_methodPerformGetKey_index.setType("int");
+
 		Variable var_literal3 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal3.setValue(
-				"{\n  byte[] salt=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(salt);\n  PBEKeySpec spec=new PBEKeySpec(pwd,salt,iterations,outputSize);\n  SecretKeyFactory skf=SecretKeyFactory.getInstance(algName);\n  return new SecretKeySpec(skf.generateSecret(spec).getEncoded(),\"AES\");\n}\n");
+		var_literal3.setValue(0);
 		var_literal3.setType("");
+
+		Variable var_literal4 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
+		var_literal4.setValue(
+				"{\n  byte[] salt=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(salt);\n  PBEKeySpec spec=new PBEKeySpec(pwd,salt,iterations,outputSize);\n  SecretKeyFactory skf=SecretKeyFactory.getInstance(algName);\n  return new SecretKeySpec(skf.generateSecret(spec).getEncoded(),\"AES\");\n}\n");
+		var_literal4.setType("");
 
 		Variable var_methodPerformGetKey_body = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey", true,
 				csp);
 		var_methodPerformGetKey_body.setValue(__helper.getValue("methodPerformGetKey", "body"));
 		var_methodPerformGetKey_body.setType("String");
 
-		Variable var_task_package = CSPFactoryHelper.eINSTANCE.createVariable("task", true, csp);
-		var_task_package.setValue(__helper.getValue("task", "package"));
-		var_task_package.setType("String");
+		Variable var_exprAlgNameLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprAlgNameLiteral", true,
+				csp);
+		var_exprAlgNameLiteral_value.setValue(__helper.getValue("exprAlgNameLiteral", "value"));
+		var_exprAlgNameLiteral_value.setType("String");
 
-		Variable var_literal4 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal4.setValue("Crypto");
-		var_literal4.setType("");
+		Variable var_kda_name = CSPFactoryHelper.eINSTANCE.createVariable("kda", true, csp);
+		var_kda_name.setValue(__helper.getValue("kda", "name"));
+		var_kda_name.setType("String");
 
 		Variable var_exprIterationLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprIterationLiteral",
 				true, csp);
 		var_exprIterationLiteral_value.setValue(__helper.getValue("exprIterationLiteral", "value"));
 		var_exprIterationLiteral_value.setType("String");
 
+		Variable var_kda_outputSize = CSPFactoryHelper.eINSTANCE.createVariable("kda", true, csp);
+		var_kda_outputSize.setValue(__helper.getValue("kda", "outputSize"));
+		var_kda_outputSize.setType("String");
+
 		Variable var_kda_iterations = CSPFactoryHelper.eINSTANCE.createVariable("kda", true, csp);
 		var_kda_iterations.setValue(__helper.getValue("kda", "iterations"));
 		var_kda_iterations.setType("String");
 
-		Variable var_kda_name = CSPFactoryHelper.eINSTANCE.createVariable("kda", true, csp);
-		var_kda_name.setValue(__helper.getValue("kda", "name"));
-		var_kda_name.setType("String");
-
-		Variable var_exprAlgNameLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprAlgNameLiteral", true,
-				csp);
-		var_exprAlgNameLiteral_value.setValue(__helper.getValue("exprAlgNameLiteral", "value"));
-		var_exprAlgNameLiteral_value.setType("String");
-
-		Variable var_kda_outputSize = CSPFactoryHelper.eINSTANCE.createVariable("kda", true, csp);
-		var_kda_outputSize.setValue(__helper.getValue("kda", "outputSize"));
-		var_kda_outputSize.setType("String");
+		Variable var_javaPackage_name = CSPFactoryHelper.eINSTANCE.createVariable("javaPackage", true, csp);
+		var_javaPackage_name.setValue(__helper.getValue("javaPackage", "name"));
+		var_javaPackage_name.setType("String");
 
 		Variable var_exprOutputSizeLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprOutputSizeLiteral",
 				true, csp);
 		var_exprOutputSizeLiteral_value.setValue(__helper.getValue("exprOutputSizeLiteral", "value"));
 		var_exprOutputSizeLiteral_value.setType("String");
 
-		Variable var_javaPackage_name = CSPFactoryHelper.eINSTANCE.createVariable("javaPackage", true, csp);
-		var_javaPackage_name.setValue(__helper.getValue("javaPackage", "name"));
-		var_javaPackage_name.setType("String");
+		Variable var_literal5 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
+		var_literal5.setValue("char [] pwd,String algName,int iterations,int outputSize");
+		var_literal5.setType("");
 
 		Variable var_methodPerformGetKey_parameters = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey",
 				true, csp);
 		var_methodPerformGetKey_parameters.setValue(__helper.getValue("methodPerformGetKey", "parameters"));
 		var_methodPerformGetKey_parameters.setType("String");
-
-		Variable var_literal5 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal5.setValue("char [] pwd,String algName,int iterations,int outputSize");
-		var_literal5.setType("");
 
 		SetDefaultStringIfNull setDefaultStringIfNull0 = new SetDefaultStringIfNull();
 		csp.getConstraints().add(setDefaultStringIfNull0);
@@ -1751,34 +1751,34 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		csp.getConstraints().add(eq10);
 
 		setDefaultStringIfNull0.setRuleName("SecurePasswordTask");
-		setDefaultStringIfNull0.solve(var_methodPerformGetKey_index, var_literal1);
+		setDefaultStringIfNull0.solve(var_methodGetKey_throws, var_literal1);
 
 		setDefaultStringIfNull1.setRuleName("SecurePasswordTask");
-		setDefaultStringIfNull1.solve(var_methodPerformGetKey_throws, var_literal0);
+		setDefaultStringIfNull1.solve(var_methodGetKey_index, var_literal0);
 
 		setDefaultStringIfNull2.setRuleName("SecurePasswordTask");
-		setDefaultStringIfNull2.solve(var_methodGetKey_index, var_literal2);
+		setDefaultStringIfNull2.solve(var_methodPerformGetKey_throws, var_literal1);
 
 		setDefaultStringIfNull3.setRuleName("SecurePasswordTask");
-		setDefaultStringIfNull3.solve(var_methodGetKey_throws, var_literal0);
+		setDefaultStringIfNull3.solve(var_methodPerformGetKey_index, var_literal3);
 
 		setDefaultStringIfNull4.setRuleName("SecurePasswordTask");
-		setDefaultStringIfNull4.solve(var_methodPerformGetKey_body, var_literal3);
+		setDefaultStringIfNull4.solve(var_methodPerformGetKey_body, var_literal4);
 
 		setDefaultStringIfNull5.setRuleName("SecurePasswordTask");
 		setDefaultStringIfNull5.solve(var_methodPerformGetKey_parameters, var_literal5);
 
 		setDefaultStringIfNull6.setRuleName("SecurePasswordTask");
-		setDefaultStringIfNull6.solve(var_task_package, var_literal4);
+		setDefaultStringIfNull6.solve(var_task_package, var_literal2);
 
 		eq7.setRuleName("SecurePasswordTask");
 		eq7.solve(var_task_package, var_javaPackage_name);
 
 		eq8.setRuleName("SecurePasswordTask");
-		eq8.solve(var_exprIterationLiteral_value, var_kda_iterations);
+		eq8.solve(var_exprAlgNameLiteral_value, var_kda_name);
 
 		eq9.setRuleName("SecurePasswordTask");
-		eq9.solve(var_exprAlgNameLiteral_value, var_kda_name);
+		eq9.solve(var_exprIterationLiteral_value, var_kda_iterations);
 
 		eq10.setRuleName("SecurePasswordTask");
 		eq10.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
@@ -1788,27 +1788,27 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		} else {
 			var_task_package.setBound(false);
 			var_task_package.setBound(false);
-			var_kda_iterations.setBound(false);
 			var_kda_name.setBound(false);
+			var_kda_iterations.setBound(false);
 			var_kda_outputSize.setBound(false);
-			setDefaultStringIfNull0.solve(var_methodPerformGetKey_index, var_literal1);
-			setDefaultStringIfNull1.solve(var_methodPerformGetKey_throws, var_literal0);
-			setDefaultStringIfNull2.solve(var_methodGetKey_index, var_literal2);
-			setDefaultStringIfNull3.solve(var_methodGetKey_throws, var_literal0);
-			setDefaultStringIfNull4.solve(var_methodPerformGetKey_body, var_literal3);
+			setDefaultStringIfNull0.solve(var_methodGetKey_throws, var_literal1);
+			setDefaultStringIfNull1.solve(var_methodGetKey_index, var_literal0);
+			setDefaultStringIfNull2.solve(var_methodPerformGetKey_throws, var_literal1);
+			setDefaultStringIfNull3.solve(var_methodPerformGetKey_index, var_literal3);
+			setDefaultStringIfNull4.solve(var_methodPerformGetKey_body, var_literal4);
 			setDefaultStringIfNull5.solve(var_methodPerformGetKey_parameters, var_literal5);
-			setDefaultStringIfNull6.solve(var_task_package, var_literal4);
+			setDefaultStringIfNull6.solve(var_task_package, var_literal2);
 			eq7.solve(var_task_package, var_javaPackage_name);
-			eq8.solve(var_exprIterationLiteral_value, var_kda_iterations);
-			eq9.solve(var_exprAlgNameLiteral_value, var_kda_name);
+			eq8.solve(var_exprAlgNameLiteral_value, var_kda_name);
+			eq9.solve(var_exprIterationLiteral_value, var_kda_iterations);
 			eq10.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
 			if (csp.check()) {
 				ruleResult.setSuccess(true);
 				ruleResult.setRequiredChange(true);
 				__helper.setValue("task", "package", var_task_package.getValue());
 				__helper.setValue("task", "package", var_task_package.getValue());
-				__helper.setValue("kda", "iterations", var_kda_iterations.getValue());
 				__helper.setValue("kda", "name", var_kda_name.getValue());
+				__helper.setValue("kda", "iterations", var_kda_iterations.getValue());
 				__helper.setValue("kda", "outputSize", var_kda_outputSize.getValue());
 			} else {
 				ruleResult.setSuccess(false);
@@ -1896,9 +1896,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 							+ "[methodGetKey] = " + methodGetKey + ", " + "[jcu] = " + jcu + ", " + "[ccMatch] = "
 							+ ccMatch + ".");
 				}
-				SecurePasswordTaskImpl.pattern_SecurePasswordTask_24_6_createcorrespondence_greenFBBFBBB(javaPackage,
+				SecurePasswordTaskImpl.pattern_SecurePasswordTask_24_6_createcorrespondence_greenBFBFBBB(javaPackage,
 						kda, task, jcu, ccMatch);
-				//nothing TaskToJavaPackage t2c = (TaskToJavaPackage) result6_green[0];
+				//nothing TaskToJavaPackage t2c = (TaskToJavaPackage) result6_green[1];
 				//nothing KeyDerivationAlgorithmToJcu tc = (KeyDerivationAlgorithmToJcu) result6_green[3];
 
 				Object[] result7_black = SecurePasswordTaskImpl
@@ -1930,13 +1930,13 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 		// Create literals
 		Variable literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal0", true, csp);
-		literal0.setValue(0);
+		literal0.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
 		literal0.setType("");
 		Variable literal1 = CSPFactoryHelper.eINSTANCE.createVariable("literal1", true, csp);
-		literal1.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
+		literal1.setValue(1);
 		literal1.setType("");
 		Variable literal2 = CSPFactoryHelper.eINSTANCE.createVariable("literal2", true, csp);
-		literal2.setValue(1);
+		literal2.setValue(0);
 		literal2.setType("");
 		Variable literal3 = CSPFactoryHelper.eINSTANCE.createVariable("literal3", true, csp);
 		literal3.setValue(
@@ -1947,31 +1947,24 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		literal4.setType("");
 
 		// Create attribute variables
-		Variable var_methodPerformGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.index",
-				true, csp);
-		var_methodPerformGetKey_index.setValue(methodPerformGetKey.getIndex());
-		var_methodPerformGetKey_index.setType("int");
+		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.throws", true, csp);
+		var_methodGetKey_throws.setValue(methodGetKey.getThrows());
+		var_methodGetKey_throws.setType("String");
+		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.index", true, csp);
+		var_methodGetKey_index.setValue(methodGetKey.getIndex());
+		var_methodGetKey_index.setType("int");
 		Variable var_methodPerformGetKey_throws = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformGetKey.throws", true, csp);
 		var_methodPerformGetKey_throws.setValue(methodPerformGetKey.getThrows());
 		var_methodPerformGetKey_throws.setType("String");
-		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.index", true, csp);
-		var_methodGetKey_index.setValue(methodGetKey.getIndex());
-		var_methodGetKey_index.setType("int");
-		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.throws", true, csp);
-		var_methodGetKey_throws.setValue(methodGetKey.getThrows());
-		var_methodGetKey_throws.setType("String");
+		Variable var_methodPerformGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.index",
+				true, csp);
+		var_methodPerformGetKey_index.setValue(methodPerformGetKey.getIndex());
+		var_methodPerformGetKey_index.setType("int");
 		Variable var_methodPerformGetKey_body = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.body",
 				true, csp);
 		var_methodPerformGetKey_body.setValue(methodPerformGetKey.getBody());
 		var_methodPerformGetKey_body.setType("String");
-		Variable var_exprIterationLiteral_value = CSPFactoryHelper.eINSTANCE
-				.createVariable("exprIterationLiteral.value", true, csp);
-		var_exprIterationLiteral_value.setValue(exprIterationLiteral.getValue());
-		var_exprIterationLiteral_value.setType("String");
-		Variable var_kda_iterations = CSPFactoryHelper.eINSTANCE.createVariable("kda.iterations", true, csp);
-		var_kda_iterations.setValue(kda.getIterations());
-		var_kda_iterations.setType("String");
 		Variable var_exprAlgNameLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprAlgNameLiteral.value",
 				true, csp);
 		var_exprAlgNameLiteral_value.setValue(exprAlgNameLiteral.getValue());
@@ -1979,6 +1972,19 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		Variable var_kda_name = CSPFactoryHelper.eINSTANCE.createVariable("kda.name", true, csp);
 		var_kda_name.setValue(kda.getName());
 		var_kda_name.setType("String");
+		Variable var_task_package = CSPFactoryHelper.eINSTANCE.createVariable("task.package", true, csp);
+		var_task_package.setValue(task.getPackage());
+		var_task_package.setType("String");
+		Variable var_javaPackage_name = CSPFactoryHelper.eINSTANCE.createVariable("javaPackage.name", true, csp);
+		var_javaPackage_name.setValue(javaPackage.getName());
+		var_javaPackage_name.setType("String");
+		Variable var_exprIterationLiteral_value = CSPFactoryHelper.eINSTANCE
+				.createVariable("exprIterationLiteral.value", true, csp);
+		var_exprIterationLiteral_value.setValue(exprIterationLiteral.getValue());
+		var_exprIterationLiteral_value.setType("String");
+		Variable var_kda_iterations = CSPFactoryHelper.eINSTANCE.createVariable("kda.iterations", true, csp);
+		var_kda_iterations.setValue(kda.getIterations());
+		var_kda_iterations.setType("String");
 		Variable var_exprOutputSizeLiteral_value = CSPFactoryHelper.eINSTANCE
 				.createVariable("exprOutputSizeLiteral.value", true, csp);
 		var_exprOutputSizeLiteral_value.setValue(exprOutputSizeLiteral.getValue());
@@ -1986,12 +1992,6 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		Variable var_kda_outputSize = CSPFactoryHelper.eINSTANCE.createVariable("kda.outputSize", true, csp);
 		var_kda_outputSize.setValue(kda.getOutputSize());
 		var_kda_outputSize.setType("String");
-		Variable var_task_package = CSPFactoryHelper.eINSTANCE.createVariable("task.package", true, csp);
-		var_task_package.setValue(task.getPackage());
-		var_task_package.setType("String");
-		Variable var_javaPackage_name = CSPFactoryHelper.eINSTANCE.createVariable("javaPackage.name", true, csp);
-		var_javaPackage_name.setValue(javaPackage.getName());
-		var_javaPackage_name.setType("String");
 		Variable var_methodPerformGetKey_parameters = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformGetKey.parameters", true, csp);
 		var_methodPerformGetKey_parameters.setValue(methodPerformGetKey.getParameters());
@@ -2024,23 +2024,23 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 		// Solve CSP
 		setDefaultStringIfNull.setRuleName("NoRuleName");
-		setDefaultStringIfNull.solve(var_methodPerformGetKey_index, literal0);
+		setDefaultStringIfNull.solve(var_methodGetKey_throws, literal0);
 		setDefaultStringIfNull_0.setRuleName("NoRuleName");
-		setDefaultStringIfNull_0.solve(var_methodPerformGetKey_throws, literal1);
+		setDefaultStringIfNull_0.solve(var_methodGetKey_index, literal1);
 		setDefaultStringIfNull_1.setRuleName("NoRuleName");
-		setDefaultStringIfNull_1.solve(var_methodGetKey_index, literal2);
+		setDefaultStringIfNull_1.solve(var_methodPerformGetKey_throws, literal0);
 		setDefaultStringIfNull_2.setRuleName("NoRuleName");
-		setDefaultStringIfNull_2.solve(var_methodGetKey_throws, literal1);
+		setDefaultStringIfNull_2.solve(var_methodPerformGetKey_index, literal2);
 		setDefaultStringIfNull_3.setRuleName("NoRuleName");
 		setDefaultStringIfNull_3.solve(var_methodPerformGetKey_body, literal3);
 		eq.setRuleName("NoRuleName");
-		eq.solve(var_exprIterationLiteral_value, var_kda_iterations);
+		eq.solve(var_exprAlgNameLiteral_value, var_kda_name);
 		eq_0.setRuleName("NoRuleName");
-		eq_0.solve(var_exprAlgNameLiteral_value, var_kda_name);
+		eq_0.solve(var_task_package, var_javaPackage_name);
 		eq_1.setRuleName("NoRuleName");
-		eq_1.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
+		eq_1.solve(var_exprIterationLiteral_value, var_kda_iterations);
 		eq_2.setRuleName("NoRuleName");
-		eq_2.solve(var_task_package, var_javaPackage_name);
+		eq_2.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
 		setDefaultStringIfNull_4.setRuleName("NoRuleName");
 		setDefaultStringIfNull_4.solve(var_methodPerformGetKey_parameters, literal4);
 		return csp;
@@ -2136,8 +2136,8 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 				}
 				SecurePasswordTaskImpl.pattern_SecurePasswordTask_29_6_perform_greenFFFFFFFFFFFFFFFBB(ruleResult, csp);
 				//nothing JavaLiteral exprIterationLiteral = (JavaLiteral) result6_green[0];
-				//nothing TaskToJavaPackage t2c = (TaskToJavaPackage) result6_green[1];
-				//nothing JavaPackage javaPackage = (JavaPackage) result6_green[2];
+				//nothing JavaPackage javaPackage = (JavaPackage) result6_green[1];
+				//nothing TaskToJavaPackage t2c = (TaskToJavaPackage) result6_green[2];
 				//nothing JavaLiteral exprAlgNameLiteral = (JavaLiteral) result6_green[3];
 				//nothing JavaVariableDeclaration pwdDeclaration = (JavaVariableDeclaration) result6_green[4];
 				//nothing KeyDerivationAlgorithm kda = (KeyDerivationAlgorithm) result6_green[5];
@@ -2170,20 +2170,20 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 		// Create literals
 		Variable literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal0", true, csp);
-		literal0.setValue(0);
+		literal0.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
 		literal0.setType("");
 		Variable literal1 = CSPFactoryHelper.eINSTANCE.createVariable("literal1", true, csp);
-		literal1.setValue("NoSuchAlgorithmException, InvalidKeySpecException");
+		literal1.setValue(1);
 		literal1.setType("");
 		Variable literal2 = CSPFactoryHelper.eINSTANCE.createVariable("literal2", true, csp);
-		literal2.setValue(1);
+		literal2.setValue("Crypto");
 		literal2.setType("");
 		Variable literal3 = CSPFactoryHelper.eINSTANCE.createVariable("literal3", true, csp);
-		literal3.setValue(
-				"{\n  byte[] salt=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(salt);\n  PBEKeySpec spec=new PBEKeySpec(pwd,salt,iterations,outputSize);\n  SecretKeyFactory skf=SecretKeyFactory.getInstance(algName);\n  return new SecretKeySpec(skf.generateSecret(spec).getEncoded(),\"AES\");\n}\n");
+		literal3.setValue(0);
 		literal3.setType("");
 		Variable literal4 = CSPFactoryHelper.eINSTANCE.createVariable("literal4", true, csp);
-		literal4.setValue("Crypto");
+		literal4.setValue(
+				"{\n  byte[] salt=new byte[16];\n  SecureRandom.getInstanceStrong().nextBytes(salt);\n  PBEKeySpec spec=new PBEKeySpec(pwd,salt,iterations,outputSize);\n  SecretKeyFactory skf=SecretKeyFactory.getInstance(algName);\n  return new SecretKeySpec(skf.generateSecret(spec).getEncoded(),\"AES\");\n}\n");
 		literal4.setType("");
 		Variable literal5 = CSPFactoryHelper.eINSTANCE.createVariable("literal5", true, csp);
 		literal5.setValue("char [] pwd,String algName,int iterations,int outputSize");
@@ -2192,38 +2192,38 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		// Create attribute variables
 
 		// Create unbound variables
-		Variable var_methodPerformGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.index",
-				csp);
-		var_methodPerformGetKey_index.setType("int");
+		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.throws", csp);
+		var_methodGetKey_throws.setType("String");
+		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.index", csp);
+		var_methodGetKey_index.setType("int");
 		Variable var_methodPerformGetKey_throws = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformGetKey.throws", csp);
 		var_methodPerformGetKey_throws.setType("String");
-		Variable var_methodGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.index", csp);
-		var_methodGetKey_index.setType("int");
-		Variable var_methodGetKey_throws = CSPFactoryHelper.eINSTANCE.createVariable("methodGetKey.throws", csp);
-		var_methodGetKey_throws.setType("String");
+		Variable var_task_package = CSPFactoryHelper.eINSTANCE.createVariable("task.package", csp);
+		var_task_package.setType("String");
+		Variable var_methodPerformGetKey_index = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.index",
+				csp);
+		var_methodPerformGetKey_index.setType("int");
 		Variable var_methodPerformGetKey_body = CSPFactoryHelper.eINSTANCE.createVariable("methodPerformGetKey.body",
 				csp);
 		var_methodPerformGetKey_body.setType("String");
-		Variable var_task_package = CSPFactoryHelper.eINSTANCE.createVariable("task.package", csp);
-		var_task_package.setType("String");
-		Variable var_exprIterationLiteral_value = CSPFactoryHelper.eINSTANCE
-				.createVariable("exprIterationLiteral.value", csp);
-		var_exprIterationLiteral_value.setType("String");
-		Variable var_kda_iterations = CSPFactoryHelper.eINSTANCE.createVariable("kda.iterations", csp);
-		var_kda_iterations.setType("String");
 		Variable var_exprAlgNameLiteral_value = CSPFactoryHelper.eINSTANCE.createVariable("exprAlgNameLiteral.value",
 				csp);
 		var_exprAlgNameLiteral_value.setType("String");
 		Variable var_kda_name = CSPFactoryHelper.eINSTANCE.createVariable("kda.name", csp);
 		var_kda_name.setType("String");
+		Variable var_javaPackage_name = CSPFactoryHelper.eINSTANCE.createVariable("javaPackage.name", csp);
+		var_javaPackage_name.setType("String");
+		Variable var_exprIterationLiteral_value = CSPFactoryHelper.eINSTANCE
+				.createVariable("exprIterationLiteral.value", csp);
+		var_exprIterationLiteral_value.setType("String");
+		Variable var_kda_iterations = CSPFactoryHelper.eINSTANCE.createVariable("kda.iterations", csp);
+		var_kda_iterations.setType("String");
 		Variable var_exprOutputSizeLiteral_value = CSPFactoryHelper.eINSTANCE
 				.createVariable("exprOutputSizeLiteral.value", csp);
 		var_exprOutputSizeLiteral_value.setType("String");
 		Variable var_kda_outputSize = CSPFactoryHelper.eINSTANCE.createVariable("kda.outputSize", csp);
 		var_kda_outputSize.setType("String");
-		Variable var_javaPackage_name = CSPFactoryHelper.eINSTANCE.createVariable("javaPackage.name", csp);
-		var_javaPackage_name.setType("String");
 		Variable var_methodPerformGetKey_parameters = CSPFactoryHelper.eINSTANCE
 				.createVariable("methodPerformGetKey.parameters", csp);
 		var_methodPerformGetKey_parameters.setType("String");
@@ -2255,25 +2255,25 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 		// Solve CSP
 		setDefaultStringIfNull.setRuleName("NoRuleName");
-		setDefaultStringIfNull.solve(var_methodPerformGetKey_index, literal0);
+		setDefaultStringIfNull.solve(var_methodGetKey_throws, literal0);
 		setDefaultStringIfNull_0.setRuleName("NoRuleName");
-		setDefaultStringIfNull_0.solve(var_methodPerformGetKey_throws, literal1);
+		setDefaultStringIfNull_0.solve(var_methodGetKey_index, literal1);
 		setDefaultStringIfNull_1.setRuleName("NoRuleName");
-		setDefaultStringIfNull_1.solve(var_methodGetKey_index, literal2);
+		setDefaultStringIfNull_1.solve(var_methodPerformGetKey_throws, literal0);
 		setDefaultStringIfNull_2.setRuleName("NoRuleName");
-		setDefaultStringIfNull_2.solve(var_methodGetKey_throws, literal1);
+		setDefaultStringIfNull_2.solve(var_task_package, literal2);
 		setDefaultStringIfNull_3.setRuleName("NoRuleName");
-		setDefaultStringIfNull_3.solve(var_methodPerformGetKey_body, literal3);
+		setDefaultStringIfNull_3.solve(var_methodPerformGetKey_index, literal3);
 		setDefaultStringIfNull_4.setRuleName("NoRuleName");
-		setDefaultStringIfNull_4.solve(var_task_package, literal4);
+		setDefaultStringIfNull_4.solve(var_methodPerformGetKey_body, literal4);
 		setDefaultStringIfNull_5.setRuleName("NoRuleName");
 		setDefaultStringIfNull_5.solve(var_methodPerformGetKey_parameters, literal5);
 		eq.setRuleName("NoRuleName");
 		eq.solve(var_task_package, var_javaPackage_name);
 		eq_0.setRuleName("NoRuleName");
-		eq_0.solve(var_exprIterationLiteral_value, var_kda_iterations);
+		eq_0.solve(var_exprAlgNameLiteral_value, var_kda_name);
 		eq_1.setRuleName("NoRuleName");
-		eq_1.solve(var_exprAlgNameLiteral_value, var_kda_name);
+		eq_1.solve(var_exprIterationLiteral_value, var_kda_iterations);
 		eq_2.setRuleName("NoRuleName");
 		eq_2.solve(var_exprOutputSizeLiteral_value, var_kda_outputSize);
 
@@ -2376,10 +2376,10 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 			return null;
 		case RulesPackage.SECURE_PASSWORD_TASK___CHECK_TYPES_BWD__MATCH:
 			return checkTypes_BWD((Match) arguments.get(0));
-		case RulesPackage.SECURE_PASSWORD_TASK___IS_APPROPRIATE_FWD_EMOFLON_EDGE_6__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_6((EMoflonEdge) arguments.get(0));
-		case RulesPackage.SECURE_PASSWORD_TASK___IS_APPROPRIATE_BWD_EMOFLON_EDGE_6__EMOFLONEDGE:
-			return isAppropriate_BWD_EMoflonEdge_6((EMoflonEdge) arguments.get(0));
+		case RulesPackage.SECURE_PASSWORD_TASK___IS_APPROPRIATE_FWD_EMOFLON_EDGE_1__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_1((EMoflonEdge) arguments.get(0));
+		case RulesPackage.SECURE_PASSWORD_TASK___IS_APPROPRIATE_BWD_EMOFLON_EDGE_3__EMOFLONEDGE:
+			return isAppropriate_BWD_EMoflonEdge_3((EMoflonEdge) arguments.get(0));
 		case RulesPackage.SECURE_PASSWORD_TASK___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.SECURE_PASSWORD_TASK___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH:
@@ -2546,8 +2546,8 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 	public static final Object[] pattern_SecurePasswordTask_1_1_performtransformation_greenFFFFFBFFFFBFFFFB(
 			KeyDerivationAlgorithm kda, Task task, CSP csp) {
 		JavaLiteral exprIterationLiteral = SimpleJavaFactory.eINSTANCE.createJavaLiteral();
-		TaskToJavaPackage t2c = CryptoConfigToJavaFactory.eINSTANCE.createTaskToJavaPackage();
 		JavaPackage javaPackage = SimpleJavaFactory.eINSTANCE.createJavaPackage();
+		TaskToJavaPackage t2c = CryptoConfigToJavaFactory.eINSTANCE.createTaskToJavaPackage();
 		JavaLiteral exprAlgNameLiteral = SimpleJavaFactory.eINSTANCE.createJavaLiteral();
 		JavaVariableDeclaration pwdDeclaration = SimpleJavaFactory.eINSTANCE.createJavaVariableDeclaration();
 		JavaMethodInvocation exprRetGetKey = SimpleJavaFactory.eINSTANCE.createJavaMethodInvocation();
@@ -2567,11 +2567,11 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		int pwdDeclaration_index_prime = Integer.valueOf(0);
 		String pwdDeclaration_name_prime = "pwd";
 		String exprRetGetKey_name_prime = "performGetKey";
-		String methodPerformGetKey_type_prime = "SecretKey ";
 		String methodPerformGetKey_name_prime = "performGetKey";
 		String methodPerformGetKey_modifier_prime = "private";
-		Object _localVariable_3 = csp.getValue("methodPerformGetKey", "index");
-		Object _localVariable_4 = csp.getValue("methodPerformGetKey", "throws");
+		String methodPerformGetKey_type_prime = "SecretKey ";
+		Object _localVariable_3 = csp.getValue("methodPerformGetKey", "throws");
+		Object _localVariable_4 = csp.getValue("methodPerformGetKey", "index");
 		Object _localVariable_5 = csp.getValue("methodPerformGetKey", "body");
 		Object _localVariable_6 = csp.getValue("methodPerformGetKey", "parameters");
 		int exprOutputSizeLiteral_index_prime = Integer.valueOf(3);
@@ -2579,14 +2579,14 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		int exprPwdName_index_prime = Integer.valueOf(0);
 		String exprPwdName_identifier_prime = "pwd";
 		boolean statRetGetKey_return_prime = Boolean.valueOf(true);
-		String methodGetKey_type_prime = "SecretKey ";
 		String methodGetKey_name_prime = "getKey";
 		String methodGetKey_modifier_prime = "public";
-		Object _localVariable_8 = csp.getValue("methodGetKey", "index");
-		Object _localVariable_9 = csp.getValue("methodGetKey", "throws");
+		String methodGetKey_type_prime = "SecretKey ";
+		Object _localVariable_8 = csp.getValue("methodGetKey", "throws");
+		Object _localVariable_9 = csp.getValue("methodGetKey", "index");
 		String jcu_name_prime = "KeyDeriv";
-		t2c.setSource(task);
 		t2c.setTarget(javaPackage);
+		t2c.setSource(task);
 		exprRetGetKey.getArguments().add(exprAlgNameLiteral);
 		exprRetGetKey.getArguments().add(exprIterationLiteral);
 		exprRetGetKey.getArguments().add(exprOutputSizeLiteral);
@@ -2608,11 +2608,11 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		pwdDeclaration.setIndex(Integer.valueOf(pwdDeclaration_index_prime));
 		pwdDeclaration.setName(pwdDeclaration_name_prime);
 		exprRetGetKey.setName(exprRetGetKey_name_prime);
-		methodPerformGetKey.setType(methodPerformGetKey_type_prime);
 		methodPerformGetKey.setName(methodPerformGetKey_name_prime);
 		methodPerformGetKey.setModifier(methodPerformGetKey_modifier_prime);
-		int methodPerformGetKey_index_prime = (int) _localVariable_3;
-		String methodPerformGetKey_throws_prime = (String) _localVariable_4;
+		methodPerformGetKey.setType(methodPerformGetKey_type_prime);
+		String methodPerformGetKey_throws_prime = (String) _localVariable_3;
+		int methodPerformGetKey_index_prime = (int) _localVariable_4;
 		String methodPerformGetKey_body_prime = (String) _localVariable_5;
 		String methodPerformGetKey_parameters_prime = (String) _localVariable_6;
 		exprOutputSizeLiteral.setIndex(Integer.valueOf(exprOutputSizeLiteral_index_prime));
@@ -2620,29 +2620,29 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		exprPwdName.setIndex(Integer.valueOf(exprPwdName_index_prime));
 		exprPwdName.setIdentifier(exprPwdName_identifier_prime);
 		statRetGetKey.setReturn(Boolean.valueOf(statRetGetKey_return_prime));
-		methodGetKey.setType(methodGetKey_type_prime);
 		methodGetKey.setName(methodGetKey_name_prime);
 		methodGetKey.setModifier(methodGetKey_modifier_prime);
-		int methodGetKey_index_prime = (int) _localVariable_8;
-		String methodGetKey_throws_prime = (String) _localVariable_9;
+		methodGetKey.setType(methodGetKey_type_prime);
+		String methodGetKey_throws_prime = (String) _localVariable_8;
+		int methodGetKey_index_prime = (int) _localVariable_9;
 		jcu.setName(jcu_name_prime);
 		exprIterationLiteral.setValue(exprIterationLiteral_value_prime);
 		javaPackage.setName(javaPackage_name_prime);
 		exprAlgNameLiteral.setValue(exprAlgNameLiteral_value_prime);
-		methodPerformGetKey.setIndex(Integer.valueOf(methodPerformGetKey_index_prime));
 		methodPerformGetKey.setThrows(methodPerformGetKey_throws_prime);
+		methodPerformGetKey.setIndex(Integer.valueOf(methodPerformGetKey_index_prime));
 		methodPerformGetKey.setBody(methodPerformGetKey_body_prime);
 		methodPerformGetKey.setParameters(methodPerformGetKey_parameters_prime);
 		exprOutputSizeLiteral.setValue(exprOutputSizeLiteral_value_prime);
-		methodGetKey.setIndex(Integer.valueOf(methodGetKey_index_prime));
 		methodGetKey.setThrows(methodGetKey_throws_prime);
-		return new Object[] { exprIterationLiteral, t2c, javaPackage, exprAlgNameLiteral, pwdDeclaration, kda,
+		methodGetKey.setIndex(Integer.valueOf(methodGetKey_index_prime));
+		return new Object[] { exprIterationLiteral, javaPackage, t2c, exprAlgNameLiteral, pwdDeclaration, kda,
 				exprRetGetKey, methodPerformGetKey, exprOutputSizeLiteral, tc, task, exprPwdName, statRetGetKey,
 				methodGetKey, jcu, csp };
 	}
 
 	public static final Object[] pattern_SecurePasswordTask_1_2_collecttranslatedelements_blackBBBBBBBBBBBBBBB(
-			JavaLiteral exprIterationLiteral, TaskToJavaPackage t2c, JavaPackage javaPackage,
+			JavaLiteral exprIterationLiteral, JavaPackage javaPackage, TaskToJavaPackage t2c,
 			JavaLiteral exprAlgNameLiteral, JavaVariableDeclaration pwdDeclaration, KeyDerivationAlgorithm kda,
 			JavaMethodInvocation exprRetGetKey, JavaOpaqueMethod methodPerformGetKey, JavaLiteral exprOutputSizeLiteral,
 			KeyDerivationAlgorithmToJcu tc, Task task, JavaName exprPwdName, JavaStatement statRetGetKey,
@@ -2650,7 +2650,7 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		if (!exprIterationLiteral.equals(exprOutputSizeLiteral)) {
 			if (!exprAlgNameLiteral.equals(exprIterationLiteral)) {
 				if (!exprAlgNameLiteral.equals(exprOutputSizeLiteral)) {
-					return new Object[] { exprIterationLiteral, t2c, javaPackage, exprAlgNameLiteral, pwdDeclaration,
+					return new Object[] { exprIterationLiteral, javaPackage, t2c, exprAlgNameLiteral, pwdDeclaration,
 							kda, exprRetGetKey, methodPerformGetKey, exprOutputSizeLiteral, tc, task, exprPwdName,
 							statRetGetKey, methodGetKey, jcu };
 				}
@@ -2660,15 +2660,15 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 	}
 
 	public static final Object[] pattern_SecurePasswordTask_1_2_collecttranslatedelements_greenFBBBBBBBBBBBBBBB(
-			JavaLiteral exprIterationLiteral, TaskToJavaPackage t2c, JavaPackage javaPackage,
+			JavaLiteral exprIterationLiteral, JavaPackage javaPackage, TaskToJavaPackage t2c,
 			JavaLiteral exprAlgNameLiteral, JavaVariableDeclaration pwdDeclaration, KeyDerivationAlgorithm kda,
 			JavaMethodInvocation exprRetGetKey, JavaOpaqueMethod methodPerformGetKey, JavaLiteral exprOutputSizeLiteral,
 			KeyDerivationAlgorithmToJcu tc, Task task, JavaName exprPwdName, JavaStatement statRetGetKey,
 			JavaWorkflowMethod methodGetKey, JavaCompilationUnit jcu) {
 		PerformRuleResult ruleresult = RuntimeFactory.eINSTANCE.createPerformRuleResult();
 		ruleresult.getCreatedElements().add(exprIterationLiteral);
-		ruleresult.getCreatedLinkElements().add(t2c);
 		ruleresult.getCreatedElements().add(javaPackage);
+		ruleresult.getCreatedLinkElements().add(t2c);
 		ruleresult.getCreatedElements().add(exprAlgNameLiteral);
 		ruleresult.getCreatedElements().add(pwdDeclaration);
 		ruleresult.getTranslatedElements().add(kda);
@@ -2681,18 +2681,18 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		ruleresult.getCreatedElements().add(statRetGetKey);
 		ruleresult.getCreatedElements().add(methodGetKey);
 		ruleresult.getCreatedElements().add(jcu);
-		return new Object[] { ruleresult, exprIterationLiteral, t2c, javaPackage, exprAlgNameLiteral, pwdDeclaration,
+		return new Object[] { ruleresult, exprIterationLiteral, javaPackage, t2c, exprAlgNameLiteral, pwdDeclaration,
 				kda, exprRetGetKey, methodPerformGetKey, exprOutputSizeLiteral, tc, task, exprPwdName, statRetGetKey,
 				methodGetKey, jcu };
 	}
 
 	public static final Object[] pattern_SecurePasswordTask_1_3_bookkeepingforedges_blackBBBBBBBBBBBBBBBB(
-			PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject t2c, EObject javaPackage,
+			PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject javaPackage, EObject t2c,
 			EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda, EObject exprRetGetKey,
 			EObject methodPerformGetKey, EObject exprOutputSizeLiteral, EObject tc, EObject task, EObject exprPwdName,
 			EObject statRetGetKey, EObject methodGetKey, EObject jcu) {
-		if (!exprIterationLiteral.equals(t2c)) {
-			if (!exprIterationLiteral.equals(javaPackage)) {
+		if (!exprIterationLiteral.equals(javaPackage)) {
+			if (!exprIterationLiteral.equals(t2c)) {
 				if (!exprIterationLiteral.equals(pwdDeclaration)) {
 					if (!exprIterationLiteral.equals(kda)) {
 						if (!exprIterationLiteral.equals(exprRetGetKey)) {
@@ -2704,27 +2704,27 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 												if (!exprIterationLiteral.equals(statRetGetKey)) {
 													if (!exprIterationLiteral.equals(methodGetKey)) {
 														if (!exprIterationLiteral.equals(jcu)) {
-															if (!t2c.equals(tc)) {
-																if (!t2c.equals(task)) {
-																	if (!javaPackage.equals(t2c)) {
-																		if (!javaPackage.equals(pwdDeclaration)) {
-																			if (!javaPackage.equals(kda)) {
-																				if (!javaPackage
-																						.equals(methodPerformGetKey)) {
-																					if (!javaPackage.equals(tc)) {
-																						if (!javaPackage.equals(task)) {
-																							if (!javaPackage.equals(
-																									statRetGetKey)) {
-																								if (!javaPackage.equals(
-																										methodGetKey)) {
-																									if (!javaPackage
-																											.equals(jcu)) {
+															if (!javaPackage.equals(t2c)) {
+																if (!javaPackage.equals(pwdDeclaration)) {
+																	if (!javaPackage.equals(kda)) {
+																		if (!javaPackage.equals(methodPerformGetKey)) {
+																			if (!javaPackage.equals(tc)) {
+																				if (!javaPackage.equals(task)) {
+																					if (!javaPackage
+																							.equals(statRetGetKey)) {
+																						if (!javaPackage
+																								.equals(methodGetKey)) {
+																							if (!javaPackage
+																									.equals(jcu)) {
+																								if (!t2c.equals(tc)) {
+																									if (!t2c.equals(
+																											task)) {
 																										if (!exprAlgNameLiteral
 																												.equals(exprIterationLiteral)) {
 																											if (!exprAlgNameLiteral
-																													.equals(t2c)) {
+																													.equals(javaPackage)) {
 																												if (!exprAlgNameLiteral
-																														.equals(javaPackage)) {
+																														.equals(t2c)) {
 																													if (!exprAlgNameLiteral
 																															.equals(pwdDeclaration)) {
 																														if (!exprAlgNameLiteral
@@ -2770,9 +2770,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 																																																		if (!kda.equals(
 																																																				methodGetKey)) {
 																																																			if (!exprRetGetKey
-																																																					.equals(t2c)) {
+																																																					.equals(javaPackage)) {
 																																																				if (!exprRetGetKey
-																																																						.equals(javaPackage)) {
+																																																						.equals(t2c)) {
 																																																					if (!exprRetGetKey
 																																																							.equals(pwdDeclaration)) {
 																																																						if (!exprRetGetKey
@@ -2800,9 +2800,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 																																																																	if (!methodPerformGetKey
 																																																																			.equals(statRetGetKey)) {
 																																																																		if (!exprOutputSizeLiteral
-																																																																				.equals(t2c)) {
+																																																																				.equals(javaPackage)) {
 																																																																			if (!exprOutputSizeLiteral
-																																																																					.equals(javaPackage)) {
+																																																																					.equals(t2c)) {
 																																																																				if (!exprOutputSizeLiteral
 																																																																						.equals(pwdDeclaration)) {
 																																																																					if (!exprOutputSizeLiteral
@@ -2826,9 +2826,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 																																																																														if (!task
 																																																																																.equals(tc)) {
 																																																																															if (!exprPwdName
-																																																																																	.equals(t2c)) {
+																																																																																	.equals(javaPackage)) {
 																																																																																if (!exprPwdName
-																																																																																		.equals(javaPackage)) {
+																																																																																		.equals(t2c)) {
 																																																																																	if (!exprPwdName
 																																																																																			.equals(pwdDeclaration)) {
 																																																																																		if (!exprPwdName
@@ -2884,8 +2884,8 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 																																																																																																											return new Object[] {
 																																																																																																													ruleresult,
 																																																																																																													exprIterationLiteral,
-																																																																																																													t2c,
 																																																																																																													javaPackage,
+																																																																																																													t2c,
 																																																																																																													exprAlgNameLiteral,
 																																																																																																													pwdDeclaration,
 																																																																																																													kda,
@@ -3007,7 +3007,7 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 	}
 
 	public static final Object[] pattern_SecurePasswordTask_1_3_bookkeepingforedges_greenBBBBBBBBBBBBBBBBFFFFFFFFFFFFFFF(
-			PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject t2c, EObject javaPackage,
+			PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject javaPackage, EObject t2c,
 			EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda, EObject exprRetGetKey,
 			EObject methodPerformGetKey, EObject exprOutputSizeLiteral, EObject tc, EObject task, EObject exprPwdName,
 			EObject statRetGetKey, EObject methodGetKey, EObject jcu) {
@@ -3106,7 +3106,7 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 				.setName(exprRetGetKey__exprAlgNameLiteral____arguments_name_prime);
 		exprRetGetKey__exprIterationLiteral____arguments
 				.setName(exprRetGetKey__exprIterationLiteral____arguments_name_prime);
-		return new Object[] { ruleresult, exprIterationLiteral, t2c, javaPackage, exprAlgNameLiteral, pwdDeclaration,
+		return new Object[] { ruleresult, exprIterationLiteral, javaPackage, t2c, exprAlgNameLiteral, pwdDeclaration,
 				kda, exprRetGetKey, methodPerformGetKey, exprOutputSizeLiteral, tc, task, exprPwdName, statRetGetKey,
 				methodGetKey, jcu, javaPackage__jcu____cunits, jcu__methodGetKey____methods,
 				methodGetKey__statRetGetKey____statements, exprRetGetKey__exprPwdName____arguments,
@@ -3117,11 +3117,11 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 	}
 
 	public static final void pattern_SecurePasswordTask_1_5_registerobjects_expressionBBBBBBBBBBBBBBBBB(
-			SecurePasswordTask _this, PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject t2c,
-			EObject javaPackage, EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda, EObject exprRetGetKey,
+			SecurePasswordTask _this, PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject javaPackage,
+			EObject t2c, EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda, EObject exprRetGetKey,
 			EObject methodPerformGetKey, EObject exprOutputSizeLiteral, EObject tc, EObject task, EObject exprPwdName,
 			EObject statRetGetKey, EObject methodGetKey, EObject jcu) {
-		_this.registerObjects_FWD(ruleresult, exprIterationLiteral, t2c, javaPackage, exprAlgNameLiteral,
+		_this.registerObjects_FWD(ruleresult, exprIterationLiteral, javaPackage, t2c, exprAlgNameLiteral,
 				pwdDeclaration, kda, exprRetGetKey, methodPerformGetKey, exprOutputSizeLiteral, tc, task, exprPwdName,
 				statRetGetKey, methodGetKey, jcu);
 
@@ -3624,14 +3624,14 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		return null;
 	}
 
-	public static final Object[] pattern_SecurePasswordTask_11_1_performtransformation_greenFBFFFBB(
+	public static final Object[] pattern_SecurePasswordTask_11_1_performtransformation_greenBFFFFBB(
 			JavaPackage javaPackage, JavaCompilationUnit jcu, CSP csp) {
 		TaskToJavaPackage t2c = CryptoConfigToJavaFactory.eINSTANCE.createTaskToJavaPackage();
 		KeyDerivationAlgorithm kda = CryptoAPIConfigFactory.eINSTANCE.createKeyDerivationAlgorithm();
 		KeyDerivationAlgorithmToJcu tc = CryptoConfigToJavaFactory.eINSTANCE.createKeyDerivationAlgorithmToJcu();
 		Task task = CryptoAPIConfigFactory.eINSTANCE.createTask();
-		Object _localVariable_0 = csp.getValue("kda", "iterations");
-		Object _localVariable_1 = csp.getValue("kda", "name");
+		Object _localVariable_0 = csp.getValue("kda", "name");
+		Object _localVariable_1 = csp.getValue("kda", "iterations");
 		Object _localVariable_2 = csp.getValue("kda", "outputSize");
 		String task_description_prime = "SecurePassword";
 		Object _localVariable_3 = csp.getValue("task", "package");
@@ -3640,20 +3640,20 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		tc.setTarget(jcu);
 		t2c.setSource(task);
 		task.getAlgorithms().add(kda);
-		String kda_iterations_prime = (String) _localVariable_0;
-		String kda_name_prime = (String) _localVariable_1;
+		String kda_name_prime = (String) _localVariable_0;
+		String kda_iterations_prime = (String) _localVariable_1;
 		String kda_outputSize_prime = (String) _localVariable_2;
 		task.setDescription(task_description_prime);
 		String task_package_prime = (String) _localVariable_3;
-		kda.setIterations(kda_iterations_prime);
 		kda.setName(kda_name_prime);
+		kda.setIterations(kda_iterations_prime);
 		kda.setOutputSize(kda_outputSize_prime);
 		task.setPackage(task_package_prime);
-		return new Object[] { t2c, javaPackage, kda, tc, task, jcu, csp };
+		return new Object[] { javaPackage, t2c, kda, tc, task, jcu, csp };
 	}
 
 	public static final Object[] pattern_SecurePasswordTask_11_2_collecttranslatedelements_blackBBBBBBBBBBBBBBB(
-			JavaLiteral exprIterationLiteral, TaskToJavaPackage t2c, JavaPackage javaPackage,
+			JavaLiteral exprIterationLiteral, JavaPackage javaPackage, TaskToJavaPackage t2c,
 			JavaLiteral exprAlgNameLiteral, JavaVariableDeclaration pwdDeclaration, KeyDerivationAlgorithm kda,
 			JavaMethodInvocation exprRetGetKey, JavaOpaqueMethod methodPerformGetKey, JavaLiteral exprOutputSizeLiteral,
 			KeyDerivationAlgorithmToJcu tc, Task task, JavaName exprPwdName, JavaStatement statRetGetKey,
@@ -3661,7 +3661,7 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		if (!exprIterationLiteral.equals(exprOutputSizeLiteral)) {
 			if (!exprAlgNameLiteral.equals(exprIterationLiteral)) {
 				if (!exprAlgNameLiteral.equals(exprOutputSizeLiteral)) {
-					return new Object[] { exprIterationLiteral, t2c, javaPackage, exprAlgNameLiteral, pwdDeclaration,
+					return new Object[] { exprIterationLiteral, javaPackage, t2c, exprAlgNameLiteral, pwdDeclaration,
 							kda, exprRetGetKey, methodPerformGetKey, exprOutputSizeLiteral, tc, task, exprPwdName,
 							statRetGetKey, methodGetKey, jcu };
 				}
@@ -3671,15 +3671,15 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 	}
 
 	public static final Object[] pattern_SecurePasswordTask_11_2_collecttranslatedelements_greenFBBBBBBBBBBBBBBB(
-			JavaLiteral exprIterationLiteral, TaskToJavaPackage t2c, JavaPackage javaPackage,
+			JavaLiteral exprIterationLiteral, JavaPackage javaPackage, TaskToJavaPackage t2c,
 			JavaLiteral exprAlgNameLiteral, JavaVariableDeclaration pwdDeclaration, KeyDerivationAlgorithm kda,
 			JavaMethodInvocation exprRetGetKey, JavaOpaqueMethod methodPerformGetKey, JavaLiteral exprOutputSizeLiteral,
 			KeyDerivationAlgorithmToJcu tc, Task task, JavaName exprPwdName, JavaStatement statRetGetKey,
 			JavaWorkflowMethod methodGetKey, JavaCompilationUnit jcu) {
 		PerformRuleResult ruleresult = RuntimeFactory.eINSTANCE.createPerformRuleResult();
 		ruleresult.getTranslatedElements().add(exprIterationLiteral);
-		ruleresult.getCreatedLinkElements().add(t2c);
 		ruleresult.getTranslatedElements().add(javaPackage);
+		ruleresult.getCreatedLinkElements().add(t2c);
 		ruleresult.getTranslatedElements().add(exprAlgNameLiteral);
 		ruleresult.getTranslatedElements().add(pwdDeclaration);
 		ruleresult.getCreatedElements().add(kda);
@@ -3692,18 +3692,18 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		ruleresult.getTranslatedElements().add(statRetGetKey);
 		ruleresult.getTranslatedElements().add(methodGetKey);
 		ruleresult.getTranslatedElements().add(jcu);
-		return new Object[] { ruleresult, exprIterationLiteral, t2c, javaPackage, exprAlgNameLiteral, pwdDeclaration,
+		return new Object[] { ruleresult, exprIterationLiteral, javaPackage, t2c, exprAlgNameLiteral, pwdDeclaration,
 				kda, exprRetGetKey, methodPerformGetKey, exprOutputSizeLiteral, tc, task, exprPwdName, statRetGetKey,
 				methodGetKey, jcu };
 	}
 
 	public static final Object[] pattern_SecurePasswordTask_11_3_bookkeepingforedges_blackBBBBBBBBBBBBBBBB(
-			PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject t2c, EObject javaPackage,
+			PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject javaPackage, EObject t2c,
 			EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda, EObject exprRetGetKey,
 			EObject methodPerformGetKey, EObject exprOutputSizeLiteral, EObject tc, EObject task, EObject exprPwdName,
 			EObject statRetGetKey, EObject methodGetKey, EObject jcu) {
-		if (!exprIterationLiteral.equals(t2c)) {
-			if (!exprIterationLiteral.equals(javaPackage)) {
+		if (!exprIterationLiteral.equals(javaPackage)) {
+			if (!exprIterationLiteral.equals(t2c)) {
 				if (!exprIterationLiteral.equals(pwdDeclaration)) {
 					if (!exprIterationLiteral.equals(kda)) {
 						if (!exprIterationLiteral.equals(exprRetGetKey)) {
@@ -3715,27 +3715,27 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 												if (!exprIterationLiteral.equals(statRetGetKey)) {
 													if (!exprIterationLiteral.equals(methodGetKey)) {
 														if (!exprIterationLiteral.equals(jcu)) {
-															if (!t2c.equals(tc)) {
-																if (!t2c.equals(task)) {
-																	if (!javaPackage.equals(t2c)) {
-																		if (!javaPackage.equals(pwdDeclaration)) {
-																			if (!javaPackage.equals(kda)) {
-																				if (!javaPackage
-																						.equals(methodPerformGetKey)) {
-																					if (!javaPackage.equals(tc)) {
-																						if (!javaPackage.equals(task)) {
-																							if (!javaPackage.equals(
-																									statRetGetKey)) {
-																								if (!javaPackage.equals(
-																										methodGetKey)) {
-																									if (!javaPackage
-																											.equals(jcu)) {
+															if (!javaPackage.equals(t2c)) {
+																if (!javaPackage.equals(pwdDeclaration)) {
+																	if (!javaPackage.equals(kda)) {
+																		if (!javaPackage.equals(methodPerformGetKey)) {
+																			if (!javaPackage.equals(tc)) {
+																				if (!javaPackage.equals(task)) {
+																					if (!javaPackage
+																							.equals(statRetGetKey)) {
+																						if (!javaPackage
+																								.equals(methodGetKey)) {
+																							if (!javaPackage
+																									.equals(jcu)) {
+																								if (!t2c.equals(tc)) {
+																									if (!t2c.equals(
+																											task)) {
 																										if (!exprAlgNameLiteral
 																												.equals(exprIterationLiteral)) {
 																											if (!exprAlgNameLiteral
-																													.equals(t2c)) {
+																													.equals(javaPackage)) {
 																												if (!exprAlgNameLiteral
-																														.equals(javaPackage)) {
+																														.equals(t2c)) {
 																													if (!exprAlgNameLiteral
 																															.equals(pwdDeclaration)) {
 																														if (!exprAlgNameLiteral
@@ -3781,9 +3781,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 																																																		if (!kda.equals(
 																																																				methodGetKey)) {
 																																																			if (!exprRetGetKey
-																																																					.equals(t2c)) {
+																																																					.equals(javaPackage)) {
 																																																				if (!exprRetGetKey
-																																																						.equals(javaPackage)) {
+																																																						.equals(t2c)) {
 																																																					if (!exprRetGetKey
 																																																							.equals(pwdDeclaration)) {
 																																																						if (!exprRetGetKey
@@ -3811,9 +3811,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 																																																																	if (!methodPerformGetKey
 																																																																			.equals(statRetGetKey)) {
 																																																																		if (!exprOutputSizeLiteral
-																																																																				.equals(t2c)) {
+																																																																				.equals(javaPackage)) {
 																																																																			if (!exprOutputSizeLiteral
-																																																																					.equals(javaPackage)) {
+																																																																					.equals(t2c)) {
 																																																																				if (!exprOutputSizeLiteral
 																																																																						.equals(pwdDeclaration)) {
 																																																																					if (!exprOutputSizeLiteral
@@ -3837,9 +3837,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 																																																																														if (!task
 																																																																																.equals(tc)) {
 																																																																															if (!exprPwdName
-																																																																																	.equals(t2c)) {
+																																																																																	.equals(javaPackage)) {
 																																																																																if (!exprPwdName
-																																																																																		.equals(javaPackage)) {
+																																																																																		.equals(t2c)) {
 																																																																																	if (!exprPwdName
 																																																																																			.equals(pwdDeclaration)) {
 																																																																																		if (!exprPwdName
@@ -3895,8 +3895,8 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 																																																																																																											return new Object[] {
 																																																																																																													ruleresult,
 																																																																																																													exprIterationLiteral,
-																																																																																																													t2c,
 																																																																																																													javaPackage,
+																																																																																																													t2c,
 																																																																																																													exprAlgNameLiteral,
 																																																																																																													pwdDeclaration,
 																																																																																																													kda,
@@ -4018,7 +4018,7 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 	}
 
 	public static final Object[] pattern_SecurePasswordTask_11_3_bookkeepingforedges_greenBBBBBBBBBBBBBBBBFFFFFFFFFFFFFFF(
-			PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject t2c, EObject javaPackage,
+			PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject javaPackage, EObject t2c,
 			EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda, EObject exprRetGetKey,
 			EObject methodPerformGetKey, EObject exprOutputSizeLiteral, EObject tc, EObject task, EObject exprPwdName,
 			EObject statRetGetKey, EObject methodGetKey, EObject jcu) {
@@ -4117,7 +4117,7 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 				.setName(exprRetGetKey__exprAlgNameLiteral____arguments_name_prime);
 		exprRetGetKey__exprIterationLiteral____arguments
 				.setName(exprRetGetKey__exprIterationLiteral____arguments_name_prime);
-		return new Object[] { ruleresult, exprIterationLiteral, t2c, javaPackage, exprAlgNameLiteral, pwdDeclaration,
+		return new Object[] { ruleresult, exprIterationLiteral, javaPackage, t2c, exprAlgNameLiteral, pwdDeclaration,
 				kda, exprRetGetKey, methodPerformGetKey, exprOutputSizeLiteral, tc, task, exprPwdName, statRetGetKey,
 				methodGetKey, jcu, javaPackage__jcu____cunits, jcu__methodGetKey____methods,
 				methodGetKey__statRetGetKey____statements, exprRetGetKey__exprPwdName____arguments,
@@ -4128,11 +4128,11 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 	}
 
 	public static final void pattern_SecurePasswordTask_11_5_registerobjects_expressionBBBBBBBBBBBBBBBBB(
-			SecurePasswordTask _this, PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject t2c,
-			EObject javaPackage, EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda, EObject exprRetGetKey,
+			SecurePasswordTask _this, PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject javaPackage,
+			EObject t2c, EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda, EObject exprRetGetKey,
 			EObject methodPerformGetKey, EObject exprOutputSizeLiteral, EObject tc, EObject task, EObject exprPwdName,
 			EObject statRetGetKey, EObject methodGetKey, EObject jcu) {
-		_this.registerObjects_BWD(ruleresult, exprIterationLiteral, t2c, javaPackage, exprAlgNameLiteral,
+		_this.registerObjects_BWD(ruleresult, exprIterationLiteral, javaPackage, t2c, exprAlgNameLiteral,
 				pwdDeclaration, kda, exprRetGetKey, methodPerformGetKey, exprOutputSizeLiteral, tc, task, exprPwdName,
 				statRetGetKey, methodGetKey, jcu);
 
@@ -4278,13 +4278,12 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 									if (pwdDeclaration_name.equals("pwd")) {
 										String exprRetGetKey_name = exprRetGetKey.getName();
 										if (exprRetGetKey_name.equals("performGetKey")) {
-											String methodPerformGetKey_type = methodPerformGetKey.getType();
-											if (methodPerformGetKey_type.equals("SecretKey ")) {
-												String methodPerformGetKey_name = methodPerformGetKey.getName();
-												if (methodPerformGetKey_name.equals("performGetKey")) {
-													String methodPerformGetKey_modifier = methodPerformGetKey
-															.getModifier();
-													if (methodPerformGetKey_modifier.equals("private")) {
+											String methodPerformGetKey_name = methodPerformGetKey.getName();
+											if (methodPerformGetKey_name.equals("performGetKey")) {
+												String methodPerformGetKey_modifier = methodPerformGetKey.getModifier();
+												if (methodPerformGetKey_modifier.equals("private")) {
+													String methodPerformGetKey_type = methodPerformGetKey.getType();
+													if (methodPerformGetKey_type.equals("SecretKey ")) {
 														int exprOutputSizeLiteral_index = exprOutputSizeLiteral
 																.getIndex();
 														if (Integer.valueOf(exprOutputSizeLiteral_index)
@@ -4299,16 +4298,17 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 																			.isReturn();
 																	if (Boolean.valueOf(statRetGetKey_return)
 																			.equals(Boolean.valueOf(true))) {
-																		String methodGetKey_type = methodGetKey
-																				.getType();
-																		if (methodGetKey_type.equals("SecretKey ")) {
-																			String methodGetKey_name = methodGetKey
-																					.getName();
-																			if (methodGetKey_name.equals("getKey")) {
-																				String methodGetKey_modifier = methodGetKey
-																						.getModifier();
-																				if (methodGetKey_modifier
-																						.equals("public")) {
+																		String methodGetKey_name = methodGetKey
+																				.getName();
+																		if (methodGetKey_name.equals("getKey")) {
+																			String methodGetKey_modifier = methodGetKey
+																					.getModifier();
+																			if (methodGetKey_modifier
+																					.equals("public")) {
+																				String methodGetKey_type = methodGetKey
+																						.getType();
+																				if (methodGetKey_type
+																						.equals("SecretKey ")) {
 																					String jcu_name = jcu.getName();
 																					if (jcu_name.equals("KeyDeriv")) {
 																						_result.add(new Object[] {
@@ -4405,18 +4405,18 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 																						.getName();
 																				if (exprRetGetKey_name
 																						.equals("performGetKey")) {
-																					String methodPerformGetKey_type = methodPerformGetKey
-																							.getType();
-																					if (methodPerformGetKey_type
-																							.equals("SecretKey ")) {
-																						String methodPerformGetKey_name = methodPerformGetKey
-																								.getName();
-																						if (methodPerformGetKey_name
-																								.equals("performGetKey")) {
-																							String methodPerformGetKey_modifier = methodPerformGetKey
-																									.getModifier();
-																							if (methodPerformGetKey_modifier
-																									.equals("private")) {
+																					String methodPerformGetKey_name = methodPerformGetKey
+																							.getName();
+																					if (methodPerformGetKey_name
+																							.equals("performGetKey")) {
+																						String methodPerformGetKey_modifier = methodPerformGetKey
+																								.getModifier();
+																						if (methodPerformGetKey_modifier
+																								.equals("private")) {
+																							String methodPerformGetKey_type = methodPerformGetKey
+																									.getType();
+																							if (methodPerformGetKey_type
+																									.equals("SecretKey ")) {
 																								int exprOutputSizeLiteral_index = exprOutputSizeLiteral
 																										.getIndex();
 																								if (Integer.valueOf(
@@ -4443,18 +4443,18 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 																													.equals(Boolean
 																															.valueOf(
 																																	true))) {
-																												String methodGetKey_type = methodGetKey
-																														.getType();
-																												if (methodGetKey_type
-																														.equals("SecretKey ")) {
-																													String methodGetKey_name = methodGetKey
-																															.getName();
-																													if (methodGetKey_name
-																															.equals("getKey")) {
-																														String methodGetKey_modifier = methodGetKey
-																																.getModifier();
-																														if (methodGetKey_modifier
-																																.equals("public")) {
+																												String methodGetKey_name = methodGetKey
+																														.getName();
+																												if (methodGetKey_name
+																														.equals("getKey")) {
+																													String methodGetKey_modifier = methodGetKey
+																															.getModifier();
+																													if (methodGetKey_modifier
+																															.equals("public")) {
+																														String methodGetKey_type = methodGetKey
+																																.getType();
+																														if (methodGetKey_type
+																																.equals("SecretKey ")) {
 																															String jcu_name = jcu
 																																	.getName();
 																															if (jcu_name
@@ -4742,8 +4742,8 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 	public static final Object[] pattern_SecurePasswordTask_20_2_testcorematchandDECs_black_nac_0BB(Task task,
 			KeyDerivationAlgorithm kda) {
-		for (Algorithm __DEC_task_algorithms_559811 : task.getAlgorithms()) {
-			if (!kda.equals(__DEC_task_algorithms_559811)) {
+		for (Algorithm __DEC_task_algorithms_889529 : task.getAlgorithms()) {
+			if (!kda.equals(__DEC_task_algorithms_889529)) {
 				return new Object[] { task, kda };
 			}
 		}
@@ -4875,9 +4875,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 	public static final Object[] pattern_SecurePasswordTask_21_2_testcorematchandDECs_black_nac_0BB(
 			JavaLiteral exprIterationLiteral, JavaStatement statRetGetKey) {
-		for (JavaStatement __DEC_exprIterationLiteral_expr_855223 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaStatement __DEC_exprIterationLiteral_expr_621026 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(exprIterationLiteral, JavaStatement.class, "expr")) {
-			if (!statRetGetKey.equals(__DEC_exprIterationLiteral_expr_855223)) {
+			if (!statRetGetKey.equals(__DEC_exprIterationLiteral_expr_621026)) {
 				return new Object[] { exprIterationLiteral, statRetGetKey };
 			}
 		}
@@ -4886,8 +4886,8 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 	public static final Object[] pattern_SecurePasswordTask_21_2_testcorematchandDECs_black_nac_1BB(
 			JavaPackage javaPackage, JavaCompilationUnit jcu) {
-		for (JavaCompilationUnit __DEC_javaPackage_cunits_490268 : javaPackage.getCunits()) {
-			if (!jcu.equals(__DEC_javaPackage_cunits_490268)) {
+		for (JavaCompilationUnit __DEC_javaPackage_cunits_473805 : javaPackage.getCunits()) {
+			if (!jcu.equals(__DEC_javaPackage_cunits_473805)) {
 				return new Object[] { javaPackage, jcu };
 			}
 		}
@@ -4896,9 +4896,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 	public static final Object[] pattern_SecurePasswordTask_21_2_testcorematchandDECs_black_nac_2BB(
 			JavaLiteral exprAlgNameLiteral, JavaStatement statRetGetKey) {
-		for (JavaStatement __DEC_exprAlgNameLiteral_expr_848942 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaStatement __DEC_exprAlgNameLiteral_expr_204096 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(exprAlgNameLiteral, JavaStatement.class, "expr")) {
-			if (!statRetGetKey.equals(__DEC_exprAlgNameLiteral_expr_848942)) {
+			if (!statRetGetKey.equals(__DEC_exprAlgNameLiteral_expr_204096)) {
 				return new Object[] { exprAlgNameLiteral, statRetGetKey };
 			}
 		}
@@ -4907,9 +4907,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 	public static final Object[] pattern_SecurePasswordTask_21_2_testcorematchandDECs_black_nac_3BB(
 			JavaVariableDeclaration pwdDeclaration, JavaStatement statRetGetKey) {
-		for (JavaStatement __DEC_pwdDeclaration_expr_374950 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaStatement __DEC_pwdDeclaration_expr_658888 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(pwdDeclaration, JavaStatement.class, "expr")) {
-			if (!statRetGetKey.equals(__DEC_pwdDeclaration_expr_374950)) {
+			if (!statRetGetKey.equals(__DEC_pwdDeclaration_expr_658888)) {
 				return new Object[] { pwdDeclaration, statRetGetKey };
 			}
 		}
@@ -4918,9 +4918,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 	public static final Object[] pattern_SecurePasswordTask_21_2_testcorematchandDECs_black_nac_4BB(
 			JavaVariableDeclaration pwdDeclaration, JavaMethodInvocation exprRetGetKey) {
-		for (JavaMethodInvocation __DEC_pwdDeclaration_arguments_224303 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaMethodInvocation __DEC_pwdDeclaration_arguments_223373 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(pwdDeclaration, JavaMethodInvocation.class, "arguments")) {
-			if (!exprRetGetKey.equals(__DEC_pwdDeclaration_arguments_224303)) {
+			if (!exprRetGetKey.equals(__DEC_pwdDeclaration_arguments_223373)) {
 				return new Object[] { pwdDeclaration, exprRetGetKey };
 			}
 		}
@@ -4929,9 +4929,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 	public static final Object[] pattern_SecurePasswordTask_21_2_testcorematchandDECs_black_nac_5B(
 			JavaMethodInvocation exprRetGetKey) {
-		for (JavaMethodInvocation __DEC_exprRetGetKey_arguments_955456 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaMethodInvocation __DEC_exprRetGetKey_arguments_306099 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(exprRetGetKey, JavaMethodInvocation.class, "arguments")) {
-			if (!exprRetGetKey.equals(__DEC_exprRetGetKey_arguments_955456)) {
+			if (!exprRetGetKey.equals(__DEC_exprRetGetKey_arguments_306099)) {
 				return new Object[] { exprRetGetKey };
 			}
 		}
@@ -4940,9 +4940,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 	public static final Object[] pattern_SecurePasswordTask_21_2_testcorematchandDECs_black_nac_6BB(
 			JavaLiteral exprOutputSizeLiteral, JavaStatement statRetGetKey) {
-		for (JavaStatement __DEC_exprOutputSizeLiteral_expr_147817 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaStatement __DEC_exprOutputSizeLiteral_expr_158856 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(exprOutputSizeLiteral, JavaStatement.class, "expr")) {
-			if (!statRetGetKey.equals(__DEC_exprOutputSizeLiteral_expr_147817)) {
+			if (!statRetGetKey.equals(__DEC_exprOutputSizeLiteral_expr_158856)) {
 				return new Object[] { exprOutputSizeLiteral, statRetGetKey };
 			}
 		}
@@ -4951,9 +4951,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 	public static final Object[] pattern_SecurePasswordTask_21_2_testcorematchandDECs_black_nac_7BB(
 			JavaName exprPwdName, JavaStatement statRetGetKey) {
-		for (JavaStatement __DEC_exprPwdName_expr_358690 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaStatement __DEC_exprPwdName_expr_997867 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(exprPwdName, JavaStatement.class, "expr")) {
-			if (!statRetGetKey.equals(__DEC_exprPwdName_expr_358690)) {
+			if (!statRetGetKey.equals(__DEC_exprPwdName_expr_997867)) {
 				return new Object[] { exprPwdName, statRetGetKey };
 			}
 		}
@@ -4962,8 +4962,8 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 	public static final Object[] pattern_SecurePasswordTask_21_2_testcorematchandDECs_black_nac_8BB(
 			JavaWorkflowMethod methodGetKey, JavaStatement statRetGetKey) {
-		for (JavaStatement __DEC_methodGetKey_statements_325223 : methodGetKey.getStatements()) {
-			if (!statRetGetKey.equals(__DEC_methodGetKey_statements_325223)) {
+		for (JavaStatement __DEC_methodGetKey_statements_64715 : methodGetKey.getStatements()) {
+			if (!statRetGetKey.equals(__DEC_methodGetKey_statements_64715)) {
 				return new Object[] { methodGetKey, statRetGetKey };
 			}
 		}
@@ -5035,23 +5035,23 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 							for (JavaMethod tmpMethodGetKey : jcu.getMethods()) {
 								if (tmpMethodGetKey instanceof JavaWorkflowMethod) {
 									JavaWorkflowMethod methodGetKey = (JavaWorkflowMethod) tmpMethodGetKey;
-									String methodGetKey_type = methodGetKey.getType();
-									if (methodGetKey_type.equals("SecretKey ")) {
-										String methodGetKey_name = methodGetKey.getName();
-										if (methodGetKey_name.equals("getKey")) {
-											String methodGetKey_modifier = methodGetKey.getModifier();
-											if (methodGetKey_modifier.equals("public")) {
+									String methodGetKey_name = methodGetKey.getName();
+									if (methodGetKey_name.equals("getKey")) {
+										String methodGetKey_modifier = methodGetKey.getModifier();
+										if (methodGetKey_modifier.equals("public")) {
+											String methodGetKey_type = methodGetKey.getType();
+											if (methodGetKey_type.equals("SecretKey ")) {
 												for (JavaMethod tmpMethodPerformGetKey : jcu.getMethods()) {
 													if (tmpMethodPerformGetKey instanceof JavaOpaqueMethod) {
 														JavaOpaqueMethod methodPerformGetKey = (JavaOpaqueMethod) tmpMethodPerformGetKey;
-														String methodPerformGetKey_type = methodPerformGetKey.getType();
-														if (methodPerformGetKey_type.equals("SecretKey ")) {
-															String methodPerformGetKey_name = methodPerformGetKey
-																	.getName();
-															if (methodPerformGetKey_name.equals("performGetKey")) {
-																String methodPerformGetKey_modifier = methodPerformGetKey
-																		.getModifier();
-																if (methodPerformGetKey_modifier.equals("private")) {
+														String methodPerformGetKey_name = methodPerformGetKey.getName();
+														if (methodPerformGetKey_name.equals("performGetKey")) {
+															String methodPerformGetKey_modifier = methodPerformGetKey
+																	.getModifier();
+															if (methodPerformGetKey_modifier.equals("private")) {
+																String methodPerformGetKey_type = methodPerformGetKey
+																		.getType();
+																if (methodPerformGetKey_type.equals("SecretKey ")) {
 																	for (JavaStatement statRetGetKey : methodGetKey
 																			.getStatements()) {
 																		JavaExpression tmpExprRetGetKey = statRetGetKey
@@ -5428,13 +5428,13 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 										if (pwdDeclaration_name.equals("pwd")) {
 											String exprRetGetKey_name = exprRetGetKey.getName();
 											if (exprRetGetKey_name.equals("performGetKey")) {
-												String methodPerformGetKey_type = methodPerformGetKey.getType();
-												if (methodPerformGetKey_type.equals("SecretKey ")) {
-													String methodPerformGetKey_name = methodPerformGetKey.getName();
-													if (methodPerformGetKey_name.equals("performGetKey")) {
-														String methodPerformGetKey_modifier = methodPerformGetKey
-																.getModifier();
-														if (methodPerformGetKey_modifier.equals("private")) {
+												String methodPerformGetKey_name = methodPerformGetKey.getName();
+												if (methodPerformGetKey_name.equals("performGetKey")) {
+													String methodPerformGetKey_modifier = methodPerformGetKey
+															.getModifier();
+													if (methodPerformGetKey_modifier.equals("private")) {
+														String methodPerformGetKey_type = methodPerformGetKey.getType();
+														if (methodPerformGetKey_type.equals("SecretKey ")) {
 															int exprOutputSizeLiteral_index = exprOutputSizeLiteral
 																	.getIndex();
 															if (Integer.valueOf(exprOutputSizeLiteral_index)
@@ -5451,18 +5451,18 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 																					.isReturn();
 																			if (Boolean.valueOf(statRetGetKey_return)
 																					.equals(Boolean.valueOf(true))) {
-																				String methodGetKey_type = methodGetKey
-																						.getType();
-																				if (methodGetKey_type
-																						.equals("SecretKey ")) {
-																					String methodGetKey_name = methodGetKey
-																							.getName();
-																					if (methodGetKey_name
-																							.equals("getKey")) {
-																						String methodGetKey_modifier = methodGetKey
-																								.getModifier();
-																						if (methodGetKey_modifier
-																								.equals("public")) {
+																				String methodGetKey_name = methodGetKey
+																						.getName();
+																				if (methodGetKey_name
+																						.equals("getKey")) {
+																					String methodGetKey_modifier = methodGetKey
+																							.getModifier();
+																					if (methodGetKey_modifier
+																							.equals("public")) {
+																						String methodGetKey_type = methodGetKey
+																								.getType();
+																						if (methodGetKey_type
+																								.equals("SecretKey ")) {
 																							String jcu_name = jcu
 																									.getName();
 																							if (jcu_name.equals(
@@ -5648,7 +5648,7 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		return null;
 	}
 
-	public static final Object[] pattern_SecurePasswordTask_24_6_createcorrespondence_greenFBBFBBB(
+	public static final Object[] pattern_SecurePasswordTask_24_6_createcorrespondence_greenBFBFBBB(
 			JavaPackage javaPackage, KeyDerivationAlgorithm kda, Task task, JavaCompilationUnit jcu, CCMatch ccMatch) {
 		TaskToJavaPackage t2c = CryptoConfigToJavaFactory.eINSTANCE.createTaskToJavaPackage();
 		KeyDerivationAlgorithmToJcu tc = CryptoConfigToJavaFactory.eINSTANCE.createKeyDerivationAlgorithmToJcu();
@@ -5658,7 +5658,7 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		tc.setSource(kda);
 		tc.setTarget(jcu);
 		ccMatch.getCreateCorr().add(tc);
-		return new Object[] { t2c, javaPackage, kda, tc, task, jcu, ccMatch };
+		return new Object[] { javaPackage, t2c, kda, tc, task, jcu, ccMatch };
 	}
 
 	public static final Object[] pattern_SecurePasswordTask_24_7_addtoreturnedresult_blackBB(
@@ -5684,8 +5684,8 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 	public static final Object[] pattern_SecurePasswordTask_27_1_matchtggpattern_black_nac_0BB(Task task,
 			KeyDerivationAlgorithm kda) {
-		for (Algorithm __DEC_task_algorithms_902190 : task.getAlgorithms()) {
-			if (!kda.equals(__DEC_task_algorithms_902190)) {
+		for (Algorithm __DEC_task_algorithms_894548 : task.getAlgorithms()) {
+			if (!kda.equals(__DEC_task_algorithms_894548)) {
 				return new Object[] { task, kda };
 			}
 		}
@@ -5720,9 +5720,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 	public static final Object[] pattern_SecurePasswordTask_28_1_matchtggpattern_black_nac_0BB(
 			JavaLiteral exprIterationLiteral, JavaStatement statRetGetKey) {
-		for (JavaStatement __DEC_exprIterationLiteral_expr_611627 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaStatement __DEC_exprIterationLiteral_expr_966816 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(exprIterationLiteral, JavaStatement.class, "expr")) {
-			if (!statRetGetKey.equals(__DEC_exprIterationLiteral_expr_611627)) {
+			if (!statRetGetKey.equals(__DEC_exprIterationLiteral_expr_966816)) {
 				return new Object[] { exprIterationLiteral, statRetGetKey };
 			}
 		}
@@ -5731,8 +5731,8 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 	public static final Object[] pattern_SecurePasswordTask_28_1_matchtggpattern_black_nac_1BB(JavaPackage javaPackage,
 			JavaCompilationUnit jcu) {
-		for (JavaCompilationUnit __DEC_javaPackage_cunits_608240 : javaPackage.getCunits()) {
-			if (!jcu.equals(__DEC_javaPackage_cunits_608240)) {
+		for (JavaCompilationUnit __DEC_javaPackage_cunits_19840 : javaPackage.getCunits()) {
+			if (!jcu.equals(__DEC_javaPackage_cunits_19840)) {
 				return new Object[] { javaPackage, jcu };
 			}
 		}
@@ -5741,9 +5741,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 	public static final Object[] pattern_SecurePasswordTask_28_1_matchtggpattern_black_nac_2BB(
 			JavaLiteral exprAlgNameLiteral, JavaStatement statRetGetKey) {
-		for (JavaStatement __DEC_exprAlgNameLiteral_expr_497945 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaStatement __DEC_exprAlgNameLiteral_expr_944279 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(exprAlgNameLiteral, JavaStatement.class, "expr")) {
-			if (!statRetGetKey.equals(__DEC_exprAlgNameLiteral_expr_497945)) {
+			if (!statRetGetKey.equals(__DEC_exprAlgNameLiteral_expr_944279)) {
 				return new Object[] { exprAlgNameLiteral, statRetGetKey };
 			}
 		}
@@ -5752,9 +5752,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 	public static final Object[] pattern_SecurePasswordTask_28_1_matchtggpattern_black_nac_3BB(
 			JavaVariableDeclaration pwdDeclaration, JavaStatement statRetGetKey) {
-		for (JavaStatement __DEC_pwdDeclaration_expr_793796 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaStatement __DEC_pwdDeclaration_expr_294728 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(pwdDeclaration, JavaStatement.class, "expr")) {
-			if (!statRetGetKey.equals(__DEC_pwdDeclaration_expr_793796)) {
+			if (!statRetGetKey.equals(__DEC_pwdDeclaration_expr_294728)) {
 				return new Object[] { pwdDeclaration, statRetGetKey };
 			}
 		}
@@ -5763,9 +5763,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 	public static final Object[] pattern_SecurePasswordTask_28_1_matchtggpattern_black_nac_4BB(
 			JavaVariableDeclaration pwdDeclaration, JavaMethodInvocation exprRetGetKey) {
-		for (JavaMethodInvocation __DEC_pwdDeclaration_arguments_69460 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaMethodInvocation __DEC_pwdDeclaration_arguments_258627 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(pwdDeclaration, JavaMethodInvocation.class, "arguments")) {
-			if (!exprRetGetKey.equals(__DEC_pwdDeclaration_arguments_69460)) {
+			if (!exprRetGetKey.equals(__DEC_pwdDeclaration_arguments_258627)) {
 				return new Object[] { pwdDeclaration, exprRetGetKey };
 			}
 		}
@@ -5774,9 +5774,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 	public static final Object[] pattern_SecurePasswordTask_28_1_matchtggpattern_black_nac_5B(
 			JavaMethodInvocation exprRetGetKey) {
-		for (JavaMethodInvocation __DEC_exprRetGetKey_arguments_365444 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaMethodInvocation __DEC_exprRetGetKey_arguments_880535 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(exprRetGetKey, JavaMethodInvocation.class, "arguments")) {
-			if (!exprRetGetKey.equals(__DEC_exprRetGetKey_arguments_365444)) {
+			if (!exprRetGetKey.equals(__DEC_exprRetGetKey_arguments_880535)) {
 				return new Object[] { exprRetGetKey };
 			}
 		}
@@ -5785,9 +5785,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 	public static final Object[] pattern_SecurePasswordTask_28_1_matchtggpattern_black_nac_6BB(
 			JavaLiteral exprOutputSizeLiteral, JavaStatement statRetGetKey) {
-		for (JavaStatement __DEC_exprOutputSizeLiteral_expr_24833 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaStatement __DEC_exprOutputSizeLiteral_expr_480880 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(exprOutputSizeLiteral, JavaStatement.class, "expr")) {
-			if (!statRetGetKey.equals(__DEC_exprOutputSizeLiteral_expr_24833)) {
+			if (!statRetGetKey.equals(__DEC_exprOutputSizeLiteral_expr_480880)) {
 				return new Object[] { exprOutputSizeLiteral, statRetGetKey };
 			}
 		}
@@ -5796,9 +5796,9 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 	public static final Object[] pattern_SecurePasswordTask_28_1_matchtggpattern_black_nac_7BB(JavaName exprPwdName,
 			JavaStatement statRetGetKey) {
-		for (JavaStatement __DEC_exprPwdName_expr_790279 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaStatement __DEC_exprPwdName_expr_603902 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(exprPwdName, JavaStatement.class, "expr")) {
-			if (!statRetGetKey.equals(__DEC_exprPwdName_expr_790279)) {
+			if (!statRetGetKey.equals(__DEC_exprPwdName_expr_603902)) {
 				return new Object[] { exprPwdName, statRetGetKey };
 			}
 		}
@@ -5807,8 +5807,8 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 
 	public static final Object[] pattern_SecurePasswordTask_28_1_matchtggpattern_black_nac_8BB(
 			JavaWorkflowMethod methodGetKey, JavaStatement statRetGetKey) {
-		for (JavaStatement __DEC_methodGetKey_statements_377186 : methodGetKey.getStatements()) {
-			if (!statRetGetKey.equals(__DEC_methodGetKey_statements_377186)) {
+		for (JavaStatement __DEC_methodGetKey_statements_95156 : methodGetKey.getStatements()) {
+			if (!statRetGetKey.equals(__DEC_methodGetKey_statements_95156)) {
 				return new Object[] { methodGetKey, statRetGetKey };
 			}
 		}
@@ -5978,16 +5978,16 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		int pwdDeclaration_index_prime = Integer.valueOf(0);
 		String pwdDeclaration_name_prime = "pwd";
 		String exprRetGetKey_name_prime = "performGetKey";
-		String methodPerformGetKey_type_prime = "SecretKey ";
 		String methodPerformGetKey_name_prime = "performGetKey";
 		String methodPerformGetKey_modifier_prime = "private";
+		String methodPerformGetKey_type_prime = "SecretKey ";
 		int exprOutputSizeLiteral_index_prime = Integer.valueOf(3);
 		int exprPwdName_index_prime = Integer.valueOf(0);
 		String exprPwdName_identifier_prime = "pwd";
 		boolean statRetGetKey_return_prime = Boolean.valueOf(true);
-		String methodGetKey_type_prime = "SecretKey ";
 		String methodGetKey_name_prime = "getKey";
 		String methodGetKey_modifier_prime = "public";
+		String methodGetKey_type_prime = "SecretKey ";
 		String jcu_name_prime = "KeyDeriv";
 		exprIterationLiteral.setIndex(Integer.valueOf(exprIterationLiteral_index_prime));
 		exprAlgNameLiteral.setIndex(Integer.valueOf(exprAlgNameLiteral_index_prime));
@@ -5995,16 +5995,16 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		pwdDeclaration.setIndex(Integer.valueOf(pwdDeclaration_index_prime));
 		pwdDeclaration.setName(pwdDeclaration_name_prime);
 		exprRetGetKey.setName(exprRetGetKey_name_prime);
-		methodPerformGetKey.setType(methodPerformGetKey_type_prime);
 		methodPerformGetKey.setName(methodPerformGetKey_name_prime);
 		methodPerformGetKey.setModifier(methodPerformGetKey_modifier_prime);
+		methodPerformGetKey.setType(methodPerformGetKey_type_prime);
 		exprOutputSizeLiteral.setIndex(Integer.valueOf(exprOutputSizeLiteral_index_prime));
 		exprPwdName.setIndex(Integer.valueOf(exprPwdName_index_prime));
 		exprPwdName.setIdentifier(exprPwdName_identifier_prime);
 		statRetGetKey.setReturn(Boolean.valueOf(statRetGetKey_return_prime));
-		methodGetKey.setType(methodGetKey_type_prime);
 		methodGetKey.setName(methodGetKey_name_prime);
 		methodGetKey.setModifier(methodGetKey_modifier_prime);
+		methodGetKey.setType(methodGetKey_type_prime);
 		jcu.setName(jcu_name_prime);
 		return new Object[] { exprIterationLiteral, exprAlgNameLiteral, pwdDeclaration, exprRetGetKey,
 				methodPerformGetKey, exprOutputSizeLiteral, exprPwdName, statRetGetKey, methodGetKey, jcu };
@@ -6081,8 +6081,8 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 	public static final Object[] pattern_SecurePasswordTask_29_6_perform_greenFFFFFFFFFFFFFFFBB(
 			ModelgeneratorRuleResult ruleResult, CSP csp) {
 		JavaLiteral exprIterationLiteral = SimpleJavaFactory.eINSTANCE.createJavaLiteral();
-		TaskToJavaPackage t2c = CryptoConfigToJavaFactory.eINSTANCE.createTaskToJavaPackage();
 		JavaPackage javaPackage = SimpleJavaFactory.eINSTANCE.createJavaPackage();
+		TaskToJavaPackage t2c = CryptoConfigToJavaFactory.eINSTANCE.createTaskToJavaPackage();
 		JavaLiteral exprAlgNameLiteral = SimpleJavaFactory.eINSTANCE.createJavaLiteral();
 		JavaVariableDeclaration pwdDeclaration = SimpleJavaFactory.eINSTANCE.createJavaVariableDeclaration();
 		KeyDerivationAlgorithm kda = CryptoAPIConfigFactory.eINSTANCE.createKeyDerivationAlgorithm();
@@ -6103,15 +6103,15 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		String pwdDeclaration_type_prime = "char[]";
 		int pwdDeclaration_index_prime = Integer.valueOf(0);
 		String pwdDeclaration_name_prime = "pwd";
-		Object _localVariable_3 = csp.getValue("kda", "iterations");
-		Object _localVariable_4 = csp.getValue("kda", "name");
+		Object _localVariable_3 = csp.getValue("kda", "name");
+		Object _localVariable_4 = csp.getValue("kda", "iterations");
 		Object _localVariable_5 = csp.getValue("kda", "outputSize");
 		String exprRetGetKey_name_prime = "performGetKey";
-		String methodPerformGetKey_type_prime = "SecretKey ";
 		String methodPerformGetKey_name_prime = "performGetKey";
 		String methodPerformGetKey_modifier_prime = "private";
-		Object _localVariable_6 = csp.getValue("methodPerformGetKey", "index");
-		Object _localVariable_7 = csp.getValue("methodPerformGetKey", "throws");
+		String methodPerformGetKey_type_prime = "SecretKey ";
+		Object _localVariable_6 = csp.getValue("methodPerformGetKey", "throws");
+		Object _localVariable_7 = csp.getValue("methodPerformGetKey", "index");
 		Object _localVariable_8 = csp.getValue("methodPerformGetKey", "body");
 		Object _localVariable_9 = csp.getValue("methodPerformGetKey", "parameters");
 		int exprOutputSizeLiteral_index_prime = Integer.valueOf(3);
@@ -6121,18 +6121,18 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		int exprPwdName_index_prime = Integer.valueOf(0);
 		String exprPwdName_identifier_prime = "pwd";
 		boolean statRetGetKey_return_prime = Boolean.valueOf(true);
-		String methodGetKey_type_prime = "SecretKey ";
 		String methodGetKey_name_prime = "getKey";
 		String methodGetKey_modifier_prime = "public";
-		Object _localVariable_12 = csp.getValue("methodGetKey", "index");
-		Object _localVariable_13 = csp.getValue("methodGetKey", "throws");
+		String methodGetKey_type_prime = "SecretKey ";
+		Object _localVariable_12 = csp.getValue("methodGetKey", "throws");
+		Object _localVariable_13 = csp.getValue("methodGetKey", "index");
 		String jcu_name_prime = "KeyDeriv";
 		boolean ruleResult_success_prime = Boolean.valueOf(true);
 		int _localVariable_14 = ruleResult.getIncrementedPerformCount();
 		ruleResult.getTargetObjects().add(exprIterationLiteral);
-		ruleResult.getCorrObjects().add(t2c);
-		t2c.setTarget(javaPackage);
 		ruleResult.getTargetObjects().add(javaPackage);
+		t2c.setTarget(javaPackage);
+		ruleResult.getCorrObjects().add(t2c);
 		ruleResult.getTargetObjects().add(exprAlgNameLiteral);
 		ruleResult.getTargetObjects().add(pwdDeclaration);
 		ruleResult.getSourceObjects().add(kda);
@@ -6167,15 +6167,15 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		pwdDeclaration.setType(pwdDeclaration_type_prime);
 		pwdDeclaration.setIndex(Integer.valueOf(pwdDeclaration_index_prime));
 		pwdDeclaration.setName(pwdDeclaration_name_prime);
-		String kda_iterations_prime = (String) _localVariable_3;
-		String kda_name_prime = (String) _localVariable_4;
+		String kda_name_prime = (String) _localVariable_3;
+		String kda_iterations_prime = (String) _localVariable_4;
 		String kda_outputSize_prime = (String) _localVariable_5;
 		exprRetGetKey.setName(exprRetGetKey_name_prime);
-		methodPerformGetKey.setType(methodPerformGetKey_type_prime);
 		methodPerformGetKey.setName(methodPerformGetKey_name_prime);
 		methodPerformGetKey.setModifier(methodPerformGetKey_modifier_prime);
-		int methodPerformGetKey_index_prime = (int) _localVariable_6;
-		String methodPerformGetKey_throws_prime = (String) _localVariable_7;
+		methodPerformGetKey.setType(methodPerformGetKey_type_prime);
+		String methodPerformGetKey_throws_prime = (String) _localVariable_6;
+		int methodPerformGetKey_index_prime = (int) _localVariable_7;
 		String methodPerformGetKey_body_prime = (String) _localVariable_8;
 		String methodPerformGetKey_parameters_prime = (String) _localVariable_9;
 		exprOutputSizeLiteral.setIndex(Integer.valueOf(exprOutputSizeLiteral_index_prime));
@@ -6185,30 +6185,30 @@ public class SecurePasswordTaskImpl extends AbstractRuleImpl implements SecurePa
 		exprPwdName.setIndex(Integer.valueOf(exprPwdName_index_prime));
 		exprPwdName.setIdentifier(exprPwdName_identifier_prime);
 		statRetGetKey.setReturn(Boolean.valueOf(statRetGetKey_return_prime));
-		methodGetKey.setType(methodGetKey_type_prime);
 		methodGetKey.setName(methodGetKey_name_prime);
 		methodGetKey.setModifier(methodGetKey_modifier_prime);
-		int methodGetKey_index_prime = (int) _localVariable_12;
-		String methodGetKey_throws_prime = (String) _localVariable_13;
+		methodGetKey.setType(methodGetKey_type_prime);
+		String methodGetKey_throws_prime = (String) _localVariable_12;
+		int methodGetKey_index_prime = (int) _localVariable_13;
 		jcu.setName(jcu_name_prime);
 		ruleResult.setSuccess(Boolean.valueOf(ruleResult_success_prime));
 		int ruleResult_performCount_prime = Integer.valueOf(_localVariable_14);
 		exprIterationLiteral.setValue(exprIterationLiteral_value_prime);
 		javaPackage.setName(javaPackage_name_prime);
 		exprAlgNameLiteral.setValue(exprAlgNameLiteral_value_prime);
-		kda.setIterations(kda_iterations_prime);
 		kda.setName(kda_name_prime);
+		kda.setIterations(kda_iterations_prime);
 		kda.setOutputSize(kda_outputSize_prime);
-		methodPerformGetKey.setIndex(Integer.valueOf(methodPerformGetKey_index_prime));
 		methodPerformGetKey.setThrows(methodPerformGetKey_throws_prime);
+		methodPerformGetKey.setIndex(Integer.valueOf(methodPerformGetKey_index_prime));
 		methodPerformGetKey.setBody(methodPerformGetKey_body_prime);
 		methodPerformGetKey.setParameters(methodPerformGetKey_parameters_prime);
 		exprOutputSizeLiteral.setValue(exprOutputSizeLiteral_value_prime);
 		task.setPackage(task_package_prime);
-		methodGetKey.setIndex(Integer.valueOf(methodGetKey_index_prime));
 		methodGetKey.setThrows(methodGetKey_throws_prime);
+		methodGetKey.setIndex(Integer.valueOf(methodGetKey_index_prime));
 		ruleResult.setPerformCount(Integer.valueOf(ruleResult_performCount_prime));
-		return new Object[] { exprIterationLiteral, t2c, javaPackage, exprAlgNameLiteral, pwdDeclaration, kda,
+		return new Object[] { exprIterationLiteral, javaPackage, t2c, exprAlgNameLiteral, pwdDeclaration, kda,
 				exprRetGetKey, methodPerformGetKey, exprOutputSizeLiteral, tc, task, exprPwdName, statRetGetKey,
 				methodGetKey, jcu, ruleResult, csp };
 	}

@@ -10,6 +10,7 @@ import com.google.inject.Injector;
 import com.google.inject.Key;
 import com.google.inject.TypeLiteral;
 import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
+import com.kaleidoscope.core.framework.synchronisation.SynchronisationFailedException;
 import com.kaleidoscope.core.framework.workflow.controllers.deltabased.PersistentDeltaBasedController;
 import com.kaleidoscope.usecase.showcase.first.controller.ArtefactAdapterModule;
 import com.kaleidoscope.usecase.showcase.third.controller.ControllerModule;
@@ -37,13 +38,23 @@ public class Builder extends com.kaleidoscope.usecase.showcase.first.eclipse.Bui
 
 	public void syncForward() throws CoreException {
 		Path syncForwardAbsoluteSourcePath = projectPath.resolve(super.syncForwardRealtiveSourcePath);
-		getDeltaControllerInstance().syncForward(syncForwardAbsoluteSourcePath);
+		try {
+			getDeltaControllerInstance().syncForward(syncForwardAbsoluteSourcePath);
+		} catch (SynchronisationFailedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		refreshProject();
 	}
 
 	public void syncBackward() throws CoreException {
 		Path syncBacwardAbsoulteTargetPath = projectPath.resolve(super.syncBacwardRelativeTargetPath);
-		getDeltaControllerInstance().syncBackward(syncBacwardAbsoulteTargetPath);
+		try {
+			getDeltaControllerInstance().syncBackward(syncBacwardAbsoulteTargetPath);
+		} catch (SynchronisationFailedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		refreshProject();
 	}
 

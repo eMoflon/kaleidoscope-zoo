@@ -92,7 +92,7 @@
 	
 	
 	setDefaultStringIfNull(methodEncryption.index, 1)
-	setDefaultStringIfNull(task.package, "Crypto")
+	setDefaultStringIfNull(task.package, "crypto")
 	eq(task.package, javaPackage.name)
 	setDefaultStringIfNull(jcu.name, "Enc")
 	

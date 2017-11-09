@@ -40,7 +40,21 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symmetricBlockCipherImportToImportEClass = null;
+	private EClass ignoreMethodInvocationArgumentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass keyDerivationAlgorithmImportToImportEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ignoreParameterRuleEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -61,21 +75,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass keyDerivationAlgorithmImportToImportEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass performGetKeyMethodEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass ignoreMethodInvocationArgumentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -89,7 +89,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass ignoreParameterRuleEClass = null;
+	private EClass symmetricBlockCipherImportToImportEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -179,12 +179,12 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymmetricBlockCipherImportToImport() {
-		if (symmetricBlockCipherImportToImportEClass == null) {
-			symmetricBlockCipherImportToImportEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(RulesPackage.eNS_URI).getEClassifiers().get(0);
+	public EClass getIgnoreMethodInvocationArgument() {
+		if (ignoreMethodInvocationArgumentEClass == null) {
+			ignoreMethodInvocationArgumentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
+					.getEClassifiers().get(0);
 		}
-		return symmetricBlockCipherImportToImportEClass;
+		return ignoreMethodInvocationArgumentEClass;
 	}
 
 	/**
@@ -192,8 +192,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_FWD__Match_Import_SymmetricBlockCipher() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(0);
+	public EOperation getIgnoreMethodInvocationArgument__IsAppropriate_FWD__Match() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(0);
 	}
 
 	/**
@@ -201,8 +201,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__Perform_FWD__IsApplicableMatch() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(1);
+	public EOperation getIgnoreMethodInvocationArgument__Perform_FWD__IsApplicableMatch() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(1);
 	}
 
 	/**
@@ -210,8 +210,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_FWD__Match() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(2);
+	public EOperation getIgnoreMethodInvocationArgument__IsApplicable_FWD__Match() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(2);
 	}
 
 	/**
@@ -219,8 +219,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__RegisterObjectsToMatch_FWD__Match_Import_SymmetricBlockCipher() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(3);
+	public EOperation getIgnoreMethodInvocationArgument__RegisterObjectsToMatch_FWD__Match() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(3);
 	}
 
 	/**
@@ -228,8 +228,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_solveCsp_FWD__Match_Import_SymmetricBlockCipher() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(4);
+	public EOperation getIgnoreMethodInvocationArgument__IsAppropriate_solveCsp_FWD__Match() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(4);
 	}
 
 	/**
@@ -237,8 +237,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_checkCsp_FWD__CSP() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(5);
+	public EOperation getIgnoreMethodInvocationArgument__IsAppropriate_checkCsp_FWD__CSP() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(5);
 	}
 
 	/**
@@ -246,8 +246,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_solveCsp_FWD__IsApplicableMatch_Import_SymmetricBlockCipher_SymmetricBlockCipherToJcu_JavaCompilationUnit() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(6);
+	public EOperation getIgnoreMethodInvocationArgument__CheckTypes_FWD__Match() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(6);
 	}
 
 	/**
@@ -255,8 +255,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_checkCsp_FWD__CSP() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(7);
+	public EOperation getIgnoreMethodInvocationArgument__IsAppropriate_BWD__Match_JavaExpression_JavaMethodInvocation() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(7);
 	}
 
 	/**
@@ -264,8 +264,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(8);
+	public EOperation getIgnoreMethodInvocationArgument__Perform_BWD__IsApplicableMatch() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(8);
 	}
 
 	/**
@@ -273,8 +273,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__CheckTypes_FWD__Match() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(9);
+	public EOperation getIgnoreMethodInvocationArgument__IsApplicable_BWD__Match() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(9);
 	}
 
 	/**
@@ -282,8 +282,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_BWD__Match_JavaImport_JavaCompilationUnit() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(10);
+	public EOperation getIgnoreMethodInvocationArgument__RegisterObjectsToMatch_BWD__Match_JavaExpression_JavaMethodInvocation() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(10);
 	}
 
 	/**
@@ -291,8 +291,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__Perform_BWD__IsApplicableMatch() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(11);
+	public EOperation getIgnoreMethodInvocationArgument__IsAppropriate_solveCsp_BWD__Match_JavaExpression_JavaMethodInvocation() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(11);
 	}
 
 	/**
@@ -300,8 +300,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_BWD__Match() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(12);
+	public EOperation getIgnoreMethodInvocationArgument__IsAppropriate_checkCsp_BWD__CSP() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(12);
 	}
 
 	/**
@@ -309,8 +309,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__RegisterObjectsToMatch_BWD__Match_JavaImport_JavaCompilationUnit() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(13);
+	public EOperation getIgnoreMethodInvocationArgument__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaExpression_JavaMethodInvocation() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(13);
 	}
 
 	/**
@@ -318,8 +318,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_solveCsp_BWD__Match_JavaImport_JavaCompilationUnit() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(14);
+	public EOperation getIgnoreMethodInvocationArgument__IsApplicable_checkCsp_BWD__CSP() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(14);
 	}
 
 	/**
@@ -327,8 +327,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_checkCsp_BWD__CSP() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(15);
+	public EOperation getIgnoreMethodInvocationArgument__RegisterObjects_BWD__PerformRuleResult_EObject_EObject() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(15);
 	}
 
 	/**
@@ -336,8 +336,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_solveCsp_BWD__IsApplicableMatch_SymmetricBlockCipher_JavaImport_SymmetricBlockCipherToJcu_JavaCompilationUnit() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(16);
+	public EOperation getIgnoreMethodInvocationArgument__CheckTypes_BWD__Match() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(16);
 	}
 
 	/**
@@ -345,8 +345,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_checkCsp_BWD__CSP() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(17);
+	public EOperation getIgnoreMethodInvocationArgument__IsAppropriate_BWD_EMoflonEdge_0__EMoflonEdge() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(17);
 	}
 
 	/**
@@ -354,8 +354,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(18);
+	public EOperation getIgnoreMethodInvocationArgument__CheckAttributes_FWD__TripleMatch() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(18);
 	}
 
 	/**
@@ -363,8 +363,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__CheckTypes_BWD__Match() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(19);
+	public EOperation getIgnoreMethodInvocationArgument__CheckAttributes_BWD__TripleMatch() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(19);
 	}
 
 	/**
@@ -372,8 +372,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_FWD_EMoflonEdge_5__EMoflonEdge() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(20);
+	public EOperation getIgnoreMethodInvocationArgument__IsApplicable_CC__Match_Match() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(20);
 	}
 
 	/**
@@ -381,8 +381,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_BWD_EMoflonEdge_5__EMoflonEdge() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(21);
+	public EOperation getIgnoreMethodInvocationArgument__IsApplicable_solveCsp_CC__JavaExpression_JavaMethodInvocation_Match_Match() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(21);
 	}
 
 	/**
@@ -390,8 +390,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__CheckAttributes_FWD__TripleMatch() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(22);
+	public EOperation getIgnoreMethodInvocationArgument__IsApplicable_checkCsp_CC__CSP() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(22);
 	}
 
 	/**
@@ -399,8 +399,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__CheckAttributes_BWD__TripleMatch() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(23);
+	public EOperation getIgnoreMethodInvocationArgument__CheckDEC_FWD() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(23);
 	}
 
 	/**
@@ -408,8 +408,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_CC__Match_Match() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(24);
+	public EOperation getIgnoreMethodInvocationArgument__CheckDEC_BWD__JavaExpression_JavaMethodInvocation() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(24);
 	}
 
 	/**
@@ -417,8 +417,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_solveCsp_CC__Import_SymmetricBlockCipher_JavaImport_JavaCompilationUnit_Match_Match() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(25);
+	public EOperation getIgnoreMethodInvocationArgument__GenerateModel__RuleEntryContainer_JavaMethodInvocation() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(25);
 	}
 
 	/**
@@ -426,8 +426,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_checkCsp_CC__CSP() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(26);
+	public EOperation getIgnoreMethodInvocationArgument__GenerateModel_solveCsp_BWD__IsApplicableMatch_JavaMethodInvocation_ModelgeneratorRuleResult() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(26);
 	}
 
 	/**
@@ -435,8 +435,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__CheckDEC_FWD__Import_SymmetricBlockCipher() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(27);
+	public EOperation getIgnoreMethodInvocationArgument__GenerateModel_checkCsp_BWD__CSP() {
+		return getIgnoreMethodInvocationArgument().getEOperations().get(27);
 	}
 
 	/**
@@ -444,8 +444,12 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__CheckDEC_BWD__JavaImport_JavaCompilationUnit() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(28);
+	public EClass getKeyDerivationAlgorithmImportToImport() {
+		if (keyDerivationAlgorithmImportToImportEClass == null) {
+			keyDerivationAlgorithmImportToImportEClass = (EClass) EPackage.Registry.INSTANCE
+					.getEPackage(RulesPackage.eNS_URI).getEClassifiers().get(1);
+		}
+		return keyDerivationAlgorithmImportToImportEClass;
 	}
 
 	/**
@@ -453,8 +457,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__GenerateModel__RuleEntryContainer_SymmetricBlockCipherToJcu() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(29);
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_FWD__Match_Import_KeyDerivationAlgorithm() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(0);
 	}
 
 	/**
@@ -462,8 +466,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__GenerateModel_solveCsp_BWD__IsApplicableMatch_SymmetricBlockCipher_SymmetricBlockCipherToJcu_JavaCompilationUnit_ModelgeneratorRuleResult() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(30);
+	public EOperation getKeyDerivationAlgorithmImportToImport__Perform_FWD__IsApplicableMatch() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(1);
 	}
 
 	/**
@@ -471,8 +475,534 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricBlockCipherImportToImport__GenerateModel_checkCsp_BWD__CSP() {
-		return getSymmetricBlockCipherImportToImport().getEOperations().get(31);
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_FWD__Match() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjectsToMatch_FWD__Match_Import_KeyDerivationAlgorithm() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_solveCsp_FWD__Match_Import_KeyDerivationAlgorithm() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_checkCsp_FWD__CSP() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_solveCsp_FWD__IsApplicableMatch_KeyDerivationAlgorithmToJcu_Import_KeyDerivationAlgorithm_JavaCompilationUnit() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_checkCsp_FWD__CSP() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__CheckTypes_FWD__Match() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_BWD__Match_JavaImport_JavaCompilationUnit() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__Perform_BWD__IsApplicableMatch() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_BWD__Match() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjectsToMatch_BWD__Match_JavaImport_JavaCompilationUnit() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_solveCsp_BWD__Match_JavaImport_JavaCompilationUnit() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_checkCsp_BWD__CSP() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_solveCsp_BWD__IsApplicableMatch_KeyDerivationAlgorithmToJcu_JavaImport_KeyDerivationAlgorithm_JavaCompilationUnit() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_checkCsp_BWD__CSP() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(17);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(18);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__CheckTypes_BWD__Match() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(19);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_FWD_EMoflonEdge_0__EMoflonEdge() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(20);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_BWD_EMoflonEdge_1__EMoflonEdge() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(21);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__CheckAttributes_FWD__TripleMatch() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(22);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__CheckAttributes_BWD__TripleMatch() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(23);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_CC__Match_Match() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(24);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_solveCsp_CC__Import_JavaImport_KeyDerivationAlgorithm_JavaCompilationUnit_Match_Match() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(25);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_checkCsp_CC__CSP() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(26);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__CheckDEC_FWD__Import_KeyDerivationAlgorithm() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(27);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__CheckDEC_BWD__JavaImport_JavaCompilationUnit() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(28);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__GenerateModel__RuleEntryContainer_KeyDerivationAlgorithmToJcu() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(29);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__GenerateModel_solveCsp_BWD__IsApplicableMatch_KeyDerivationAlgorithmToJcu_KeyDerivationAlgorithm_JavaCompilationUnit_ModelgeneratorRuleResult() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(30);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getKeyDerivationAlgorithmImportToImport__GenerateModel_checkCsp_BWD__CSP() {
+		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(31);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIgnoreParameterRule() {
+		if (ignoreParameterRuleEClass == null) {
+			ignoreParameterRuleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
+					.getEClassifiers().get(2);
+		}
+		return ignoreParameterRuleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__IsAppropriate_FWD__Match() {
+		return getIgnoreParameterRule().getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__Perform_FWD__IsApplicableMatch() {
+		return getIgnoreParameterRule().getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__IsApplicable_FWD__Match() {
+		return getIgnoreParameterRule().getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__RegisterObjectsToMatch_FWD__Match() {
+		return getIgnoreParameterRule().getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__IsAppropriate_solveCsp_FWD__Match() {
+		return getIgnoreParameterRule().getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__IsAppropriate_checkCsp_FWD__CSP() {
+		return getIgnoreParameterRule().getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__CheckTypes_FWD__Match() {
+		return getIgnoreParameterRule().getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__IsAppropriate_BWD__Match_JavaWorkflowMethod_JavaVariableDeclaration() {
+		return getIgnoreParameterRule().getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__Perform_BWD__IsApplicableMatch() {
+		return getIgnoreParameterRule().getEOperations().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__IsApplicable_BWD__Match() {
+		return getIgnoreParameterRule().getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__RegisterObjectsToMatch_BWD__Match_JavaWorkflowMethod_JavaVariableDeclaration() {
+		return getIgnoreParameterRule().getEOperations().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__IsAppropriate_solveCsp_BWD__Match_JavaWorkflowMethod_JavaVariableDeclaration() {
+		return getIgnoreParameterRule().getEOperations().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__IsAppropriate_checkCsp_BWD__CSP() {
+		return getIgnoreParameterRule().getEOperations().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaWorkflowMethod_JavaVariableDeclaration() {
+		return getIgnoreParameterRule().getEOperations().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__IsApplicable_checkCsp_BWD__CSP() {
+		return getIgnoreParameterRule().getEOperations().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__RegisterObjects_BWD__PerformRuleResult_EObject_EObject() {
+		return getIgnoreParameterRule().getEOperations().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__CheckTypes_BWD__Match() {
+		return getIgnoreParameterRule().getEOperations().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__IsAppropriate_BWD_EMoflonEdge_2__EMoflonEdge() {
+		return getIgnoreParameterRule().getEOperations().get(17);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__CheckAttributes_FWD__TripleMatch() {
+		return getIgnoreParameterRule().getEOperations().get(18);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__CheckAttributes_BWD__TripleMatch() {
+		return getIgnoreParameterRule().getEOperations().get(19);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__IsApplicable_CC__Match_Match() {
+		return getIgnoreParameterRule().getEOperations().get(20);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__IsApplicable_solveCsp_CC__JavaWorkflowMethod_JavaVariableDeclaration_Match_Match() {
+		return getIgnoreParameterRule().getEOperations().get(21);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__IsApplicable_checkCsp_CC__CSP() {
+		return getIgnoreParameterRule().getEOperations().get(22);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__CheckDEC_FWD() {
+		return getIgnoreParameterRule().getEOperations().get(23);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__CheckDEC_BWD__JavaWorkflowMethod_JavaVariableDeclaration() {
+		return getIgnoreParameterRule().getEOperations().get(24);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__GenerateModel__RuleEntryContainer_JavaWorkflowMethod() {
+		return getIgnoreParameterRule().getEOperations().get(25);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__GenerateModel_solveCsp_BWD__IsApplicableMatch_JavaWorkflowMethod_ModelgeneratorRuleResult() {
+		return getIgnoreParameterRule().getEOperations().get(26);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIgnoreParameterRule__GenerateModel_checkCsp_BWD__CSP() {
+		return getIgnoreParameterRule().getEOperations().get(27);
 	}
 
 	/**
@@ -483,7 +1013,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	public EClass getSecurePasswordTask() {
 		if (securePasswordTaskEClass == null) {
 			securePasswordTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
-					.getEClassifiers().get(1);
+					.getEClassifiers().get(3);
 		}
 		return securePasswordTaskEClass;
 	}
@@ -673,7 +1203,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSecurePasswordTask__IsAppropriate_FWD_EMoflonEdge_6__EMoflonEdge() {
+	public EOperation getSecurePasswordTask__IsAppropriate_FWD_EMoflonEdge_1__EMoflonEdge() {
 		return getSecurePasswordTask().getEOperations().get(20);
 	}
 
@@ -682,7 +1212,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSecurePasswordTask__IsAppropriate_BWD_EMoflonEdge_6__EMoflonEdge() {
+	public EOperation getSecurePasswordTask__IsAppropriate_BWD_EMoflonEdge_3__EMoflonEdge() {
 		return getSecurePasswordTask().getEOperations().get(21);
 	}
 
@@ -784,7 +1314,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	public EClass getIgnoreOpaqueMethod() {
 		if (ignoreOpaqueMethodEClass == null) {
 			ignoreOpaqueMethodEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
-					.getEClassifiers().get(2);
+					.getEClassifiers().get(4);
 		}
 		return ignoreOpaqueMethodEClass;
 	}
@@ -857,7 +1387,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__IsAppropriate_BWD__Match_JavaOpaqueMethod_JavaCompilationUnit() {
+	public EOperation getIgnoreOpaqueMethod__IsAppropriate_BWD__Match_JavaCompilationUnit_JavaOpaqueMethod() {
 		return getIgnoreOpaqueMethod().getEOperations().get(7);
 	}
 
@@ -884,7 +1414,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__RegisterObjectsToMatch_BWD__Match_JavaOpaqueMethod_JavaCompilationUnit() {
+	public EOperation getIgnoreOpaqueMethod__RegisterObjectsToMatch_BWD__Match_JavaCompilationUnit_JavaOpaqueMethod() {
 		return getIgnoreOpaqueMethod().getEOperations().get(10);
 	}
 
@@ -893,7 +1423,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__IsAppropriate_solveCsp_BWD__Match_JavaOpaqueMethod_JavaCompilationUnit() {
+	public EOperation getIgnoreOpaqueMethod__IsAppropriate_solveCsp_BWD__Match_JavaCompilationUnit_JavaOpaqueMethod() {
 		return getIgnoreOpaqueMethod().getEOperations().get(11);
 	}
 
@@ -911,7 +1441,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaOpaqueMethod_JavaCompilationUnit() {
+	public EOperation getIgnoreOpaqueMethod__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaCompilationUnit_JavaOpaqueMethod() {
 		return getIgnoreOpaqueMethod().getEOperations().get(13);
 	}
 
@@ -947,7 +1477,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__IsAppropriate_BWD_EMoflonEdge_7__EMoflonEdge() {
+	public EOperation getIgnoreOpaqueMethod__IsAppropriate_BWD_EMoflonEdge_4__EMoflonEdge() {
 		return getIgnoreOpaqueMethod().getEOperations().get(17);
 	}
 
@@ -983,7 +1513,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__IsApplicable_solveCsp_CC__JavaOpaqueMethod_JavaCompilationUnit_Match_Match() {
+	public EOperation getIgnoreOpaqueMethod__IsApplicable_solveCsp_CC__JavaCompilationUnit_JavaOpaqueMethod_Match_Match() {
 		return getIgnoreOpaqueMethod().getEOperations().get(21);
 	}
 
@@ -1010,7 +1540,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreOpaqueMethod__CheckDEC_BWD__JavaOpaqueMethod_JavaCompilationUnit() {
+	public EOperation getIgnoreOpaqueMethod__CheckDEC_BWD__JavaCompilationUnit_JavaOpaqueMethod() {
 		return getIgnoreOpaqueMethod().getEOperations().get(24);
 	}
 
@@ -1046,311 +1576,10 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getKeyDerivationAlgorithmImportToImport() {
-		if (keyDerivationAlgorithmImportToImportEClass == null) {
-			keyDerivationAlgorithmImportToImportEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(RulesPackage.eNS_URI).getEClassifiers().get(3);
-		}
-		return keyDerivationAlgorithmImportToImportEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_FWD__Match_KeyDerivationAlgorithm_Import() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__Perform_FWD__IsApplicableMatch() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_FWD__Match() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjectsToMatch_FWD__Match_KeyDerivationAlgorithm_Import() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_solveCsp_FWD__Match_KeyDerivationAlgorithm_Import() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_checkCsp_FWD__CSP() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_solveCsp_FWD__IsApplicableMatch_JavaCompilationUnit_KeyDerivationAlgorithmToJcu_KeyDerivationAlgorithm_Import() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_checkCsp_FWD__CSP() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__CheckTypes_FWD__Match() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_BWD__Match_JavaImport_JavaCompilationUnit() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__Perform_BWD__IsApplicableMatch() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_BWD__Match() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjectsToMatch_BWD__Match_JavaImport_JavaCompilationUnit() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_solveCsp_BWD__Match_JavaImport_JavaCompilationUnit() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_checkCsp_BWD__CSP() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaImport_JavaCompilationUnit_KeyDerivationAlgorithmToJcu_KeyDerivationAlgorithm() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_checkCsp_BWD__CSP() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__CheckTypes_BWD__Match() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(19);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_FWD_EMoflonEdge_7__EMoflonEdge() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(20);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsAppropriate_BWD_EMoflonEdge_8__EMoflonEdge() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(21);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__CheckAttributes_FWD__TripleMatch() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(22);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__CheckAttributes_BWD__TripleMatch() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(23);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_CC__Match_Match() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(24);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_solveCsp_CC__JavaImport_JavaCompilationUnit_KeyDerivationAlgorithm_Import_Match_Match() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(25);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__IsApplicable_checkCsp_CC__CSP() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(26);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__CheckDEC_FWD__KeyDerivationAlgorithm_Import() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(27);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__CheckDEC_BWD__JavaImport_JavaCompilationUnit() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(28);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__GenerateModel__RuleEntryContainer_KeyDerivationAlgorithmToJcu() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(29);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__GenerateModel_solveCsp_BWD__IsApplicableMatch_JavaCompilationUnit_KeyDerivationAlgorithmToJcu_KeyDerivationAlgorithm_ModelgeneratorRuleResult() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(30);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getKeyDerivationAlgorithmImportToImport__GenerateModel_checkCsp_BWD__CSP() {
-		return getKeyDerivationAlgorithmImportToImport().getEOperations().get(31);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPerformGetKeyMethod() {
 		if (performGetKeyMethodEClass == null) {
 			performGetKeyMethodEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
-					.getEClassifiers().get(4);
+					.getEClassifiers().get(5);
 		}
 		return performGetKeyMethodEClass;
 	}
@@ -1612,271 +1841,6 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIgnoreMethodInvocationArgument() {
-		if (ignoreMethodInvocationArgumentEClass == null) {
-			ignoreMethodInvocationArgumentEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
-					.getEClassifiers().get(5);
-		}
-		return ignoreMethodInvocationArgumentEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__IsAppropriate_FWD__Match() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__Perform_FWD__IsApplicableMatch() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__IsApplicable_FWD__Match() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__RegisterObjectsToMatch_FWD__Match() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__IsAppropriate_solveCsp_FWD__Match() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__IsAppropriate_checkCsp_FWD__CSP() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__CheckTypes_FWD__Match() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__IsAppropriate_BWD__Match_JavaExpression_JavaMethodInvocation() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__Perform_BWD__IsApplicableMatch() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__IsApplicable_BWD__Match() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__RegisterObjectsToMatch_BWD__Match_JavaExpression_JavaMethodInvocation() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__IsAppropriate_solveCsp_BWD__Match_JavaExpression_JavaMethodInvocation() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__IsAppropriate_checkCsp_BWD__CSP() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaExpression_JavaMethodInvocation() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__IsApplicable_checkCsp_BWD__CSP() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__RegisterObjects_BWD__PerformRuleResult_EObject_EObject() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__CheckTypes_BWD__Match() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__IsAppropriate_BWD_EMoflonEdge_9__EMoflonEdge() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__CheckAttributes_FWD__TripleMatch() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__CheckAttributes_BWD__TripleMatch() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(19);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__IsApplicable_CC__Match_Match() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(20);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__IsApplicable_solveCsp_CC__JavaExpression_JavaMethodInvocation_Match_Match() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(21);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__IsApplicable_checkCsp_CC__CSP() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(22);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__CheckDEC_FWD() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(23);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__CheckDEC_BWD__JavaExpression_JavaMethodInvocation() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(24);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__GenerateModel__RuleEntryContainer_JavaMethodInvocation() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(25);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__GenerateModel_solveCsp_BWD__IsApplicableMatch_JavaMethodInvocation_ModelgeneratorRuleResult() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(26);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIgnoreMethodInvocationArgument__GenerateModel_checkCsp_BWD__CSP() {
-		return getIgnoreMethodInvocationArgument().getEOperations().get(27);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSymmetricEncryptionTask() {
 		if (symmetricEncryptionTaskEClass == null) {
 			symmetricEncryptionTaskEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
@@ -1980,7 +1944,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricEncryptionTask__IsAppropriate_BWD__Match_JavaWorkflowMethod_JavaMethodInvocation_JavaVariableDeclaration_JavaPackage_JavaName_JavaName_JavaLiteral_JavaStatement_JavaCompilationUnit_JavaVariableDeclaration_JavaOpaqueMethod() {
+	public EOperation getSymmetricEncryptionTask__IsAppropriate_BWD__Match_JavaPackage_JavaName_JavaStatement_JavaVariableDeclaration_JavaMethodInvocation_JavaName_JavaOpaqueMethod_JavaWorkflowMethod_JavaVariableDeclaration_JavaLiteral_JavaCompilationUnit() {
 		return getSymmetricEncryptionTask().getEOperations().get(10);
 	}
 
@@ -2007,7 +1971,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricEncryptionTask__RegisterObjectsToMatch_BWD__Match_JavaWorkflowMethod_JavaMethodInvocation_JavaVariableDeclaration_JavaPackage_JavaName_JavaName_JavaLiteral_JavaStatement_JavaCompilationUnit_JavaVariableDeclaration_JavaOpaqueMethod() {
+	public EOperation getSymmetricEncryptionTask__RegisterObjectsToMatch_BWD__Match_JavaPackage_JavaName_JavaStatement_JavaVariableDeclaration_JavaMethodInvocation_JavaName_JavaOpaqueMethod_JavaWorkflowMethod_JavaVariableDeclaration_JavaLiteral_JavaCompilationUnit() {
 		return getSymmetricEncryptionTask().getEOperations().get(13);
 	}
 
@@ -2016,7 +1980,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricEncryptionTask__IsAppropriate_solveCsp_BWD__Match_JavaWorkflowMethod_JavaMethodInvocation_JavaVariableDeclaration_JavaPackage_JavaName_JavaName_JavaLiteral_JavaStatement_JavaCompilationUnit_JavaVariableDeclaration_JavaOpaqueMethod() {
+	public EOperation getSymmetricEncryptionTask__IsAppropriate_solveCsp_BWD__Match_JavaPackage_JavaName_JavaStatement_JavaVariableDeclaration_JavaMethodInvocation_JavaName_JavaOpaqueMethod_JavaWorkflowMethod_JavaVariableDeclaration_JavaLiteral_JavaCompilationUnit() {
 		return getSymmetricEncryptionTask().getEOperations().get(14);
 	}
 
@@ -2034,7 +1998,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricEncryptionTask__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaWorkflowMethod_JavaMethodInvocation_JavaVariableDeclaration_JavaPackage_JavaName_JavaName_JavaLiteral_JavaStatement_JavaCompilationUnit_JavaVariableDeclaration_JavaOpaqueMethod() {
+	public EOperation getSymmetricEncryptionTask__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaPackage_JavaName_JavaStatement_JavaVariableDeclaration_JavaMethodInvocation_JavaName_JavaOpaqueMethod_JavaWorkflowMethod_JavaVariableDeclaration_JavaLiteral_JavaCompilationUnit() {
 		return getSymmetricEncryptionTask().getEOperations().get(16);
 	}
 
@@ -2070,7 +2034,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricEncryptionTask__IsAppropriate_FWD_EMoflonEdge_8__EMoflonEdge() {
+	public EOperation getSymmetricEncryptionTask__IsAppropriate_FWD_EMoflonEdge_2__EMoflonEdge() {
 		return getSymmetricEncryptionTask().getEOperations().get(20);
 	}
 
@@ -2079,7 +2043,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricEncryptionTask__IsAppropriate_BWD_EMoflonEdge_10__EMoflonEdge() {
+	public EOperation getSymmetricEncryptionTask__IsAppropriate_BWD_EMoflonEdge_5__EMoflonEdge() {
 		return getSymmetricEncryptionTask().getEOperations().get(21);
 	}
 
@@ -2115,7 +2079,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricEncryptionTask__IsApplicable_solveCsp_CC__JavaWorkflowMethod_JavaMethodInvocation_SymmetricBlockCipher_JavaVariableDeclaration_JavaPackage_JavaName_JavaName_JavaLiteral_JavaStatement_JavaCompilationUnit_Task_JavaVariableDeclaration_JavaOpaqueMethod_Match_Match() {
+	public EOperation getSymmetricEncryptionTask__IsApplicable_solveCsp_CC__JavaPackage_SymmetricBlockCipher_JavaName_JavaStatement_JavaVariableDeclaration_JavaMethodInvocation_JavaName_Task_JavaOpaqueMethod_JavaWorkflowMethod_JavaVariableDeclaration_JavaLiteral_JavaCompilationUnit_Match_Match() {
 		return getSymmetricEncryptionTask().getEOperations().get(25);
 	}
 
@@ -2142,7 +2106,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymmetricEncryptionTask__CheckDEC_BWD__JavaWorkflowMethod_JavaMethodInvocation_JavaVariableDeclaration_JavaPackage_JavaName_JavaName_JavaLiteral_JavaStatement_JavaCompilationUnit_JavaVariableDeclaration_JavaOpaqueMethod() {
+	public EOperation getSymmetricEncryptionTask__CheckDEC_BWD__JavaPackage_JavaName_JavaStatement_JavaVariableDeclaration_JavaMethodInvocation_JavaName_JavaOpaqueMethod_JavaWorkflowMethod_JavaVariableDeclaration_JavaLiteral_JavaCompilationUnit() {
 		return getSymmetricEncryptionTask().getEOperations().get(28);
 	}
 
@@ -2178,12 +2142,12 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIgnoreParameterRule() {
-		if (ignoreParameterRuleEClass == null) {
-			ignoreParameterRuleEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
-					.getEClassifiers().get(7);
+	public EClass getSymmetricBlockCipherImportToImport() {
+		if (symmetricBlockCipherImportToImportEClass == null) {
+			symmetricBlockCipherImportToImportEClass = (EClass) EPackage.Registry.INSTANCE
+					.getEPackage(RulesPackage.eNS_URI).getEClassifiers().get(7);
 		}
-		return ignoreParameterRuleEClass;
+		return symmetricBlockCipherImportToImportEClass;
 	}
 
 	/**
@@ -2191,8 +2155,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__IsAppropriate_FWD__Match() {
-		return getIgnoreParameterRule().getEOperations().get(0);
+	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_FWD__Match_SymmetricBlockCipher_Import() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(0);
 	}
 
 	/**
@@ -2200,8 +2164,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__Perform_FWD__IsApplicableMatch() {
-		return getIgnoreParameterRule().getEOperations().get(1);
+	public EOperation getSymmetricBlockCipherImportToImport__Perform_FWD__IsApplicableMatch() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(1);
 	}
 
 	/**
@@ -2209,8 +2173,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__IsApplicable_FWD__Match() {
-		return getIgnoreParameterRule().getEOperations().get(2);
+	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_FWD__Match() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(2);
 	}
 
 	/**
@@ -2218,8 +2182,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__RegisterObjectsToMatch_FWD__Match() {
-		return getIgnoreParameterRule().getEOperations().get(3);
+	public EOperation getSymmetricBlockCipherImportToImport__RegisterObjectsToMatch_FWD__Match_SymmetricBlockCipher_Import() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(3);
 	}
 
 	/**
@@ -2227,8 +2191,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__IsAppropriate_solveCsp_FWD__Match() {
-		return getIgnoreParameterRule().getEOperations().get(4);
+	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_solveCsp_FWD__Match_SymmetricBlockCipher_Import() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(4);
 	}
 
 	/**
@@ -2236,8 +2200,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__IsAppropriate_checkCsp_FWD__CSP() {
-		return getIgnoreParameterRule().getEOperations().get(5);
+	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_checkCsp_FWD__CSP() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(5);
 	}
 
 	/**
@@ -2245,8 +2209,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__CheckTypes_FWD__Match() {
-		return getIgnoreParameterRule().getEOperations().get(6);
+	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_solveCsp_FWD__IsApplicableMatch_SymmetricBlockCipher_SymmetricBlockCipherToJcu_JavaCompilationUnit_Import() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(6);
 	}
 
 	/**
@@ -2254,8 +2218,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__IsAppropriate_BWD__Match_JavaVariableDeclaration_JavaWorkflowMethod() {
-		return getIgnoreParameterRule().getEOperations().get(7);
+	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_checkCsp_FWD__CSP() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(7);
 	}
 
 	/**
@@ -2263,8 +2227,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__Perform_BWD__IsApplicableMatch() {
-		return getIgnoreParameterRule().getEOperations().get(8);
+	public EOperation getSymmetricBlockCipherImportToImport__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(8);
 	}
 
 	/**
@@ -2272,8 +2236,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__IsApplicable_BWD__Match() {
-		return getIgnoreParameterRule().getEOperations().get(9);
+	public EOperation getSymmetricBlockCipherImportToImport__CheckTypes_FWD__Match() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(9);
 	}
 
 	/**
@@ -2281,8 +2245,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__RegisterObjectsToMatch_BWD__Match_JavaVariableDeclaration_JavaWorkflowMethod() {
-		return getIgnoreParameterRule().getEOperations().get(10);
+	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_BWD__Match_JavaImport_JavaCompilationUnit() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(10);
 	}
 
 	/**
@@ -2290,8 +2254,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__IsAppropriate_solveCsp_BWD__Match_JavaVariableDeclaration_JavaWorkflowMethod() {
-		return getIgnoreParameterRule().getEOperations().get(11);
+	public EOperation getSymmetricBlockCipherImportToImport__Perform_BWD__IsApplicableMatch() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(11);
 	}
 
 	/**
@@ -2299,8 +2263,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__IsAppropriate_checkCsp_BWD__CSP() {
-		return getIgnoreParameterRule().getEOperations().get(12);
+	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_BWD__Match() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(12);
 	}
 
 	/**
@@ -2308,8 +2272,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__IsApplicable_solveCsp_BWD__IsApplicableMatch_JavaVariableDeclaration_JavaWorkflowMethod() {
-		return getIgnoreParameterRule().getEOperations().get(13);
+	public EOperation getSymmetricBlockCipherImportToImport__RegisterObjectsToMatch_BWD__Match_JavaImport_JavaCompilationUnit() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(13);
 	}
 
 	/**
@@ -2317,8 +2281,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__IsApplicable_checkCsp_BWD__CSP() {
-		return getIgnoreParameterRule().getEOperations().get(14);
+	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_solveCsp_BWD__Match_JavaImport_JavaCompilationUnit() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(14);
 	}
 
 	/**
@@ -2326,8 +2290,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__RegisterObjects_BWD__PerformRuleResult_EObject_EObject() {
-		return getIgnoreParameterRule().getEOperations().get(15);
+	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_checkCsp_BWD__CSP() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(15);
 	}
 
 	/**
@@ -2335,8 +2299,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__CheckTypes_BWD__Match() {
-		return getIgnoreParameterRule().getEOperations().get(16);
+	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_solveCsp_BWD__IsApplicableMatch_SymmetricBlockCipher_JavaImport_SymmetricBlockCipherToJcu_JavaCompilationUnit() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(16);
 	}
 
 	/**
@@ -2344,8 +2308,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__IsAppropriate_BWD_EMoflonEdge_11__EMoflonEdge() {
-		return getIgnoreParameterRule().getEOperations().get(17);
+	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_checkCsp_BWD__CSP() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(17);
 	}
 
 	/**
@@ -2353,8 +2317,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__CheckAttributes_FWD__TripleMatch() {
-		return getIgnoreParameterRule().getEOperations().get(18);
+	public EOperation getSymmetricBlockCipherImportToImport__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(18);
 	}
 
 	/**
@@ -2362,8 +2326,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__CheckAttributes_BWD__TripleMatch() {
-		return getIgnoreParameterRule().getEOperations().get(19);
+	public EOperation getSymmetricBlockCipherImportToImport__CheckTypes_BWD__Match() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(19);
 	}
 
 	/**
@@ -2371,8 +2335,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__IsApplicable_CC__Match_Match() {
-		return getIgnoreParameterRule().getEOperations().get(20);
+	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_FWD_EMoflonEdge_3__EMoflonEdge() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(20);
 	}
 
 	/**
@@ -2380,8 +2344,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__IsApplicable_solveCsp_CC__JavaVariableDeclaration_JavaWorkflowMethod_Match_Match() {
-		return getIgnoreParameterRule().getEOperations().get(21);
+	public EOperation getSymmetricBlockCipherImportToImport__IsAppropriate_BWD_EMoflonEdge_6__EMoflonEdge() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(21);
 	}
 
 	/**
@@ -2389,8 +2353,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__IsApplicable_checkCsp_CC__CSP() {
-		return getIgnoreParameterRule().getEOperations().get(22);
+	public EOperation getSymmetricBlockCipherImportToImport__CheckAttributes_FWD__TripleMatch() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(22);
 	}
 
 	/**
@@ -2398,8 +2362,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__CheckDEC_FWD() {
-		return getIgnoreParameterRule().getEOperations().get(23);
+	public EOperation getSymmetricBlockCipherImportToImport__CheckAttributes_BWD__TripleMatch() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(23);
 	}
 
 	/**
@@ -2407,8 +2371,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__CheckDEC_BWD__JavaVariableDeclaration_JavaWorkflowMethod() {
-		return getIgnoreParameterRule().getEOperations().get(24);
+	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_CC__Match_Match() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(24);
 	}
 
 	/**
@@ -2416,8 +2380,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__GenerateModel__RuleEntryContainer_JavaWorkflowMethod() {
-		return getIgnoreParameterRule().getEOperations().get(25);
+	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_solveCsp_CC__SymmetricBlockCipher_JavaImport_JavaCompilationUnit_Import_Match_Match() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(25);
 	}
 
 	/**
@@ -2425,8 +2389,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__GenerateModel_solveCsp_BWD__IsApplicableMatch_JavaWorkflowMethod_ModelgeneratorRuleResult() {
-		return getIgnoreParameterRule().getEOperations().get(26);
+	public EOperation getSymmetricBlockCipherImportToImport__IsApplicable_checkCsp_CC__CSP() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(26);
 	}
 
 	/**
@@ -2434,8 +2398,44 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIgnoreParameterRule__GenerateModel_checkCsp_BWD__CSP() {
-		return getIgnoreParameterRule().getEOperations().get(27);
+	public EOperation getSymmetricBlockCipherImportToImport__CheckDEC_FWD__SymmetricBlockCipher_Import() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(27);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__CheckDEC_BWD__JavaImport_JavaCompilationUnit() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(28);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__GenerateModel__RuleEntryContainer_SymmetricBlockCipherToJcu() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(29);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__GenerateModel_solveCsp_BWD__IsApplicableMatch_SymmetricBlockCipher_SymmetricBlockCipherToJcu_JavaCompilationUnit_ModelgeneratorRuleResult() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(30);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymmetricBlockCipherImportToImport__GenerateModel_checkCsp_BWD__CSP() {
+		return getSymmetricBlockCipherImportToImport().getEOperations().get(31);
 	}
 
 	/**
@@ -2636,7 +2636,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPasswordBasedEncryption__IsAppropriate_FWD_EMoflonEdge_9__EMoflonEdge() {
+	public EOperation getPasswordBasedEncryption__IsAppropriate_FWD_EMoflonEdge_4__EMoflonEdge() {
 		return getPasswordBasedEncryption().getEOperations().get(20);
 	}
 
@@ -2645,7 +2645,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPasswordBasedEncryption__IsAppropriate_BWD_EMoflonEdge_12__EMoflonEdge() {
+	public EOperation getPasswordBasedEncryption__IsAppropriate_BWD_EMoflonEdge_7__EMoflonEdge() {
 		return getPasswordBasedEncryption().getEOperations().get(21);
 	}
 

@@ -22,33 +22,6 @@ public interface CryptoConfigToJavaFactory extends EFactory {
 	CryptoConfigToJavaFactory eINSTANCE = CryptoConfigToJava.impl.CryptoConfigToJavaFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Key Derivation Algorithm To Jcu</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Key Derivation Algorithm To Jcu</em>'.
-	 * @generated
-	 */
-	KeyDerivationAlgorithmToJcu createKeyDerivationAlgorithmToJcu();
-
-	/**
-	 * Returns a new object of class '<em>Algorithm To Java Compilation Unit</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Algorithm To Java Compilation Unit</em>'.
-	 * @generated
-	 */
-	AlgorithmToJavaCompilationUnit createAlgorithmToJavaCompilationUnit();
-
-	/**
-	 * Returns a new object of class '<em>Task To Java Package</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Task To Java Package</em>'.
-	 * @generated
-	 */
-	TaskToJavaPackage createTaskToJavaPackage();
-
-	/**
 	 * Returns a new object of class '<em>Algorithm To Jcu</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,24 +29,6 @@ public interface CryptoConfigToJavaFactory extends EFactory {
 	 * @generated
 	 */
 	AlgorithmToJcu createAlgorithmToJcu();
-
-	/**
-	 * Returns a new object of class '<em>Symmetric Block Cipher To Method</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Symmetric Block Cipher To Method</em>'.
-	 * @generated
-	 */
-	SymmetricBlockCipherToMethod createSymmetricBlockCipherToMethod();
-
-	/**
-	 * Returns a new object of class '<em>Import To Import</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Import To Import</em>'.
-	 * @generated
-	 */
-	ImportToImport createImportToImport();
 
 	/**
 	 * Returns a new object of class '<em>Task To Java Compilation Unit</em>'.
@@ -85,13 +40,31 @@ public interface CryptoConfigToJavaFactory extends EFactory {
 	TaskToJavaCompilationUnit createTaskToJavaCompilationUnit();
 
 	/**
-	 * Returns a new object of class '<em>Key Derivation Algorithm To Method</em>'.
+	 * Returns a new object of class '<em>Key Derivation Algorithm To Jcu</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Key Derivation Algorithm To Method</em>'.
+	 * @return a new object of class '<em>Key Derivation Algorithm To Jcu</em>'.
 	 * @generated
 	 */
-	KeyDerivationAlgorithmToMethod createKeyDerivationAlgorithmToMethod();
+	KeyDerivationAlgorithmToJcu createKeyDerivationAlgorithmToJcu();
+
+	/**
+	 * Returns a new object of class '<em>Import To Import</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Import To Import</em>'.
+	 * @generated
+	 */
+	ImportToImport createImportToImport();
+
+	/**
+	 * Returns a new object of class '<em>Task To Java Package</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Task To Java Package</em>'.
+	 * @generated
+	 */
+	TaskToJavaPackage createTaskToJavaPackage();
 
 	/**
 	 * Returns a new object of class '<em>Symmetric Block Cipher To Jcu</em>'.
@@ -101,6 +74,33 @@ public interface CryptoConfigToJavaFactory extends EFactory {
 	 * @generated
 	 */
 	SymmetricBlockCipherToJcu createSymmetricBlockCipherToJcu();
+
+	/**
+	 * Returns a new object of class '<em>Key Derivation Algorithm To Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Key Derivation Algorithm To Method</em>'.
+	 * @generated
+	 */
+	KeyDerivationAlgorithmToMethod createKeyDerivationAlgorithmToMethod();
+
+	/**
+	 * Returns a new object of class '<em>Algorithm To Java Compilation Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Algorithm To Java Compilation Unit</em>'.
+	 * @generated
+	 */
+	AlgorithmToJavaCompilationUnit createAlgorithmToJavaCompilationUnit();
+
+	/**
+	 * Returns a new object of class '<em>Symmetric Block Cipher To Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Symmetric Block Cipher To Method</em>'.
+	 * @generated
+	 */
+	SymmetricBlockCipherToMethod createSymmetricBlockCipherToMethod();
 
 	/**
 	 * Returns the package supported by this factory.

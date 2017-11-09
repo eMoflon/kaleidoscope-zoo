@@ -21,12 +21,12 @@ public class CryptoConfigToJavaTrafo extends SynchronizationHelper{
         BasicConfigurator.configure();
 
 		// Forward Transformation
-        CryptoConfigToJavaTrafo helper = new CryptoConfigToJavaTrafo();
-		helper.performForward("instances/src.xmi");
+        //CryptoConfigToJavaTrafo helper = new CryptoConfigToJavaTrafo();
+		//helper.performForward("instances/src.xmi");
 		
 		// Backward Transformation
-		//helper = new CryptoConfigToJavaTrafo();
-		//helper.performBackward("instances/bwd.src.xmi");
+        CryptoConfigToJavaTrafo helper = new CryptoConfigToJavaTrafo();
+		helper.performBackward("instances/bwd.src.xmi");
 	}
 
 	public void performForward() {

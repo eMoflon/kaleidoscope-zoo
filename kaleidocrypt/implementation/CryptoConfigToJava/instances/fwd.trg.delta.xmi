@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="ASCII"?>
-<org.moflon.tgg.runtime:DeltaSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SimpleJava="platform:/plugin/SimpleJava/model/SimpleJava.ecore" xmlns:org.moflon.tgg.runtime="platform:/plugin/org.moflon.tgg.runtime/model/Runtime.ecore">
-  <targetModel href="fwd.trg.xmi#/"/>
-  <addedEdges trg="//@addedNodes.0" name="methods">
-    <src href="fwd.trg.xmi#//@cunits.0"/>
-  </addedEdges>
-  <addedNodes xsi:type="SimpleJava:JavaOpaqueMethod" name="nekaMetoda" type="kjcnsda" modifier="private" throws="dsacasdc asdc,as dcas" index="1" body="sdcasdcasdcasdca" parameters="ksdn asd cas dc as dca"/>
-</org.moflon.tgg.runtime:DeltaSpecification>

@@ -115,10 +115,10 @@ public interface SymmetricEncryptionTask extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject sbc2Jcu, EObject methodEncryption,
-			EObject exprRetPerformEncryption, EObject t2c, EObject sbc, EObject keyEncryption, EObject javaPackage,
-			EObject exprKeyName, EObject exprDataName, EObject exprNameModePadding, EObject statRetPerformEncryption,
-			EObject jcu, EObject task, EObject dataEncryption, EObject methodPerformEncryption);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject javaPackage, EObject sbc, EObject exprDataName,
+			EObject statRetPerformEncryption, EObject dataEncryption, EObject exprRetPerformEncryption,
+			EObject exprKeyName, EObject task, EObject methodPerformEncryption, EObject methodEncryption, EObject t2c,
+			EObject keyEncryption, EObject exprNameModePadding, EObject jcu, EObject sbc2Jcu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -134,11 +134,11 @@ public interface SymmetricEncryptionTask extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_BWD(Match match, JavaWorkflowMethod methodEncryption,
-			JavaMethodInvocation exprRetPerformEncryption, JavaVariableDeclaration keyEncryption,
-			JavaPackage javaPackage, JavaName exprKeyName, JavaName exprDataName, JavaLiteral exprNameModePadding,
-			JavaStatement statRetPerformEncryption, JavaCompilationUnit jcu, JavaVariableDeclaration dataEncryption,
-			JavaOpaqueMethod methodPerformEncryption);
+	boolean isAppropriate_BWD(Match match, JavaPackage javaPackage, JavaName exprDataName,
+			JavaStatement statRetPerformEncryption, JavaVariableDeclaration dataEncryption,
+			JavaMethodInvocation exprRetPerformEncryption, JavaName exprKeyName,
+			JavaOpaqueMethod methodPerformEncryption, JavaWorkflowMethod methodEncryption,
+			JavaVariableDeclaration keyEncryption, JavaLiteral exprNameModePadding, JavaCompilationUnit jcu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -162,11 +162,11 @@ public interface SymmetricEncryptionTask extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_BWD(Match match, JavaWorkflowMethod methodEncryption,
-			JavaMethodInvocation exprRetPerformEncryption, JavaVariableDeclaration keyEncryption,
-			JavaPackage javaPackage, JavaName exprKeyName, JavaName exprDataName, JavaLiteral exprNameModePadding,
-			JavaStatement statRetPerformEncryption, JavaCompilationUnit jcu, JavaVariableDeclaration dataEncryption,
-			JavaOpaqueMethod methodPerformEncryption);
+	void registerObjectsToMatch_BWD(Match match, JavaPackage javaPackage, JavaName exprDataName,
+			JavaStatement statRetPerformEncryption, JavaVariableDeclaration dataEncryption,
+			JavaMethodInvocation exprRetPerformEncryption, JavaName exprKeyName,
+			JavaOpaqueMethod methodPerformEncryption, JavaWorkflowMethod methodEncryption,
+			JavaVariableDeclaration keyEncryption, JavaLiteral exprNameModePadding, JavaCompilationUnit jcu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -174,11 +174,11 @@ public interface SymmetricEncryptionTask extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_BWD(Match match, JavaWorkflowMethod methodEncryption,
-			JavaMethodInvocation exprRetPerformEncryption, JavaVariableDeclaration keyEncryption,
-			JavaPackage javaPackage, JavaName exprKeyName, JavaName exprDataName, JavaLiteral exprNameModePadding,
-			JavaStatement statRetPerformEncryption, JavaCompilationUnit jcu, JavaVariableDeclaration dataEncryption,
-			JavaOpaqueMethod methodPerformEncryption);
+	CSP isAppropriate_solveCsp_BWD(Match match, JavaPackage javaPackage, JavaName exprDataName,
+			JavaStatement statRetPerformEncryption, JavaVariableDeclaration dataEncryption,
+			JavaMethodInvocation exprRetPerformEncryption, JavaName exprKeyName,
+			JavaOpaqueMethod methodPerformEncryption, JavaWorkflowMethod methodEncryption,
+			JavaVariableDeclaration keyEncryption, JavaLiteral exprNameModePadding, JavaCompilationUnit jcu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -194,11 +194,11 @@ public interface SymmetricEncryptionTask extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaWorkflowMethod methodEncryption,
-			JavaMethodInvocation exprRetPerformEncryption, JavaVariableDeclaration keyEncryption,
-			JavaPackage javaPackage, JavaName exprKeyName, JavaName exprDataName, JavaLiteral exprNameModePadding,
-			JavaStatement statRetPerformEncryption, JavaCompilationUnit jcu, JavaVariableDeclaration dataEncryption,
-			JavaOpaqueMethod methodPerformEncryption);
+	CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaPackage javaPackage, JavaName exprDataName,
+			JavaStatement statRetPerformEncryption, JavaVariableDeclaration dataEncryption,
+			JavaMethodInvocation exprRetPerformEncryption, JavaName exprKeyName,
+			JavaOpaqueMethod methodPerformEncryption, JavaWorkflowMethod methodEncryption,
+			JavaVariableDeclaration keyEncryption, JavaLiteral exprNameModePadding, JavaCompilationUnit jcu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -214,10 +214,10 @@ public interface SymmetricEncryptionTask extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_BWD(PerformRuleResult ruleresult, EObject sbc2Jcu, EObject methodEncryption,
-			EObject exprRetPerformEncryption, EObject t2c, EObject sbc, EObject keyEncryption, EObject javaPackage,
-			EObject exprKeyName, EObject exprDataName, EObject exprNameModePadding, EObject statRetPerformEncryption,
-			EObject jcu, EObject task, EObject dataEncryption, EObject methodPerformEncryption);
+	void registerObjects_BWD(PerformRuleResult ruleresult, EObject javaPackage, EObject sbc, EObject exprDataName,
+			EObject statRetPerformEncryption, EObject dataEncryption, EObject exprRetPerformEncryption,
+			EObject exprKeyName, EObject task, EObject methodPerformEncryption, EObject methodEncryption, EObject t2c,
+			EObject keyEncryption, EObject exprNameModePadding, EObject jcu, EObject sbc2Jcu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -233,7 +233,7 @@ public interface SymmetricEncryptionTask extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_8(EMoflonEdge _edge_algorithms);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_2(EMoflonEdge _edge_algorithms);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -241,7 +241,7 @@ public interface SymmetricEncryptionTask extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_BWD_EMoflonEdge_10(EMoflonEdge _edge_statements);
+	EObjectContainer isAppropriate_BWD_EMoflonEdge_5(EMoflonEdge _edge_arguments);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -273,12 +273,12 @@ public interface SymmetricEncryptionTask extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_CC(JavaWorkflowMethod methodEncryption, JavaMethodInvocation exprRetPerformEncryption,
-			SymmetricBlockCipher sbc, JavaVariableDeclaration keyEncryption, JavaPackage javaPackage,
-			JavaName exprKeyName, JavaName exprDataName, JavaLiteral exprNameModePadding,
-			JavaStatement statRetPerformEncryption, JavaCompilationUnit jcu, Task task,
-			JavaVariableDeclaration dataEncryption, JavaOpaqueMethod methodPerformEncryption, Match sourceMatch,
-			Match targetMatch);
+	CSP isApplicable_solveCsp_CC(JavaPackage javaPackage, SymmetricBlockCipher sbc, JavaName exprDataName,
+			JavaStatement statRetPerformEncryption, JavaVariableDeclaration dataEncryption,
+			JavaMethodInvocation exprRetPerformEncryption, JavaName exprKeyName, Task task,
+			JavaOpaqueMethod methodPerformEncryption, JavaWorkflowMethod methodEncryption,
+			JavaVariableDeclaration keyEncryption, JavaLiteral exprNameModePadding, JavaCompilationUnit jcu,
+			Match sourceMatch, Match targetMatch);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -302,10 +302,10 @@ public interface SymmetricEncryptionTask extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_BWD(JavaWorkflowMethod methodEncryption, JavaMethodInvocation exprRetPerformEncryption,
-			JavaVariableDeclaration keyEncryption, JavaPackage javaPackage, JavaName exprKeyName, JavaName exprDataName,
-			JavaLiteral exprNameModePadding, JavaStatement statRetPerformEncryption, JavaCompilationUnit jcu,
-			JavaVariableDeclaration dataEncryption, JavaOpaqueMethod methodPerformEncryption);
+	boolean checkDEC_BWD(JavaPackage javaPackage, JavaName exprDataName, JavaStatement statRetPerformEncryption,
+			JavaVariableDeclaration dataEncryption, JavaMethodInvocation exprRetPerformEncryption, JavaName exprKeyName,
+			JavaOpaqueMethod methodPerformEncryption, JavaWorkflowMethod methodEncryption,
+			JavaVariableDeclaration keyEncryption, JavaLiteral exprNameModePadding, JavaCompilationUnit jcu);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -58,42 +58,7 @@ public class CryptoConfigToJavaPackageImpl extends EPackageImpl implements Crypt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass keyDerivationAlgorithmToJcuEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass algorithmToJavaCompilationUnitEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass taskToJavaPackageEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass algorithmToJcuEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass symmetricBlockCipherToMethodEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass importToImportEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -107,7 +72,21 @@ public class CryptoConfigToJavaPackageImpl extends EPackageImpl implements Crypt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass keyDerivationAlgorithmToMethodEClass = null;
+	private EClass keyDerivationAlgorithmToJcuEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass importToImportEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass taskToJavaPackageEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -115,6 +94,27 @@ public class CryptoConfigToJavaPackageImpl extends EPackageImpl implements Crypt
 	 * @generated
 	 */
 	private EClass symmetricBlockCipherToJcuEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass keyDerivationAlgorithmToMethodEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass algorithmToJavaCompilationUnitEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass symmetricBlockCipherToMethodEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -198,103 +198,10 @@ public class CryptoConfigToJavaPackageImpl extends EPackageImpl implements Crypt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getKeyDerivationAlgorithmToJcu() {
-		if (keyDerivationAlgorithmToJcuEClass == null) {
-			keyDerivationAlgorithmToJcuEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(CryptoConfigToJavaPackage.eNS_URI).getEClassifiers().get(0);
-		}
-		return keyDerivationAlgorithmToJcuEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getKeyDerivationAlgorithmToJcu_Source() {
-		return (EReference) getKeyDerivationAlgorithmToJcu().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getKeyDerivationAlgorithmToJcu_Target() {
-		return (EReference) getKeyDerivationAlgorithmToJcu().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getAlgorithmToJavaCompilationUnit() {
-		if (algorithmToJavaCompilationUnitEClass == null) {
-			algorithmToJavaCompilationUnitEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(CryptoConfigToJavaPackage.eNS_URI).getEClassifiers().get(1);
-		}
-		return algorithmToJavaCompilationUnitEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAlgorithmToJavaCompilationUnit_Source() {
-		return (EReference) getAlgorithmToJavaCompilationUnit().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getAlgorithmToJavaCompilationUnit_Target() {
-		return (EReference) getAlgorithmToJavaCompilationUnit().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTaskToJavaPackage() {
-		if (taskToJavaPackageEClass == null) {
-			taskToJavaPackageEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(CryptoConfigToJavaPackage.eNS_URI)
-					.getEClassifiers().get(2);
-		}
-		return taskToJavaPackageEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTaskToJavaPackage_Source() {
-		return (EReference) getTaskToJavaPackage().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTaskToJavaPackage_Target() {
-		return (EReference) getTaskToJavaPackage().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getAlgorithmToJcu() {
 		if (algorithmToJcuEClass == null) {
 			algorithmToJcuEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(CryptoConfigToJavaPackage.eNS_URI)
-					.getEClassifiers().get(3);
+					.getEClassifiers().get(0);
 		}
 		return algorithmToJcuEClass;
 	}
@@ -322,72 +229,10 @@ public class CryptoConfigToJavaPackageImpl extends EPackageImpl implements Crypt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymmetricBlockCipherToMethod() {
-		if (symmetricBlockCipherToMethodEClass == null) {
-			symmetricBlockCipherToMethodEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(CryptoConfigToJavaPackage.eNS_URI).getEClassifiers().get(4);
-		}
-		return symmetricBlockCipherToMethodEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSymmetricBlockCipherToMethod_Source() {
-		return (EReference) getSymmetricBlockCipherToMethod().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSymmetricBlockCipherToMethod_Target() {
-		return (EReference) getSymmetricBlockCipherToMethod().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getImportToImport() {
-		if (importToImportEClass == null) {
-			importToImportEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(CryptoConfigToJavaPackage.eNS_URI)
-					.getEClassifiers().get(5);
-		}
-		return importToImportEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getImportToImport_Source() {
-		return (EReference) getImportToImport().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getImportToImport_Target() {
-		return (EReference) getImportToImport().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTaskToJavaCompilationUnit() {
 		if (taskToJavaCompilationUnitEClass == null) {
 			taskToJavaCompilationUnitEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(CryptoConfigToJavaPackage.eNS_URI).getEClassifiers().get(6);
+					.getEPackage(CryptoConfigToJavaPackage.eNS_URI).getEClassifiers().get(1);
 		}
 		return taskToJavaCompilationUnitEClass;
 	}
@@ -415,10 +260,134 @@ public class CryptoConfigToJavaPackageImpl extends EPackageImpl implements Crypt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getKeyDerivationAlgorithmToJcu() {
+		if (keyDerivationAlgorithmToJcuEClass == null) {
+			keyDerivationAlgorithmToJcuEClass = (EClass) EPackage.Registry.INSTANCE
+					.getEPackage(CryptoConfigToJavaPackage.eNS_URI).getEClassifiers().get(2);
+		}
+		return keyDerivationAlgorithmToJcuEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getKeyDerivationAlgorithmToJcu_Source() {
+		return (EReference) getKeyDerivationAlgorithmToJcu().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getKeyDerivationAlgorithmToJcu_Target() {
+		return (EReference) getKeyDerivationAlgorithmToJcu().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getImportToImport() {
+		if (importToImportEClass == null) {
+			importToImportEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(CryptoConfigToJavaPackage.eNS_URI)
+					.getEClassifiers().get(3);
+		}
+		return importToImportEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getImportToImport_Source() {
+		return (EReference) getImportToImport().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getImportToImport_Target() {
+		return (EReference) getImportToImport().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTaskToJavaPackage() {
+		if (taskToJavaPackageEClass == null) {
+			taskToJavaPackageEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(CryptoConfigToJavaPackage.eNS_URI)
+					.getEClassifiers().get(4);
+		}
+		return taskToJavaPackageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTaskToJavaPackage_Source() {
+		return (EReference) getTaskToJavaPackage().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTaskToJavaPackage_Target() {
+		return (EReference) getTaskToJavaPackage().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSymmetricBlockCipherToJcu() {
+		if (symmetricBlockCipherToJcuEClass == null) {
+			symmetricBlockCipherToJcuEClass = (EClass) EPackage.Registry.INSTANCE
+					.getEPackage(CryptoConfigToJavaPackage.eNS_URI).getEClassifiers().get(5);
+		}
+		return symmetricBlockCipherToJcuEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSymmetricBlockCipherToJcu_Source() {
+		return (EReference) getSymmetricBlockCipherToJcu().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSymmetricBlockCipherToJcu_Target() {
+		return (EReference) getSymmetricBlockCipherToJcu().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getKeyDerivationAlgorithmToMethod() {
 		if (keyDerivationAlgorithmToMethodEClass == null) {
 			keyDerivationAlgorithmToMethodEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(CryptoConfigToJavaPackage.eNS_URI).getEClassifiers().get(7);
+					.getEPackage(CryptoConfigToJavaPackage.eNS_URI).getEClassifiers().get(6);
 		}
 		return keyDerivationAlgorithmToMethodEClass;
 	}
@@ -446,12 +415,43 @@ public class CryptoConfigToJavaPackageImpl extends EPackageImpl implements Crypt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymmetricBlockCipherToJcu() {
-		if (symmetricBlockCipherToJcuEClass == null) {
-			symmetricBlockCipherToJcuEClass = (EClass) EPackage.Registry.INSTANCE
+	public EClass getAlgorithmToJavaCompilationUnit() {
+		if (algorithmToJavaCompilationUnitEClass == null) {
+			algorithmToJavaCompilationUnitEClass = (EClass) EPackage.Registry.INSTANCE
+					.getEPackage(CryptoConfigToJavaPackage.eNS_URI).getEClassifiers().get(7);
+		}
+		return algorithmToJavaCompilationUnitEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAlgorithmToJavaCompilationUnit_Source() {
+		return (EReference) getAlgorithmToJavaCompilationUnit().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAlgorithmToJavaCompilationUnit_Target() {
+		return (EReference) getAlgorithmToJavaCompilationUnit().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSymmetricBlockCipherToMethod() {
+		if (symmetricBlockCipherToMethodEClass == null) {
+			symmetricBlockCipherToMethodEClass = (EClass) EPackage.Registry.INSTANCE
 					.getEPackage(CryptoConfigToJavaPackage.eNS_URI).getEClassifiers().get(8);
 		}
-		return symmetricBlockCipherToJcuEClass;
+		return symmetricBlockCipherToMethodEClass;
 	}
 
 	/**
@@ -459,8 +459,8 @@ public class CryptoConfigToJavaPackageImpl extends EPackageImpl implements Crypt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSymmetricBlockCipherToJcu_Source() {
-		return (EReference) getSymmetricBlockCipherToJcu().getEStructuralFeatures().get(0);
+	public EReference getSymmetricBlockCipherToMethod_Source() {
+		return (EReference) getSymmetricBlockCipherToMethod().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -468,8 +468,8 @@ public class CryptoConfigToJavaPackageImpl extends EPackageImpl implements Crypt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSymmetricBlockCipherToJcu_Target() {
-		return (EReference) getSymmetricBlockCipherToJcu().getEStructuralFeatures().get(1);
+	public EReference getSymmetricBlockCipherToMethod_Target() {
+		return (EReference) getSymmetricBlockCipherToMethod().getEStructuralFeatures().get(1);
 	}
 
 	/**

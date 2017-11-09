@@ -115,8 +115,8 @@ public interface SecurePasswordTask extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject t2c,
-			EObject javaPackage, EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda, EObject exprRetGetKey,
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject javaPackage,
+			EObject t2c, EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda, EObject exprRetGetKey,
 			EObject methodPerformGetKey, EObject exprOutputSizeLiteral, EObject tc, EObject task, EObject exprPwdName,
 			EObject statRetGetKey, EObject methodGetKey, EObject jcu);
 
@@ -211,8 +211,8 @@ public interface SecurePasswordTask extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_BWD(PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject t2c,
-			EObject javaPackage, EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda, EObject exprRetGetKey,
+	void registerObjects_BWD(PerformRuleResult ruleresult, EObject exprIterationLiteral, EObject javaPackage,
+			EObject t2c, EObject exprAlgNameLiteral, EObject pwdDeclaration, EObject kda, EObject exprRetGetKey,
 			EObject methodPerformGetKey, EObject exprOutputSizeLiteral, EObject tc, EObject task, EObject exprPwdName,
 			EObject statRetGetKey, EObject methodGetKey, EObject jcu);
 
@@ -230,7 +230,7 @@ public interface SecurePasswordTask extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_6(EMoflonEdge _edge_algorithms);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_1(EMoflonEdge _edge_algorithms);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -238,7 +238,7 @@ public interface SecurePasswordTask extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_BWD_EMoflonEdge_6(EMoflonEdge _edge_cunits);
+	EObjectContainer isAppropriate_BWD_EMoflonEdge_3(EMoflonEdge _edge_cunits);
 
 	/**
 	 * <!-- begin-user-doc -->

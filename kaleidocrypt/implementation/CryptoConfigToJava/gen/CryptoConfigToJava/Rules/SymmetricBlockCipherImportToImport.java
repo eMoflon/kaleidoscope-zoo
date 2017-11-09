@@ -46,7 +46,7 @@ public interface SymmetricBlockCipherImportToImport extends EObject, AbstractRul
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, Import imp, SymmetricBlockCipher alg);
+	boolean isAppropriate_FWD(Match match, SymmetricBlockCipher alg, Import imp);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,7 +70,7 @@ public interface SymmetricBlockCipherImportToImport extends EObject, AbstractRul
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, Import imp, SymmetricBlockCipher alg);
+	void registerObjectsToMatch_FWD(Match match, SymmetricBlockCipher alg, Import imp);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,7 +78,7 @@ public interface SymmetricBlockCipherImportToImport extends EObject, AbstractRul
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, Import imp, SymmetricBlockCipher alg);
+	CSP isAppropriate_solveCsp_FWD(Match match, SymmetricBlockCipher alg, Import imp);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -94,8 +94,8 @@ public interface SymmetricBlockCipherImportToImport extends EObject, AbstractRul
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, Import imp, SymmetricBlockCipher alg,
-			SymmetricBlockCipherToJcu ac, JavaCompilationUnit cu);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, SymmetricBlockCipher alg,
+			SymmetricBlockCipherToJcu ac, JavaCompilationUnit cu, Import imp);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -111,8 +111,8 @@ public interface SymmetricBlockCipherImportToImport extends EObject, AbstractRul
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject imp, EObject alg, EObject jimp, EObject i2j,
-			EObject ac, EObject cu);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject i2j, EObject alg, EObject jimp, EObject ac,
+			EObject cu, EObject imp);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -193,8 +193,8 @@ public interface SymmetricBlockCipherImportToImport extends EObject, AbstractRul
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_BWD(PerformRuleResult ruleresult, EObject imp, EObject alg, EObject jimp, EObject i2j,
-			EObject ac, EObject cu);
+	void registerObjects_BWD(PerformRuleResult ruleresult, EObject i2j, EObject alg, EObject jimp, EObject ac,
+			EObject cu, EObject imp);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -210,7 +210,7 @@ public interface SymmetricBlockCipherImportToImport extends EObject, AbstractRul
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_5(EMoflonEdge _edge_imports);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_3(EMoflonEdge _edge_imports);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -218,7 +218,7 @@ public interface SymmetricBlockCipherImportToImport extends EObject, AbstractRul
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_BWD_EMoflonEdge_5(EMoflonEdge _edge_imports);
+	EObjectContainer isAppropriate_BWD_EMoflonEdge_6(EMoflonEdge _edge_imports);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -250,7 +250,7 @@ public interface SymmetricBlockCipherImportToImport extends EObject, AbstractRul
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_CC(Import imp, SymmetricBlockCipher alg, JavaImport jimp, JavaCompilationUnit cu,
+	CSP isApplicable_solveCsp_CC(SymmetricBlockCipher alg, JavaImport jimp, JavaCompilationUnit cu, Import imp,
 			Match sourceMatch, Match targetMatch);
 
 	/**
@@ -267,7 +267,7 @@ public interface SymmetricBlockCipherImportToImport extends EObject, AbstractRul
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(Import imp, SymmetricBlockCipher alg);
+	boolean checkDEC_FWD(SymmetricBlockCipher alg, Import imp);
 
 	/**
 	 * <!-- begin-user-doc -->

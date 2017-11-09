@@ -15,8 +15,8 @@ import org.moflon.tgg.runtime.CorrespondenceModel;
 
 import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
 import com.kaleidoscope.core.framework.synchronisation.PersistentSynchroniser;
+import com.kaleidoscope.core.framework.synchronisation.SynchronisationFailedException;
 
-import CryptoAPIConfig.CryptoAPIConfigFactory;
 import CryptoAPIConfig.Task;
 import SimpleJava.JavaPackage;
 
@@ -91,38 +91,36 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 	
 	@Override
 	public Task getSourceModel(){
-		
-		if(getSrc() == null || getSrc() instanceof TempOutputContainer){
-			Task task = CryptoAPIConfigFactory.eINSTANCE.createTask();
-			Resource resource = getResourceSet().createResource(URI.createURI("source.model"));
-			resource.getContents().add(task);
-			setSrc(task);
-		}
+
 		return (Task)getSrc();
 	}
 	
 	@Override
 	public JavaPackage getTargetModel(){
-		if(getTrg() == null){
-			loadTriple(persistenceDirectory.resolve(corrModelFileName));
-		}
+	
 		return (JavaPackage)getTrg();
 	}
 	
 	@Override
-	public void syncForward(OperationalDelta javaBasedDelta){
-		 
+	public void syncForward(OperationalDelta javaBasedDelta)throws SynchronisationFailedException{
+		
 		Consumer<EObject> delta = (model) -> {javaBasedDelta.transformToOpaqueDelta().execute(model);};
 		
 		loadTriple(persistenceDirectory.resolve(corrModelFileName));
 		loadSynchronizationProtocol(persistenceDirectory.resolve(syncProtocolFileName).toString());
 		setChangeSrc(delta);
 		
-		integrateForward();			
+		integrateForward();		
+		
+		if(getSrc() == null || getTrg() == null ||
+				getSrc() instanceof TempOutputContainer || getTrg() instanceof TempOutputContainer){
+			
+			throw new SynchronisationFailedException("Unable to propagate change!");
+		}
 	 }
 	 
 	 @Override
-	 public void syncBackward(OperationalDelta javaBasedDelta){		 
+	 public void syncBackward(OperationalDelta javaBasedDelta)throws SynchronisationFailedException{		 
 		 
 		 Consumer<EObject> delta = (model) -> {javaBasedDelta.transformToOpaqueDelta().execute(model);};
 		
@@ -131,12 +129,17 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 		setChangeTrg(delta);
 			
 		integrateBackward();	
-						
+		
+		if(getSrc() == null || getTrg() == null ||
+				getSrc() instanceof TempOutputContainer || getTrg() instanceof TempOutputContainer){
+			
+			throw new SynchronisationFailedException("Unable to propagate change!");
+		}
 	}
 
 	@Override 
 	public OperationalDelta getFailedDelta() {
-		return null;
+		return new OperationalDelta();
 	}
 	
 	@Override
@@ -150,42 +153,47 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 		
 	}
 	@Override
-	public void initialize() {
+	public void initialize() throws SynchronisationFailedException{
 
-		if(isStatePersisted(persistenceDirectory))
+		if(isStatePersisted(persistenceDirectory)) {
 			return;
+		}
 				
 		if(initialTask != null) {
 			
-			set.getResources().add(initialTask.eResource());
-			setSrc(initialTask);
-			integrateForward();
+			transformSourceIntoTargetModel();
 			persistState(persistenceDirectory);
+			
 		}else if(initialJavaPackage != null) {
 			
-			Resource target = set.createResource(URI.createURI("target.java.package"));
-			target.getContents().add(initialJavaPackage);
-			setTrg(initialJavaPackage);
-			integrateBackward();
+			transformTargetIntoSourceModel();
 			persistState(persistenceDirectory);
 		}			
+		
 	}
-	/*
-	@Override
-	public void initialize() {
-		initialSourceModelPath.ifPresent((p) -> {
-			if(p.toFile().exists()) {
-			loadSrc(p.toString());			
-			integrateForward();	
-			}
-		});
+	
+	private void transformTargetIntoSourceModel()throws SynchronisationFailedException {
 		
+		Resource target = set.createResource(URI.createURI("target.java.package"));
+		target.getContents().add(initialJavaPackage);
+		setTrg(initialJavaPackage);
+		integrateBackward();
 		
-		initialSourceModelFile = initialSourceModelPath.
-		if(initialSourceModelPath.isPresent()) {
-			
+		if(getSrc() == null || getSrc() instanceof TempOutputContainer) {
+			throw new SynchronisationFailedException("Failed to initialize source and target models!");
 		}
+
+	}
+	private void transformSourceIntoTargetModel()throws SynchronisationFailedException {
 		
-	}*/
+		Resource source = set.createResource(URI.createURI("source.java.package"));
+		source.getContents().add(initialTask);
+		setSrc(initialTask);
+		integrateForward();
+		
+		if(getTrg() == null || getTrg() instanceof TempOutputContainer) {
+			throw new SynchronisationFailedException("Failed to initialize source and target models!");
+		}
+	}
 
 }

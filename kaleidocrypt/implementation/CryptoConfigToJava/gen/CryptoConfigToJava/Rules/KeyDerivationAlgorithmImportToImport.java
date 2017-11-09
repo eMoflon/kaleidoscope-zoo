@@ -46,7 +46,7 @@ public interface KeyDerivationAlgorithmImportToImport extends EObject, AbstractR
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, KeyDerivationAlgorithm alg, Import imp);
+	boolean isAppropriate_FWD(Match match, Import imp, KeyDerivationAlgorithm alg);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,7 +70,7 @@ public interface KeyDerivationAlgorithmImportToImport extends EObject, AbstractR
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, KeyDerivationAlgorithm alg, Import imp);
+	void registerObjectsToMatch_FWD(Match match, Import imp, KeyDerivationAlgorithm alg);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,7 +78,7 @@ public interface KeyDerivationAlgorithmImportToImport extends EObject, AbstractR
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, KeyDerivationAlgorithm alg, Import imp);
+	CSP isAppropriate_solveCsp_FWD(Match match, Import imp, KeyDerivationAlgorithm alg);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -94,8 +94,8 @@ public interface KeyDerivationAlgorithmImportToImport extends EObject, AbstractR
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, JavaCompilationUnit cu,
-			KeyDerivationAlgorithmToJcu ac, KeyDerivationAlgorithm alg, Import imp);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, KeyDerivationAlgorithmToJcu ac, Import imp,
+			KeyDerivationAlgorithm alg, JavaCompilationUnit cu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -111,8 +111,8 @@ public interface KeyDerivationAlgorithmImportToImport extends EObject, AbstractR
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject jimp, EObject cu, EObject ac, EObject alg,
-			EObject imp, EObject i2j);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject ac, EObject imp, EObject jimp, EObject alg,
+			EObject i2j, EObject cu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -176,8 +176,8 @@ public interface KeyDerivationAlgorithmImportToImport extends EObject, AbstractR
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaImport jimp, JavaCompilationUnit cu,
-			KeyDerivationAlgorithmToJcu ac, KeyDerivationAlgorithm alg);
+	CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, KeyDerivationAlgorithmToJcu ac, JavaImport jimp,
+			KeyDerivationAlgorithm alg, JavaCompilationUnit cu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -193,8 +193,8 @@ public interface KeyDerivationAlgorithmImportToImport extends EObject, AbstractR
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_BWD(PerformRuleResult ruleresult, EObject jimp, EObject cu, EObject ac, EObject alg,
-			EObject imp, EObject i2j);
+	void registerObjects_BWD(PerformRuleResult ruleresult, EObject ac, EObject imp, EObject jimp, EObject alg,
+			EObject i2j, EObject cu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -210,7 +210,7 @@ public interface KeyDerivationAlgorithmImportToImport extends EObject, AbstractR
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_7(EMoflonEdge _edge_imports);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_0(EMoflonEdge _edge_imports);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -218,7 +218,7 @@ public interface KeyDerivationAlgorithmImportToImport extends EObject, AbstractR
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_BWD_EMoflonEdge_8(EMoflonEdge _edge_imports);
+	EObjectContainer isAppropriate_BWD_EMoflonEdge_1(EMoflonEdge _edge_imports);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -250,7 +250,7 @@ public interface KeyDerivationAlgorithmImportToImport extends EObject, AbstractR
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_CC(JavaImport jimp, JavaCompilationUnit cu, KeyDerivationAlgorithm alg, Import imp,
+	CSP isApplicable_solveCsp_CC(Import imp, JavaImport jimp, KeyDerivationAlgorithm alg, JavaCompilationUnit cu,
 			Match sourceMatch, Match targetMatch);
 
 	/**
@@ -267,7 +267,7 @@ public interface KeyDerivationAlgorithmImportToImport extends EObject, AbstractR
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(KeyDerivationAlgorithm alg, Import imp);
+	boolean checkDEC_FWD(Import imp, KeyDerivationAlgorithm alg);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -292,8 +292,8 @@ public interface KeyDerivationAlgorithmImportToImport extends EObject, AbstractR
 	 * @model
 	 * @generated
 	 */
-	CSP generateModel_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaCompilationUnit cu,
-			KeyDerivationAlgorithmToJcu ac, KeyDerivationAlgorithm alg, ModelgeneratorRuleResult ruleResult);
+	CSP generateModel_solveCsp_BWD(IsApplicableMatch isApplicableMatch, KeyDerivationAlgorithmToJcu ac,
+			KeyDerivationAlgorithm alg, JavaCompilationUnit cu, ModelgeneratorRuleResult ruleResult);
 
 	/**
 	 * <!-- begin-user-doc -->

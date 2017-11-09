@@ -68,56 +68,11 @@ public class CryptoConfigToJavaSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-		case CryptoConfigToJavaPackage.KEY_DERIVATION_ALGORITHM_TO_JCU: {
-			KeyDerivationAlgorithmToJcu keyDerivationAlgorithmToJcu = (KeyDerivationAlgorithmToJcu) theEObject;
-			T result = caseKeyDerivationAlgorithmToJcu(keyDerivationAlgorithmToJcu);
-			if (result == null)
-				result = caseAbstractCorrespondence(keyDerivationAlgorithmToJcu);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case CryptoConfigToJavaPackage.ALGORITHM_TO_JAVA_COMPILATION_UNIT: {
-			AlgorithmToJavaCompilationUnit algorithmToJavaCompilationUnit = (AlgorithmToJavaCompilationUnit) theEObject;
-			T result = caseAlgorithmToJavaCompilationUnit(algorithmToJavaCompilationUnit);
-			if (result == null)
-				result = caseAbstractCorrespondence(algorithmToJavaCompilationUnit);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case CryptoConfigToJavaPackage.TASK_TO_JAVA_PACKAGE: {
-			TaskToJavaPackage taskToJavaPackage = (TaskToJavaPackage) theEObject;
-			T result = caseTaskToJavaPackage(taskToJavaPackage);
-			if (result == null)
-				result = caseAbstractCorrespondence(taskToJavaPackage);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case CryptoConfigToJavaPackage.ALGORITHM_TO_JCU: {
 			AlgorithmToJcu algorithmToJcu = (AlgorithmToJcu) theEObject;
 			T result = caseAlgorithmToJcu(algorithmToJcu);
 			if (result == null)
 				result = caseAbstractCorrespondence(algorithmToJcu);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case CryptoConfigToJavaPackage.SYMMETRIC_BLOCK_CIPHER_TO_METHOD: {
-			SymmetricBlockCipherToMethod symmetricBlockCipherToMethod = (SymmetricBlockCipherToMethod) theEObject;
-			T result = caseSymmetricBlockCipherToMethod(symmetricBlockCipherToMethod);
-			if (result == null)
-				result = caseAbstractCorrespondence(symmetricBlockCipherToMethod);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case CryptoConfigToJavaPackage.IMPORT_TO_IMPORT: {
-			ImportToImport importToImport = (ImportToImport) theEObject;
-			T result = caseImportToImport(importToImport);
-			if (result == null)
-				result = caseAbstractCorrespondence(importToImport);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -131,11 +86,29 @@ public class CryptoConfigToJavaSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case CryptoConfigToJavaPackage.KEY_DERIVATION_ALGORITHM_TO_METHOD: {
-			KeyDerivationAlgorithmToMethod keyDerivationAlgorithmToMethod = (KeyDerivationAlgorithmToMethod) theEObject;
-			T result = caseKeyDerivationAlgorithmToMethod(keyDerivationAlgorithmToMethod);
+		case CryptoConfigToJavaPackage.KEY_DERIVATION_ALGORITHM_TO_JCU: {
+			KeyDerivationAlgorithmToJcu keyDerivationAlgorithmToJcu = (KeyDerivationAlgorithmToJcu) theEObject;
+			T result = caseKeyDerivationAlgorithmToJcu(keyDerivationAlgorithmToJcu);
 			if (result == null)
-				result = caseAbstractCorrespondence(keyDerivationAlgorithmToMethod);
+				result = caseAbstractCorrespondence(keyDerivationAlgorithmToJcu);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CryptoConfigToJavaPackage.IMPORT_TO_IMPORT: {
+			ImportToImport importToImport = (ImportToImport) theEObject;
+			T result = caseImportToImport(importToImport);
+			if (result == null)
+				result = caseAbstractCorrespondence(importToImport);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CryptoConfigToJavaPackage.TASK_TO_JAVA_PACKAGE: {
+			TaskToJavaPackage taskToJavaPackage = (TaskToJavaPackage) theEObject;
+			T result = caseTaskToJavaPackage(taskToJavaPackage);
+			if (result == null)
+				result = caseAbstractCorrespondence(taskToJavaPackage);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -149,54 +122,36 @@ public class CryptoConfigToJavaSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case CryptoConfigToJavaPackage.KEY_DERIVATION_ALGORITHM_TO_METHOD: {
+			KeyDerivationAlgorithmToMethod keyDerivationAlgorithmToMethod = (KeyDerivationAlgorithmToMethod) theEObject;
+			T result = caseKeyDerivationAlgorithmToMethod(keyDerivationAlgorithmToMethod);
+			if (result == null)
+				result = caseAbstractCorrespondence(keyDerivationAlgorithmToMethod);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CryptoConfigToJavaPackage.ALGORITHM_TO_JAVA_COMPILATION_UNIT: {
+			AlgorithmToJavaCompilationUnit algorithmToJavaCompilationUnit = (AlgorithmToJavaCompilationUnit) theEObject;
+			T result = caseAlgorithmToJavaCompilationUnit(algorithmToJavaCompilationUnit);
+			if (result == null)
+				result = caseAbstractCorrespondence(algorithmToJavaCompilationUnit);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CryptoConfigToJavaPackage.SYMMETRIC_BLOCK_CIPHER_TO_METHOD: {
+			SymmetricBlockCipherToMethod symmetricBlockCipherToMethod = (SymmetricBlockCipherToMethod) theEObject;
+			T result = caseSymmetricBlockCipherToMethod(symmetricBlockCipherToMethod);
+			if (result == null)
+				result = caseAbstractCorrespondence(symmetricBlockCipherToMethod);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Key Derivation Algorithm To Jcu</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Key Derivation Algorithm To Jcu</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseKeyDerivationAlgorithmToJcu(KeyDerivationAlgorithmToJcu object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Algorithm To Java Compilation Unit</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Algorithm To Java Compilation Unit</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAlgorithmToJavaCompilationUnit(AlgorithmToJavaCompilationUnit object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Task To Java Package</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Task To Java Package</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTaskToJavaPackage(TaskToJavaPackage object) {
-		return null;
 	}
 
 	/**
@@ -211,36 +166,6 @@ public class CryptoConfigToJavaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAlgorithmToJcu(AlgorithmToJcu object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Symmetric Block Cipher To Method</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symmetric Block Cipher To Method</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSymmetricBlockCipherToMethod(SymmetricBlockCipherToMethod object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Import To Import</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Import To Import</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseImportToImport(ImportToImport object) {
 		return null;
 	}
 
@@ -260,17 +185,47 @@ public class CryptoConfigToJavaSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Key Derivation Algorithm To Method</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Key Derivation Algorithm To Jcu</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Key Derivation Algorithm To Method</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Key Derivation Algorithm To Jcu</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseKeyDerivationAlgorithmToMethod(KeyDerivationAlgorithmToMethod object) {
+	public T caseKeyDerivationAlgorithmToJcu(KeyDerivationAlgorithmToJcu object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Import To Import</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Import To Import</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImportToImport(ImportToImport object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Task To Java Package</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Task To Java Package</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTaskToJavaPackage(TaskToJavaPackage object) {
 		return null;
 	}
 
@@ -286,6 +241,51 @@ public class CryptoConfigToJavaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSymmetricBlockCipherToJcu(SymmetricBlockCipherToJcu object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Key Derivation Algorithm To Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Key Derivation Algorithm To Method</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseKeyDerivationAlgorithmToMethod(KeyDerivationAlgorithmToMethod object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Algorithm To Java Compilation Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Algorithm To Java Compilation Unit</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAlgorithmToJavaCompilationUnit(AlgorithmToJavaCompilationUnit object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Symmetric Block Cipher To Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Symmetric Block Cipher To Method</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSymmetricBlockCipherToMethod(SymmetricBlockCipherToMethod object) {
 		return null;
 	}
 

@@ -204,46 +204,46 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isAppropriate_BWD(Match match, JavaVariableDeclaration var, JavaWorkflowMethod jcu) {
+	public boolean isAppropriate_BWD(Match match, JavaWorkflowMethod jcu, JavaVariableDeclaration var) {
 
 		Object[] result1_black = IgnoreParameterRuleImpl.pattern_IgnoreParameterRule_7_1_initialbindings_blackBBBB(this,
-				match, var, jcu);
+				match, jcu, var);
 		if (result1_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[match] = " + match + ", " + "[var] = " + var + ", " + "[jcu] = " + jcu + ".");
+					+ "[match] = " + match + ", " + "[jcu] = " + jcu + ", " + "[var] = " + var + ".");
 		}
 
 		Object[] result2_bindingAndBlack = IgnoreParameterRuleImpl
-				.pattern_IgnoreParameterRule_7_2_SolveCSP_bindingAndBlackFBBBB(this, match, var, jcu);
+				.pattern_IgnoreParameterRule_7_2_SolveCSP_bindingAndBlackFBBBB(this, match, jcu, var);
 		if (result2_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[match] = " + match + ", " + "[var] = " + var + ", " + "[jcu] = " + jcu + ".");
+					+ "[match] = " + match + ", " + "[jcu] = " + jcu + ", " + "[var] = " + var + ".");
 		}
 		CSP csp = (CSP) result2_bindingAndBlack[0];
 		// 
 		if (IgnoreParameterRuleImpl.pattern_IgnoreParameterRule_7_3_CheckCSP_expressionFBB(this, csp)) {
 
 			Object[] result4_black = IgnoreParameterRuleImpl
-					.pattern_IgnoreParameterRule_7_4_collectelementstobetranslated_blackBBB(match, var, jcu);
+					.pattern_IgnoreParameterRule_7_4_collectelementstobetranslated_blackBBB(match, jcu, var);
 			if (result4_black == null) {
 				throw new RuntimeException("Pattern matching failed." + " Variables: " + "[match] = " + match + ", "
-						+ "[var] = " + var + ", " + "[jcu] = " + jcu + ".");
+						+ "[jcu] = " + jcu + ", " + "[var] = " + var + ".");
 			}
-			IgnoreParameterRuleImpl.pattern_IgnoreParameterRule_7_4_collectelementstobetranslated_greenBBBF(match, var,
-					jcu);
+			IgnoreParameterRuleImpl.pattern_IgnoreParameterRule_7_4_collectelementstobetranslated_greenBBBF(match, jcu,
+					var);
 			//nothing EMoflonEdge jcu__var____params = (EMoflonEdge) result4_green[3];
 
 			Object[] result5_black = IgnoreParameterRuleImpl
-					.pattern_IgnoreParameterRule_7_5_collectcontextelements_blackBBB(match, var, jcu);
+					.pattern_IgnoreParameterRule_7_5_collectcontextelements_blackBBB(match, jcu, var);
 			if (result5_black == null) {
 				throw new RuntimeException("Pattern matching failed." + " Variables: " + "[match] = " + match + ", "
-						+ "[var] = " + var + ", " + "[jcu] = " + jcu + ".");
+						+ "[jcu] = " + jcu + ", " + "[var] = " + var + ".");
 			}
 			IgnoreParameterRuleImpl.pattern_IgnoreParameterRule_7_5_collectcontextelements_greenBB(match, jcu);
 
 			// 
 			IgnoreParameterRuleImpl.pattern_IgnoreParameterRule_7_6_registerobjectstomatch_expressionBBBB(this, match,
-					var, jcu);
+					jcu, var);
 			return IgnoreParameterRuleImpl.pattern_IgnoreParameterRule_7_7_expressionF();
 		} else {
 			return IgnoreParameterRuleImpl.pattern_IgnoreParameterRule_7_8_expressionF();
@@ -264,8 +264,8 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
 					+ "[isApplicableMatch] = " + isApplicableMatch + ".");
 		}
-		JavaVariableDeclaration var = (JavaVariableDeclaration) result1_bindingAndBlack[0];
-		JavaWorkflowMethod jcu = (JavaWorkflowMethod) result1_bindingAndBlack[1];
+		JavaWorkflowMethod jcu = (JavaWorkflowMethod) result1_bindingAndBlack[0];
+		JavaVariableDeclaration var = (JavaVariableDeclaration) result1_bindingAndBlack[1];
 		//nothing CSP csp = (CSP) result1_bindingAndBlack[2];
 
 		Object[] result2_black = IgnoreParameterRuleImpl
@@ -278,18 +278,18 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		Object[] result3_black = IgnoreParameterRuleImpl
-				.pattern_IgnoreParameterRule_8_3_bookkeepingforedges_blackBBB(ruleresult, var, jcu);
+				.pattern_IgnoreParameterRule_8_3_bookkeepingforedges_blackBBB(ruleresult, jcu, var);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[ruleresult] = " + ruleresult
-					+ ", " + "[var] = " + var + ", " + "[jcu] = " + jcu + ".");
+					+ ", " + "[jcu] = " + jcu + ", " + "[var] = " + var + ".");
 		}
-		IgnoreParameterRuleImpl.pattern_IgnoreParameterRule_8_3_bookkeepingforedges_greenBBBF(ruleresult, var, jcu);
+		IgnoreParameterRuleImpl.pattern_IgnoreParameterRule_8_3_bookkeepingforedges_greenBBBF(ruleresult, jcu, var);
 		//nothing EMoflonEdge jcu__var____params = (EMoflonEdge) result3_green[3];
 
 		// 
 		// 
-		IgnoreParameterRuleImpl.pattern_IgnoreParameterRule_8_5_registerobjects_expressionBBBB(this, ruleresult, var,
-				jcu);
+		IgnoreParameterRuleImpl.pattern_IgnoreParameterRule_8_5_registerobjects_expressionBBBB(this, ruleresult, jcu,
+				var);
 		return IgnoreParameterRuleImpl.pattern_IgnoreParameterRule_8_6_expressionFB(ruleresult);
 	}
 
@@ -317,25 +317,25 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 			throw new RuntimeException(
 					"Binding in node core match failed." + " Variables: " + "[match] = " + match + ".");
 		}
-		JavaVariableDeclaration var = (JavaVariableDeclaration) result2_binding[0];
-		JavaWorkflowMethod jcu = (JavaWorkflowMethod) result2_binding[1];
-		for (Object[] result2_black : IgnoreParameterRuleImpl.pattern_IgnoreParameterRule_9_2_corematch_blackBBB(var,
-				jcu, match)) {
+		JavaWorkflowMethod jcu = (JavaWorkflowMethod) result2_binding[0];
+		JavaVariableDeclaration var = (JavaVariableDeclaration) result2_binding[1];
+		for (Object[] result2_black : IgnoreParameterRuleImpl.pattern_IgnoreParameterRule_9_2_corematch_blackBBB(jcu,
+				var, match)) {
 			// ForEach 
 			for (Object[] result3_black : IgnoreParameterRuleImpl
-					.pattern_IgnoreParameterRule_9_3_findcontext_blackBB(var, jcu)) {
+					.pattern_IgnoreParameterRule_9_3_findcontext_blackBB(jcu, var)) {
 				Object[] result3_green = IgnoreParameterRuleImpl
-						.pattern_IgnoreParameterRule_9_3_findcontext_greenBBFF(var, jcu);
+						.pattern_IgnoreParameterRule_9_3_findcontext_greenBBFF(jcu, var);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[2];
 				//nothing EMoflonEdge jcu__var____params = (EMoflonEdge) result3_green[3];
 
 				Object[] result4_bindingAndBlack = IgnoreParameterRuleImpl
-						.pattern_IgnoreParameterRule_9_4_solveCSP_bindingAndBlackFBBBB(this, isApplicableMatch, var,
-								jcu);
+						.pattern_IgnoreParameterRule_9_4_solveCSP_bindingAndBlackFBBBB(this, isApplicableMatch, jcu,
+								var);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-							+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[var] = " + var + ", " + "[jcu] = "
-							+ jcu + ".");
+							+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[jcu] = " + jcu + ", " + "[var] = "
+							+ var + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// 
@@ -365,9 +365,9 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjectsToMatch_BWD(Match match, JavaVariableDeclaration var, JavaWorkflowMethod jcu) {
-		match.registerObject("var", var);
+	public void registerObjectsToMatch_BWD(Match match, JavaWorkflowMethod jcu, JavaVariableDeclaration var) {
 		match.registerObject("jcu", jcu);
+		match.registerObject("var", var);
 
 	}
 
@@ -376,7 +376,7 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isAppropriate_solveCsp_BWD(Match match, JavaVariableDeclaration var, JavaWorkflowMethod jcu) {// Create CSP
+	public CSP isAppropriate_solveCsp_BWD(Match match, JavaWorkflowMethod jcu, JavaVariableDeclaration var) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
 		// Create literals
@@ -405,8 +405,8 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaVariableDeclaration var,
-			JavaWorkflowMethod jcu) {// Create CSP
+	public CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaWorkflowMethod jcu,
+			JavaVariableDeclaration var) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -421,8 +421,8 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 		// Solve CSP
 
 		// Snapshot pattern match on which CSP is solved
-		isApplicableMatch.registerObject("var", var);
 		isApplicableMatch.registerObject("jcu", jcu);
+		isApplicableMatch.registerObject("var", var);
 		return csp;
 	}
 
@@ -440,9 +440,9 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_BWD(PerformRuleResult ruleresult, EObject var, EObject jcu) {
-		ruleresult.registerObject("var", var);
+	public void registerObjects_BWD(PerformRuleResult ruleresult, EObject jcu, EObject var) {
 		ruleresult.registerObject("jcu", jcu);
+		ruleresult.registerObject("var", var);
 
 	}
 
@@ -461,7 +461,7 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_BWD_EMoflonEdge_11(EMoflonEdge _edge_params) {
+	public EObjectContainer isAppropriate_BWD_EMoflonEdge_2(EMoflonEdge _edge_params) {
 
 		Object[] result1_bindingAndBlack = IgnoreParameterRuleImpl
 				.pattern_IgnoreParameterRule_17_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -477,8 +477,8 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 		// ForEach 
 		for (Object[] result2_black : IgnoreParameterRuleImpl
 				.pattern_IgnoreParameterRule_17_2_testcorematchandDECs_blackFFB(_edge_params)) {
-			JavaVariableDeclaration var = (JavaVariableDeclaration) result2_black[0];
-			JavaWorkflowMethod jcu = (JavaWorkflowMethod) result2_black[1];
+			JavaWorkflowMethod jcu = (JavaWorkflowMethod) result2_black[0];
+			JavaVariableDeclaration var = (JavaVariableDeclaration) result2_black[1];
 			Object[] result2_green = IgnoreParameterRuleImpl
 					.pattern_IgnoreParameterRule_17_2_testcorematchandDECs_greenFB(__eClass);
 			Match match = (Match) result2_green[0];
@@ -486,7 +486,7 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 			// 
 			if (IgnoreParameterRuleImpl
 					.pattern_IgnoreParameterRule_17_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBB(this,
-							match, var, jcu)) {
+							match, jcu, var)) {
 				// 
 				if (IgnoreParameterRuleImpl
 						.pattern_IgnoreParameterRule_17_4_Ensurethatthecorrecttypesofelementsarematched_expressionFBB(
@@ -593,15 +593,15 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[sourceMatch] = " + sourceMatch
 					+ ", " + "[targetMatch] = " + targetMatch + ".");
 		}
-		JavaVariableDeclaration var = (JavaVariableDeclaration) result2_bindingAndBlack[0];
-		JavaWorkflowMethod jcu = (JavaWorkflowMethod) result2_bindingAndBlack[1];
+		JavaWorkflowMethod jcu = (JavaWorkflowMethod) result2_bindingAndBlack[0];
+		JavaVariableDeclaration var = (JavaVariableDeclaration) result2_bindingAndBlack[1];
 
 		Object[] result3_bindingAndBlack = IgnoreParameterRuleImpl
-				.pattern_IgnoreParameterRule_20_3_solvecsp_bindingAndBlackFBBBBB(this, var, jcu, sourceMatch,
+				.pattern_IgnoreParameterRule_20_3_solvecsp_bindingAndBlackFBBBBB(this, jcu, var, sourceMatch,
 						targetMatch);
 		if (result3_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[var] = " + var + ", " + "[jcu] = " + jcu + ", " + "[sourceMatch] = " + sourceMatch + ", "
+					+ "[jcu] = " + jcu + ", " + "[var] = " + var + ", " + "[sourceMatch] = " + sourceMatch + ", "
 					+ "[targetMatch] = " + targetMatch + ".");
 		}
 		CSP csp = (CSP) result3_bindingAndBlack[0];
@@ -615,10 +615,10 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 				CCMatch ccMatch = (CCMatch) result5_green[2];
 
 				Object[] result6_black = IgnoreParameterRuleImpl
-						.pattern_IgnoreParameterRule_20_6_createcorrespondence_blackBBB(var, jcu, ccMatch);
+						.pattern_IgnoreParameterRule_20_6_createcorrespondence_blackBBB(jcu, var, ccMatch);
 				if (result6_black == null) {
-					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[var] = " + var + ", "
-							+ "[jcu] = " + jcu + ", " + "[ccMatch] = " + ccMatch + ".");
+					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[jcu] = " + jcu + ", "
+							+ "[var] = " + var + ", " + "[ccMatch] = " + ccMatch + ".");
 				}
 
 				Object[] result7_black = IgnoreParameterRuleImpl
@@ -641,7 +641,7 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_CC(JavaVariableDeclaration var, JavaWorkflowMethod jcu, Match sourceMatch,
+	public CSP isApplicable_solveCsp_CC(JavaWorkflowMethod jcu, JavaVariableDeclaration var, Match sourceMatch,
 			Match targetMatch) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
@@ -681,9 +681,9 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean checkDEC_BWD(JavaVariableDeclaration var, JavaWorkflowMethod jcu) {// 
-		Object[] result1_black = IgnoreParameterRuleImpl.pattern_IgnoreParameterRule_24_1_matchtggpattern_blackBB(var,
-				jcu);
+	public boolean checkDEC_BWD(JavaWorkflowMethod jcu, JavaVariableDeclaration var) {// 
+		Object[] result1_black = IgnoreParameterRuleImpl.pattern_IgnoreParameterRule_24_1_matchtggpattern_blackBB(jcu,
+				var);
 		if (result1_black != null) {
 			return IgnoreParameterRuleImpl.pattern_IgnoreParameterRule_24_2_expressionF();
 		} else {
@@ -735,8 +735,8 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 						throw new RuntimeException("Pattern matching failed." + " Variables: " + "[jcu] = " + jcu + ", "
 								+ "[ruleResult] = " + ruleResult + ".");
 					}
-					IgnoreParameterRuleImpl.pattern_IgnoreParameterRule_25_6_perform_greenFBB(jcu, ruleResult);
-					//nothing JavaVariableDeclaration var = (JavaVariableDeclaration) result6_green[0];
+					IgnoreParameterRuleImpl.pattern_IgnoreParameterRule_25_6_perform_greenBFB(jcu, ruleResult);
+					//nothing JavaVariableDeclaration var = (JavaVariableDeclaration) result6_green[1];
 
 				} else {
 				}
@@ -805,25 +805,25 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 			return isAppropriate_checkCsp_FWD((CSP) arguments.get(0));
 		case RulesPackage.IGNORE_PARAMETER_RULE___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.IGNORE_PARAMETER_RULE___IS_APPROPRIATE_BWD__MATCH_JAVAVARIABLEDECLARATION_JAVAWORKFLOWMETHOD:
-			return isAppropriate_BWD((Match) arguments.get(0), (JavaVariableDeclaration) arguments.get(1),
-					(JavaWorkflowMethod) arguments.get(2));
+		case RulesPackage.IGNORE_PARAMETER_RULE___IS_APPROPRIATE_BWD__MATCH_JAVAWORKFLOWMETHOD_JAVAVARIABLEDECLARATION:
+			return isAppropriate_BWD((Match) arguments.get(0), (JavaWorkflowMethod) arguments.get(1),
+					(JavaVariableDeclaration) arguments.get(2));
 		case RulesPackage.IGNORE_PARAMETER_RULE___PERFORM_BWD__ISAPPLICABLEMATCH:
 			return perform_BWD((IsApplicableMatch) arguments.get(0));
 		case RulesPackage.IGNORE_PARAMETER_RULE___IS_APPLICABLE_BWD__MATCH:
 			return isApplicable_BWD((Match) arguments.get(0));
-		case RulesPackage.IGNORE_PARAMETER_RULE___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_JAVAVARIABLEDECLARATION_JAVAWORKFLOWMETHOD:
-			registerObjectsToMatch_BWD((Match) arguments.get(0), (JavaVariableDeclaration) arguments.get(1),
-					(JavaWorkflowMethod) arguments.get(2));
+		case RulesPackage.IGNORE_PARAMETER_RULE___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_JAVAWORKFLOWMETHOD_JAVAVARIABLEDECLARATION:
+			registerObjectsToMatch_BWD((Match) arguments.get(0), (JavaWorkflowMethod) arguments.get(1),
+					(JavaVariableDeclaration) arguments.get(2));
 			return null;
-		case RulesPackage.IGNORE_PARAMETER_RULE___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_JAVAVARIABLEDECLARATION_JAVAWORKFLOWMETHOD:
-			return isAppropriate_solveCsp_BWD((Match) arguments.get(0), (JavaVariableDeclaration) arguments.get(1),
-					(JavaWorkflowMethod) arguments.get(2));
+		case RulesPackage.IGNORE_PARAMETER_RULE___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_JAVAWORKFLOWMETHOD_JAVAVARIABLEDECLARATION:
+			return isAppropriate_solveCsp_BWD((Match) arguments.get(0), (JavaWorkflowMethod) arguments.get(1),
+					(JavaVariableDeclaration) arguments.get(2));
 		case RulesPackage.IGNORE_PARAMETER_RULE___IS_APPROPRIATE_CHECK_CSP_BWD__CSP:
 			return isAppropriate_checkCsp_BWD((CSP) arguments.get(0));
-		case RulesPackage.IGNORE_PARAMETER_RULE___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVAVARIABLEDECLARATION_JAVAWORKFLOWMETHOD:
+		case RulesPackage.IGNORE_PARAMETER_RULE___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVAWORKFLOWMETHOD_JAVAVARIABLEDECLARATION:
 			return isApplicable_solveCsp_BWD((IsApplicableMatch) arguments.get(0),
-					(JavaVariableDeclaration) arguments.get(1), (JavaWorkflowMethod) arguments.get(2));
+					(JavaWorkflowMethod) arguments.get(1), (JavaVariableDeclaration) arguments.get(2));
 		case RulesPackage.IGNORE_PARAMETER_RULE___IS_APPLICABLE_CHECK_CSP_BWD__CSP:
 			return isApplicable_checkCsp_BWD((CSP) arguments.get(0));
 		case RulesPackage.IGNORE_PARAMETER_RULE___REGISTER_OBJECTS_BWD__PERFORMRULERESULT_EOBJECT_EOBJECT:
@@ -832,23 +832,23 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 			return null;
 		case RulesPackage.IGNORE_PARAMETER_RULE___CHECK_TYPES_BWD__MATCH:
 			return checkTypes_BWD((Match) arguments.get(0));
-		case RulesPackage.IGNORE_PARAMETER_RULE___IS_APPROPRIATE_BWD_EMOFLON_EDGE_11__EMOFLONEDGE:
-			return isAppropriate_BWD_EMoflonEdge_11((EMoflonEdge) arguments.get(0));
+		case RulesPackage.IGNORE_PARAMETER_RULE___IS_APPROPRIATE_BWD_EMOFLON_EDGE_2__EMOFLONEDGE:
+			return isAppropriate_BWD_EMoflonEdge_2((EMoflonEdge) arguments.get(0));
 		case RulesPackage.IGNORE_PARAMETER_RULE___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.IGNORE_PARAMETER_RULE___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH:
 			return checkAttributes_BWD((TripleMatch) arguments.get(0));
 		case RulesPackage.IGNORE_PARAMETER_RULE___IS_APPLICABLE_CC__MATCH_MATCH:
 			return isApplicable_CC((Match) arguments.get(0), (Match) arguments.get(1));
-		case RulesPackage.IGNORE_PARAMETER_RULE___IS_APPLICABLE_SOLVE_CSP_CC__JAVAVARIABLEDECLARATION_JAVAWORKFLOWMETHOD_MATCH_MATCH:
-			return isApplicable_solveCsp_CC((JavaVariableDeclaration) arguments.get(0),
-					(JavaWorkflowMethod) arguments.get(1), (Match) arguments.get(2), (Match) arguments.get(3));
+		case RulesPackage.IGNORE_PARAMETER_RULE___IS_APPLICABLE_SOLVE_CSP_CC__JAVAWORKFLOWMETHOD_JAVAVARIABLEDECLARATION_MATCH_MATCH:
+			return isApplicable_solveCsp_CC((JavaWorkflowMethod) arguments.get(0),
+					(JavaVariableDeclaration) arguments.get(1), (Match) arguments.get(2), (Match) arguments.get(3));
 		case RulesPackage.IGNORE_PARAMETER_RULE___IS_APPLICABLE_CHECK_CSP_CC__CSP:
 			return isApplicable_checkCsp_CC((CSP) arguments.get(0));
 		case RulesPackage.IGNORE_PARAMETER_RULE___CHECK_DEC_FWD:
 			return checkDEC_FWD();
-		case RulesPackage.IGNORE_PARAMETER_RULE___CHECK_DEC_BWD__JAVAVARIABLEDECLARATION_JAVAWORKFLOWMETHOD:
-			return checkDEC_BWD((JavaVariableDeclaration) arguments.get(0), (JavaWorkflowMethod) arguments.get(1));
+		case RulesPackage.IGNORE_PARAMETER_RULE___CHECK_DEC_BWD__JAVAWORKFLOWMETHOD_JAVAVARIABLEDECLARATION:
+			return checkDEC_BWD((JavaWorkflowMethod) arguments.get(0), (JavaVariableDeclaration) arguments.get(1));
 		case RulesPackage.IGNORE_PARAMETER_RULE___GENERATE_MODEL__RULEENTRYCONTAINER_JAVAWORKFLOWMETHOD:
 			return generateModel((RuleEntryContainer) arguments.get(0), (JavaWorkflowMethod) arguments.get(1));
 		case RulesPackage.IGNORE_PARAMETER_RULE___GENERATE_MODEL_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_JAVAWORKFLOWMETHOD_MODELGENERATORRULERESULT:
@@ -928,16 +928,16 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 	}
 
 	public static final Object[] pattern_IgnoreParameterRule_7_1_initialbindings_blackBBBB(IgnoreParameterRule _this,
-			Match match, JavaVariableDeclaration var, JavaWorkflowMethod jcu) {
-		return new Object[] { _this, match, var, jcu };
+			Match match, JavaWorkflowMethod jcu, JavaVariableDeclaration var) {
+		return new Object[] { _this, match, jcu, var };
 	}
 
 	public static final Object[] pattern_IgnoreParameterRule_7_2_SolveCSP_bindingFBBBB(IgnoreParameterRule _this,
-			Match match, JavaVariableDeclaration var, JavaWorkflowMethod jcu) {
-		CSP _localVariable_0 = _this.isAppropriate_solveCsp_BWD(match, var, jcu);
+			Match match, JavaWorkflowMethod jcu, JavaVariableDeclaration var) {
+		CSP _localVariable_0 = _this.isAppropriate_solveCsp_BWD(match, jcu, var);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, match, var, jcu };
+			return new Object[] { csp, _this, match, jcu, var };
 		}
 		return null;
 	}
@@ -947,9 +947,9 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 	}
 
 	public static final Object[] pattern_IgnoreParameterRule_7_2_SolveCSP_bindingAndBlackFBBBB(
-			IgnoreParameterRule _this, Match match, JavaVariableDeclaration var, JavaWorkflowMethod jcu) {
+			IgnoreParameterRule _this, Match match, JavaWorkflowMethod jcu, JavaVariableDeclaration var) {
 		Object[] result_pattern_IgnoreParameterRule_7_2_SolveCSP_binding = pattern_IgnoreParameterRule_7_2_SolveCSP_bindingFBBBB(
-				_this, match, var, jcu);
+				_this, match, jcu, var);
 		if (result_pattern_IgnoreParameterRule_7_2_SolveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_IgnoreParameterRule_7_2_SolveCSP_binding[0];
 
@@ -957,7 +957,7 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 					csp);
 			if (result_pattern_IgnoreParameterRule_7_2_SolveCSP_black != null) {
 
-				return new Object[] { csp, _this, match, var, jcu };
+				return new Object[] { csp, _this, match, jcu, var };
 			}
 		}
 		return null;
@@ -971,12 +971,12 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 	}
 
 	public static final Object[] pattern_IgnoreParameterRule_7_4_collectelementstobetranslated_blackBBB(Match match,
-			JavaVariableDeclaration var, JavaWorkflowMethod jcu) {
-		return new Object[] { match, var, jcu };
+			JavaWorkflowMethod jcu, JavaVariableDeclaration var) {
+		return new Object[] { match, jcu, var };
 	}
 
 	public static final Object[] pattern_IgnoreParameterRule_7_4_collectelementstobetranslated_greenBBBF(Match match,
-			JavaVariableDeclaration var, JavaWorkflowMethod jcu) {
+			JavaWorkflowMethod jcu, JavaVariableDeclaration var) {
 		EMoflonEdge jcu__var____params = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		match.getToBeTranslatedNodes().add(var);
 		String jcu__var____params_name_prime = "params";
@@ -984,12 +984,12 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 		jcu__var____params.setTrg(var);
 		match.getToBeTranslatedEdges().add(jcu__var____params);
 		jcu__var____params.setName(jcu__var____params_name_prime);
-		return new Object[] { match, var, jcu, jcu__var____params };
+		return new Object[] { match, jcu, var, jcu__var____params };
 	}
 
 	public static final Object[] pattern_IgnoreParameterRule_7_5_collectcontextelements_blackBBB(Match match,
-			JavaVariableDeclaration var, JavaWorkflowMethod jcu) {
-		return new Object[] { match, var, jcu };
+			JavaWorkflowMethod jcu, JavaVariableDeclaration var) {
+		return new Object[] { match, jcu, var };
 	}
 
 	public static final Object[] pattern_IgnoreParameterRule_7_5_collectcontextelements_greenBB(Match match,
@@ -999,8 +999,8 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 	}
 
 	public static final void pattern_IgnoreParameterRule_7_6_registerobjectstomatch_expressionBBBB(
-			IgnoreParameterRule _this, Match match, JavaVariableDeclaration var, JavaWorkflowMethod jcu) {
-		_this.registerObjectsToMatch_BWD(match, var, jcu);
+			IgnoreParameterRule _this, Match match, JavaWorkflowMethod jcu, JavaVariableDeclaration var) {
+		_this.registerObjectsToMatch_BWD(match, jcu, var);
 
 	}
 
@@ -1016,27 +1016,27 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 
 	public static final Object[] pattern_IgnoreParameterRule_8_1_performtransformation_bindingFFB(
 			IsApplicableMatch isApplicableMatch) {
-		EObject _localVariable_0 = isApplicableMatch.getObject("var");
-		EObject _localVariable_1 = isApplicableMatch.getObject("jcu");
-		EObject tmpVar = _localVariable_0;
-		EObject tmpJcu = _localVariable_1;
-		if (tmpVar instanceof JavaVariableDeclaration) {
-			JavaVariableDeclaration var = (JavaVariableDeclaration) tmpVar;
-			if (tmpJcu instanceof JavaWorkflowMethod) {
-				JavaWorkflowMethod jcu = (JavaWorkflowMethod) tmpJcu;
-				return new Object[] { var, jcu, isApplicableMatch };
+		EObject _localVariable_0 = isApplicableMatch.getObject("jcu");
+		EObject _localVariable_1 = isApplicableMatch.getObject("var");
+		EObject tmpJcu = _localVariable_0;
+		EObject tmpVar = _localVariable_1;
+		if (tmpJcu instanceof JavaWorkflowMethod) {
+			JavaWorkflowMethod jcu = (JavaWorkflowMethod) tmpJcu;
+			if (tmpVar instanceof JavaVariableDeclaration) {
+				JavaVariableDeclaration var = (JavaVariableDeclaration) tmpVar;
+				return new Object[] { jcu, var, isApplicableMatch };
 			}
 		}
 		return null;
 	}
 
 	public static final Object[] pattern_IgnoreParameterRule_8_1_performtransformation_blackBBFBB(
-			JavaVariableDeclaration var, JavaWorkflowMethod jcu, IgnoreParameterRule _this,
+			JavaWorkflowMethod jcu, JavaVariableDeclaration var, IgnoreParameterRule _this,
 			IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { var, jcu, csp, _this, isApplicableMatch };
+				return new Object[] { jcu, var, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
@@ -1047,15 +1047,15 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 		Object[] result_pattern_IgnoreParameterRule_8_1_performtransformation_binding = pattern_IgnoreParameterRule_8_1_performtransformation_bindingFFB(
 				isApplicableMatch);
 		if (result_pattern_IgnoreParameterRule_8_1_performtransformation_binding != null) {
-			JavaVariableDeclaration var = (JavaVariableDeclaration) result_pattern_IgnoreParameterRule_8_1_performtransformation_binding[0];
-			JavaWorkflowMethod jcu = (JavaWorkflowMethod) result_pattern_IgnoreParameterRule_8_1_performtransformation_binding[1];
+			JavaWorkflowMethod jcu = (JavaWorkflowMethod) result_pattern_IgnoreParameterRule_8_1_performtransformation_binding[0];
+			JavaVariableDeclaration var = (JavaVariableDeclaration) result_pattern_IgnoreParameterRule_8_1_performtransformation_binding[1];
 
 			Object[] result_pattern_IgnoreParameterRule_8_1_performtransformation_black = pattern_IgnoreParameterRule_8_1_performtransformation_blackBBFBB(
-					var, jcu, _this, isApplicableMatch);
+					jcu, var, _this, isApplicableMatch);
 			if (result_pattern_IgnoreParameterRule_8_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_IgnoreParameterRule_8_1_performtransformation_black[2];
 
-				return new Object[] { var, jcu, csp, _this, isApplicableMatch };
+				return new Object[] { jcu, var, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
@@ -1074,15 +1074,15 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 	}
 
 	public static final Object[] pattern_IgnoreParameterRule_8_3_bookkeepingforedges_blackBBB(
-			PerformRuleResult ruleresult, EObject var, EObject jcu) {
+			PerformRuleResult ruleresult, EObject jcu, EObject var) {
 		if (!jcu.equals(var)) {
-			return new Object[] { ruleresult, var, jcu };
+			return new Object[] { ruleresult, jcu, var };
 		}
 		return null;
 	}
 
 	public static final Object[] pattern_IgnoreParameterRule_8_3_bookkeepingforedges_greenBBBF(
-			PerformRuleResult ruleresult, EObject var, EObject jcu) {
+			PerformRuleResult ruleresult, EObject jcu, EObject var) {
 		EMoflonEdge jcu__var____params = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "IgnoreParameterRule";
 		String jcu__var____params_name_prime = "params";
@@ -1091,12 +1091,12 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 		ruleresult.getTranslatedEdges().add(jcu__var____params);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
 		jcu__var____params.setName(jcu__var____params_name_prime);
-		return new Object[] { ruleresult, var, jcu, jcu__var____params };
+		return new Object[] { ruleresult, jcu, var, jcu__var____params };
 	}
 
 	public static final void pattern_IgnoreParameterRule_8_5_registerobjects_expressionBBBB(IgnoreParameterRule _this,
-			PerformRuleResult ruleresult, EObject var, EObject jcu) {
-		_this.registerObjects_BWD(ruleresult, var, jcu);
+			PerformRuleResult ruleresult, EObject jcu, EObject var) {
+		_this.registerObjects_BWD(ruleresult, jcu, var);
 
 	}
 
@@ -1157,56 +1157,56 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 	}
 
 	public static final Object[] pattern_IgnoreParameterRule_9_2_corematch_bindingFFB(Match match) {
-		EObject _localVariable_0 = match.getObject("var");
-		EObject _localVariable_1 = match.getObject("jcu");
-		EObject tmpVar = _localVariable_0;
-		EObject tmpJcu = _localVariable_1;
-		if (tmpVar instanceof JavaVariableDeclaration) {
-			JavaVariableDeclaration var = (JavaVariableDeclaration) tmpVar;
-			if (tmpJcu instanceof JavaWorkflowMethod) {
-				JavaWorkflowMethod jcu = (JavaWorkflowMethod) tmpJcu;
-				return new Object[] { var, jcu, match };
+		EObject _localVariable_0 = match.getObject("jcu");
+		EObject _localVariable_1 = match.getObject("var");
+		EObject tmpJcu = _localVariable_0;
+		EObject tmpVar = _localVariable_1;
+		if (tmpJcu instanceof JavaWorkflowMethod) {
+			JavaWorkflowMethod jcu = (JavaWorkflowMethod) tmpJcu;
+			if (tmpVar instanceof JavaVariableDeclaration) {
+				JavaVariableDeclaration var = (JavaVariableDeclaration) tmpVar;
+				return new Object[] { jcu, var, match };
 			}
 		}
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_IgnoreParameterRule_9_2_corematch_blackBBB(
-			JavaVariableDeclaration var, JavaWorkflowMethod jcu, Match match) {
+	public static final Iterable<Object[]> pattern_IgnoreParameterRule_9_2_corematch_blackBBB(JavaWorkflowMethod jcu,
+			JavaVariableDeclaration var, Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		_result.add(new Object[] { var, jcu, match });
+		_result.add(new Object[] { jcu, var, match });
 		return _result;
 	}
 
-	public static final Iterable<Object[]> pattern_IgnoreParameterRule_9_3_findcontext_blackBB(
-			JavaVariableDeclaration var, JavaWorkflowMethod jcu) {
+	public static final Iterable<Object[]> pattern_IgnoreParameterRule_9_3_findcontext_blackBB(JavaWorkflowMethod jcu,
+			JavaVariableDeclaration var) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		if (jcu.getParams().contains(var)) {
-			_result.add(new Object[] { var, jcu });
+			_result.add(new Object[] { jcu, var });
 		}
 		return _result;
 	}
 
-	public static final Object[] pattern_IgnoreParameterRule_9_3_findcontext_greenBBFF(JavaVariableDeclaration var,
-			JavaWorkflowMethod jcu) {
+	public static final Object[] pattern_IgnoreParameterRule_9_3_findcontext_greenBBFF(JavaWorkflowMethod jcu,
+			JavaVariableDeclaration var) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
 		EMoflonEdge jcu__var____params = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String jcu__var____params_name_prime = "params";
-		isApplicableMatch.getAllContextElements().add(var);
 		isApplicableMatch.getAllContextElements().add(jcu);
+		isApplicableMatch.getAllContextElements().add(var);
 		jcu__var____params.setSrc(jcu);
 		jcu__var____params.setTrg(var);
 		isApplicableMatch.getAllContextElements().add(jcu__var____params);
 		jcu__var____params.setName(jcu__var____params_name_prime);
-		return new Object[] { var, jcu, isApplicableMatch, jcu__var____params };
+		return new Object[] { jcu, var, isApplicableMatch, jcu__var____params };
 	}
 
 	public static final Object[] pattern_IgnoreParameterRule_9_4_solveCSP_bindingFBBBB(IgnoreParameterRule _this,
-			IsApplicableMatch isApplicableMatch, JavaVariableDeclaration var, JavaWorkflowMethod jcu) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_BWD(isApplicableMatch, var, jcu);
+			IsApplicableMatch isApplicableMatch, JavaWorkflowMethod jcu, JavaVariableDeclaration var) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_BWD(isApplicableMatch, jcu, var);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, var, jcu };
+			return new Object[] { csp, _this, isApplicableMatch, jcu, var };
 		}
 		return null;
 	}
@@ -1216,10 +1216,10 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 	}
 
 	public static final Object[] pattern_IgnoreParameterRule_9_4_solveCSP_bindingAndBlackFBBBB(
-			IgnoreParameterRule _this, IsApplicableMatch isApplicableMatch, JavaVariableDeclaration var,
-			JavaWorkflowMethod jcu) {
+			IgnoreParameterRule _this, IsApplicableMatch isApplicableMatch, JavaWorkflowMethod jcu,
+			JavaVariableDeclaration var) {
 		Object[] result_pattern_IgnoreParameterRule_9_4_solveCSP_binding = pattern_IgnoreParameterRule_9_4_solveCSP_bindingFBBBB(
-				_this, isApplicableMatch, var, jcu);
+				_this, isApplicableMatch, jcu, var);
 		if (result_pattern_IgnoreParameterRule_9_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_IgnoreParameterRule_9_4_solveCSP_binding[0];
 
@@ -1227,7 +1227,7 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 					csp);
 			if (result_pattern_IgnoreParameterRule_9_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, var, jcu };
+				return new Object[] { csp, _this, isApplicableMatch, jcu, var };
 			}
 		}
 		return null;
@@ -1317,7 +1317,7 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 
 	public static final Object[] pattern_IgnoreParameterRule_17_2_testcorematchandDECs_black_nac_0B(
 			JavaVariableDeclaration var) {
-		for (JavaStatement __DEC_var_expr_765714 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaStatement __DEC_var_expr_201037 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(var, JavaStatement.class, "expr")) {
 			return new Object[] { var };
 		}
@@ -1326,7 +1326,7 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 
 	public static final Object[] pattern_IgnoreParameterRule_17_2_testcorematchandDECs_black_nac_1B(
 			JavaVariableDeclaration var) {
-		for (JavaMethodInvocation __DEC_var_arguments_728108 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaMethodInvocation __DEC_var_arguments_143619 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(var, JavaMethodInvocation.class, "arguments")) {
 			return new Object[] { var };
 		}
@@ -1345,7 +1345,7 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 				if (jcu.getParams().contains(var)) {
 					if (pattern_IgnoreParameterRule_17_2_testcorematchandDECs_black_nac_0B(var) == null) {
 						if (pattern_IgnoreParameterRule_17_2_testcorematchandDECs_black_nac_1B(var) == null) {
-							_result.add(new Object[] { var, jcu, _edge_params });
+							_result.add(new Object[] { jcu, var, _edge_params });
 						}
 					}
 				}
@@ -1366,8 +1366,8 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 	}
 
 	public static final boolean pattern_IgnoreParameterRule_17_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBB(
-			IgnoreParameterRule _this, Match match, JavaVariableDeclaration var, JavaWorkflowMethod jcu) {
-		boolean _localVariable_0 = _this.isAppropriate_BWD(match, var, jcu);
+			IgnoreParameterRule _this, Match match, JavaWorkflowMethod jcu, JavaVariableDeclaration var) {
+		boolean _localVariable_0 = _this.isAppropriate_BWD(match, jcu, var);
 		boolean _result = Boolean.valueOf(_localVariable_0);
 		return _result;
 	}
@@ -1410,24 +1410,24 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 	}
 
 	public static final Object[] pattern_IgnoreParameterRule_20_2_matchsrctrgcontext_bindingFFB(Match targetMatch) {
-		EObject _localVariable_0 = targetMatch.getObject("var");
-		EObject _localVariable_1 = targetMatch.getObject("jcu");
-		EObject tmpVar = _localVariable_0;
-		EObject tmpJcu = _localVariable_1;
-		if (tmpVar instanceof JavaVariableDeclaration) {
-			JavaVariableDeclaration var = (JavaVariableDeclaration) tmpVar;
-			if (tmpJcu instanceof JavaWorkflowMethod) {
-				JavaWorkflowMethod jcu = (JavaWorkflowMethod) tmpJcu;
-				return new Object[] { var, jcu, targetMatch };
+		EObject _localVariable_0 = targetMatch.getObject("jcu");
+		EObject _localVariable_1 = targetMatch.getObject("var");
+		EObject tmpJcu = _localVariable_0;
+		EObject tmpVar = _localVariable_1;
+		if (tmpJcu instanceof JavaWorkflowMethod) {
+			JavaWorkflowMethod jcu = (JavaWorkflowMethod) tmpJcu;
+			if (tmpVar instanceof JavaVariableDeclaration) {
+				JavaVariableDeclaration var = (JavaVariableDeclaration) tmpVar;
+				return new Object[] { jcu, var, targetMatch };
 			}
 		}
 		return null;
 	}
 
-	public static final Object[] pattern_IgnoreParameterRule_20_2_matchsrctrgcontext_blackBBBB(
-			JavaVariableDeclaration var, JavaWorkflowMethod jcu, Match sourceMatch, Match targetMatch) {
+	public static final Object[] pattern_IgnoreParameterRule_20_2_matchsrctrgcontext_blackBBBB(JavaWorkflowMethod jcu,
+			JavaVariableDeclaration var, Match sourceMatch, Match targetMatch) {
 		if (!sourceMatch.equals(targetMatch)) {
-			return new Object[] { var, jcu, sourceMatch, targetMatch };
+			return new Object[] { jcu, var, sourceMatch, targetMatch };
 		}
 		return null;
 	}
@@ -1437,25 +1437,25 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 		Object[] result_pattern_IgnoreParameterRule_20_2_matchsrctrgcontext_binding = pattern_IgnoreParameterRule_20_2_matchsrctrgcontext_bindingFFB(
 				targetMatch);
 		if (result_pattern_IgnoreParameterRule_20_2_matchsrctrgcontext_binding != null) {
-			JavaVariableDeclaration var = (JavaVariableDeclaration) result_pattern_IgnoreParameterRule_20_2_matchsrctrgcontext_binding[0];
-			JavaWorkflowMethod jcu = (JavaWorkflowMethod) result_pattern_IgnoreParameterRule_20_2_matchsrctrgcontext_binding[1];
+			JavaWorkflowMethod jcu = (JavaWorkflowMethod) result_pattern_IgnoreParameterRule_20_2_matchsrctrgcontext_binding[0];
+			JavaVariableDeclaration var = (JavaVariableDeclaration) result_pattern_IgnoreParameterRule_20_2_matchsrctrgcontext_binding[1];
 
 			Object[] result_pattern_IgnoreParameterRule_20_2_matchsrctrgcontext_black = pattern_IgnoreParameterRule_20_2_matchsrctrgcontext_blackBBBB(
-					var, jcu, sourceMatch, targetMatch);
+					jcu, var, sourceMatch, targetMatch);
 			if (result_pattern_IgnoreParameterRule_20_2_matchsrctrgcontext_black != null) {
 
-				return new Object[] { var, jcu, sourceMatch, targetMatch };
+				return new Object[] { jcu, var, sourceMatch, targetMatch };
 			}
 		}
 		return null;
 	}
 
 	public static final Object[] pattern_IgnoreParameterRule_20_3_solvecsp_bindingFBBBBB(IgnoreParameterRule _this,
-			JavaVariableDeclaration var, JavaWorkflowMethod jcu, Match sourceMatch, Match targetMatch) {
-		CSP _localVariable_2 = _this.isApplicable_solveCsp_CC(var, jcu, sourceMatch, targetMatch);
+			JavaWorkflowMethod jcu, JavaVariableDeclaration var, Match sourceMatch, Match targetMatch) {
+		CSP _localVariable_2 = _this.isApplicable_solveCsp_CC(jcu, var, sourceMatch, targetMatch);
 		CSP csp = _localVariable_2;
 		if (csp != null) {
-			return new Object[] { csp, _this, var, jcu, sourceMatch, targetMatch };
+			return new Object[] { csp, _this, jcu, var, sourceMatch, targetMatch };
 		}
 		return null;
 	}
@@ -1465,10 +1465,10 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 	}
 
 	public static final Object[] pattern_IgnoreParameterRule_20_3_solvecsp_bindingAndBlackFBBBBB(
-			IgnoreParameterRule _this, JavaVariableDeclaration var, JavaWorkflowMethod jcu, Match sourceMatch,
+			IgnoreParameterRule _this, JavaWorkflowMethod jcu, JavaVariableDeclaration var, Match sourceMatch,
 			Match targetMatch) {
 		Object[] result_pattern_IgnoreParameterRule_20_3_solvecsp_binding = pattern_IgnoreParameterRule_20_3_solvecsp_bindingFBBBBB(
-				_this, var, jcu, sourceMatch, targetMatch);
+				_this, jcu, var, sourceMatch, targetMatch);
 		if (result_pattern_IgnoreParameterRule_20_3_solvecsp_binding != null) {
 			CSP csp = (CSP) result_pattern_IgnoreParameterRule_20_3_solvecsp_binding[0];
 
@@ -1476,7 +1476,7 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 					csp);
 			if (result_pattern_IgnoreParameterRule_20_3_solvecsp_black != null) {
 
-				return new Object[] { csp, _this, var, jcu, sourceMatch, targetMatch };
+				return new Object[] { csp, _this, jcu, var, sourceMatch, targetMatch };
 			}
 		}
 		return null;
@@ -1507,9 +1507,9 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 		return new Object[] { sourceMatch, targetMatch, ccMatch };
 	}
 
-	public static final Object[] pattern_IgnoreParameterRule_20_6_createcorrespondence_blackBBB(
-			JavaVariableDeclaration var, JavaWorkflowMethod jcu, CCMatch ccMatch) {
-		return new Object[] { var, jcu, ccMatch };
+	public static final Object[] pattern_IgnoreParameterRule_20_6_createcorrespondence_blackBBB(JavaWorkflowMethod jcu,
+			JavaVariableDeclaration var, CCMatch ccMatch) {
+		return new Object[] { jcu, var, ccMatch };
 	}
 
 	public static final Object[] pattern_IgnoreParameterRule_20_7_addtoreturnedresult_blackBB(
@@ -1545,8 +1545,8 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 
 	public static final Object[] pattern_IgnoreParameterRule_24_1_matchtggpattern_black_nac_0B(
 			JavaVariableDeclaration var) {
-		for (JavaStatement __DEC_var_expr_335873 : org.moflon.core.utilities.eMoflonEMFUtil
-				.getOppositeReferenceTyped(var, JavaStatement.class, "expr")) {
+		for (JavaStatement __DEC_var_expr_4914 : org.moflon.core.utilities.eMoflonEMFUtil.getOppositeReferenceTyped(var,
+				JavaStatement.class, "expr")) {
 			return new Object[] { var };
 		}
 		return null;
@@ -1554,19 +1554,19 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 
 	public static final Object[] pattern_IgnoreParameterRule_24_1_matchtggpattern_black_nac_1B(
 			JavaVariableDeclaration var) {
-		for (JavaMethodInvocation __DEC_var_arguments_832811 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaMethodInvocation __DEC_var_arguments_120651 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(var, JavaMethodInvocation.class, "arguments")) {
 			return new Object[] { var };
 		}
 		return null;
 	}
 
-	public static final Object[] pattern_IgnoreParameterRule_24_1_matchtggpattern_blackBB(JavaVariableDeclaration var,
-			JavaWorkflowMethod jcu) {
+	public static final Object[] pattern_IgnoreParameterRule_24_1_matchtggpattern_blackBB(JavaWorkflowMethod jcu,
+			JavaVariableDeclaration var) {
 		if (jcu.getParams().contains(var)) {
 			if (pattern_IgnoreParameterRule_24_1_matchtggpattern_black_nac_0B(var) == null) {
 				if (pattern_IgnoreParameterRule_24_1_matchtggpattern_black_nac_1B(var) == null) {
-					return new Object[] { var, jcu };
+					return new Object[] { jcu, var };
 				}
 			}
 		}
@@ -1667,7 +1667,7 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 		return new Object[] { jcu, ruleResult };
 	}
 
-	public static final Object[] pattern_IgnoreParameterRule_25_6_perform_greenFBB(JavaWorkflowMethod jcu,
+	public static final Object[] pattern_IgnoreParameterRule_25_6_perform_greenBFB(JavaWorkflowMethod jcu,
 			ModelgeneratorRuleResult ruleResult) {
 		JavaVariableDeclaration var = SimpleJavaFactory.eINSTANCE.createJavaVariableDeclaration();
 		boolean ruleResult_success_prime = Boolean.valueOf(true);
@@ -1677,7 +1677,7 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 		ruleResult.setSuccess(Boolean.valueOf(ruleResult_success_prime));
 		int ruleResult_performCount_prime = Integer.valueOf(_localVariable_0);
 		ruleResult.setPerformCount(Integer.valueOf(ruleResult_performCount_prime));
-		return new Object[] { var, jcu, ruleResult };
+		return new Object[] { jcu, var, ruleResult };
 	}
 
 	public static final ModelgeneratorRuleResult pattern_IgnoreParameterRule_25_7_expressionFB(

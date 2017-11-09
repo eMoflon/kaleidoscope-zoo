@@ -1,9 +1,13 @@
 package org;
 
+import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Path;
 
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.moflon.core.utilities.MoflonUtilitiesActivator;
 
 import com.google.inject.AbstractModule;
@@ -39,7 +43,7 @@ public class ControllerModule extends AbstractModule{
 		this.set = set;		
 		this.persisanceDestination = persistanceDestination;
 		this.sourceArtefactPath = sourceArtefactPath;
-		this.targetArtefactPath = targetArtefactPath;
+ 		this.targetArtefactPath = targetArtefactPath;
 	}
 	
 	@Provides @Src
@@ -53,7 +57,7 @@ public class ControllerModule extends AbstractModule{
 	}
 	
 	@Provides
-	PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path>provideSynchroniser(){
+	PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path>provideSynchroniser() throws IOException{
 		
 		PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path>tool;
 		
@@ -62,6 +66,9 @@ public class ControllerModule extends AbstractModule{
 		
 		ArtefactAdapter<JavaPackage, Path> targetArtefactAdapter = new JavaArtefactAdapter(targetArtefactPath);
 		targetArtefactAdapter.parse();
+		
+		set = new ResourceSetImpl();
+		set.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());
 		
 		if(bxTool.equals(BxTool.EMOFLON)) {
 		
@@ -78,9 +85,7 @@ public class ControllerModule extends AbstractModule{
 		else {
 			throw new IllegalArgumentException("Bx tool has to be chosen!");
 		}
-				
-		tool.initialize();
-		
+			
 		return tool;
 	}
 	@Override

@@ -69,8 +69,18 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected RulesSwitch<Adapter> modelSwitch = new RulesSwitch<Adapter>() {
 		@Override
-		public Adapter caseSymmetricBlockCipherImportToImport(SymmetricBlockCipherImportToImport object) {
-			return createSymmetricBlockCipherImportToImportAdapter();
+		public Adapter caseIgnoreMethodInvocationArgument(IgnoreMethodInvocationArgument object) {
+			return createIgnoreMethodInvocationArgumentAdapter();
+		}
+
+		@Override
+		public Adapter caseKeyDerivationAlgorithmImportToImport(KeyDerivationAlgorithmImportToImport object) {
+			return createKeyDerivationAlgorithmImportToImportAdapter();
+		}
+
+		@Override
+		public Adapter caseIgnoreParameterRule(IgnoreParameterRule object) {
+			return createIgnoreParameterRuleAdapter();
 		}
 
 		@Override
@@ -84,18 +94,8 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseKeyDerivationAlgorithmImportToImport(KeyDerivationAlgorithmImportToImport object) {
-			return createKeyDerivationAlgorithmImportToImportAdapter();
-		}
-
-		@Override
 		public Adapter casePerformGetKeyMethod(PerformGetKeyMethod object) {
 			return createPerformGetKeyMethodAdapter();
-		}
-
-		@Override
-		public Adapter caseIgnoreMethodInvocationArgument(IgnoreMethodInvocationArgument object) {
-			return createIgnoreMethodInvocationArgumentAdapter();
 		}
 
 		@Override
@@ -104,8 +104,8 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseIgnoreParameterRule(IgnoreParameterRule object) {
-			return createIgnoreParameterRuleAdapter();
+		public Adapter caseSymmetricBlockCipherImportToImport(SymmetricBlockCipherImportToImport object) {
+			return createSymmetricBlockCipherImportToImportAdapter();
 		}
 
 		@Override
@@ -138,16 +138,44 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport <em>Symmetric Block Cipher Import To Import</em>}'.
+	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument <em>Ignore Method Invocation Argument</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport
+	 * @see CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument
 	 * @generated
 	 */
-	public Adapter createSymmetricBlockCipherImportToImportAdapter() {
+	public Adapter createIgnoreMethodInvocationArgumentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport <em>Key Derivation Algorithm Import To Import</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport
+	 * @generated
+	 */
+	public Adapter createKeyDerivationAlgorithmImportToImportAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.Rules.IgnoreParameterRule <em>Ignore Parameter Rule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see CryptoConfigToJava.Rules.IgnoreParameterRule
+	 * @generated
+	 */
+	public Adapter createIgnoreParameterRuleAdapter() {
 		return null;
 	}
 
@@ -180,20 +208,6 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport <em>Key Derivation Algorithm Import To Import</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see CryptoConfigToJava.Rules.KeyDerivationAlgorithmImportToImport
-	 * @generated
-	 */
-	public Adapter createKeyDerivationAlgorithmImportToImportAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.Rules.PerformGetKeyMethod <em>Perform Get Key Method</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -204,20 +218,6 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPerformGetKeyMethodAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument <em>Ignore Method Invocation Argument</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see CryptoConfigToJava.Rules.IgnoreMethodInvocationArgument
-	 * @generated
-	 */
-	public Adapter createIgnoreMethodInvocationArgumentAdapter() {
 		return null;
 	}
 
@@ -236,16 +236,16 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.Rules.IgnoreParameterRule <em>Ignore Parameter Rule</em>}'.
+	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport <em>Symmetric Block Cipher Import To Import</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see CryptoConfigToJava.Rules.IgnoreParameterRule
+	 * @see CryptoConfigToJava.Rules.SymmetricBlockCipherImportToImport
 	 * @generated
 	 */
-	public Adapter createIgnoreParameterRuleAdapter() {
+	public Adapter createSymmetricBlockCipherImportToImportAdapter() {
 		return null;
 	}
 

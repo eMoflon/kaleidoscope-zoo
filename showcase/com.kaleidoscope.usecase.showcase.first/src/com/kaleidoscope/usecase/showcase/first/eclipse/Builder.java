@@ -18,6 +18,7 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Key;
 import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
+import com.kaleidoscope.core.framework.synchronisation.SynchronisationFailedException;
 import com.kaleidoscope.core.framework.workflow.controllers.statebased.PersistentStateBasedController;
 import com.kaleidoscope.usecase.showcase.first.controller.ArtefactAdapterModule;
 import com.kaleidoscope.usecase.showcase.first.controller.ControllerModule;
@@ -103,7 +104,12 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 		
 		if(syncForwardAbsoluteSourcePath.toFile().exists()) {
 			
-			getControllerInstance().syncForward(syncForwardAbsoluteSourcePath);
+			try {
+				getControllerInstance().syncForward(syncForwardAbsoluteSourcePath);
+			} catch (SynchronisationFailedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			refreshProject();
 			logger.info("Sync a java model with the configuration model is done!");
 		}else {
@@ -118,7 +124,12 @@ public class Builder extends IncrementalProjectBuilder implements IResourceDelta
 		Path syncBacwardAbsoulteTargetPath = projectPath.resolve(syncBacwardRelativeTargetPath);
 	
 		if(syncBacwardAbsoulteTargetPath.toFile().exists()) {
-			getControllerInstance().syncBackward(syncBacwardAbsoulteTargetPath);
+			try {
+				getControllerInstance().syncBackward(syncBacwardAbsoulteTargetPath);
+			} catch (SynchronisationFailedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			refreshProject();
 			logger.info("Sync configuration model with a java model is done!");
 		}else {

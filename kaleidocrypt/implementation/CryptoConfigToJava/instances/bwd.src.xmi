@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ASCII"?>
+<SimpleJava:JavaPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SimpleJava="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/SimpleJava.ecore" name="crypto">
+  <cunits name="Enc">
+    <imports value="java.security.InvalidAlgorithmParameterException"/>
+    <imports value="java.security.InvalidKeyException"/>
+    <imports value="javax.crypto.KeyGenerator"/>
+    <imports value="javax.crypto.Cipher"/>
+    <imports value="javax.crypto.IllegalBlockSizeException"/>
+    <imports value="javax.crypto.SecretKey"/>
+    <imports value="java.security.Key"/>
+    <imports value="javax.crypto.spec.IvParameterSpec"/>
+    <imports value="java.security.NoSuchAlgorithmException"/>
+    <imports value="javax.crypto.BadPaddingException"/>
+    <imports value="java.security.SecureRandom"/>
+    <imports value="javax.crypto.NoSuchPaddingException"/>
+    <methods xsi:type="SimpleJava:JavaWorkflowMethod" name="encrypt" type="byte[] " modifier="public" throws="InvalidKeyException,NoSuchAlgorithmException,NoSuchPaddingException,IllegalBlockSizeException,BadPaddingException,InvalidAlgorithmParameterException" index="1">
+      <params index="1" type="SecretKey" name="key"/>
+      <params index="0" type="byte[]" name="data"/>
+      <statements return="true">
+        <expr xsi:type="SimpleJava:JavaMethodInvocation" name="performEncryption">
+          <arguments xsi:type="SimpleJava:JavaName" index="1" identifier="key"/>
+          <arguments xsi:type="SimpleJava:JavaName" index="0" identifier="data"/>
+          <arguments xsi:type="SimpleJava:JavaLiteral" index="2" value="&quot;AES/GCM/PKCS5Padding&quot;"/>
+        </expr>
+      </statements>
+    </methods>
+    <methods xsi:type="SimpleJava:JavaOpaqueMethod" name="performEncryption" type="byte[] " modifier="private" throws="InvalidKeyException,NoSuchAlgorithmException,NoSuchPaddingException,IllegalBlockSizeException,BadPaddingException,InvalidAlgorithmParameterException" index="0" body="{&#xA;  byte[] ivb=new byte[16];&#xA;  SecureRandom.getInstanceStrong().nextBytes(ivb);&#xA;  IvParameterSpec iv=new IvParameterSpec(ivb);&#xA;  Cipher c=Cipher.getInstance(encryptPassingArgument);&#xA;  c.init(Cipher.ENCRYPT_MODE,key,iv);&#xA;  byte[] res=c.doFinal(data);&#xA;  byte[] ret=new byte[res.length + ivb.length];&#xA;  System.arraycopy(ivb,0,ret,0,ivb.length);&#xA;  System.arraycopy(res,0,ret,ivb.length,ret.length);&#xA;  return ret;&#xA;}&#xA;" parameters="byte[] data,SecretKey key,String encryptPassingArgument"/>
+  </cunits>
+</SimpleJava:JavaPackage>

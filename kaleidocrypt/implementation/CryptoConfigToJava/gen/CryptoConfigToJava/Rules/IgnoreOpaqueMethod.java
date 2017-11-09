@@ -97,7 +97,7 @@ public interface IgnoreOpaqueMethod extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_BWD(Match match, JavaOpaqueMethod method, JavaCompilationUnit jcu);
+	boolean isAppropriate_BWD(Match match, JavaCompilationUnit jcu, JavaOpaqueMethod method);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -121,7 +121,7 @@ public interface IgnoreOpaqueMethod extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_BWD(Match match, JavaOpaqueMethod method, JavaCompilationUnit jcu);
+	void registerObjectsToMatch_BWD(Match match, JavaCompilationUnit jcu, JavaOpaqueMethod method);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,7 +129,7 @@ public interface IgnoreOpaqueMethod extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_BWD(Match match, JavaOpaqueMethod method, JavaCompilationUnit jcu);
+	CSP isAppropriate_solveCsp_BWD(Match match, JavaCompilationUnit jcu, JavaOpaqueMethod method);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -145,8 +145,8 @@ public interface IgnoreOpaqueMethod extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaOpaqueMethod method,
-			JavaCompilationUnit jcu);
+	CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, JavaCompilationUnit jcu,
+			JavaOpaqueMethod method);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -162,7 +162,7 @@ public interface IgnoreOpaqueMethod extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_BWD(PerformRuleResult ruleresult, EObject method, EObject jcu);
+	void registerObjects_BWD(PerformRuleResult ruleresult, EObject jcu, EObject method);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -178,7 +178,7 @@ public interface IgnoreOpaqueMethod extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_BWD_EMoflonEdge_7(EMoflonEdge _edge_methods);
+	EObjectContainer isAppropriate_BWD_EMoflonEdge_4(EMoflonEdge _edge_methods);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -210,7 +210,7 @@ public interface IgnoreOpaqueMethod extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_CC(JavaOpaqueMethod method, JavaCompilationUnit jcu, Match sourceMatch,
+	CSP isApplicable_solveCsp_CC(JavaCompilationUnit jcu, JavaOpaqueMethod method, Match sourceMatch,
 			Match targetMatch);
 
 	/**
@@ -235,7 +235,7 @@ public interface IgnoreOpaqueMethod extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_BWD(JavaOpaqueMethod method, JavaCompilationUnit jcu);
+	boolean checkDEC_BWD(JavaCompilationUnit jcu, JavaOpaqueMethod method);
 
 	/**
 	 * <!-- begin-user-doc -->

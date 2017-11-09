@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<CryptoAPIConfig:Task xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CryptoAPIConfig="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore" package="crypto" description="SymmetricEncryption">
+  <algorithms xsi:type="CryptoAPIConfig:SymmetricBlockCipher" name="AES" mode="GCM" padding="PKCS5Padding">
+    <imports value="javax.crypto.Cipher"/>
+    <imports value="javax.crypto.BadPaddingException"/>
+    <imports value="javax.crypto.SecretKey"/>
+    <imports value="javax.crypto.IllegalBlockSizeException"/>
+    <imports value="java.security.Key"/>
+    <imports value="javax.crypto.spec.IvParameterSpec"/>
+    <imports value="java.security.NoSuchAlgorithmException"/>
+    <imports value="javax.crypto.NoSuchPaddingException"/>
+    <imports value="java.security.InvalidKeyException"/>
+    <imports value="java.security.InvalidAlgorithmParameterException"/>
+    <imports value="javax.crypto.KeyGenerator"/>
+    <imports value="java.security.SecureRandom"/>
+  </algorithms>
+</CryptoAPIConfig:Task>
