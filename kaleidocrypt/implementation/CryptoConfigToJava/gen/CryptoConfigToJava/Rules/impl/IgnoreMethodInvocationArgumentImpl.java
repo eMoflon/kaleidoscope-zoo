@@ -472,7 +472,7 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_BWD_EMoflonEdge_0(EMoflonEdge _edge_arguments) {
+	public EObjectContainer isAppropriate_BWD_EMoflonEdge_11(EMoflonEdge _edge_arguments) {
 
 		Object[] result1_bindingAndBlack = IgnoreMethodInvocationArgumentImpl
 				.pattern_IgnoreMethodInvocationArgument_17_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -857,8 +857,8 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 			return null;
 		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___CHECK_TYPES_BWD__MATCH:
 			return checkTypes_BWD((Match) arguments.get(0));
-		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPROPRIATE_BWD_EMOFLON_EDGE_0__EMOFLONEDGE:
-			return isAppropriate_BWD_EMoflonEdge_0((EMoflonEdge) arguments.get(0));
+		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___IS_APPROPRIATE_BWD_EMOFLON_EDGE_11__EMOFLONEDGE:
+			return isAppropriate_BWD_EMoflonEdge_11((EMoflonEdge) arguments.get(0));
 		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.IGNORE_METHOD_INVOCATION_ARGUMENT___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH:
@@ -1360,7 +1360,7 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_17_2_testcorematchandDECs_black_nac_0B(
 			JavaExpression argument) {
-		for (JavaStatement __DEC_argument_expr_399999 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaStatement __DEC_argument_expr_531148 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(argument, JavaStatement.class, "expr")) {
 			return new Object[] { argument };
 		}
@@ -1590,7 +1590,7 @@ public class IgnoreMethodInvocationArgumentImpl extends AbstractRuleImpl impleme
 
 	public static final Object[] pattern_IgnoreMethodInvocationArgument_24_1_matchtggpattern_black_nac_0B(
 			JavaExpression argument) {
-		for (JavaStatement __DEC_argument_expr_877107 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaStatement __DEC_argument_expr_767499 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(argument, JavaStatement.class, "expr")) {
 			return new Object[] { argument };
 		}

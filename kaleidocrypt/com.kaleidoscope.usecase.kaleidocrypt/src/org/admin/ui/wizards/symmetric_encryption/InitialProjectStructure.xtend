@@ -26,7 +26,7 @@ class InitialProjectStructure {
 		    xmlns:xmi="http://www.omg.org/XMI"
 		    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		    xmlns:CryptoAPIConfig="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore"
-		    package=«packageName»
+		    package="«packageName»"
 		    description="SymmetricEncryption">
 		  
 		  <algorithms

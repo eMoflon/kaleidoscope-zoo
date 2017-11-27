@@ -250,9 +250,9 @@ public class create_a_sinkImpl extends AbstractRuleImpl implements create_a_sink
 				//nothing EMoflonEdge firstBlock__secondBlock____e = (EMoflonEdge) result3_green[10];
 				//nothing EMoflonEdge secondBlock__firstBlock____w = (EMoflonEdge) result3_green[11];
 				//nothing EMoflonEdge grid__group____groups = (EMoflonEdge) result3_green[12];
-				//nothing EMoflonEdge group__firstBlock____occupies = (EMoflonEdge) result3_green[13];
-				//nothing EMoflonEdge firstBlock__group____isOccupiedBy = (EMoflonEdge) result3_green[14];
-				//nothing EMoflonEdge grid__secondBlock____blocks = (EMoflonEdge) result3_green[15];
+				//nothing EMoflonEdge grid__secondBlock____blocks = (EMoflonEdge) result3_green[13];
+				//nothing EMoflonEdge group__firstBlock____occupies = (EMoflonEdge) result3_green[14];
+				//nothing EMoflonEdge firstBlock__group____isOccupiedBy = (EMoflonEdge) result3_green[15];
 				//nothing EMoflonEdge socketToGroup__itemSocket____target = (EMoflonEdge) result3_green[16];
 				//nothing EMoflonEdge grid__firstBlock____blocks = (EMoflonEdge) result3_green[17];
 
@@ -357,18 +357,18 @@ public class create_a_sinkImpl extends AbstractRuleImpl implements create_a_sink
 		Variable var_grid_blockSize = CSPFactoryHelper.eINSTANCE.createVariable("grid.blockSize", true, csp);
 		var_grid_blockSize.setValue(grid.getBlockSize());
 		var_grid_blockSize.setType("double");
-		Variable var_firstBlock_yIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock.yIndex", true, csp);
-		var_firstBlock_yIndex.setValue(firstBlock.getYIndex());
-		var_firstBlock_yIndex.setType("int");
 		Variable var_firstBlock_xIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock.xIndex", true, csp);
 		var_firstBlock_xIndex.setValue(firstBlock.getXIndex());
 		var_firstBlock_xIndex.setType("int");
+		Variable var_firstBlock_yIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock.yIndex", true, csp);
+		var_firstBlock_yIndex.setValue(firstBlock.getYIndex());
+		var_firstBlock_yIndex.setType("int");
 
 		// Create unbound variables
-		Variable var_item_yPos = CSPFactoryHelper.eINSTANCE.createVariable("item.yPos", csp);
-		var_item_yPos.setType("double");
 		Variable var_item_xPos = CSPFactoryHelper.eINSTANCE.createVariable("item.xPos", csp);
 		var_item_xPos.setType("double");
+		Variable var_item_yPos = CSPFactoryHelper.eINSTANCE.createVariable("item.yPos", csp);
+		var_item_yPos.setType("double");
 
 		// Create constraints
 		PosToIndex posToIndex = new PosToIndex();
@@ -379,9 +379,9 @@ public class create_a_sinkImpl extends AbstractRuleImpl implements create_a_sink
 
 		// Solve CSP
 		posToIndex.setRuleName("NoRuleName");
-		posToIndex.solve(var_grid_blockSize, var_item_yPos, var_firstBlock_yIndex);
+		posToIndex.solve(var_grid_blockSize, var_item_xPos, var_firstBlock_xIndex);
 		posToIndex_0.setRuleName("NoRuleName");
-		posToIndex_0.solve(var_grid_blockSize, var_item_xPos, var_firstBlock_xIndex);
+		posToIndex_0.solve(var_grid_blockSize, var_item_yPos, var_firstBlock_yIndex);
 
 		// Snapshot pattern match on which CSP is solved
 		isApplicableMatch.registerObject("socketToGroup", socketToGroup);
@@ -675,15 +675,15 @@ public class create_a_sinkImpl extends AbstractRuleImpl implements create_a_sink
 		Variable var_grid_blockSize = CSPFactoryHelper.eINSTANCE.createVariable("grid.blockSize", true, csp);
 		var_grid_blockSize.setValue(grid.getBlockSize());
 		var_grid_blockSize.setType("double");
+		Variable var_item_xPos = CSPFactoryHelper.eINSTANCE.createVariable("item.xPos", true, csp);
+		var_item_xPos.setValue(item.getXPos());
+		var_item_xPos.setType("double");
 		Variable var_item_yPos = CSPFactoryHelper.eINSTANCE.createVariable("item.yPos", true, csp);
 		var_item_yPos.setValue(item.getYPos());
 		var_item_yPos.setType("double");
 		Variable var_firstBlock_yIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock.yIndex", true, csp);
 		var_firstBlock_yIndex.setValue(firstBlock.getYIndex());
 		var_firstBlock_yIndex.setType("int");
-		Variable var_item_xPos = CSPFactoryHelper.eINSTANCE.createVariable("item.xPos", true, csp);
-		var_item_xPos.setValue(item.getXPos());
-		var_item_xPos.setType("double");
 
 		// Create unbound variables
 
@@ -700,9 +700,9 @@ public class create_a_sinkImpl extends AbstractRuleImpl implements create_a_sink
 		eq.setRuleName("NoRuleName");
 		eq.solve(var_firstBlock_xIndex, literal0);
 		posToIndex.setRuleName("NoRuleName");
-		posToIndex.solve(var_grid_blockSize, var_item_yPos, var_firstBlock_yIndex);
+		posToIndex.solve(var_grid_blockSize, var_item_xPos, var_firstBlock_xIndex);
 		posToIndex_0.setRuleName("NoRuleName");
-		posToIndex_0.solve(var_grid_blockSize, var_item_xPos, var_firstBlock_xIndex);
+		posToIndex_0.solve(var_grid_blockSize, var_item_yPos, var_firstBlock_yIndex);
 
 		// Snapshot pattern match on which CSP is solved
 		isApplicableMatch.registerObject("socketToGroup", socketToGroup);
@@ -756,7 +756,7 @@ public class create_a_sinkImpl extends AbstractRuleImpl implements create_a_sink
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_0(EMoflonEdge _edge_occupies) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_4(EMoflonEdge _edge_occupies) {
 
 		Object[] result1_bindingAndBlack = create_a_sinkImpl
 				.pattern_create_a_sink_20_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -815,7 +815,7 @@ public class create_a_sinkImpl extends AbstractRuleImpl implements create_a_sink
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_BWD_EMoflonEdge_0(EMoflonEdge _edge_item) {
+	public EObjectContainer isAppropriate_BWD_EMoflonEdge_4(EMoflonEdge _edge_item) {
 
 		Object[] result1_bindingAndBlack = create_a_sinkImpl
 				.pattern_create_a_sink_21_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -918,24 +918,24 @@ public class create_a_sinkImpl extends AbstractRuleImpl implements create_a_sink
 		eq0.solve(var_firstBlock_xIndex, var_literal0);
 
 		posToIndex1.setRuleName("create_a_sink");
-		posToIndex1.solve(var_grid_blockSize, var_item_yPos, var_firstBlock_yIndex);
+		posToIndex1.solve(var_grid_blockSize, var_item_xPos, var_firstBlock_xIndex);
 
 		posToIndex2.setRuleName("create_a_sink");
-		posToIndex2.solve(var_grid_blockSize, var_item_xPos, var_firstBlock_xIndex);
+		posToIndex2.solve(var_grid_blockSize, var_item_yPos, var_firstBlock_yIndex);
 
 		if (csp.check()) {
 			ruleResult.setSuccess(true);
 		} else {
-			var_item_yPos.setBound(false);
 			var_item_xPos.setBound(false);
+			var_item_yPos.setBound(false);
 			eq0.solve(var_firstBlock_xIndex, var_literal0);
-			posToIndex1.solve(var_grid_blockSize, var_item_yPos, var_firstBlock_yIndex);
-			posToIndex2.solve(var_grid_blockSize, var_item_xPos, var_firstBlock_xIndex);
+			posToIndex1.solve(var_grid_blockSize, var_item_xPos, var_firstBlock_xIndex);
+			posToIndex2.solve(var_grid_blockSize, var_item_yPos, var_firstBlock_yIndex);
 			if (csp.check()) {
 				ruleResult.setSuccess(true);
 				ruleResult.setRequiredChange(true);
-				__helper.setValue("item", "yPos", var_item_yPos.getValue());
 				__helper.setValue("item", "xPos", var_item_xPos.getValue());
+				__helper.setValue("item", "yPos", var_item_yPos.getValue());
 			} else {
 				ruleResult.setSuccess(false);
 				return ruleResult;
@@ -997,17 +997,17 @@ public class create_a_sinkImpl extends AbstractRuleImpl implements create_a_sink
 		eq0.solve(var_firstBlock_xIndex, var_literal0);
 
 		posToIndex1.setRuleName("create_a_sink");
-		posToIndex1.solve(var_grid_blockSize, var_item_yPos, var_firstBlock_yIndex);
+		posToIndex1.solve(var_grid_blockSize, var_item_xPos, var_firstBlock_xIndex);
 
 		posToIndex2.setRuleName("create_a_sink");
-		posToIndex2.solve(var_grid_blockSize, var_item_xPos, var_firstBlock_xIndex);
+		posToIndex2.solve(var_grid_blockSize, var_item_yPos, var_firstBlock_yIndex);
 
 		if (csp.check()) {
 			ruleResult.setSuccess(true);
 		} else {
 			eq0.solve(var_firstBlock_xIndex, var_literal0);
-			posToIndex1.solve(var_grid_blockSize, var_item_yPos, var_firstBlock_yIndex);
-			posToIndex2.solve(var_grid_blockSize, var_item_xPos, var_firstBlock_xIndex);
+			posToIndex1.solve(var_grid_blockSize, var_item_xPos, var_firstBlock_xIndex);
+			posToIndex2.solve(var_grid_blockSize, var_item_yPos, var_firstBlock_yIndex);
 			if (csp.check()) {
 				ruleResult.setSuccess(true);
 				ruleResult.setRequiredChange(true);
@@ -1106,18 +1106,18 @@ public class create_a_sinkImpl extends AbstractRuleImpl implements create_a_sink
 		Variable var_grid_blockSize = CSPFactoryHelper.eINSTANCE.createVariable("grid.blockSize", true, csp);
 		var_grid_blockSize.setValue(grid.getBlockSize());
 		var_grid_blockSize.setType("double");
-		Variable var_item_yPos = CSPFactoryHelper.eINSTANCE.createVariable("item.yPos", true, csp);
-		var_item_yPos.setValue(item.getYPos());
-		var_item_yPos.setType("double");
-		Variable var_firstBlock_yIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock.yIndex", true, csp);
-		var_firstBlock_yIndex.setValue(firstBlock.getYIndex());
-		var_firstBlock_yIndex.setType("int");
 		Variable var_item_xPos = CSPFactoryHelper.eINSTANCE.createVariable("item.xPos", true, csp);
 		var_item_xPos.setValue(item.getXPos());
 		var_item_xPos.setType("double");
 		Variable var_firstBlock_xIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock.xIndex", true, csp);
 		var_firstBlock_xIndex.setValue(firstBlock.getXIndex());
 		var_firstBlock_xIndex.setType("int");
+		Variable var_item_yPos = CSPFactoryHelper.eINSTANCE.createVariable("item.yPos", true, csp);
+		var_item_yPos.setValue(item.getYPos());
+		var_item_yPos.setType("double");
+		Variable var_firstBlock_yIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock.yIndex", true, csp);
+		var_firstBlock_yIndex.setValue(firstBlock.getYIndex());
+		var_firstBlock_yIndex.setType("int");
 
 		// Create unbound variables
 
@@ -1130,9 +1130,9 @@ public class create_a_sinkImpl extends AbstractRuleImpl implements create_a_sink
 
 		// Solve CSP
 		posToIndex.setRuleName("NoRuleName");
-		posToIndex.solve(var_grid_blockSize, var_item_yPos, var_firstBlock_yIndex);
+		posToIndex.solve(var_grid_blockSize, var_item_xPos, var_firstBlock_xIndex);
 		posToIndex_0.setRuleName("NoRuleName");
-		posToIndex_0.solve(var_grid_blockSize, var_item_xPos, var_firstBlock_xIndex);
+		posToIndex_0.solve(var_grid_blockSize, var_item_yPos, var_firstBlock_yIndex);
 		return csp;
 	}
 
@@ -1241,10 +1241,10 @@ public class create_a_sinkImpl extends AbstractRuleImpl implements create_a_sink
 			return null;
 		case RulesPackage.CREATE_ASINK___CHECK_TYPES_BWD__MATCH:
 			return checkTypes_BWD((Match) arguments.get(0));
-		case RulesPackage.CREATE_ASINK___IS_APPROPRIATE_FWD_EMOFLON_EDGE_0__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_0((EMoflonEdge) arguments.get(0));
-		case RulesPackage.CREATE_ASINK___IS_APPROPRIATE_BWD_EMOFLON_EDGE_0__EMOFLONEDGE:
-			return isAppropriate_BWD_EMoflonEdge_0((EMoflonEdge) arguments.get(0));
+		case RulesPackage.CREATE_ASINK___IS_APPROPRIATE_FWD_EMOFLON_EDGE_4__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_4((EMoflonEdge) arguments.get(0));
+		case RulesPackage.CREATE_ASINK___IS_APPROPRIATE_BWD_EMOFLON_EDGE_4__EMOFLONEDGE:
+			return isAppropriate_BWD_EMoflonEdge_4((EMoflonEdge) arguments.get(0));
 		case RulesPackage.CREATE_ASINK___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.CREATE_ASINK___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH:
@@ -1492,13 +1492,13 @@ public class create_a_sinkImpl extends AbstractRuleImpl implements create_a_sink
 	public static final Object[] pattern_create_a_sink_1_1_performtransformation_greenFBB(ItemSocket itemSocket,
 			CSP csp) {
 		Sink item = KitchenLanguageFactory.eINSTANCE.createSink();
-		Object _localVariable_0 = csp.getValue("item", "yPos");
-		Object _localVariable_1 = csp.getValue("item", "xPos");
+		Object _localVariable_0 = csp.getValue("item", "xPos");
+		Object _localVariable_1 = csp.getValue("item", "yPos");
 		itemSocket.setItem(item);
-		double item_yPos_prime = (double) _localVariable_0;
-		double item_xPos_prime = (double) _localVariable_1;
-		item.setYPos(Double.valueOf(item_yPos_prime));
+		double item_xPos_prime = (double) _localVariable_0;
+		double item_yPos_prime = (double) _localVariable_1;
 		item.setXPos(Double.valueOf(item_xPos_prime));
+		item.setYPos(Double.valueOf(item_yPos_prime));
 		return new Object[] { item, itemSocket, csp };
 	}
 
@@ -1719,8 +1719,8 @@ public class create_a_sinkImpl extends AbstractRuleImpl implements create_a_sink
 				if (group.getOccupies().contains(secondBlock)) {
 					if (secondBlock.equals(firstBlock.getE())) {
 						if (grid.getGroups().contains(group)) {
-							if (group.getOccupies().contains(firstBlock)) {
-								if (grid.getBlocks().contains(secondBlock)) {
+							if (grid.getBlocks().contains(secondBlock)) {
+								if (group.getOccupies().contains(firstBlock)) {
 									if (itemSocket.equals(socketToGroup.getTarget())) {
 										if (grid.getBlocks().contains(firstBlock)) {
 											_result.add(new Object[] { socketToGroup, firstBlock, grid, itemSocket,
@@ -1747,9 +1747,9 @@ public class create_a_sinkImpl extends AbstractRuleImpl implements create_a_sink
 		EMoflonEdge firstBlock__secondBlock____e = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge secondBlock__firstBlock____w = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge grid__group____groups = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge grid__secondBlock____blocks = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge group__firstBlock____occupies = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge firstBlock__group____isOccupiedBy = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge grid__secondBlock____blocks = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge socketToGroup__itemSocket____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge grid__firstBlock____blocks = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String socketToGroup__group____source_name_prime = "source";
@@ -1758,9 +1758,9 @@ public class create_a_sinkImpl extends AbstractRuleImpl implements create_a_sink
 		String firstBlock__secondBlock____e_name_prime = "e";
 		String secondBlock__firstBlock____w_name_prime = "w";
 		String grid__group____groups_name_prime = "groups";
+		String grid__secondBlock____blocks_name_prime = "blocks";
 		String group__firstBlock____occupies_name_prime = "occupies";
 		String firstBlock__group____isOccupiedBy_name_prime = "isOccupiedBy";
-		String grid__secondBlock____blocks_name_prime = "blocks";
 		String socketToGroup__itemSocket____target_name_prime = "target";
 		String grid__firstBlock____blocks_name_prime = "blocks";
 		isApplicableMatch.getAllContextElements().add(socketToGroup);
@@ -1787,15 +1787,15 @@ public class create_a_sinkImpl extends AbstractRuleImpl implements create_a_sink
 		grid__group____groups.setSrc(grid);
 		grid__group____groups.setTrg(group);
 		isApplicableMatch.getAllContextElements().add(grid__group____groups);
+		grid__secondBlock____blocks.setSrc(grid);
+		grid__secondBlock____blocks.setTrg(secondBlock);
+		isApplicableMatch.getAllContextElements().add(grid__secondBlock____blocks);
 		group__firstBlock____occupies.setSrc(group);
 		group__firstBlock____occupies.setTrg(firstBlock);
 		isApplicableMatch.getAllContextElements().add(group__firstBlock____occupies);
 		firstBlock__group____isOccupiedBy.setSrc(firstBlock);
 		firstBlock__group____isOccupiedBy.setTrg(group);
 		isApplicableMatch.getAllContextElements().add(firstBlock__group____isOccupiedBy);
-		grid__secondBlock____blocks.setSrc(grid);
-		grid__secondBlock____blocks.setTrg(secondBlock);
-		isApplicableMatch.getAllContextElements().add(grid__secondBlock____blocks);
 		socketToGroup__itemSocket____target.setSrc(socketToGroup);
 		socketToGroup__itemSocket____target.setTrg(itemSocket);
 		isApplicableMatch.getAllContextElements().add(socketToGroup__itemSocket____target);
@@ -1808,15 +1808,15 @@ public class create_a_sinkImpl extends AbstractRuleImpl implements create_a_sink
 		firstBlock__secondBlock____e.setName(firstBlock__secondBlock____e_name_prime);
 		secondBlock__firstBlock____w.setName(secondBlock__firstBlock____w_name_prime);
 		grid__group____groups.setName(grid__group____groups_name_prime);
+		grid__secondBlock____blocks.setName(grid__secondBlock____blocks_name_prime);
 		group__firstBlock____occupies.setName(group__firstBlock____occupies_name_prime);
 		firstBlock__group____isOccupiedBy.setName(firstBlock__group____isOccupiedBy_name_prime);
-		grid__secondBlock____blocks.setName(grid__secondBlock____blocks_name_prime);
 		socketToGroup__itemSocket____target.setName(socketToGroup__itemSocket____target_name_prime);
 		grid__firstBlock____blocks.setName(grid__firstBlock____blocks_name_prime);
 		return new Object[] { socketToGroup, firstBlock, grid, itemSocket, secondBlock, group, isApplicableMatch,
 				socketToGroup__group____source, group__secondBlock____occupies, secondBlock__group____isOccupiedBy,
 				firstBlock__secondBlock____e, secondBlock__firstBlock____w, grid__group____groups,
-				group__firstBlock____occupies, firstBlock__group____isOccupiedBy, grid__secondBlock____blocks,
+				grid__secondBlock____blocks, group__firstBlock____occupies, firstBlock__group____isOccupiedBy,
 				socketToGroup__itemSocket____target, grid__firstBlock____blocks };
 	}
 
@@ -2881,8 +2881,8 @@ public class create_a_sinkImpl extends AbstractRuleImpl implements create_a_sink
 			if (group.getOccupies().contains(secondBlock)) {
 				if (secondBlock.equals(firstBlock.getE())) {
 					if (grid.getGroups().contains(group)) {
-						if (group.getOccupies().contains(firstBlock)) {
-							if (grid.getBlocks().contains(secondBlock)) {
+						if (grid.getBlocks().contains(secondBlock)) {
+							if (group.getOccupies().contains(firstBlock)) {
 								if (grid.getBlocks().contains(firstBlock)) {
 									return new Object[] { firstBlock, grid, secondBlock, group };
 								}

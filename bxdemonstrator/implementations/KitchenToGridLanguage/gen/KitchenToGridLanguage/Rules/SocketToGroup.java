@@ -92,7 +92,7 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @generated
 	 */
 	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, Group group, KitchenToGridCorr kitchenToGrid,
-			Kitchen kitchen, Grid grid);
+			Grid grid, Kitchen kitchen);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -108,8 +108,8 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject group, EObject itemSocket, EObject kitchenToGrid,
-			EObject kitchen, EObject grid, EObject socketToGroup);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject group, EObject socketToGroup, EObject kitchenToGrid,
+			EObject grid, EObject kitchen, EObject itemSocket);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -125,7 +125,7 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_BWD(Match match, ItemSocket itemSocket, Kitchen kitchen);
+	boolean isAppropriate_BWD(Match match, Kitchen kitchen, ItemSocket itemSocket);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -149,7 +149,7 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_BWD(Match match, ItemSocket itemSocket, Kitchen kitchen);
+	void registerObjectsToMatch_BWD(Match match, Kitchen kitchen, ItemSocket itemSocket);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -157,7 +157,7 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_BWD(Match match, ItemSocket itemSocket, Kitchen kitchen);
+	CSP isAppropriate_solveCsp_BWD(Match match, Kitchen kitchen, ItemSocket itemSocket);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -173,8 +173,8 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, ItemSocket itemSocket,
-			KitchenToGridCorr kitchenToGrid, Kitchen kitchen, Grid grid);
+	CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, KitchenToGridCorr kitchenToGrid, Grid grid,
+			Kitchen kitchen, ItemSocket itemSocket);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -190,8 +190,8 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_BWD(PerformRuleResult ruleresult, EObject group, EObject itemSocket, EObject kitchenToGrid,
-			EObject kitchen, EObject grid, EObject socketToGroup);
+	void registerObjects_BWD(PerformRuleResult ruleresult, EObject group, EObject socketToGroup, EObject kitchenToGrid,
+			EObject grid, EObject kitchen, EObject itemSocket);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -207,7 +207,7 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_4(EMoflonEdge _edge_groups);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_2(EMoflonEdge _edge_groups);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -215,7 +215,7 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_BWD_EMoflonEdge_4(EMoflonEdge _edge_itemSockets);
+	EObjectContainer isAppropriate_BWD_EMoflonEdge_2(EMoflonEdge _edge_itemSockets);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -247,7 +247,7 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_CC(Group group, ItemSocket itemSocket, Kitchen kitchen, Grid grid, Match sourceMatch,
+	CSP isApplicable_solveCsp_CC(Group group, Grid grid, Kitchen kitchen, ItemSocket itemSocket, Match sourceMatch,
 			Match targetMatch);
 
 	/**
@@ -272,7 +272,7 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_BWD(ItemSocket itemSocket, Kitchen kitchen);
+	boolean checkDEC_BWD(Kitchen kitchen, ItemSocket itemSocket);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->

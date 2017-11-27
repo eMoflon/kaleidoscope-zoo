@@ -22,33 +22,6 @@ public interface RulesFactory extends EFactory {
 	RulesFactory eINSTANCE = CryptoConfigToJava.Rules.impl.RulesFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Ignore Method Invocation Argument</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Ignore Method Invocation Argument</em>'.
-	 * @generated
-	 */
-	IgnoreMethodInvocationArgument createIgnoreMethodInvocationArgument();
-
-	/**
-	 * Returns a new object of class '<em>Key Derivation Algorithm Import To Import</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Key Derivation Algorithm Import To Import</em>'.
-	 * @generated
-	 */
-	KeyDerivationAlgorithmImportToImport createKeyDerivationAlgorithmImportToImport();
-
-	/**
-	 * Returns a new object of class '<em>Ignore Parameter Rule</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Ignore Parameter Rule</em>'.
-	 * @generated
-	 */
-	IgnoreParameterRule createIgnoreParameterRule();
-
-	/**
 	 * Returns a new object of class '<em>Secure Password Task</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,24 +29,6 @@ public interface RulesFactory extends EFactory {
 	 * @generated
 	 */
 	SecurePasswordTask createSecurePasswordTask();
-
-	/**
-	 * Returns a new object of class '<em>Ignore Opaque Method</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Ignore Opaque Method</em>'.
-	 * @generated
-	 */
-	IgnoreOpaqueMethod createIgnoreOpaqueMethod();
-
-	/**
-	 * Returns a new object of class '<em>Perform Get Key Method</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Perform Get Key Method</em>'.
-	 * @generated
-	 */
-	PerformGetKeyMethod createPerformGetKeyMethod();
 
 	/**
 	 * Returns a new object of class '<em>Symmetric Encryption Task</em>'.
@@ -85,13 +40,13 @@ public interface RulesFactory extends EFactory {
 	SymmetricEncryptionTask createSymmetricEncryptionTask();
 
 	/**
-	 * Returns a new object of class '<em>Symmetric Block Cipher Import To Import</em>'.
+	 * Returns a new object of class '<em>Key Derivation Algorithm Import To Import</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Symmetric Block Cipher Import To Import</em>'.
+	 * @return a new object of class '<em>Key Derivation Algorithm Import To Import</em>'.
 	 * @generated
 	 */
-	SymmetricBlockCipherImportToImport createSymmetricBlockCipherImportToImport();
+	KeyDerivationAlgorithmImportToImport createKeyDerivationAlgorithmImportToImport();
 
 	/**
 	 * Returns a new object of class '<em>Password Based Encryption</em>'.
@@ -101,6 +56,51 @@ public interface RulesFactory extends EFactory {
 	 * @generated
 	 */
 	PasswordBasedEncryption createPasswordBasedEncryption();
+
+	/**
+	 * Returns a new object of class '<em>Ignore Opaque Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ignore Opaque Method</em>'.
+	 * @generated
+	 */
+	IgnoreOpaqueMethod createIgnoreOpaqueMethod();
+
+	/**
+	 * Returns a new object of class '<em>Ignore Parameter Rule</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ignore Parameter Rule</em>'.
+	 * @generated
+	 */
+	IgnoreParameterRule createIgnoreParameterRule();
+
+	/**
+	 * Returns a new object of class '<em>Ignore Method Invocation Argument</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ignore Method Invocation Argument</em>'.
+	 * @generated
+	 */
+	IgnoreMethodInvocationArgument createIgnoreMethodInvocationArgument();
+
+	/**
+	 * Returns a new object of class '<em>Symmetric Block Cipher Import To Import</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Symmetric Block Cipher Import To Import</em>'.
+	 * @generated
+	 */
+	SymmetricBlockCipherImportToImport createSymmetricBlockCipherImportToImport();
+
+	/**
+	 * Returns a new object of class '<em>Perform Get Key Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Perform Get Key Method</em>'.
+	 * @generated
+	 */
+	PerformGetKeyMethod createPerformGetKeyMethod();
 
 	/**
 	 * Returns the package supported by this factory.

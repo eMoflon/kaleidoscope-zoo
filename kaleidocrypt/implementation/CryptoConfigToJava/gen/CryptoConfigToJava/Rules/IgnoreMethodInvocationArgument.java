@@ -178,7 +178,7 @@ public interface IgnoreMethodInvocationArgument extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_BWD_EMoflonEdge_0(EMoflonEdge _edge_arguments);
+	EObjectContainer isAppropriate_BWD_EMoflonEdge_11(EMoflonEdge _edge_arguments);
 
 	/**
 	 * <!-- begin-user-doc -->

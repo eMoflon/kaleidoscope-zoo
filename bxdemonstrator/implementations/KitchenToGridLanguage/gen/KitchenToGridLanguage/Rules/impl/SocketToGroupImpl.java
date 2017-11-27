@@ -153,43 +153,43 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 		}
 		Group group = (Group) result1_bindingAndBlack[0];
 		KitchenToGridCorr kitchenToGrid = (KitchenToGridCorr) result1_bindingAndBlack[1];
-		Kitchen kitchen = (Kitchen) result1_bindingAndBlack[2];
-		Grid grid = (Grid) result1_bindingAndBlack[3];
+		Grid grid = (Grid) result1_bindingAndBlack[2];
+		Kitchen kitchen = (Kitchen) result1_bindingAndBlack[3];
 		CSP csp = (CSP) result1_bindingAndBlack[4];
 		Object[] result1_green = SocketToGroupImpl.pattern_SocketToGroup_1_1_performtransformation_greenBFBFB(group,
 				kitchen, csp);
-		ItemSocket itemSocket = (ItemSocket) result1_green[1];
-		SocketToGroupCorr socketToGroup = (SocketToGroupCorr) result1_green[3];
+		SocketToGroupCorr socketToGroup = (SocketToGroupCorr) result1_green[1];
+		ItemSocket itemSocket = (ItemSocket) result1_green[3];
 
 		Object[] result2_black = SocketToGroupImpl.pattern_SocketToGroup_1_2_collecttranslatedelements_blackBBB(group,
-				itemSocket, socketToGroup);
+				socketToGroup, itemSocket);
 		if (result2_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[group] = " + group + ", "
-					+ "[itemSocket] = " + itemSocket + ", " + "[socketToGroup] = " + socketToGroup + ".");
+					+ "[socketToGroup] = " + socketToGroup + ", " + "[itemSocket] = " + itemSocket + ".");
 		}
 		Object[] result2_green = SocketToGroupImpl.pattern_SocketToGroup_1_2_collecttranslatedelements_greenFBBB(group,
-				itemSocket, socketToGroup);
+				socketToGroup, itemSocket);
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		Object[] result3_black = SocketToGroupImpl.pattern_SocketToGroup_1_3_bookkeepingforedges_blackBBBBBBB(
-				ruleresult, group, itemSocket, kitchenToGrid, kitchen, grid, socketToGroup);
+				ruleresult, group, socketToGroup, kitchenToGrid, grid, kitchen, itemSocket);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[ruleresult] = " + ruleresult
-					+ ", " + "[group] = " + group + ", " + "[itemSocket] = " + itemSocket + ", " + "[kitchenToGrid] = "
-					+ kitchenToGrid + ", " + "[kitchen] = " + kitchen + ", " + "[grid] = " + grid + ", "
-					+ "[socketToGroup] = " + socketToGroup + ".");
+					+ ", " + "[group] = " + group + ", " + "[socketToGroup] = " + socketToGroup + ", "
+					+ "[kitchenToGrid] = " + kitchenToGrid + ", " + "[grid] = " + grid + ", " + "[kitchen] = " + kitchen
+					+ ", " + "[itemSocket] = " + itemSocket + ".");
 		}
-		SocketToGroupImpl.pattern_SocketToGroup_1_3_bookkeepingforedges_greenBBBBBBFFFF(ruleresult, group, itemSocket,
-				kitchen, grid, socketToGroup);
-		//nothing EMoflonEdge kitchen__itemSocket____itemSockets = (EMoflonEdge) result3_green[6];
-		//nothing EMoflonEdge socketToGroup__group____source = (EMoflonEdge) result3_green[7];
-		//nothing EMoflonEdge socketToGroup__itemSocket____target = (EMoflonEdge) result3_green[8];
-		//nothing EMoflonEdge grid__group____groups = (EMoflonEdge) result3_green[9];
+		SocketToGroupImpl.pattern_SocketToGroup_1_3_bookkeepingforedges_greenBBBBBBFFFF(ruleresult, group,
+				socketToGroup, grid, kitchen, itemSocket);
+		//nothing EMoflonEdge socketToGroup__group____source = (EMoflonEdge) result3_green[6];
+		//nothing EMoflonEdge grid__group____groups = (EMoflonEdge) result3_green[7];
+		//nothing EMoflonEdge kitchen__itemSocket____itemSockets = (EMoflonEdge) result3_green[8];
+		//nothing EMoflonEdge socketToGroup__itemSocket____target = (EMoflonEdge) result3_green[9];
 
 		// 
 		// 
 		SocketToGroupImpl.pattern_SocketToGroup_1_5_registerobjects_expressionBBBBBBBB(this, ruleresult, group,
-				itemSocket, kitchenToGrid, kitchen, grid, socketToGroup);
+				socketToGroup, kitchenToGrid, grid, kitchen, itemSocket);
 		return SocketToGroupImpl.pattern_SocketToGroup_1_6_expressionFB(ruleresult);
 	}
 
@@ -219,28 +219,28 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 		}
 		Group group = (Group) result2_binding[0];
 		Grid grid = (Grid) result2_binding[1];
-		for (Object[] result2_black : SocketToGroupImpl.pattern_SocketToGroup_2_2_corematch_blackBFFBB(group, grid,
+		for (Object[] result2_black : SocketToGroupImpl.pattern_SocketToGroup_2_2_corematch_blackBFBFB(group, grid,
 				match)) {
 			KitchenToGridCorr kitchenToGrid = (KitchenToGridCorr) result2_black[1];
-			Kitchen kitchen = (Kitchen) result2_black[2];
+			Kitchen kitchen = (Kitchen) result2_black[3];
 			// ForEach 
 			for (Object[] result3_black : SocketToGroupImpl.pattern_SocketToGroup_2_3_findcontext_blackBBBB(group,
-					kitchenToGrid, kitchen, grid)) {
+					kitchenToGrid, grid, kitchen)) {
 				Object[] result3_green = SocketToGroupImpl.pattern_SocketToGroup_2_3_findcontext_greenBBBBFFFF(group,
-						kitchenToGrid, kitchen, grid);
+						kitchenToGrid, grid, kitchen);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[4];
-				//nothing EMoflonEdge kitchenToGrid__kitchen____target = (EMoflonEdge) result3_green[5];
+				//nothing EMoflonEdge grid__group____groups = (EMoflonEdge) result3_green[5];
 				//nothing EMoflonEdge kitchenToGrid__grid____source = (EMoflonEdge) result3_green[6];
-				//nothing EMoflonEdge grid__group____groups = (EMoflonEdge) result3_green[7];
+				//nothing EMoflonEdge kitchenToGrid__kitchen____target = (EMoflonEdge) result3_green[7];
 
 				Object[] result4_bindingAndBlack = SocketToGroupImpl
 						.pattern_SocketToGroup_2_4_solveCSP_bindingAndBlackFBBBBBB(this, isApplicableMatch, group,
-								kitchenToGrid, kitchen, grid);
+								kitchenToGrid, grid, kitchen);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
 							+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[group] = " + group + ", "
-							+ "[kitchenToGrid] = " + kitchenToGrid + ", " + "[kitchen] = " + kitchen + ", "
-							+ "[grid] = " + grid + ".");
+							+ "[kitchenToGrid] = " + kitchenToGrid + ", " + "[grid] = " + grid + ", " + "[kitchen] = "
+							+ kitchen + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// 
@@ -310,7 +310,7 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	 * @generated
 	 */
 	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, Group group,
-			KitchenToGridCorr kitchenToGrid, Kitchen kitchen, Grid grid) {// Create CSP
+			KitchenToGridCorr kitchenToGrid, Grid grid, Kitchen kitchen) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -334,8 +334,8 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 		// Snapshot pattern match on which CSP is solved
 		isApplicableMatch.registerObject("group", group);
 		isApplicableMatch.registerObject("kitchenToGrid", kitchenToGrid);
-		isApplicableMatch.registerObject("kitchen", kitchen);
 		isApplicableMatch.registerObject("grid", grid);
+		isApplicableMatch.registerObject("kitchen", kitchen);
 		return csp;
 	}
 
@@ -353,14 +353,14 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject group, EObject itemSocket,
-			EObject kitchenToGrid, EObject kitchen, EObject grid, EObject socketToGroup) {
+	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject group, EObject socketToGroup,
+			EObject kitchenToGrid, EObject grid, EObject kitchen, EObject itemSocket) {
 		ruleresult.registerObject("group", group);
-		ruleresult.registerObject("itemSocket", itemSocket);
-		ruleresult.registerObject("kitchenToGrid", kitchenToGrid);
-		ruleresult.registerObject("kitchen", kitchen);
-		ruleresult.registerObject("grid", grid);
 		ruleresult.registerObject("socketToGroup", socketToGroup);
+		ruleresult.registerObject("kitchenToGrid", kitchenToGrid);
+		ruleresult.registerObject("grid", grid);
+		ruleresult.registerObject("kitchen", kitchen);
+		ruleresult.registerObject("itemSocket", itemSocket);
 
 	}
 
@@ -379,48 +379,48 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isAppropriate_BWD(Match match, ItemSocket itemSocket, Kitchen kitchen) {
+	public boolean isAppropriate_BWD(Match match, Kitchen kitchen, ItemSocket itemSocket) {
 
 		Object[] result1_black = SocketToGroupImpl.pattern_SocketToGroup_10_1_initialbindings_blackBBBB(this, match,
-				itemSocket, kitchen);
+				kitchen, itemSocket);
 		if (result1_black == null) {
 			throw new RuntimeException(
 					"Pattern matching failed." + " Variables: " + "[this] = " + this + ", " + "[match] = " + match
-							+ ", " + "[itemSocket] = " + itemSocket + ", " + "[kitchen] = " + kitchen + ".");
+							+ ", " + "[kitchen] = " + kitchen + ", " + "[itemSocket] = " + itemSocket + ".");
 		}
 
 		Object[] result2_bindingAndBlack = SocketToGroupImpl
-				.pattern_SocketToGroup_10_2_SolveCSP_bindingAndBlackFBBBB(this, match, itemSocket, kitchen);
+				.pattern_SocketToGroup_10_2_SolveCSP_bindingAndBlackFBBBB(this, match, kitchen, itemSocket);
 		if (result2_bindingAndBlack == null) {
 			throw new RuntimeException(
 					"Pattern matching failed." + " Variables: " + "[this] = " + this + ", " + "[match] = " + match
-							+ ", " + "[itemSocket] = " + itemSocket + ", " + "[kitchen] = " + kitchen + ".");
+							+ ", " + "[kitchen] = " + kitchen + ", " + "[itemSocket] = " + itemSocket + ".");
 		}
 		CSP csp = (CSP) result2_bindingAndBlack[0];
 		// 
 		if (SocketToGroupImpl.pattern_SocketToGroup_10_3_CheckCSP_expressionFBB(this, csp)) {
 
 			Object[] result4_black = SocketToGroupImpl
-					.pattern_SocketToGroup_10_4_collectelementstobetranslated_blackBBB(match, itemSocket, kitchen);
+					.pattern_SocketToGroup_10_4_collectelementstobetranslated_blackBBB(match, kitchen, itemSocket);
 			if (result4_black == null) {
 				throw new RuntimeException("Pattern matching failed." + " Variables: " + "[match] = " + match + ", "
-						+ "[itemSocket] = " + itemSocket + ", " + "[kitchen] = " + kitchen + ".");
+						+ "[kitchen] = " + kitchen + ", " + "[itemSocket] = " + itemSocket + ".");
 			}
-			SocketToGroupImpl.pattern_SocketToGroup_10_4_collectelementstobetranslated_greenBBBF(match, itemSocket,
-					kitchen);
+			SocketToGroupImpl.pattern_SocketToGroup_10_4_collectelementstobetranslated_greenBBBF(match, kitchen,
+					itemSocket);
 			//nothing EMoflonEdge kitchen__itemSocket____itemSockets = (EMoflonEdge) result4_green[3];
 
 			Object[] result5_black = SocketToGroupImpl.pattern_SocketToGroup_10_5_collectcontextelements_blackBBB(match,
-					itemSocket, kitchen);
+					kitchen, itemSocket);
 			if (result5_black == null) {
 				throw new RuntimeException("Pattern matching failed." + " Variables: " + "[match] = " + match + ", "
-						+ "[itemSocket] = " + itemSocket + ", " + "[kitchen] = " + kitchen + ".");
+						+ "[kitchen] = " + kitchen + ", " + "[itemSocket] = " + itemSocket + ".");
 			}
 			SocketToGroupImpl.pattern_SocketToGroup_10_5_collectcontextelements_greenBB(match, kitchen);
 
 			// 
-			SocketToGroupImpl.pattern_SocketToGroup_10_6_registerobjectstomatch_expressionBBBB(this, match, itemSocket,
-					kitchen);
+			SocketToGroupImpl.pattern_SocketToGroup_10_6_registerobjectstomatch_expressionBBBB(this, match, kitchen,
+					itemSocket);
 			return SocketToGroupImpl.pattern_SocketToGroup_10_7_expressionF();
 		} else {
 			return SocketToGroupImpl.pattern_SocketToGroup_10_8_expressionF();
@@ -441,45 +441,45 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
 					+ "[isApplicableMatch] = " + isApplicableMatch + ".");
 		}
-		ItemSocket itemSocket = (ItemSocket) result1_bindingAndBlack[0];
-		KitchenToGridCorr kitchenToGrid = (KitchenToGridCorr) result1_bindingAndBlack[1];
+		KitchenToGridCorr kitchenToGrid = (KitchenToGridCorr) result1_bindingAndBlack[0];
+		Grid grid = (Grid) result1_bindingAndBlack[1];
 		Kitchen kitchen = (Kitchen) result1_bindingAndBlack[2];
-		Grid grid = (Grid) result1_bindingAndBlack[3];
+		ItemSocket itemSocket = (ItemSocket) result1_bindingAndBlack[3];
 		//nothing CSP csp = (CSP) result1_bindingAndBlack[4];
-		Object[] result1_green = SocketToGroupImpl
-				.pattern_SocketToGroup_11_1_performtransformation_greenFBBF(itemSocket, grid);
+		Object[] result1_green = SocketToGroupImpl.pattern_SocketToGroup_11_1_performtransformation_greenFFBB(grid,
+				itemSocket);
 		Group group = (Group) result1_green[0];
-		SocketToGroupCorr socketToGroup = (SocketToGroupCorr) result1_green[3];
+		SocketToGroupCorr socketToGroup = (SocketToGroupCorr) result1_green[1];
 
 		Object[] result2_black = SocketToGroupImpl.pattern_SocketToGroup_11_2_collecttranslatedelements_blackBBB(group,
-				itemSocket, socketToGroup);
+				socketToGroup, itemSocket);
 		if (result2_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[group] = " + group + ", "
-					+ "[itemSocket] = " + itemSocket + ", " + "[socketToGroup] = " + socketToGroup + ".");
+					+ "[socketToGroup] = " + socketToGroup + ", " + "[itemSocket] = " + itemSocket + ".");
 		}
 		Object[] result2_green = SocketToGroupImpl.pattern_SocketToGroup_11_2_collecttranslatedelements_greenFBBB(group,
-				itemSocket, socketToGroup);
+				socketToGroup, itemSocket);
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		Object[] result3_black = SocketToGroupImpl.pattern_SocketToGroup_11_3_bookkeepingforedges_blackBBBBBBB(
-				ruleresult, group, itemSocket, kitchenToGrid, kitchen, grid, socketToGroup);
+				ruleresult, group, socketToGroup, kitchenToGrid, grid, kitchen, itemSocket);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[ruleresult] = " + ruleresult
-					+ ", " + "[group] = " + group + ", " + "[itemSocket] = " + itemSocket + ", " + "[kitchenToGrid] = "
-					+ kitchenToGrid + ", " + "[kitchen] = " + kitchen + ", " + "[grid] = " + grid + ", "
-					+ "[socketToGroup] = " + socketToGroup + ".");
+					+ ", " + "[group] = " + group + ", " + "[socketToGroup] = " + socketToGroup + ", "
+					+ "[kitchenToGrid] = " + kitchenToGrid + ", " + "[grid] = " + grid + ", " + "[kitchen] = " + kitchen
+					+ ", " + "[itemSocket] = " + itemSocket + ".");
 		}
-		SocketToGroupImpl.pattern_SocketToGroup_11_3_bookkeepingforedges_greenBBBBBBFFFF(ruleresult, group, itemSocket,
-				kitchen, grid, socketToGroup);
-		//nothing EMoflonEdge kitchen__itemSocket____itemSockets = (EMoflonEdge) result3_green[6];
-		//nothing EMoflonEdge socketToGroup__group____source = (EMoflonEdge) result3_green[7];
-		//nothing EMoflonEdge socketToGroup__itemSocket____target = (EMoflonEdge) result3_green[8];
-		//nothing EMoflonEdge grid__group____groups = (EMoflonEdge) result3_green[9];
+		SocketToGroupImpl.pattern_SocketToGroup_11_3_bookkeepingforedges_greenBBBBBBFFFF(ruleresult, group,
+				socketToGroup, grid, kitchen, itemSocket);
+		//nothing EMoflonEdge socketToGroup__group____source = (EMoflonEdge) result3_green[6];
+		//nothing EMoflonEdge grid__group____groups = (EMoflonEdge) result3_green[7];
+		//nothing EMoflonEdge kitchen__itemSocket____itemSockets = (EMoflonEdge) result3_green[8];
+		//nothing EMoflonEdge socketToGroup__itemSocket____target = (EMoflonEdge) result3_green[9];
 
 		// 
 		// 
 		SocketToGroupImpl.pattern_SocketToGroup_11_5_registerobjects_expressionBBBBBBBB(this, ruleresult, group,
-				itemSocket, kitchenToGrid, kitchen, grid, socketToGroup);
+				socketToGroup, kitchenToGrid, grid, kitchen, itemSocket);
 		return SocketToGroupImpl.pattern_SocketToGroup_11_6_expressionFB(ruleresult);
 	}
 
@@ -507,30 +507,30 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 			throw new RuntimeException(
 					"Binding in node core match failed." + " Variables: " + "[match] = " + match + ".");
 		}
-		ItemSocket itemSocket = (ItemSocket) result2_binding[0];
-		Kitchen kitchen = (Kitchen) result2_binding[1];
-		for (Object[] result2_black : SocketToGroupImpl.pattern_SocketToGroup_12_2_corematch_blackBFBFB(itemSocket,
-				kitchen, match)) {
-			KitchenToGridCorr kitchenToGrid = (KitchenToGridCorr) result2_black[1];
-			Grid grid = (Grid) result2_black[3];
+		Kitchen kitchen = (Kitchen) result2_binding[0];
+		ItemSocket itemSocket = (ItemSocket) result2_binding[1];
+		for (Object[] result2_black : SocketToGroupImpl.pattern_SocketToGroup_12_2_corematch_blackFFBBB(kitchen,
+				itemSocket, match)) {
+			KitchenToGridCorr kitchenToGrid = (KitchenToGridCorr) result2_black[0];
+			Grid grid = (Grid) result2_black[1];
 			// ForEach 
-			for (Object[] result3_black : SocketToGroupImpl.pattern_SocketToGroup_12_3_findcontext_blackBBBB(itemSocket,
-					kitchenToGrid, kitchen, grid)) {
+			for (Object[] result3_black : SocketToGroupImpl
+					.pattern_SocketToGroup_12_3_findcontext_blackBBBB(kitchenToGrid, grid, kitchen, itemSocket)) {
 				Object[] result3_green = SocketToGroupImpl
-						.pattern_SocketToGroup_12_3_findcontext_greenBBBBFFFF(itemSocket, kitchenToGrid, kitchen, grid);
+						.pattern_SocketToGroup_12_3_findcontext_greenBBBBFFFF(kitchenToGrid, grid, kitchen, itemSocket);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[4];
-				//nothing EMoflonEdge kitchen__itemSocket____itemSockets = (EMoflonEdge) result3_green[5];
-				//nothing EMoflonEdge kitchenToGrid__kitchen____target = (EMoflonEdge) result3_green[6];
-				//nothing EMoflonEdge kitchenToGrid__grid____source = (EMoflonEdge) result3_green[7];
+				//nothing EMoflonEdge kitchenToGrid__grid____source = (EMoflonEdge) result3_green[5];
+				//nothing EMoflonEdge kitchen__itemSocket____itemSockets = (EMoflonEdge) result3_green[6];
+				//nothing EMoflonEdge kitchenToGrid__kitchen____target = (EMoflonEdge) result3_green[7];
 
 				Object[] result4_bindingAndBlack = SocketToGroupImpl
-						.pattern_SocketToGroup_12_4_solveCSP_bindingAndBlackFBBBBBB(this, isApplicableMatch, itemSocket,
-								kitchenToGrid, kitchen, grid);
+						.pattern_SocketToGroup_12_4_solveCSP_bindingAndBlackFBBBBBB(this, isApplicableMatch,
+								kitchenToGrid, grid, kitchen, itemSocket);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-							+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[itemSocket] = " + itemSocket
-							+ ", " + "[kitchenToGrid] = " + kitchenToGrid + ", " + "[kitchen] = " + kitchen + ", "
-							+ "[grid] = " + grid + ".");
+							+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[kitchenToGrid] = " + kitchenToGrid
+							+ ", " + "[grid] = " + grid + ", " + "[kitchen] = " + kitchen + ", " + "[itemSocket] = "
+							+ itemSocket + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// 
@@ -559,9 +559,9 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjectsToMatch_BWD(Match match, ItemSocket itemSocket, Kitchen kitchen) {
-		match.registerObject("itemSocket", itemSocket);
+	public void registerObjectsToMatch_BWD(Match match, Kitchen kitchen, ItemSocket itemSocket) {
 		match.registerObject("kitchen", kitchen);
+		match.registerObject("itemSocket", itemSocket);
 
 	}
 
@@ -570,7 +570,7 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isAppropriate_solveCsp_BWD(Match match, ItemSocket itemSocket, Kitchen kitchen) {// Create CSP
+	public CSP isAppropriate_solveCsp_BWD(Match match, Kitchen kitchen, ItemSocket itemSocket) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
 		// Create literals
@@ -607,8 +607,8 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, ItemSocket itemSocket,
-			KitchenToGridCorr kitchenToGrid, Kitchen kitchen, Grid grid) {// Create CSP
+	public CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, KitchenToGridCorr kitchenToGrid,
+			Grid grid, Kitchen kitchen, ItemSocket itemSocket) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -623,10 +623,10 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 		// Solve CSP
 
 		// Snapshot pattern match on which CSP is solved
-		isApplicableMatch.registerObject("itemSocket", itemSocket);
 		isApplicableMatch.registerObject("kitchenToGrid", kitchenToGrid);
-		isApplicableMatch.registerObject("kitchen", kitchen);
 		isApplicableMatch.registerObject("grid", grid);
+		isApplicableMatch.registerObject("kitchen", kitchen);
+		isApplicableMatch.registerObject("itemSocket", itemSocket);
 		return csp;
 	}
 
@@ -644,14 +644,14 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_BWD(PerformRuleResult ruleresult, EObject group, EObject itemSocket,
-			EObject kitchenToGrid, EObject kitchen, EObject grid, EObject socketToGroup) {
+	public void registerObjects_BWD(PerformRuleResult ruleresult, EObject group, EObject socketToGroup,
+			EObject kitchenToGrid, EObject grid, EObject kitchen, EObject itemSocket) {
 		ruleresult.registerObject("group", group);
-		ruleresult.registerObject("itemSocket", itemSocket);
-		ruleresult.registerObject("kitchenToGrid", kitchenToGrid);
-		ruleresult.registerObject("kitchen", kitchen);
-		ruleresult.registerObject("grid", grid);
 		ruleresult.registerObject("socketToGroup", socketToGroup);
+		ruleresult.registerObject("kitchenToGrid", kitchenToGrid);
+		ruleresult.registerObject("grid", grid);
+		ruleresult.registerObject("kitchen", kitchen);
+		ruleresult.registerObject("itemSocket", itemSocket);
 
 	}
 
@@ -670,7 +670,7 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_4(EMoflonEdge _edge_groups) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_2(EMoflonEdge _edge_groups) {
 
 		Object[] result1_bindingAndBlack = SocketToGroupImpl
 				.pattern_SocketToGroup_20_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -726,7 +726,7 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_BWD_EMoflonEdge_4(EMoflonEdge _edge_itemSockets) {
+	public EObjectContainer isAppropriate_BWD_EMoflonEdge_2(EMoflonEdge _edge_itemSockets) {
 
 		Object[] result1_bindingAndBlack = SocketToGroupImpl
 				.pattern_SocketToGroup_21_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -742,15 +742,15 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 		// ForEach 
 		for (Object[] result2_black : SocketToGroupImpl
 				.pattern_SocketToGroup_21_2_testcorematchandDECs_blackFFB(_edge_itemSockets)) {
-			ItemSocket itemSocket = (ItemSocket) result2_black[0];
-			Kitchen kitchen = (Kitchen) result2_black[1];
+			Kitchen kitchen = (Kitchen) result2_black[0];
+			ItemSocket itemSocket = (ItemSocket) result2_black[1];
 			Object[] result2_green = SocketToGroupImpl
 					.pattern_SocketToGroup_21_2_testcorematchandDECs_greenFB(__eClass);
 			Match match = (Match) result2_green[0];
 
 			// 
 			if (SocketToGroupImpl.pattern_SocketToGroup_21_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBB(
-					this, match, itemSocket, kitchen)) {
+					this, match, kitchen, itemSocket)) {
 				// 
 				if (SocketToGroupImpl
 						.pattern_SocketToGroup_21_4_Ensurethatthecorrecttypesofelementsarematched_expressionFBB(this,
@@ -882,39 +882,39 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 					+ ", " + "[targetMatch] = " + targetMatch + ".");
 		}
 		Group group = (Group) result2_bindingAndBlack[0];
-		ItemSocket itemSocket = (ItemSocket) result2_bindingAndBlack[1];
+		Grid grid = (Grid) result2_bindingAndBlack[1];
 		Kitchen kitchen = (Kitchen) result2_bindingAndBlack[2];
-		Grid grid = (Grid) result2_bindingAndBlack[3];
+		ItemSocket itemSocket = (ItemSocket) result2_bindingAndBlack[3];
 
 		Object[] result3_bindingAndBlack = SocketToGroupImpl
-				.pattern_SocketToGroup_24_3_solvecsp_bindingAndBlackFBBBBBBB(this, group, itemSocket, kitchen, grid,
+				.pattern_SocketToGroup_24_3_solvecsp_bindingAndBlackFBBBBBBB(this, group, grid, kitchen, itemSocket,
 						sourceMatch, targetMatch);
 		if (result3_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[this] = " + this + ", "
-					+ "[group] = " + group + ", " + "[itemSocket] = " + itemSocket + ", " + "[kitchen] = " + kitchen
-					+ ", " + "[grid] = " + grid + ", " + "[sourceMatch] = " + sourceMatch + ", " + "[targetMatch] = "
-					+ targetMatch + ".");
+					+ "[group] = " + group + ", " + "[grid] = " + grid + ", " + "[kitchen] = " + kitchen + ", "
+					+ "[itemSocket] = " + itemSocket + ", " + "[sourceMatch] = " + sourceMatch + ", "
+					+ "[targetMatch] = " + targetMatch + ".");
 		}
 		CSP csp = (CSP) result3_bindingAndBlack[0];
 		// 
 		if (SocketToGroupImpl.pattern_SocketToGroup_24_4_checkCSP_expressionFB(csp)) {
 			// ForEach 
-			for (Object[] result5_black : SocketToGroupImpl
-					.pattern_SocketToGroup_24_5_matchcorrcontext_blackFBBBB(kitchen, grid, sourceMatch, targetMatch)) {
+			for (Object[] result5_black : SocketToGroupImpl.pattern_SocketToGroup_24_5_matchcorrcontext_blackFBBBB(grid,
+					kitchen, sourceMatch, targetMatch)) {
 				KitchenToGridCorr kitchenToGrid = (KitchenToGridCorr) result5_black[0];
 				Object[] result5_green = SocketToGroupImpl
 						.pattern_SocketToGroup_24_5_matchcorrcontext_greenBBBF(kitchenToGrid, sourceMatch, targetMatch);
 				CCMatch ccMatch = (CCMatch) result5_green[3];
 
 				Object[] result6_black = SocketToGroupImpl.pattern_SocketToGroup_24_6_createcorrespondence_blackBBBBB(
-						group, itemSocket, kitchen, grid, ccMatch);
+						group, grid, kitchen, itemSocket, ccMatch);
 				if (result6_black == null) {
 					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[group] = " + group + ", "
-							+ "[itemSocket] = " + itemSocket + ", " + "[kitchen] = " + kitchen + ", " + "[grid] = "
-							+ grid + ", " + "[ccMatch] = " + ccMatch + ".");
+							+ "[grid] = " + grid + ", " + "[kitchen] = " + kitchen + ", " + "[itemSocket] = "
+							+ itemSocket + ", " + "[ccMatch] = " + ccMatch + ".");
 				}
-				SocketToGroupImpl.pattern_SocketToGroup_24_6_createcorrespondence_greenBBFB(group, itemSocket, ccMatch);
-				//nothing SocketToGroupCorr socketToGroup = (SocketToGroupCorr) result6_green[2];
+				SocketToGroupImpl.pattern_SocketToGroup_24_6_createcorrespondence_greenBFBB(group, itemSocket, ccMatch);
+				//nothing SocketToGroupCorr socketToGroup = (SocketToGroupCorr) result6_green[1];
 
 				Object[] result7_black = SocketToGroupImpl
 						.pattern_SocketToGroup_24_7_addtoreturnedresult_blackBB(result, ccMatch);
@@ -936,7 +936,7 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_CC(Group group, ItemSocket itemSocket, Kitchen kitchen, Grid grid,
+	public CSP isApplicable_solveCsp_CC(Group group, Grid grid, Kitchen kitchen, ItemSocket itemSocket,
 			Match sourceMatch, Match targetMatch) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
@@ -989,9 +989,9 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean checkDEC_BWD(ItemSocket itemSocket, Kitchen kitchen) {// 
-		Object[] result1_black = SocketToGroupImpl.pattern_SocketToGroup_28_1_matchtggpattern_blackBB(itemSocket,
-				kitchen);
+	public boolean checkDEC_BWD(Kitchen kitchen, ItemSocket itemSocket) {// 
+		Object[] result1_black = SocketToGroupImpl.pattern_SocketToGroup_28_1_matchtggpattern_blackBB(kitchen,
+				itemSocket);
 		if (result1_black != null) {
 			return SocketToGroupImpl.pattern_SocketToGroup_28_2_expressionF();
 		} else {
@@ -1022,9 +1022,9 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 					(Grid) arguments.get(2));
 		case RulesPackage.SOCKET_TO_GROUP___IS_APPROPRIATE_CHECK_CSP_FWD__CSP:
 			return isAppropriate_checkCsp_FWD((CSP) arguments.get(0));
-		case RulesPackage.SOCKET_TO_GROUP___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_GROUP_KITCHENTOGRIDCORR_KITCHEN_GRID:
+		case RulesPackage.SOCKET_TO_GROUP___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_GROUP_KITCHENTOGRIDCORR_GRID_KITCHEN:
 			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0), (Group) arguments.get(1),
-					(KitchenToGridCorr) arguments.get(2), (Kitchen) arguments.get(3), (Grid) arguments.get(4));
+					(KitchenToGridCorr) arguments.get(2), (Grid) arguments.get(3), (Kitchen) arguments.get(4));
 		case RulesPackage.SOCKET_TO_GROUP___IS_APPLICABLE_CHECK_CSP_FWD__CSP:
 			return isApplicable_checkCsp_FWD((CSP) arguments.get(0));
 		case RulesPackage.SOCKET_TO_GROUP___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT:
@@ -1034,25 +1034,25 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 			return null;
 		case RulesPackage.SOCKET_TO_GROUP___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.SOCKET_TO_GROUP___IS_APPROPRIATE_BWD__MATCH_ITEMSOCKET_KITCHEN:
-			return isAppropriate_BWD((Match) arguments.get(0), (ItemSocket) arguments.get(1),
-					(Kitchen) arguments.get(2));
+		case RulesPackage.SOCKET_TO_GROUP___IS_APPROPRIATE_BWD__MATCH_KITCHEN_ITEMSOCKET:
+			return isAppropriate_BWD((Match) arguments.get(0), (Kitchen) arguments.get(1),
+					(ItemSocket) arguments.get(2));
 		case RulesPackage.SOCKET_TO_GROUP___PERFORM_BWD__ISAPPLICABLEMATCH:
 			return perform_BWD((IsApplicableMatch) arguments.get(0));
 		case RulesPackage.SOCKET_TO_GROUP___IS_APPLICABLE_BWD__MATCH:
 			return isApplicable_BWD((Match) arguments.get(0));
-		case RulesPackage.SOCKET_TO_GROUP___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_ITEMSOCKET_KITCHEN:
-			registerObjectsToMatch_BWD((Match) arguments.get(0), (ItemSocket) arguments.get(1),
-					(Kitchen) arguments.get(2));
+		case RulesPackage.SOCKET_TO_GROUP___REGISTER_OBJECTS_TO_MATCH_BWD__MATCH_KITCHEN_ITEMSOCKET:
+			registerObjectsToMatch_BWD((Match) arguments.get(0), (Kitchen) arguments.get(1),
+					(ItemSocket) arguments.get(2));
 			return null;
-		case RulesPackage.SOCKET_TO_GROUP___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_ITEMSOCKET_KITCHEN:
-			return isAppropriate_solveCsp_BWD((Match) arguments.get(0), (ItemSocket) arguments.get(1),
-					(Kitchen) arguments.get(2));
+		case RulesPackage.SOCKET_TO_GROUP___IS_APPROPRIATE_SOLVE_CSP_BWD__MATCH_KITCHEN_ITEMSOCKET:
+			return isAppropriate_solveCsp_BWD((Match) arguments.get(0), (Kitchen) arguments.get(1),
+					(ItemSocket) arguments.get(2));
 		case RulesPackage.SOCKET_TO_GROUP___IS_APPROPRIATE_CHECK_CSP_BWD__CSP:
 			return isAppropriate_checkCsp_BWD((CSP) arguments.get(0));
-		case RulesPackage.SOCKET_TO_GROUP___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_ITEMSOCKET_KITCHENTOGRIDCORR_KITCHEN_GRID:
-			return isApplicable_solveCsp_BWD((IsApplicableMatch) arguments.get(0), (ItemSocket) arguments.get(1),
-					(KitchenToGridCorr) arguments.get(2), (Kitchen) arguments.get(3), (Grid) arguments.get(4));
+		case RulesPackage.SOCKET_TO_GROUP___IS_APPLICABLE_SOLVE_CSP_BWD__ISAPPLICABLEMATCH_KITCHENTOGRIDCORR_GRID_KITCHEN_ITEMSOCKET:
+			return isApplicable_solveCsp_BWD((IsApplicableMatch) arguments.get(0), (KitchenToGridCorr) arguments.get(1),
+					(Grid) arguments.get(2), (Kitchen) arguments.get(3), (ItemSocket) arguments.get(4));
 		case RulesPackage.SOCKET_TO_GROUP___IS_APPLICABLE_CHECK_CSP_BWD__CSP:
 			return isApplicable_checkCsp_BWD((CSP) arguments.get(0));
 		case RulesPackage.SOCKET_TO_GROUP___REGISTER_OBJECTS_BWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT:
@@ -1062,26 +1062,26 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 			return null;
 		case RulesPackage.SOCKET_TO_GROUP___CHECK_TYPES_BWD__MATCH:
 			return checkTypes_BWD((Match) arguments.get(0));
-		case RulesPackage.SOCKET_TO_GROUP___IS_APPROPRIATE_FWD_EMOFLON_EDGE_4__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_4((EMoflonEdge) arguments.get(0));
-		case RulesPackage.SOCKET_TO_GROUP___IS_APPROPRIATE_BWD_EMOFLON_EDGE_4__EMOFLONEDGE:
-			return isAppropriate_BWD_EMoflonEdge_4((EMoflonEdge) arguments.get(0));
+		case RulesPackage.SOCKET_TO_GROUP___IS_APPROPRIATE_FWD_EMOFLON_EDGE_2__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_2((EMoflonEdge) arguments.get(0));
+		case RulesPackage.SOCKET_TO_GROUP___IS_APPROPRIATE_BWD_EMOFLON_EDGE_2__EMOFLONEDGE:
+			return isAppropriate_BWD_EMoflonEdge_2((EMoflonEdge) arguments.get(0));
 		case RulesPackage.SOCKET_TO_GROUP___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.SOCKET_TO_GROUP___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH:
 			return checkAttributes_BWD((TripleMatch) arguments.get(0));
 		case RulesPackage.SOCKET_TO_GROUP___IS_APPLICABLE_CC__MATCH_MATCH:
 			return isApplicable_CC((Match) arguments.get(0), (Match) arguments.get(1));
-		case RulesPackage.SOCKET_TO_GROUP___IS_APPLICABLE_SOLVE_CSP_CC__GROUP_ITEMSOCKET_KITCHEN_GRID_MATCH_MATCH:
-			return isApplicable_solveCsp_CC((Group) arguments.get(0), (ItemSocket) arguments.get(1),
-					(Kitchen) arguments.get(2), (Grid) arguments.get(3), (Match) arguments.get(4),
+		case RulesPackage.SOCKET_TO_GROUP___IS_APPLICABLE_SOLVE_CSP_CC__GROUP_GRID_KITCHEN_ITEMSOCKET_MATCH_MATCH:
+			return isApplicable_solveCsp_CC((Group) arguments.get(0), (Grid) arguments.get(1),
+					(Kitchen) arguments.get(2), (ItemSocket) arguments.get(3), (Match) arguments.get(4),
 					(Match) arguments.get(5));
 		case RulesPackage.SOCKET_TO_GROUP___IS_APPLICABLE_CHECK_CSP_CC__CSP:
 			return isApplicable_checkCsp_CC((CSP) arguments.get(0));
 		case RulesPackage.SOCKET_TO_GROUP___CHECK_DEC_FWD__GROUP_GRID:
 			return checkDEC_FWD((Group) arguments.get(0), (Grid) arguments.get(1));
-		case RulesPackage.SOCKET_TO_GROUP___CHECK_DEC_BWD__ITEMSOCKET_KITCHEN:
-			return checkDEC_BWD((ItemSocket) arguments.get(0), (Kitchen) arguments.get(1));
+		case RulesPackage.SOCKET_TO_GROUP___CHECK_DEC_BWD__KITCHEN_ITEMSOCKET:
+			return checkDEC_BWD((Kitchen) arguments.get(0), (ItemSocket) arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -1174,21 +1174,21 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 			IsApplicableMatch isApplicableMatch) {
 		EObject _localVariable_0 = isApplicableMatch.getObject("group");
 		EObject _localVariable_1 = isApplicableMatch.getObject("kitchenToGrid");
-		EObject _localVariable_2 = isApplicableMatch.getObject("kitchen");
-		EObject _localVariable_3 = isApplicableMatch.getObject("grid");
+		EObject _localVariable_2 = isApplicableMatch.getObject("grid");
+		EObject _localVariable_3 = isApplicableMatch.getObject("kitchen");
 		EObject tmpGroup = _localVariable_0;
 		EObject tmpKitchenToGrid = _localVariable_1;
-		EObject tmpKitchen = _localVariable_2;
-		EObject tmpGrid = _localVariable_3;
+		EObject tmpGrid = _localVariable_2;
+		EObject tmpKitchen = _localVariable_3;
 		if (tmpGroup instanceof Group) {
 			Group group = (Group) tmpGroup;
 			if (tmpKitchenToGrid instanceof KitchenToGridCorr) {
 				KitchenToGridCorr kitchenToGrid = (KitchenToGridCorr) tmpKitchenToGrid;
-				if (tmpKitchen instanceof Kitchen) {
-					Kitchen kitchen = (Kitchen) tmpKitchen;
-					if (tmpGrid instanceof Grid) {
-						Grid grid = (Grid) tmpGrid;
-						return new Object[] { group, kitchenToGrid, kitchen, grid, isApplicableMatch };
+				if (tmpGrid instanceof Grid) {
+					Grid grid = (Grid) tmpGrid;
+					if (tmpKitchen instanceof Kitchen) {
+						Kitchen kitchen = (Kitchen) tmpKitchen;
+						return new Object[] { group, kitchenToGrid, grid, kitchen, isApplicableMatch };
 					}
 				}
 			}
@@ -1197,12 +1197,12 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	}
 
 	public static final Object[] pattern_SocketToGroup_1_1_performtransformation_blackBBBBFBB(Group group,
-			KitchenToGridCorr kitchenToGrid, Kitchen kitchen, Grid grid, SocketToGroup _this,
+			KitchenToGridCorr kitchenToGrid, Grid grid, Kitchen kitchen, SocketToGroup _this,
 			IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { group, kitchenToGrid, kitchen, grid, csp, _this, isApplicableMatch };
+				return new Object[] { group, kitchenToGrid, grid, kitchen, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
@@ -1215,15 +1215,15 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 		if (result_pattern_SocketToGroup_1_1_performtransformation_binding != null) {
 			Group group = (Group) result_pattern_SocketToGroup_1_1_performtransformation_binding[0];
 			KitchenToGridCorr kitchenToGrid = (KitchenToGridCorr) result_pattern_SocketToGroup_1_1_performtransformation_binding[1];
-			Kitchen kitchen = (Kitchen) result_pattern_SocketToGroup_1_1_performtransformation_binding[2];
-			Grid grid = (Grid) result_pattern_SocketToGroup_1_1_performtransformation_binding[3];
+			Grid grid = (Grid) result_pattern_SocketToGroup_1_1_performtransformation_binding[2];
+			Kitchen kitchen = (Kitchen) result_pattern_SocketToGroup_1_1_performtransformation_binding[3];
 
 			Object[] result_pattern_SocketToGroup_1_1_performtransformation_black = pattern_SocketToGroup_1_1_performtransformation_blackBBBBFBB(
-					group, kitchenToGrid, kitchen, grid, _this, isApplicableMatch);
+					group, kitchenToGrid, grid, kitchen, _this, isApplicableMatch);
 			if (result_pattern_SocketToGroup_1_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_SocketToGroup_1_1_performtransformation_black[4];
 
-				return new Object[] { group, kitchenToGrid, kitchen, grid, csp, _this, isApplicableMatch };
+				return new Object[] { group, kitchenToGrid, grid, kitchen, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
@@ -1231,52 +1231,52 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 
 	public static final Object[] pattern_SocketToGroup_1_1_performtransformation_greenBFBFB(Group group,
 			Kitchen kitchen, CSP csp) {
-		ItemSocket itemSocket = KitchenLanguageFactory.eINSTANCE.createItemSocket();
 		SocketToGroupCorr socketToGroup = KitchenToGridLanguageFactory.eINSTANCE.createSocketToGroupCorr();
+		ItemSocket itemSocket = KitchenLanguageFactory.eINSTANCE.createItemSocket();
 		Object _localVariable_0 = csp.getValue("itemSocket", "id");
-		kitchen.getItemSockets().add(itemSocket);
 		socketToGroup.setSource(group);
+		kitchen.getItemSockets().add(itemSocket);
 		socketToGroup.setTarget(itemSocket);
 		String itemSocket_id_prime = (String) _localVariable_0;
 		itemSocket.setId(itemSocket_id_prime);
-		return new Object[] { group, itemSocket, kitchen, socketToGroup, csp };
+		return new Object[] { group, socketToGroup, kitchen, itemSocket, csp };
 	}
 
 	public static final Object[] pattern_SocketToGroup_1_2_collecttranslatedelements_blackBBB(Group group,
-			ItemSocket itemSocket, SocketToGroupCorr socketToGroup) {
-		return new Object[] { group, itemSocket, socketToGroup };
+			SocketToGroupCorr socketToGroup, ItemSocket itemSocket) {
+		return new Object[] { group, socketToGroup, itemSocket };
 	}
 
 	public static final Object[] pattern_SocketToGroup_1_2_collecttranslatedelements_greenFBBB(Group group,
-			ItemSocket itemSocket, SocketToGroupCorr socketToGroup) {
+			SocketToGroupCorr socketToGroup, ItemSocket itemSocket) {
 		PerformRuleResult ruleresult = RuntimeFactory.eINSTANCE.createPerformRuleResult();
 		ruleresult.getTranslatedElements().add(group);
-		ruleresult.getCreatedElements().add(itemSocket);
 		ruleresult.getCreatedLinkElements().add(socketToGroup);
-		return new Object[] { ruleresult, group, itemSocket, socketToGroup };
+		ruleresult.getCreatedElements().add(itemSocket);
+		return new Object[] { ruleresult, group, socketToGroup, itemSocket };
 	}
 
 	public static final Object[] pattern_SocketToGroup_1_3_bookkeepingforedges_blackBBBBBBB(
-			PerformRuleResult ruleresult, EObject group, EObject itemSocket, EObject kitchenToGrid, EObject kitchen,
-			EObject grid, EObject socketToGroup) {
-		if (!group.equals(itemSocket)) {
+			PerformRuleResult ruleresult, EObject group, EObject socketToGroup, EObject kitchenToGrid, EObject grid,
+			EObject kitchen, EObject itemSocket) {
+		if (!group.equals(socketToGroup)) {
 			if (!group.equals(kitchenToGrid)) {
 				if (!group.equals(kitchen)) {
-					if (!group.equals(socketToGroup)) {
-						if (!itemSocket.equals(kitchenToGrid)) {
-							if (!itemSocket.equals(kitchen)) {
-								if (!itemSocket.equals(socketToGroup)) {
-									if (!kitchenToGrid.equals(socketToGroup)) {
-										if (!kitchen.equals(kitchenToGrid)) {
-											if (!kitchen.equals(socketToGroup)) {
-												if (!grid.equals(group)) {
-													if (!grid.equals(itemSocket)) {
-														if (!grid.equals(kitchenToGrid)) {
-															if (!grid.equals(kitchen)) {
-																if (!grid.equals(socketToGroup)) {
-																	return new Object[] { ruleresult, group, itemSocket,
-																			kitchenToGrid, kitchen, grid,
-																			socketToGroup };
+					if (!group.equals(itemSocket)) {
+						if (!kitchenToGrid.equals(socketToGroup)) {
+							if (!grid.equals(group)) {
+								if (!grid.equals(socketToGroup)) {
+									if (!grid.equals(kitchenToGrid)) {
+										if (!grid.equals(kitchen)) {
+											if (!grid.equals(itemSocket)) {
+												if (!kitchen.equals(socketToGroup)) {
+													if (!kitchen.equals(kitchenToGrid)) {
+														if (!itemSocket.equals(socketToGroup)) {
+															if (!itemSocket.equals(kitchenToGrid)) {
+																if (!itemSocket.equals(kitchen)) {
+																	return new Object[] { ruleresult, group,
+																			socketToGroup, kitchenToGrid, grid, kitchen,
+																			itemSocket };
 																}
 															}
 														}
@@ -1296,43 +1296,43 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	}
 
 	public static final Object[] pattern_SocketToGroup_1_3_bookkeepingforedges_greenBBBBBBFFFF(
-			PerformRuleResult ruleresult, EObject group, EObject itemSocket, EObject kitchen, EObject grid,
-			EObject socketToGroup) {
-		EMoflonEdge kitchen__itemSocket____itemSockets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+			PerformRuleResult ruleresult, EObject group, EObject socketToGroup, EObject grid, EObject kitchen,
+			EObject itemSocket) {
 		EMoflonEdge socketToGroup__group____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge socketToGroup__itemSocket____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge grid__group____groups = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge kitchen__itemSocket____itemSockets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge socketToGroup__itemSocket____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "SocketToGroup";
-		String kitchen__itemSocket____itemSockets_name_prime = "itemSockets";
 		String socketToGroup__group____source_name_prime = "source";
-		String socketToGroup__itemSocket____target_name_prime = "target";
 		String grid__group____groups_name_prime = "groups";
-		kitchen__itemSocket____itemSockets.setSrc(kitchen);
-		kitchen__itemSocket____itemSockets.setTrg(itemSocket);
-		ruleresult.getCreatedEdges().add(kitchen__itemSocket____itemSockets);
+		String kitchen__itemSocket____itemSockets_name_prime = "itemSockets";
+		String socketToGroup__itemSocket____target_name_prime = "target";
 		socketToGroup__group____source.setSrc(socketToGroup);
 		socketToGroup__group____source.setTrg(group);
 		ruleresult.getCreatedEdges().add(socketToGroup__group____source);
-		socketToGroup__itemSocket____target.setSrc(socketToGroup);
-		socketToGroup__itemSocket____target.setTrg(itemSocket);
-		ruleresult.getCreatedEdges().add(socketToGroup__itemSocket____target);
 		grid__group____groups.setSrc(grid);
 		grid__group____groups.setTrg(group);
 		ruleresult.getTranslatedEdges().add(grid__group____groups);
+		kitchen__itemSocket____itemSockets.setSrc(kitchen);
+		kitchen__itemSocket____itemSockets.setTrg(itemSocket);
+		ruleresult.getCreatedEdges().add(kitchen__itemSocket____itemSockets);
+		socketToGroup__itemSocket____target.setSrc(socketToGroup);
+		socketToGroup__itemSocket____target.setTrg(itemSocket);
+		ruleresult.getCreatedEdges().add(socketToGroup__itemSocket____target);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
-		kitchen__itemSocket____itemSockets.setName(kitchen__itemSocket____itemSockets_name_prime);
 		socketToGroup__group____source.setName(socketToGroup__group____source_name_prime);
-		socketToGroup__itemSocket____target.setName(socketToGroup__itemSocket____target_name_prime);
 		grid__group____groups.setName(grid__group____groups_name_prime);
-		return new Object[] { ruleresult, group, itemSocket, kitchen, grid, socketToGroup,
-				kitchen__itemSocket____itemSockets, socketToGroup__group____source, socketToGroup__itemSocket____target,
-				grid__group____groups };
+		kitchen__itemSocket____itemSockets.setName(kitchen__itemSocket____itemSockets_name_prime);
+		socketToGroup__itemSocket____target.setName(socketToGroup__itemSocket____target_name_prime);
+		return new Object[] { ruleresult, group, socketToGroup, grid, kitchen, itemSocket,
+				socketToGroup__group____source, grid__group____groups, kitchen__itemSocket____itemSockets,
+				socketToGroup__itemSocket____target };
 	}
 
 	public static final void pattern_SocketToGroup_1_5_registerobjects_expressionBBBBBBBB(SocketToGroup _this,
-			PerformRuleResult ruleresult, EObject group, EObject itemSocket, EObject kitchenToGrid, EObject kitchen,
-			EObject grid, EObject socketToGroup) {
-		_this.registerObjects_FWD(ruleresult, group, itemSocket, kitchenToGrid, kitchen, grid, socketToGroup);
+			PerformRuleResult ruleresult, EObject group, EObject socketToGroup, EObject kitchenToGrid, EObject grid,
+			EObject kitchen, EObject itemSocket) {
+		_this.registerObjects_FWD(ruleresult, group, socketToGroup, kitchenToGrid, grid, kitchen, itemSocket);
 
 	}
 
@@ -1404,14 +1404,14 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_SocketToGroup_2_2_corematch_blackBFFBB(Group group, Grid grid,
+	public static final Iterable<Object[]> pattern_SocketToGroup_2_2_corematch_blackBFBFB(Group group, Grid grid,
 			Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		for (KitchenToGridCorr kitchenToGrid : org.moflon.core.utilities.eMoflonEMFUtil.getOppositeReferenceTyped(grid,
 				KitchenToGridCorr.class, "source")) {
 			Kitchen kitchen = kitchenToGrid.getTarget();
 			if (kitchen != null) {
-				_result.add(new Object[] { group, kitchenToGrid, kitchen, grid, match });
+				_result.add(new Object[] { group, kitchenToGrid, grid, kitchen, match });
 			}
 
 		}
@@ -1419,12 +1419,12 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	}
 
 	public static final Iterable<Object[]> pattern_SocketToGroup_2_3_findcontext_blackBBBB(Group group,
-			KitchenToGridCorr kitchenToGrid, Kitchen kitchen, Grid grid) {
+			KitchenToGridCorr kitchenToGrid, Grid grid, Kitchen kitchen) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		if (kitchen.equals(kitchenToGrid.getTarget())) {
+		if (grid.getGroups().contains(group)) {
 			if (grid.equals(kitchenToGrid.getSource())) {
-				if (grid.getGroups().contains(group)) {
-					_result.add(new Object[] { group, kitchenToGrid, kitchen, grid });
+				if (kitchen.equals(kitchenToGrid.getTarget())) {
+					_result.add(new Object[] { group, kitchenToGrid, grid, kitchen });
 				}
 			}
 		}
@@ -1432,41 +1432,41 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	}
 
 	public static final Object[] pattern_SocketToGroup_2_3_findcontext_greenBBBBFFFF(Group group,
-			KitchenToGridCorr kitchenToGrid, Kitchen kitchen, Grid grid) {
+			KitchenToGridCorr kitchenToGrid, Grid grid, Kitchen kitchen) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
-		EMoflonEdge kitchenToGrid__kitchen____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge kitchenToGrid__grid____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge grid__group____groups = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		String kitchenToGrid__kitchen____target_name_prime = "target";
-		String kitchenToGrid__grid____source_name_prime = "source";
+		EMoflonEdge kitchenToGrid__grid____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge kitchenToGrid__kitchen____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String grid__group____groups_name_prime = "groups";
+		String kitchenToGrid__grid____source_name_prime = "source";
+		String kitchenToGrid__kitchen____target_name_prime = "target";
 		isApplicableMatch.getAllContextElements().add(group);
 		isApplicableMatch.getAllContextElements().add(kitchenToGrid);
-		isApplicableMatch.getAllContextElements().add(kitchen);
 		isApplicableMatch.getAllContextElements().add(grid);
-		kitchenToGrid__kitchen____target.setSrc(kitchenToGrid);
-		kitchenToGrid__kitchen____target.setTrg(kitchen);
-		isApplicableMatch.getAllContextElements().add(kitchenToGrid__kitchen____target);
-		kitchenToGrid__grid____source.setSrc(kitchenToGrid);
-		kitchenToGrid__grid____source.setTrg(grid);
-		isApplicableMatch.getAllContextElements().add(kitchenToGrid__grid____source);
+		isApplicableMatch.getAllContextElements().add(kitchen);
 		grid__group____groups.setSrc(grid);
 		grid__group____groups.setTrg(group);
 		isApplicableMatch.getAllContextElements().add(grid__group____groups);
-		kitchenToGrid__kitchen____target.setName(kitchenToGrid__kitchen____target_name_prime);
-		kitchenToGrid__grid____source.setName(kitchenToGrid__grid____source_name_prime);
+		kitchenToGrid__grid____source.setSrc(kitchenToGrid);
+		kitchenToGrid__grid____source.setTrg(grid);
+		isApplicableMatch.getAllContextElements().add(kitchenToGrid__grid____source);
+		kitchenToGrid__kitchen____target.setSrc(kitchenToGrid);
+		kitchenToGrid__kitchen____target.setTrg(kitchen);
+		isApplicableMatch.getAllContextElements().add(kitchenToGrid__kitchen____target);
 		grid__group____groups.setName(grid__group____groups_name_prime);
-		return new Object[] { group, kitchenToGrid, kitchen, grid, isApplicableMatch, kitchenToGrid__kitchen____target,
-				kitchenToGrid__grid____source, grid__group____groups };
+		kitchenToGrid__grid____source.setName(kitchenToGrid__grid____source_name_prime);
+		kitchenToGrid__kitchen____target.setName(kitchenToGrid__kitchen____target_name_prime);
+		return new Object[] { group, kitchenToGrid, grid, kitchen, isApplicableMatch, grid__group____groups,
+				kitchenToGrid__grid____source, kitchenToGrid__kitchen____target };
 	}
 
 	public static final Object[] pattern_SocketToGroup_2_4_solveCSP_bindingFBBBBBB(SocketToGroup _this,
-			IsApplicableMatch isApplicableMatch, Group group, KitchenToGridCorr kitchenToGrid, Kitchen kitchen,
-			Grid grid) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, group, kitchenToGrid, kitchen, grid);
+			IsApplicableMatch isApplicableMatch, Group group, KitchenToGridCorr kitchenToGrid, Grid grid,
+			Kitchen kitchen) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, group, kitchenToGrid, grid, kitchen);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, group, kitchenToGrid, kitchen, grid };
+			return new Object[] { csp, _this, isApplicableMatch, group, kitchenToGrid, grid, kitchen };
 		}
 		return null;
 	}
@@ -1476,17 +1476,17 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	}
 
 	public static final Object[] pattern_SocketToGroup_2_4_solveCSP_bindingAndBlackFBBBBBB(SocketToGroup _this,
-			IsApplicableMatch isApplicableMatch, Group group, KitchenToGridCorr kitchenToGrid, Kitchen kitchen,
-			Grid grid) {
+			IsApplicableMatch isApplicableMatch, Group group, KitchenToGridCorr kitchenToGrid, Grid grid,
+			Kitchen kitchen) {
 		Object[] result_pattern_SocketToGroup_2_4_solveCSP_binding = pattern_SocketToGroup_2_4_solveCSP_bindingFBBBBBB(
-				_this, isApplicableMatch, group, kitchenToGrid, kitchen, grid);
+				_this, isApplicableMatch, group, kitchenToGrid, grid, kitchen);
 		if (result_pattern_SocketToGroup_2_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_SocketToGroup_2_4_solveCSP_binding[0];
 
 			Object[] result_pattern_SocketToGroup_2_4_solveCSP_black = pattern_SocketToGroup_2_4_solveCSP_blackB(csp);
 			if (result_pattern_SocketToGroup_2_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, group, kitchenToGrid, kitchen, grid };
+				return new Object[] { csp, _this, isApplicableMatch, group, kitchenToGrid, grid, kitchen };
 			}
 		}
 		return null;
@@ -1520,16 +1520,16 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	}
 
 	public static final Object[] pattern_SocketToGroup_10_1_initialbindings_blackBBBB(SocketToGroup _this, Match match,
-			ItemSocket itemSocket, Kitchen kitchen) {
-		return new Object[] { _this, match, itemSocket, kitchen };
+			Kitchen kitchen, ItemSocket itemSocket) {
+		return new Object[] { _this, match, kitchen, itemSocket };
 	}
 
 	public static final Object[] pattern_SocketToGroup_10_2_SolveCSP_bindingFBBBB(SocketToGroup _this, Match match,
-			ItemSocket itemSocket, Kitchen kitchen) {
-		CSP _localVariable_0 = _this.isAppropriate_solveCsp_BWD(match, itemSocket, kitchen);
+			Kitchen kitchen, ItemSocket itemSocket) {
+		CSP _localVariable_0 = _this.isAppropriate_solveCsp_BWD(match, kitchen, itemSocket);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, match, itemSocket, kitchen };
+			return new Object[] { csp, _this, match, kitchen, itemSocket };
 		}
 		return null;
 	}
@@ -1539,16 +1539,16 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	}
 
 	public static final Object[] pattern_SocketToGroup_10_2_SolveCSP_bindingAndBlackFBBBB(SocketToGroup _this,
-			Match match, ItemSocket itemSocket, Kitchen kitchen) {
+			Match match, Kitchen kitchen, ItemSocket itemSocket) {
 		Object[] result_pattern_SocketToGroup_10_2_SolveCSP_binding = pattern_SocketToGroup_10_2_SolveCSP_bindingFBBBB(
-				_this, match, itemSocket, kitchen);
+				_this, match, kitchen, itemSocket);
 		if (result_pattern_SocketToGroup_10_2_SolveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_SocketToGroup_10_2_SolveCSP_binding[0];
 
 			Object[] result_pattern_SocketToGroup_10_2_SolveCSP_black = pattern_SocketToGroup_10_2_SolveCSP_blackB(csp);
 			if (result_pattern_SocketToGroup_10_2_SolveCSP_black != null) {
 
-				return new Object[] { csp, _this, match, itemSocket, kitchen };
+				return new Object[] { csp, _this, match, kitchen, itemSocket };
 			}
 		}
 		return null;
@@ -1561,12 +1561,12 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	}
 
 	public static final Object[] pattern_SocketToGroup_10_4_collectelementstobetranslated_blackBBB(Match match,
-			ItemSocket itemSocket, Kitchen kitchen) {
-		return new Object[] { match, itemSocket, kitchen };
+			Kitchen kitchen, ItemSocket itemSocket) {
+		return new Object[] { match, kitchen, itemSocket };
 	}
 
 	public static final Object[] pattern_SocketToGroup_10_4_collectelementstobetranslated_greenBBBF(Match match,
-			ItemSocket itemSocket, Kitchen kitchen) {
+			Kitchen kitchen, ItemSocket itemSocket) {
 		EMoflonEdge kitchen__itemSocket____itemSockets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		match.getToBeTranslatedNodes().add(itemSocket);
 		String kitchen__itemSocket____itemSockets_name_prime = "itemSockets";
@@ -1574,12 +1574,12 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 		kitchen__itemSocket____itemSockets.setTrg(itemSocket);
 		match.getToBeTranslatedEdges().add(kitchen__itemSocket____itemSockets);
 		kitchen__itemSocket____itemSockets.setName(kitchen__itemSocket____itemSockets_name_prime);
-		return new Object[] { match, itemSocket, kitchen, kitchen__itemSocket____itemSockets };
+		return new Object[] { match, kitchen, itemSocket, kitchen__itemSocket____itemSockets };
 	}
 
 	public static final Object[] pattern_SocketToGroup_10_5_collectcontextelements_blackBBB(Match match,
-			ItemSocket itemSocket, Kitchen kitchen) {
-		return new Object[] { match, itemSocket, kitchen };
+			Kitchen kitchen, ItemSocket itemSocket) {
+		return new Object[] { match, kitchen, itemSocket };
 	}
 
 	public static final Object[] pattern_SocketToGroup_10_5_collectcontextelements_greenBB(Match match,
@@ -1589,8 +1589,8 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	}
 
 	public static final void pattern_SocketToGroup_10_6_registerobjectstomatch_expressionBBBB(SocketToGroup _this,
-			Match match, ItemSocket itemSocket, Kitchen kitchen) {
-		_this.registerObjectsToMatch_BWD(match, itemSocket, kitchen);
+			Match match, Kitchen kitchen, ItemSocket itemSocket) {
+		_this.registerObjectsToMatch_BWD(match, kitchen, itemSocket);
 
 	}
 
@@ -1606,23 +1606,23 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 
 	public static final Object[] pattern_SocketToGroup_11_1_performtransformation_bindingFFFFB(
 			IsApplicableMatch isApplicableMatch) {
-		EObject _localVariable_0 = isApplicableMatch.getObject("itemSocket");
-		EObject _localVariable_1 = isApplicableMatch.getObject("kitchenToGrid");
+		EObject _localVariable_0 = isApplicableMatch.getObject("kitchenToGrid");
+		EObject _localVariable_1 = isApplicableMatch.getObject("grid");
 		EObject _localVariable_2 = isApplicableMatch.getObject("kitchen");
-		EObject _localVariable_3 = isApplicableMatch.getObject("grid");
-		EObject tmpItemSocket = _localVariable_0;
-		EObject tmpKitchenToGrid = _localVariable_1;
+		EObject _localVariable_3 = isApplicableMatch.getObject("itemSocket");
+		EObject tmpKitchenToGrid = _localVariable_0;
+		EObject tmpGrid = _localVariable_1;
 		EObject tmpKitchen = _localVariable_2;
-		EObject tmpGrid = _localVariable_3;
-		if (tmpItemSocket instanceof ItemSocket) {
-			ItemSocket itemSocket = (ItemSocket) tmpItemSocket;
-			if (tmpKitchenToGrid instanceof KitchenToGridCorr) {
-				KitchenToGridCorr kitchenToGrid = (KitchenToGridCorr) tmpKitchenToGrid;
+		EObject tmpItemSocket = _localVariable_3;
+		if (tmpKitchenToGrid instanceof KitchenToGridCorr) {
+			KitchenToGridCorr kitchenToGrid = (KitchenToGridCorr) tmpKitchenToGrid;
+			if (tmpGrid instanceof Grid) {
+				Grid grid = (Grid) tmpGrid;
 				if (tmpKitchen instanceof Kitchen) {
 					Kitchen kitchen = (Kitchen) tmpKitchen;
-					if (tmpGrid instanceof Grid) {
-						Grid grid = (Grid) tmpGrid;
-						return new Object[] { itemSocket, kitchenToGrid, kitchen, grid, isApplicableMatch };
+					if (tmpItemSocket instanceof ItemSocket) {
+						ItemSocket itemSocket = (ItemSocket) tmpItemSocket;
+						return new Object[] { kitchenToGrid, grid, kitchen, itemSocket, isApplicableMatch };
 					}
 				}
 			}
@@ -1630,13 +1630,13 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 		return null;
 	}
 
-	public static final Object[] pattern_SocketToGroup_11_1_performtransformation_blackBBBBFBB(ItemSocket itemSocket,
-			KitchenToGridCorr kitchenToGrid, Kitchen kitchen, Grid grid, SocketToGroup _this,
+	public static final Object[] pattern_SocketToGroup_11_1_performtransformation_blackBBBBFBB(
+			KitchenToGridCorr kitchenToGrid, Grid grid, Kitchen kitchen, ItemSocket itemSocket, SocketToGroup _this,
 			IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { itemSocket, kitchenToGrid, kitchen, grid, csp, _this, isApplicableMatch };
+				return new Object[] { kitchenToGrid, grid, kitchen, itemSocket, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
@@ -1647,67 +1647,67 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 		Object[] result_pattern_SocketToGroup_11_1_performtransformation_binding = pattern_SocketToGroup_11_1_performtransformation_bindingFFFFB(
 				isApplicableMatch);
 		if (result_pattern_SocketToGroup_11_1_performtransformation_binding != null) {
-			ItemSocket itemSocket = (ItemSocket) result_pattern_SocketToGroup_11_1_performtransformation_binding[0];
-			KitchenToGridCorr kitchenToGrid = (KitchenToGridCorr) result_pattern_SocketToGroup_11_1_performtransformation_binding[1];
+			KitchenToGridCorr kitchenToGrid = (KitchenToGridCorr) result_pattern_SocketToGroup_11_1_performtransformation_binding[0];
+			Grid grid = (Grid) result_pattern_SocketToGroup_11_1_performtransformation_binding[1];
 			Kitchen kitchen = (Kitchen) result_pattern_SocketToGroup_11_1_performtransformation_binding[2];
-			Grid grid = (Grid) result_pattern_SocketToGroup_11_1_performtransformation_binding[3];
+			ItemSocket itemSocket = (ItemSocket) result_pattern_SocketToGroup_11_1_performtransformation_binding[3];
 
 			Object[] result_pattern_SocketToGroup_11_1_performtransformation_black = pattern_SocketToGroup_11_1_performtransformation_blackBBBBFBB(
-					itemSocket, kitchenToGrid, kitchen, grid, _this, isApplicableMatch);
+					kitchenToGrid, grid, kitchen, itemSocket, _this, isApplicableMatch);
 			if (result_pattern_SocketToGroup_11_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_SocketToGroup_11_1_performtransformation_black[4];
 
-				return new Object[] { itemSocket, kitchenToGrid, kitchen, grid, csp, _this, isApplicableMatch };
+				return new Object[] { kitchenToGrid, grid, kitchen, itemSocket, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
 	}
 
-	public static final Object[] pattern_SocketToGroup_11_1_performtransformation_greenFBBF(ItemSocket itemSocket,
-			Grid grid) {
+	public static final Object[] pattern_SocketToGroup_11_1_performtransformation_greenFFBB(Grid grid,
+			ItemSocket itemSocket) {
 		Group group = GridLanguageFactory.eINSTANCE.createGroup();
 		SocketToGroupCorr socketToGroup = KitchenToGridLanguageFactory.eINSTANCE.createSocketToGroupCorr();
 		grid.getGroups().add(group);
 		socketToGroup.setSource(group);
 		socketToGroup.setTarget(itemSocket);
-		return new Object[] { group, itemSocket, grid, socketToGroup };
+		return new Object[] { group, socketToGroup, grid, itemSocket };
 	}
 
 	public static final Object[] pattern_SocketToGroup_11_2_collecttranslatedelements_blackBBB(Group group,
-			ItemSocket itemSocket, SocketToGroupCorr socketToGroup) {
-		return new Object[] { group, itemSocket, socketToGroup };
+			SocketToGroupCorr socketToGroup, ItemSocket itemSocket) {
+		return new Object[] { group, socketToGroup, itemSocket };
 	}
 
 	public static final Object[] pattern_SocketToGroup_11_2_collecttranslatedelements_greenFBBB(Group group,
-			ItemSocket itemSocket, SocketToGroupCorr socketToGroup) {
+			SocketToGroupCorr socketToGroup, ItemSocket itemSocket) {
 		PerformRuleResult ruleresult = RuntimeFactory.eINSTANCE.createPerformRuleResult();
 		ruleresult.getCreatedElements().add(group);
-		ruleresult.getTranslatedElements().add(itemSocket);
 		ruleresult.getCreatedLinkElements().add(socketToGroup);
-		return new Object[] { ruleresult, group, itemSocket, socketToGroup };
+		ruleresult.getTranslatedElements().add(itemSocket);
+		return new Object[] { ruleresult, group, socketToGroup, itemSocket };
 	}
 
 	public static final Object[] pattern_SocketToGroup_11_3_bookkeepingforedges_blackBBBBBBB(
-			PerformRuleResult ruleresult, EObject group, EObject itemSocket, EObject kitchenToGrid, EObject kitchen,
-			EObject grid, EObject socketToGroup) {
-		if (!group.equals(itemSocket)) {
+			PerformRuleResult ruleresult, EObject group, EObject socketToGroup, EObject kitchenToGrid, EObject grid,
+			EObject kitchen, EObject itemSocket) {
+		if (!group.equals(socketToGroup)) {
 			if (!group.equals(kitchenToGrid)) {
 				if (!group.equals(kitchen)) {
-					if (!group.equals(socketToGroup)) {
-						if (!itemSocket.equals(kitchenToGrid)) {
-							if (!itemSocket.equals(kitchen)) {
-								if (!itemSocket.equals(socketToGroup)) {
-									if (!kitchenToGrid.equals(socketToGroup)) {
-										if (!kitchen.equals(kitchenToGrid)) {
-											if (!kitchen.equals(socketToGroup)) {
-												if (!grid.equals(group)) {
-													if (!grid.equals(itemSocket)) {
-														if (!grid.equals(kitchenToGrid)) {
-															if (!grid.equals(kitchen)) {
-																if (!grid.equals(socketToGroup)) {
-																	return new Object[] { ruleresult, group, itemSocket,
-																			kitchenToGrid, kitchen, grid,
-																			socketToGroup };
+					if (!group.equals(itemSocket)) {
+						if (!kitchenToGrid.equals(socketToGroup)) {
+							if (!grid.equals(group)) {
+								if (!grid.equals(socketToGroup)) {
+									if (!grid.equals(kitchenToGrid)) {
+										if (!grid.equals(kitchen)) {
+											if (!grid.equals(itemSocket)) {
+												if (!kitchen.equals(socketToGroup)) {
+													if (!kitchen.equals(kitchenToGrid)) {
+														if (!itemSocket.equals(socketToGroup)) {
+															if (!itemSocket.equals(kitchenToGrid)) {
+																if (!itemSocket.equals(kitchen)) {
+																	return new Object[] { ruleresult, group,
+																			socketToGroup, kitchenToGrid, grid, kitchen,
+																			itemSocket };
 																}
 															}
 														}
@@ -1727,43 +1727,43 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	}
 
 	public static final Object[] pattern_SocketToGroup_11_3_bookkeepingforedges_greenBBBBBBFFFF(
-			PerformRuleResult ruleresult, EObject group, EObject itemSocket, EObject kitchen, EObject grid,
-			EObject socketToGroup) {
-		EMoflonEdge kitchen__itemSocket____itemSockets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+			PerformRuleResult ruleresult, EObject group, EObject socketToGroup, EObject grid, EObject kitchen,
+			EObject itemSocket) {
 		EMoflonEdge socketToGroup__group____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge socketToGroup__itemSocket____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge grid__group____groups = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge kitchen__itemSocket____itemSockets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge socketToGroup__itemSocket____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "SocketToGroup";
-		String kitchen__itemSocket____itemSockets_name_prime = "itemSockets";
 		String socketToGroup__group____source_name_prime = "source";
-		String socketToGroup__itemSocket____target_name_prime = "target";
 		String grid__group____groups_name_prime = "groups";
-		kitchen__itemSocket____itemSockets.setSrc(kitchen);
-		kitchen__itemSocket____itemSockets.setTrg(itemSocket);
-		ruleresult.getTranslatedEdges().add(kitchen__itemSocket____itemSockets);
+		String kitchen__itemSocket____itemSockets_name_prime = "itemSockets";
+		String socketToGroup__itemSocket____target_name_prime = "target";
 		socketToGroup__group____source.setSrc(socketToGroup);
 		socketToGroup__group____source.setTrg(group);
 		ruleresult.getCreatedEdges().add(socketToGroup__group____source);
-		socketToGroup__itemSocket____target.setSrc(socketToGroup);
-		socketToGroup__itemSocket____target.setTrg(itemSocket);
-		ruleresult.getCreatedEdges().add(socketToGroup__itemSocket____target);
 		grid__group____groups.setSrc(grid);
 		grid__group____groups.setTrg(group);
 		ruleresult.getCreatedEdges().add(grid__group____groups);
+		kitchen__itemSocket____itemSockets.setSrc(kitchen);
+		kitchen__itemSocket____itemSockets.setTrg(itemSocket);
+		ruleresult.getTranslatedEdges().add(kitchen__itemSocket____itemSockets);
+		socketToGroup__itemSocket____target.setSrc(socketToGroup);
+		socketToGroup__itemSocket____target.setTrg(itemSocket);
+		ruleresult.getCreatedEdges().add(socketToGroup__itemSocket____target);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
-		kitchen__itemSocket____itemSockets.setName(kitchen__itemSocket____itemSockets_name_prime);
 		socketToGroup__group____source.setName(socketToGroup__group____source_name_prime);
-		socketToGroup__itemSocket____target.setName(socketToGroup__itemSocket____target_name_prime);
 		grid__group____groups.setName(grid__group____groups_name_prime);
-		return new Object[] { ruleresult, group, itemSocket, kitchen, grid, socketToGroup,
-				kitchen__itemSocket____itemSockets, socketToGroup__group____source, socketToGroup__itemSocket____target,
-				grid__group____groups };
+		kitchen__itemSocket____itemSockets.setName(kitchen__itemSocket____itemSockets_name_prime);
+		socketToGroup__itemSocket____target.setName(socketToGroup__itemSocket____target_name_prime);
+		return new Object[] { ruleresult, group, socketToGroup, grid, kitchen, itemSocket,
+				socketToGroup__group____source, grid__group____groups, kitchen__itemSocket____itemSockets,
+				socketToGroup__itemSocket____target };
 	}
 
 	public static final void pattern_SocketToGroup_11_5_registerobjects_expressionBBBBBBBB(SocketToGroup _this,
-			PerformRuleResult ruleresult, EObject group, EObject itemSocket, EObject kitchenToGrid, EObject kitchen,
-			EObject grid, EObject socketToGroup) {
-		_this.registerObjects_BWD(ruleresult, group, itemSocket, kitchenToGrid, kitchen, grid, socketToGroup);
+			PerformRuleResult ruleresult, EObject group, EObject socketToGroup, EObject kitchenToGrid, EObject grid,
+			EObject kitchen, EObject itemSocket) {
+		_this.registerObjects_BWD(ruleresult, group, socketToGroup, kitchenToGrid, grid, kitchen, itemSocket);
 
 	}
 
@@ -1821,84 +1821,84 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	}
 
 	public static final Object[] pattern_SocketToGroup_12_2_corematch_bindingFFB(Match match) {
-		EObject _localVariable_0 = match.getObject("itemSocket");
-		EObject _localVariable_1 = match.getObject("kitchen");
-		EObject tmpItemSocket = _localVariable_0;
-		EObject tmpKitchen = _localVariable_1;
-		if (tmpItemSocket instanceof ItemSocket) {
-			ItemSocket itemSocket = (ItemSocket) tmpItemSocket;
-			if (tmpKitchen instanceof Kitchen) {
-				Kitchen kitchen = (Kitchen) tmpKitchen;
-				return new Object[] { itemSocket, kitchen, match };
+		EObject _localVariable_0 = match.getObject("kitchen");
+		EObject _localVariable_1 = match.getObject("itemSocket");
+		EObject tmpKitchen = _localVariable_0;
+		EObject tmpItemSocket = _localVariable_1;
+		if (tmpKitchen instanceof Kitchen) {
+			Kitchen kitchen = (Kitchen) tmpKitchen;
+			if (tmpItemSocket instanceof ItemSocket) {
+				ItemSocket itemSocket = (ItemSocket) tmpItemSocket;
+				return new Object[] { kitchen, itemSocket, match };
 			}
 		}
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_SocketToGroup_12_2_corematch_blackBFBFB(ItemSocket itemSocket,
-			Kitchen kitchen, Match match) {
+	public static final Iterable<Object[]> pattern_SocketToGroup_12_2_corematch_blackFFBBB(Kitchen kitchen,
+			ItemSocket itemSocket, Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		for (KitchenToGridCorr kitchenToGrid : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(kitchen, KitchenToGridCorr.class, "target")) {
 			Grid grid = kitchenToGrid.getSource();
 			if (grid != null) {
-				_result.add(new Object[] { itemSocket, kitchenToGrid, kitchen, grid, match });
+				_result.add(new Object[] { kitchenToGrid, grid, kitchen, itemSocket, match });
 			}
 
 		}
 		return _result;
 	}
 
-	public static final Iterable<Object[]> pattern_SocketToGroup_12_3_findcontext_blackBBBB(ItemSocket itemSocket,
-			KitchenToGridCorr kitchenToGrid, Kitchen kitchen, Grid grid) {
+	public static final Iterable<Object[]> pattern_SocketToGroup_12_3_findcontext_blackBBBB(
+			KitchenToGridCorr kitchenToGrid, Grid grid, Kitchen kitchen, ItemSocket itemSocket) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		if (kitchen.getItemSockets().contains(itemSocket)) {
-			if (kitchen.equals(kitchenToGrid.getTarget())) {
-				if (grid.equals(kitchenToGrid.getSource())) {
-					_result.add(new Object[] { itemSocket, kitchenToGrid, kitchen, grid });
+		if (grid.equals(kitchenToGrid.getSource())) {
+			if (kitchen.getItemSockets().contains(itemSocket)) {
+				if (kitchen.equals(kitchenToGrid.getTarget())) {
+					_result.add(new Object[] { kitchenToGrid, grid, kitchen, itemSocket });
 				}
 			}
 		}
 		return _result;
 	}
 
-	public static final Object[] pattern_SocketToGroup_12_3_findcontext_greenBBBBFFFF(ItemSocket itemSocket,
-			KitchenToGridCorr kitchenToGrid, Kitchen kitchen, Grid grid) {
+	public static final Object[] pattern_SocketToGroup_12_3_findcontext_greenBBBBFFFF(KitchenToGridCorr kitchenToGrid,
+			Grid grid, Kitchen kitchen, ItemSocket itemSocket) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
+		EMoflonEdge kitchenToGrid__grid____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge kitchen__itemSocket____itemSockets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge kitchenToGrid__kitchen____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge kitchenToGrid__grid____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		String kitchenToGrid__grid____source_name_prime = "source";
 		String kitchen__itemSocket____itemSockets_name_prime = "itemSockets";
 		String kitchenToGrid__kitchen____target_name_prime = "target";
-		String kitchenToGrid__grid____source_name_prime = "source";
-		isApplicableMatch.getAllContextElements().add(itemSocket);
 		isApplicableMatch.getAllContextElements().add(kitchenToGrid);
-		isApplicableMatch.getAllContextElements().add(kitchen);
 		isApplicableMatch.getAllContextElements().add(grid);
+		isApplicableMatch.getAllContextElements().add(kitchen);
+		isApplicableMatch.getAllContextElements().add(itemSocket);
+		kitchenToGrid__grid____source.setSrc(kitchenToGrid);
+		kitchenToGrid__grid____source.setTrg(grid);
+		isApplicableMatch.getAllContextElements().add(kitchenToGrid__grid____source);
 		kitchen__itemSocket____itemSockets.setSrc(kitchen);
 		kitchen__itemSocket____itemSockets.setTrg(itemSocket);
 		isApplicableMatch.getAllContextElements().add(kitchen__itemSocket____itemSockets);
 		kitchenToGrid__kitchen____target.setSrc(kitchenToGrid);
 		kitchenToGrid__kitchen____target.setTrg(kitchen);
 		isApplicableMatch.getAllContextElements().add(kitchenToGrid__kitchen____target);
-		kitchenToGrid__grid____source.setSrc(kitchenToGrid);
-		kitchenToGrid__grid____source.setTrg(grid);
-		isApplicableMatch.getAllContextElements().add(kitchenToGrid__grid____source);
+		kitchenToGrid__grid____source.setName(kitchenToGrid__grid____source_name_prime);
 		kitchen__itemSocket____itemSockets.setName(kitchen__itemSocket____itemSockets_name_prime);
 		kitchenToGrid__kitchen____target.setName(kitchenToGrid__kitchen____target_name_prime);
-		kitchenToGrid__grid____source.setName(kitchenToGrid__grid____source_name_prime);
-		return new Object[] { itemSocket, kitchenToGrid, kitchen, grid, isApplicableMatch,
-				kitchen__itemSocket____itemSockets, kitchenToGrid__kitchen____target, kitchenToGrid__grid____source };
+		return new Object[] { kitchenToGrid, grid, kitchen, itemSocket, isApplicableMatch,
+				kitchenToGrid__grid____source, kitchen__itemSocket____itemSockets, kitchenToGrid__kitchen____target };
 	}
 
 	public static final Object[] pattern_SocketToGroup_12_4_solveCSP_bindingFBBBBBB(SocketToGroup _this,
-			IsApplicableMatch isApplicableMatch, ItemSocket itemSocket, KitchenToGridCorr kitchenToGrid,
-			Kitchen kitchen, Grid grid) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_BWD(isApplicableMatch, itemSocket, kitchenToGrid, kitchen,
-				grid);
+			IsApplicableMatch isApplicableMatch, KitchenToGridCorr kitchenToGrid, Grid grid, Kitchen kitchen,
+			ItemSocket itemSocket) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_BWD(isApplicableMatch, kitchenToGrid, grid, kitchen,
+				itemSocket);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, itemSocket, kitchenToGrid, kitchen, grid };
+			return new Object[] { csp, _this, isApplicableMatch, kitchenToGrid, grid, kitchen, itemSocket };
 		}
 		return null;
 	}
@@ -1908,17 +1908,17 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	}
 
 	public static final Object[] pattern_SocketToGroup_12_4_solveCSP_bindingAndBlackFBBBBBB(SocketToGroup _this,
-			IsApplicableMatch isApplicableMatch, ItemSocket itemSocket, KitchenToGridCorr kitchenToGrid,
-			Kitchen kitchen, Grid grid) {
+			IsApplicableMatch isApplicableMatch, KitchenToGridCorr kitchenToGrid, Grid grid, Kitchen kitchen,
+			ItemSocket itemSocket) {
 		Object[] result_pattern_SocketToGroup_12_4_solveCSP_binding = pattern_SocketToGroup_12_4_solveCSP_bindingFBBBBBB(
-				_this, isApplicableMatch, itemSocket, kitchenToGrid, kitchen, grid);
+				_this, isApplicableMatch, kitchenToGrid, grid, kitchen, itemSocket);
 		if (result_pattern_SocketToGroup_12_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_SocketToGroup_12_4_solveCSP_binding[0];
 
 			Object[] result_pattern_SocketToGroup_12_4_solveCSP_black = pattern_SocketToGroup_12_4_solveCSP_blackB(csp);
 			if (result_pattern_SocketToGroup_12_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, itemSocket, kitchenToGrid, kitchen, grid };
+				return new Object[] { csp, _this, isApplicableMatch, kitchenToGrid, grid, kitchen, itemSocket };
 			}
 		}
 		return null;
@@ -2130,7 +2130,7 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 			if (tmpItemSocket instanceof ItemSocket) {
 				ItemSocket itemSocket = (ItemSocket) tmpItemSocket;
 				if (kitchen.getItemSockets().contains(itemSocket)) {
-					_result.add(new Object[] { itemSocket, kitchen, _edge_itemSockets });
+					_result.add(new Object[] { kitchen, itemSocket, _edge_itemSockets });
 				}
 			}
 
@@ -2149,8 +2149,8 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	}
 
 	public static final boolean pattern_SocketToGroup_21_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBB(
-			SocketToGroup _this, Match match, ItemSocket itemSocket, Kitchen kitchen) {
-		boolean _localVariable_0 = _this.isAppropriate_BWD(match, itemSocket, kitchen);
+			SocketToGroup _this, Match match, Kitchen kitchen, ItemSocket itemSocket) {
+		boolean _localVariable_0 = _this.isAppropriate_BWD(match, kitchen, itemSocket);
 		boolean _result = Boolean.valueOf(_localVariable_0);
 		return _result;
 	}
@@ -2195,22 +2195,22 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	public static final Object[] pattern_SocketToGroup_24_2_matchsrctrgcontext_bindingFFFFBB(Match sourceMatch,
 			Match targetMatch) {
 		EObject _localVariable_0 = sourceMatch.getObject("group");
-		EObject _localVariable_1 = targetMatch.getObject("itemSocket");
+		EObject _localVariable_1 = sourceMatch.getObject("grid");
 		EObject _localVariable_2 = targetMatch.getObject("kitchen");
-		EObject _localVariable_3 = sourceMatch.getObject("grid");
+		EObject _localVariable_3 = targetMatch.getObject("itemSocket");
 		EObject tmpGroup = _localVariable_0;
-		EObject tmpItemSocket = _localVariable_1;
+		EObject tmpGrid = _localVariable_1;
 		EObject tmpKitchen = _localVariable_2;
-		EObject tmpGrid = _localVariable_3;
+		EObject tmpItemSocket = _localVariable_3;
 		if (tmpGroup instanceof Group) {
 			Group group = (Group) tmpGroup;
-			if (tmpItemSocket instanceof ItemSocket) {
-				ItemSocket itemSocket = (ItemSocket) tmpItemSocket;
+			if (tmpGrid instanceof Grid) {
+				Grid grid = (Grid) tmpGrid;
 				if (tmpKitchen instanceof Kitchen) {
 					Kitchen kitchen = (Kitchen) tmpKitchen;
-					if (tmpGrid instanceof Grid) {
-						Grid grid = (Grid) tmpGrid;
-						return new Object[] { group, itemSocket, kitchen, grid, sourceMatch, targetMatch };
+					if (tmpItemSocket instanceof ItemSocket) {
+						ItemSocket itemSocket = (ItemSocket) tmpItemSocket;
+						return new Object[] { group, grid, kitchen, itemSocket, sourceMatch, targetMatch };
 					}
 				}
 			}
@@ -2218,10 +2218,10 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 		return null;
 	}
 
-	public static final Object[] pattern_SocketToGroup_24_2_matchsrctrgcontext_blackBBBBBB(Group group,
-			ItemSocket itemSocket, Kitchen kitchen, Grid grid, Match sourceMatch, Match targetMatch) {
+	public static final Object[] pattern_SocketToGroup_24_2_matchsrctrgcontext_blackBBBBBB(Group group, Grid grid,
+			Kitchen kitchen, ItemSocket itemSocket, Match sourceMatch, Match targetMatch) {
 		if (!sourceMatch.equals(targetMatch)) {
-			return new Object[] { group, itemSocket, kitchen, grid, sourceMatch, targetMatch };
+			return new Object[] { group, grid, kitchen, itemSocket, sourceMatch, targetMatch };
 		}
 		return null;
 	}
@@ -2232,27 +2232,27 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 				sourceMatch, targetMatch);
 		if (result_pattern_SocketToGroup_24_2_matchsrctrgcontext_binding != null) {
 			Group group = (Group) result_pattern_SocketToGroup_24_2_matchsrctrgcontext_binding[0];
-			ItemSocket itemSocket = (ItemSocket) result_pattern_SocketToGroup_24_2_matchsrctrgcontext_binding[1];
+			Grid grid = (Grid) result_pattern_SocketToGroup_24_2_matchsrctrgcontext_binding[1];
 			Kitchen kitchen = (Kitchen) result_pattern_SocketToGroup_24_2_matchsrctrgcontext_binding[2];
-			Grid grid = (Grid) result_pattern_SocketToGroup_24_2_matchsrctrgcontext_binding[3];
+			ItemSocket itemSocket = (ItemSocket) result_pattern_SocketToGroup_24_2_matchsrctrgcontext_binding[3];
 
 			Object[] result_pattern_SocketToGroup_24_2_matchsrctrgcontext_black = pattern_SocketToGroup_24_2_matchsrctrgcontext_blackBBBBBB(
-					group, itemSocket, kitchen, grid, sourceMatch, targetMatch);
+					group, grid, kitchen, itemSocket, sourceMatch, targetMatch);
 			if (result_pattern_SocketToGroup_24_2_matchsrctrgcontext_black != null) {
 
-				return new Object[] { group, itemSocket, kitchen, grid, sourceMatch, targetMatch };
+				return new Object[] { group, grid, kitchen, itemSocket, sourceMatch, targetMatch };
 			}
 		}
 		return null;
 	}
 
 	public static final Object[] pattern_SocketToGroup_24_3_solvecsp_bindingFBBBBBBB(SocketToGroup _this, Group group,
-			ItemSocket itemSocket, Kitchen kitchen, Grid grid, Match sourceMatch, Match targetMatch) {
-		CSP _localVariable_4 = _this.isApplicable_solveCsp_CC(group, itemSocket, kitchen, grid, sourceMatch,
+			Grid grid, Kitchen kitchen, ItemSocket itemSocket, Match sourceMatch, Match targetMatch) {
+		CSP _localVariable_4 = _this.isApplicable_solveCsp_CC(group, grid, kitchen, itemSocket, sourceMatch,
 				targetMatch);
 		CSP csp = _localVariable_4;
 		if (csp != null) {
-			return new Object[] { csp, _this, group, itemSocket, kitchen, grid, sourceMatch, targetMatch };
+			return new Object[] { csp, _this, group, grid, kitchen, itemSocket, sourceMatch, targetMatch };
 		}
 		return null;
 	}
@@ -2262,16 +2262,16 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 	}
 
 	public static final Object[] pattern_SocketToGroup_24_3_solvecsp_bindingAndBlackFBBBBBBB(SocketToGroup _this,
-			Group group, ItemSocket itemSocket, Kitchen kitchen, Grid grid, Match sourceMatch, Match targetMatch) {
+			Group group, Grid grid, Kitchen kitchen, ItemSocket itemSocket, Match sourceMatch, Match targetMatch) {
 		Object[] result_pattern_SocketToGroup_24_3_solvecsp_binding = pattern_SocketToGroup_24_3_solvecsp_bindingFBBBBBBB(
-				_this, group, itemSocket, kitchen, grid, sourceMatch, targetMatch);
+				_this, group, grid, kitchen, itemSocket, sourceMatch, targetMatch);
 		if (result_pattern_SocketToGroup_24_3_solvecsp_binding != null) {
 			CSP csp = (CSP) result_pattern_SocketToGroup_24_3_solvecsp_binding[0];
 
 			Object[] result_pattern_SocketToGroup_24_3_solvecsp_black = pattern_SocketToGroup_24_3_solvecsp_blackB(csp);
 			if (result_pattern_SocketToGroup_24_3_solvecsp_black != null) {
 
-				return new Object[] { csp, _this, group, itemSocket, kitchen, grid, sourceMatch, targetMatch };
+				return new Object[] { csp, _this, group, grid, kitchen, itemSocket, sourceMatch, targetMatch };
 			}
 		}
 		return null;
@@ -2283,14 +2283,14 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 		return _result;
 	}
 
-	public static final Iterable<Object[]> pattern_SocketToGroup_24_5_matchcorrcontext_blackFBBBB(Kitchen kitchen,
-			Grid grid, Match sourceMatch, Match targetMatch) {
+	public static final Iterable<Object[]> pattern_SocketToGroup_24_5_matchcorrcontext_blackFBBBB(Grid grid,
+			Kitchen kitchen, Match sourceMatch, Match targetMatch) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		if (!sourceMatch.equals(targetMatch)) {
 			for (KitchenToGridCorr kitchenToGrid : org.moflon.core.utilities.eMoflonEMFUtil
-					.getOppositeReferenceTyped(kitchen, KitchenToGridCorr.class, "target")) {
-				if (grid.equals(kitchenToGrid.getSource())) {
-					_result.add(new Object[] { kitchenToGrid, kitchen, grid, sourceMatch, targetMatch });
+					.getOppositeReferenceTyped(grid, KitchenToGridCorr.class, "source")) {
+				if (kitchen.equals(kitchenToGrid.getTarget())) {
+					_result.add(new Object[] { kitchenToGrid, grid, kitchen, sourceMatch, targetMatch });
 				}
 			}
 		}
@@ -2308,18 +2308,18 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 		return new Object[] { kitchenToGrid, sourceMatch, targetMatch, ccMatch };
 	}
 
-	public static final Object[] pattern_SocketToGroup_24_6_createcorrespondence_blackBBBBB(Group group,
-			ItemSocket itemSocket, Kitchen kitchen, Grid grid, CCMatch ccMatch) {
-		return new Object[] { group, itemSocket, kitchen, grid, ccMatch };
+	public static final Object[] pattern_SocketToGroup_24_6_createcorrespondence_blackBBBBB(Group group, Grid grid,
+			Kitchen kitchen, ItemSocket itemSocket, CCMatch ccMatch) {
+		return new Object[] { group, grid, kitchen, itemSocket, ccMatch };
 	}
 
-	public static final Object[] pattern_SocketToGroup_24_6_createcorrespondence_greenBBFB(Group group,
+	public static final Object[] pattern_SocketToGroup_24_6_createcorrespondence_greenBFBB(Group group,
 			ItemSocket itemSocket, CCMatch ccMatch) {
 		SocketToGroupCorr socketToGroup = KitchenToGridLanguageFactory.eINSTANCE.createSocketToGroupCorr();
 		socketToGroup.setSource(group);
 		socketToGroup.setTarget(itemSocket);
 		ccMatch.getCreateCorr().add(socketToGroup);
-		return new Object[] { group, itemSocket, socketToGroup, ccMatch };
+		return new Object[] { group, socketToGroup, itemSocket, ccMatch };
 	}
 
 	public static final Object[] pattern_SocketToGroup_24_7_addtoreturnedresult_blackBB(IsApplicableRuleResult result,
@@ -2359,10 +2359,10 @@ public class SocketToGroupImpl extends AbstractRuleImpl implements SocketToGroup
 		return _result;
 	}
 
-	public static final Object[] pattern_SocketToGroup_28_1_matchtggpattern_blackBB(ItemSocket itemSocket,
-			Kitchen kitchen) {
+	public static final Object[] pattern_SocketToGroup_28_1_matchtggpattern_blackBB(Kitchen kitchen,
+			ItemSocket itemSocket) {
 		if (kitchen.getItemSockets().contains(itemSocket)) {
-			return new Object[] { itemSocket, kitchen };
+			return new Object[] { kitchen, itemSocket };
 		}
 		return null;
 	}

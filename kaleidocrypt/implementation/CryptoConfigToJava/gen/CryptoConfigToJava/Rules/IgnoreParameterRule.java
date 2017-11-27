@@ -178,7 +178,7 @@ public interface IgnoreParameterRule extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_BWD_EMoflonEdge_2(EMoflonEdge _edge_params);
+	EObjectContainer isAppropriate_BWD_EMoflonEdge_10(EMoflonEdge _edge_params);
 
 	/**
 	 * <!-- begin-user-doc -->

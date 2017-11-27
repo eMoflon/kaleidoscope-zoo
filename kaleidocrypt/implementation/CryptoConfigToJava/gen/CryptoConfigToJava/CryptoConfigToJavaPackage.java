@@ -58,282 +58,6 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	CryptoConfigToJavaPackage eINSTANCE = CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link CryptoConfigToJava.impl.AlgorithmToJcuImpl <em>Algorithm To Jcu</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see CryptoConfigToJava.impl.AlgorithmToJcuImpl
-	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getAlgorithmToJcu()
-	 * @generated
-	 */
-	int ALGORITHM_TO_JCU = 0;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALGORITHM_TO_JCU__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALGORITHM_TO_JCU__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Algorithm To Jcu</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALGORITHM_TO_JCU_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Algorithm To Jcu</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALGORITHM_TO_JCU_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link CryptoConfigToJava.impl.TaskToJavaCompilationUnitImpl <em>Task To Java Compilation Unit</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see CryptoConfigToJava.impl.TaskToJavaCompilationUnitImpl
-	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getTaskToJavaCompilationUnit()
-	 * @generated
-	 */
-	int TASK_TO_JAVA_COMPILATION_UNIT = 1;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_TO_JAVA_COMPILATION_UNIT__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_TO_JAVA_COMPILATION_UNIT__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Task To Java Compilation Unit</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_TO_JAVA_COMPILATION_UNIT_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Task To Java Compilation Unit</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_TO_JAVA_COMPILATION_UNIT_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link CryptoConfigToJava.impl.KeyDerivationAlgorithmToJcuImpl <em>Key Derivation Algorithm To Jcu</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see CryptoConfigToJava.impl.KeyDerivationAlgorithmToJcuImpl
-	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getKeyDerivationAlgorithmToJcu()
-	 * @generated
-	 */
-	int KEY_DERIVATION_ALGORITHM_TO_JCU = 2;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KEY_DERIVATION_ALGORITHM_TO_JCU__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KEY_DERIVATION_ALGORITHM_TO_JCU__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Key Derivation Algorithm To Jcu</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KEY_DERIVATION_ALGORITHM_TO_JCU_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Key Derivation Algorithm To Jcu</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int KEY_DERIVATION_ALGORITHM_TO_JCU_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link CryptoConfigToJava.impl.ImportToImportImpl <em>Import To Import</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see CryptoConfigToJava.impl.ImportToImportImpl
-	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getImportToImport()
-	 * @generated
-	 */
-	int IMPORT_TO_IMPORT = 3;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMPORT_TO_IMPORT__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMPORT_TO_IMPORT__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Import To Import</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMPORT_TO_IMPORT_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Import To Import</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMPORT_TO_IMPORT_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link CryptoConfigToJava.impl.TaskToJavaPackageImpl <em>Task To Java Package</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see CryptoConfigToJava.impl.TaskToJavaPackageImpl
-	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getTaskToJavaPackage()
-	 * @generated
-	 */
-	int TASK_TO_JAVA_PACKAGE = 4;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_TO_JAVA_PACKAGE__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_TO_JAVA_PACKAGE__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Task To Java Package</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_TO_JAVA_PACKAGE_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Task To Java Package</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_TO_JAVA_PACKAGE_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link CryptoConfigToJava.impl.SymmetricBlockCipherToJcuImpl <em>Symmetric Block Cipher To Jcu</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see CryptoConfigToJava.impl.SymmetricBlockCipherToJcuImpl
-	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getSymmetricBlockCipherToJcu()
-	 * @generated
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_TO_JCU = 5;
-
-	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_TO_JCU__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_TO_JCU__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Symmetric Block Cipher To Jcu</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_TO_JCU_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Symmetric Block Cipher To Jcu</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMMETRIC_BLOCK_CIPHER_TO_JCU_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link CryptoConfigToJava.impl.KeyDerivationAlgorithmToMethodImpl <em>Key Derivation Algorithm To Method</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -341,7 +65,7 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getKeyDerivationAlgorithmToMethod()
 	 * @generated
 	 */
-	int KEY_DERIVATION_ALGORITHM_TO_METHOD = 6;
+	int KEY_DERIVATION_ALGORITHM_TO_METHOD = 0;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -380,6 +104,236 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	int KEY_DERIVATION_ALGORITHM_TO_METHOD_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link CryptoConfigToJava.impl.ImportToImportImpl <em>Import To Import</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see CryptoConfigToJava.impl.ImportToImportImpl
+	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getImportToImport()
+	 * @generated
+	 */
+	int IMPORT_TO_IMPORT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_TO_IMPORT__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_TO_IMPORT__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Import To Import</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_TO_IMPORT_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Import To Import</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_TO_IMPORT_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link CryptoConfigToJava.impl.AlgorithmToJcuImpl <em>Algorithm To Jcu</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see CryptoConfigToJava.impl.AlgorithmToJcuImpl
+	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getAlgorithmToJcu()
+	 * @generated
+	 */
+	int ALGORITHM_TO_JCU = 2;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALGORITHM_TO_JCU__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALGORITHM_TO_JCU__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Algorithm To Jcu</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALGORITHM_TO_JCU_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Algorithm To Jcu</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALGORITHM_TO_JCU_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link CryptoConfigToJava.impl.SymmetricBlockCipherToJcuImpl <em>Symmetric Block Cipher To Jcu</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see CryptoConfigToJava.impl.SymmetricBlockCipherToJcuImpl
+	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getSymmetricBlockCipherToJcu()
+	 * @generated
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_TO_JCU = 3;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_TO_JCU__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_TO_JCU__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Symmetric Block Cipher To Jcu</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_TO_JCU_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Symmetric Block Cipher To Jcu</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMMETRIC_BLOCK_CIPHER_TO_JCU_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link CryptoConfigToJava.impl.TaskToJavaCompilationUnitImpl <em>Task To Java Compilation Unit</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see CryptoConfigToJava.impl.TaskToJavaCompilationUnitImpl
+	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getTaskToJavaCompilationUnit()
+	 * @generated
+	 */
+	int TASK_TO_JAVA_COMPILATION_UNIT = 4;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TO_JAVA_COMPILATION_UNIT__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TO_JAVA_COMPILATION_UNIT__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Task To Java Compilation Unit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TO_JAVA_COMPILATION_UNIT_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Task To Java Compilation Unit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TO_JAVA_COMPILATION_UNIT_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link CryptoConfigToJava.impl.TaskToJavaPackageImpl <em>Task To Java Package</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see CryptoConfigToJava.impl.TaskToJavaPackageImpl
+	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getTaskToJavaPackage()
+	 * @generated
+	 */
+	int TASK_TO_JAVA_PACKAGE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TO_JAVA_PACKAGE__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TO_JAVA_PACKAGE__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Task To Java Package</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TO_JAVA_PACKAGE_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Task To Java Package</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TO_JAVA_PACKAGE_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link CryptoConfigToJava.impl.AlgorithmToJavaCompilationUnitImpl <em>Algorithm To Java Compilation Unit</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -387,7 +341,7 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getAlgorithmToJavaCompilationUnit()
 	 * @generated
 	 */
-	int ALGORITHM_TO_JAVA_COMPILATION_UNIT = 7;
+	int ALGORITHM_TO_JAVA_COMPILATION_UNIT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -424,6 +378,52 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	 * @ordered
 	 */
 	int ALGORITHM_TO_JAVA_COMPILATION_UNIT_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link CryptoConfigToJava.impl.KeyDerivationAlgorithmToJcuImpl <em>Key Derivation Algorithm To Jcu</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see CryptoConfigToJava.impl.KeyDerivationAlgorithmToJcuImpl
+	 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getKeyDerivationAlgorithmToJcu()
+	 * @generated
+	 */
+	int KEY_DERIVATION_ALGORITHM_TO_JCU = 7;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_TO_JCU__SOURCE = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_TO_JCU__TARGET = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Key Derivation Algorithm To Jcu</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_TO_JCU_FEATURE_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Key Derivation Algorithm To Jcu</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KEY_DERIVATION_ALGORITHM_TO_JCU_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link CryptoConfigToJava.impl.SymmetricBlockCipherToMethodImpl <em>Symmetric Block Cipher To Method</em>}' class.
@@ -472,100 +472,36 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	int SYMMETRIC_BLOCK_CIPHER_TO_METHOD_OPERATION_COUNT = RuntimePackage.ABSTRACT_CORRESPONDENCE_OPERATION_COUNT + 0;
 
 	/**
-	 * Returns the meta object for class '{@link CryptoConfigToJava.AlgorithmToJcu <em>Algorithm To Jcu</em>}'.
+	 * Returns the meta object for class '{@link CryptoConfigToJava.KeyDerivationAlgorithmToMethod <em>Key Derivation Algorithm To Method</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Algorithm To Jcu</em>'.
-	 * @see CryptoConfigToJava.AlgorithmToJcu
+	 * @return the meta object for class '<em>Key Derivation Algorithm To Method</em>'.
+	 * @see CryptoConfigToJava.KeyDerivationAlgorithmToMethod
 	 * @generated
 	 */
-	EClass getAlgorithmToJcu();
+	EClass getKeyDerivationAlgorithmToMethod();
 
 	/**
-	 * Returns the meta object for the reference '{@link CryptoConfigToJava.AlgorithmToJcu#getSource <em>Source</em>}'.
+	 * Returns the meta object for the reference '{@link CryptoConfigToJava.KeyDerivationAlgorithmToMethod#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see CryptoConfigToJava.AlgorithmToJcu#getSource()
-	 * @see #getAlgorithmToJcu()
+	 * @see CryptoConfigToJava.KeyDerivationAlgorithmToMethod#getSource()
+	 * @see #getKeyDerivationAlgorithmToMethod()
 	 * @generated
 	 */
-	EReference getAlgorithmToJcu_Source();
+	EReference getKeyDerivationAlgorithmToMethod_Source();
 
 	/**
-	 * Returns the meta object for the reference '{@link CryptoConfigToJava.AlgorithmToJcu#getTarget <em>Target</em>}'.
+	 * Returns the meta object for the reference '{@link CryptoConfigToJava.KeyDerivationAlgorithmToMethod#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see CryptoConfigToJava.AlgorithmToJcu#getTarget()
-	 * @see #getAlgorithmToJcu()
+	 * @see CryptoConfigToJava.KeyDerivationAlgorithmToMethod#getTarget()
+	 * @see #getKeyDerivationAlgorithmToMethod()
 	 * @generated
 	 */
-	EReference getAlgorithmToJcu_Target();
-
-	/**
-	 * Returns the meta object for class '{@link CryptoConfigToJava.TaskToJavaCompilationUnit <em>Task To Java Compilation Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Task To Java Compilation Unit</em>'.
-	 * @see CryptoConfigToJava.TaskToJavaCompilationUnit
-	 * @generated
-	 */
-	EClass getTaskToJavaCompilationUnit();
-
-	/**
-	 * Returns the meta object for the reference '{@link CryptoConfigToJava.TaskToJavaCompilationUnit#getSource <em>Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see CryptoConfigToJava.TaskToJavaCompilationUnit#getSource()
-	 * @see #getTaskToJavaCompilationUnit()
-	 * @generated
-	 */
-	EReference getTaskToJavaCompilationUnit_Source();
-
-	/**
-	 * Returns the meta object for the reference '{@link CryptoConfigToJava.TaskToJavaCompilationUnit#getTarget <em>Target</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see CryptoConfigToJava.TaskToJavaCompilationUnit#getTarget()
-	 * @see #getTaskToJavaCompilationUnit()
-	 * @generated
-	 */
-	EReference getTaskToJavaCompilationUnit_Target();
-
-	/**
-	 * Returns the meta object for class '{@link CryptoConfigToJava.KeyDerivationAlgorithmToJcu <em>Key Derivation Algorithm To Jcu</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Key Derivation Algorithm To Jcu</em>'.
-	 * @see CryptoConfigToJava.KeyDerivationAlgorithmToJcu
-	 * @generated
-	 */
-	EClass getKeyDerivationAlgorithmToJcu();
-
-	/**
-	 * Returns the meta object for the reference '{@link CryptoConfigToJava.KeyDerivationAlgorithmToJcu#getSource <em>Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see CryptoConfigToJava.KeyDerivationAlgorithmToJcu#getSource()
-	 * @see #getKeyDerivationAlgorithmToJcu()
-	 * @generated
-	 */
-	EReference getKeyDerivationAlgorithmToJcu_Source();
-
-	/**
-	 * Returns the meta object for the reference '{@link CryptoConfigToJava.KeyDerivationAlgorithmToJcu#getTarget <em>Target</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see CryptoConfigToJava.KeyDerivationAlgorithmToJcu#getTarget()
-	 * @see #getKeyDerivationAlgorithmToJcu()
-	 * @generated
-	 */
-	EReference getKeyDerivationAlgorithmToJcu_Target();
+	EReference getKeyDerivationAlgorithmToMethod_Target();
 
 	/**
 	 * Returns the meta object for class '{@link CryptoConfigToJava.ImportToImport <em>Import To Import</em>}'.
@@ -600,36 +536,36 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	EReference getImportToImport_Target();
 
 	/**
-	 * Returns the meta object for class '{@link CryptoConfigToJava.TaskToJavaPackage <em>Task To Java Package</em>}'.
+	 * Returns the meta object for class '{@link CryptoConfigToJava.AlgorithmToJcu <em>Algorithm To Jcu</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Task To Java Package</em>'.
-	 * @see CryptoConfigToJava.TaskToJavaPackage
+	 * @return the meta object for class '<em>Algorithm To Jcu</em>'.
+	 * @see CryptoConfigToJava.AlgorithmToJcu
 	 * @generated
 	 */
-	EClass getTaskToJavaPackage();
+	EClass getAlgorithmToJcu();
 
 	/**
-	 * Returns the meta object for the reference '{@link CryptoConfigToJava.TaskToJavaPackage#getSource <em>Source</em>}'.
+	 * Returns the meta object for the reference '{@link CryptoConfigToJava.AlgorithmToJcu#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see CryptoConfigToJava.TaskToJavaPackage#getSource()
-	 * @see #getTaskToJavaPackage()
+	 * @see CryptoConfigToJava.AlgorithmToJcu#getSource()
+	 * @see #getAlgorithmToJcu()
 	 * @generated
 	 */
-	EReference getTaskToJavaPackage_Source();
+	EReference getAlgorithmToJcu_Source();
 
 	/**
-	 * Returns the meta object for the reference '{@link CryptoConfigToJava.TaskToJavaPackage#getTarget <em>Target</em>}'.
+	 * Returns the meta object for the reference '{@link CryptoConfigToJava.AlgorithmToJcu#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see CryptoConfigToJava.TaskToJavaPackage#getTarget()
-	 * @see #getTaskToJavaPackage()
+	 * @see CryptoConfigToJava.AlgorithmToJcu#getTarget()
+	 * @see #getAlgorithmToJcu()
 	 * @generated
 	 */
-	EReference getTaskToJavaPackage_Target();
+	EReference getAlgorithmToJcu_Target();
 
 	/**
 	 * Returns the meta object for class '{@link CryptoConfigToJava.SymmetricBlockCipherToJcu <em>Symmetric Block Cipher To Jcu</em>}'.
@@ -664,36 +600,68 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	EReference getSymmetricBlockCipherToJcu_Target();
 
 	/**
-	 * Returns the meta object for class '{@link CryptoConfigToJava.KeyDerivationAlgorithmToMethod <em>Key Derivation Algorithm To Method</em>}'.
+	 * Returns the meta object for class '{@link CryptoConfigToJava.TaskToJavaCompilationUnit <em>Task To Java Compilation Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Key Derivation Algorithm To Method</em>'.
-	 * @see CryptoConfigToJava.KeyDerivationAlgorithmToMethod
+	 * @return the meta object for class '<em>Task To Java Compilation Unit</em>'.
+	 * @see CryptoConfigToJava.TaskToJavaCompilationUnit
 	 * @generated
 	 */
-	EClass getKeyDerivationAlgorithmToMethod();
+	EClass getTaskToJavaCompilationUnit();
 
 	/**
-	 * Returns the meta object for the reference '{@link CryptoConfigToJava.KeyDerivationAlgorithmToMethod#getSource <em>Source</em>}'.
+	 * Returns the meta object for the reference '{@link CryptoConfigToJava.TaskToJavaCompilationUnit#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see CryptoConfigToJava.KeyDerivationAlgorithmToMethod#getSource()
-	 * @see #getKeyDerivationAlgorithmToMethod()
+	 * @see CryptoConfigToJava.TaskToJavaCompilationUnit#getSource()
+	 * @see #getTaskToJavaCompilationUnit()
 	 * @generated
 	 */
-	EReference getKeyDerivationAlgorithmToMethod_Source();
+	EReference getTaskToJavaCompilationUnit_Source();
 
 	/**
-	 * Returns the meta object for the reference '{@link CryptoConfigToJava.KeyDerivationAlgorithmToMethod#getTarget <em>Target</em>}'.
+	 * Returns the meta object for the reference '{@link CryptoConfigToJava.TaskToJavaCompilationUnit#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see CryptoConfigToJava.KeyDerivationAlgorithmToMethod#getTarget()
-	 * @see #getKeyDerivationAlgorithmToMethod()
+	 * @see CryptoConfigToJava.TaskToJavaCompilationUnit#getTarget()
+	 * @see #getTaskToJavaCompilationUnit()
 	 * @generated
 	 */
-	EReference getKeyDerivationAlgorithmToMethod_Target();
+	EReference getTaskToJavaCompilationUnit_Target();
+
+	/**
+	 * Returns the meta object for class '{@link CryptoConfigToJava.TaskToJavaPackage <em>Task To Java Package</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Task To Java Package</em>'.
+	 * @see CryptoConfigToJava.TaskToJavaPackage
+	 * @generated
+	 */
+	EClass getTaskToJavaPackage();
+
+	/**
+	 * Returns the meta object for the reference '{@link CryptoConfigToJava.TaskToJavaPackage#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see CryptoConfigToJava.TaskToJavaPackage#getSource()
+	 * @see #getTaskToJavaPackage()
+	 * @generated
+	 */
+	EReference getTaskToJavaPackage_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link CryptoConfigToJava.TaskToJavaPackage#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see CryptoConfigToJava.TaskToJavaPackage#getTarget()
+	 * @see #getTaskToJavaPackage()
+	 * @generated
+	 */
+	EReference getTaskToJavaPackage_Target();
 
 	/**
 	 * Returns the meta object for class '{@link CryptoConfigToJava.AlgorithmToJavaCompilationUnit <em>Algorithm To Java Compilation Unit</em>}'.
@@ -726,6 +694,38 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAlgorithmToJavaCompilationUnit_Target();
+
+	/**
+	 * Returns the meta object for class '{@link CryptoConfigToJava.KeyDerivationAlgorithmToJcu <em>Key Derivation Algorithm To Jcu</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Key Derivation Algorithm To Jcu</em>'.
+	 * @see CryptoConfigToJava.KeyDerivationAlgorithmToJcu
+	 * @generated
+	 */
+	EClass getKeyDerivationAlgorithmToJcu();
+
+	/**
+	 * Returns the meta object for the reference '{@link CryptoConfigToJava.KeyDerivationAlgorithmToJcu#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see CryptoConfigToJava.KeyDerivationAlgorithmToJcu#getSource()
+	 * @see #getKeyDerivationAlgorithmToJcu()
+	 * @generated
+	 */
+	EReference getKeyDerivationAlgorithmToJcu_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link CryptoConfigToJava.KeyDerivationAlgorithmToJcu#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see CryptoConfigToJava.KeyDerivationAlgorithmToJcu#getTarget()
+	 * @see #getKeyDerivationAlgorithmToJcu()
+	 * @generated
+	 */
+	EReference getKeyDerivationAlgorithmToJcu_Target();
 
 	/**
 	 * Returns the meta object for class '{@link CryptoConfigToJava.SymmetricBlockCipherToMethod <em>Symmetric Block Cipher To Method</em>}'.
@@ -783,14 +783,14 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link CryptoConfigToJava.impl.AlgorithmToJcuImpl <em>Algorithm To Jcu</em>}' class.
+		 * The meta object literal for the '{@link CryptoConfigToJava.impl.KeyDerivationAlgorithmToMethodImpl <em>Key Derivation Algorithm To Method</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see CryptoConfigToJava.impl.AlgorithmToJcuImpl
-		 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getAlgorithmToJcu()
+		 * @see CryptoConfigToJava.impl.KeyDerivationAlgorithmToMethodImpl
+		 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getKeyDerivationAlgorithmToMethod()
 		 * @generated
 		 */
-		EClass ALGORITHM_TO_JCU = eINSTANCE.getAlgorithmToJcu();
+		EClass KEY_DERIVATION_ALGORITHM_TO_METHOD = eINSTANCE.getKeyDerivationAlgorithmToMethod();
 
 		/**
 		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
@@ -798,7 +798,7 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ALGORITHM_TO_JCU__SOURCE = eINSTANCE.getAlgorithmToJcu_Source();
+		EReference KEY_DERIVATION_ALGORITHM_TO_METHOD__SOURCE = eINSTANCE.getKeyDerivationAlgorithmToMethod_Source();
 
 		/**
 		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
@@ -806,59 +806,7 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ALGORITHM_TO_JCU__TARGET = eINSTANCE.getAlgorithmToJcu_Target();
-
-		/**
-		 * The meta object literal for the '{@link CryptoConfigToJava.impl.TaskToJavaCompilationUnitImpl <em>Task To Java Compilation Unit</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see CryptoConfigToJava.impl.TaskToJavaCompilationUnitImpl
-		 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getTaskToJavaCompilationUnit()
-		 * @generated
-		 */
-		EClass TASK_TO_JAVA_COMPILATION_UNIT = eINSTANCE.getTaskToJavaCompilationUnit();
-
-		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TASK_TO_JAVA_COMPILATION_UNIT__SOURCE = eINSTANCE.getTaskToJavaCompilationUnit_Source();
-
-		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TASK_TO_JAVA_COMPILATION_UNIT__TARGET = eINSTANCE.getTaskToJavaCompilationUnit_Target();
-
-		/**
-		 * The meta object literal for the '{@link CryptoConfigToJava.impl.KeyDerivationAlgorithmToJcuImpl <em>Key Derivation Algorithm To Jcu</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see CryptoConfigToJava.impl.KeyDerivationAlgorithmToJcuImpl
-		 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getKeyDerivationAlgorithmToJcu()
-		 * @generated
-		 */
-		EClass KEY_DERIVATION_ALGORITHM_TO_JCU = eINSTANCE.getKeyDerivationAlgorithmToJcu();
-
-		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference KEY_DERIVATION_ALGORITHM_TO_JCU__SOURCE = eINSTANCE.getKeyDerivationAlgorithmToJcu_Source();
-
-		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference KEY_DERIVATION_ALGORITHM_TO_JCU__TARGET = eINSTANCE.getKeyDerivationAlgorithmToJcu_Target();
+		EReference KEY_DERIVATION_ALGORITHM_TO_METHOD__TARGET = eINSTANCE.getKeyDerivationAlgorithmToMethod_Target();
 
 		/**
 		 * The meta object literal for the '{@link CryptoConfigToJava.impl.ImportToImportImpl <em>Import To Import</em>}' class.
@@ -887,14 +835,14 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 		EReference IMPORT_TO_IMPORT__TARGET = eINSTANCE.getImportToImport_Target();
 
 		/**
-		 * The meta object literal for the '{@link CryptoConfigToJava.impl.TaskToJavaPackageImpl <em>Task To Java Package</em>}' class.
+		 * The meta object literal for the '{@link CryptoConfigToJava.impl.AlgorithmToJcuImpl <em>Algorithm To Jcu</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see CryptoConfigToJava.impl.TaskToJavaPackageImpl
-		 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getTaskToJavaPackage()
+		 * @see CryptoConfigToJava.impl.AlgorithmToJcuImpl
+		 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getAlgorithmToJcu()
 		 * @generated
 		 */
-		EClass TASK_TO_JAVA_PACKAGE = eINSTANCE.getTaskToJavaPackage();
+		EClass ALGORITHM_TO_JCU = eINSTANCE.getAlgorithmToJcu();
 
 		/**
 		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
@@ -902,7 +850,7 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TASK_TO_JAVA_PACKAGE__SOURCE = eINSTANCE.getTaskToJavaPackage_Source();
+		EReference ALGORITHM_TO_JCU__SOURCE = eINSTANCE.getAlgorithmToJcu_Source();
 
 		/**
 		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
@@ -910,7 +858,7 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TASK_TO_JAVA_PACKAGE__TARGET = eINSTANCE.getTaskToJavaPackage_Target();
+		EReference ALGORITHM_TO_JCU__TARGET = eINSTANCE.getAlgorithmToJcu_Target();
 
 		/**
 		 * The meta object literal for the '{@link CryptoConfigToJava.impl.SymmetricBlockCipherToJcuImpl <em>Symmetric Block Cipher To Jcu</em>}' class.
@@ -939,14 +887,14 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 		EReference SYMMETRIC_BLOCK_CIPHER_TO_JCU__TARGET = eINSTANCE.getSymmetricBlockCipherToJcu_Target();
 
 		/**
-		 * The meta object literal for the '{@link CryptoConfigToJava.impl.KeyDerivationAlgorithmToMethodImpl <em>Key Derivation Algorithm To Method</em>}' class.
+		 * The meta object literal for the '{@link CryptoConfigToJava.impl.TaskToJavaCompilationUnitImpl <em>Task To Java Compilation Unit</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see CryptoConfigToJava.impl.KeyDerivationAlgorithmToMethodImpl
-		 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getKeyDerivationAlgorithmToMethod()
+		 * @see CryptoConfigToJava.impl.TaskToJavaCompilationUnitImpl
+		 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getTaskToJavaCompilationUnit()
 		 * @generated
 		 */
-		EClass KEY_DERIVATION_ALGORITHM_TO_METHOD = eINSTANCE.getKeyDerivationAlgorithmToMethod();
+		EClass TASK_TO_JAVA_COMPILATION_UNIT = eINSTANCE.getTaskToJavaCompilationUnit();
 
 		/**
 		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
@@ -954,7 +902,7 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference KEY_DERIVATION_ALGORITHM_TO_METHOD__SOURCE = eINSTANCE.getKeyDerivationAlgorithmToMethod_Source();
+		EReference TASK_TO_JAVA_COMPILATION_UNIT__SOURCE = eINSTANCE.getTaskToJavaCompilationUnit_Source();
 
 		/**
 		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
@@ -962,7 +910,33 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference KEY_DERIVATION_ALGORITHM_TO_METHOD__TARGET = eINSTANCE.getKeyDerivationAlgorithmToMethod_Target();
+		EReference TASK_TO_JAVA_COMPILATION_UNIT__TARGET = eINSTANCE.getTaskToJavaCompilationUnit_Target();
+
+		/**
+		 * The meta object literal for the '{@link CryptoConfigToJava.impl.TaskToJavaPackageImpl <em>Task To Java Package</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see CryptoConfigToJava.impl.TaskToJavaPackageImpl
+		 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getTaskToJavaPackage()
+		 * @generated
+		 */
+		EClass TASK_TO_JAVA_PACKAGE = eINSTANCE.getTaskToJavaPackage();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK_TO_JAVA_PACKAGE__SOURCE = eINSTANCE.getTaskToJavaPackage_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK_TO_JAVA_PACKAGE__TARGET = eINSTANCE.getTaskToJavaPackage_Target();
 
 		/**
 		 * The meta object literal for the '{@link CryptoConfigToJava.impl.AlgorithmToJavaCompilationUnitImpl <em>Algorithm To Java Compilation Unit</em>}' class.
@@ -989,6 +963,32 @@ public interface CryptoConfigToJavaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ALGORITHM_TO_JAVA_COMPILATION_UNIT__TARGET = eINSTANCE.getAlgorithmToJavaCompilationUnit_Target();
+
+		/**
+		 * The meta object literal for the '{@link CryptoConfigToJava.impl.KeyDerivationAlgorithmToJcuImpl <em>Key Derivation Algorithm To Jcu</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see CryptoConfigToJava.impl.KeyDerivationAlgorithmToJcuImpl
+		 * @see CryptoConfigToJava.impl.CryptoConfigToJavaPackageImpl#getKeyDerivationAlgorithmToJcu()
+		 * @generated
+		 */
+		EClass KEY_DERIVATION_ALGORITHM_TO_JCU = eINSTANCE.getKeyDerivationAlgorithmToJcu();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KEY_DERIVATION_ALGORITHM_TO_JCU__SOURCE = eINSTANCE.getKeyDerivationAlgorithmToJcu_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KEY_DERIVATION_ALGORITHM_TO_JCU__TARGET = eINSTANCE.getKeyDerivationAlgorithmToJcu_Target();
 
 		/**
 		 * The meta object literal for the '{@link CryptoConfigToJava.impl.SymmetricBlockCipherToMethodImpl <em>Symmetric Block Cipher To Method</em>}' class.

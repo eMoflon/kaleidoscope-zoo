@@ -461,7 +461,7 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_BWD_EMoflonEdge_2(EMoflonEdge _edge_params) {
+	public EObjectContainer isAppropriate_BWD_EMoflonEdge_10(EMoflonEdge _edge_params) {
 
 		Object[] result1_bindingAndBlack = IgnoreParameterRuleImpl
 				.pattern_IgnoreParameterRule_17_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -832,8 +832,8 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 			return null;
 		case RulesPackage.IGNORE_PARAMETER_RULE___CHECK_TYPES_BWD__MATCH:
 			return checkTypes_BWD((Match) arguments.get(0));
-		case RulesPackage.IGNORE_PARAMETER_RULE___IS_APPROPRIATE_BWD_EMOFLON_EDGE_2__EMOFLONEDGE:
-			return isAppropriate_BWD_EMoflonEdge_2((EMoflonEdge) arguments.get(0));
+		case RulesPackage.IGNORE_PARAMETER_RULE___IS_APPROPRIATE_BWD_EMOFLON_EDGE_10__EMOFLONEDGE:
+			return isAppropriate_BWD_EMoflonEdge_10((EMoflonEdge) arguments.get(0));
 		case RulesPackage.IGNORE_PARAMETER_RULE___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.IGNORE_PARAMETER_RULE___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH:
@@ -1317,7 +1317,7 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 
 	public static final Object[] pattern_IgnoreParameterRule_17_2_testcorematchandDECs_black_nac_0B(
 			JavaVariableDeclaration var) {
-		for (JavaStatement __DEC_var_expr_201037 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaStatement __DEC_var_expr_214836 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(var, JavaStatement.class, "expr")) {
 			return new Object[] { var };
 		}
@@ -1326,7 +1326,7 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 
 	public static final Object[] pattern_IgnoreParameterRule_17_2_testcorematchandDECs_black_nac_1B(
 			JavaVariableDeclaration var) {
-		for (JavaMethodInvocation __DEC_var_arguments_143619 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaMethodInvocation __DEC_var_arguments_127742 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(var, JavaMethodInvocation.class, "arguments")) {
 			return new Object[] { var };
 		}
@@ -1545,8 +1545,8 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 
 	public static final Object[] pattern_IgnoreParameterRule_24_1_matchtggpattern_black_nac_0B(
 			JavaVariableDeclaration var) {
-		for (JavaStatement __DEC_var_expr_4914 : org.moflon.core.utilities.eMoflonEMFUtil.getOppositeReferenceTyped(var,
-				JavaStatement.class, "expr")) {
+		for (JavaStatement __DEC_var_expr_878982 : org.moflon.core.utilities.eMoflonEMFUtil
+				.getOppositeReferenceTyped(var, JavaStatement.class, "expr")) {
 			return new Object[] { var };
 		}
 		return null;
@@ -1554,7 +1554,7 @@ public class IgnoreParameterRuleImpl extends AbstractRuleImpl implements IgnoreP
 
 	public static final Object[] pattern_IgnoreParameterRule_24_1_matchtggpattern_black_nac_1B(
 			JavaVariableDeclaration var) {
-		for (JavaMethodInvocation __DEC_var_arguments_120651 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (JavaMethodInvocation __DEC_var_arguments_918136 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(var, JavaMethodInvocation.class, "arguments")) {
 			return new Object[] { var };
 		}

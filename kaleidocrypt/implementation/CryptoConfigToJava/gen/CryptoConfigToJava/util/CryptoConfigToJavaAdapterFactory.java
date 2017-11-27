@@ -69,18 +69,8 @@ public class CryptoConfigToJavaAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected CryptoConfigToJavaSwitch<Adapter> modelSwitch = new CryptoConfigToJavaSwitch<Adapter>() {
 		@Override
-		public Adapter caseAlgorithmToJcu(AlgorithmToJcu object) {
-			return createAlgorithmToJcuAdapter();
-		}
-
-		@Override
-		public Adapter caseTaskToJavaCompilationUnit(TaskToJavaCompilationUnit object) {
-			return createTaskToJavaCompilationUnitAdapter();
-		}
-
-		@Override
-		public Adapter caseKeyDerivationAlgorithmToJcu(KeyDerivationAlgorithmToJcu object) {
-			return createKeyDerivationAlgorithmToJcuAdapter();
+		public Adapter caseKeyDerivationAlgorithmToMethod(KeyDerivationAlgorithmToMethod object) {
+			return createKeyDerivationAlgorithmToMethodAdapter();
 		}
 
 		@Override
@@ -89,8 +79,8 @@ public class CryptoConfigToJavaAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseTaskToJavaPackage(TaskToJavaPackage object) {
-			return createTaskToJavaPackageAdapter();
+		public Adapter caseAlgorithmToJcu(AlgorithmToJcu object) {
+			return createAlgorithmToJcuAdapter();
 		}
 
 		@Override
@@ -99,13 +89,23 @@ public class CryptoConfigToJavaAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseKeyDerivationAlgorithmToMethod(KeyDerivationAlgorithmToMethod object) {
-			return createKeyDerivationAlgorithmToMethodAdapter();
+		public Adapter caseTaskToJavaCompilationUnit(TaskToJavaCompilationUnit object) {
+			return createTaskToJavaCompilationUnitAdapter();
+		}
+
+		@Override
+		public Adapter caseTaskToJavaPackage(TaskToJavaPackage object) {
+			return createTaskToJavaPackageAdapter();
 		}
 
 		@Override
 		public Adapter caseAlgorithmToJavaCompilationUnit(AlgorithmToJavaCompilationUnit object) {
 			return createAlgorithmToJavaCompilationUnitAdapter();
+		}
+
+		@Override
+		public Adapter caseKeyDerivationAlgorithmToJcu(KeyDerivationAlgorithmToJcu object) {
+			return createKeyDerivationAlgorithmToJcuAdapter();
 		}
 
 		@Override
@@ -138,44 +138,16 @@ public class CryptoConfigToJavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.AlgorithmToJcu <em>Algorithm To Jcu</em>}'.
+	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.KeyDerivationAlgorithmToMethod <em>Key Derivation Algorithm To Method</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see CryptoConfigToJava.AlgorithmToJcu
+	 * @see CryptoConfigToJava.KeyDerivationAlgorithmToMethod
 	 * @generated
 	 */
-	public Adapter createAlgorithmToJcuAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.TaskToJavaCompilationUnit <em>Task To Java Compilation Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see CryptoConfigToJava.TaskToJavaCompilationUnit
-	 * @generated
-	 */
-	public Adapter createTaskToJavaCompilationUnitAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.KeyDerivationAlgorithmToJcu <em>Key Derivation Algorithm To Jcu</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see CryptoConfigToJava.KeyDerivationAlgorithmToJcu
-	 * @generated
-	 */
-	public Adapter createKeyDerivationAlgorithmToJcuAdapter() {
+	public Adapter createKeyDerivationAlgorithmToMethodAdapter() {
 		return null;
 	}
 
@@ -194,16 +166,16 @@ public class CryptoConfigToJavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.TaskToJavaPackage <em>Task To Java Package</em>}'.
+	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.AlgorithmToJcu <em>Algorithm To Jcu</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see CryptoConfigToJava.TaskToJavaPackage
+	 * @see CryptoConfigToJava.AlgorithmToJcu
 	 * @generated
 	 */
-	public Adapter createTaskToJavaPackageAdapter() {
+	public Adapter createAlgorithmToJcuAdapter() {
 		return null;
 	}
 
@@ -222,16 +194,30 @@ public class CryptoConfigToJavaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.KeyDerivationAlgorithmToMethod <em>Key Derivation Algorithm To Method</em>}'.
+	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.TaskToJavaCompilationUnit <em>Task To Java Compilation Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see CryptoConfigToJava.KeyDerivationAlgorithmToMethod
+	 * @see CryptoConfigToJava.TaskToJavaCompilationUnit
 	 * @generated
 	 */
-	public Adapter createKeyDerivationAlgorithmToMethodAdapter() {
+	public Adapter createTaskToJavaCompilationUnitAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.TaskToJavaPackage <em>Task To Java Package</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see CryptoConfigToJava.TaskToJavaPackage
+	 * @generated
+	 */
+	public Adapter createTaskToJavaPackageAdapter() {
 		return null;
 	}
 
@@ -246,6 +232,20 @@ public class CryptoConfigToJavaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAlgorithmToJavaCompilationUnitAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link CryptoConfigToJava.KeyDerivationAlgorithmToJcu <em>Key Derivation Algorithm To Jcu</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see CryptoConfigToJava.KeyDerivationAlgorithmToJcu
+	 * @generated
+	 */
+	public Adapter createKeyDerivationAlgorithmToJcuAdapter() {
 		return null;
 	}
 

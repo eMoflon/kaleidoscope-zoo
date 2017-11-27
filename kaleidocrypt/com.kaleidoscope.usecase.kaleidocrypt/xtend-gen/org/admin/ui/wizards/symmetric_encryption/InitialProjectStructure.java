@@ -35,8 +35,9 @@ public class InitialProjectStructure {
     _builder.append("xmlns:CryptoAPIConfig=\"platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore\"");
     _builder.newLine();
     _builder.append("    ");
-    _builder.append("package=");
+    _builder.append("package=\"");
     _builder.append(packageName, "    ");
+    _builder.append("\"");
     _builder.newLineIfNotEmpty();
     _builder.append("    ");
     _builder.append("description=\"SymmetricEncryption\">");

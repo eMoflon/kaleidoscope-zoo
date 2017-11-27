@@ -458,7 +458,7 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_BWD_EMoflonEdge_4(EMoflonEdge _edge_methods) {
+	public EObjectContainer isAppropriate_BWD_EMoflonEdge_9(EMoflonEdge _edge_methods) {
 
 		Object[] result1_bindingAndBlack = IgnoreOpaqueMethodImpl
 				.pattern_IgnoreOpaqueMethod_17_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -829,8 +829,8 @@ public class IgnoreOpaqueMethodImpl extends AbstractRuleImpl implements IgnoreOp
 			return null;
 		case RulesPackage.IGNORE_OPAQUE_METHOD___CHECK_TYPES_BWD__MATCH:
 			return checkTypes_BWD((Match) arguments.get(0));
-		case RulesPackage.IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_BWD_EMOFLON_EDGE_4__EMOFLONEDGE:
-			return isAppropriate_BWD_EMoflonEdge_4((EMoflonEdge) arguments.get(0));
+		case RulesPackage.IGNORE_OPAQUE_METHOD___IS_APPROPRIATE_BWD_EMOFLON_EDGE_9__EMOFLONEDGE:
+			return isAppropriate_BWD_EMoflonEdge_9((EMoflonEdge) arguments.get(0));
 		case RulesPackage.IGNORE_OPAQUE_METHOD___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.IGNORE_OPAQUE_METHOD___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH:
