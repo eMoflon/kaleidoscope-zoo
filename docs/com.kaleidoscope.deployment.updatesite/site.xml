@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.kaleidoscope.deployment.feature_1.0.0.201711281144.jar" id="com.kaleidoscope.deployment.feature" version="1.0.0.201711281144"/>
+</site>
