@@ -3,7 +3,10 @@ A zoo of examples and application scenarios of kaleidoscope, a model synchronisa
 
 ## Prerequisite:
 
-1. Install Eclipse Oxygen with Eclipse Modeling Tools (tested on 4.7.0) http://www.eclipse.org/downloads/packages/eclipse-modeling-tools/oxygenr
+1. Install the latest version of Eclipse Modeling Tools (last tested on 4.7.0) http://www.eclipse.org/downloads/packages/
+2. Install the Kaleidoscope Framework via this Update Site:  http://emoflon.org/kaleidoscope-zoo/com.kaleidoscope.deployment.updatesite  
+    - **Important:** Make sure you enable "contact all update sites" in the update manager so all dependencies are automatically installed.
+    - **Important:** After adding the Kaleidoscope update site some extra update sites will be added automatically for all dependencies.  Unfortunately, you have to first click on `Manage` and *enable* all these update sites first before clicking `Install`.
 
 ## Setup steps:
 
