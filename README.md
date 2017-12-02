@@ -34,6 +34,21 @@ Make sure you enable "contact all update sites" in the update manager so all dep
 2. You might have to manually trigger code generation for the Xtext/Xtend projects.
 3. Consult the README file in each of the showcase projects for further instructions.
 
+## Kaleidocrypt
+
+### Install required plugins:
+1. Install eMoflon: http://emoflon.github.io/eclipse-plugin/emoflon_2.31.0/updatesite
+2. Install the latest version of Xtend: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
+
+Make sure you enable "contact all update sites" in the update manager so all dependencies are automatically installed.
+
+### Setup steps:
+
+1. Go to ```File/Import.../Team/Team Project Set```, check URL and enter in and import this PSF file: https://raw.githubusercontent.com/eMoflon/kaleidoscope-zoo/master/kaleidocrypt/KaleidocryptProjectSet.psf
+2. Run ```com.kaleidoscope.usecase.kaleidocrypt``` as Eclipse Application
+3. Add a new project, e.g., called CryptoAPI
+4. A new configuration can be added by selecting the CryptoAPI project and adding a configuration such as SymmetricEncryption.
+
 ## BX Demonstrator
 
 ### Install required plugins:
@@ -61,19 +76,3 @@ Right click on Project -> Run As -> Run on Server -> select the Tomcat server an
 Now you will be able to run the project on browser by entering http://localhost:8080/com.kaleidoscope.usecase.bxdemonstrator.tomcat.app/
 
 For small code changes, Tomcat automatically build and push the changes while in running mode. Only you have to refresh the browser to see the effect of changes. For big changes, changes in javascript file(logic.js) or if the automatic build is not working(sometimes), stop the server, clean and then start once again.
-
-## Kaleidocrypt
-
-
-### Install required plugins:
-1. Install eMoflon: http://emoflon.github.io/eclipse-plugin/emoflon_2.31.0/updatesite
-2. Install the latest version of Xtend: http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
-
-Make sure you enable "contact all update sites" in the update manager so all dependencies are automatically installed.
-
-### Setup steps:
-
-1. Go to ```File/Import.../Team/Team Project Set```, check URL and enter in and import this PSF file: https://raw.githubusercontent.com/eMoflon/kaleidoscope-zoo/master/kaleidocrypt/KaleidocryptProjectSet.psf
-2. Run ```com.kaleidoscope.usecase.kaleidocrypt``` as Eclipse Application
-3. Add new project called CryptoAPI
-4. New configuration can be added by selecting the CryptoAPI project and adding a configuration such as SymmetricEncryption.
