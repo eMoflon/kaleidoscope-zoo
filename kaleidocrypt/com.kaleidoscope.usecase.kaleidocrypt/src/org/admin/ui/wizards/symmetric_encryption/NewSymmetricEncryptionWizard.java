@@ -40,7 +40,6 @@ public class NewSymmetricEncryptionWizard extends Wizard implements INewWizard {
     		try {
 				doFinish(configName, packageName);
 			} catch (CoreException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
     	}else{

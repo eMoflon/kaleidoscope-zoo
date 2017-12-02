@@ -98,7 +98,6 @@ public class CryptoAPINature implements IProjectNature {
 	}
 	@Override
 	public void deconfigure() throws CoreException {
-		// TODO Auto-generated method stub
 
 	}
 
