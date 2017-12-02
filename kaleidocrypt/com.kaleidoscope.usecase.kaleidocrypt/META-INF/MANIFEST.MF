@@ -46,7 +46,6 @@ Export-Package: org,
  org.admin.ui.wizards,
  org.admin.ui.wizards.new_project,
  org.admin.ui.wizards.symmetric_encryption,
- org.builder,
- org.normaliser
+ org.builder
 
 
