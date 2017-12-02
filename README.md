@@ -44,7 +44,7 @@ Make sure you enable "contact all update sites" in the update manager so all dep
 
 ### Setup steps:
 
-1. Go to ```File/Import.../Team/Team Project Set```, check URL and enter in and import this PSF file: https://raw.githubusercontent.com/eMoflon/kaleidoscope-zoo/master/kaleidocrypt/KaleidocryptProjectSet.psf
+1. Go to ```File/Import.../Team/Team Project Set```, check URL and enter in and import this PSF file: https://raw.githubusercontent.com/eMoflon/kaleidoscope-zoo/master/kaleidocrypt/projectSet.psf
 2. Run ```com.kaleidoscope.usecase.kaleidocrypt``` as Eclipse Application
 3. Add a new project, e.g., called CryptoAPI
 4. A new configuration can be added by selecting the CryptoAPI project and adding a configuration such as SymmetricEncryption.
