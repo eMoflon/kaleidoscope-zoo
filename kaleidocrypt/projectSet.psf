@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<psf version="2.0">
+<provider id="org.eclipse.egit.core.GitProvider">
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,kaleidocrypt/com.kaleidoscope.usecase.kaleidocrypt"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,kaleidocrypt/implementation/BxtendCryptoImpl"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,kaleidocrypt/metamodel/CryptoAPIConfig"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,kaleidocrypt/implementation/CryptoConfigToJava"/>
+</provider>
+<workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1512159311389_10" label="kaleidoscope::kaleidocrypt" name="kaleidoscope::kaleidocrypt">
+<item elementID="=com.kaleidoscope.usecase.kaleidocrypt.bxtend" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=CryptoAPIConfig" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=CryptoConfigToJava" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.kaleidocrypt" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSets>
+</psf>
