@@ -27,8 +27,6 @@ import org.eclipse.ui.PlatformUI;
 public class NewSymmetricEncryptionWizardPage extends WizardPage {	
 	  private IStructuredSelection selection;
 	  private boolean creationAllowed = true;	  
-	  
-	  private Text packageName;
 	  private Text configFileName;
 	  
 	  public boolean getCreationAllowed(){
@@ -49,14 +47,11 @@ public class NewSymmetricEncryptionWizardPage extends WizardPage {
 		setTitle("New SymmetriEncryption wizard");
 		setDescription("This wizard creates a new SymmetricEncryption configuration model inside the models folder!");
 	}
-	public String getPackageName(){
-		return packageName.getText();
-	}
+	
 	public String getConfigFileName(){
 		return configFileName.getText();
 	}
 	private void initialize() {
-		packageName.setText("");
 		configFileName.setText("");
 	}
 	/**
@@ -64,23 +59,13 @@ public class NewSymmetricEncryptionWizardPage extends WizardPage {
 	 */
 
 	private void dialogChanged() {		
-		String packageName = getPackageName();
 		String configFileName = getConfigFileName();
 		
-		if (packageName.length() == 0) {
-			updateStatus("Package name must be specified");
-			return;
-		}
 		
 		if (configFileName.length() == 0) {
 			updateStatus("Config file name must be specified");
 			return;
 		}
-		if (packageName.replace('\\', '/').indexOf('/', 1) > 0) {
-			updateStatus("Package name must be valid");
-			return;
-		}
-		
 		updateStatus(null);
 	}
 
@@ -94,27 +79,16 @@ public class NewSymmetricEncryptionWizardPage extends WizardPage {
 	 * @see IDialogPage#createControl(Composite)
 	 */
 	public void createControl(Composite parent) {
+		
 		Composite container = new Composite(parent, SWT.NULL);
 		GridLayout layout = new GridLayout();
 		container.setLayout(layout);
 		layout.numColumns = 2;
 		layout.verticalSpacing = 9;
 		
-		Label labelPackageName = new Label(container, SWT.NULL);
-		labelPackageName.setText("Package name:");
-
-		packageName = new Text(container, SWT.BORDER | SWT.SINGLE);
 		GridData gd = new GridData(GridData.FILL_HORIZONTAL);
-		packageName.setLayoutData(gd);
-		packageName.addModifyListener(new ModifyListener() {
-			public void modifyText(ModifyEvent e) {
-				dialogChanged();
-			}
-		});
-
 		Label configFileLabel = new Label(container, SWT.NULL);
 		configFileLabel.setText("&Config file name:");
-		
 		
 		configFileName = new Text(container, SWT.BORDER | SWT.SINGLE);
 		configFileName .setLayoutData(gd);

@@ -16,7 +16,7 @@ class InitialProjectStructure {
 	}
 	
 	
-	def static void addInitialConfigurationModel(IProject project, String configName, String packageName) throws CoreException{
+	def static void addInitialConfigurationModel(IProject project, String configName) throws CoreException{
 
 	    val IPath pathToInitialConfiguration = new Path("models/" + configName +".xmi");
 		val String initialConfigurationfileContent = '''
@@ -26,7 +26,7 @@ class InitialProjectStructure {
 		    xmlns:xmi="http://www.omg.org/XMI"
 		    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		    xmlns:CryptoAPIConfig="platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore"
-		    package="«packageName»"
+		    package="crypto"
 		    description="SymmetricEncryption">
 		  
 		  <algorithms

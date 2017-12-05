@@ -41,18 +41,6 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 		this.persistenceDirectory = persistenceDirectory;
 	}
 	
-	private boolean isStatePersisted(Path persistenceDirectory) {
-		
-		File sourceModelFile = persistenceDirectory.resolve(sourceModelFileName).toFile();
-		File targetModelFile = persistenceDirectory.resolve(targetModelFileName).toFile();
-		File correspondentModelFile = persistenceDirectory.resolve(corrModelFileName).toFile();
-		
-		if(!sourceModelFile.exists() || !targetModelFile.exists() || !correspondentModelFile.exists())
-			return false;
-		
-		return true;
-	}
-	
 	private void loadTriple(Path corrPath) {
 		try {
 			loadCorr(corrPath.toString());
@@ -155,9 +143,6 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 	@Override
 	public void initialize() throws SynchronisationFailedException{
 
-		if(isStatePersisted(persistenceDirectory)) {
-			return;
-		}
 				
 		if(initialTask != null) {
 			

@@ -36,9 +36,9 @@ public class NewSymmetricEncryptionWizard extends Wizard implements INewWizard {
     	if(creationAllowed){
     		System.out.println("Creating!");
     		String configName = newFileWizardPage.getConfigFileName();
-    		String packageName = newFileWizardPage.getPackageName();
+    	
     		try {
-				doFinish(configName, packageName);
+				doFinish(configName);
 			} catch (CoreException e) {
 				e.printStackTrace();
 			}
@@ -49,10 +49,10 @@ public class NewSymmetricEncryptionWizard extends Wizard implements INewWizard {
     	
     	return true;
     }
-    public void doFinish(String configName, String packageName)
+    public void doFinish(String configName)
     		throws CoreException {
     		
-    		InitialProjectStructure.addInitialConfigurationModel(project, configName, packageName);
+    		InitialProjectStructure.addInitialConfigurationModel(project, configName);
   
     }
     public void init(IWorkbench workbench, IStructuredSelection selection) {        

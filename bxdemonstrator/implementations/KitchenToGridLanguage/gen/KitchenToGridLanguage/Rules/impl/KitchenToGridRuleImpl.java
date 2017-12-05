@@ -147,36 +147,36 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 		Grid grid = (Grid) result1_bindingAndBlack[0];
 		CSP csp = (CSP) result1_bindingAndBlack[1];
 		Object[] result1_green = KitchenToGridRuleImpl
-				.pattern_KitchenToGridRule_1_1_performtransformation_greenFFBB(grid, csp);
-		KitchenToGridCorr kitchenToGrid = (KitchenToGridCorr) result1_green[0];
-		Kitchen kitchen = (Kitchen) result1_green[1];
+				.pattern_KitchenToGridRule_1_1_performtransformation_greenFBFB(grid, csp);
+		Kitchen kitchen = (Kitchen) result1_green[0];
+		KitchenToGridCorr kitchenToGrid = (KitchenToGridCorr) result1_green[2];
 
 		Object[] result2_black = KitchenToGridRuleImpl
-				.pattern_KitchenToGridRule_1_2_collecttranslatedelements_blackBBB(kitchenToGrid, kitchen, grid);
+				.pattern_KitchenToGridRule_1_2_collecttranslatedelements_blackBBB(kitchen, grid, kitchenToGrid);
 		if (result2_black == null) {
-			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[kitchenToGrid] = "
-					+ kitchenToGrid + ", " + "[kitchen] = " + kitchen + ", " + "[grid] = " + grid + ".");
+			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[kitchen] = " + kitchen + ", "
+					+ "[grid] = " + grid + ", " + "[kitchenToGrid] = " + kitchenToGrid + ".");
 		}
 		Object[] result2_green = KitchenToGridRuleImpl
-				.pattern_KitchenToGridRule_1_2_collecttranslatedelements_greenFBBB(kitchenToGrid, kitchen, grid);
+				.pattern_KitchenToGridRule_1_2_collecttranslatedelements_greenFBBB(kitchen, grid, kitchenToGrid);
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		Object[] result3_black = KitchenToGridRuleImpl
-				.pattern_KitchenToGridRule_1_3_bookkeepingforedges_blackBBBB(ruleresult, kitchenToGrid, kitchen, grid);
+				.pattern_KitchenToGridRule_1_3_bookkeepingforedges_blackBBBB(ruleresult, kitchen, grid, kitchenToGrid);
 		if (result3_black == null) {
-			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[ruleresult] = " + ruleresult
-					+ ", " + "[kitchenToGrid] = " + kitchenToGrid + ", " + "[kitchen] = " + kitchen + ", " + "[grid] = "
-					+ grid + ".");
+			throw new RuntimeException(
+					"Pattern matching failed." + " Variables: " + "[ruleresult] = " + ruleresult + ", " + "[kitchen] = "
+							+ kitchen + ", " + "[grid] = " + grid + ", " + "[kitchenToGrid] = " + kitchenToGrid + ".");
 		}
-		KitchenToGridRuleImpl.pattern_KitchenToGridRule_1_3_bookkeepingforedges_greenBBBBFF(ruleresult, kitchenToGrid,
-				kitchen, grid);
-		//nothing EMoflonEdge kitchenToGrid__kitchen____target = (EMoflonEdge) result3_green[4];
-		//nothing EMoflonEdge kitchenToGrid__grid____source = (EMoflonEdge) result3_green[5];
+		KitchenToGridRuleImpl.pattern_KitchenToGridRule_1_3_bookkeepingforedges_greenBBBBFF(ruleresult, kitchen, grid,
+				kitchenToGrid);
+		//nothing EMoflonEdge kitchenToGrid__grid____source = (EMoflonEdge) result3_green[4];
+		//nothing EMoflonEdge kitchenToGrid__kitchen____target = (EMoflonEdge) result3_green[5];
 
 		// 
 		// 
-		KitchenToGridRuleImpl.pattern_KitchenToGridRule_1_5_registerobjects_expressionBBBBB(this, ruleresult,
-				kitchenToGrid, kitchen, grid);
+		KitchenToGridRuleImpl.pattern_KitchenToGridRule_1_5_registerobjects_expressionBBBBB(this, ruleresult, kitchen,
+				grid, kitchenToGrid);
 		return KitchenToGridRuleImpl.pattern_KitchenToGridRule_1_6_expressionFB(ruleresult);
 	}
 
@@ -308,10 +308,10 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 		// Create attribute variables
 
 		// Create unbound variables
-		Variable var_kitchen_xSize = CSPFactoryHelper.eINSTANCE.createVariable("kitchen.xSize", csp);
-		var_kitchen_xSize.setType("double");
 		Variable var_kitchen_ySize = CSPFactoryHelper.eINSTANCE.createVariable("kitchen.ySize", csp);
 		var_kitchen_ySize.setType("double");
+		Variable var_kitchen_xSize = CSPFactoryHelper.eINSTANCE.createVariable("kitchen.xSize", csp);
+		var_kitchen_xSize.setType("double");
 
 		// Create constraints
 		SetDefaultNumber setDefaultNumber = new SetDefaultNumber();
@@ -322,9 +322,9 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 
 		// Solve CSP
 		setDefaultNumber.setRuleName("NoRuleName");
-		setDefaultNumber.solve(var_kitchen_xSize, literal0);
+		setDefaultNumber.solve(var_kitchen_ySize, literal0);
 		setDefaultNumber_0.setRuleName("NoRuleName");
-		setDefaultNumber_0.solve(var_kitchen_ySize, literal0);
+		setDefaultNumber_0.solve(var_kitchen_xSize, literal0);
 
 		// Snapshot pattern match on which CSP is solved
 		isApplicableMatch.registerObject("grid", grid);
@@ -345,11 +345,11 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject kitchenToGrid, EObject kitchen,
-			EObject grid) {
-		ruleresult.registerObject("kitchenToGrid", kitchenToGrid);
+	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject kitchen, EObject grid,
+			EObject kitchenToGrid) {
 		ruleresult.registerObject("kitchen", kitchen);
 		ruleresult.registerObject("grid", grid);
+		ruleresult.registerObject("kitchenToGrid", kitchenToGrid);
 
 	}
 
@@ -427,36 +427,36 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 		Kitchen kitchen = (Kitchen) result1_bindingAndBlack[0];
 		CSP csp = (CSP) result1_bindingAndBlack[1];
 		Object[] result1_green = KitchenToGridRuleImpl
-				.pattern_KitchenToGridRule_11_1_performtransformation_greenFBFB(kitchen, csp);
-		KitchenToGridCorr kitchenToGrid = (KitchenToGridCorr) result1_green[0];
-		Grid grid = (Grid) result1_green[2];
+				.pattern_KitchenToGridRule_11_1_performtransformation_greenBFFB(kitchen, csp);
+		Grid grid = (Grid) result1_green[1];
+		KitchenToGridCorr kitchenToGrid = (KitchenToGridCorr) result1_green[2];
 
 		Object[] result2_black = KitchenToGridRuleImpl
-				.pattern_KitchenToGridRule_11_2_collecttranslatedelements_blackBBB(kitchenToGrid, kitchen, grid);
+				.pattern_KitchenToGridRule_11_2_collecttranslatedelements_blackBBB(kitchen, grid, kitchenToGrid);
 		if (result2_black == null) {
-			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[kitchenToGrid] = "
-					+ kitchenToGrid + ", " + "[kitchen] = " + kitchen + ", " + "[grid] = " + grid + ".");
+			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[kitchen] = " + kitchen + ", "
+					+ "[grid] = " + grid + ", " + "[kitchenToGrid] = " + kitchenToGrid + ".");
 		}
 		Object[] result2_green = KitchenToGridRuleImpl
-				.pattern_KitchenToGridRule_11_2_collecttranslatedelements_greenFBBB(kitchenToGrid, kitchen, grid);
+				.pattern_KitchenToGridRule_11_2_collecttranslatedelements_greenFBBB(kitchen, grid, kitchenToGrid);
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		Object[] result3_black = KitchenToGridRuleImpl
-				.pattern_KitchenToGridRule_11_3_bookkeepingforedges_blackBBBB(ruleresult, kitchenToGrid, kitchen, grid);
+				.pattern_KitchenToGridRule_11_3_bookkeepingforedges_blackBBBB(ruleresult, kitchen, grid, kitchenToGrid);
 		if (result3_black == null) {
-			throw new RuntimeException("Pattern matching failed." + " Variables: " + "[ruleresult] = " + ruleresult
-					+ ", " + "[kitchenToGrid] = " + kitchenToGrid + ", " + "[kitchen] = " + kitchen + ", " + "[grid] = "
-					+ grid + ".");
+			throw new RuntimeException(
+					"Pattern matching failed." + " Variables: " + "[ruleresult] = " + ruleresult + ", " + "[kitchen] = "
+							+ kitchen + ", " + "[grid] = " + grid + ", " + "[kitchenToGrid] = " + kitchenToGrid + ".");
 		}
-		KitchenToGridRuleImpl.pattern_KitchenToGridRule_11_3_bookkeepingforedges_greenBBBBFF(ruleresult, kitchenToGrid,
-				kitchen, grid);
-		//nothing EMoflonEdge kitchenToGrid__kitchen____target = (EMoflonEdge) result3_green[4];
-		//nothing EMoflonEdge kitchenToGrid__grid____source = (EMoflonEdge) result3_green[5];
+		KitchenToGridRuleImpl.pattern_KitchenToGridRule_11_3_bookkeepingforedges_greenBBBBFF(ruleresult, kitchen, grid,
+				kitchenToGrid);
+		//nothing EMoflonEdge kitchenToGrid__grid____source = (EMoflonEdge) result3_green[4];
+		//nothing EMoflonEdge kitchenToGrid__kitchen____target = (EMoflonEdge) result3_green[5];
 
 		// 
 		// 
-		KitchenToGridRuleImpl.pattern_KitchenToGridRule_11_5_registerobjects_expressionBBBBB(this, ruleresult,
-				kitchenToGrid, kitchen, grid);
+		KitchenToGridRuleImpl.pattern_KitchenToGridRule_11_5_registerobjects_expressionBBBBB(this, ruleresult, kitchen,
+				grid, kitchenToGrid);
 		return KitchenToGridRuleImpl.pattern_KitchenToGridRule_11_6_expressionFB(ruleresult);
 	}
 
@@ -546,12 +546,12 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 		literal0.setType("");
 
 		// Create attribute variables
-		Variable var_kitchen_xSize = CSPFactoryHelper.eINSTANCE.createVariable("kitchen.xSize", true, csp);
-		var_kitchen_xSize.setValue(kitchen.getXSize());
-		var_kitchen_xSize.setType("double");
 		Variable var_kitchen_ySize = CSPFactoryHelper.eINSTANCE.createVariable("kitchen.ySize", true, csp);
 		var_kitchen_ySize.setValue(kitchen.getYSize());
 		var_kitchen_ySize.setType("double");
+		Variable var_kitchen_xSize = CSPFactoryHelper.eINSTANCE.createVariable("kitchen.xSize", true, csp);
+		var_kitchen_xSize.setValue(kitchen.getXSize());
+		var_kitchen_xSize.setType("double");
 
 		// Create unbound variables
 
@@ -564,9 +564,9 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 
 		// Solve CSP
 		setDefaultNumber.setRuleName("NoRuleName");
-		setDefaultNumber.solve(var_kitchen_xSize, literal0);
+		setDefaultNumber.solve(var_kitchen_ySize, literal0);
 		setDefaultNumber_0.setRuleName("NoRuleName");
-		setDefaultNumber_0.solve(var_kitchen_ySize, literal0);
+		setDefaultNumber_0.solve(var_kitchen_xSize, literal0);
 		return csp;
 	}
 
@@ -627,11 +627,11 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_BWD(PerformRuleResult ruleresult, EObject kitchenToGrid, EObject kitchen,
-			EObject grid) {
-		ruleresult.registerObject("kitchenToGrid", kitchenToGrid);
+	public void registerObjects_BWD(PerformRuleResult ruleresult, EObject kitchen, EObject grid,
+			EObject kitchenToGrid) {
 		ruleresult.registerObject("kitchen", kitchen);
 		ruleresult.registerObject("grid", grid);
+		ruleresult.registerObject("kitchenToGrid", kitchenToGrid);
 
 	}
 
@@ -803,24 +803,24 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 		setDefaultNumber0.solve(var_grid_blockSize, var_literal1);
 
 		setDefaultNumber1.setRuleName("KitchenToGridRule");
-		setDefaultNumber1.solve(var_kitchen_xSize, var_literal0);
+		setDefaultNumber1.solve(var_kitchen_ySize, var_literal0);
 
 		setDefaultNumber2.setRuleName("KitchenToGridRule");
-		setDefaultNumber2.solve(var_kitchen_ySize, var_literal0);
+		setDefaultNumber2.solve(var_kitchen_xSize, var_literal0);
 
 		if (csp.check()) {
 			ruleResult.setSuccess(true);
 		} else {
-			var_kitchen_xSize.setBound(false);
 			var_kitchen_ySize.setBound(false);
+			var_kitchen_xSize.setBound(false);
 			setDefaultNumber0.solve(var_grid_blockSize, var_literal1);
-			setDefaultNumber1.solve(var_kitchen_xSize, var_literal0);
-			setDefaultNumber2.solve(var_kitchen_ySize, var_literal0);
+			setDefaultNumber1.solve(var_kitchen_ySize, var_literal0);
+			setDefaultNumber2.solve(var_kitchen_xSize, var_literal0);
 			if (csp.check()) {
 				ruleResult.setSuccess(true);
 				ruleResult.setRequiredChange(true);
-				__helper.setValue("kitchen", "xSize", var_kitchen_xSize.getValue());
 				__helper.setValue("kitchen", "ySize", var_kitchen_ySize.getValue());
+				__helper.setValue("kitchen", "xSize", var_kitchen_xSize.getValue());
 			} else {
 				ruleResult.setSuccess(false);
 				return ruleResult;
@@ -875,10 +875,10 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 		csp.getConstraints().add(setDefaultNumber2);
 
 		setDefaultNumber0.setRuleName("KitchenToGridRule");
-		setDefaultNumber0.solve(var_kitchen_xSize, var_literal0);
+		setDefaultNumber0.solve(var_kitchen_ySize, var_literal0);
 
 		setDefaultNumber1.setRuleName("KitchenToGridRule");
-		setDefaultNumber1.solve(var_kitchen_ySize, var_literal0);
+		setDefaultNumber1.solve(var_kitchen_xSize, var_literal0);
 
 		setDefaultNumber2.setRuleName("KitchenToGridRule");
 		setDefaultNumber2.solve(var_grid_blockSize, var_literal1);
@@ -887,8 +887,8 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 			ruleResult.setSuccess(true);
 		} else {
 			var_grid_blockSize.setBound(false);
-			setDefaultNumber0.solve(var_kitchen_xSize, var_literal0);
-			setDefaultNumber1.solve(var_kitchen_ySize, var_literal0);
+			setDefaultNumber0.solve(var_kitchen_ySize, var_literal0);
+			setDefaultNumber1.solve(var_kitchen_xSize, var_literal0);
 			setDefaultNumber2.solve(var_grid_blockSize, var_literal1);
 			if (csp.check()) {
 				ruleResult.setSuccess(true);
@@ -950,9 +950,9 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 					throw new RuntimeException("Pattern matching failed." + " Variables: " + "[kitchen] = " + kitchen
 							+ ", " + "[grid] = " + grid + ", " + "[ccMatch] = " + ccMatch + ".");
 				}
-				KitchenToGridRuleImpl.pattern_KitchenToGridRule_24_6_createcorrespondence_greenFBBB(kitchen, grid,
+				KitchenToGridRuleImpl.pattern_KitchenToGridRule_24_6_createcorrespondence_greenBBFB(kitchen, grid,
 						ccMatch);
-				//nothing KitchenToGridCorr kitchenToGrid = (KitchenToGridCorr) result6_green[0];
+				//nothing KitchenToGridCorr kitchenToGrid = (KitchenToGridCorr) result6_green[2];
 
 				Object[] result7_black = KitchenToGridRuleImpl
 						.pattern_KitchenToGridRule_24_7_addtoreturnedresult_blackBB(result, ccMatch);
@@ -983,12 +983,12 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 		literal0.setType("");
 
 		// Create attribute variables
-		Variable var_kitchen_xSize = CSPFactoryHelper.eINSTANCE.createVariable("kitchen.xSize", true, csp);
-		var_kitchen_xSize.setValue(kitchen.getXSize());
-		var_kitchen_xSize.setType("double");
 		Variable var_kitchen_ySize = CSPFactoryHelper.eINSTANCE.createVariable("kitchen.ySize", true, csp);
 		var_kitchen_ySize.setValue(kitchen.getYSize());
 		var_kitchen_ySize.setType("double");
+		Variable var_kitchen_xSize = CSPFactoryHelper.eINSTANCE.createVariable("kitchen.xSize", true, csp);
+		var_kitchen_xSize.setValue(kitchen.getXSize());
+		var_kitchen_xSize.setType("double");
 
 		// Create unbound variables
 
@@ -1001,9 +1001,9 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 
 		// Solve CSP
 		setDefaultNumber.setRuleName("NoRuleName");
-		setDefaultNumber.solve(var_kitchen_xSize, literal0);
+		setDefaultNumber.solve(var_kitchen_ySize, literal0);
 		setDefaultNumber_0.setRuleName("NoRuleName");
-		setDefaultNumber_0.solve(var_kitchen_ySize, literal0);
+		setDefaultNumber_0.solve(var_kitchen_xSize, literal0);
 		return csp;
 	}
 
@@ -1236,40 +1236,40 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 		return null;
 	}
 
-	public static final Object[] pattern_KitchenToGridRule_1_1_performtransformation_greenFFBB(Grid grid, CSP csp) {
-		KitchenToGridCorr kitchenToGrid = KitchenToGridLanguageFactory.eINSTANCE.createKitchenToGridCorr();
+	public static final Object[] pattern_KitchenToGridRule_1_1_performtransformation_greenFBFB(Grid grid, CSP csp) {
 		Kitchen kitchen = KitchenLanguageFactory.eINSTANCE.createKitchen();
-		Object _localVariable_0 = csp.getValue("kitchen", "xSize");
-		Object _localVariable_1 = csp.getValue("kitchen", "ySize");
+		KitchenToGridCorr kitchenToGrid = KitchenToGridLanguageFactory.eINSTANCE.createKitchenToGridCorr();
+		Object _localVariable_0 = csp.getValue("kitchen", "ySize");
+		Object _localVariable_1 = csp.getValue("kitchen", "xSize");
 		kitchenToGrid.setSource(grid);
 		kitchenToGrid.setTarget(kitchen);
-		double kitchen_xSize_prime = (double) _localVariable_0;
-		double kitchen_ySize_prime = (double) _localVariable_1;
-		kitchen.setXSize(Double.valueOf(kitchen_xSize_prime));
+		double kitchen_ySize_prime = (double) _localVariable_0;
+		double kitchen_xSize_prime = (double) _localVariable_1;
 		kitchen.setYSize(Double.valueOf(kitchen_ySize_prime));
-		return new Object[] { kitchenToGrid, kitchen, grid, csp };
+		kitchen.setXSize(Double.valueOf(kitchen_xSize_prime));
+		return new Object[] { kitchen, grid, kitchenToGrid, csp };
 	}
 
-	public static final Object[] pattern_KitchenToGridRule_1_2_collecttranslatedelements_blackBBB(
-			KitchenToGridCorr kitchenToGrid, Kitchen kitchen, Grid grid) {
-		return new Object[] { kitchenToGrid, kitchen, grid };
+	public static final Object[] pattern_KitchenToGridRule_1_2_collecttranslatedelements_blackBBB(Kitchen kitchen,
+			Grid grid, KitchenToGridCorr kitchenToGrid) {
+		return new Object[] { kitchen, grid, kitchenToGrid };
 	}
 
-	public static final Object[] pattern_KitchenToGridRule_1_2_collecttranslatedelements_greenFBBB(
-			KitchenToGridCorr kitchenToGrid, Kitchen kitchen, Grid grid) {
+	public static final Object[] pattern_KitchenToGridRule_1_2_collecttranslatedelements_greenFBBB(Kitchen kitchen,
+			Grid grid, KitchenToGridCorr kitchenToGrid) {
 		PerformRuleResult ruleresult = RuntimeFactory.eINSTANCE.createPerformRuleResult();
-		ruleresult.getCreatedLinkElements().add(kitchenToGrid);
 		ruleresult.getCreatedElements().add(kitchen);
 		ruleresult.getTranslatedElements().add(grid);
-		return new Object[] { ruleresult, kitchenToGrid, kitchen, grid };
+		ruleresult.getCreatedLinkElements().add(kitchenToGrid);
+		return new Object[] { ruleresult, kitchen, grid, kitchenToGrid };
 	}
 
 	public static final Object[] pattern_KitchenToGridRule_1_3_bookkeepingforedges_blackBBBB(
-			PerformRuleResult ruleresult, EObject kitchenToGrid, EObject kitchen, EObject grid) {
+			PerformRuleResult ruleresult, EObject kitchen, EObject grid, EObject kitchenToGrid) {
 		if (!kitchen.equals(kitchenToGrid)) {
-			if (!grid.equals(kitchenToGrid)) {
-				if (!grid.equals(kitchen)) {
-					return new Object[] { ruleresult, kitchenToGrid, kitchen, grid };
+			if (!grid.equals(kitchen)) {
+				if (!grid.equals(kitchenToGrid)) {
+					return new Object[] { ruleresult, kitchen, grid, kitchenToGrid };
 				}
 			}
 		}
@@ -1277,28 +1277,28 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 	}
 
 	public static final Object[] pattern_KitchenToGridRule_1_3_bookkeepingforedges_greenBBBBFF(
-			PerformRuleResult ruleresult, EObject kitchenToGrid, EObject kitchen, EObject grid) {
-		EMoflonEdge kitchenToGrid__kitchen____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+			PerformRuleResult ruleresult, EObject kitchen, EObject grid, EObject kitchenToGrid) {
 		EMoflonEdge kitchenToGrid__grid____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge kitchenToGrid__kitchen____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "KitchenToGridRule";
-		String kitchenToGrid__kitchen____target_name_prime = "target";
 		String kitchenToGrid__grid____source_name_prime = "source";
-		kitchenToGrid__kitchen____target.setSrc(kitchenToGrid);
-		kitchenToGrid__kitchen____target.setTrg(kitchen);
-		ruleresult.getCreatedEdges().add(kitchenToGrid__kitchen____target);
+		String kitchenToGrid__kitchen____target_name_prime = "target";
 		kitchenToGrid__grid____source.setSrc(kitchenToGrid);
 		kitchenToGrid__grid____source.setTrg(grid);
 		ruleresult.getCreatedEdges().add(kitchenToGrid__grid____source);
+		kitchenToGrid__kitchen____target.setSrc(kitchenToGrid);
+		kitchenToGrid__kitchen____target.setTrg(kitchen);
+		ruleresult.getCreatedEdges().add(kitchenToGrid__kitchen____target);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
-		kitchenToGrid__kitchen____target.setName(kitchenToGrid__kitchen____target_name_prime);
 		kitchenToGrid__grid____source.setName(kitchenToGrid__grid____source_name_prime);
-		return new Object[] { ruleresult, kitchenToGrid, kitchen, grid, kitchenToGrid__kitchen____target,
-				kitchenToGrid__grid____source };
+		kitchenToGrid__kitchen____target.setName(kitchenToGrid__kitchen____target_name_prime);
+		return new Object[] { ruleresult, kitchen, grid, kitchenToGrid, kitchenToGrid__grid____source,
+				kitchenToGrid__kitchen____target };
 	}
 
 	public static final void pattern_KitchenToGridRule_1_5_registerobjects_expressionBBBBB(KitchenToGridRule _this,
-			PerformRuleResult ruleresult, EObject kitchenToGrid, EObject kitchen, EObject grid) {
-		_this.registerObjects_FWD(ruleresult, kitchenToGrid, kitchen, grid);
+			PerformRuleResult ruleresult, EObject kitchen, EObject grid, EObject kitchenToGrid) {
+		_this.registerObjects_FWD(ruleresult, kitchen, grid, kitchenToGrid);
 
 	}
 
@@ -1557,38 +1557,38 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 		return null;
 	}
 
-	public static final Object[] pattern_KitchenToGridRule_11_1_performtransformation_greenFBFB(Kitchen kitchen,
+	public static final Object[] pattern_KitchenToGridRule_11_1_performtransformation_greenBFFB(Kitchen kitchen,
 			CSP csp) {
-		KitchenToGridCorr kitchenToGrid = KitchenToGridLanguageFactory.eINSTANCE.createKitchenToGridCorr();
 		Grid grid = GridLanguageFactory.eINSTANCE.createGrid();
+		KitchenToGridCorr kitchenToGrid = KitchenToGridLanguageFactory.eINSTANCE.createKitchenToGridCorr();
 		Object _localVariable_0 = csp.getValue("grid", "blockSize");
-		kitchenToGrid.setTarget(kitchen);
 		kitchenToGrid.setSource(grid);
+		kitchenToGrid.setTarget(kitchen);
 		double grid_blockSize_prime = (double) _localVariable_0;
 		grid.setBlockSize(Double.valueOf(grid_blockSize_prime));
-		return new Object[] { kitchenToGrid, kitchen, grid, csp };
+		return new Object[] { kitchen, grid, kitchenToGrid, csp };
 	}
 
-	public static final Object[] pattern_KitchenToGridRule_11_2_collecttranslatedelements_blackBBB(
-			KitchenToGridCorr kitchenToGrid, Kitchen kitchen, Grid grid) {
-		return new Object[] { kitchenToGrid, kitchen, grid };
+	public static final Object[] pattern_KitchenToGridRule_11_2_collecttranslatedelements_blackBBB(Kitchen kitchen,
+			Grid grid, KitchenToGridCorr kitchenToGrid) {
+		return new Object[] { kitchen, grid, kitchenToGrid };
 	}
 
-	public static final Object[] pattern_KitchenToGridRule_11_2_collecttranslatedelements_greenFBBB(
-			KitchenToGridCorr kitchenToGrid, Kitchen kitchen, Grid grid) {
+	public static final Object[] pattern_KitchenToGridRule_11_2_collecttranslatedelements_greenFBBB(Kitchen kitchen,
+			Grid grid, KitchenToGridCorr kitchenToGrid) {
 		PerformRuleResult ruleresult = RuntimeFactory.eINSTANCE.createPerformRuleResult();
-		ruleresult.getCreatedLinkElements().add(kitchenToGrid);
 		ruleresult.getTranslatedElements().add(kitchen);
 		ruleresult.getCreatedElements().add(grid);
-		return new Object[] { ruleresult, kitchenToGrid, kitchen, grid };
+		ruleresult.getCreatedLinkElements().add(kitchenToGrid);
+		return new Object[] { ruleresult, kitchen, grid, kitchenToGrid };
 	}
 
 	public static final Object[] pattern_KitchenToGridRule_11_3_bookkeepingforedges_blackBBBB(
-			PerformRuleResult ruleresult, EObject kitchenToGrid, EObject kitchen, EObject grid) {
+			PerformRuleResult ruleresult, EObject kitchen, EObject grid, EObject kitchenToGrid) {
 		if (!kitchen.equals(kitchenToGrid)) {
-			if (!grid.equals(kitchenToGrid)) {
-				if (!grid.equals(kitchen)) {
-					return new Object[] { ruleresult, kitchenToGrid, kitchen, grid };
+			if (!grid.equals(kitchen)) {
+				if (!grid.equals(kitchenToGrid)) {
+					return new Object[] { ruleresult, kitchen, grid, kitchenToGrid };
 				}
 			}
 		}
@@ -1596,28 +1596,28 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 	}
 
 	public static final Object[] pattern_KitchenToGridRule_11_3_bookkeepingforedges_greenBBBBFF(
-			PerformRuleResult ruleresult, EObject kitchenToGrid, EObject kitchen, EObject grid) {
-		EMoflonEdge kitchenToGrid__kitchen____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+			PerformRuleResult ruleresult, EObject kitchen, EObject grid, EObject kitchenToGrid) {
 		EMoflonEdge kitchenToGrid__grid____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge kitchenToGrid__kitchen____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "KitchenToGridRule";
-		String kitchenToGrid__kitchen____target_name_prime = "target";
 		String kitchenToGrid__grid____source_name_prime = "source";
-		kitchenToGrid__kitchen____target.setSrc(kitchenToGrid);
-		kitchenToGrid__kitchen____target.setTrg(kitchen);
-		ruleresult.getCreatedEdges().add(kitchenToGrid__kitchen____target);
+		String kitchenToGrid__kitchen____target_name_prime = "target";
 		kitchenToGrid__grid____source.setSrc(kitchenToGrid);
 		kitchenToGrid__grid____source.setTrg(grid);
 		ruleresult.getCreatedEdges().add(kitchenToGrid__grid____source);
+		kitchenToGrid__kitchen____target.setSrc(kitchenToGrid);
+		kitchenToGrid__kitchen____target.setTrg(kitchen);
+		ruleresult.getCreatedEdges().add(kitchenToGrid__kitchen____target);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
-		kitchenToGrid__kitchen____target.setName(kitchenToGrid__kitchen____target_name_prime);
 		kitchenToGrid__grid____source.setName(kitchenToGrid__grid____source_name_prime);
-		return new Object[] { ruleresult, kitchenToGrid, kitchen, grid, kitchenToGrid__kitchen____target,
-				kitchenToGrid__grid____source };
+		kitchenToGrid__kitchen____target.setName(kitchenToGrid__kitchen____target_name_prime);
+		return new Object[] { ruleresult, kitchen, grid, kitchenToGrid, kitchenToGrid__grid____source,
+				kitchenToGrid__kitchen____target };
 	}
 
 	public static final void pattern_KitchenToGridRule_11_5_registerobjects_expressionBBBBB(KitchenToGridRule _this,
-			PerformRuleResult ruleresult, EObject kitchenToGrid, EObject kitchen, EObject grid) {
-		_this.registerObjects_BWD(ruleresult, kitchenToGrid, kitchen, grid);
+			PerformRuleResult ruleresult, EObject kitchen, EObject grid, EObject kitchenToGrid) {
+		_this.registerObjects_BWD(ruleresult, kitchen, grid, kitchenToGrid);
 
 	}
 
@@ -2082,13 +2082,13 @@ public class KitchenToGridRuleImpl extends AbstractRuleImpl implements KitchenTo
 		return new Object[] { kitchen, grid, ccMatch };
 	}
 
-	public static final Object[] pattern_KitchenToGridRule_24_6_createcorrespondence_greenFBBB(Kitchen kitchen,
+	public static final Object[] pattern_KitchenToGridRule_24_6_createcorrespondence_greenBBFB(Kitchen kitchen,
 			Grid grid, CCMatch ccMatch) {
 		KitchenToGridCorr kitchenToGrid = KitchenToGridLanguageFactory.eINSTANCE.createKitchenToGridCorr();
-		kitchenToGrid.setTarget(kitchen);
 		kitchenToGrid.setSource(grid);
+		kitchenToGrid.setTarget(kitchen);
 		ccMatch.getCreateCorr().add(kitchenToGrid);
-		return new Object[] { kitchenToGrid, kitchen, grid, ccMatch };
+		return new Object[] { kitchen, grid, kitchenToGrid, ccMatch };
 	}
 
 	public static final Object[] pattern_KitchenToGridRule_24_7_addtoreturnedresult_blackBB(

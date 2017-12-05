@@ -6,44 +6,496 @@
     operationReflection="true">
   <foreignModel>CryptoConfigToJava.ecore</foreignModel>
   <genPackages prefix="CryptoConfigToJava" disposableProviderFactory="true" ecorePackage="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#/">
-    <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//TaskToJavaPackage">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//TaskToJavaPackage/source"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//TaskToJavaPackage/target"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//AlgorithmToJavaCompilationUnit">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//AlgorithmToJavaCompilationUnit/source"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//AlgorithmToJavaCompilationUnit/target"/>
+    <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//SymmetricBlockCipherToMethod">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//SymmetricBlockCipherToMethod/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//SymmetricBlockCipherToMethod/target"/>
     </genClasses>
     <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//AlgorithmToJcu">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//AlgorithmToJcu/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//AlgorithmToJcu/target"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//SymmetricBlockCipherToJcu">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//SymmetricBlockCipherToJcu/source"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//SymmetricBlockCipherToJcu/target"/>
+    <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//ImportToImport">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//ImportToImport/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//ImportToImport/target"/>
     </genClasses>
     <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//KeyDerivationAlgorithmToMethod">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//KeyDerivationAlgorithmToMethod/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//KeyDerivationAlgorithmToMethod/target"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//SymmetricBlockCipherToMethod">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//SymmetricBlockCipherToMethod/source"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//SymmetricBlockCipherToMethod/target"/>
+    <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//AlgorithmToJavaCompilationUnit">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//AlgorithmToJavaCompilationUnit/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//AlgorithmToJavaCompilationUnit/target"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//KeyDerivationAlgorithmToJcu">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//KeyDerivationAlgorithmToJcu/source"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//KeyDerivationAlgorithmToJcu/target"/>
+    <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//SymmetricBlockCipherToJcu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//SymmetricBlockCipherToJcu/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//SymmetricBlockCipherToJcu/target"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//TaskToJavaPackage">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//TaskToJavaPackage/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//TaskToJavaPackage/target"/>
     </genClasses>
     <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//TaskToJavaCompilationUnit">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//TaskToJavaCompilationUnit/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//TaskToJavaCompilationUnit/target"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//ImportToImport">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//ImportToImport/source"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//ImportToImport/target"/>
+    <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//KeyDerivationAlgorithmToJcu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//KeyDerivationAlgorithmToJcu/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//KeyDerivationAlgorithmToJcu/target"/>
     </genClasses>
     <nestedGenPackages prefix="Rules" disposableProviderFactory="true" loadInitialization="true"
         literalsInterface="false" ecorePackage="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules">
+      <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod">
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_FWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/perform_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/perform_FWD/isApplicableMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_FWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/registerObjectsToMatch_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/registerObjectsToMatch_FWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_solveCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_solveCsp_FWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_checkCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_checkCsp_FWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkTypes_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkTypes_FWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_BWD/method"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_BWD/jcu"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/perform_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/perform_BWD/isApplicableMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_BWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/registerObjectsToMatch_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/registerObjectsToMatch_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/registerObjectsToMatch_BWD/method"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/registerObjectsToMatch_BWD/jcu"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_solveCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_solveCsp_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_solveCsp_BWD/method"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_solveCsp_BWD/jcu"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_checkCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_checkCsp_BWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_solveCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_solveCsp_BWD/isApplicableMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_solveCsp_BWD/method"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_solveCsp_BWD/jcu"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_checkCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_checkCsp_BWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/registerObjects_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/registerObjects_BWD/ruleresult"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/registerObjects_BWD/method"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/registerObjects_BWD/jcu"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkTypes_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkTypes_BWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_BWD_EMoflonEdge_13">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_BWD_EMoflonEdge_13/_edge_methods"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkAttributes_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkAttributes_FWD/__tripleMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkAttributes_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkAttributes_BWD/__tripleMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_CC">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_CC/sourceMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_CC/targetMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_solveCsp_CC">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_solveCsp_CC/method"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_solveCsp_CC/jcu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_solveCsp_CC/sourceMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_solveCsp_CC/targetMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_checkCsp_CC">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_checkCsp_CC/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkDEC_FWD"/>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkDEC_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkDEC_BWD/method"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkDEC_BWD/jcu"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/generateModel">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/generateModel/ruleEntryContainer"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/generateModel/jcuParameter"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/generateModel_solveCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/generateModel_solveCsp_BWD/isApplicableMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/generateModel_solveCsp_BWD/jcu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/generateModel_solveCsp_BWD/ruleResult"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/generateModel_checkCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/generateModel_checkCsp_BWD/csp"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask">
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_FWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_FWD/sbc"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_FWD/task"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/perform_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/perform_FWD/isApplicableMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_FWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_FWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_FWD/sbc"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_FWD/task"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_FWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_FWD/sbc"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_FWD/task"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_checkCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_checkCsp_FWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_FWD/isApplicableMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_FWD/sbc"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_FWD/task"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_checkCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_checkCsp_FWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/ruleresult"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/exprNameModePadding"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/keyEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/dataEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/javaPackage"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/exprKeyName"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/sbc"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/exprRetPerformEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/jcu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/t2c"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/task"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/sbc2Jcu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/exprDataName"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/statRetPerformEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/methodEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/methodPerformEncryption"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkTypes_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkTypes_FWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/exprNameModePadding"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/keyEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/dataEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/javaPackage"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/exprKeyName"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/exprRetPerformEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/jcu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/exprDataName"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/statRetPerformEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/methodEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/methodPerformEncryption"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/perform_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/perform_BWD/isApplicableMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_BWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/exprNameModePadding"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/keyEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/dataEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/javaPackage"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/exprKeyName"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/exprRetPerformEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/jcu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/exprDataName"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/statRetPerformEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/methodEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/methodPerformEncryption"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/exprNameModePadding"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/keyEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/dataEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/javaPackage"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/exprKeyName"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/exprRetPerformEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/jcu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/exprDataName"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/statRetPerformEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/methodEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/methodPerformEncryption"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_checkCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_checkCsp_BWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/isApplicableMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/exprNameModePadding"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/keyEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/dataEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/javaPackage"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/exprKeyName"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/exprRetPerformEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/jcu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/exprDataName"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/statRetPerformEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/methodEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/methodPerformEncryption"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_checkCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_checkCsp_BWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/ruleresult"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/exprNameModePadding"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/keyEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/dataEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/javaPackage"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/exprKeyName"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/sbc"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/exprRetPerformEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/jcu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/t2c"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/task"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/sbc2Jcu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/exprDataName"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/statRetPerformEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/methodEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/methodPerformEncryption"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkTypes_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkTypes_BWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_FWD_EMoflonEdge_10">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_FWD_EMoflonEdge_10/_edge_algorithms"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD_EMoflonEdge_14">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD_EMoflonEdge_14/_edge_cunits"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkAttributes_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkAttributes_FWD/__tripleMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkAttributes_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkAttributes_BWD/__tripleMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_CC">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_CC/sourceMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_CC/targetMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/exprNameModePadding"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/keyEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/dataEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/javaPackage"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/exprKeyName"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/sbc"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/exprRetPerformEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/jcu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/task"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/exprDataName"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/statRetPerformEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/methodEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/methodPerformEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/sourceMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/targetMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_checkCsp_CC">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_checkCsp_CC/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_FWD/sbc"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_FWD/task"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/exprNameModePadding"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/keyEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/dataEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/javaPackage"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/exprKeyName"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/exprRetPerformEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/jcu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/exprDataName"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/statRetPerformEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/methodEncryption"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/methodPerformEncryption"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/generateModel">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/generateModel/ruleEntryContainer"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/generateModel_solveCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/generateModel_solveCsp_BWD/isApplicableMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/generateModel_solveCsp_BWD/ruleResult"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/generateModel_checkCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/generateModel_checkCsp_BWD/csp"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport">
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_FWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_FWD/alg"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_FWD/imp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/perform_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/perform_FWD/isApplicableMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_FWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjectsToMatch_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjectsToMatch_FWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjectsToMatch_FWD/alg"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjectsToMatch_FWD/imp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_solveCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_solveCsp_FWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_solveCsp_FWD/alg"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_solveCsp_FWD/imp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_checkCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_checkCsp_FWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_FWD/isApplicableMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_FWD/alg"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_FWD/imp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_FWD/ac"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_FWD/cu"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_checkCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_checkCsp_FWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_FWD/ruleresult"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_FWD/alg"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_FWD/jimp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_FWD/imp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_FWD/i2j"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_FWD/ac"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_FWD/cu"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkTypes_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkTypes_FWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_BWD/jimp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_BWD/cu"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/perform_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/perform_BWD/isApplicableMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_BWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjectsToMatch_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjectsToMatch_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjectsToMatch_BWD/jimp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjectsToMatch_BWD/cu"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_solveCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_solveCsp_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_solveCsp_BWD/jimp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_solveCsp_BWD/cu"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_checkCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_checkCsp_BWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_BWD/isApplicableMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_BWD/alg"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_BWD/jimp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_BWD/ac"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_BWD/cu"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_checkCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_checkCsp_BWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_BWD/ruleresult"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_BWD/alg"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_BWD/jimp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_BWD/imp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_BWD/i2j"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_BWD/ac"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_BWD/cu"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkTypes_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkTypes_BWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_FWD_EMoflonEdge_11">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_FWD_EMoflonEdge_11/_edge_imports"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_BWD_EMoflonEdge_15">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_BWD_EMoflonEdge_15/_edge_imports"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkAttributes_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkAttributes_FWD/__tripleMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkAttributes_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkAttributes_BWD/__tripleMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_CC">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_CC/sourceMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_CC/targetMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_CC">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_CC/alg"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_CC/jimp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_CC/imp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_CC/cu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_CC/sourceMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_CC/targetMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_checkCsp_CC">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_checkCsp_CC/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkDEC_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkDEC_FWD/alg"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkDEC_FWD/imp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkDEC_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkDEC_BWD/jimp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkDEC_BWD/cu"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel/ruleEntryContainer"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel/acParameter"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel_solveCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel_solveCsp_BWD/isApplicableMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel_solveCsp_BWD/alg"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel_solveCsp_BWD/ac"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel_solveCsp_BWD/cu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel_solveCsp_BWD/ruleResult"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel_checkCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel_checkCsp_BWD/csp"/>
+        </genOperations>
+      </genClasses>
       <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption">
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/isAppropriate_FWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/isAppropriate_FWD/match"/>
@@ -255,11 +707,11 @@
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/checkTypes_BWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/checkTypes_BWD/match"/>
         </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/isAppropriate_FWD_EMoflonEdge_30">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/isAppropriate_FWD_EMoflonEdge_30/_edge_algorithms"/>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/isAppropriate_FWD_EMoflonEdge_12">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/isAppropriate_FWD_EMoflonEdge_12/_edge_algorithms"/>
         </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/isAppropriate_BWD_EMoflonEdge_48">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/isAppropriate_BWD_EMoflonEdge_48/_edge_arguments"/>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/isAppropriate_BWD_EMoflonEdge_16">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/isAppropriate_BWD_EMoflonEdge_16/_edge_arguments"/>
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/checkAttributes_FWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PasswordBasedEncryption/checkAttributes_FWD/__tripleMatch"/>
@@ -484,11 +936,11 @@
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SecurePasswordTask/checkTypes_BWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SecurePasswordTask/checkTypes_BWD/match"/>
         </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SecurePasswordTask/isAppropriate_FWD_EMoflonEdge_31">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SecurePasswordTask/isAppropriate_FWD_EMoflonEdge_31/_edge_algorithms"/>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SecurePasswordTask/isAppropriate_FWD_EMoflonEdge_13">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SecurePasswordTask/isAppropriate_FWD_EMoflonEdge_13/_edge_algorithms"/>
         </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SecurePasswordTask/isAppropriate_BWD_EMoflonEdge_49">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SecurePasswordTask/isAppropriate_BWD_EMoflonEdge_49/_edge_cunits"/>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SecurePasswordTask/isAppropriate_BWD_EMoflonEdge_17">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SecurePasswordTask/isAppropriate_BWD_EMoflonEdge_17/_edge_cunits"/>
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SecurePasswordTask/checkAttributes_FWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SecurePasswordTask/checkAttributes_FWD/__tripleMatch"/>
@@ -548,6 +1000,108 @@
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SecurePasswordTask/generateModel_checkCsp_BWD/csp"/>
         </genOperations>
       </genClasses>
+      <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule">
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_FWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/perform_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/perform_FWD/isApplicableMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_FWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/registerObjectsToMatch_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/registerObjectsToMatch_FWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_solveCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_solveCsp_FWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_checkCsp_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_checkCsp_FWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkTypes_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkTypes_FWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_BWD/jcu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_BWD/var"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/perform_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/perform_BWD/isApplicableMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_BWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/registerObjectsToMatch_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/registerObjectsToMatch_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/registerObjectsToMatch_BWD/jcu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/registerObjectsToMatch_BWD/var"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_solveCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_solveCsp_BWD/match"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_solveCsp_BWD/jcu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_solveCsp_BWD/var"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_checkCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_checkCsp_BWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_solveCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_solveCsp_BWD/isApplicableMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_solveCsp_BWD/jcu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_solveCsp_BWD/var"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_checkCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_checkCsp_BWD/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/registerObjects_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/registerObjects_BWD/ruleresult"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/registerObjects_BWD/jcu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/registerObjects_BWD/var"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkTypes_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkTypes_BWD/match"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_BWD_EMoflonEdge_18">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_BWD_EMoflonEdge_18/_edge_params"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkAttributes_FWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkAttributes_FWD/__tripleMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkAttributes_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkAttributes_BWD/__tripleMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_CC">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_CC/sourceMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_CC/targetMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_solveCsp_CC">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_solveCsp_CC/jcu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_solveCsp_CC/var"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_solveCsp_CC/sourceMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_solveCsp_CC/targetMatch"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_checkCsp_CC">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_checkCsp_CC/csp"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkDEC_FWD"/>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkDEC_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkDEC_BWD/jcu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkDEC_BWD/var"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/generateModel">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/generateModel/ruleEntryContainer"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/generateModel/jcuParameter"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/generateModel_solveCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/generateModel_solveCsp_BWD/isApplicableMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/generateModel_solveCsp_BWD/jcu"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/generateModel_solveCsp_BWD/ruleResult"/>
+        </genOperations>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/generateModel_checkCsp_BWD">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/generateModel_checkCsp_BWD/csp"/>
+        </genOperations>
+      </genClasses>
       <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PerformGetKeyMethod">
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PerformGetKeyMethod/isAppropriate_FWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PerformGetKeyMethod/isAppropriate_FWD/match"/>
@@ -605,8 +1159,8 @@
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PerformGetKeyMethod/checkTypes_BWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PerformGetKeyMethod/checkTypes_BWD/match"/>
         </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PerformGetKeyMethod/isAppropriate_BWD_JavaOpaqueMethod_6">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PerformGetKeyMethod/isAppropriate_BWD_JavaOpaqueMethod_6/methodPerformGetKey"/>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PerformGetKeyMethod/isAppropriate_BWD_JavaOpaqueMethod_1">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PerformGetKeyMethod/isAppropriate_BWD_JavaOpaqueMethod_1/methodPerformGetKey"/>
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PerformGetKeyMethod/checkAttributes_FWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/PerformGetKeyMethod/checkAttributes_FWD/__tripleMatch"/>
@@ -703,8 +1257,8 @@
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreMethodInvocationArgument/checkTypes_BWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreMethodInvocationArgument/checkTypes_BWD/match"/>
         </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreMethodInvocationArgument/isAppropriate_BWD_EMoflonEdge_50">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreMethodInvocationArgument/isAppropriate_BWD_EMoflonEdge_50/_edge_arguments"/>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreMethodInvocationArgument/isAppropriate_BWD_EMoflonEdge_19">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreMethodInvocationArgument/isAppropriate_BWD_EMoflonEdge_19/_edge_arguments"/>
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreMethodInvocationArgument/checkAttributes_FWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreMethodInvocationArgument/checkAttributes_FWD/__tripleMatch"/>
@@ -743,463 +1297,11 @@
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreMethodInvocationArgument/generateModel_checkCsp_BWD/csp"/>
         </genOperations>
       </genClasses>
-      <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask">
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_FWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_FWD/task"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_FWD/sbc"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/perform_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/perform_FWD/isApplicableMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_FWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_FWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_FWD/task"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_FWD/sbc"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_FWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_FWD/task"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_FWD/sbc"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_checkCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_checkCsp_FWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_FWD/isApplicableMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_FWD/task"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_FWD/sbc"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_checkCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_checkCsp_FWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/ruleresult"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/exprRetPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/dataEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/task"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/t2c"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/statRetPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/exprDataName"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/keyEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/methodPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/sbc"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/exprNameModePadding"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/methodEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/sbc2Jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/javaPackage"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_FWD/exprKeyName"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkTypes_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkTypes_FWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/exprRetPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/dataEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/statRetPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/exprDataName"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/keyEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/methodPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/exprNameModePadding"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/methodEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/javaPackage"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD/exprKeyName"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/perform_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/perform_BWD/isApplicableMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_BWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/exprRetPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/dataEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/statRetPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/exprDataName"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/keyEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/methodPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/exprNameModePadding"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/methodEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/javaPackage"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjectsToMatch_BWD/exprKeyName"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/exprRetPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/dataEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/statRetPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/exprDataName"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/keyEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/methodPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/exprNameModePadding"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/methodEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/javaPackage"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_solveCsp_BWD/exprKeyName"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_checkCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_checkCsp_BWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/isApplicableMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/exprRetPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/dataEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/statRetPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/exprDataName"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/keyEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/methodPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/exprNameModePadding"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/methodEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/javaPackage"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_BWD/exprKeyName"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_checkCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_checkCsp_BWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/ruleresult"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/exprRetPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/dataEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/task"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/t2c"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/statRetPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/exprDataName"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/keyEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/methodPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/sbc"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/exprNameModePadding"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/methodEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/sbc2Jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/javaPackage"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/registerObjects_BWD/exprKeyName"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkTypes_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkTypes_BWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_FWD_EMoflonEdge_32">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_FWD_EMoflonEdge_32/_edge_algorithms"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD_EMoflonEdge_51">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isAppropriate_BWD_EMoflonEdge_51/_edge_arguments"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkAttributes_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkAttributes_FWD/__tripleMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkAttributes_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkAttributes_BWD/__tripleMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_CC">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_CC/sourceMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_CC/targetMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/exprRetPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/dataEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/task"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/statRetPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/exprDataName"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/keyEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/methodPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/sbc"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/exprNameModePadding"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/methodEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/javaPackage"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/exprKeyName"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/sourceMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_solveCsp_CC/targetMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_checkCsp_CC">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/isApplicable_checkCsp_CC/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_FWD/task"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_FWD/sbc"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/exprRetPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/dataEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/statRetPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/exprDataName"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/keyEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/methodPerformEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/exprNameModePadding"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/methodEncryption"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/javaPackage"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/checkDEC_BWD/exprKeyName"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/generateModel">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/generateModel/ruleEntryContainer"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/generateModel_solveCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/generateModel_solveCsp_BWD/isApplicableMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/generateModel_solveCsp_BWD/ruleResult"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/generateModel_checkCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricEncryptionTask/generateModel_checkCsp_BWD/csp"/>
-        </genOperations>
-      </genClasses>
-      <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule">
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_FWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/perform_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/perform_FWD/isApplicableMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_FWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/registerObjectsToMatch_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/registerObjectsToMatch_FWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_solveCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_solveCsp_FWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_checkCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_checkCsp_FWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkTypes_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkTypes_FWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_BWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_BWD/var"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/perform_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/perform_BWD/isApplicableMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_BWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/registerObjectsToMatch_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/registerObjectsToMatch_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/registerObjectsToMatch_BWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/registerObjectsToMatch_BWD/var"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_solveCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_solveCsp_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_solveCsp_BWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_solveCsp_BWD/var"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_checkCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_checkCsp_BWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_solveCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_solveCsp_BWD/isApplicableMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_solveCsp_BWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_solveCsp_BWD/var"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_checkCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_checkCsp_BWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/registerObjects_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/registerObjects_BWD/ruleresult"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/registerObjects_BWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/registerObjects_BWD/var"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkTypes_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkTypes_BWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_BWD_EMoflonEdge_52">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isAppropriate_BWD_EMoflonEdge_52/_edge_params"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkAttributes_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkAttributes_FWD/__tripleMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkAttributes_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkAttributes_BWD/__tripleMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_CC">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_CC/sourceMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_CC/targetMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_solveCsp_CC">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_solveCsp_CC/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_solveCsp_CC/var"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_solveCsp_CC/sourceMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_solveCsp_CC/targetMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_checkCsp_CC">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/isApplicable_checkCsp_CC/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkDEC_FWD"/>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkDEC_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkDEC_BWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/checkDEC_BWD/var"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/generateModel">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/generateModel/ruleEntryContainer"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/generateModel/jcuParameter"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/generateModel_solveCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/generateModel_solveCsp_BWD/isApplicableMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/generateModel_solveCsp_BWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/generateModel_solveCsp_BWD/ruleResult"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/generateModel_checkCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreParameterRule/generateModel_checkCsp_BWD/csp"/>
-        </genOperations>
-      </genClasses>
-      <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport">
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_FWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_FWD/alg"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_FWD/imp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/perform_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/perform_FWD/isApplicableMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_FWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjectsToMatch_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjectsToMatch_FWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjectsToMatch_FWD/alg"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjectsToMatch_FWD/imp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_solveCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_solveCsp_FWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_solveCsp_FWD/alg"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_solveCsp_FWD/imp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_checkCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_checkCsp_FWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_FWD/isApplicableMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_FWD/ac"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_FWD/alg"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_FWD/cu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_FWD/imp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_checkCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_checkCsp_FWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_FWD/ruleresult"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_FWD/i2j"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_FWD/ac"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_FWD/alg"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_FWD/cu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_FWD/imp"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_FWD/jimp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkTypes_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkTypes_FWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_BWD/cu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_BWD/jimp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/perform_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/perform_BWD/isApplicableMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_BWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjectsToMatch_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjectsToMatch_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjectsToMatch_BWD/cu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjectsToMatch_BWD/jimp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_solveCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_solveCsp_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_solveCsp_BWD/cu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_solveCsp_BWD/jimp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_checkCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_checkCsp_BWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_BWD/isApplicableMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_BWD/ac"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_BWD/alg"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_BWD/cu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_BWD/jimp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_checkCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_checkCsp_BWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_BWD/ruleresult"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_BWD/i2j"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_BWD/ac"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_BWD/alg"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_BWD/cu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_BWD/imp"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/registerObjects_BWD/jimp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkTypes_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkTypes_BWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_FWD_EMoflonEdge_33">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_FWD_EMoflonEdge_33/_edge_imports"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_BWD_EMoflonEdge_53">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isAppropriate_BWD_EMoflonEdge_53/_edge_imports"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkAttributes_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkAttributes_FWD/__tripleMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkAttributes_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkAttributes_BWD/__tripleMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_CC">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_CC/sourceMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_CC/targetMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_CC">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_CC/alg"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_CC/cu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_CC/imp"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_CC/jimp"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_CC/sourceMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_solveCsp_CC/targetMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_checkCsp_CC">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/isApplicable_checkCsp_CC/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkDEC_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkDEC_FWD/alg"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkDEC_FWD/imp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkDEC_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkDEC_BWD/cu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/checkDEC_BWD/jimp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel/ruleEntryContainer"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel/acParameter"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel_solveCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel_solveCsp_BWD/isApplicableMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel_solveCsp_BWD/ac"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel_solveCsp_BWD/alg"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel_solveCsp_BWD/cu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel_solveCsp_BWD/ruleResult"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel_checkCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/KeyDerivationAlgorithmImportToImport/generateModel_checkCsp_BWD/csp"/>
-        </genOperations>
-      </genClasses>
       <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport">
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_FWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_FWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_FWD/alg"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_FWD/imp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_FWD/alg"/>
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/perform_FWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/perform_FWD/isApplicableMatch"/>
@@ -1209,23 +1311,23 @@
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjectsToMatch_FWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjectsToMatch_FWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjectsToMatch_FWD/alg"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjectsToMatch_FWD/imp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjectsToMatch_FWD/alg"/>
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_solveCsp_FWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_solveCsp_FWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_solveCsp_FWD/alg"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_solveCsp_FWD/imp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_solveCsp_FWD/alg"/>
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_checkCsp_FWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_checkCsp_FWD/csp"/>
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_FWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_FWD/isApplicableMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_FWD/alg"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_FWD/cu"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_FWD/imp"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_FWD/ac"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_FWD/alg"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_FWD/cu"/>
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_checkCsp_FWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_checkCsp_FWD/csp"/>
@@ -1233,11 +1335,11 @@
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjects_FWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjects_FWD/ruleresult"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjects_FWD/jimp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjects_FWD/imp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjects_FWD/ac"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjects_FWD/alg"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjects_FWD/cu"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjects_FWD/i2j"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjects_FWD/imp"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjects_FWD/ac"/>
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/checkTypes_FWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/checkTypes_FWD/match"/>
@@ -1269,9 +1371,9 @@
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_BWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_BWD/isApplicableMatch"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_BWD/jimp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_BWD/ac"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_BWD/alg"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_BWD/cu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_BWD/ac"/>
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_checkCsp_BWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_checkCsp_BWD/csp"/>
@@ -1279,20 +1381,20 @@
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjects_BWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjects_BWD/ruleresult"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjects_BWD/jimp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjects_BWD/imp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjects_BWD/ac"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjects_BWD/alg"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjects_BWD/cu"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjects_BWD/i2j"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjects_BWD/imp"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/registerObjects_BWD/ac"/>
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/checkTypes_BWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/checkTypes_BWD/match"/>
         </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_FWD_EMoflonEdge_34">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_FWD_EMoflonEdge_34/_edge_imports"/>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_FWD_EMoflonEdge_14">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_FWD_EMoflonEdge_14/_edge_imports"/>
         </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_BWD_EMoflonEdge_54">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_BWD_EMoflonEdge_54/_edge_imports"/>
+        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_BWD_EMoflonEdge_20">
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isAppropriate_BWD_EMoflonEdge_20/_edge_imports"/>
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/checkAttributes_FWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/checkAttributes_FWD/__tripleMatch"/>
@@ -1306,9 +1408,9 @@
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_CC">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_CC/jimp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_CC/imp"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_CC/alg"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_CC/cu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_CC/imp"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_CC/sourceMatch"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_solveCsp_CC/targetMatch"/>
         </genOperations>
@@ -1316,8 +1418,8 @@
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/isApplicable_checkCsp_CC/csp"/>
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/checkDEC_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/checkDEC_FWD/alg"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/checkDEC_FWD/imp"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/checkDEC_FWD/alg"/>
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/checkDEC_BWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/checkDEC_BWD/jimp"/>
@@ -1329,115 +1431,13 @@
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/generateModel_solveCsp_BWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/generateModel_solveCsp_BWD/isApplicableMatch"/>
+          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/generateModel_solveCsp_BWD/ac"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/generateModel_solveCsp_BWD/alg"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/generateModel_solveCsp_BWD/cu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/generateModel_solveCsp_BWD/ac"/>
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/generateModel_solveCsp_BWD/ruleResult"/>
         </genOperations>
         <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/generateModel_checkCsp_BWD">
           <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/SymmetricBlockCipherImportToImport/generateModel_checkCsp_BWD/csp"/>
-        </genOperations>
-      </genClasses>
-      <genClasses ecoreClass="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod">
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_FWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/perform_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/perform_FWD/isApplicableMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_FWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/registerObjectsToMatch_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/registerObjectsToMatch_FWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_solveCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_solveCsp_FWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_checkCsp_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_checkCsp_FWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkTypes_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkTypes_FWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_BWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_BWD/method"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/perform_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/perform_BWD/isApplicableMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_BWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/registerObjectsToMatch_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/registerObjectsToMatch_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/registerObjectsToMatch_BWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/registerObjectsToMatch_BWD/method"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_solveCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_solveCsp_BWD/match"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_solveCsp_BWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_solveCsp_BWD/method"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_checkCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_checkCsp_BWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_solveCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_solveCsp_BWD/isApplicableMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_solveCsp_BWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_solveCsp_BWD/method"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_checkCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_checkCsp_BWD/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/registerObjects_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/registerObjects_BWD/ruleresult"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/registerObjects_BWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/registerObjects_BWD/method"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkTypes_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkTypes_BWD/match"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_BWD_EMoflonEdge_55">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isAppropriate_BWD_EMoflonEdge_55/_edge_methods"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkAttributes_FWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkAttributes_FWD/__tripleMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkAttributes_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkAttributes_BWD/__tripleMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_CC">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_CC/sourceMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_CC/targetMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_solveCsp_CC">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_solveCsp_CC/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_solveCsp_CC/method"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_solveCsp_CC/sourceMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_solveCsp_CC/targetMatch"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_checkCsp_CC">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/isApplicable_checkCsp_CC/csp"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkDEC_FWD"/>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkDEC_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkDEC_BWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/checkDEC_BWD/method"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/generateModel">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/generateModel/ruleEntryContainer"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/generateModel/jcuParameter"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/generateModel_solveCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/generateModel_solveCsp_BWD/isApplicableMatch"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/generateModel_solveCsp_BWD/jcu"/>
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/generateModel_solveCsp_BWD/ruleResult"/>
-        </genOperations>
-        <genOperations ecoreOperation="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/generateModel_checkCsp_BWD">
-          <genParameters ecoreParameter="platform:/plugin/CryptoConfigToJava/model/CryptoConfigToJava.ecore#//Rules/IgnoreOpaqueMethod/generateModel_checkCsp_BWD/csp"/>
         </genOperations>
       </genClasses>
     </nestedGenPackages>
