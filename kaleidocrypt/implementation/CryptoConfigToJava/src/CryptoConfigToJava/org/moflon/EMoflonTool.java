@@ -1,6 +1,5 @@
 package CryptoConfigToJava.org.moflon;
 
-import java.io.File;
 import java.nio.file.Path;
 import java.util.function.Consumer;
 
