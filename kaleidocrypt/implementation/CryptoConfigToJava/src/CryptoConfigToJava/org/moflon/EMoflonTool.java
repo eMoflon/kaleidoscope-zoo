@@ -143,16 +143,19 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 	public void initialize() throws SynchronisationFailedException{
 
 				
-		if(initialTask != null) {
+		if(initialTask == null && initialJavaPackage != null) {
+			
+			transformTargetIntoSourceModel();			
+			persistState(persistenceDirectory);
+			
+		}else if(initialJavaPackage == null && initialTask != null) {
 			
 			transformSourceIntoTargetModel();
 			persistState(persistenceDirectory);
+		}else if(initialTask == null && initialJavaPackage == null) {
 			
-		}else if(initialJavaPackage != null) {
-			
-			transformTargetIntoSourceModel();
-			persistState(persistenceDirectory);
-		}			
+			throw new SynchronisationFailedException("Source or target artefact have to be provided!");
+		}
 		
 	}
 	
