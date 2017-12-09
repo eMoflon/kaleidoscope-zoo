@@ -1,4 +1,4 @@
-package org.admin.ui.wizards.new_project;
+package org.kaleidoscope.usecase.kaleidocrypt.admin.ui.wizards.new_project;
 
 import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.wizard.WizardPage;

@@ -1,4 +1,4 @@
-package org.builder;
+package org.kaleidoscope.usecase.kaleidocrypt.builder;
 
 
 import java.io.File;
@@ -10,7 +10,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.ControllerModule;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IProject;
@@ -24,6 +23,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.kaleidoscope.usecase.kaleidocrypt.ControllerModule;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;

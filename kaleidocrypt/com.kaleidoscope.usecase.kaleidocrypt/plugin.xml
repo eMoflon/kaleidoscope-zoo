@@ -9,7 +9,7 @@
       </category>
       <wizard
             category="CryptoUseCase"
-            class="org.admin.ui.wizards.symmetric_encryption.NewSymmetricEncryptionWizard"
+            class="org.kaleidoscope.usecase.kaleidocrypt.admin.ui.wizards.symmetric_encryption.NewSymmetricEncryptionWizard"
             icon="icons/encryption-icon.png"
             id="kaleidoscope.usecase.crypto.wizards.NewSymmetricEncryptionWizard"
             name="New SymmetricEncryption">
@@ -25,7 +25,7 @@
       </category>
       <wizard
             category="CryptoUseCase"
-            class="org.admin.ui.wizards.new_project.NewCryptoAPIProjectWizard"
+            class="org.kaleidoscope.usecase.kaleidocrypt.admin.ui.wizards.new_project.NewCryptoAPIProjectWizard"
             icon="icons/encryption-icon.png"
             id="kaleidoscope.usecase.crypto.wizards.NewCryptoAPIProject"
             name="CryptoAPI project">
@@ -38,7 +38,7 @@
          point="org.eclipse.core.resources.natures">
       <runtime>
          <run
-               class="org.admin.ui.wizards.CryptoAPINature">
+               class="org.kaleidoscope.usecase.kaleidocrypt.admin.ui.wizards.CryptoAPINature">
          </run>
       </runtime>
    </extension>
@@ -51,7 +51,7 @@
       <builder
             callOnEmptyDelta="true">
          <run
-               class="org.builder.CryptoAPIProjectBuilder">
+               class="org.kaleidoscope.usecase.kaleidocrypt.builder.CryptoAPIProjectBuilder">
          </run>
       </builder>
    </extension>

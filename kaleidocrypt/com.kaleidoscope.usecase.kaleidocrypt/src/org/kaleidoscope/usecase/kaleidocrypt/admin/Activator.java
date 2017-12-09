@@ -1,4 +1,4 @@
-package org.admin;
+package org.kaleidoscope.usecase.kaleidocrypt.admin;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 

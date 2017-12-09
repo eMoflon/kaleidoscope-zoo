@@ -1,4 +1,4 @@
-package org.admin.ui.wizards.symmetric_encryption;
+package org.kaleidoscope.usecase.kaleidocrypt.admin.ui.wizards.symmetric_encryption;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IAdaptable;

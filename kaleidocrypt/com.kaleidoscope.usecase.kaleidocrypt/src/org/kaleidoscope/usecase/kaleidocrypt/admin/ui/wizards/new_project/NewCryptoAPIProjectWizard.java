@@ -1,9 +1,9 @@
-package org.admin.ui.wizards.new_project;
+package org.kaleidoscope.usecase.kaleidocrypt.admin.ui.wizards.new_project;
 
 import static org.moflon.core.utilities.WorkspaceHelper.addAllFolders;
 
 import java.lang.reflect.InvocationTargetException;
-import org.admin.ui.wizards.CryptoAPINature;
+
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
@@ -15,6 +15,7 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
+import org.kaleidoscope.usecase.kaleidocrypt.admin.ui.wizards.CryptoAPINature;
 import org.moflon.core.utilities.WorkspaceHelper;
 import org.moflon.tgg.mosl.defaults.DefaultFilesHelper;
 

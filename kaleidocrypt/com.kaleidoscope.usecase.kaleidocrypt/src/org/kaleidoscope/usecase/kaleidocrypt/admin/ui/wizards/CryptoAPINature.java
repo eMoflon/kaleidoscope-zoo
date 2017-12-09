@@ -1,4 +1,4 @@
-package org.admin.ui.wizards;
+package org.kaleidoscope.usecase.kaleidocrypt.admin.ui.wizards;
 
 import java.io.IOException;
 import java.util.ArrayList;

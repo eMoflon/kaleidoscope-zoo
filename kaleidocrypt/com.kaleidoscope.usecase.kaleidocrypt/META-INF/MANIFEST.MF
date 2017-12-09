@@ -40,12 +40,11 @@ Require-Bundle: org.eclipse.emf.ecore,
  com.kaleidoscope.usecase.kaleidocrypt.bxtend,
  org.apache.xmlrpc;bundle-version="3.0.0"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: org.admin.Activator
-Export-Package: org,
- org.admin,
- org.admin.ui.wizards,
- org.admin.ui.wizards.new_project,
- org.admin.ui.wizards.symmetric_encryption,
- org.builder
+Bundle-Activator: org.kaleidoscope.usecase.kaleidocrypt.admin.Activator
+Export-Package: org.kaleidoscope.usecase.kaleidocrypt.admin,
+ org.kaleidoscope.usecase.kaleidocrypt.admin.ui.wizards,
+ org.kaleidoscope.usecase.kaleidocrypt.admin.ui.wizards.new_project,
+ org.kaleidoscope.usecase.kaleidocrypt.admin.ui.wizards.symmetric_encryption,
+ org.kaleidoscope.usecase.kaleidocrypt.builder
 
 

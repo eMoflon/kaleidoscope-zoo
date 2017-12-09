@@ -1,4 +1,4 @@
-package org.builder;
+package org.kaleidoscope.usecase.kaleidocrypt.builder;
 
 /**
  * @author Dusko

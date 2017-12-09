@@ -1,4 +1,4 @@
-package org;
+package org.kaleidoscope.usecase.kaleidocrypt;
 
 import java.io.IOException;
 import java.net.URL;
