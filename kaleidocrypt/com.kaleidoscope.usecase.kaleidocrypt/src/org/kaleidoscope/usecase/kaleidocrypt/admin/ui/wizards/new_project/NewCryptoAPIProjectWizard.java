@@ -23,7 +23,6 @@ import org.moflon.tgg.mosl.defaults.DefaultFilesHelper;
 
 public class NewCryptoAPIProjectWizard extends Wizard implements INewWizard {
 	private NewCryptoAPIProjectWizardPage page;
-	//private ISelection selection;
 
 	/**
 	 * Constructor for NewCryptoAPIProject.

@@ -65,8 +65,7 @@ public class NewSymmetricEncryptionWizardPage extends WizardPage {
                 IPath path = project.getFullPath();
                 
                 if(project.isOpen()) {
-                	
-	                System.out.println(path);
+                		         
 	                setCreationAllowed(true);
                 }else {
                 	setErrorMessage("A project needs to be opened in order to add the configuration model!");
