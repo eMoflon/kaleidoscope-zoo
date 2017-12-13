@@ -87,7 +87,7 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 
 
 	private void performClean() {
-		
+		logger.info("Clean project!");
 	}
 	
 	private String getSyncPersistanceDestinationRelPath(String sourceArtefactRelativeFilePath) {
@@ -109,6 +109,9 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		String sourceArtefactRelativeFilePath = sourceArtefactResource.getProjectRelativePath().toOSString();
 		String targetArtefactRelativeFilePath = confPathToJavaPackagePath.get(sourceArtefactRelativeFilePath);
 		String syncPersistaneDestinationRelativePath = getSyncPersistanceDestinationRelPath(sourceArtefactRelativeFilePath);
+
+		logger.info("Target artefact relative file path:" + targetArtefactRelativeFilePath);
+		logger.info("Source artefact relative file path:" + sourceArtefactRelativeFilePath);
 		
 		Injector injector = Guice.createInjector(new ControllerModule(set,
 																	  projectPath.resolve(sourceArtefactRelativeFilePath),
@@ -141,6 +144,9 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 																					.get()
 																					.getKey();
 		String syncPersistaneDestinationRelativePath = getSyncPersistanceDestinationRelPath(sourceArtefactRelativeFilePath);
+		
+		logger.info("Target artefact relative file path:" + targetArtefactRelativeFilePath);
+		logger.info("Source artefact relative file path:" + sourceArtefactRelativeFilePath);
 		
 		Injector injector = Guice.createInjector(new ControllerModule(set,
 																	  projectPath.resolve(sourceArtefactRelativeFilePath),
@@ -205,7 +211,7 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		}
 		
 		if(isResourceSourceArtefact(changedResource)) {
-		
+			
 			syncForward(changedResource);
 			
 		}else if(isResourceTargetArtefact(changedResource)) {

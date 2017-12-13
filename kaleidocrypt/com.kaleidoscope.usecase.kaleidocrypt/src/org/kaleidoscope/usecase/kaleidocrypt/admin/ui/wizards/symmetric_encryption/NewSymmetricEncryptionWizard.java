@@ -1,5 +1,6 @@
 package org.kaleidoscope.usecase.kaleidocrypt.admin.ui.wizards.symmetric_encryption;
 
+import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IAdaptable;
@@ -16,6 +17,8 @@ public class NewSymmetricEncryptionWizard extends Wizard implements INewWizard {
     private IStructuredSelection selection;
     private NewSymmetricEncryptionWizardPage newFileWizardPage;    
     private IProject project = null;
+    private static final Logger logger = Logger.getLogger(NewSymmetricEncryptionWizard.class);
+    private static final String CONFIGURAITON_FILE_NAME = "SymmEnc";
 
     public static String NEW_SYMMETRIC_ENCRYPTION_WIZARD_ID = "kaleidoscope.usecase.crypto.wizards.NewSymmetricEncryptionWizard";
 
@@ -33,23 +36,23 @@ public class NewSymmetricEncryptionWizard extends Wizard implements INewWizard {
     public boolean performFinish() {
     	
     	if(newFileWizardPage.getCreationAllowed()){
-    		System.out.println("Creating!");
-    		String configName = "SymmEnc";
+    		
+    		logger.info("Adding a symmetric encryption configuration model!");    		
     	
     		try {
-				doFinish(configName);
+				doFinish(CONFIGURAITON_FILE_NAME);
 			} catch (CoreException e) {
 				e.printStackTrace();
 			}
     	}else{
-    		System.out.println("Blocked!");
+    		logger.info("It is not allowed to add symmetric encryption configuration model, because a project is not selected!");
     	}
 
     	return true;
     }
     public void doFinish(String configName) throws CoreException {
     		
-    		InitialProjectStructure.addInitialConfigurationModel(project, configName);
+    	InitialProjectStructure.addInitialConfigurationModel(project, configName);
   
     }
     public void init(IWorkbench workbench, IStructuredSelection selection) {
