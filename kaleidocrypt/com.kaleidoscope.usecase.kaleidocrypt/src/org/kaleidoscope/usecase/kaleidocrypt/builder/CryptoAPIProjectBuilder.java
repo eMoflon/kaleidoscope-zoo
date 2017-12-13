@@ -36,7 +36,7 @@ import CryptoAPIConfig.Task;
 import SimpleJava.JavaPackage;
 
 
-public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implements IResourceDeltaVisitor {
+public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implements IResourceDeltaVisitor, Builder {
 	
 	private IProject project;
 	private Path projectPath;
@@ -101,7 +101,8 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		return  String.join(File.separator, filePathSegmentsList);
 	}
 	
-	private void syncForward(IResource sourceArtefactResource)throws CoreException{
+	@Override
+	public void syncForward(IResource sourceArtefactResource)throws CoreException{
 		
 		logger.info("Sync a java model with the configuration model is performed!");
 		
@@ -129,7 +130,8 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		logger.info("Sync a java model with the configuration model is done!");
 	}
 	
-	private void syncBackward(IResource targetArtefactResource)throws CoreException{
+	@Override
+	public void syncBackward(IResource targetArtefactResource)throws CoreException{
 		logger.info("Sync configuration model  with a java model is performed!");
 		
 		String targetArtefactRelativeFilePath = targetArtefactResource.getProjectRelativePath().toOSString();
@@ -166,7 +168,8 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		
 	}
 	
-	protected boolean isResourceTargetArtefact(IResource resource) {
+	@Override
+	public boolean isResourceTargetArtefact(IResource resource) {
 		
 		String changedResourceRelativeFilePath= resource.getProjectRelativePath().toOSString();
 		boolean isResourceTargetArtefact = confPathToJavaPackagePath.containsValue(changedResourceRelativeFilePath);
@@ -174,7 +177,8 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		return isResourceTargetArtefact;
 	}
 	
-	protected boolean isResourceSourceArtefact(IResource resource) {
+	@Override
+	public boolean isResourceSourceArtefact(IResource resource) {
 		
 		String changedResourceRelativeFilePath= resource.getProjectRelativePath().toOSString();
 		boolean isResourceSourceArtefact = confPathToJavaPackagePath.containsKey(changedResourceRelativeFilePath);
@@ -182,7 +186,8 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		return isResourceSourceArtefact;
 	}
 	
-	protected boolean isResourceToBeIgnored(IResource resource) {
+	@Override
+	public boolean isResourceToBeIgnored(IResource resource) {
 		
 		if(resource.getName().equals("bin")){
 			return true;
