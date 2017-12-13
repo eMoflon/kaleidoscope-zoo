@@ -10,7 +10,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
@@ -56,8 +55,7 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		
 		initializeConfFilenameToJavaPackage();
 		set = new ResourceSetImpl();
-		set.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());
-	    BasicConfigurator.configure();
+		set.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());	    
 	}
 	
 	@Override
@@ -102,6 +100,7 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		
 		return  String.join(File.separator, filePathSegmentsList);
 	}
+	
 	private void syncForward(IResource sourceArtefactResource)throws CoreException{
 		
 		logger.info("Sync a java model with the configuration model is performed!");
@@ -174,6 +173,7 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		
 		return isResourceTargetArtefact;
 	}
+	
 	protected boolean isResourceSourceArtefact(IResource resource) {
 		
 		String changedResourceRelativeFilePath= resource.getProjectRelativePath().toOSString();
@@ -181,6 +181,7 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		
 		return isResourceSourceArtefact;
 	}
+	
 	protected boolean isResourceToBeIgnored(IResource resource) {
 		
 		if(resource.getName().equals("bin")){

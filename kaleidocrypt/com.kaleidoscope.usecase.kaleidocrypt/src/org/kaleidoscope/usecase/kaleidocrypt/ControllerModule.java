@@ -12,7 +12,6 @@ import org.moflon.core.utilities.MoflonUtilitiesActivator;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
-import com.google.inject.TypeLiteral;
 import com.kaleidoscope.core.auxiliary.emfcompare.EMFCompareDeltaDiscoverer;
 import  com.kaleidoscope.core.auxiliary.simplejava.artefactadapter.JavaArtefactAdapter;
 import com.kaleidoscope.core.auxiliary.xmi.artefactadapter.XMIArtefactAdapter;
@@ -88,10 +87,18 @@ public class ControllerModule extends AbstractModule{
 			
 		return tool;
 	}
+	
+	@Provides @Src
+	OfflineDeltaDiscoverer<Task, OperationalDelta> provideSourceOfflineDeltaDiscoverer(){
+		return new EMFCompareDeltaDiscoverer<Task>();
+	}
+	
+	@Provides @Trg
+	OfflineDeltaDiscoverer<JavaPackage, OperationalDelta> provideTargetOfflineDeltaDiscoverer(){
+		return new EMFCompareDeltaDiscoverer<JavaPackage>();
+	}
 	@Override
 	protected void configure() {
-		bind(new TypeLiteral<OfflineDeltaDiscoverer<Task, OperationalDelta>>() {}). annotatedWith(Src.class).to(new TypeLiteral<EMFCompareDeltaDiscoverer<Task>>() {});
-		bind(new TypeLiteral<OfflineDeltaDiscoverer<JavaPackage, OperationalDelta>>() {}). annotatedWith(Trg.class).to(new TypeLiteral<EMFCompareDeltaDiscoverer<JavaPackage>>() {});
 		bind(Path.class).annotatedWith(Dest.class).toInstance(persisanceDestination);
 	}
 	

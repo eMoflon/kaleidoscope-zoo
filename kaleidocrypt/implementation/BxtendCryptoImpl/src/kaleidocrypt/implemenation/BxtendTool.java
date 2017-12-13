@@ -60,16 +60,13 @@ public class BxtendTool
 	@Override
 	public void initialize() {
 
-		if(isStatePersisted(persistenceDirectory))
-			return;
-				
-		if(initialTask != null) {
+		if(initialTask != null && initialJavaPackage == null) {
 			
 			sourceModel = initialTask;
 			sourceResource.getContents().add(sourceModel);			
 			syncForward(new OperationalDelta());
 		
-		}else if(initialJavaPackage != null) {
+		}else if(initialJavaPackage != null && initialTask == null) {
 			targetModel = initialJavaPackage;
 			targetResource.getContents().add(targetModel);			
 			syncBackward(new OperationalDelta());

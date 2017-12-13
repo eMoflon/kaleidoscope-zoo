@@ -8,26 +8,15 @@ import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.ModifyEvent;
-import org.eclipse.swt.events.ModifyListener;
-import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
 
-/**
- * The "New" wizard page allows setting the container for the new file as well
- * as the file name. The page will only accept file name without the extension
- * OR with the extension that matches the expected one (mpe).
- */
-
 public class NewSymmetricEncryptionWizardPage extends WizardPage {	
+	
 	  private IStructuredSelection selection;
 	  private boolean creationAllowed = true;	  
-	  private Text configFileName;
 	  
 	  public boolean getCreationAllowed(){
 		  return creationAllowed;
@@ -47,33 +36,6 @@ public class NewSymmetricEncryptionWizardPage extends WizardPage {
 		setTitle("New SymmetriEncryption wizard");
 		setDescription("This wizard creates a new SymmetricEncryption configuration model inside the models folder!");
 	}
-	
-	public String getConfigFileName(){
-		return configFileName.getText();
-	}
-	private void initialize() {
-		configFileName.setText("");
-	}
-	/**
-	 * Ensures that both text fields are set.
-	 */
-
-	private void dialogChanged() {		
-		String configFileName = getConfigFileName();
-		
-		
-		if (configFileName.length() == 0) {
-			updateStatus("Config file name must be specified");
-			return;
-		}
-		updateStatus(null);
-	}
-
-	private void updateStatus(String message) {
-		setErrorMessage(message);
-		setPageComplete(message == null);
-	}
-
 
 	/**
 	 * @see IDialogPage#createControl(Composite)
@@ -85,20 +47,7 @@ public class NewSymmetricEncryptionWizardPage extends WizardPage {
 		container.setLayout(layout);
 		layout.numColumns = 2;
 		layout.verticalSpacing = 9;
-		
-		GridData gd = new GridData(GridData.FILL_HORIZONTAL);
-		Label configFileLabel = new Label(container, SWT.NULL);
-		configFileLabel.setText("&Config file name:");
-		
-		configFileName = new Text(container, SWT.BORDER | SWT.SINGLE);
-		configFileName .setLayoutData(gd);
-		configFileName .addModifyListener(new ModifyListener() {
-			public void modifyText(ModifyEvent e) {
-				dialogChanged();
-			}
-		});
 
-		initialize();
 		setControl(container);
 		
 		

@@ -31,11 +31,10 @@ public class NewSymmetricEncryptionWizard extends Wizard implements INewWizard {
     
     @Override
     public boolean performFinish() {
-    	boolean creationAllowed = newFileWizardPage.getCreationAllowed();
     	
-    	if(creationAllowed){
+    	if(newFileWizardPage.getCreationAllowed()){
     		System.out.println("Creating!");
-    		String configName = newFileWizardPage.getConfigFileName();
+    		String configName = "SymmEnc";
     	
     		try {
 				doFinish(configName);
@@ -45,17 +44,16 @@ public class NewSymmetricEncryptionWizard extends Wizard implements INewWizard {
     	}else{
     		System.out.println("Blocked!");
     	}
-    	
-    	
+
     	return true;
     }
-    public void doFinish(String configName)
-    		throws CoreException {
+    public void doFinish(String configName) throws CoreException {
     		
     		InitialProjectStructure.addInitialConfigurationModel(project, configName);
   
     }
-    public void init(IWorkbench workbench, IStructuredSelection selection) {        
+    public void init(IWorkbench workbench, IStructuredSelection selection) {
+    	
         this.selection = selection;
         
         IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
