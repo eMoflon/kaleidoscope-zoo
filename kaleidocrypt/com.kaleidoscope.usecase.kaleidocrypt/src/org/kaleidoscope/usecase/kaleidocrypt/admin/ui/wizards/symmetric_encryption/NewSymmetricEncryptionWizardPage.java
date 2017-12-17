@@ -2,7 +2,6 @@ package org.kaleidoscope.usecase.kaleidocrypt.admin.ui.wizards.symmetric_encrypt
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IAdaptable;
-import org.eclipse.core.runtime.IPath;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -61,8 +60,7 @@ public class NewSymmetricEncryptionWizardPage extends WizardPage {
             Object firstElement = selection.getFirstElement();
             if (firstElement instanceof IJavaProject)
             {
-                IProject project = (IProject)((IAdaptable)firstElement).getAdapter(IProject.class);
-                IPath path = project.getFullPath();
+                IProject project = (IProject)((IAdaptable)firstElement).getAdapter(IProject.class);                
                 
                 if(project.isOpen()) {
                 		         
