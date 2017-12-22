@@ -14,7 +14,7 @@ A zoo of examples and application scenarios of kaleidoscope, a model synchronisa
   - In Eclipse: Go to ```Window->Preferences->General->Workspace```
   - Change the text file encoding to 'Other: UTF-8'
 
-## Showcases
+## A. Showcases
 
 ### The underlying consistency relation
 All showcases implement the same underlying consistency relation between the same metamodels.
@@ -34,7 +34,7 @@ Make sure you enable "contact all update sites" in the update manager so all dep
 2. You might have to manually trigger code generation for the Xtext/Xtend projects.
 3. Consult the README file in each of the showcase projects for further instructions.
 
-## Kaleidocrypt
+## B. Kaleidocrypt
 
 ### Install required plugins:
 1. Install eMoflon: http://emoflon.github.io/eclipse-plugin/emoflon_2.31.0/updatesite
@@ -45,11 +45,12 @@ Make sure you enable "contact all update sites" in the update manager so all dep
 ### Setup steps:
 
 1. Go to ```File/Import.../Team/Team Project Set```, check URL and enter in and import this PSF file: https://raw.githubusercontent.com/eMoflon/kaleidoscope-zoo/master/kaleidocrypt/projectSet.psf
-2. Run ```com.kaleidoscope.usecase.kaleidocrypt``` as Eclipse Application
-3. Add a new project, e.g., called CryptoAPI
-4. A new configuration can be added by selecting the CryptoAPI project and adding a configuration such as SymmetricEncryption.
+2. Run ```com.kaleidoscope.usecase.kaleidocrypt``` as an Eclipse Application in a new "runtime" workspace.
+3. Go to ```File/New/Other/``` and choose the new wizard ```Other/CryptoAPI project```.  Use it to create a new project called, e.g., CryptoAPI. 
+4. Choose the newly created project, and go to ```File/New/Other``` and choose the new wizard ```New SymmetricEncryption```.  Use it to create a new configuration that will be placed in the project and from which code will be generated and placed under ```/src```.
+5. You can now open ```/models/SymmEnc.xmi``` and ```/src/crypto/Enc.java``` side by side and see how changes are propagated back and forth.  You might need to explore and experiment a bit to find out how what is mapped to what.  Also try deleting the XMI file (it will be re-created from the code with default values where necessary), and deleting the entire ```crypto``` package (it will be re-created from the model with defaults values where necessary).
 
-## BX Demonstrator
+## C. BX Demonstrator
 
 ### Install required plugins:
 1. Tomcat: Install Tomcat Version 7.0 on your system. You can follow the below link for the installation process. (http://crunchify.com/step-by-step-guide-to-setup-and-install-apache-tomcat-server-in-eclipse-development-environment-ide/)
