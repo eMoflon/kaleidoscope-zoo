@@ -44,11 +44,12 @@ Make sure you enable "contact all update sites" in the update manager so all dep
 
 ### Setup steps:
 
-1. Go to ```File/Import.../Team/Team Project Set```, check URL and enter in and import this PSF file: https://raw.githubusercontent.com/eMoflon/kaleidoscope-zoo/master/kaleidocrypt/projectSet.psf
-2. Run ```com.kaleidoscope.usecase.kaleidocrypt``` as an Eclipse Application in a new "runtime" workspace.
+1. Go to ```File/Import.../Team/Team Project Set```, check URL and enter in and import this PSF file to establish your "developer" workspace: https://raw.githubusercontent.com/eMoflon/kaleidoscope-zoo/master/kaleidocrypt/projectSet.psf
+2. Run ```com.kaleidoscope.usecase.kaleidocrypt``` as an Eclipse Application in a new empty "runtime" workspace.
 3. Go to ```File/New/Other/``` and choose the new wizard ```Other/CryptoAPI project```.  Use it to create a new project called, e.g., CryptoAPI. 
 4. Choose the newly created project, and go to ```File/New/Other``` and choose the new wizard ```New SymmetricEncryption```.  Use it to create a new configuration that will be placed in the project and from which code will be generated and placed under ```/src```.
 5. You can now open ```/models/SymmEnc.xmi``` and ```/src/crypto/Enc.java``` side by side and see how changes are propagated back and forth.  You might need to explore and experiment a bit to find out how what is mapped to what.  Also try deleting the XMI file (it will be re-created from the code with default values where necessary), and deleting the entire ```crypto``` package (it will be re-created from the model with defaults values where necessary).
+6. To use a different bx tool for the synchronisation, change the value of ```ControllerModule.bxTool``` in your developer workspace accordingly and restart your client workspace.
 
 ## C. BX Demonstrator
 
