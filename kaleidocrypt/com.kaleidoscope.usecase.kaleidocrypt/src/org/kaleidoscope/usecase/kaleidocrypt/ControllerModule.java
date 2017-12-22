@@ -29,18 +29,16 @@ import CryptoConfigToJava.org.moflon.EMoflonTool;
 import SimpleJava.JavaPackage;
 import kaleidocrypt.implemenation.BxtendTool;
 
-public class ControllerModule extends AbstractModule{
-
+public class ControllerModule extends AbstractModule {
 	private ResourceSet set;	
 	private final BxTool bxTool = BxTool.EMOFLON;
-	
 	private Path sourceArtefactPath;
 	private Path targetArtefactPath;
-	private Path persisanceDestination;
+	private Path persistanceDestination;
 	
 	public ControllerModule(ResourceSet set, Path sourceArtefactPath, Path targetArtefactPath, Path persistanceDestination) {
 		this.set = set;		
-		this.persisanceDestination = persistanceDestination;
+		this.persistanceDestination = persistanceDestination;
 		this.sourceArtefactPath = sourceArtefactPath;
  		this.targetArtefactPath = targetArtefactPath;
 	}
@@ -56,30 +54,33 @@ public class ControllerModule extends AbstractModule{
 	}
 	
 	@Provides
-	PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path>provideSynchroniser() throws IOException{
-		
-		PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path>tool;
-		
-		XMIArtefactAdapter<Task> sourceArtefactAdapter = new XMIArtefactAdapter<Task>(sourceArtefactPath);
-		sourceArtefactAdapter.parse();			
-		
-		ArtefactAdapter<JavaPackage, Path> targetArtefactAdapter = new JavaArtefactAdapter(targetArtefactPath);
-		targetArtefactAdapter.parse();
-		
+	PersistentSynchroniser<
+		Task, 
+		JavaPackage, 
+		String, 
+		OperationalDelta, 
+		OperationalDelta, 
+		Path
+	>
+	provideSynchroniser() throws IOException{
+		PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path> tool;
+		//FIXME[Dusko]:  Why do you recreate the set here?  After taking it as a constructor parameter?
 		set = new ResourceSetImpl();
 		set.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());
 		
 		if(bxTool.equals(BxTool.EMOFLON)) {
-		
 			URL pathToTGGtransProjet  = MoflonUtilitiesActivator.getPathRelToPlugIn(".", "CryptoConfigToJava"); 
-			tool = new EMoflonTool(CryptoConfigToJavaPackage.eINSTANCE, pathToTGGtransProjet.getPath(), set
-																									,sourceArtefactAdapter.getModel().orElse(null)
-																									, targetArtefactAdapter.getModel().orElse(null)
-																									, persisanceDestination);
-		}
-		else if(bxTool.equals(BxTool.BXTEND)){
-			
-			tool = new BxtendTool(sourceArtefactAdapter.getModel().orElse(null), targetArtefactAdapter.getModel().orElse(null), persisanceDestination);
+			tool = new EMoflonTool(CryptoConfigToJavaPackage.eINSTANCE, 
+								   pathToTGGtransProjet.getPath(), 
+								   set, 
+								   //FIXME[Dusko]:  Why do you need the source/target artefact adapters in this manner?
+								   provideSourceArtefactAdapter().getModel().orElse(null), 
+								   provideTargetArtefactAdapter().getModel().orElse(null), 
+								   persistanceDestination);
+		} else if(bxTool.equals(BxTool.BXTEND)){
+			tool = new BxtendTool(provideSourceArtefactAdapter().getModel().orElse(null), 
+								 provideTargetArtefactAdapter().getModel().orElse(null), 
+								 persistanceDestination);
 		}
 		else {
 			throw new IllegalArgumentException("Bx tool has to be chosen!");
@@ -97,11 +98,11 @@ public class ControllerModule extends AbstractModule{
 	OfflineDeltaDiscoverer<JavaPackage, OperationalDelta> provideTargetOfflineDeltaDiscoverer(){
 		return new EMFCompareDeltaDiscoverer<JavaPackage>();
 	}
+	
 	@Override
 	protected void configure() {
-		bind(Path.class).annotatedWith(Dest.class).toInstance(persisanceDestination);
+		bind(Path.class).annotatedWith(Dest.class).toInstance(persistanceDestination);
 	}
-	
 }
 
 enum BxTool {

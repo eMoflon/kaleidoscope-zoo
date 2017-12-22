@@ -39,14 +39,12 @@ public class BxtendTool
 	private Task initialTask;
 	private JavaPackage initialJavaPackage;
 	private ResourceSet set;
-	private Path persistenceDirectory;
 
 
 	public BxtendTool(Task initialTask, JavaPackage initialJavaPackage, Path persistenceDirectory) {
 
 		this.initialTask = initialTask;
 		this.initialJavaPackage = initialJavaPackage;
-		this.persistenceDirectory = persistenceDirectory;
 		
 		set = new ResourceSetImpl();
 		set.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION,
@@ -186,7 +184,6 @@ public class BxtendTool
 		try {
 			resource.save(null);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

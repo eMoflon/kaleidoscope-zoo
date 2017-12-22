@@ -136,9 +136,9 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 	
 	@Override
 	public void terminate() {
-		// TODO Auto-generated method stub
 		
 	}
+	
 	@Override
 	public void initialize() throws SynchronisationFailedException{
 
