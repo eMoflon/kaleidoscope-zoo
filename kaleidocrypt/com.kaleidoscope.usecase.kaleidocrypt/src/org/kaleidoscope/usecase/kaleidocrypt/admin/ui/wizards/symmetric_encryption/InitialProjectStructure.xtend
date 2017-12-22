@@ -46,6 +46,7 @@ class InitialProjectStructure {
 			  <imports value="javax.crypto.NoSuchPaddingException"/>
 			  <imports value="javax.crypto.SecretKey"/>
 			  <imports value="javax.crypto.spec.IvParameterSpec"/>
+			  <imports value="javax.annotation.Generated"/>
 			  </algorithms>
 			</CryptoAPIConfig:Task>
 			
