@@ -14,6 +14,7 @@ public class CryptoConfigToJavaConsistencyCheck extends SynchronizationHelper{
    {
       super(CryptoConfigToJavaPackage.eINSTANCE, ".");
    }
+	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws IOException {
 		// Set up logging
         BasicConfigurator.configure();
@@ -35,7 +36,7 @@ public class CryptoConfigToJavaConsistencyCheck extends SynchronizationHelper{
 			helper.saveInconsistentSourceDelta("instances/cc_result/src.delta.xmi");
 			helper.saveInconsistentTargetDelta("instances/cc_result/trg.delta.xmi");
 		}
-		else{
+		else {
 			//src and trg models are not modified.
 			//save correspondence model and protocol only
 			helper.saveCorr("instances/corr.xmi");
