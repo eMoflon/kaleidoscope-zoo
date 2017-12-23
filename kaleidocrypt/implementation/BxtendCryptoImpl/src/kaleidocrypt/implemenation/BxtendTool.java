@@ -21,9 +21,7 @@ import BxtendCryptoImpl.rules.BxtendCryptoImplTransformation;
 import CryptoAPIConfig.Task;
 import SimpleJava.JavaPackage;
 
-public class BxtendTool
-		implements PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path> {
-
+public class BxtendTool implements PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path> {
 	private Resource sourceResource;
 	private Resource targetResource;
 	private Resource corrResource;
@@ -35,17 +33,15 @@ public class BxtendTool
 	private String sourceModelFileName = "fwd.src.xmi";
 	private String targetModelFileName = "fwd.trg.xmi";
 	private String corrModelFileName = "fwd.corr.xmi";
-	
+
 	private Task initialTask;
 	private JavaPackage initialJavaPackage;
 	private ResourceSet set;
 
-
 	public BxtendTool(Task initialTask, JavaPackage initialJavaPackage, Path persistenceDirectory) {
-
 		this.initialTask = initialTask;
 		this.initialJavaPackage = initialJavaPackage;
-		
+
 		set = new ResourceSetImpl();
 		set.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION,
 				new XMIResourceFactoryImpl());
@@ -57,18 +53,15 @@ public class BxtendTool
 
 	@Override
 	public void initialize() {
-
-		if(initialTask != null && initialJavaPackage == null) {
-			
+		if (initialTask != null && initialJavaPackage == null) {
 			sourceModel = initialTask;
-			sourceResource.getContents().add(sourceModel);			
+			sourceResource.getContents().add(sourceModel);
 			syncForward(new OperationalDelta());
-		
-		}else if(initialJavaPackage != null && initialTask == null) {
+		} else if (initialJavaPackage != null && initialTask == null) {
 			targetModel = initialJavaPackage;
-			targetResource.getContents().add(targetModel);			
+			targetResource.getContents().add(targetModel);
 			syncBackward(new OperationalDelta());
-		}			
+		}
 	}
 
 	@Override
@@ -77,35 +70,33 @@ public class BxtendTool
 	}
 
 	private boolean isStatePersisted(Path persistenceDirectory) {
-		
 		File sourceModelFile = persistenceDirectory.resolve(sourceModelFileName).toFile();
 		File targetModelFile = persistenceDirectory.resolve(targetModelFileName).toFile();
 		File correspondentModelFile = persistenceDirectory.resolve(corrModelFileName).toFile();
-		
-		if(!sourceModelFile.exists() || !targetModelFile.exists() || !correspondentModelFile.exists())
+
+		if (!sourceModelFile.exists() || !targetModelFile.exists() || !correspondentModelFile.exists())
 			return false;
-		
+
 		return true;
 	}
+
 	@Override
 	public void restoreState(Path persistenceDirectory) {
-		
-		if(!isStatePersisted(persistenceDirectory))
-			return;
-		
+		if (!isStatePersisted(persistenceDirectory)) return;
+
 		sourceModel = (Task) loadModel(sourceResource, persistenceDirectory.resolve(sourceModelFileName).toString());
-		targetModel = (JavaPackage) loadModel(targetResource,persistenceDirectory.resolve(targetModelFileName).toString());
-		corrModel = (Transformation) loadModel(corrResource,persistenceDirectory.resolve(corrModelFileName).toString());
+		targetModel = (JavaPackage) loadModel(targetResource,
+				persistenceDirectory.resolve(targetModelFileName).toString());
+		corrModel = (Transformation) loadModel(corrResource,
+				persistenceDirectory.resolve(corrModelFileName).toString());
 		EcoreUtil.resolveAll(corrModel);
 	}
 
 	@Override
 	public void persistState(Path persistenceDirectory) {
-
 		saveModel(sourceResource, sourceModel, persistenceDirectory.resolve(sourceModelFileName).toString());
 		saveModel(targetResource, targetModel, persistenceDirectory.resolve(targetModelFileName).toString());
 		saveModel(corrResource, corrModel, persistenceDirectory.resolve(corrModelFileName).toString());
-
 	}
 
 	public Task getSourceModel() {
@@ -118,25 +109,24 @@ public class BxtendTool
 
 	@Override
 	public void syncForward(OperationalDelta operationalJavaBasedDelta) {
-
 		OpaqueDelta<Task> delta = operationalJavaBasedDelta.transformToOpaqueDelta();
 		delta.execute(sourceModel);
 
-		BxtendCryptoImplTransformation f2pt = new BxtendCryptoImplTransformation(sourceResource, targetResource, corrResource);
+		BxtendCryptoImplTransformation f2pt = new BxtendCryptoImplTransformation(sourceResource, targetResource,
+				corrResource);
 		f2pt.sourceToTarget();
 
 		targetModel = (JavaPackage) targetResource.getContents().get(0);
 		corrModel = (Transformation) corrResource.getContents().get(0);
-
 	}
 
 	@Override
 	public void syncBackward(OperationalDelta operationalJavaBasedDelta) {
-
 		OpaqueDelta<EObject> delta = operationalJavaBasedDelta.transformToOpaqueDelta();
 		delta.execute(targetModel);
 
-		BxtendCryptoImplTransformation f2pt = new BxtendCryptoImplTransformation(sourceResource, targetResource, corrResource);
+		BxtendCryptoImplTransformation f2pt = new BxtendCryptoImplTransformation(sourceResource, targetResource,
+				corrResource);
 		f2pt.targetToSource();
 
 		sourceModel = (Task) sourceResource.getContents().get(0);
@@ -165,17 +155,15 @@ public class BxtendTool
 
 	private URI createFileURI(final String pathToXMIFile, final boolean mustExist) {
 		File filePath = new File(pathToXMIFile);
-		
+
 		if (!filePath.exists() && mustExist)
 			throw new IllegalArgumentException(pathToXMIFile + " does not exist.");
 
 		return URI.createFileURI(filePath.getAbsolutePath());
 	}
 
-	private void saveModel(final Resource resource, final EObject rootElementOfModel,
-			final String pathToXMIFile) {
-		
-		if(resource.getContents().isEmpty())
+	private void saveModel(final Resource resource, final EObject rootElementOfModel, final String pathToXMIFile) {
+		if (resource.getContents().isEmpty())
 			resource.getContents().add(rootElementOfModel);
 		else
 			resource.getContents().set(0, rootElementOfModel);
@@ -186,6 +174,5 @@ public class BxtendTool
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 	}
 }

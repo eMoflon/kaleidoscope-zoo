@@ -19,8 +19,6 @@ import org.kaleidoscope.usecase.kaleidocrypt.admin.ui.wizards.CryptoAPINature;
 import org.moflon.core.utilities.WorkspaceHelper;
 import org.moflon.tgg.mosl.defaults.DefaultFilesHelper;
 
-
-
 public class NewCryptoAPIProjectWizard extends Wizard implements INewWizard {
 	private NewCryptoAPIProjectWizardPage page;
 
@@ -31,23 +29,22 @@ public class NewCryptoAPIProjectWizard extends Wizard implements INewWizard {
 		super();
 		setNeedsProgressMonitor(true);
 	}
-	
+
 	/**
 	 * Adding the page to the wizard.
 	 */
-
 	public void addPages() {
 		page = new NewCryptoAPIProjectWizardPage();
 		addPage(page);
 	}
 
 	/**
-	 * This method is called when 'Finish' button is pressed in
-	 * the wizard. It creates a new project.
+	 * This method is called when 'Finish' button is pressed in the wizard. It
+	 * creates a new project.
 	 */
 	public boolean performFinish() {
 		final String projectName = page.getProjectName();
-		
+
 		IRunnableWithProgress op = new IRunnableWithProgress() {
 			public void run(IProgressMonitor monitor) throws InvocationTargetException {
 				try {
@@ -72,36 +69,34 @@ public class NewCryptoAPIProjectWizard extends Wizard implements INewWizard {
 		return true;
 	}
 
-	public void doFinish(String projectName, IProgressMonitor monitor)
-		throws CoreException {
+	public void doFinish(String projectName, IProgressMonitor monitor) throws CoreException {
 		final SubMonitor subMon = SubMonitor.convert(monitor, "Creating new project", 3);
 		IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject(projectName);
-		createProject(subMon.split(3),  project);
+		createProject(subMon.split(3), project);
 		createInitialProjectStructure(monitor, project);
 	}
 
 	private void createInitialProjectStructure(final IProgressMonitor monitor, IProject project) throws CoreException {
 		final SubMonitor subMon = SubMonitor.convert(monitor, "Generate project structure", 3);
 		DefaultFilesHelper.generateDefaultSchema(project.getName());
-		addAllFolders(project, "src",subMon.split(1));
-		addAllFolders(project, "models",subMon.split(1));
-		addAllFolders(project, "models/gen",subMon.split(1));
+		addAllFolders(project, "src", subMon.split(1));
+		addAllFolders(project, "models", subMon.split(1));
+		addAllFolders(project, "models/gen", subMon.split(1));
 	}
-	
 
 	protected void createProject(IProgressMonitor monitor, IProject project) throws CoreException {
 		final SubMonitor subMon = SubMonitor.convert(monitor, "Creating " + project.getName(), 3);
-		
+
 		// Create project
 		project.create(subMon.split(1));
 		project.open(subMon.split(1));
-				
+
 		// Add CryptoAPI Nature
-		WorkspaceHelper.addNature(project, CryptoAPINature.CRYPTO_API_NATURE_ID, subMon.split(1)); 
+		WorkspaceHelper.addNature(project, CryptoAPINature.CRYPTO_API_NATURE_ID, subMon.split(1));
 	}
 
 	@Override
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
-		
+
 	}
 }

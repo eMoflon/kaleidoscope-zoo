@@ -37,22 +37,19 @@ import SimpleJava.JavaPackage;
 
 
 public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implements IResourceDeltaVisitor, Builder {
-	
 	private IProject project;
 	private Path projectPath;
 	private final ResourceSet set;	
 	
-	// every configuration path is related to one java package path
+	// Every configuration path is related to one Java package path
 	private HashMap<String, String> confPathToJavaPackagePath = new HashMap<String, String>();
 	private static final Logger logger = Logger.getLogger(CryptoAPIProjectBuilder.class);
 	
 	private void initializeConfFilenameToJavaPackage() {
-		
 		confPathToJavaPackagePath.put(Paths.get("models", "SymmEnc.xmi").toString(),  Paths.get("src", "crypto").toString());
 	}
 	
 	public CryptoAPIProjectBuilder() {
-		
 		initializeConfFilenameToJavaPackage();
 		set = new ResourceSetImpl();
 		set.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());	    
@@ -85,25 +82,20 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		getDelta(getProject()).accept(this);
 	}
 
-
 	private void performClean() {
 		logger.info("Clean project!");
 	}
 	
-	private String getSyncPersistanceDestinationRelPath(String sourceArtefactRelativeFilePath) {
-		
+	private String getSyncPersistanceDestinationRelPath(String sourceArtefactRelativeFilePath) {		
 		String splitter = File.separator.replace("\\","\\\\");
 		String[] filePathSegments = sourceArtefactRelativeFilePath.split(splitter);
 		List<String> filePathSegmentsList = new ArrayList<String>(Arrays.asList(filePathSegments));
-		
 		filePathSegmentsList.add(filePathSegments.length - 1, "gen");
-		
 		return  String.join(File.separator, filePathSegmentsList);
 	}
 	
 	@Override
 	public void syncForward(IResource sourceArtefactResource)throws CoreException{
-		
 		logger.info("Sync a java model with the configuration model is performed!");
 		
 		String sourceArtefactRelativeFilePath = sourceArtefactResource.getProjectRelativePath().toOSString();
@@ -113,13 +105,14 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		logger.info("Target artefact relative file path:" + targetArtefactRelativeFilePath);
 		logger.info("Source artefact relative file path:" + sourceArtefactRelativeFilePath);
 		
-		Injector injector = Guice.createInjector(new ControllerModule(set,
-																	  projectPath.resolve(sourceArtefactRelativeFilePath),
-																	  projectPath.resolve(targetArtefactRelativeFilePath),
-																	  projectPath.resolve(syncPersistaneDestinationRelativePath)));
+		Injector injector = Guice.createInjector(new ControllerModule(
+				set,
+				projectPath.resolve(sourceArtefactRelativeFilePath),
+				projectPath.resolve(targetArtefactRelativeFilePath),
+				projectPath.resolve(syncPersistaneDestinationRelativePath)));
 		
-		PersistentStateBasedController<Task, Path, JavaPackage, Path, String, OperationalDelta, OperationalDelta, Path> controller = 
-				injector.getInstance(Key.get(new TypeLiteral<PersistentStateBasedController<Task, Path, JavaPackage, Path, String, OperationalDelta, OperationalDelta, Path>>(){}));
+		PersistentStateBasedController<Task, Path, JavaPackage, Path, String, OperationalDelta, OperationalDelta, Path> 
+			controller = injector.getInstance(Key.get(new TypeLiteral<PersistentStateBasedController<Task, Path, JavaPackage, Path, String, OperationalDelta, OperationalDelta, Path>>(){}));
 		
 		try {
 			controller.initialise();
@@ -127,7 +120,6 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		} catch (SynchronisationFailedException e) {
 			e.printStackTrace();
 		}
-		
 		
 		refreshProject();
 		logger.info("Sync a java model with the configuration model is done!");
@@ -148,22 +140,21 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		logger.info("Target artefact relative file path:" + targetArtefactRelativeFilePath);
 		logger.info("Source artefact relative file path:" + sourceArtefactRelativeFilePath);
 		
-		Injector injector = Guice.createInjector(new ControllerModule(set,
-																	  projectPath.resolve(sourceArtefactRelativeFilePath),
-																	  projectPath.resolve(targetArtefactRelativeFilePath),
-																	  projectPath.resolve(syncPersistaneDestinationRelativePath)));
+		Injector injector = Guice.createInjector(new ControllerModule(
+				set,
+				projectPath.resolve(sourceArtefactRelativeFilePath),
+				projectPath.resolve(targetArtefactRelativeFilePath),
+				projectPath.resolve(syncPersistaneDestinationRelativePath)));
 		
-		PersistentStateBasedController<Task, Path, JavaPackage, Path, String, OperationalDelta, OperationalDelta, Path> controller = 
-				injector.getInstance(Key.get(new TypeLiteral<PersistentStateBasedController<Task, Path, JavaPackage, Path, String, OperationalDelta, OperationalDelta, Path>>(){}));
+		PersistentStateBasedController<Task, Path, JavaPackage, Path, String, OperationalDelta, OperationalDelta, Path> 
+			controller = injector.getInstance(Key.get(new TypeLiteral<PersistentStateBasedController<Task, Path, JavaPackage, Path, String, OperationalDelta, OperationalDelta, Path>>(){}));
 		
 		try {
 			controller.initialise();
 			controller.syncBackward(projectPath.resolve(targetArtefactRelativeFilePath));
-		} catch (SynchronisationFailedException e1) {
-			
-			e1.printStackTrace();
+		} catch (SynchronisationFailedException e) {
+			e.printStackTrace();
 		}
-		
 		
 		refreshProject();
 		logger.info("Sync configuration model  with a java model is done!");
@@ -171,35 +162,25 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 	private void refreshProject() throws CoreException{
 		project.getFolder("src").refreshLocal(IResource.DEPTH_INFINITE, null);
 		project.getFolder("models").refreshLocal(IResource.DEPTH_INFINITE, null);
-		
 	}
 	
 	@Override
 	public boolean isResourceTargetArtefact(IResource resource) {
-		
 		String changedResourceRelativeFilePath= resource.getProjectRelativePath().toOSString();
 		boolean isResourceTargetArtefact = confPathToJavaPackagePath.containsValue(changedResourceRelativeFilePath);
-		
 		return isResourceTargetArtefact;
 	}
 	
 	@Override
 	public boolean isResourceSourceArtefact(IResource resource) {
-		
 		String changedResourceRelativeFilePath= resource.getProjectRelativePath().toOSString();
 		boolean isResourceSourceArtefact = confPathToJavaPackagePath.containsKey(changedResourceRelativeFilePath);
-		
 		return isResourceSourceArtefact;
 	}
 	
 	@Override
 	public boolean isResourceToBeIgnored(IResource resource) {
-		
-		if(resource.getName().equals("bin")){
-			return true;
-		}
-		
-		return false;
+		return resource.getName().equals("bin");
 	}
 
 	@Override
@@ -211,11 +192,8 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		}
 		
 		if(isResourceSourceArtefact(changedResource)) {
-			
 			syncForward(changedResource);
-			
 		}else if(isResourceTargetArtefact(changedResource)) {
-			
 			syncBackward(changedResource);
 		}
 		
