@@ -5,10 +5,7 @@ import java.net.URL;
 import java.nio.file.Path;
 import java.util.Optional;
 
-import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.moflon.core.utilities.MoflonUtilitiesActivator;
 
 import com.google.inject.AbstractModule;
@@ -65,9 +62,6 @@ public class ControllerModule extends AbstractModule {
 	>
 	provideSynchroniser() throws IOException{
 		PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path> tool;
-		//FIXME[Dusko]:  Why do you recreate the set here?  After taking it as a constructor parameter?
-		set = new ResourceSetImpl();
-		set.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());
 		
 		ArtefactAdapter<Task, Path> sourceArtefactAdapter = provideSourceArtefactAdapter();
 		sourceArtefactAdapter.parse();
