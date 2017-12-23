@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="com.kaleidoscope.deployment.feature"
-      label="Feature"
+      label="Kaleidoscope"
       version="1.0.0.qualifier">
 
    <description url="https://github.com/eMoflon/kaleidoscope-zoo">

@@ -73,14 +73,19 @@ public class ControllerModule extends AbstractModule {
 		
 		if(bxTool.equals(BxTool.EMOFLON)) {
 			URL pathToTGGtransProjet  = MoflonUtilitiesActivator.getPathRelToPlugIn(".", "CryptoConfigToJava"); 
-			tool = new EMoflonTool(CryptoConfigToJavaPackage.eINSTANCE, 
-								   pathToTGGtransProjet.getPath(), set, 
-								   //FIXME[Dusko]:  Why do you need the source/target artefact adapters in this manner?
-								   initialSource.orElse(null), 
-								   initialTarget.orElse(null), 
-								   persistanceDestination);
+			tool = new EMoflonTool(
+					CryptoConfigToJavaPackage.eINSTANCE, 
+					pathToTGGtransProjet.getPath(), set, 
+					initialSource, 
+					initialTarget, 
+					persistanceDestination
+				);
 		} else if(bxTool.equals(BxTool.BXTEND)){
-			tool = new BxtendTool(initialSource.orElse(null), initialTarget.orElse(null), persistanceDestination);
+			tool = new BxtendTool(
+					initialSource, 
+					initialTarget, 
+					persistanceDestination
+				);
 		}
 		else {
 			throw new IllegalArgumentException("Bx tool has to be chosen!");

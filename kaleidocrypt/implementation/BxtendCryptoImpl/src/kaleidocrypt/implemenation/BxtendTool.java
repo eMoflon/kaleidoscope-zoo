@@ -3,6 +3,7 @@ package kaleidocrypt.implemenation;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.Optional;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -38,9 +39,9 @@ public class BxtendTool implements PersistentSynchroniser<Task, JavaPackage, Str
 	private JavaPackage initialJavaPackage;
 	private ResourceSet set;
 
-	public BxtendTool(Task initialTask, JavaPackage initialJavaPackage, Path persistenceDirectory) {
-		this.initialTask = initialTask;
-		this.initialJavaPackage = initialJavaPackage;
+	public BxtendTool(Optional<Task> initialSource, Optional<JavaPackage> initialTarget, Path persistenceDirectory) {
+		this.initialTask = initialSource.orElse(null); 
+		this.initialJavaPackage = initialTarget.orElse(null);
 
 		set = new ResourceSetImpl();
 		set.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION,
@@ -52,7 +53,7 @@ public class BxtendTool implements PersistentSynchroniser<Task, JavaPackage, Str
 	}
 
 	@Override
-	public void initialize() {
+	public void initialise() {
 		if (initialTask != null && initialJavaPackage == null) {
 			sourceModel = initialTask;
 			sourceResource.getContents().add(sourceModel);

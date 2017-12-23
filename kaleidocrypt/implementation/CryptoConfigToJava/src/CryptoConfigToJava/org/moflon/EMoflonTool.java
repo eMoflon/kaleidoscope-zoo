@@ -1,6 +1,7 @@
 package CryptoConfigToJava.org.moflon;
 
 import java.nio.file.Path;
+import java.util.Optional;
 import java.util.function.Consumer;
 
 import org.eclipse.emf.common.util.URI;
@@ -28,10 +29,10 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 	private Task initialTask;
 	private JavaPackage initialJavaPackage;
 	
-	public  EMoflonTool(EPackage corrPackage, String pathToProject, ResourceSet resourceSet, Task initialTask, JavaPackage initialJavaPackage, Path persistenceDirectory) {
+	public  EMoflonTool(EPackage corrPackage, String pathToProject, ResourceSet resourceSet, Optional<Task> initialSource, Optional<JavaPackage> initialTarget, Path persistenceDirectory) {
 		super(corrPackage, pathToProject, resourceSet);
-		this.initialTask = initialTask;
-		this.initialJavaPackage = initialJavaPackage;
+		this.initialTask = initialSource.orElse(null);
+		this.initialJavaPackage = initialTarget.orElse(null);
 		this.persistenceDirectory = persistenceDirectory;
 	}
 	
@@ -57,8 +58,7 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 	public void persistState(Path path) {
 		persistenceDirectory = path;
 		
-		if(getSrc() == null || getTrg() == null || getCorr() == null )
-			return;
+		if(getSrc() == null || getTrg() == null || getCorr() == null ) return;
 		
 		getSrc().eResource().setURI(URI.createFileURI(persistenceDirectory.resolve(sourceModelFileName).toString()));
 		getTrg().eResource().setURI(URI.createFileURI(persistenceDirectory.resolve(targetModelFileName).toString()));
@@ -130,7 +130,7 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 	}
 	
 	@Override
-	public void initialize() throws SynchronisationFailedException{
+	public void initialise() throws SynchronisationFailedException{
 		if(initialTask == null && initialJavaPackage != null) {
 			transformTargetIntoSourceModel();			
 			persistState(persistenceDirectory);
@@ -142,7 +142,7 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 		}
 	}
 	
-	private void transformTargetIntoSourceModel()throws SynchronisationFailedException {
+	private void transformTargetIntoSourceModel() throws SynchronisationFailedException {
 		Resource target = set.createResource(URI.createURI("target.java.package"));
 		target.getContents().add(initialJavaPackage);
 		setTrg(initialJavaPackage);
@@ -153,7 +153,7 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 		}
 	}
 	
-	private void transformSourceIntoTargetModel()throws SynchronisationFailedException {	
+	private void transformSourceIntoTargetModel() throws SynchronisationFailedException {	
 		Resource source = set.createResource(URI.createURI("source.java.package"));
 		source.getContents().add(initialTask);
 		setSrc(initialTask);
