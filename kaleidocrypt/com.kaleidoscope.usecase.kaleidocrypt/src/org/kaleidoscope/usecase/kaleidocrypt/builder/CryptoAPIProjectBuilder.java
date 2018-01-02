@@ -39,8 +39,7 @@ import SimpleJava.JavaPackage;
 public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implements IResourceDeltaVisitor, Builder {
 	
 	private IProject project;
-	private Path projectPath;
-	private final ResourceSet set;	
+	private Path projectPath;	
 	
 	// every configuration path is related to one java package path
 	private HashMap<String, String> confPathToJavaPackagePath = new HashMap<String, String>();
@@ -53,9 +52,7 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 	
 	public CryptoAPIProjectBuilder() {
 		 
-		initializeConfFilenameToJavaPackage();
-		set = new ResourceSetImpl();
-		set.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());	    
+		initializeConfFilenameToJavaPackage();	    
 	}
 	
 	@Override
@@ -99,6 +96,12 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		return  String.join(File.separator, filePathSegmentsList);
 	}
 	
+	private ResourceSet createNewResourceSet() {
+		ResourceSet set = new ResourceSetImpl();
+		set.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());	
+		return set;
+	}
+	
 	@Override
 	public void syncForward(IResource sourceArtefactResource)throws CoreException{
 		
@@ -111,7 +114,7 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		logger.info("Target artefact relative file path:" + targetArtefactRelativeFilePath);
 		logger.info("Source artefact relative file path:" + sourceArtefactRelativeFilePath);
 		
-		Injector injector = Guice.createInjector(new ControllerModule(set,
+		Injector injector = Guice.createInjector(new ControllerModule(createNewResourceSet(),
 																	  projectPath.resolve(sourceArtefactRelativeFilePath),
 																	  projectPath.resolve(targetArtefactRelativeFilePath),
 																	  projectPath.resolve(syncPersistaneDestinationRelativePath)));
@@ -147,7 +150,7 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 		logger.info("Target artefact relative file path:" + targetArtefactRelativeFilePath);
 		logger.info("Source artefact relative file path:" + sourceArtefactRelativeFilePath);
 		
-		Injector injector = Guice.createInjector(new ControllerModule(set,
+		Injector injector = Guice.createInjector(new ControllerModule(createNewResourceSet(),
 																	  projectPath.resolve(sourceArtefactRelativeFilePath),
 																	  projectPath.resolve(targetArtefactRelativeFilePath),
 																	  projectPath.resolve(syncPersistaneDestinationRelativePath)));
