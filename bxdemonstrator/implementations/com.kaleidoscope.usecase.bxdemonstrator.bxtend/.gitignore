@@ -1,3 +1,5 @@
 /bin/
+*.class
+*.xtendbin
 /xtend-bin/
 /xtend-gen/

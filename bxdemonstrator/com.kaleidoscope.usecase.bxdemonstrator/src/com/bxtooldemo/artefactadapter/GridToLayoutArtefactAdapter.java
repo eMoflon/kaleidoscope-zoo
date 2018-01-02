@@ -22,27 +22,38 @@ public class GridToLayoutArtefactAdapter implements ArtefactAdapter<Grid, Layout
 	}
 
 	@Override
-	public void unparse() {
-		// layout conversion
+	public void unparse() { 
 		artefact.setGridSize(model.getBlockSize());
+		
 		if (model != null && model.getGroups().size() > 0) {
 			for (Group group : model.getGroups()) {
-				UIGroup uiGroup = new UIGroup();
-				for (Block block : group.getOccupies()) {
-					Rectangle rect = new Rectangle();
-					rect.setId("block_" + block.getXIndex() + "_" + block.getYIndex());
-
-					rect.setxIndex(block.getXIndex()); // ADDED
-					rect.setyIndex(block.getYIndex()); // ADDED
-					uiGroup.setFillColor(group.getFillColor());
-					uiGroup.getBlocks().add(rect);
-				}
+				
+				UIGroup uiGroup = transformGroupIntoUIgroup(group);
 				artefact.getGroups().add(uiGroup);
 			}
 		}
 
 	}
+	private Rectangle transformBlockIntoRectangle(Block block) {
+		
+		Rectangle rect = new Rectangle();
+		rect.setId("block_" + block.getXIndex() + "_" + block.getYIndex());
+		rect.setxIndex(block.getXIndex()); 
+		rect.setyIndex(block.getYIndex()); 
+		return rect;
+	}
+	private UIGroup transformGroupIntoUIgroup(Group group) {
+		
+		UIGroup uiGroup = new UIGroup();
+		uiGroup.setFillColor(group.getFillColor());
+		
+		for (Block block : group.getOccupies()) {
+			Rectangle rectangle = transformBlockIntoRectangle(block);
+			uiGroup.getBlocks().add(rectangle);
+		}
 
+		return uiGroup;
+	}
 	@Override
 	public void setModel(Grid m) {
 		this.model = m;

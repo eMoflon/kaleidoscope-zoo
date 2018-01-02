@@ -32,7 +32,7 @@ import kaleidocrypt.implemenation.BxtendTool;
 public class ControllerModule extends AbstractModule{
 
 	private ResourceSet set;	
-	private final BxTool bxTool = BxTool.EMOFLON;
+	private final BxTool bxTool = BxTool.BXTEND;
 	
 	private Path sourceArtefactPath;
 	private Path targetArtefactPath;

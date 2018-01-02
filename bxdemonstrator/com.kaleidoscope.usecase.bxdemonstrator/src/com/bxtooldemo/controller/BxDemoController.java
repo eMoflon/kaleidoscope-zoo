@@ -13,6 +13,7 @@ import com.kaleidoscope.core.framework.annotations.Src;
 import com.kaleidoscope.core.framework.annotations.Trg;
 import com.kaleidoscope.core.framework.synchronisation.ContinuableSynchroniser;
 import com.kaleidoscope.core.framework.synchronisation.SynchronisationContinuationResult;
+import com.kaleidoscope.core.framework.synchronisation.SynchronisationFailedException;
 import com.kaleidoscope.core.framework.workflow.adapters.ArtefactAdapter;
 import com.kaleidoscope.core.framework.workflow.adapters.DeltaAdapter;
 import com.kaleidoscope.core.framework.workflow.controllers.deltabased.ContinuableDeltaBasedController;
@@ -24,14 +25,17 @@ import KitchenLanguage.Kitchen;
 
 public class BxDemoController extends ContinuableDeltaBasedController<Grid, Object, Kitchen, Object, List<String>, OperationalDelta, OperationalDelta, String, String> {
 		
-	public UIModels initialise() {
+	private UIModels uimodels;
+	
+	
+	public void initialise() throws SynchronisationFailedException {
 		synchroniser.initialize();
 
 		SynchronisationContinuationResult<Grid, Object, Kitchen, Object, OperationalDelta, List<String>> fwdSyncResult = syncForward("");
 		SyncResultToUIModelArtefactAdapter syncResultToUIModelArtefactAdapter = new SyncResultToUIModelArtefactAdapter();
 		syncResultToUIModelArtefactAdapter.setArtefact(fwdSyncResult);
 		syncResultToUIModelArtefactAdapter.parse();
-		return syncResultToUIModelArtefactAdapter.getModel().get();		
+		uimodels = syncResultToUIModelArtefactAdapter.getModel().get();		
 	}
 	@Inject
 	public BxDemoController(@Src ArtefactAdapter<Grid, Object> sourceArtefactAdapter,
@@ -73,7 +77,7 @@ public class BxDemoController extends ContinuableDeltaBasedController<Grid, Obje
 		}
 	}
 
-	public UIModels workflow(Optional<String> sourceDelta, Optional<String> targetDelta) {
+	public void workflow(Optional<String> sourceDelta, Optional<String> targetDelta) throws SynchronisationFailedException {
 			
 		if(sourceDelta.isPresent()) {
 			SynchronisationContinuationResult<Grid, Object, Kitchen, Object, OperationalDelta, List<String>> fwdSyncResult = syncForward(sourceDelta.get());
@@ -82,7 +86,7 @@ public class BxDemoController extends ContinuableDeltaBasedController<Grid, Obje
 			SyncResultToUIModelArtefactAdapter syncResultToUIModelArtefactAdapter = new SyncResultToUIModelArtefactAdapter();
 			syncResultToUIModelArtefactAdapter.setArtefact(fwdSyncResult);
 			syncResultToUIModelArtefactAdapter.parse();
-			return syncResultToUIModelArtefactAdapter.getModel().get();
+			uimodels =  syncResultToUIModelArtefactAdapter.getModel().get();
 		}
 		else if (targetDelta.isPresent()) {
 			SynchronisationContinuationResult<Grid, Object, Kitchen, Object, OperationalDelta, List<String>> bwdSyncResult = syncBackward(targetDelta.get());
@@ -91,12 +95,14 @@ public class BxDemoController extends ContinuableDeltaBasedController<Grid, Obje
 			SyncResultToUIModelArtefactAdapter syncResultToUIModelArtefactAdapter = new SyncResultToUIModelArtefactAdapter();
 			syncResultToUIModelArtefactAdapter.setArtefact(bwdSyncResult);
 			syncResultToUIModelArtefactAdapter.parse();
-			return syncResultToUIModelArtefactAdapter.getModel().get();
+			uimodels =  syncResultToUIModelArtefactAdapter.getModel().get();
 			
 		}else {
-			return new UIModels();
+			uimodels =  new UIModels();
 		}
 				
 	}
-	
+	public UIModels getUiModels() {
+		return uimodels;
+	}
 }

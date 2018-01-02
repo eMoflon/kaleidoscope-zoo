@@ -52,7 +52,7 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 	}
 	
 	public CryptoAPIProjectBuilder() {
-		
+		 
 		initializeConfFilenameToJavaPackage();
 		set = new ResourceSetImpl();
 		set.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());	    
@@ -60,8 +60,6 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 	
 	@Override
 	protected IProject[] build(int kind, Map<String, String> args, IProgressMonitor monitor) throws CoreException {		
-		logger.info("Build is being performed.");
-		
 		project = getProject();
 		projectPath = Paths.get(project.getLocation().toString());		
 		
@@ -104,7 +102,7 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 	@Override
 	public void syncForward(IResource sourceArtefactResource)throws CoreException{
 		
-		logger.info("Sync a java model with the configuration model is performed!");
+		logger.info("===================SYNC FORWARD STARTED===================");
 		
 		String sourceArtefactRelativeFilePath = sourceArtefactResource.getProjectRelativePath().toOSString();
 		String targetArtefactRelativeFilePath = confPathToJavaPackagePath.get(sourceArtefactRelativeFilePath);
@@ -125,17 +123,18 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 			controller.initialise();
 			controller.syncForward(projectPath.resolve(sourceArtefactRelativeFilePath));
 		} catch (SynchronisationFailedException e) {
+			logger.error("Synchronisation failed: "+ e.getMessage());
 			e.printStackTrace();
 		}
 		
 		
 		refreshProject();
-		logger.info("Sync a java model with the configuration model is done!");
+		logger.info("===================SYNC FORWARD FINISHED===================");
 	}
 	
 	@Override
 	public void syncBackward(IResource targetArtefactResource)throws CoreException{
-		logger.info("Sync configuration model  with a java model is performed!");
+		logger.info("===================SYNC BACWARD STARTED===================");
 		
 		String targetArtefactRelativeFilePath = targetArtefactResource.getProjectRelativePath().toOSString();
 		String sourceArtefactRelativeFilePath = confPathToJavaPackagePath.entrySet().stream()
@@ -160,13 +159,12 @@ public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implement
 			controller.initialise();
 			controller.syncBackward(projectPath.resolve(targetArtefactRelativeFilePath));
 		} catch (SynchronisationFailedException e1) {
-			
+			logger.error("Synchronisation failed: "+ e1.getMessage());
 			e1.printStackTrace();
 		}
 		
-		
 		refreshProject();
-		logger.info("Sync configuration model  with a java model is done!");
+		logger.info("===================SYNC BACWARD FINISHED===================");
 	}
 	private void refreshProject() throws CoreException{
 		project.getFolder("src").refreshLocal(IResource.DEPTH_INFINITE, null);

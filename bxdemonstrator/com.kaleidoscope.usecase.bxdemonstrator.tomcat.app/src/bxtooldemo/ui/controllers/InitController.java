@@ -17,6 +17,7 @@ import com.bxtooldemo.controller.ControllerModule;
 import com.bxtooldemo.uimodels.UIModels;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.kaleidoscope.core.framework.synchronisation.SynchronisationFailedException;
 
 /**
  * Servlet implementation class InitController
@@ -95,7 +96,14 @@ public class InitController extends HttpServlet {
 		UUID = gson.fromJson(request.getParameter("userID"), String.class);
 
 		uidMappings.put(this.UUID, this.bxDemoController);
-		uimodels = bxDemoController.initialise();
+		
+		try {
+			bxDemoController.initialise();
+		} catch (SynchronisationFailedException e) {
+		
+			e.printStackTrace();
+		}
+		uimodels =  bxDemoController.getUiModels();
 	
 	}
 
@@ -113,19 +121,31 @@ public class InitController extends HttpServlet {
 			bxDemoController = controllerModule.getControllerInstance(5);
 			uidMappings.put(UUID, bxDemoController);
 
-			uimodels = bxDemoController.initialise();
+			try {
+				bxDemoController.initialise();
+			} catch (SynchronisationFailedException e) {				
+				e.printStackTrace();
+			}
+			
 		}
 		else {
+			try {
+				if(noOfSourceDeltaOperations > 0)
+					
+						bxDemoController.workflow(Optional.of(deltaString), Optional.empty());
+					
+				else if (noOfTargetDeltaOperations > 0) 
+					bxDemoController.workflow(Optional.empty(), Optional.of(deltaString));
+				
+			} catch (SynchronisationFailedException e) {
 			
-			if(noOfSourceDeltaOperations > 0)
-				uimodels = bxDemoController.workflow(Optional.of(deltaString), Optional.empty());
-			else if (noOfTargetDeltaOperations > 0) 
-				uimodels = bxDemoController.workflow(Optional.empty(), Optional.of(deltaString));
-			
+				e.printStackTrace();
+			}
 		}
+		uimodels =  bxDemoController.getUiModels();
 				
 	}
-
+	
 	private void propagateUserChoice(HttpServletRequest request, HttpServletResponse response, Gson gson) {
 
 		String UserChoice = gson.fromJson(request.getParameter("UserChoice"), new TypeToken<String>(){}.getType());
@@ -137,7 +157,12 @@ public class InitController extends HttpServlet {
 			bxDemoController = controllerModule.getControllerInstance(5);
 			uidMappings.put(UUID, bxDemoController);
 
-			uimodels = bxDemoController.initialise();
+			try {
+				bxDemoController.initialise();
+			} catch (SynchronisationFailedException e) {			
+				e.printStackTrace();
+			}
+			uimodels = bxDemoController.getUiModels();
 		}
 		else
 			uimodels = bxDemoController.continueSynchronisation(UserChoice);
