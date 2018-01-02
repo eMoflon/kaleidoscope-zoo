@@ -7,7 +7,7 @@
 
 A new project with the chosen name should be created in the workspace. 
 It contains a Java class `Main` and a folder `models` with two files `src.xmi` and `trg.xmi`.
-A user performs all the changes inside the class `Main`. The delta to be propagated is specified programmatically and assigned as a lamda to the local variable `OpaqueDelta<PersonContainer> delta`.
+A user performs all the changes inside the class `Main`. The delta to be propagated is specified programmatically and assigned as a lambda to the local variable `OpaqueDelta<PersonContainer> delta`.
 The direction (forward, backward) in which the delta is to be propagated can be altered by calling either `controllerModule.getControllerInstance().syncForward(delta)` or 
 `controllerModule.getControllerInstance().syncForward(delta)`. 
 An example of a change is the addition of two persons inside the Person Container of the source model.

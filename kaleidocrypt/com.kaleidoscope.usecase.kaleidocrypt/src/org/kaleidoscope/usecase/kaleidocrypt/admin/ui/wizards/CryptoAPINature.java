@@ -28,10 +28,8 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.SubMonitor;
 
 public class CryptoAPINature implements IProjectNature {
-
 	public static final String CRYPTO_API_NATURE_ID = "kaleidoscope.usecase.kaleidocrypt.nature";
 	public static final String CRYPTO_API_BUILDER_ID = "kaleidoscope.usecase.kaleidocrypt.builder";
-	
 	
 	private static final Logger logger = Logger.getLogger(WorkspaceHelper.class);
 	private IProject project;
@@ -51,6 +49,7 @@ public class CryptoAPINature implements IProjectNature {
 
 		});
 	}
+	
 	private void addICryptoAPIProjectBuilder() throws CoreException {
 		IProjectDescription projectDescription = project.getDescription();
 		ICommand[] buildSpec = projectDescription.getBuildSpec();
@@ -62,6 +61,7 @@ public class CryptoAPINature implements IProjectNature {
 		projectDescription.setBuildSpec(list.toArray(new ICommand[list.size()]));
 		project.setDescription(projectDescription, new NullProgressMonitor());
 	}
+	
 	private void performSetUpRoutines() throws CoreException, IOException {
 		WorkspaceHelper.setUpAsJavaProject(project, new NullProgressMonitor());
 		setUpAsPluginProject();
@@ -71,15 +71,18 @@ public class CryptoAPINature implements IProjectNature {
 	private void setUpAsCryptoAPIProject() throws CoreException, IOException {
 		
 	}
+	
 	private void setUpAsPluginProject() throws CoreException, IOException {
         setUpBuildProperties();
         setUpManifestFile();
         addContainerToBuildPath(project, "org.eclipse.pde.core.requiredPlugins");	
     }
+	
 	private void setUpBuildProperties() throws CoreException {
 		logger.debug("Adding build.properties");
         new BuildPropertiesFileBuilder().createBuildProperties(project, new NullProgressMonitor());
 	}
+	
 	private void setUpManifestFile() throws CoreException, IOException {
 		logger.debug("Adding MANIFEST.MF");
 		new ManifestFileUpdater().processManifest(project, manifest -> {
@@ -96,6 +99,7 @@ public class CryptoAPINature implements IProjectNature {
 			return changed;
 		});
 	}
+	
 	@Override
 	public void deconfigure() throws CoreException {
 
@@ -109,27 +113,20 @@ public class CryptoAPINature implements IProjectNature {
 	@Override
 	public void setProject(IProject project) {
 		this.project = project;
-
 	}
 	
+	private static void addContainerToBuildPath(final IJavaProject iJavaProject, final String container) {
+		try {
+			// Get current entries on the classpath
+			Collection<IClasspathEntry> classpathEntries = new ArrayList<>(Arrays.asList(iJavaProject.getRawClasspath()));
+			addContainerToBuildPath(classpathEntries, container);
+			setBuildPath(iJavaProject, classpathEntries);
+		} catch (JavaModelException e) {
+			LogUtils.error(logger, e, "Unable to set classpath variable");
+		}
+	}
 	
-	 private static void addContainerToBuildPath(final IJavaProject iJavaProject, final String container)
-	   {
-	      try
-	      {
-	         // Get current entries on the classpath
-	         Collection<IClasspathEntry> classpathEntries = new ArrayList<>(Arrays.asList(iJavaProject.getRawClasspath()));
-
-	         addContainerToBuildPath(classpathEntries, container);
-
-	         setBuildPath(iJavaProject, classpathEntries);
-	      } catch (JavaModelException e)
-	      {
-	         LogUtils.error(logger, e, "Unable to set classpath variable");
-	      }
-	   }
-	private static void setBuildPath(final IJavaProject javaProject, final Collection<IClasspathEntry> entries, final IProgressMonitor monitor)
-         throws JavaModelException{
+	private static void setBuildPath(final IJavaProject javaProject, final Collection<IClasspathEntry> entries, final IProgressMonitor monitor) throws JavaModelException {
       final SubMonitor subMon = SubMonitor.convert(monitor, "Set build path", 1);
       // Create new buildpath
       IClasspathEntry[] newEntries = new IClasspathEntry[entries.size()];
@@ -137,28 +134,26 @@ public class CryptoAPINature implements IProjectNature {
 
       // Set new classpath with added entries
       javaProject.setRawClasspath(newEntries, subMon.newChild(1));
-   }
+	}
 
-   private static void setBuildPath(final IJavaProject javaProject, final Collection<IClasspathEntry> entries) throws JavaModelException
-   {
-      setBuildPath(javaProject, entries, new NullProgressMonitor());
-   }
-   public static void addContainerToBuildPath(final IProject project, final String container)
-   {
-      addContainerToBuildPath(JavaCore.create(project), container);
-   }
-	private static void addContainerToBuildPath(final Collection<IClasspathEntry> classpathEntries, final String container)
-	   {
-	      IClasspathEntry entry = JavaCore.newContainerEntry(new Path(container));
-	      for (IClasspathEntry iClasspathEntry : classpathEntries)
-	      {
-	         if (iClasspathEntry.getPath().equals(entry.getPath()))
-	         {
-	            // No need to add variable - already on classpath
-	            return;
-	         }
-	      }
+	private static void setBuildPath(final IJavaProject javaProject, final Collection<IClasspathEntry> entries) throws JavaModelException {
+		setBuildPath(javaProject, entries, new NullProgressMonitor());
+	}
+   
+	public static void addContainerToBuildPath(final IProject project, final String container) {
+		addContainerToBuildPath(JavaCore.create(project), container);
+	}
 
-	      classpathEntries.add(entry);
-	   }
+	private static void addContainerToBuildPath(final Collection<IClasspathEntry> classpathEntries,
+			final String container) {
+		IClasspathEntry entry = JavaCore.newContainerEntry(new Path(container));
+		for (IClasspathEntry iClasspathEntry : classpathEntries) {
+			if (iClasspathEntry.getPath().equals(entry.getPath())) {
+				// No need to add variable - already on classpath
+				return;
+			}
+		}
+
+		classpathEntries.add(entry);
+	}
 }

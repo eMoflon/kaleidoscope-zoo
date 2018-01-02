@@ -3,12 +3,7 @@ package org.kaleidoscope.usecase.kaleidocrypt.builder;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
 
-/**
- * @author Dusko
- *
- */
 public interface Builder {
-
 	public boolean isResourceSourceArtefact(IResource resource);
 	public boolean isResourceTargetArtefact(IResource resource);
 	public void syncBackward(IResource targetArtefactResource)throws CoreException;

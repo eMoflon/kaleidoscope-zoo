@@ -1,6 +1,7 @@
 package CryptoConfigToJava.org.moflon;
 
 import java.nio.file.Path;
+import java.util.Optional;
 import java.util.function.Consumer;
 
 import org.eclipse.emf.common.util.URI;
@@ -19,11 +20,7 @@ import com.kaleidoscope.core.framework.synchronisation.SynchronisationFailedExce
 import CryptoAPIConfig.Task;
 import SimpleJava.JavaPackage;
 
-
-
 public class EMoflonTool extends SynchronizationHelper implements  PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path> {
-
-	
 	private Path persistenceDirectory = null;
 	private String sourceModelFileName = "fwd.src.xmi";
 	private String targetModelFileName = "fwd.trg.xmi";
@@ -32,11 +29,10 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 	private Task initialTask;
 	private JavaPackage initialJavaPackage;
 	
-	public  EMoflonTool(EPackage corrPackage, String pathToProject, ResourceSet resourceSet, Task initialTask, JavaPackage initialJavaPackage, Path persistenceDirectory) {
-		
+	public  EMoflonTool(EPackage corrPackage, String pathToProject, ResourceSet resourceSet, Optional<Task> initialSource, Optional<JavaPackage> initialTarget, Path persistenceDirectory) {
 		super(corrPackage, pathToProject, resourceSet);
-		this.initialTask = initialTask;
-		this.initialJavaPackage = initialJavaPackage;
+		this.initialTask = initialSource.orElse(null);
+		this.initialJavaPackage = initialTarget.orElse(null);
 		this.persistenceDirectory = persistenceDirectory;
 	}
 	
@@ -60,11 +56,9 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 	
 	@Override
 	public void persistState(Path path) {
-		
 		persistenceDirectory = path;
 		
-		if(getSrc() == null || getTrg() == null || getCorr() == null )
-			return;
+		if(getSrc() == null || getTrg() == null || getCorr() == null ) return;
 		
 		getSrc().eResource().setURI(URI.createFileURI(persistenceDirectory.resolve(sourceModelFileName).toString()));
 		getTrg().eResource().setURI(URI.createFileURI(persistenceDirectory.resolve(targetModelFileName).toString()));
@@ -78,19 +72,16 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 	
 	@Override
 	public Task getSourceModel(){
-
 		return (Task)getSrc();
 	}
 	
 	@Override
 	public JavaPackage getTargetModel(){
-	
 		return (JavaPackage)getTrg();
 	}
 	
 	@Override
 	public void syncForward(OperationalDelta javaBasedDelta)throws SynchronisationFailedException{
-		
 		Consumer<EObject> delta = (model) -> {javaBasedDelta.transformToOpaqueDelta().execute(model);};
 		
 		loadTriple(persistenceDirectory.resolve(corrModelFileName));
@@ -106,20 +97,19 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 		}
 	 }
 	 
-	 @Override
-	 public void syncBackward(OperationalDelta javaBasedDelta)throws SynchronisationFailedException{		 
-		 
-		 Consumer<EObject> delta = (model) -> {javaBasedDelta.transformToOpaqueDelta().execute(model);};
-		
+	@Override
+	public void syncBackward(OperationalDelta javaBasedDelta) throws SynchronisationFailedException {
+		Consumer<EObject> delta = (model) -> {
+			javaBasedDelta.transformToOpaqueDelta().execute(model);
+		};
+
 		loadTriple(persistenceDirectory.resolve(corrModelFileName));
 		loadSynchronizationProtocol(persistenceDirectory.resolve(syncProtocolFileName).toString());
 		setChangeTrg(delta);
-			
-		integrateBackward();	
-		
-		if(getSrc() == null || getTrg() == null ||
-				getSrc() instanceof TempOutputContainer || getTrg() instanceof TempOutputContainer){
-			
+
+		integrateBackward();
+
+		if (getSrc() == null || getTrg() == null || getSrc() instanceof TempOutputContainer || getTrg() instanceof TempOutputContainer) {
 			throw new SynchronisationFailedException("Unable to propagate change!");
 		}
 	}
@@ -136,31 +126,23 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 	
 	@Override
 	public void terminate() {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public void initialize() throws SynchronisationFailedException{
-
-				
-		if(initialTask == null && initialJavaPackage != null) {
-			
-			transformTargetIntoSourceModel();			
-			persistState(persistenceDirectory);
-			
-		}else if(initialJavaPackage == null && initialTask != null) {
-			
-			transformSourceIntoTargetModel();
-			persistState(persistenceDirectory);
-		}else if(initialTask == null && initialJavaPackage == null) {
-			
-			throw new SynchronisationFailedException("Source or target artefact have to be provided!");
-		}
 		
 	}
 	
-	private void transformTargetIntoSourceModel()throws SynchronisationFailedException {
-		
+	@Override
+	public void initialise() throws SynchronisationFailedException{
+		if(initialTask == null && initialJavaPackage != null) {
+			transformTargetIntoSourceModel();			
+			persistState(persistenceDirectory);
+		}else if(initialJavaPackage == null && initialTask != null) {
+			transformSourceIntoTargetModel();
+			persistState(persistenceDirectory);
+		}else if(initialTask == null && initialJavaPackage == null) {
+			throw new SynchronisationFailedException("Source or target artefact have to be provided!");
+		}
+	}
+	
+	private void transformTargetIntoSourceModel() throws SynchronisationFailedException {
 		Resource target = set.createResource(URI.createURI("target.java.package"));
 		target.getContents().add(initialJavaPackage);
 		setTrg(initialJavaPackage);
@@ -169,10 +151,9 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 		if(getSrc() == null || getSrc() instanceof TempOutputContainer) {
 			throw new SynchronisationFailedException("Failed to initialize source and target models!");
 		}
-
 	}
-	private void transformSourceIntoTargetModel()throws SynchronisationFailedException {
-		
+	
+	private void transformSourceIntoTargetModel() throws SynchronisationFailedException {	
 		Resource source = set.createResource(URI.createURI("source.java.package"));
 		source.getContents().add(initialTask);
 		setSrc(initialTask);
@@ -182,5 +163,4 @@ public class EMoflonTool extends SynchronizationHelper implements  PersistentSyn
 			throw new SynchronisationFailedException("Failed to initialize source and target models!");
 		}
 	}
-
 }

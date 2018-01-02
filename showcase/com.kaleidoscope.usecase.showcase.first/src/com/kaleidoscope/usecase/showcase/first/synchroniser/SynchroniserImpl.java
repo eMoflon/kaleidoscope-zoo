@@ -135,7 +135,7 @@ public class SynchroniserImpl implements PersistentSynchroniser<PersonContainer,
 	}
 
 	@Override
-	public void initialize() {
+	public void initialise() {
 		
 	}
 

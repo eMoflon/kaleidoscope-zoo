@@ -10,14 +10,11 @@ import static org.moflon.core.utilities.WorkspaceHelper.addAllFoldersAndFile;
 import org.eclipse.core.runtime.Path
 
 class InitialProjectStructure {
-	
 	def createInitialProjectStructure(IProgressMonitor monitor, IProject project){
 	
 	}
 	
-	
 	def static void addInitialConfigurationModel(IProject project, String configName) throws CoreException{
-
 	    val IPath pathToInitialConfiguration = new Path("models/" + configName +".xmi");
 		val String initialConfigurationfileContent = '''
 			<?xml version="1.0" encoding="UTF-8"?>
@@ -46,6 +43,7 @@ class InitialProjectStructure {
 			  <imports value="javax.crypto.NoSuchPaddingException"/>
 			  <imports value="javax.crypto.SecretKey"/>
 			  <imports value="javax.crypto.spec.IvParameterSpec"/>
+			  <imports value="javax.annotation.Generated"/>
 			  </algorithms>
 			</CryptoAPIConfig:Task>
 			
@@ -57,7 +55,4 @@ class InitialProjectStructure {
 				e.printStackTrace();
 			}
 	}
-	
-	
-	
 }

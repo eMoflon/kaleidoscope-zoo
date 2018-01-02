@@ -40,7 +40,7 @@ public class ControllerModule extends AbstractModule {
 		EmployeeContainer targetModel = EmployeesFactory.eINSTANCE.createEmployeeContainer();
 		 
 		SynchroniserImpl tool = new SynchroniserImpl(sourceModel, targetModel);
-		tool.initialize();
+		tool.initialise();
 		
 		return tool;
 	}

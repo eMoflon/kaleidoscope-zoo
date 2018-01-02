@@ -3,11 +3,9 @@ package org.kaleidoscope.usecase.kaleidocrypt;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Path;
+import java.util.Optional;
 
-import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.moflon.core.utilities.MoflonUtilitiesActivator;
 
 import com.google.inject.AbstractModule;
@@ -29,18 +27,16 @@ import CryptoConfigToJava.org.moflon.EMoflonTool;
 import SimpleJava.JavaPackage;
 import kaleidocrypt.implemenation.BxtendTool;
 
-public class ControllerModule extends AbstractModule{
-
+public class ControllerModule extends AbstractModule {
 	private ResourceSet set;	
-	private final BxTool bxTool = BxTool.BXTEND;
-	
+	private final BxTool bxTool = BxTool.EMOFLON;
 	private Path sourceArtefactPath;
 	private Path targetArtefactPath;
-	private Path persisanceDestination;
+	private Path persistanceDestination;
 	
 	public ControllerModule(ResourceSet set, Path sourceArtefactPath, Path targetArtefactPath, Path persistanceDestination) {
 		this.set = set;		
-		this.persisanceDestination = persistanceDestination;
+		this.persistanceDestination = persistanceDestination;
 		this.sourceArtefactPath = sourceArtefactPath;
  		this.targetArtefactPath = targetArtefactPath;
 	}
@@ -56,30 +52,40 @@ public class ControllerModule extends AbstractModule{
 	}
 	
 	@Provides
-	PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path>provideSynchroniser() throws IOException{
+	PersistentSynchroniser<
+		Task, 
+		JavaPackage, 
+		String, 
+		OperationalDelta, 
+		OperationalDelta, 
+		Path
+	>
+	provideSynchroniser() throws IOException{
+		PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path> tool;
 		
-		PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path>tool;
+		ArtefactAdapter<Task, Path> sourceArtefactAdapter = provideSourceArtefactAdapter();
+		sourceArtefactAdapter.parse();
+		Optional<Task> initialSource = sourceArtefactAdapter.getModel();
 		
-		XMIArtefactAdapter<Task> sourceArtefactAdapter = new XMIArtefactAdapter<Task>(sourceArtefactPath);
-		sourceArtefactAdapter.parse();			
-		
-		ArtefactAdapter<JavaPackage, Path> targetArtefactAdapter = new JavaArtefactAdapter(targetArtefactPath);
+		ArtefactAdapter<JavaPackage, Path> targetArtefactAdapter = provideTargetArtefactAdapter();
 		targetArtefactAdapter.parse();
-		
-		set = new ResourceSetImpl();
-		set.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());
+		Optional<JavaPackage> initialTarget = targetArtefactAdapter.getModel();
 		
 		if(bxTool.equals(BxTool.EMOFLON)) {
-		
 			URL pathToTGGtransProjet  = MoflonUtilitiesActivator.getPathRelToPlugIn(".", "CryptoConfigToJava"); 
-			tool = new EMoflonTool(CryptoConfigToJavaPackage.eINSTANCE, pathToTGGtransProjet.getPath(), set
-																									,sourceArtefactAdapter.getModel().orElse(null)
-																									, targetArtefactAdapter.getModel().orElse(null)
-																									, persisanceDestination);
-		}
-		else if(bxTool.equals(BxTool.BXTEND)){
-			
-			tool = new BxtendTool(sourceArtefactAdapter.getModel().orElse(null), targetArtefactAdapter.getModel().orElse(null), persisanceDestination);
+			tool = new EMoflonTool(
+					CryptoConfigToJavaPackage.eINSTANCE, 
+					pathToTGGtransProjet.getPath(), set, 
+					initialSource, 
+					initialTarget, 
+					persistanceDestination
+				);
+		} else if(bxTool.equals(BxTool.BXTEND)){
+			tool = new BxtendTool(
+					initialSource, 
+					initialTarget, 
+					persistanceDestination
+				);
 		}
 		else {
 			throw new IllegalArgumentException("Bx tool has to be chosen!");
@@ -97,11 +103,11 @@ public class ControllerModule extends AbstractModule{
 	OfflineDeltaDiscoverer<JavaPackage, OperationalDelta> provideTargetOfflineDeltaDiscoverer(){
 		return new EMFCompareDeltaDiscoverer<JavaPackage>();
 	}
+	
 	@Override
 	protected void configure() {
-		bind(Path.class).annotatedWith(Dest.class).toInstance(persisanceDestination);
+		bind(Path.class).annotatedWith(Dest.class).toInstance(persistanceDestination);
 	}
-	
 }
 
 enum BxTool {
