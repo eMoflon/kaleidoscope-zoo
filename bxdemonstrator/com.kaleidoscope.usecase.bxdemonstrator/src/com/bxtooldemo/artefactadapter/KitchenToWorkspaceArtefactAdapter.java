@@ -21,7 +21,7 @@ public class KitchenToWorkspaceArtefactAdapter implements ArtefactAdapter<Kitche
 
 	@Override
 	public void unparse() {
-		// workspace conversion
+		
 		artefact.setWidth((int) model.getXSize());
 		artefact.setHeight((int) model.getYSize());
 
@@ -30,17 +30,21 @@ public class KitchenToWorkspaceArtefactAdapter implements ArtefactAdapter<Kitche
 			for (ItemSocket itemSocket : model.getItemSockets()) {
 
 				if (itemSocket.getItem() != null) {
-					Element element = new Element();
-					element.setId(itemSocket.getId());
-					element.setPosX(itemSocket.getItem().getXPos());
-					element.setPosY(itemSocket.getItem().getYPos());
-					element.setType(itemSocket.getItem().eClass().getName());
+					Element element = transformItemSocketIntoElement(itemSocket);
 					artefact.getObjects().add(element);
 				}
 			}
 		}
 	}
 
+	private Element transformItemSocketIntoElement(ItemSocket itemSocket) {
+		Element element = new Element();
+		element.setId(itemSocket.getId());
+		element.setPosX(itemSocket.getItem().getXPos());
+		element.setPosY(itemSocket.getItem().getYPos());
+		element.setType(itemSocket.getItem().eClass().getName());
+		return element;
+	}
 	@Override
 	public void setModel(Kitchen m) {
 		this.model = m;

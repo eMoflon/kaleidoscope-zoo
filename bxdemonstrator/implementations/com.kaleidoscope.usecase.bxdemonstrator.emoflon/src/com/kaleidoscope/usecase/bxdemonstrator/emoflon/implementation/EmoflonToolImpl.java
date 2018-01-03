@@ -110,7 +110,7 @@ public class EmoflonToolImpl implements ContinuableSynchroniser<Grid, Kitchen, L
 	}
 
 	@Override
-	public void initialize() {
+	public void initialise() {
 		failedDelta = new OperationalDelta();
 		configurator = new KitchenToGridConfigurator();
 

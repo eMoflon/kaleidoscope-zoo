@@ -43,7 +43,7 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, Group group, Grid grid);
+	boolean isAppropriate_FWD(Match match, Grid grid, Group group);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -67,7 +67,7 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, Group group, Grid grid);
+	void registerObjectsToMatch_FWD(Match match, Grid grid, Group group);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -75,7 +75,7 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, Group group, Grid grid);
+	CSP isAppropriate_solveCsp_FWD(Match match, Grid grid, Group group);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,8 +91,8 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, Group group, Kitchen kitchen,
-			KitchenToGridCorr kitchenToGrid, Grid grid);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, Grid grid, KitchenToGridCorr kitchenToGrid,
+			Group group, Kitchen kitchen);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -108,8 +108,8 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject socketToGroup, EObject group, EObject kitchen,
-			EObject itemSocket, EObject kitchenToGrid, EObject grid);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject grid, EObject kitchenToGrid, EObject socketToGroup,
+			EObject group, EObject kitchen, EObject itemSocket);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -173,8 +173,8 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, Kitchen kitchen, ItemSocket itemSocket,
-			KitchenToGridCorr kitchenToGrid, Grid grid);
+	CSP isApplicable_solveCsp_BWD(IsApplicableMatch isApplicableMatch, Grid grid, KitchenToGridCorr kitchenToGrid,
+			Kitchen kitchen, ItemSocket itemSocket);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -190,8 +190,8 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_BWD(PerformRuleResult ruleresult, EObject socketToGroup, EObject group, EObject kitchen,
-			EObject itemSocket, EObject kitchenToGrid, EObject grid);
+	void registerObjects_BWD(PerformRuleResult ruleresult, EObject grid, EObject kitchenToGrid, EObject socketToGroup,
+			EObject group, EObject kitchen, EObject itemSocket);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -207,7 +207,7 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_1(EMoflonEdge _edge_groups);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_18(EMoflonEdge _edge_groups);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -215,7 +215,7 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_BWD_EMoflonEdge_1(EMoflonEdge _edge_itemSockets);
+	EObjectContainer isAppropriate_BWD_EMoflonEdge_18(EMoflonEdge _edge_itemSockets);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -247,7 +247,7 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_CC(Group group, Kitchen kitchen, ItemSocket itemSocket, Grid grid, Match sourceMatch,
+	CSP isApplicable_solveCsp_CC(Grid grid, Group group, Kitchen kitchen, ItemSocket itemSocket, Match sourceMatch,
 			Match targetMatch);
 
 	/**
@@ -264,7 +264,7 @@ public interface SocketToGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(Group group, Grid grid);
+	boolean checkDEC_FWD(Grid grid, Group group);
 
 	/**
 	 * <!-- begin-user-doc -->

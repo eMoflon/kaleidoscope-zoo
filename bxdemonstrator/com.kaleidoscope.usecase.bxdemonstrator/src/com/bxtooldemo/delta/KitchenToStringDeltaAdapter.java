@@ -33,12 +33,6 @@ public class KitchenToStringDeltaAdapter implements DeltaAdapter<OperationalDelt
 		GridKitchenDeltaOperation delta = gson.fromJson(deltaJson, GridKitchenDeltaOperation.class);
 		return transGridKitchenDeltaOpIntoOpDelta(delta, kitchen);
 	}
-
-	@Override
-	public String unparse(OperationalDelta operationalDelta, Kitchen kitchen) {
-		Gson gson = new Gson();
-		return gson.toJson(operationalDelta);
-	}
 	
 	private OperationalDelta transGridKitchenDeltaOpIntoOpDelta(GridKitchenDeltaOperation delta, Kitchen kitchen) {
 		OperationalDelta operationalDelta = new OperationalDelta();

@@ -29,7 +29,7 @@ public class BxDemoController extends ContinuableDeltaBasedController<Grid, Obje
 	
 	
 	public void initialise() throws SynchronisationFailedException {
-		synchroniser.initialize();
+		synchroniser.initialise();
 
 		SynchronisationContinuationResult<Grid, Object, Kitchen, Object, OperationalDelta, List<String>> fwdSyncResult = syncForward("");
 		SyncResultToUIModelArtefactAdapter syncResultToUIModelArtefactAdapter = new SyncResultToUIModelArtefactAdapter();

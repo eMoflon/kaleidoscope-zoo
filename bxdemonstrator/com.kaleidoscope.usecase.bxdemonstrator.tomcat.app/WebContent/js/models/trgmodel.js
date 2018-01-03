@@ -1,6 +1,6 @@
 var trgModelMeta = {
 	
-   Layout:function(gridSize, blocks, groups, height, height, width){
+   Layout:function(gridSize, blocks, groups, height, width){
 	   this.gridSize = gridSize;
 	   this.blocks = blocks;
 	   this.groups = groups; 

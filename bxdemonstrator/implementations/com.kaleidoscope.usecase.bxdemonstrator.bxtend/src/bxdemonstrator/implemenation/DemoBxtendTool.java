@@ -44,7 +44,7 @@ public class DemoBxtendTool  implements  ContinuableSynchroniser<Grid, Kitchen, 
 	
 	}
 	@Override
-	public void initialize() {
+	public void initialise() {
 		failedDelta = new OperationalDelta();	
 		set = new ResourceSetImpl();
 		set.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());
