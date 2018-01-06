@@ -4,28 +4,28 @@
     modelName="GridLanguage" updateClasspath="false" codeFormatting="true" importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="8.0" copyrightFields="false" operationReflection="true">
   <foreignModel>GridLanguage.ecore</foreignModel>
-  <genPackages prefix="GridLanguage" disposableProviderFactory="true" ecorePackage="platform:/plugin/GridLanguage/model/GridLanguage.ecore#/">
-    <genClasses ecoreClass="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Grid">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Grid/blockSize"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Grid/groups"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Grid/blocks"/>
+  <genPackages prefix="GridLanguage" disposableProviderFactory="true" ecorePackage="GridLanguage.ecore#/">
+    <genClasses ecoreClass="GridLanguage.ecore#//Grid">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GridLanguage.ecore#//Grid/blockSize"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GridLanguage.ecore#//Grid/groups"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GridLanguage.ecore#//Grid/blocks"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Group">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Group/occupies"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Group/fillColor"/>
+    <genClasses ecoreClass="GridLanguage.ecore#//Group">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GridLanguage.ecore#//Group/occupies"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GridLanguage.ecore#//Group/fillColor"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/xIndex"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/yIndex"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/s"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/n"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/e"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/w"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/ne"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/sw"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/nw"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/se"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/GridLanguage/model/GridLanguage.ecore#//Block/isOccupiedBy"/>
+    <genClasses ecoreClass="GridLanguage.ecore#//Block">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GridLanguage.ecore#//Block/xIndex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GridLanguage.ecore#//Block/yIndex"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GridLanguage.ecore#//Block/s"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GridLanguage.ecore#//Block/n"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GridLanguage.ecore#//Block/e"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GridLanguage.ecore#//Block/w"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GridLanguage.ecore#//Block/ne"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GridLanguage.ecore#//Block/sw"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GridLanguage.ecore#//Block/nw"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GridLanguage.ecore#//Block/se"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GridLanguage.ecore#//Block/isOccupiedBy"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -7,6 +7,8 @@
 		<project>com.kaleidoscope.usecase.bxdemonstrator.bxtend</project>
 		<project>com.kaleidoscope.core.framework</project>
 		<project>com.kaleidoscope.core.delta</project>
+		<project>KitchenToGridLanguage</project>
+		<project>com.kaleidoscope.usecase.bxdemonstrator.emoflon</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

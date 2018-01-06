@@ -26,7 +26,7 @@ import bxdemonstrator.implemenation.DemoBxtendTool;
 public class ControllerModule extends AbstractModule{
 
 	
-	private final BxTool bxTool = BxTool.BXTEND;
+	private final BxTool bxTool = BxTool.EMOFLON;
 	private  int noOfBlocks;
 	
 	@Provides

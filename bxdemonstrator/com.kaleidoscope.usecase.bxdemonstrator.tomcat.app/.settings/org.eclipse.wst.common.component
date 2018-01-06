@@ -14,6 +14,12 @@
         <dependent-module archiveName="com.kaleidoscope.core.delta.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/com.kaleidoscope.core.delta/com.kaleidoscope.core.delta">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="KitchenToGridLanguage.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/KitchenToGridLanguage/KitchenToGridLanguage">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="com.kaleidoscope.usecase.bxdemonstrator.emoflon.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/com.kaleidoscope.usecase.bxdemonstrator.emoflon/com.kaleidoscope.usecase.bxdemonstrator.emoflon">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="java-output-path" value="/com.kaleidoscope.usecase.bxdemonstrator.tomcat.app/build/classes"/>
         <property name="context-root" value="com.kaleidoscope.usecase.bxdemonstrator.tomcat.app"/>
     </wb-module>
