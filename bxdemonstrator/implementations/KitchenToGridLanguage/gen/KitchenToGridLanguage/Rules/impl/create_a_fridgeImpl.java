@@ -250,9 +250,9 @@ public class create_a_fridgeImpl extends AbstractRuleImpl implements create_a_fr
 				//nothing EMoflonEdge group__secondBlock____occupies = (EMoflonEdge) result3_green[8];
 				//nothing EMoflonEdge secondBlock__group____isOccupiedBy = (EMoflonEdge) result3_green[9];
 				//nothing EMoflonEdge grid__group____groups = (EMoflonEdge) result3_green[10];
-				//nothing EMoflonEdge group__firstBlock____occupies = (EMoflonEdge) result3_green[11];
-				//nothing EMoflonEdge firstBlock__group____isOccupiedBy = (EMoflonEdge) result3_green[12];
-				//nothing EMoflonEdge grid__secondBlock____blocks = (EMoflonEdge) result3_green[13];
+				//nothing EMoflonEdge grid__secondBlock____blocks = (EMoflonEdge) result3_green[11];
+				//nothing EMoflonEdge group__firstBlock____occupies = (EMoflonEdge) result3_green[12];
+				//nothing EMoflonEdge firstBlock__group____isOccupiedBy = (EMoflonEdge) result3_green[13];
 				//nothing EMoflonEdge socketToGroup__itemSocket____target = (EMoflonEdge) result3_green[14];
 				//nothing EMoflonEdge grid__firstBlock____blocks = (EMoflonEdge) result3_green[15];
 				//nothing EMoflonEdge firstBlock__secondBlock____s = (EMoflonEdge) result3_green[16];
@@ -761,7 +761,7 @@ public class create_a_fridgeImpl extends AbstractRuleImpl implements create_a_fr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_19(EMoflonEdge _edge_occupies) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_4(EMoflonEdge _edge_occupies) {
 
 		Object[] result1_bindingAndBlack = create_a_fridgeImpl
 				.pattern_create_a_fridge_20_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -820,7 +820,7 @@ public class create_a_fridgeImpl extends AbstractRuleImpl implements create_a_fr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_BWD_EMoflonEdge_19(EMoflonEdge _edge_item) {
+	public EObjectContainer isAppropriate_BWD_EMoflonEdge_4(EMoflonEdge _edge_item) {
 
 		Object[] result1_bindingAndBlack = create_a_fridgeImpl
 				.pattern_create_a_fridge_21_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -887,25 +887,25 @@ public class create_a_fridgeImpl extends AbstractRuleImpl implements create_a_fr
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		Variable var_literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal0.setValue(0);
-		var_literal0.setType("int");
-
 		Variable var_firstBlock_yIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock", true, csp);
 		var_firstBlock_yIndex.setValue(__helper.getValue("firstBlock", "yIndex"));
 		var_firstBlock_yIndex.setType("int");
+
+		Variable var_literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
+		var_literal0.setValue(0);
+		var_literal0.setType("int");
 
 		Variable var_grid_blockSize = CSPFactoryHelper.eINSTANCE.createVariable("grid", true, csp);
 		var_grid_blockSize.setValue(__helper.getValue("grid", "blockSize"));
 		var_grid_blockSize.setType("double");
 
-		Variable var_firstBlock_xIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock", true, csp);
-		var_firstBlock_xIndex.setValue(__helper.getValue("firstBlock", "xIndex"));
-		var_firstBlock_xIndex.setType("int");
-
 		Variable var_item_xPos = CSPFactoryHelper.eINSTANCE.createVariable("item", true, csp);
 		var_item_xPos.setValue(__helper.getValue("item", "xPos"));
 		var_item_xPos.setType("double");
+
+		Variable var_firstBlock_xIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock", true, csp);
+		var_firstBlock_xIndex.setValue(__helper.getValue("firstBlock", "xIndex"));
+		var_firstBlock_xIndex.setType("int");
 
 		Variable var_item_yPos = CSPFactoryHelper.eINSTANCE.createVariable("item", true, csp);
 		var_item_yPos.setValue(__helper.getValue("item", "yPos"));
@@ -966,25 +966,25 @@ public class create_a_fridgeImpl extends AbstractRuleImpl implements create_a_fr
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		Variable var_literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
-		var_literal0.setValue(0);
-		var_literal0.setType("int");
-
 		Variable var_firstBlock_yIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock", true, csp);
 		var_firstBlock_yIndex.setValue(__helper.getValue("firstBlock", "yIndex"));
 		var_firstBlock_yIndex.setType("int");
+
+		Variable var_literal0 = CSPFactoryHelper.eINSTANCE.createVariable("literal", true, csp);
+		var_literal0.setValue(0);
+		var_literal0.setType("int");
 
 		Variable var_grid_blockSize = CSPFactoryHelper.eINSTANCE.createVariable("grid", true, csp);
 		var_grid_blockSize.setValue(__helper.getValue("grid", "blockSize"));
 		var_grid_blockSize.setType("double");
 
-		Variable var_firstBlock_xIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock", true, csp);
-		var_firstBlock_xIndex.setValue(__helper.getValue("firstBlock", "xIndex"));
-		var_firstBlock_xIndex.setType("int");
-
 		Variable var_item_xPos = CSPFactoryHelper.eINSTANCE.createVariable("item", true, csp);
 		var_item_xPos.setValue(__helper.getValue("item", "xPos"));
 		var_item_xPos.setType("double");
+
+		Variable var_firstBlock_xIndex = CSPFactoryHelper.eINSTANCE.createVariable("firstBlock", true, csp);
+		var_firstBlock_xIndex.setValue(__helper.getValue("firstBlock", "xIndex"));
+		var_firstBlock_xIndex.setType("int");
 
 		Variable var_item_yPos = CSPFactoryHelper.eINSTANCE.createVariable("item", true, csp);
 		var_item_yPos.setValue(__helper.getValue("item", "yPos"));
@@ -1250,10 +1250,10 @@ public class create_a_fridgeImpl extends AbstractRuleImpl implements create_a_fr
 			return null;
 		case RulesPackage.CREATE_AFRIDGE___CHECK_TYPES_BWD__MATCH:
 			return checkTypes_BWD((Match) arguments.get(0));
-		case RulesPackage.CREATE_AFRIDGE___IS_APPROPRIATE_FWD_EMOFLON_EDGE_19__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_19((EMoflonEdge) arguments.get(0));
-		case RulesPackage.CREATE_AFRIDGE___IS_APPROPRIATE_BWD_EMOFLON_EDGE_19__EMOFLONEDGE:
-			return isAppropriate_BWD_EMoflonEdge_19((EMoflonEdge) arguments.get(0));
+		case RulesPackage.CREATE_AFRIDGE___IS_APPROPRIATE_FWD_EMOFLON_EDGE_4__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_4((EMoflonEdge) arguments.get(0));
+		case RulesPackage.CREATE_AFRIDGE___IS_APPROPRIATE_BWD_EMOFLON_EDGE_4__EMOFLONEDGE:
+			return isAppropriate_BWD_EMoflonEdge_4((EMoflonEdge) arguments.get(0));
 		case RulesPackage.CREATE_AFRIDGE___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.CREATE_AFRIDGE___CHECK_ATTRIBUTES_BWD__TRIPLEMATCH:
@@ -1729,8 +1729,8 @@ public class create_a_fridgeImpl extends AbstractRuleImpl implements create_a_fr
 			if (group.equals(socketToGroup.getSource())) {
 				if (group.getOccupies().contains(secondBlock)) {
 					if (grid.getGroups().contains(group)) {
-						if (group.getOccupies().contains(firstBlock)) {
-							if (grid.getBlocks().contains(secondBlock)) {
+						if (grid.getBlocks().contains(secondBlock)) {
+							if (group.getOccupies().contains(firstBlock)) {
 								if (itemSocket.equals(socketToGroup.getTarget())) {
 									if (grid.getBlocks().contains(firstBlock)) {
 										if (secondBlock.equals(firstBlock.getS())) {
@@ -1756,9 +1756,9 @@ public class create_a_fridgeImpl extends AbstractRuleImpl implements create_a_fr
 		EMoflonEdge group__secondBlock____occupies = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge secondBlock__group____isOccupiedBy = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge grid__group____groups = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge grid__secondBlock____blocks = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge group__firstBlock____occupies = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge firstBlock__group____isOccupiedBy = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge grid__secondBlock____blocks = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge socketToGroup__itemSocket____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge grid__firstBlock____blocks = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge firstBlock__secondBlock____s = RuntimeFactory.eINSTANCE.createEMoflonEdge();
@@ -1767,9 +1767,9 @@ public class create_a_fridgeImpl extends AbstractRuleImpl implements create_a_fr
 		String group__secondBlock____occupies_name_prime = "occupies";
 		String secondBlock__group____isOccupiedBy_name_prime = "isOccupiedBy";
 		String grid__group____groups_name_prime = "groups";
+		String grid__secondBlock____blocks_name_prime = "blocks";
 		String group__firstBlock____occupies_name_prime = "occupies";
 		String firstBlock__group____isOccupiedBy_name_prime = "isOccupiedBy";
-		String grid__secondBlock____blocks_name_prime = "blocks";
 		String socketToGroup__itemSocket____target_name_prime = "target";
 		String grid__firstBlock____blocks_name_prime = "blocks";
 		String firstBlock__secondBlock____s_name_prime = "s";
@@ -1792,15 +1792,15 @@ public class create_a_fridgeImpl extends AbstractRuleImpl implements create_a_fr
 		grid__group____groups.setSrc(grid);
 		grid__group____groups.setTrg(group);
 		isApplicableMatch.getAllContextElements().add(grid__group____groups);
+		grid__secondBlock____blocks.setSrc(grid);
+		grid__secondBlock____blocks.setTrg(secondBlock);
+		isApplicableMatch.getAllContextElements().add(grid__secondBlock____blocks);
 		group__firstBlock____occupies.setSrc(group);
 		group__firstBlock____occupies.setTrg(firstBlock);
 		isApplicableMatch.getAllContextElements().add(group__firstBlock____occupies);
 		firstBlock__group____isOccupiedBy.setSrc(firstBlock);
 		firstBlock__group____isOccupiedBy.setTrg(group);
 		isApplicableMatch.getAllContextElements().add(firstBlock__group____isOccupiedBy);
-		grid__secondBlock____blocks.setSrc(grid);
-		grid__secondBlock____blocks.setTrg(secondBlock);
-		isApplicableMatch.getAllContextElements().add(grid__secondBlock____blocks);
 		socketToGroup__itemSocket____target.setSrc(socketToGroup);
 		socketToGroup__itemSocket____target.setTrg(itemSocket);
 		isApplicableMatch.getAllContextElements().add(socketToGroup__itemSocket____target);
@@ -1817,17 +1817,17 @@ public class create_a_fridgeImpl extends AbstractRuleImpl implements create_a_fr
 		group__secondBlock____occupies.setName(group__secondBlock____occupies_name_prime);
 		secondBlock__group____isOccupiedBy.setName(secondBlock__group____isOccupiedBy_name_prime);
 		grid__group____groups.setName(grid__group____groups_name_prime);
+		grid__secondBlock____blocks.setName(grid__secondBlock____blocks_name_prime);
 		group__firstBlock____occupies.setName(group__firstBlock____occupies_name_prime);
 		firstBlock__group____isOccupiedBy.setName(firstBlock__group____isOccupiedBy_name_prime);
-		grid__secondBlock____blocks.setName(grid__secondBlock____blocks_name_prime);
 		socketToGroup__itemSocket____target.setName(socketToGroup__itemSocket____target_name_prime);
 		grid__firstBlock____blocks.setName(grid__firstBlock____blocks_name_prime);
 		firstBlock__secondBlock____s.setName(firstBlock__secondBlock____s_name_prime);
 		secondBlock__firstBlock____n.setName(secondBlock__firstBlock____n_name_prime);
 		return new Object[] { socketToGroup, firstBlock, grid, itemSocket, secondBlock, group, isApplicableMatch,
 				socketToGroup__group____source, group__secondBlock____occupies, secondBlock__group____isOccupiedBy,
-				grid__group____groups, group__firstBlock____occupies, firstBlock__group____isOccupiedBy,
-				grid__secondBlock____blocks, socketToGroup__itemSocket____target, grid__firstBlock____blocks,
+				grid__group____groups, grid__secondBlock____blocks, group__firstBlock____occupies,
+				firstBlock__group____isOccupiedBy, socketToGroup__itemSocket____target, grid__firstBlock____blocks,
 				firstBlock__secondBlock____s, secondBlock__firstBlock____n };
 	}
 
@@ -2898,8 +2898,8 @@ public class create_a_fridgeImpl extends AbstractRuleImpl implements create_a_fr
 		if (!firstBlock.equals(secondBlock)) {
 			if (group.getOccupies().contains(secondBlock)) {
 				if (grid.getGroups().contains(group)) {
-					if (group.getOccupies().contains(firstBlock)) {
-						if (grid.getBlocks().contains(secondBlock)) {
+					if (grid.getBlocks().contains(secondBlock)) {
+						if (group.getOccupies().contains(firstBlock)) {
 							if (grid.getBlocks().contains(firstBlock)) {
 								if (secondBlock.equals(firstBlock.getS())) {
 									return new Object[] { firstBlock, grid, secondBlock, group };

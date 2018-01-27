@@ -40,21 +40,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass create_a_sinkEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass createItemWithTwoBlocksEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass create_a_vertical_tableEClass = null;
+	private EClass socketToGroupEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -75,7 +61,21 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass createItemWithTwoBlocksEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass create_a_horizontal_tableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass create_a_sinkEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -89,7 +89,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass socketToGroupEClass = null;
+	private EClass create_a_vertical_tableEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -179,12 +179,12 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getcreate_a_sink() {
-		if (create_a_sinkEClass == null) {
-			create_a_sinkEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
+	public EClass getSocketToGroup() {
+		if (socketToGroupEClass == null) {
+			socketToGroupEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
 					.getEClassifiers().get(0);
 		}
-		return create_a_sinkEClass;
+		return socketToGroupEClass;
 	}
 
 	/**
@@ -192,8 +192,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__IsAppropriate_FWD__Match_Block_Grid_Block_Group() {
-		return getcreate_a_sink().getEOperations().get(0);
+	public EOperation getSocketToGroup__IsAppropriate_FWD__Match_Group_Grid() {
+		return getSocketToGroup().getEOperations().get(0);
 	}
 
 	/**
@@ -201,8 +201,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__Perform_FWD__IsApplicableMatch() {
-		return getcreate_a_sink().getEOperations().get(1);
+	public EOperation getSocketToGroup__Perform_FWD__IsApplicableMatch() {
+		return getSocketToGroup().getEOperations().get(1);
 	}
 
 	/**
@@ -210,8 +210,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__IsApplicable_FWD__Match() {
-		return getcreate_a_sink().getEOperations().get(2);
+	public EOperation getSocketToGroup__IsApplicable_FWD__Match() {
+		return getSocketToGroup().getEOperations().get(2);
 	}
 
 	/**
@@ -219,8 +219,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__RegisterObjectsToMatch_FWD__Match_Block_Grid_Block_Group() {
-		return getcreate_a_sink().getEOperations().get(3);
+	public EOperation getSocketToGroup__RegisterObjectsToMatch_FWD__Match_Group_Grid() {
+		return getSocketToGroup().getEOperations().get(3);
 	}
 
 	/**
@@ -228,8 +228,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__IsAppropriate_solveCsp_FWD__Match_Block_Grid_Block_Group() {
-		return getcreate_a_sink().getEOperations().get(4);
+	public EOperation getSocketToGroup__IsAppropriate_solveCsp_FWD__Match_Group_Grid() {
+		return getSocketToGroup().getEOperations().get(4);
 	}
 
 	/**
@@ -237,8 +237,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__IsAppropriate_checkCsp_FWD__CSP() {
-		return getcreate_a_sink().getEOperations().get(5);
+	public EOperation getSocketToGroup__IsAppropriate_checkCsp_FWD__CSP() {
+		return getSocketToGroup().getEOperations().get(5);
 	}
 
 	/**
@@ -246,8 +246,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__IsApplicable_solveCsp_FWD__IsApplicableMatch_SocketToGroupCorr_Block_Grid_ItemSocket_Block_Group() {
-		return getcreate_a_sink().getEOperations().get(6);
+	public EOperation getSocketToGroup__IsApplicable_solveCsp_FWD__IsApplicableMatch_Kitchen_Group_KitchenToGridCorr_Grid() {
+		return getSocketToGroup().getEOperations().get(6);
 	}
 
 	/**
@@ -255,8 +255,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__IsApplicable_checkCsp_FWD__CSP() {
-		return getcreate_a_sink().getEOperations().get(7);
+	public EOperation getSocketToGroup__IsApplicable_checkCsp_FWD__CSP() {
+		return getSocketToGroup().getEOperations().get(7);
 	}
 
 	/**
@@ -264,8 +264,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getcreate_a_sink().getEOperations().get(8);
+	public EOperation getSocketToGroup__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getSocketToGroup().getEOperations().get(8);
 	}
 
 	/**
@@ -273,8 +273,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__CheckTypes_FWD__Match() {
-		return getcreate_a_sink().getEOperations().get(9);
+	public EOperation getSocketToGroup__CheckTypes_FWD__Match() {
+		return getSocketToGroup().getEOperations().get(9);
 	}
 
 	/**
@@ -282,8 +282,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__IsAppropriate_BWD__Match_Sink_ItemSocket() {
-		return getcreate_a_sink().getEOperations().get(10);
+	public EOperation getSocketToGroup__IsAppropriate_BWD__Match_Kitchen_ItemSocket() {
+		return getSocketToGroup().getEOperations().get(10);
 	}
 
 	/**
@@ -291,8 +291,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__Perform_BWD__IsApplicableMatch() {
-		return getcreate_a_sink().getEOperations().get(11);
+	public EOperation getSocketToGroup__Perform_BWD__IsApplicableMatch() {
+		return getSocketToGroup().getEOperations().get(11);
 	}
 
 	/**
@@ -300,8 +300,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__IsApplicable_BWD__Match() {
-		return getcreate_a_sink().getEOperations().get(12);
+	public EOperation getSocketToGroup__IsApplicable_BWD__Match() {
+		return getSocketToGroup().getEOperations().get(12);
 	}
 
 	/**
@@ -309,8 +309,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__RegisterObjectsToMatch_BWD__Match_Sink_ItemSocket() {
-		return getcreate_a_sink().getEOperations().get(13);
+	public EOperation getSocketToGroup__RegisterObjectsToMatch_BWD__Match_Kitchen_ItemSocket() {
+		return getSocketToGroup().getEOperations().get(13);
 	}
 
 	/**
@@ -318,8 +318,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__IsAppropriate_solveCsp_BWD__Match_Sink_ItemSocket() {
-		return getcreate_a_sink().getEOperations().get(14);
+	public EOperation getSocketToGroup__IsAppropriate_solveCsp_BWD__Match_Kitchen_ItemSocket() {
+		return getSocketToGroup().getEOperations().get(14);
 	}
 
 	/**
@@ -327,8 +327,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__IsAppropriate_checkCsp_BWD__CSP() {
-		return getcreate_a_sink().getEOperations().get(15);
+	public EOperation getSocketToGroup__IsAppropriate_checkCsp_BWD__CSP() {
+		return getSocketToGroup().getEOperations().get(15);
 	}
 
 	/**
@@ -336,8 +336,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__IsApplicable_solveCsp_BWD__IsApplicableMatch_SocketToGroupCorr_Sink_Block_Grid_ItemSocket_Block_Group() {
-		return getcreate_a_sink().getEOperations().get(16);
+	public EOperation getSocketToGroup__IsApplicable_solveCsp_BWD__IsApplicableMatch_Kitchen_ItemSocket_KitchenToGridCorr_Grid() {
+		return getSocketToGroup().getEOperations().get(16);
 	}
 
 	/**
@@ -345,8 +345,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__IsApplicable_checkCsp_BWD__CSP() {
-		return getcreate_a_sink().getEOperations().get(17);
+	public EOperation getSocketToGroup__IsApplicable_checkCsp_BWD__CSP() {
+		return getSocketToGroup().getEOperations().get(17);
 	}
 
 	/**
@@ -354,8 +354,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getcreate_a_sink().getEOperations().get(18);
+	public EOperation getSocketToGroup__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getSocketToGroup().getEOperations().get(18);
 	}
 
 	/**
@@ -363,8 +363,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__CheckTypes_BWD__Match() {
-		return getcreate_a_sink().getEOperations().get(19);
+	public EOperation getSocketToGroup__CheckTypes_BWD__Match() {
+		return getSocketToGroup().getEOperations().get(19);
 	}
 
 	/**
@@ -372,8 +372,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__IsAppropriate_FWD_EMoflonEdge_15__EMoflonEdge() {
-		return getcreate_a_sink().getEOperations().get(20);
+	public EOperation getSocketToGroup__IsAppropriate_FWD_EMoflonEdge_0__EMoflonEdge() {
+		return getSocketToGroup().getEOperations().get(20);
 	}
 
 	/**
@@ -381,8 +381,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__IsAppropriate_BWD_EMoflonEdge_15__EMoflonEdge() {
-		return getcreate_a_sink().getEOperations().get(21);
+	public EOperation getSocketToGroup__IsAppropriate_BWD_EMoflonEdge_0__EMoflonEdge() {
+		return getSocketToGroup().getEOperations().get(21);
 	}
 
 	/**
@@ -390,8 +390,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__CheckAttributes_FWD__TripleMatch() {
-		return getcreate_a_sink().getEOperations().get(22);
+	public EOperation getSocketToGroup__CheckAttributes_FWD__TripleMatch() {
+		return getSocketToGroup().getEOperations().get(22);
 	}
 
 	/**
@@ -399,8 +399,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__CheckAttributes_BWD__TripleMatch() {
-		return getcreate_a_sink().getEOperations().get(23);
+	public EOperation getSocketToGroup__CheckAttributes_BWD__TripleMatch() {
+		return getSocketToGroup().getEOperations().get(23);
 	}
 
 	/**
@@ -408,8 +408,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__IsApplicable_CC__Match_Match() {
-		return getcreate_a_sink().getEOperations().get(24);
+	public EOperation getSocketToGroup__IsApplicable_CC__Match_Match() {
+		return getSocketToGroup().getEOperations().get(24);
 	}
 
 	/**
@@ -417,8 +417,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__IsApplicable_solveCsp_CC__Sink_Block_Grid_ItemSocket_Block_Group_Match_Match() {
-		return getcreate_a_sink().getEOperations().get(25);
+	public EOperation getSocketToGroup__IsApplicable_solveCsp_CC__Kitchen_ItemSocket_Group_Grid_Match_Match() {
+		return getSocketToGroup().getEOperations().get(25);
 	}
 
 	/**
@@ -426,8 +426,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__IsApplicable_checkCsp_CC__CSP() {
-		return getcreate_a_sink().getEOperations().get(26);
+	public EOperation getSocketToGroup__IsApplicable_checkCsp_CC__CSP() {
+		return getSocketToGroup().getEOperations().get(26);
 	}
 
 	/**
@@ -435,8 +435,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__CheckDEC_FWD__Block_Grid_Block_Group() {
-		return getcreate_a_sink().getEOperations().get(27);
+	public EOperation getSocketToGroup__CheckDEC_FWD__Group_Grid() {
+		return getSocketToGroup().getEOperations().get(27);
 	}
 
 	/**
@@ -444,295 +444,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_sink__CheckDEC_BWD__Sink_ItemSocket() {
-		return getcreate_a_sink().getEOperations().get(28);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCreateItemWithTwoBlocks() {
-		if (createItemWithTwoBlocksEClass == null) {
-			createItemWithTwoBlocksEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
-					.getEClassifiers().get(1);
-		}
-		return createItemWithTwoBlocksEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getcreate_a_vertical_table() {
-		if (create_a_vertical_tableEClass == null) {
-			create_a_vertical_tableEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
-					.getEClassifiers().get(2);
-		}
-		return create_a_vertical_tableEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__IsAppropriate_FWD__Match_Block_Grid_Block_Group() {
-		return getcreate_a_vertical_table().getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__Perform_FWD__IsApplicableMatch() {
-		return getcreate_a_vertical_table().getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__IsApplicable_FWD__Match() {
-		return getcreate_a_vertical_table().getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__RegisterObjectsToMatch_FWD__Match_Block_Grid_Block_Group() {
-		return getcreate_a_vertical_table().getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__IsAppropriate_solveCsp_FWD__Match_Block_Grid_Block_Group() {
-		return getcreate_a_vertical_table().getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__IsAppropriate_checkCsp_FWD__CSP() {
-		return getcreate_a_vertical_table().getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__IsApplicable_solveCsp_FWD__IsApplicableMatch_SocketToGroupCorr_Block_Grid_ItemSocket_Block_Group() {
-		return getcreate_a_vertical_table().getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__IsApplicable_checkCsp_FWD__CSP() {
-		return getcreate_a_vertical_table().getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getcreate_a_vertical_table().getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__CheckTypes_FWD__Match() {
-		return getcreate_a_vertical_table().getEOperations().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__IsAppropriate_BWD__Match_Table_ItemSocket() {
-		return getcreate_a_vertical_table().getEOperations().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__Perform_BWD__IsApplicableMatch() {
-		return getcreate_a_vertical_table().getEOperations().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__IsApplicable_BWD__Match() {
-		return getcreate_a_vertical_table().getEOperations().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__RegisterObjectsToMatch_BWD__Match_Table_ItemSocket() {
-		return getcreate_a_vertical_table().getEOperations().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__IsAppropriate_solveCsp_BWD__Match_Table_ItemSocket() {
-		return getcreate_a_vertical_table().getEOperations().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__IsAppropriate_checkCsp_BWD__CSP() {
-		return getcreate_a_vertical_table().getEOperations().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__IsApplicable_solveCsp_BWD__IsApplicableMatch_SocketToGroupCorr_Table_Block_Grid_ItemSocket_Block_Group() {
-		return getcreate_a_vertical_table().getEOperations().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__IsApplicable_checkCsp_BWD__CSP() {
-		return getcreate_a_vertical_table().getEOperations().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getcreate_a_vertical_table().getEOperations().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__CheckTypes_BWD__Match() {
-		return getcreate_a_vertical_table().getEOperations().get(19);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__IsAppropriate_FWD_EMoflonEdge_16__EMoflonEdge() {
-		return getcreate_a_vertical_table().getEOperations().get(20);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__IsAppropriate_BWD_EMoflonEdge_16__EMoflonEdge() {
-		return getcreate_a_vertical_table().getEOperations().get(21);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__CheckAttributes_FWD__TripleMatch() {
-		return getcreate_a_vertical_table().getEOperations().get(22);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__CheckAttributes_BWD__TripleMatch() {
-		return getcreate_a_vertical_table().getEOperations().get(23);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__IsApplicable_CC__Match_Match() {
-		return getcreate_a_vertical_table().getEOperations().get(24);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__IsApplicable_solveCsp_CC__Table_Block_Grid_ItemSocket_Block_Group_Match_Match() {
-		return getcreate_a_vertical_table().getEOperations().get(25);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__IsApplicable_checkCsp_CC__CSP() {
-		return getcreate_a_vertical_table().getEOperations().get(26);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__CheckDEC_FWD__Block_Grid_Block_Group() {
-		return getcreate_a_vertical_table().getEOperations().get(27);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getcreate_a_vertical_table__CheckDEC_BWD__Table_ItemSocket() {
-		return getcreate_a_vertical_table().getEOperations().get(28);
+	public EOperation getSocketToGroup__CheckDEC_BWD__Kitchen_ItemSocket() {
+		return getSocketToGroup().getEOperations().get(28);
 	}
 
 	/**
@@ -743,7 +456,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	public EClass getCreateVerticalItem() {
 		if (createVerticalItemEClass == null) {
 			createVerticalItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
-					.getEClassifiers().get(3);
+					.getEClassifiers().get(1);
 		}
 		return createVerticalItemEClass;
 	}
@@ -756,9 +469,22 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	public EClass getCreateHorizontalItem() {
 		if (createHorizontalItemEClass == null) {
 			createHorizontalItemEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
-					.getEClassifiers().get(4);
+					.getEClassifiers().get(2);
 		}
 		return createHorizontalItemEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCreateItemWithTwoBlocks() {
+		if (createItemWithTwoBlocksEClass == null) {
+			createItemWithTwoBlocksEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
+					.getEClassifiers().get(3);
+		}
+		return createItemWithTwoBlocksEClass;
 	}
 
 	/**
@@ -769,7 +495,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	public EClass getcreate_a_horizontal_table() {
 		if (create_a_horizontal_tableEClass == null) {
 			create_a_horizontal_tableEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
-					.getEClassifiers().get(5);
+					.getEClassifiers().get(4);
 		}
 		return create_a_horizontal_tableEClass;
 	}
@@ -959,7 +685,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_horizontal_table__IsAppropriate_FWD_EMoflonEdge_17__EMoflonEdge() {
+	public EOperation getcreate_a_horizontal_table__IsAppropriate_FWD_EMoflonEdge_1__EMoflonEdge() {
 		return getcreate_a_horizontal_table().getEOperations().get(20);
 	}
 
@@ -968,7 +694,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_horizontal_table__IsAppropriate_BWD_EMoflonEdge_17__EMoflonEdge() {
+	public EOperation getcreate_a_horizontal_table__IsAppropriate_BWD_EMoflonEdge_1__EMoflonEdge() {
 		return getcreate_a_horizontal_table().getEOperations().get(21);
 	}
 
@@ -1033,6 +759,280 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 */
 	public EOperation getcreate_a_horizontal_table__CheckDEC_BWD__Table_ItemSocket() {
 		return getcreate_a_horizontal_table().getEOperations().get(28);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getcreate_a_sink() {
+		if (create_a_sinkEClass == null) {
+			create_a_sinkEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
+					.getEClassifiers().get(5);
+		}
+		return create_a_sinkEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__IsAppropriate_FWD__Match_Block_Grid_Block_Group() {
+		return getcreate_a_sink().getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__Perform_FWD__IsApplicableMatch() {
+		return getcreate_a_sink().getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__IsApplicable_FWD__Match() {
+		return getcreate_a_sink().getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__RegisterObjectsToMatch_FWD__Match_Block_Grid_Block_Group() {
+		return getcreate_a_sink().getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__IsAppropriate_solveCsp_FWD__Match_Block_Grid_Block_Group() {
+		return getcreate_a_sink().getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__IsAppropriate_checkCsp_FWD__CSP() {
+		return getcreate_a_sink().getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__IsApplicable_solveCsp_FWD__IsApplicableMatch_SocketToGroupCorr_Block_Grid_ItemSocket_Block_Group() {
+		return getcreate_a_sink().getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__IsApplicable_checkCsp_FWD__CSP() {
+		return getcreate_a_sink().getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getcreate_a_sink().getEOperations().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__CheckTypes_FWD__Match() {
+		return getcreate_a_sink().getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__IsAppropriate_BWD__Match_Sink_ItemSocket() {
+		return getcreate_a_sink().getEOperations().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__Perform_BWD__IsApplicableMatch() {
+		return getcreate_a_sink().getEOperations().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__IsApplicable_BWD__Match() {
+		return getcreate_a_sink().getEOperations().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__RegisterObjectsToMatch_BWD__Match_Sink_ItemSocket() {
+		return getcreate_a_sink().getEOperations().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__IsAppropriate_solveCsp_BWD__Match_Sink_ItemSocket() {
+		return getcreate_a_sink().getEOperations().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__IsAppropriate_checkCsp_BWD__CSP() {
+		return getcreate_a_sink().getEOperations().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__IsApplicable_solveCsp_BWD__IsApplicableMatch_SocketToGroupCorr_Sink_Block_Grid_ItemSocket_Block_Group() {
+		return getcreate_a_sink().getEOperations().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__IsApplicable_checkCsp_BWD__CSP() {
+		return getcreate_a_sink().getEOperations().get(17);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getcreate_a_sink().getEOperations().get(18);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__CheckTypes_BWD__Match() {
+		return getcreate_a_sink().getEOperations().get(19);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__IsAppropriate_FWD_EMoflonEdge_2__EMoflonEdge() {
+		return getcreate_a_sink().getEOperations().get(20);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__IsAppropriate_BWD_EMoflonEdge_2__EMoflonEdge() {
+		return getcreate_a_sink().getEOperations().get(21);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__CheckAttributes_FWD__TripleMatch() {
+		return getcreate_a_sink().getEOperations().get(22);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__CheckAttributes_BWD__TripleMatch() {
+		return getcreate_a_sink().getEOperations().get(23);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__IsApplicable_CC__Match_Match() {
+		return getcreate_a_sink().getEOperations().get(24);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__IsApplicable_solveCsp_CC__Sink_Block_Grid_ItemSocket_Block_Group_Match_Match() {
+		return getcreate_a_sink().getEOperations().get(25);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__IsApplicable_checkCsp_CC__CSP() {
+		return getcreate_a_sink().getEOperations().get(26);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__CheckDEC_FWD__Block_Grid_Block_Group() {
+		return getcreate_a_sink().getEOperations().get(27);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getcreate_a_sink__CheckDEC_BWD__Sink_ItemSocket() {
+		return getcreate_a_sink().getEOperations().get(28);
 	}
 
 	/**
@@ -1233,7 +1233,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getKitchenToGridRule__IsAppropriate_FWD_Grid_3__Grid() {
+	public EOperation getKitchenToGridRule__IsAppropriate_FWD_Grid_0__Grid() {
 		return getKitchenToGridRule().getEOperations().get(20);
 	}
 
@@ -1242,7 +1242,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getKitchenToGridRule__IsAppropriate_BWD_Kitchen_3__Kitchen() {
+	public EOperation getKitchenToGridRule__IsAppropriate_BWD_Kitchen_0__Kitchen() {
 		return getKitchenToGridRule().getEOperations().get(21);
 	}
 
@@ -1278,7 +1278,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getKitchenToGridRule__IsApplicable_solveCsp_CC__Grid_Kitchen_Match_Match() {
+	public EOperation getKitchenToGridRule__IsApplicable_solveCsp_CC__Kitchen_Grid_Match_Match() {
 		return getKitchenToGridRule().getEOperations().get(25);
 	}
 
@@ -1314,12 +1314,12 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSocketToGroup() {
-		if (socketToGroupEClass == null) {
-			socketToGroupEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
+	public EClass getcreate_a_vertical_table() {
+		if (create_a_vertical_tableEClass == null) {
+			create_a_vertical_tableEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
 					.getEClassifiers().get(7);
 		}
-		return socketToGroupEClass;
+		return create_a_vertical_tableEClass;
 	}
 
 	/**
@@ -1327,8 +1327,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__IsAppropriate_FWD__Match_Grid_Group() {
-		return getSocketToGroup().getEOperations().get(0);
+	public EOperation getcreate_a_vertical_table__IsAppropriate_FWD__Match_Block_Grid_Block_Group() {
+		return getcreate_a_vertical_table().getEOperations().get(0);
 	}
 
 	/**
@@ -1336,8 +1336,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__Perform_FWD__IsApplicableMatch() {
-		return getSocketToGroup().getEOperations().get(1);
+	public EOperation getcreate_a_vertical_table__Perform_FWD__IsApplicableMatch() {
+		return getcreate_a_vertical_table().getEOperations().get(1);
 	}
 
 	/**
@@ -1345,8 +1345,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__IsApplicable_FWD__Match() {
-		return getSocketToGroup().getEOperations().get(2);
+	public EOperation getcreate_a_vertical_table__IsApplicable_FWD__Match() {
+		return getcreate_a_vertical_table().getEOperations().get(2);
 	}
 
 	/**
@@ -1354,8 +1354,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__RegisterObjectsToMatch_FWD__Match_Grid_Group() {
-		return getSocketToGroup().getEOperations().get(3);
+	public EOperation getcreate_a_vertical_table__RegisterObjectsToMatch_FWD__Match_Block_Grid_Block_Group() {
+		return getcreate_a_vertical_table().getEOperations().get(3);
 	}
 
 	/**
@@ -1363,8 +1363,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__IsAppropriate_solveCsp_FWD__Match_Grid_Group() {
-		return getSocketToGroup().getEOperations().get(4);
+	public EOperation getcreate_a_vertical_table__IsAppropriate_solveCsp_FWD__Match_Block_Grid_Block_Group() {
+		return getcreate_a_vertical_table().getEOperations().get(4);
 	}
 
 	/**
@@ -1372,8 +1372,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__IsAppropriate_checkCsp_FWD__CSP() {
-		return getSocketToGroup().getEOperations().get(5);
+	public EOperation getcreate_a_vertical_table__IsAppropriate_checkCsp_FWD__CSP() {
+		return getcreate_a_vertical_table().getEOperations().get(5);
 	}
 
 	/**
@@ -1381,8 +1381,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__IsApplicable_solveCsp_FWD__IsApplicableMatch_Grid_KitchenToGridCorr_Group_Kitchen() {
-		return getSocketToGroup().getEOperations().get(6);
+	public EOperation getcreate_a_vertical_table__IsApplicable_solveCsp_FWD__IsApplicableMatch_SocketToGroupCorr_Block_Grid_ItemSocket_Block_Group() {
+		return getcreate_a_vertical_table().getEOperations().get(6);
 	}
 
 	/**
@@ -1390,8 +1390,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__IsApplicable_checkCsp_FWD__CSP() {
-		return getSocketToGroup().getEOperations().get(7);
+	public EOperation getcreate_a_vertical_table__IsApplicable_checkCsp_FWD__CSP() {
+		return getcreate_a_vertical_table().getEOperations().get(7);
 	}
 
 	/**
@@ -1399,8 +1399,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getSocketToGroup().getEOperations().get(8);
+	public EOperation getcreate_a_vertical_table__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getcreate_a_vertical_table().getEOperations().get(8);
 	}
 
 	/**
@@ -1408,8 +1408,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__CheckTypes_FWD__Match() {
-		return getSocketToGroup().getEOperations().get(9);
+	public EOperation getcreate_a_vertical_table__CheckTypes_FWD__Match() {
+		return getcreate_a_vertical_table().getEOperations().get(9);
 	}
 
 	/**
@@ -1417,8 +1417,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__IsAppropriate_BWD__Match_Kitchen_ItemSocket() {
-		return getSocketToGroup().getEOperations().get(10);
+	public EOperation getcreate_a_vertical_table__IsAppropriate_BWD__Match_Table_ItemSocket() {
+		return getcreate_a_vertical_table().getEOperations().get(10);
 	}
 
 	/**
@@ -1426,8 +1426,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__Perform_BWD__IsApplicableMatch() {
-		return getSocketToGroup().getEOperations().get(11);
+	public EOperation getcreate_a_vertical_table__Perform_BWD__IsApplicableMatch() {
+		return getcreate_a_vertical_table().getEOperations().get(11);
 	}
 
 	/**
@@ -1435,8 +1435,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__IsApplicable_BWD__Match() {
-		return getSocketToGroup().getEOperations().get(12);
+	public EOperation getcreate_a_vertical_table__IsApplicable_BWD__Match() {
+		return getcreate_a_vertical_table().getEOperations().get(12);
 	}
 
 	/**
@@ -1444,8 +1444,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__RegisterObjectsToMatch_BWD__Match_Kitchen_ItemSocket() {
-		return getSocketToGroup().getEOperations().get(13);
+	public EOperation getcreate_a_vertical_table__RegisterObjectsToMatch_BWD__Match_Table_ItemSocket() {
+		return getcreate_a_vertical_table().getEOperations().get(13);
 	}
 
 	/**
@@ -1453,8 +1453,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__IsAppropriate_solveCsp_BWD__Match_Kitchen_ItemSocket() {
-		return getSocketToGroup().getEOperations().get(14);
+	public EOperation getcreate_a_vertical_table__IsAppropriate_solveCsp_BWD__Match_Table_ItemSocket() {
+		return getcreate_a_vertical_table().getEOperations().get(14);
 	}
 
 	/**
@@ -1462,8 +1462,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__IsAppropriate_checkCsp_BWD__CSP() {
-		return getSocketToGroup().getEOperations().get(15);
+	public EOperation getcreate_a_vertical_table__IsAppropriate_checkCsp_BWD__CSP() {
+		return getcreate_a_vertical_table().getEOperations().get(15);
 	}
 
 	/**
@@ -1471,8 +1471,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__IsApplicable_solveCsp_BWD__IsApplicableMatch_Grid_KitchenToGridCorr_Kitchen_ItemSocket() {
-		return getSocketToGroup().getEOperations().get(16);
+	public EOperation getcreate_a_vertical_table__IsApplicable_solveCsp_BWD__IsApplicableMatch_SocketToGroupCorr_Table_Block_Grid_ItemSocket_Block_Group() {
+		return getcreate_a_vertical_table().getEOperations().get(16);
 	}
 
 	/**
@@ -1480,8 +1480,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__IsApplicable_checkCsp_BWD__CSP() {
-		return getSocketToGroup().getEOperations().get(17);
+	public EOperation getcreate_a_vertical_table__IsApplicable_checkCsp_BWD__CSP() {
+		return getcreate_a_vertical_table().getEOperations().get(17);
 	}
 
 	/**
@@ -1489,8 +1489,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getSocketToGroup().getEOperations().get(18);
+	public EOperation getcreate_a_vertical_table__RegisterObjects_BWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getcreate_a_vertical_table().getEOperations().get(18);
 	}
 
 	/**
@@ -1498,8 +1498,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__CheckTypes_BWD__Match() {
-		return getSocketToGroup().getEOperations().get(19);
+	public EOperation getcreate_a_vertical_table__CheckTypes_BWD__Match() {
+		return getcreate_a_vertical_table().getEOperations().get(19);
 	}
 
 	/**
@@ -1507,8 +1507,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__IsAppropriate_FWD_EMoflonEdge_18__EMoflonEdge() {
-		return getSocketToGroup().getEOperations().get(20);
+	public EOperation getcreate_a_vertical_table__IsAppropriate_FWD_EMoflonEdge_3__EMoflonEdge() {
+		return getcreate_a_vertical_table().getEOperations().get(20);
 	}
 
 	/**
@@ -1516,8 +1516,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__IsAppropriate_BWD_EMoflonEdge_18__EMoflonEdge() {
-		return getSocketToGroup().getEOperations().get(21);
+	public EOperation getcreate_a_vertical_table__IsAppropriate_BWD_EMoflonEdge_3__EMoflonEdge() {
+		return getcreate_a_vertical_table().getEOperations().get(21);
 	}
 
 	/**
@@ -1525,8 +1525,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__CheckAttributes_FWD__TripleMatch() {
-		return getSocketToGroup().getEOperations().get(22);
+	public EOperation getcreate_a_vertical_table__CheckAttributes_FWD__TripleMatch() {
+		return getcreate_a_vertical_table().getEOperations().get(22);
 	}
 
 	/**
@@ -1534,8 +1534,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__CheckAttributes_BWD__TripleMatch() {
-		return getSocketToGroup().getEOperations().get(23);
+	public EOperation getcreate_a_vertical_table__CheckAttributes_BWD__TripleMatch() {
+		return getcreate_a_vertical_table().getEOperations().get(23);
 	}
 
 	/**
@@ -1543,8 +1543,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__IsApplicable_CC__Match_Match() {
-		return getSocketToGroup().getEOperations().get(24);
+	public EOperation getcreate_a_vertical_table__IsApplicable_CC__Match_Match() {
+		return getcreate_a_vertical_table().getEOperations().get(24);
 	}
 
 	/**
@@ -1552,8 +1552,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__IsApplicable_solveCsp_CC__Grid_Group_Kitchen_ItemSocket_Match_Match() {
-		return getSocketToGroup().getEOperations().get(25);
+	public EOperation getcreate_a_vertical_table__IsApplicable_solveCsp_CC__Table_Block_Grid_ItemSocket_Block_Group_Match_Match() {
+		return getcreate_a_vertical_table().getEOperations().get(25);
 	}
 
 	/**
@@ -1561,8 +1561,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__IsApplicable_checkCsp_CC__CSP() {
-		return getSocketToGroup().getEOperations().get(26);
+	public EOperation getcreate_a_vertical_table__IsApplicable_checkCsp_CC__CSP() {
+		return getcreate_a_vertical_table().getEOperations().get(26);
 	}
 
 	/**
@@ -1570,8 +1570,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__CheckDEC_FWD__Grid_Group() {
-		return getSocketToGroup().getEOperations().get(27);
+	public EOperation getcreate_a_vertical_table__CheckDEC_FWD__Block_Grid_Block_Group() {
+		return getcreate_a_vertical_table().getEOperations().get(27);
 	}
 
 	/**
@@ -1579,8 +1579,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSocketToGroup__CheckDEC_BWD__Kitchen_ItemSocket() {
-		return getSocketToGroup().getEOperations().get(28);
+	public EOperation getcreate_a_vertical_table__CheckDEC_BWD__Table_ItemSocket() {
+		return getcreate_a_vertical_table().getEOperations().get(28);
 	}
 
 	/**
@@ -1781,7 +1781,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_fridge__IsAppropriate_FWD_EMoflonEdge_19__EMoflonEdge() {
+	public EOperation getcreate_a_fridge__IsAppropriate_FWD_EMoflonEdge_4__EMoflonEdge() {
 		return getcreate_a_fridge().getEOperations().get(20);
 	}
 
@@ -1790,7 +1790,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getcreate_a_fridge__IsAppropriate_BWD_EMoflonEdge_19__EMoflonEdge() {
+	public EOperation getcreate_a_fridge__IsAppropriate_BWD_EMoflonEdge_4__EMoflonEdge() {
 		return getcreate_a_fridge().getEOperations().get(21);
 	}
 

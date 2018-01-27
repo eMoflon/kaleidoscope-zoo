@@ -22,15 +22,6 @@ public interface KitchenToGridLanguageFactory extends EFactory {
 	KitchenToGridLanguageFactory eINSTANCE = KitchenToGridLanguage.impl.KitchenToGridLanguageFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Socket To Group Corr</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Socket To Group Corr</em>'.
-	 * @generated
-	 */
-	SocketToGroupCorr createSocketToGroupCorr();
-
-	/**
 	 * Returns a new object of class '<em>Kitchen To Grid Corr</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -38,6 +29,15 @@ public interface KitchenToGridLanguageFactory extends EFactory {
 	 * @generated
 	 */
 	KitchenToGridCorr createKitchenToGridCorr();
+
+	/**
+	 * Returns a new object of class '<em>Socket To Group Corr</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Socket To Group Corr</em>'.
+	 * @generated
+	 */
+	SocketToGroupCorr createSocketToGroupCorr();
 
 	/**
 	 * Returns the package supported by this factory.

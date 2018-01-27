@@ -69,18 +69,8 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected RulesSwitch<Adapter> modelSwitch = new RulesSwitch<Adapter>() {
 		@Override
-		public Adapter casecreate_a_sink(create_a_sink object) {
-			return createcreate_a_sinkAdapter();
-		}
-
-		@Override
-		public Adapter caseCreateItemWithTwoBlocks(CreateItemWithTwoBlocks object) {
-			return createCreateItemWithTwoBlocksAdapter();
-		}
-
-		@Override
-		public Adapter casecreate_a_vertical_table(create_a_vertical_table object) {
-			return createcreate_a_vertical_tableAdapter();
+		public Adapter caseSocketToGroup(SocketToGroup object) {
+			return createSocketToGroupAdapter();
 		}
 
 		@Override
@@ -94,8 +84,18 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseCreateItemWithTwoBlocks(CreateItemWithTwoBlocks object) {
+			return createCreateItemWithTwoBlocksAdapter();
+		}
+
+		@Override
 		public Adapter casecreate_a_horizontal_table(create_a_horizontal_table object) {
 			return createcreate_a_horizontal_tableAdapter();
+		}
+
+		@Override
+		public Adapter casecreate_a_sink(create_a_sink object) {
+			return createcreate_a_sinkAdapter();
 		}
 
 		@Override
@@ -104,8 +104,8 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseSocketToGroup(SocketToGroup object) {
-			return createSocketToGroupAdapter();
+		public Adapter casecreate_a_vertical_table(create_a_vertical_table object) {
+			return createcreate_a_vertical_tableAdapter();
 		}
 
 		@Override
@@ -138,44 +138,16 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link KitchenToGridLanguage.Rules.create_a_sink <em>create asink</em>}'.
+	 * Creates a new adapter for an object of class '{@link KitchenToGridLanguage.Rules.SocketToGroup <em>Socket To Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see KitchenToGridLanguage.Rules.create_a_sink
+	 * @see KitchenToGridLanguage.Rules.SocketToGroup
 	 * @generated
 	 */
-	public Adapter createcreate_a_sinkAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link KitchenToGridLanguage.Rules.CreateItemWithTwoBlocks <em>Create Item With Two Blocks</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see KitchenToGridLanguage.Rules.CreateItemWithTwoBlocks
-	 * @generated
-	 */
-	public Adapter createCreateItemWithTwoBlocksAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link KitchenToGridLanguage.Rules.create_a_vertical_table <em>create avertical table</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see KitchenToGridLanguage.Rules.create_a_vertical_table
-	 * @generated
-	 */
-	public Adapter createcreate_a_vertical_tableAdapter() {
+	public Adapter createSocketToGroupAdapter() {
 		return null;
 	}
 
@@ -208,6 +180,20 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link KitchenToGridLanguage.Rules.CreateItemWithTwoBlocks <em>Create Item With Two Blocks</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see KitchenToGridLanguage.Rules.CreateItemWithTwoBlocks
+	 * @generated
+	 */
+	public Adapter createCreateItemWithTwoBlocksAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link KitchenToGridLanguage.Rules.create_a_horizontal_table <em>create ahorizontal table</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -218,6 +204,20 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createcreate_a_horizontal_tableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link KitchenToGridLanguage.Rules.create_a_sink <em>create asink</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see KitchenToGridLanguage.Rules.create_a_sink
+	 * @generated
+	 */
+	public Adapter createcreate_a_sinkAdapter() {
 		return null;
 	}
 
@@ -236,16 +236,16 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link KitchenToGridLanguage.Rules.SocketToGroup <em>Socket To Group</em>}'.
+	 * Creates a new adapter for an object of class '{@link KitchenToGridLanguage.Rules.create_a_vertical_table <em>create avertical table</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see KitchenToGridLanguage.Rules.SocketToGroup
+	 * @see KitchenToGridLanguage.Rules.create_a_vertical_table
 	 * @generated
 	 */
-	public Adapter createSocketToGroupAdapter() {
+	public Adapter createcreate_a_vertical_tableAdapter() {
 		return null;
 	}
 

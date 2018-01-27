@@ -13,6 +13,7 @@ public class UIModels {
 	private Workspace workspace;
 	private Change failedDeltas;
 	private String failedDeltasMessage;
+	private List<String> userChoices = new ArrayList<String>();
 	
 	public String getFailedDeltasMessage() {
 		return failedDeltasMessage;
@@ -20,7 +21,7 @@ public class UIModels {
 	public void setFailedDeltasMessage(String failedDeltasMessage) {
 		this.failedDeltasMessage = failedDeltasMessage;
 	}
-	private List<String> userChoices = new ArrayList<String>();
+	
 	/**
 	 * @return the failedDeltas
 	 */
