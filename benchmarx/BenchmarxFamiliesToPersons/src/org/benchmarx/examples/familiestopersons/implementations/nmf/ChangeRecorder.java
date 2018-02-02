@@ -1,7 +1,6 @@
 package org.benchmarx.examples.familiestopersons.implementations.nmf;
 
 import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.HashMap;
 
@@ -10,12 +9,12 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.ecore.EReference;
 
-import Families.*;
-import Persons.*;
+import Families.FamilyRegister;
+import Persons.PersonRegister;
 
 class ChangeRecorder extends org.eclipse.emf.ecore.util.EContentAdapter {
 	

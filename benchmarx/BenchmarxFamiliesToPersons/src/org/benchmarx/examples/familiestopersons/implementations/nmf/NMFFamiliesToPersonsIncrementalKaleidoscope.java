@@ -10,7 +10,10 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 
 import org.benchmarx.Configurator;
+import org.benchmarx.emf.ModelAssertation;
 import org.benchmarx.examples.familiestopersons.testsuite.Decisions;
+import org.benchmarx.families.core.FamiliesComparator;
+import org.benchmarx.persons.core.PersonsComparator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -20,7 +23,9 @@ import org.junit.Assert;
 
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
+import com.kaleidoscope.core.delta.javabased.Delta;
 import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
+import com.kaleidoscope.core.framework.synchronisation.SynchronisationResult;
 import com.kaleidoscope.core.framework.synchronisation.Synchroniser;
 
 import Families.FamiliesFactory;
@@ -39,10 +44,14 @@ public class NMFFamiliesToPersonsIncrementalKaleidoscope implements Synchroniser
 																		Configurator<Decisions>, 
 																		OperationalDelta, 
 																		OperationalDelta
-																		>    { 
+																		>,
+																ModelAssertation<FamilyRegister, PersonRegister>   { 
 	private static final String NMF_EXE = "../implementationArtefacts/NMF/bin/NMFSolution.exe";
 	private FamilyRegister src;
 	private PersonRegister trg;	
+	
+	private FamiliesComparator srcHelper = new FamiliesComparator();
+	private PersonsComparator trgHelper = new PersonsComparator();
 	
 	private BufferedReader reader;
 	private BufferedWriter writer;
@@ -246,6 +255,35 @@ public class NMFFamiliesToPersonsIncrementalKaleidoscope implements Synchroniser
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public void assertPostcondition(FamilyRegister source, PersonRegister target,
+			SynchronisationResult<FamilyRegister, ?, PersonRegister, ?, ? extends Delta> syncResult) {
+		this.assertPrecondition(source, target, syncResult);
+		
+	}
+
+	@Override
+	public void assertPrecondition(FamilyRegister source, PersonRegister target,
+			SynchronisationResult<FamilyRegister, ?, PersonRegister, ?, ? extends Delta> syncResult) {
+		
+		String resultSrc = srcHelper.familyToString(readModel("SaveFamilies"));
+		String resultTrg = trgHelper.personsToString(readModel("SavePersons"));
+		
+		String expectedFamilyRegister = srcHelper.familyToString(source);
+		String expectedPersonsRegister = trgHelper.personsToString(target);
+		
+		normaliseAndCompare(expectedFamilyRegister, resultSrc);
+		normaliseAndCompare(expectedPersonsRegister, resultTrg);
+		
+	}
+	
+	
+	private void normaliseAndCompare(String expected, String actual) {
+		Assert.assertEquals(expected.replaceAll("\\s+",""), actual.replaceAll("\\s+",""));
+	}
+	
+	
 	
 }
 

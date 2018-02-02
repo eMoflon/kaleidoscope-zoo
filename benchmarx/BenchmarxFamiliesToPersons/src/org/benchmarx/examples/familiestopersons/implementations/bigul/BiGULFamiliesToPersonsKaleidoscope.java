@@ -12,12 +12,16 @@ import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 import org.benchmarx.Configurator;
+import org.benchmarx.emf.ModelAssertation;
 import org.benchmarx.examples.familiestopersons.testsuite.Decisions;
 import org.benchmarx.families.core.FamiliesComparator;
 import org.benchmarx.persons.core.PersonsComparator;
+import org.junit.Assert;
 
+import com.kaleidoscope.core.delta.javabased.Delta;
 import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
 import com.kaleidoscope.core.framework.synchronisation.SynchronisationFailedException;
+import com.kaleidoscope.core.framework.synchronisation.SynchronisationResult;
 import com.kaleidoscope.core.framework.synchronisation.Synchroniser;
 
 import Families.FamiliesFactory;
@@ -52,7 +56,8 @@ public class BiGULFamiliesToPersonsKaleidoscope  implements Synchroniser<
 																	Configurator<Decisions>, 
 																	OperationalDelta, 
 																	OperationalDelta
-																	> {
+																	> ,
+												ModelAssertation<FamilyRegister, PersonRegister>{
 	private static final boolean debug = false;
 	
 	private static final String BIGUL_EXE = "src/org/benchmarx/examples/familiestopersons/implementations/bigul/FamiliesToPersons";
@@ -69,6 +74,7 @@ public class BiGULFamiliesToPersonsKaleidoscope  implements Synchroniser<
 	public String getName() {
 		return "BiGUL";
 	}
+	
 	
 	@Override
 	public void initialise() {
@@ -179,6 +185,8 @@ public class BiGULFamiliesToPersonsKaleidoscope  implements Synchroniser<
 		
 	}
 
+	
+	
 	@Override
 	public void syncBackward(OperationalDelta trgDelta) throws SynchronisationFailedException {
 		
@@ -201,6 +209,33 @@ public class BiGULFamiliesToPersonsKaleidoscope  implements Synchroniser<
 	@Override
 	public void terminate() {
 		// TODO Auto-generated method stub
+		
+	}
+
+	private void normaliseAndCompare(String expected, String actual) {
+		Assert.assertEquals(expected.replaceAll("\\s+",""), actual.replaceAll("\\s+",""));
+	}
+	@Override
+	public void assertPostcondition(FamilyRegister source, PersonRegister target,
+			SynchronisationResult<FamilyRegister, ?, PersonRegister, ?, ? extends Delta> syncResult) {
+			propagation.run();
+		
+		String expectedFamilyRegister = srcHelper.familyToString(source);
+		String expectedPersonsRegister = trgHelper.personsToString(target);
+		
+		normaliseAndCompare(expectedFamilyRegister, resultSrc);
+		normaliseAndCompare(expectedPersonsRegister, resultTrg);
+		
+	}
+
+
+	@Override
+	public void assertPrecondition(FamilyRegister source, PersonRegister target,
+			SynchronisationResult<FamilyRegister, ?, PersonRegister, ?, ? extends Delta> syncResult) {
+		src = source;
+		trg = target;
+		resultSrc = srcHelper.familyToString(src);
+		resultTrg = trgHelper.personsToString(trg);
 		
 	}
 	

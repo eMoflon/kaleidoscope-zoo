@@ -10,16 +10,19 @@ import org.benchmarx.Configurator;
 import org.benchmarx.emf.Comparator;
 import org.benchmarx.emf.EMFModelAssertation;
 import org.benchmarx.emf.ModelAssertation;
+import org.benchmarx.examples.familiestopersons.implementations.bigul.BiGULFamiliesToPersonsKaleidoscope;
 import org.benchmarx.examples.familiestopersons.implementations.bxtend.UbtXtendFamiliesToPersonsKaleidoscope;
-import org.benchmarx.examples.familiestopersons.implementations.emoflon.EMoflonFamiliesToPersons;
 import org.benchmarx.examples.familiestopersons.implementations.emoflon.EMoflonFamiliesToPersonsKaleidoscope;
+import org.benchmarx.examples.familiestopersons.implementations.funnyqt.FunnyQTFamiliesToPersonKaleidoscope;
+import org.benchmarx.examples.familiestopersons.implementations.medini.MediniQVTFamiliesToPersonsKaleidoscope;
+import org.benchmarx.examples.familiestopersons.implementations.nmf.NMFFamiliesToPersonsIncrementalKaleidoscope;
 import org.benchmarx.families.core.FamiliesComparator;
 import org.benchmarx.families.core.FamilyHelper;
 import org.benchmarx.persons.core.PersonHelper;
 import org.benchmarx.persons.core.PersonsComparator;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
@@ -28,7 +31,6 @@ import com.kaleidoscope.core.auxiliary.xmi.artefactadapter.XMIArtefactAdapter;
 import com.kaleidoscope.core.delta.javabased.opaque.OpaqueDelta;
 import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
 import com.kaleidoscope.core.framework.synchronisation.SynchronisationFailedException;
-import com.kaleidoscope.core.framework.synchronisation.SynchronisationResult;
 import com.kaleidoscope.core.framework.synchronisation.Synchroniser;
 import com.kaleidoscope.core.framework.workflow.adapters.ArtefactAdapter;
 import com.kaleidoscope.core.framework.workflow.controllers.deltabased.DeltaBasedController;
@@ -38,6 +40,7 @@ import Families.FamilyRegister;
 import Persons.PersonRegister;
 import Persons.PersonsPackage;
 
+@Ignore
 @RunWith(Parameterized.class)
 public class FamiliesToPersonsTestCaseController {
 
@@ -108,30 +111,52 @@ public class FamiliesToPersonsTestCaseController {
 
 	@Parameters
 	public static Collection<Object[]> data() {
-		return Arrays.asList(new Object[][] { {
-			new EMoflonFamiliesToPersonsKaleidoscope(),
-			new EMFModelAssertation< FamilyRegister, PersonRegister>(new FamiliesComparator(), new PersonsComparator()) } });
+		
+		Synchroniser<FamilyRegister,
+					PersonRegister,
+					Configurator<Decisions>,
+					OperationalDelta,
+					OperationalDelta> nmfTool  =new NMFFamiliesToPersonsIncrementalKaleidoscope();	
+		
+		Synchroniser<FamilyRegister,
+		PersonRegister,
+		Configurator<Decisions>,
+		OperationalDelta,
+		OperationalDelta> bigulTool  =new BiGULFamiliesToPersonsKaleidoscope();	
+		 
+		return Arrays.asList(new Object[][] { 
+			{
+				new EMoflonFamiliesToPersonsKaleidoscope(),
+				new EMFModelAssertation< FamilyRegister, PersonRegister>(new FamiliesComparator(), new PersonsComparator()) 
+			},
+			
+			{
+				new UbtXtendFamiliesToPersonsKaleidoscope(),
+				new EMFModelAssertation< FamilyRegister, PersonRegister>(new FamiliesComparator(), new PersonsComparator()) 
+			},
+			
+			{
+				nmfTool,
+				nmfTool 
+			},
+			
+			{
+				new FunnyQTFamiliesToPersonKaleidoscope(),
+				new EMFModelAssertation< FamilyRegister, PersonRegister>(new FamiliesComparator(), new PersonsComparator()) 
+			},
+			
+			{
+				bigulTool,
+				bigulTool 
+			},
+			
+			{
+				new MediniQVTFamiliesToPersonsKaleidoscope(),
+				new EMFModelAssertation< FamilyRegister, PersonRegister>(new FamiliesComparator(), new PersonsComparator()) 
+			}
+		
+		});
 	}
-
-	// @Parameters
-	// public static Collection<BXTool<FamilyRegister, PersonRegister, Decisions>>
-	// tools() {
-	// return Arrays.asList(
-	// //new BiGULFamiliesToPersons() // Currently 9 failures
-	// //,
-	// new EMoflonFamiliesToPersons() // Currently 6 failures
-	// /*,
-	// new MediniQVTFamiliesToPersons() // Currently 19 failures
-	// ,
-	// new MediniQVTFamiliesToPersonsConfig() // Currently 12 failures
-	// ,
-	// new UbtXtendFamiliesToPersons() // Currently 0 failures
-	// ,
-	// new FunnyQTFamiliesToPerson() // Currently 10 failures
-	// ,
-	// new NMFFamiliesToPersonsIncremental() // Currently 3 failures*/
-	// );
-	// }
 
 	public FamiliesToPersonsTestCaseController(
 			Synchroniser<FamilyRegister, PersonRegister, Configurator<Decisions>, OperationalDelta, OperationalDelta> tool,

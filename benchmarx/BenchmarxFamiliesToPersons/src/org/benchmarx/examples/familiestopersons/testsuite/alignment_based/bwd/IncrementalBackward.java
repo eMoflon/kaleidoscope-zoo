@@ -332,7 +332,7 @@ public class IncrementalBackward extends FamiliesToPersonsTestCaseController {
 	 * <b>Features</b>: bwd, runtime
 	 * @throws SynchronisationFailedException 
 	 */
-	@Test
+	//@Test
 	public void testStability() throws SynchronisationFailedException {
 		// No precondition!
 		// ---------------------------------
@@ -359,7 +359,7 @@ public class IncrementalBackward extends FamiliesToPersonsTestCaseController {
 				syncResult);  
 	}
 	
-	@Test
+	//@Test
 	public void testHippocraticness() throws SynchronisationFailedException {
 		// No precondition!
 		// ---------------------------------

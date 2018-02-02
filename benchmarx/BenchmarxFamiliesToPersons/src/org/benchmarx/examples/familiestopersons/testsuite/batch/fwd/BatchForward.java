@@ -1,6 +1,5 @@
 package org.benchmarx.examples.familiestopersons.testsuite.batch.fwd;
 
-import org.benchmarx.BXTool;
 import org.benchmarx.Configurator;
 import org.benchmarx.emf.ModelAssertation;
 import org.benchmarx.examples.familiestopersons.testsuite.Decisions;
