@@ -23,10 +23,11 @@ class InitialProjectStructure extends com.kaleidoscope.usecase.showcase.first.ec
 		import Persons.PersonsFactory;
 		import Persons.impl.PersonsPackageImpl;
 		import Employees.impl.EmployeesPackageImpl;
+		import com.kaleidoscope.core.framework.synchronisation.SynchronisationFailedException;
 		
 		public class App {
 		
-			public static void main(String[] args) {
+			public static void main(String[] args) throws SynchronisationFailedException {
 				BasicConfigurator.configure();
 				PersonsPackageImpl.init();
 				EmployeesPackageImpl.init();
