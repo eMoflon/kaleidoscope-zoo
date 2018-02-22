@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.emoflon.ibex.tgg.core.language:TGG xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.emoflon.ibex.tgg.core.language="platform:/plugin/org.emoflon.ibex.tgg.core.language/model/Language.ecore#/" name="SimpleExcelToEmployee">
+  <src href="platform:/resource/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#/"/>
+  <trg href="platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employees.ecore#/"/>
+  <corr href="platform:/resource/SimpleExcelToEmployee/model/SimpleExcelToEmployee.ecore#/"/>
+  <rules name="SimpleExcelToEmployeeContainerRule">
+    <nodes name="simpleExcelContainer" bindingType="CREATE" incomingCorrsSource="//@rules.0/@nodes.2">
+      <type href="platform:/resource/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//File"/>
+    </nodes>
+    <nodes name="employeeContainer" domainType="TRG" bindingType="CREATE" incomingCorrsTarget="//@rules.0/@nodes.2">
+      <type href="platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employees.ecore#//EmployeeContainer"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="simpleExcelToEmployeeContainerRule" domainType="CORR" bindingType="CREATE" source="//@rules.0/@nodes.0" target="//@rules.0/@nodes.1">
+      <type href="platform:/resource/SimpleExcelToEmployee/model/SimpleExcelToEmployee.ecore#//SimpleExcelToEmployeeContainerRelation"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <attributeConstraintDefinitionLibrary/>
+</org.emoflon.ibex.tgg.core.language:TGG>

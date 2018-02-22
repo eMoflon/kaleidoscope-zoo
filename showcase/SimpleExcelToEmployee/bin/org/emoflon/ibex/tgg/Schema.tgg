@@ -1,0 +1,24 @@
+// Add imports here
+#import "platform:/resource/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore"
+#import "platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employees.ecore"
+
+#schema SimpleExcelToEmployee
+	
+#source {
+	Simpleexcel
+}
+
+#target { 
+	Employees
+} 
+
+#correspondence {
+	SimpleExcelToEmployeeContainerRelation {
+		#src->Simpleexcel.File
+		#trg->EmployeeContainer	
+	}
+}
+
+#attributeConditions {
+	
+}

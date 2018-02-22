@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ASCII"?>
+<SimpleExcelToEmployee:SimpleExcelToEmployeeContainerRelation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:SimpleExcelToEmployee="platform:/resource/SimpleExcelToEmployee/model/SimpleExcelToEmployee.ecore">
+  <source href="src.xmi#/"/>
+  <target href="trg.xmi#/"/>
+</SimpleExcelToEmployee:SimpleExcelToEmployeeContainerRelation>

@@ -1,0 +1,23 @@
+#using SimpleExcelToEmployee.*
+#using AttrCondDefLibrary.*
+
+#rule SimpleExcelToEmployeeContainerRule #with SimpleExcelToEmployee
+
+#source { 
+	++simpleExcelContainer:Simpleexcel.File
+}
+
+#target {
+	++employeeContainer:EmployeeContainer
+}
+
+#correspondence {
+	++simpleExcelToEmployeeContainerRule:SimpleExcelToEmployeeContainerRelation{
+		#src->simpleExcelContainer
+		#trg->employeeContainer
+	}
+}
+
+#attributeConditions {
+	
+}
