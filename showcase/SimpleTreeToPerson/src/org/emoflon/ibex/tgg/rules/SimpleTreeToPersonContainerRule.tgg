@@ -1,0 +1,23 @@
+#using SimpleTreeToPerson.*
+#using AttrCondDefLibrary.*
+
+#rule SimpleTreeToPersonContainerRule #with SimpleTreeToPerson
+
+#source { 
+	++simpleTreeContainer:Simpletree.File
+}
+
+#target {
+	++personContainer:PersonContainer
+}
+
+#correspondence {
+	++simpleTreeToPersonContainerRule: SimpleTreeToPersonContainerRelation{
+		#src->simpleTreeContainer
+		#trg->personContainer
+	}
+}
+
+#attributeConditions {
+	
+}
