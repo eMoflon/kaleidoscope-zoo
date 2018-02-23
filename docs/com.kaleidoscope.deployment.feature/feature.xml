@@ -107,4 +107,18 @@
          version="0.0.0"
          unpack="false"/>
 
+   <plugin
+         id="com.kaleidoscope.core.aux.simpleexcel"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.kaleidoscope.core.aux.simpletree"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
 </feature>

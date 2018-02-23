@@ -17,6 +17,8 @@ import com.kaleidoscope.usecase.showcase.first.controller.ControllerType;
 import com.kaleidoscope.usecase.showcase.first.eclipse.Builder;
 import com.kaleidoscope.usecase.showcase.xmlexcel.controller.ArtefactAdapterModule;
 
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 public class XmlExcelBuilder extends Builder {
 	public static String srcArtefact = "src.xml";
 	public static String trgArtefact = "trg.xml";

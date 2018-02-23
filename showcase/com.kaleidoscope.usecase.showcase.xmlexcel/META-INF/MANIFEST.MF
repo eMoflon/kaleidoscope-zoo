@@ -8,7 +8,6 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.emoflon.ibex.tgg.core.runtime,
  com.kaleidoscope.usecase.showcase.first;bundle-version="1.0.0",
  org.eclipse.core.resources;bundle-version="3.12.0",
- com.kaleidoscope.core.aux.simpleexcel;bundle-version="1.0.0",
  com.kaleidoscope.core.aux.simpletree;bundle-version="0.1.0",
  com.kaleidoscope.usecase.showcase.metamodel.person,
  com.kaleidoscope.usecase.showcase.metamodel.employee,
@@ -29,5 +28,6 @@ Require-Bundle: org.emoflon.ibex.tgg.core.runtime,
  org.eclipse.xtend.lib.macro,
  SimpleTreeToPerson;bundle-version="1.0.0",
  org.apache.log4j,
- SimpleExcelToEmployee
+ SimpleExcelToEmployee,
+ com.kaleidoscope.core.aux.simpleexcel;bundle-version="1.0.0"
 
