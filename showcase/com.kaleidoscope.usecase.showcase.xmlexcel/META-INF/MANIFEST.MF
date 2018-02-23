@@ -29,5 +29,6 @@ Require-Bundle: org.emoflon.ibex.tgg.core.runtime,
  SimpleTreeToPerson;bundle-version="1.0.0",
  org.apache.log4j,
  SimpleExcelToEmployee,
- com.kaleidoscope.core.aux.simpleexcel;bundle-version="1.0.0"
+ com.kaleidoscope.core.aux.simpleexcel;bundle-version="1.0.0",
+ org.emoflon.ibex.common;bundle-version="1.0.0"
 
