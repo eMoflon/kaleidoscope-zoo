@@ -1,3 +1,2 @@
-#Allow
-!.classpath
-!.project
+/bin
+/model/*.genmodel
