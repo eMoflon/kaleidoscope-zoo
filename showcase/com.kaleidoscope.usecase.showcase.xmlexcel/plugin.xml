@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="com.kaleidoscope.usecase.showcase.xmlexcel.newproject"
+            name="Showcase XML_EXCEL new Project Wizards">
+      </category>
+      <wizard
+            category="Showcase XML_EXCEL New Project Wizards"
+            class="com.kaleidoscope.usecase.showcase.xmlexcel.eclipse.XmlExcelNewProjectWizard"
+            id="com.kaleidoscope.usecase.showcase.xmlexcel.newproject"
+            name="New Showcase XML_EXCEL Project">
+      </wizard>
+   </extension>
+   <extension
+         id="com.kaleidoscope.usecase.showcase.xmlexcel.nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="com.kaleidoscope.usecase.showcase.xmlexcel.eclipse.ShowcaseXmlExcelNature">
+         </run>
+      </runtime>
+   </extension>
+   <extension
+         id="com.kaleidoscope.usecase.showcase.xmlexcel.builder"
+         name="ShowcaseXmlExcelBuilder"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            callOnEmptyDelta="true">
+         <run
+               class="com.kaleidoscope.usecase.showcase.xmlexcel.eclipse.XmlExcelBuilder">
+         </run>
+       </builder>
+   </extension>
+
+</plugin>

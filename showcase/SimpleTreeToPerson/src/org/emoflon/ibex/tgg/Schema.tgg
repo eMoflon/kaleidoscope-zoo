@@ -1,0 +1,24 @@
+// Add imports here
+#import "platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore"
+#import "platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.person/model/Person.ecore"
+
+#schema SimpleTreeToPerson
+	
+#source {
+	Simpletree
+}
+
+#target { 
+	Persons
+} 
+
+#correspondence {
+	SimpleTreeToPersonContainerRelation{
+		#src->File
+		#trg->PersonContainer
+	}
+}
+
+#attributeConditions {
+	
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<com.kaleidoscope.usecase.showcase.metamodel.employee:EmployeeContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.kaleidoscope.usecase.showcase.metamodel.employee="platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employees.ecore">
+  <employees name="test name"/>
+</com.kaleidoscope.usecase.showcase.metamodel.employee:EmployeeContainer>

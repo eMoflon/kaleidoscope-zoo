@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?eclipse version="3.0"?><plugin>
   <extension point="org.eclipse.emf.ecore.generated_package">
-    <package class="Employees.EmployeesPackage" genModel="model/Employee.genmodel" uri="platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employees.ecore"/>
+    <package class="Employees.EmployeesPackage" genModel="model/Employee.genmodel" uri="platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore"/>
   </extension>
 </plugin>
