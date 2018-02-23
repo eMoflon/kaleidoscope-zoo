@@ -1,6 +1,6 @@
 // Add imports here
-#import "platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore"
-#import "platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.person/model/Persons.ecore"
+#import "platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore"
+#import "platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.person/model/Person.ecore"
 
 #schema SimpleTreeToPerson
 	
