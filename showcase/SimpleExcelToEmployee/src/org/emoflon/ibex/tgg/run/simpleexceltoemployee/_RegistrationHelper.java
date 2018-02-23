@@ -1,6 +1,5 @@
 package org.emoflon.ibex.tgg.run.simpleexceltoemployee;
 
-import org.apache.commons.lang3.NotImplementedException;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.emoflon.ibex.tgg.operational.strategies.OperationalStrategy;
 

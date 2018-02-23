@@ -3,14 +3,13 @@ package com.kaleidoscope.usecase.showcase.xmlexcel.artefactadapter;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Optional;
+
 import org.emoflon.ibex.tgg.run.simpleexceltoemployee.SYNC_App_EXCEL;
-import org.emoflon.ibex.tgg.run.simpletreetoperson.*;
 
 import com.kaleidoscope.core.auxiliary.simpleexcel.artefactadapter.ExcelArtefactAdapter;
 import com.kaleidoscope.core.framework.workflow.adapters.ArtefactAdapter;
 
 import Employees.EmployeeContainer;
-import Persons.PersonContainer;
 import Simpleexcel.File;
 
 public class EmployeeArtefactAdapter implements ArtefactAdapter<EmployeeContainer, Path> {
