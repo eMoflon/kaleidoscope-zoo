@@ -15,7 +15,7 @@ import com.kaleidoscope.core.framework.annotations.Dest;
 import com.kaleidoscope.core.framework.annotations.Src;
 import com.kaleidoscope.core.framework.annotations.Trg;
 import com.kaleidoscope.core.framework.synchronisation.PersistentSynchroniser;
-import com.kaleidoscope.core.framework.workflow.adapters.DeltaAdapter;
+import com.kaleidoscope.core.framework.workflow.adapters.DeltaInputAdapter;
 import com.kaleidoscope.core.framework.workflow.controllers.deltabased.PersistentDeltaBasedController;
 import com.kaleidoscope.usecase.showcase.first.controller.ArtefactAdapterModule;
 import com.kaleidoscope.usecase.showcase.fourth.delta.OpaqueToOperationalDeltaAdapter;
@@ -49,7 +49,7 @@ public class ControllerModule extends AbstractModule {
 
 	@Provides
 	@Src
-	DeltaAdapter<
+	DeltaInputAdapter<
 		OperationalDelta, 
 		OpaqueDelta<PersonContainer>, 
 		PersonContainer
@@ -60,7 +60,7 @@ public class ControllerModule extends AbstractModule {
 
 	@Provides
 	@Trg
-	DeltaAdapter<
+	DeltaInputAdapter<
 		OperationalDelta, 
 		OpaqueDelta<EmployeeContainer>, 
 		EmployeeContainer
