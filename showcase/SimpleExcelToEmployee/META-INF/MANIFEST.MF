@@ -29,4 +29,5 @@ Bundle-ManifestVersion: 2
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: eMoflon IBeX
-Export-Package: org.emoflon.ibex.tgg.run.simpleexceltoemployee
+Export-Package: org.emoflon.ibex.tgg.operational.csp.constraints.factories,
+ org.emoflon.ibex.tgg.run.simpleexceltoemployee

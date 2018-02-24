@@ -1,27 +1,20 @@
 package com.kaleidoscope.usecase.showcase.xmlexcel.artefactadapter;
 
-import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Optional;
 
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
-import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.apache.log4j.Logger;
 import org.emoflon.ibex.tgg.run.simpletreetoperson.SYNC_App_XML;
 
 import com.kaleidoscope.core.auxiliary.simpletree.artefactadapter.XML.XMLArtefactAdapter;
 import com.kaleidoscope.core.framework.workflow.adapters.ArtefactAdapter;
 
 import Persons.PersonContainer;
-import Simpleexcel.SimpleexcelPackage;
 import Simpletree.Node;
 
-public class PersonArtefactAdapter implements ArtefactAdapter<Persons.PersonContainer, Path> { 
-	
+public class PersonArtefactAdapter implements ArtefactAdapter<Persons.PersonContainer, Path> { 	
+	private static final Logger logger = Logger.getLogger(PersonArtefactAdapter.class);
 	private Optional<Persons.PersonContainer> model;
-	private Optional<Persons.PersonContainer> simpleTreeModel;
 	private Path path;
 	
 	public PersonArtefactAdapter(Path path) {		
@@ -31,33 +24,30 @@ public class PersonArtefactAdapter implements ArtefactAdapter<Persons.PersonCont
 	
 	@Override
 	public void parse() {
-		System.out.println("Reading from XML file start ...");
+		logger.debug("Reading from XML file start ...");
 		
-		//Call XMLArtefactAdapter and get Simpletree Model from XML
-		ResourceSet set = setResourceSet();
-		XMLArtefactAdapter xmlArtefactAdapter  = new XMLArtefactAdapter(this.path);
+		// Call XMLArtefactAdapter and get Simpletree Model from XML
+		XMLArtefactAdapter xmlArtefactAdapter  = new XMLArtefactAdapter(path);
 		xmlArtefactAdapter.parse();
 		Optional<Node> simpleTreeModelFromXml = xmlArtefactAdapter.getModel();
 		
-		//TODO: Convert SimpleTree Model to Person Model using TGG
-			simpleTreeModelFromXml.ifPresent(tree -> {
-				try {
-				SYNC_App_XML sync = new SYNC_App_XML(true, tree.eResource());
+		// Convert SimpleTree Model to Person Model using TGG
+		simpleTreeModelFromXml.ifPresent(tree -> {
+			try {
+				SYNC_App_XML sync = new SYNC_App_XML(true, tree);
 				sync.forward();
 				setModel((PersonContainer) sync.getTargetResource().getContents().get(0));
 				sync.terminate();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			});
-		System.out.println();
+			} catch (Exception|Error e) {
+				e.printStackTrace();
+			}
+		});
 	}
 
 
 	@Override
 	public void unparse() {
-		System.out.println("Reading from model start ...");
+		logger.debug("Reading from model start ...");
 		
 		//TODO: Convert Persons Model to SimpleTree model
 		//TODO : Call XMLArtefactAdapter, send simpleTreeModel and get XML back. 
@@ -81,21 +71,6 @@ public class PersonArtefactAdapter implements ArtefactAdapter<Persons.PersonCont
 
 	@Override
 	public void setModel(PersonContainer m) {
-		// TODO Auto-generated method stub
-		
+		model = Optional.of(m);
 	}
-	
-	private static ResourceSet setResourceSet() {
-		// obtain a new resource set
-		ResourceSet set = new ResourceSetImpl();
-
-		// TODO Auto-generated method stub
-		set.getPackageRegistry().put(SimpleexcelPackage.eNS_URI, SimpleexcelPackage.eINSTANCE);
-		set.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION,
-				new EcoreResourceFactoryImpl());
-		set.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xmi", new XMIResourceFactoryImpl());
-		set.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore", new EcoreResourceFactoryImpl());
-		return set;
-	}
-
 }
