@@ -1,19 +1,186 @@
 <?xml version="1.0" encoding="ASCII"?>
-<org.emoflon.ibex.tgg.core.language:TGG xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.emoflon.ibex.tgg.core.language="platform:/plugin/org.emoflon.ibex.tgg.core.language/model/Language.ecore#/" name="SimpleTreeToPerson">
+<org.emoflon.ibex.tgg.core.language:TGG xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.emoflon.ibex.tgg.core.language="platform:/plugin/org.emoflon.ibex.tgg.core.language/model/Language.ecore#/" xmlns:org.emoflon.ibex.tgg.core.language.misc.expressions="platform:/plugin/org.emoflon.ibex.tgg.core.language/model/Language.ecore#/misc/expressions" name="SimpleTreeToPerson">
   <src href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#/"/>
   <trg href="platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.person/model/Persons.ecore#/"/>
   <corr href="platform:/resource/SimpleTreeToPerson/model/SimpleTreeToPerson.ecore#/"/>
-  <rules name="SimpleTreeToPersonContainerRule">
-    <nodes name="simpleTreeContainer" bindingType="CREATE" incomingCorrsSource="//@rules.0/@nodes.2">
-      <type href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//File"/>
+  <rules name="PersonToNodeRule">
+    <nodes name="rootNode" incomingEdges="//@rules.0/@edges.5" outgoingEdges="//@rules.0/@edges.0" incomingCorrsSource="//@rules.0/@nodes.7">
+      <type href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Node"/>
     </nodes>
-    <nodes name="personContainer" domainType="TRG" bindingType="CREATE" incomingCorrsTarget="//@rules.0/@nodes.2">
+    <nodes name="newPersonNode" bindingType="CREATE" incomingEdges="//@rules.0/@edges.0 //@rules.0/@edges.6 //@rules.0/@edges.7" outgoingEdges="//@rules.0/@edges.1 //@rules.0/@edges.2 //@rules.0/@edges.5" incomingCorrsSource="//@rules.0/@nodes.8">
+      <type href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Node"/>
+      <attrExpr>
+        <attribute href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//TreeElement/name"/>
+        <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;person&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="personId" bindingType="CREATE" incomingEdges="//@rules.0/@edges.1" outgoingEdges="//@rules.0/@edges.6">
+      <type href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Attribute"/>
+      <attrExpr>
+        <attribute href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//TreeElement/name"/>
+        <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;id&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="personName" bindingType="CREATE" incomingEdges="//@rules.0/@edges.2 //@rules.0/@edges.3" outgoingEdges="//@rules.0/@edges.7 //@rules.0/@edges.8">
+      <type href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Node"/>
+      <attrExpr>
+        <attribute href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//TreeElement/name"/>
+        <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;name&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="personNameNodeText" bindingType="CREATE" incomingEdges="//@rules.0/@edges.8" outgoingEdges="//@rules.0/@edges.3">
+      <type href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Text"/>
+    </nodes>
+    <nodes name="personContainer" domainType="TRG" outgoingEdges="//@rules.0/@edges.4" incomingCorrsTarget="//@rules.0/@nodes.7">
       <type href="platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.person/model/Persons.ecore#//PersonContainer"/>
     </nodes>
-    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="simpleTreeToPersonContainerRule" domainType="CORR" bindingType="CREATE" source="//@rules.0/@nodes.0" target="//@rules.0/@nodes.1">
+    <nodes name="newTrgPerson" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.4" incomingCorrsTarget="//@rules.0/@nodes.8">
+      <type href="platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.person/model/Persons.ecore#//Person"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="simpleTreeToPersonContainerRule" domainType="CORR" source="//@rules.0/@nodes.0" target="//@rules.0/@nodes.5">
       <type href="platform:/resource/SimpleTreeToPerson/model/SimpleTreeToPerson.ecore#//SimpleTreeToPersonContainerRelation"/>
     </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="nodeToPersonRule" domainType="CORR" bindingType="CREATE" source="//@rules.0/@nodes.1" target="//@rules.0/@nodes.6">
+      <type href="platform:/resource/SimpleTreeToPerson/model/SimpleTreeToPerson.ecore#//PersonToNodeRelation"/>
+    </nodes>
+    <edges name="rootNode__children__newPersonNode_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.0" trgNode="//@rules.0/@nodes.1">
+      <type href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Node/children"/>
+    </edges>
+    <edges name="newPersonNode__attribute__personId_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.1" trgNode="//@rules.0/@nodes.2">
+      <type href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Node/attribute"/>
+    </edges>
+    <edges name="newPersonNode__children__personName_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.1" trgNode="//@rules.0/@nodes.3">
+      <type href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Node/children"/>
+    </edges>
+    <edges name="personNameNodeText__parentNode__personName_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.4" trgNode="//@rules.0/@nodes.3">
+      <type href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Text/parentNode"/>
+    </edges>
+    <edges name="personContainer__persons__newTrgPerson_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.5" trgNode="//@rules.0/@nodes.6">
+      <type href="platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.person/model/Persons.ecore#//PersonContainer/persons"/>
+    </edges>
+    <edges name="newPersonNode__parentNode__rootNode_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.1" trgNode="//@rules.0/@nodes.0">
+      <type href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Text/parentNode"/>
+    </edges>
+    <edges name="personId__node__newPersonNode_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.2" trgNode="//@rules.0/@nodes.1">
+      <type href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Attribute/node"/>
+    </edges>
+    <edges name="personName__parentNode__newPersonNode_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.3" trgNode="//@rules.0/@nodes.1">
+      <type href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Text/parentNode"/>
+    </edges>
+    <edges name="personName__children__personNameNodeText_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.3" trgNode="//@rules.0/@nodes.4">
+      <type href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Node/children"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0" parameters="//@rules.0/@attributeConditionLibrary/@parameterValues.0 //@rules.0/@attributeConditionLibrary/@parameterValues.1"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1" parameters="//@rules.0/@attributeConditionLibrary/@parameterValues.2 //@rules.0/@attributeConditionLibrary/@parameterValues.3"/>
+      <parameterValues xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.0" objectVar="//@rules.0/@nodes.2">
+        <attribute href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Attribute/value"/>
+      </parameterValues>
+      <parameterValues xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.1" objectVar="//@rules.0/@nodes.6">
+        <attribute href="platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.person/model/Persons.ecore#//Person/ID"/>
+      </parameterValues>
+      <parameterValues xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1/@parameterDefinitions.0" objectVar="//@rules.0/@nodes.4">
+        <attribute href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//TreeElement/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1/@parameterDefinitions.1" objectVar="//@rules.0/@nodes.6">
+        <attribute href="platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.person/model/Persons.ecore#//Person/name"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="SimpleTreeToPersonContainerRule">
+    <nodes name="simpleTreeContainer" bindingType="CREATE" outgoingEdges="//@rules.1/@edges.0">
+      <type href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//File"/>
+    </nodes>
+    <nodes name="rootNode" bindingType="CREATE" incomingEdges="//@rules.1/@edges.0" incomingCorrsSource="//@rules.1/@nodes.3">
+      <type href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Node"/>
+      <attrExpr>
+        <attribute href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//TreeElement/name"/>
+        <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;people&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="personContainer" domainType="TRG" bindingType="CREATE" incomingCorrsTarget="//@rules.1/@nodes.3">
+      <type href="platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.person/model/Persons.ecore#//PersonContainer"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="simpleTreeToPersonContainerRule" domainType="CORR" bindingType="CREATE" source="//@rules.1/@nodes.1" target="//@rules.1/@nodes.2">
+      <type href="platform:/resource/SimpleTreeToPerson/model/SimpleTreeToPerson.ecore#//SimpleTreeToPersonContainerRelation"/>
+    </nodes>
+    <edges name="simpleTreeContainer__rootNode__rootNode_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.1/@nodes.0" trgNode="//@rules.1/@nodes.1">
+      <type href="platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//File/rootNode"/>
+    </edges>
     <attributeConditionLibrary/>
   </rules>
-  <attributeConstraintDefinitionLibrary/>
+  <attributeConstraintDefinitionLibrary>
+    <tggAttributeConstraintDefinitions name="stringToInt" userDefined="false">
+      <parameterDefinitions name="stringValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="intValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_string" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+  </attributeConstraintDefinitionLibrary>
 </org.emoflon.ibex.tgg.core.language:TGG>

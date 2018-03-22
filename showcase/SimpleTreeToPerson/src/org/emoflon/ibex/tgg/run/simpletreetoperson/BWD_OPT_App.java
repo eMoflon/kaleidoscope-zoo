@@ -3,15 +3,15 @@ package org.emoflon.ibex.tgg.run.simpletreetoperson;
 import java.io.IOException;
 
 import org.apache.log4j.BasicConfigurator;
-import org.eclipse.emf.ecore.util.EcoreUtil;
+
 import org.emoflon.ibex.tgg.operational.csp.constraints.factories.UserDefinedRuntimeTGGAttrConstraintFactory;
 import org.emoflon.ibex.tgg.operational.defaults.IbexOptions;
-import org.emoflon.ibex.tgg.operational.strategies.sync.SYNC;
+import org.emoflon.ibex.tgg.operational.strategies.sync.BWD_OPT;
 import org.emoflon.ibex.tgg.runtime.engine.DemoclesTGGEngine;
 
-public class SYNC_App extends SYNC {
+public class BWD_OPT_App extends BWD_OPT {
 
-	public SYNC_App() throws IOException {
+	public BWD_OPT_App() throws IOException {
 		super(createIbexOptions());
 		registerBlackInterpreter(new DemoclesTGGEngine());
 	}
@@ -19,16 +19,16 @@ public class SYNC_App extends SYNC {
 	public static void main(String[] args) throws IOException {
 		BasicConfigurator.configure();
 
-		SYNC_App sync = new SYNC_App();
+		BWD_OPT_App bwd_opt = new BWD_OPT_App();
 		
-		logger.info("Starting SYNC");
+		logger.info("Starting BWD_OPT");
 		long tic = System.currentTimeMillis();
-		sync.backward();
+		bwd_opt.run();
 		long toc = System.currentTimeMillis();
-		logger.info("Completed SYNC in: " + (toc - tic) + " ms");
+		logger.info("Completed BWD_OPT in: " + (toc - tic) + " ms");
 		
-		sync.saveModels();
-		sync.terminate();
+		bwd_opt.saveModels();
+		bwd_opt.terminate();
 	}
 
 	protected void registerUserMetamodels() throws IOException {
@@ -45,15 +45,5 @@ public class SYNC_App extends SYNC {
 			options.debug(false);
 			options.userDefinedConstraints(new UserDefinedRuntimeTGGAttrConstraintFactory());
 			return options;
-	}
-	
-	@Override
-	public void loadModels() throws IOException {
-		s = createResource(projectPath + "/instances/src.xmi");
-		t = loadResource(projectPath + "/instances/trg.xmi");
-		c = createResource(projectPath + "/instances/corr.xmi");
-		p = createResource(projectPath + "/instances/protocol.xmi");
-
-		EcoreUtil.resolveAll(rs);
 	}
 }

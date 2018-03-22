@@ -1,6 +1,8 @@
 package org.emoflon.ibex.tgg.run.simpletreetoperson;
 
 import java.io.IOException;
+
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EcoreUtil;
@@ -12,33 +14,43 @@ import org.emoflon.ibex.tgg.runtime.engine.DemoclesTGGEngine;
 public class SYNC_App_XML extends SYNC {
 
 	private boolean fwd;
-	private Resource input;
+	private EObject input;
+	private boolean local;
 
-	public SYNC_App_XML(boolean fwd, Resource input) throws IOException {
+	public SYNC_App_XML(boolean fwd, boolean local, EObject input) throws IOException {
 		super(createIbexOptions());
 		this.fwd = fwd;
 		this.input = input;
+		this.local = local;
 		registerBlackInterpreter(new DemoclesTGGEngine());
 	}
 	
 	@Override
 	protected Resource loadTGGResource() throws IOException{
-		return loadResource("platform:/plugin/" + "SimpleTreeToPerson" + "/model/" + "SimpleTreeToPerson" + ".tgg.xmi");
+		if(local)
+			return loadResource("platform:/resource/" + options.projectName() + "/model/" + options.projectName() + ".tgg.xmi");
+		else
+			return loadResource("platform:/plugin/" + options.projectName() + "/model/" + options.projectName() + ".tgg.xmi");
 	}
 	
 	@Override
 	protected Resource loadFlattenedTGGResource() throws IOException{
-		return loadResource("platform:/plugin/" + "SimpleTreeToPerson" + "/model/" + "SimpleTreeToPerson" + "_flattened.tgg.xmi");
+		if(local)
+			return loadResource("platform:/resource/" + options.projectName() + "/model/" + options.projectName() + "_flattened.tgg.xmi");
+		else
+			return loadResource("platform:/plugin/" + options.projectName() + "/model/" + options.projectName() + "_flattened.tgg.xmi");
 	}
 	
 	
 	@Override
 	public void loadModels() throws IOException {
 		if(fwd) {			
-			s = input;
-			t = createResource("temp/instances/trg.xmi");
+			s = createResource("temp/instances/src.xmi");
+			s.getContents().add(input);
+			t = createResource("temp/instances/trg.xml");
 		} else {
-			t = input;
+			t = createResource("temp/instances/trg.xml");
+			t.getContents().add(input);
 			s = createResource("temp/instances/src.xmi");
 		}
 		
@@ -53,10 +65,8 @@ public class SYNC_App_XML extends SYNC {
 			
 		// Register correspondence metamodel
 
-		loadAndRegisterMetamodel("platform:/plugin/SimpleTreeToPerson/model/SimpleTreeToPerson.ecore");
-		
-		EPackage pack = (EPackage) rs.getPackageRegistry().get("platform:/plugin/SimpleTreeToPerson/model/SimpleTreeToPerson.ecore");
-		rs.getPackageRegistry().put("platform:/resource/SimpleTreeToPerson/model/SimpleTreeToPerson.ecore", pack);
+		loadAndRegisterMetamodel(projectPath + "/model/" + projectPath + ".ecore");
+		//loadAndRegisterMetamodel("platform:/plugin/SimpleTreeToPerson/model/SimpleTreeToPerson.ecore");
 	}
 	
 	private static IbexOptions createIbexOptions() {

@@ -4,7 +4,13 @@
 #rule SimpleTreeToPersonContainerRule #with SimpleTreeToPerson
 
 #source { 
-	++simpleTreeContainer:Simpletree.File
+	++simpleTreeContainer:Simpletree.File {
+		++-rootNode->rootNode
+	}
+	
+	++rootNode:Simpletree.Node {
+		name := "people"
+	}
 }
 
 #target {
@@ -13,11 +19,12 @@
 
 #correspondence {
 	++simpleTreeToPersonContainerRule: SimpleTreeToPersonContainerRelation{
-		#src->simpleTreeContainer
+		#src->rootNode
 		#trg->personContainer
 	}
+
 }
 
 #attributeConditions {
-	
+
 }

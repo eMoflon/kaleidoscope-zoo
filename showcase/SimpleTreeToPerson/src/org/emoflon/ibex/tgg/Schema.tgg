@@ -14,8 +14,13 @@
 
 #correspondence {
 	SimpleTreeToPersonContainerRelation{
-		#src->File
+		#src->Simpletree.Node
 		#trg->PersonContainer
+	}
+	
+	PersonToNodeRelation{
+		#src->Node
+		#trg->Person
 	}
 }
 

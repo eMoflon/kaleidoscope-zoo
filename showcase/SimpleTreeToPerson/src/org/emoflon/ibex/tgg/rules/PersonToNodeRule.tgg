@@ -1,0 +1,56 @@
+#using SimpleTreeToPerson.*
+#using AttrCondDefLibrary.*
+
+#rule PersonToNodeRule #with SimpleTreeToPerson
+
+#source { 
+
+	rootNode:Simpletree.Node{
+		++-children->newPersonNode
+	}
+	
+	++newPersonNode:Simpletree.Node{
+		name := "person"
+		++-attribute->personId
+		++-children->personName
+	}
+	
+	++personId:Attribute {
+		name := "id"
+	}
+	
+	
+	++personName:Simpletree.Node {
+		name := "name"	
+	}
+	
+	++personNameNodeText:Text{
+		++-parentNode->personName
+	}
+	
+	
+}
+
+#target {
+	personContainer:PersonContainer{
+		++-persons->newTrgPerson
+	}
+	++newTrgPerson:Person
+}
+
+#correspondence {
+	simpleTreeToPersonContainerRule:SimpleTreeToPersonContainerRelation{
+		#src->rootNode
+		#trg->personContainer
+	}
+	
+	++nodeToPersonRule:PersonToNodeRelation{
+		#src->newPersonNode
+		#trg->newTrgPerson
+	}
+}
+
+#attributeConditions {
+	stringToInt(personId.value, newTrgPerson.ID)	
+	eq_string(personNameNodeText.name, newTrgPerson.name)
+}
