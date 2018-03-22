@@ -1,0 +1,91 @@
+#using SimpleExcelToEmployee.*
+#using AttrCondDefLibrary.*
+
+#rule RowToEmployeeRule #with SimpleExcelToEmployee
+
+#source {	
+		employeeContainer :Employees.EmployeeContainer{
+		++-employees->employee
+	}
+	
+	++employee:Employees.Employee
+	
+}
+
+#target {
+
+	
+	//++++++
+	//create new cells
+	++dataCell1: Simpleexcel.Cell
+	++dataCell2: Simpleexcel.Cell
+	++dataCell3: Simpleexcel.Cell
+	
+	//create a new row, row to cells
+	++simpleExcelRow : Simpleexcel.Row {
+		 ++-cell->dataCell1
+		++-cell->dataCell2
+		++-cell->dataCell3
+	}
+	
+	//add cells to existing column
+	simpleExcelHeaderColumn1:Simpleexcel.Column{
+		++-cell->dataCell1
+		
+	}
+	simpleExcelHeaderColumn2:Simpleexcel.Column{
+		++-cell->dataCell2
+		-prevColumn->simpleExcelHeaderColumn1
+	}
+	simpleExcelHeaderColumn3:Simpleexcel.Column{
+		++-cell->dataCell3
+		-prevColumn->simpleExcelHeaderColumn2
+	}
+	
+	row:Simpleexcel.Row {
+		//-sheet->simpleExcelSheet
+		++-nextRow->simpleExcelRow
+	}
+	
+	//sheet to row, cells
+	simpleExcelSheet:Simpleexcel.Sheet{
+		++-rowobject->simpleExcelRow
+		
+		++-cell->dataCell1
+		++-cell->dataCell2
+		++-cell->dataCell3
+		
+		-colobject->simpleExcelHeaderColumn1
+		-colobject->simpleExcelHeaderColumn2
+		-colobject->simpleExcelHeaderColumn3
+		
+		-rowobject->row
+	}
+	
+
+	//file container to sheet
+	simpleExcelContainer:Simpleexcel.File{
+		-sheet->simpleExcelSheet
+	}
+	
+}
+
+#correspondence {
+	simpleexcelContainer : SimpleExcelToEmployeeContainerRelation{
+		#src-> employeeContainer
+		#trg-> simpleExcelContainer
+	}
+	
+	++rowToEmployeeRule:RowToEmployeeRelation{
+		#src-> employee
+		#trg-> simpleExcelRow
+	}
+}
+
+#attributeConditions {
+	eq_string(employee.name, dataCell1.text)
+	stringToInt(dataCell2.text, employee.salary)
+	stringToInt(dataCell3.text, employee.ID)
+}
+
+

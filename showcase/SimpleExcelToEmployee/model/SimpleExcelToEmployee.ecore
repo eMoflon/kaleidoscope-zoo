@@ -3,7 +3,11 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="SimpleExcelToEmployee" nsURI="platform:/resource/SimpleExcelToEmployee/model/SimpleExcelToEmployee.ecore"
     nsPrefix="SimpleExcelToEmployee">
   <eClassifiers xsi:type="ecore:EClass" name="SimpleExcelToEmployeeContainerRelation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//File"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employees.ecore#//EmployeeContainer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employees.ecore#//EmployeeContainer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//File"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RowToEmployeeRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employees.ecore#//Employee"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -1,0 +1,12 @@
+#using SimpleExcelToEmployee.*
+#using AttrCondDefLibrary.*
+
+#nac nacForRowToEmployee #for RowToEmployeeRule
+
+#target { 
+	row:Row {
+		-nextRow->nextRow
+	}
+	nextRow:Row
+}
+
