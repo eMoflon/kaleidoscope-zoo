@@ -16,7 +16,6 @@ import Simpletree.TreeElement;
 public class PersonArtefactAdapter implements ArtefactAdapter<Persons.PersonContainer, Path> {
 
 	private Optional<Persons.PersonContainer> model;
-	private Optional<Persons.PersonContainer> simpleTreeModel;
 	private Path path;
 
 	public PersonArtefactAdapter(Path path) {
@@ -39,7 +38,7 @@ public class PersonArtefactAdapter implements ArtefactAdapter<Persons.PersonCont
 
 		simpleTreeModelFromXml.ifPresent(tree -> {
 			try {
-				SYNC_App_XML sync = new SYNC_App_XML(true, true, tree);
+				SYNC_App_XML sync = new SYNC_App_XML(true, false, tree);
 				sync.forward();
 				setModel((PersonContainer) sync.getTargetResource().getContents().get(0));
 				System.out.println(getModel().get().getPersons());
@@ -64,7 +63,7 @@ public class PersonArtefactAdapter implements ArtefactAdapter<Persons.PersonCont
 		XMLArtefactAdapter xmlArtefactAdapter = new XMLArtefactAdapter(this.path);
 		getModel().ifPresent(person -> {
 			try {
-				SYNC_App_XML sync = new SYNC_App_XML(false, true, person);
+				SYNC_App_XML sync = new SYNC_App_XML(false, false, person);
 				sync.backward();
 				sync.terminate();
 				xmlArtefactAdapter.setModel((File) sync.getSourceResource().getContents().get(0));

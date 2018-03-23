@@ -4,11 +4,6 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Optional;
 
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
-import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.emoflon.ibex.tgg.run.simpleexceltoemployee.SYNC_App_EXCEL;
 
 import com.kaleidoscope.core.auxiliary.simpleexcel.artefactadapter.ExcelArtefactAdapter;
@@ -16,12 +11,10 @@ import com.kaleidoscope.core.framework.workflow.adapters.ArtefactAdapter;
 
 import Employees.EmployeeContainer;
 import Simpleexcel.File;
-import Simpleexcel.SimpleexcelPackage;
 
 public class EmployeeArtefactAdapter implements ArtefactAdapter<EmployeeContainer, Path> {
 
 	private Optional<Employees.EmployeeContainer> model;
-	private Optional<Employees.EmployeeContainer> simpleExcelModel;
 	private Path path;
 
 	public EmployeeArtefactAdapter(Path path) {
@@ -42,7 +35,7 @@ public class EmployeeArtefactAdapter implements ArtefactAdapter<EmployeeContaine
 		// Convert Employee Model to Simpleexcel model
 		getModel().ifPresent(employee -> {
 			try {
-				SYNC_App_EXCEL sync = new SYNC_App_EXCEL(true, true, employee);
+				SYNC_App_EXCEL sync = new SYNC_App_EXCEL(true, false, employee);
 				sync.forward();
 				sync.terminate();
 				excelArtefactAdapter.setModel((File) sync.getTargetResource().getContents().get(0));
@@ -71,7 +64,7 @@ public class EmployeeArtefactAdapter implements ArtefactAdapter<EmployeeContaine
 		// Convert Simpleexcel Model to Employee Model using TGG
 		simpleExcelModelFromExcel.ifPresent(excel -> {
 			try {
-				SYNC_App_EXCEL sync = new SYNC_App_EXCEL(false, true, excel);
+				SYNC_App_EXCEL sync = new SYNC_App_EXCEL(false, false, excel);
 				sync.backward();
 				setModel((EmployeeContainer) sync.getSourceResource().getContents().get(0));
 				sync.terminate();
