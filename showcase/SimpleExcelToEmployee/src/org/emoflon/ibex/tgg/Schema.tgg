@@ -1,6 +1,6 @@
 // Add imports here
-#import "platform:/resource/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore"
-#import "platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employees.ecore"
+#import "platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore"
+#import "platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore"
 
 #schema SimpleExcelToEmployee
 	

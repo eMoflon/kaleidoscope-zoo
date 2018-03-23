@@ -4,11 +4,14 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Optional;
 
+<<<<<<< HEAD
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+=======
+>>>>>>> master
 import org.emoflon.ibex.tgg.run.simpleexceltoemployee.SYNC_App_EXCEL;
 
 import com.kaleidoscope.core.auxiliary.simpleexcel.artefactadapter.ExcelArtefactAdapter;

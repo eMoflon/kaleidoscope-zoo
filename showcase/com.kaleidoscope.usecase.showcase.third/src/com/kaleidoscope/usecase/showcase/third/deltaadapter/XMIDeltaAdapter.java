@@ -12,9 +12,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 
 import com.kaleidoscope.core.delta.javabased.operational.OperationalDelta;
-import com.kaleidoscope.core.framework.workflow.adapters.DeltaAdapter;
+import com.kaleidoscope.core.framework.workflow.adapters.DeltaInputAdapter;
 
-public class XMIDeltaAdapter<Model> implements DeltaAdapter<OperationalDelta, Path, Model> {
+public class XMIDeltaAdapter<Model> implements DeltaInputAdapter<OperationalDelta, Path, Model> {
 	private final static Logger logger = Logger.getLogger(XMIDeltaAdapter.class); 
 		
 	@Override
@@ -30,7 +30,7 @@ public class XMIDeltaAdapter<Model> implements DeltaAdapter<OperationalDelta, Pa
 			Resource genResource = ((EObject)m).eResource().getResourceSet().createResource(URI.createFileURI(genFile.getAbsolutePath()));	
 			genResource.load(null);
 		
-			KaleidoscopeDelta.OperationalDelta opDelta = (KaleidoscopeDelta.OperationalDelta)genResource.getContents().get(0);	
+			Delta.OperationalDelta opDelta = (Delta.OperationalDelta)genResource.getContents().get(0);	
 			OperationalDelta operationalDelta = OperationalDelta.fromEMF(opDelta);
 			
 			return operationalDelta;

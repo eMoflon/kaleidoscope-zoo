@@ -9,7 +9,7 @@ import com.kaleidoscope.core.framework.annotations.Dest;
 import com.kaleidoscope.core.framework.annotations.Src;
 import com.kaleidoscope.core.framework.annotations.Trg;
 import com.kaleidoscope.core.framework.synchronisation.PersistentSynchroniser;
-import com.kaleidoscope.core.framework.workflow.adapters.DeltaAdapter;
+import com.kaleidoscope.core.framework.workflow.adapters.DeltaInputAdapter;
 import com.kaleidoscope.usecase.showcase.third.synchroniser.SynchroniserImpl;
 import com.kaleidoscope.usecase.showcase.third.deltaadapter.XMIDeltaAdapter;
 
@@ -27,7 +27,7 @@ public class ControllerModule extends AbstractModule {
 	
 	@Provides @Src
 	private 
-	DeltaAdapter<
+	DeltaInputAdapter<
 		OperationalDelta, 
 		Path, 
 		PersonContainer
@@ -38,7 +38,7 @@ public class ControllerModule extends AbstractModule {
 	
 	@Provides @Trg
 	private 
-	DeltaAdapter<
+	DeltaInputAdapter<
 		OperationalDelta, 
 		Path, 
 		EmployeeContainer

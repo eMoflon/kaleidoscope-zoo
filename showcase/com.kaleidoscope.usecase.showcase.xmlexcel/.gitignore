@@ -1,3 +1,3 @@
-#Allow
-!.classpath
-!.project
+/bin
+/gen/
+/xtend-gen/
