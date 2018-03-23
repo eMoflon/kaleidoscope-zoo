@@ -1,6 +1,5 @@
 package org.emoflon.ibex.tgg.run.simpletreetoperson;
 
-import org.apache.commons.lang3.NotImplementedException;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.emoflon.ibex.tgg.operational.strategies.OperationalStrategy;
 
@@ -21,10 +20,10 @@ public class _RegistrationHelper {
 		// Option 2:  If you wish to use the .ecore file directly without generating code
 		// loadAndRegisterMetamodel(<pathToEcoreFile>);
 		
-		rs.getPackageRegistry().put("platform:/resource/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore",
+		rs.getPackageRegistry().put("platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore",
 				SimpletreePackageImpl.init());
 		rs.getPackageRegistry().put(
-				"platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.person/model/Persons.ecore",
+				"platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.person/model/Persons.ecore",
 				PersonsPackageImpl.init());
 	}
 }

@@ -3,7 +3,6 @@ package org.emoflon.ibex.tgg.run.simpletreetoperson;
 import java.io.IOException;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.emoflon.ibex.tgg.operational.csp.constraints.factories.UserDefinedRuntimeTGGAttrConstraintFactory;
@@ -65,8 +64,8 @@ public class SYNC_App_XML extends SYNC {
 			
 		// Register correspondence metamodel
 
-		loadAndRegisterMetamodel(projectPath + "/model/" + projectPath + ".ecore");
-		//loadAndRegisterMetamodel("platform:/plugin/SimpleTreeToPerson/model/SimpleTreeToPerson.ecore");
+		//loadAndRegisterMetamodel(projectPath + "/model/" + projectPath + ".ecore");
+		loadAndRegisterMetamodel("platform:/plugin/SimpleTreeToPerson/model/SimpleTreeToPerson.ecore");
 	}
 	
 	private static IbexOptions createIbexOptions() {
