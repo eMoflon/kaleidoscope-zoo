@@ -65,8 +65,8 @@ public class SYNC_App_XML extends SYNC {
 			
 		// Register correspondence metamodel
 
-		loadAndRegisterMetamodel(projectPath + "/model/" + projectPath + ".ecore");
-		//loadAndRegisterMetamodel("platform:/plugin/SimpleTreeToPerson/model/SimpleTreeToPerson.ecore");
+		//loadAndRegisterMetamodel(projectPath + "/model/" + projectPath + ".ecore");
+		loadAndRegisterMetamodel("platform:/plugin/SimpleTreeToPerson/model/SimpleTreeToPerson.ecore");
 	}
 	
 	private static IbexOptions createIbexOptions() {

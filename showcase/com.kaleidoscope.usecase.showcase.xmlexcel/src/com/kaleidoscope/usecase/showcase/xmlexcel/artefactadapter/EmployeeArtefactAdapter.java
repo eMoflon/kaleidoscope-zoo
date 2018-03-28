@@ -35,7 +35,7 @@ public class EmployeeArtefactAdapter implements ArtefactAdapter<EmployeeContaine
 		// Convert Employee Model to Simpleexcel model
 		getModel().ifPresent(employee -> {
 			try {
-				SYNC_App_EXCEL sync = new SYNC_App_EXCEL(true, true, employee);
+				SYNC_App_EXCEL sync = new SYNC_App_EXCEL(true, false, employee);
 				sync.forward();
 				sync.terminate();
 				excelArtefactAdapter.setModel((File) sync.getTargetResource().getContents().get(0));
@@ -64,7 +64,7 @@ public class EmployeeArtefactAdapter implements ArtefactAdapter<EmployeeContaine
 		// Convert Simpleexcel Model to Employee Model using TGG
 		simpleExcelModelFromExcel.ifPresent(excel -> {
 			try {
-				SYNC_App_EXCEL sync = new SYNC_App_EXCEL(false, true, excel);
+				SYNC_App_EXCEL sync = new SYNC_App_EXCEL(false, false, excel);
 				sync.backward();
 				setModel((EmployeeContainer) sync.getSourceResource().getContents().get(0));
 				sync.terminate();

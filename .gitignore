@@ -2,3 +2,9 @@
 *.class
 
 *.xtendbin
+
+showcase/com.kaleidoscope.usecase.showcase.xmlexcel/bin/com/kaleidoscope/usecase/showcase/xmlexcel/artefactadapter/EmployeeArtefactAdapter.class
+
+showcase/com.kaleidoscope.usecase.showcase.xmlexcel/bin/com/kaleidoscope/usecase/showcase/xmlexcel/artefactadapter/PersonArtefactAdapter.class
+
+showcase/com.kaleidoscope.usecase.showcase.xmlexcel/bin/com/kaleidoscope/usecase/showcase/xmlexcel/eclipse/XmlExcelBuilder.class

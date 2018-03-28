@@ -62,7 +62,8 @@ public class SYNC_App_EXCEL extends SYNC {
 		_RegistrationHelper.registerMetamodels(rs, this);
 			
 		// Register correspondence metamodel last
-		loadAndRegisterMetamodel(projectPath + "/model/" + projectPath + ".ecore");
+		//loadAndRegisterMetamodel(projectPath + "/model/" + projectPath + ".ecore");
+		loadAndRegisterMetamodel("platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore");
 	}
 	
 	private static IbexOptions createIbexOptions() {
