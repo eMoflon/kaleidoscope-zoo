@@ -41,6 +41,7 @@ public class ShowcaseFirstNature implements IProjectNature {
 	public String getShowcaseApiBuilderID() {
 		return SHOWCASE_API_BUILDER_ID;
 	}
+	
 	@Override
 	public void configure() throws CoreException {
 		PlatformUI.getWorkbench().getDisplay().syncExec(new Runnable() {
@@ -48,15 +49,15 @@ public class ShowcaseFirstNature implements IProjectNature {
 			public void run() {
 				try {
 					performSetUpRoutines();
-					addICryptoAPIProjectBuilder();
+					addProjectBuilder();
 				} catch (CoreException | IOException e) {
 					LogUtils.error(logger, e);
 				}
 			}
-
 		});
 	}
-	protected void addICryptoAPIProjectBuilder() throws CoreException {
+	
+	protected void addProjectBuilder() throws CoreException {
 		IProjectDescription projectDescription = project.getDescription();
 		ICommand[] buildSpec = projectDescription.getBuildSpec();
 		ICommand command = projectDescription.newCommand();
@@ -70,12 +71,13 @@ public class ShowcaseFirstNature implements IProjectNature {
 	protected void performSetUpRoutines() throws CoreException, IOException {
 		WorkspaceHelper.setUpAsJavaProject(project, new NullProgressMonitor());
 		setUpAsPluginProject();
-		setUpAsCryptoAPIProject();
+		setUpProject();
 	}
 	
-	protected void setUpAsCryptoAPIProject() throws CoreException, IOException {
+	protected void setUpProject() throws CoreException, IOException {
 		
 	}
+	
 	protected void setUpAsPluginProject() throws CoreException, IOException {
         setUpBuildProperties();
         setUpManifestFile();
@@ -97,7 +99,6 @@ public class ShowcaseFirstNature implements IProjectNature {
 			changed |= ManifestFileUpdater.updateAttribute(manifest, PluginManifestConstants.BUNDLE_VENDOR, "eMoflon IBeX", AttributeUpdatePolicy.KEEP);
 			changed |= ManifestFileUpdater.updateAttribute(manifest, PluginManifestConstants.BUNDLE_ACTIVATION_POLICY, "lazy", AttributeUpdatePolicy.KEEP);
 			changed |= ManifestFileUpdater.updateAttribute(manifest, PluginManifestConstants.BUNDLE_EXECUTION_ENVIRONMENT, "JavaSE-1.8", AttributeUpdatePolicy.KEEP);
-			changed |= ManifestFileUpdater.updateAttribute(manifest, PluginManifestConstants.REQUIRE_BUNDLE, "ConfigToJavaImpl;bundle-version=\"1.0.0\"", AttributeUpdatePolicy.KEEP);
 			return changed;
 		});
 	}
@@ -114,6 +115,5 @@ public class ShowcaseFirstNature implements IProjectNature {
 	@Override
 	public void setProject(IProject project) {
 		this.project = project;
-
 	}	
 }
