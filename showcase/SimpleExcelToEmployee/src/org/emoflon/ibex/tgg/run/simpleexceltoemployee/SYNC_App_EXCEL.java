@@ -3,6 +3,7 @@ package org.emoflon.ibex.tgg.run.simpleexceltoemployee;
 import java.io.IOException;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.emoflon.ibex.tgg.operational.csp.constraints.factories.UserDefinedRuntimeTGGAttrConstraintFactory;
@@ -14,30 +15,22 @@ public class SYNC_App_EXCEL extends SYNC {
 	
 	private boolean fwd;
 	private EObject input;
-	private boolean local;
 	
-	public SYNC_App_EXCEL(boolean fwd, boolean local, EObject input) throws IOException {
+	public SYNC_App_EXCEL(boolean fwd, EObject input) throws IOException {
 		super(createIbexOptions());
 		this.fwd = fwd;
 		this.input = input;
-		this.local = local;
 		registerBlackInterpreter(new DemoclesTGGEngine());
 	}
 
 	@Override
 	protected Resource loadTGGResource() throws IOException{
-		if(local)
-			return loadResource("platform:/resource/" + options.projectName() + "/model/" + options.projectName() + ".tgg.xmi");
-		else
-			return loadResource("platform:/plugin/" + options.projectName() + "/model/" + options.projectName() + ".tgg.xmi");
+		return loadResource("platform:/plugin/" + options.projectName() + "/model/" + options.projectName() + ".tgg.xmi");
 	}
 	
 	@Override
 	protected Resource loadFlattenedTGGResource() throws IOException{
-		if(local)
-			return loadResource("platform:/resource/" + options.projectName() + "/model/" + options.projectName() + "_flattened.tgg.xmi");
-		else
-			return loadResource("platform:/plugin/" + options.projectName() + "/model/" + options.projectName() + "_flattened.tgg.xmi");
+		return loadResource("platform:/plugin/" + options.projectName() + "/model/" + options.projectName() + "_flattened.tgg.xmi");
 	}
 
 	@Override
@@ -61,9 +54,11 @@ public class SYNC_App_EXCEL extends SYNC {
 	protected void registerUserMetamodels() throws IOException {
 		_RegistrationHelper.registerMetamodels(rs, this);
 			
-		// Register correspondence metamodel last
-		//loadAndRegisterMetamodel(projectPath + "/model/" + projectPath + ".ecore");
-		loadAndRegisterMetamodel("platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore");
+		// Register correspondence metamodel
+		Resource res = loadResource("platform:/plugin/SimpleExcelToEmployee/model/SimpleExcelToEmployee.ecore");
+		EPackage pack = (EPackage) res.getContents().get(0);
+		rs.getPackageRegistry().put(pack.getNsURI(), pack);
+		rs.getResources().remove(res);
 	}
 	
 	private static IbexOptions createIbexOptions() {

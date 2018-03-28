@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Optional;
 
+import org.apache.log4j.Logger;
 import org.emoflon.ibex.tgg.run.simpleexceltoemployee.SYNC_App_EXCEL;
 
 import com.kaleidoscope.core.auxiliary.simpleexcel.artefactadapter.ExcelArtefactAdapter;
@@ -14,6 +15,7 @@ import Simpleexcel.File;
 
 public class EmployeeArtefactAdapter implements ArtefactAdapter<EmployeeContainer, Path> {
 
+	private Logger logger = Logger.getLogger(EmployeeArtefactAdapter.class);
 	private Optional<Employees.EmployeeContainer> model;
 	private Path path;
 
@@ -27,33 +29,31 @@ public class EmployeeArtefactAdapter implements ArtefactAdapter<EmployeeContaine
 	 *  CONVERT EMPLOYEE TO .XLSX
 	 */
 	@Override
-	public void parse() {
+	public void unparse() {
 		
-		System.out.println("Unparsing employee model");
+		logger.debug("Unparsing employee model");
 		ExcelArtefactAdapter excelArtefactAdapter = new ExcelArtefactAdapter(this.path);
 		
 		// Convert Employee Model to Simpleexcel model
 		getModel().ifPresent(employee -> {
 			try {
-				SYNC_App_EXCEL sync = new SYNC_App_EXCEL(true, false, employee);
+				SYNC_App_EXCEL sync = new SYNC_App_EXCEL(true, employee);
 				sync.forward();
 				sync.terminate();
 				excelArtefactAdapter.setModel((File) sync.getTargetResource().getContents().get(0));
-				System.out.println("END");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		});
 
 		excelArtefactAdapter.unparse();
-
 	}
 
 	/**
 	 * CONVERT .XLSX TO EMPLOYEE
 	 */
 	@Override
-	public void unparse() {
+	public void parse() {
 		System.out.println("Reading from EXCEL file start ...");
 
 		// Call ExcelArtefactAdapter and get Simpleexcel Model from EXCEL
@@ -64,7 +64,7 @@ public class EmployeeArtefactAdapter implements ArtefactAdapter<EmployeeContaine
 		// Convert Simpleexcel Model to Employee Model using TGG
 		simpleExcelModelFromExcel.ifPresent(excel -> {
 			try {
-				SYNC_App_EXCEL sync = new SYNC_App_EXCEL(false, false, excel);
+				SYNC_App_EXCEL sync = new SYNC_App_EXCEL(false, excel);
 				sync.backward();
 				setModel((EmployeeContainer) sync.getSourceResource().getContents().get(0));
 				sync.terminate();

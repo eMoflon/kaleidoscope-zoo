@@ -23,7 +23,7 @@ public class _RegistrationHelper {
 		rs.getPackageRegistry().put("platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore",
 				SimpleexcelPackageImpl.init());
 		rs.getPackageRegistry().put(
-				"platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employees.ecore",
+				"platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore",
 				EmployeesPackageImpl.init());
 	}
 }

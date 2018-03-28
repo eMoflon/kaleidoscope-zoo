@@ -28,6 +28,5 @@ public class XmlExcelNewProjectWizard extends com.kaleidoscope.usecase.showcase.
 
 		// Add nature
 		WorkspaceHelper.addNature(project, ShowcaseXmlExcelNature.SHOWCASE_API_NATURE_ID, subMon.split(1));
-
 	}
 }

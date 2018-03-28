@@ -24,12 +24,9 @@ public class PersonArtefactAdapter implements ArtefactAdapter<Persons.PersonCont
 		this.model = Optional.empty();
 	}
 
-	/**
-	 * CONVERT XML TO PERSON
-	 */
 	@Override
 	public void parse() {
-		System.out.println("Reading from XML file start ...");
+		logger.debug("Reading from XML file start ...");
 
 		// Call XMLArtefactAdapter and get Simpletree Model from XML
 		XMLArtefactAdapter xmlArtefactAdapter = new XMLArtefactAdapter(this.path);
@@ -38,10 +35,10 @@ public class PersonArtefactAdapter implements ArtefactAdapter<Persons.PersonCont
 
 		simpleTreeModelFromXml.ifPresent(tree -> {
 			try {
-				SYNC_App_XML sync = new SYNC_App_XML(true, false, tree);
+				SYNC_App_XML sync = new SYNC_App_XML(true, tree);
 				sync.forward();
 				setModel((PersonContainer) sync.getTargetResource().getContents().get(0));
-				System.out.println(getModel().get().getPersons());
+				logger.debug(getModel().get().getPersons());
 				sync.terminate();
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -49,17 +46,14 @@ public class PersonArtefactAdapter implements ArtefactAdapter<Persons.PersonCont
 		});
 	}
 
-	/**
-	 * CONVERT PERSON TO XML
-	 */
 	@Override
 	public void unparse() {
-		System.out.println("parsing person model");
+		logger.debug("parsing person model");
 
 		XMLArtefactAdapter xmlArtefactAdapter = new XMLArtefactAdapter(this.path);
 		getModel().ifPresent(person -> {
 			try {
-				SYNC_App_XML sync = new SYNC_App_XML(false, false, person);
+				SYNC_App_XML sync = new SYNC_App_XML(false, person);
 				sync.backward();
 				sync.terminate();
 				xmlArtefactAdapter.setModel((File) sync.getSourceResource().getContents().get(0));

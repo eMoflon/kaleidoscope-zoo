@@ -22,9 +22,9 @@ Require-Bundle: org.gervarro.democles.common,
  org.emoflon.ibex.tgg.core.language,
  org.emoflon.ibex.tgg.core.runtime,
  org.emoflon.ibex.tgg.runtime.democles,
- com.kaleidoscope.core.aux.simpleexcel;bundle-version="1.0.0",
  com.kaleidoscope.usecase.showcase.metamodel.employee;bundle-version="1.0.0",
- org.emoflon.ibex.common;bundle-version="1.0.0"
+ org.emoflon.ibex.common;bundle-version="1.0.0",
+ com.kaleidoscope.core.aux.simpleexcel;bundle-version="1.0.0"
 Bundle-ManifestVersion: 2
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
