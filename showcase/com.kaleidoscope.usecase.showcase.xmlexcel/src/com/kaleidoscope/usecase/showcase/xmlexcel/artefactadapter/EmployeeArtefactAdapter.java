@@ -14,7 +14,6 @@ import Employees.EmployeeContainer;
 import Simpleexcel.File;
 
 public class EmployeeArtefactAdapter implements ArtefactAdapter<EmployeeContainer, Path> {
-
 	private Logger logger = Logger.getLogger(EmployeeArtefactAdapter.class);
 	private Optional<Employees.EmployeeContainer> model;
 	private Path path;
@@ -24,16 +23,14 @@ public class EmployeeArtefactAdapter implements ArtefactAdapter<EmployeeContaine
 		this.model = Optional.empty();
 	}
 
-	
 	/**
-	 *  CONVERT EMPLOYEE TO .XLSX
+	 * CONVERT EMPLOYEE TO .XLSX
 	 */
 	@Override
 	public void unparse() {
-		
 		logger.debug("Unparsing employee model");
 		ExcelArtefactAdapter excelArtefactAdapter = new ExcelArtefactAdapter(this.path);
-		
+
 		// Convert Employee Model to Simpleexcel model
 		getModel().ifPresent(employee -> {
 			try {
@@ -54,7 +51,7 @@ public class EmployeeArtefactAdapter implements ArtefactAdapter<EmployeeContaine
 	 */
 	@Override
 	public void parse() {
-		System.out.println("Reading from EXCEL file start ...");
+		logger.debug("Reading from EXCEL file start ...");
 
 		// Call ExcelArtefactAdapter and get Simpleexcel Model from EXCEL
 		ExcelArtefactAdapter excelArtefactAdapter = new ExcelArtefactAdapter(this.path);

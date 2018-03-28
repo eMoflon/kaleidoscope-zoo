@@ -7,19 +7,16 @@
 <project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.metamodel.person"/>
 <project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.second"/>
 <project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.third"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.xmlexcel"/>
 <project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.xtext.EmployeeDsl"/>
 <project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.xtext.EmployeeDsl.ide"/>
 <project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.xtext.EmployeeDsl.ui"/>
 <project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.xtext.PersonDsl"/>
 <project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.xtext.PersonDsl.ide"/>
 <project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/com.kaleidoscope.usecase.showcase.xtext.PersonDsl.ui"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/SimpleExcelToEmployee"/>
+<project reference="1.0,https://github.com/eMoflon/kaleidoscope-zoo.git,master,showcase/SimpleTreeToPerson"/>
 </provider>
-<workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1506352167401_12" label="kaleidoscope::showcase::scenarios" name="kaleidoscope::showcase::scenarios">
-<item elementID="=com.kaleidoscope.usecase.showcase.third" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=com.kaleidoscope.usecase.showcase.first" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=com.kaleidoscope.usecase.showcase.second" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=com.kaleidoscope.usecase.showcase.fourth" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-</workingSets>
 <workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1506351986970_10" label="kaleidoscope::showcase::common" name="kaleidoscope::showcase::common">
 <item elementID="=com.kaleidoscope.usecase.showcase.xtext.PersonDsl.ui" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=com.kaleidoscope.usecase.showcase.xtext.EmployeeDsl.ui" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
@@ -29,5 +26,14 @@
 <item elementID="=com.kaleidoscope.usecase.showcase.xtext.EmployeeDsl.ide" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=com.kaleidoscope.usecase.showcase.xtext.EmployeeDsl" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=com.kaleidoscope.usecase.showcase.xtext.PersonDsl.ide" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSets>
+<workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1506352167401_12" label="kaleidoscope::showcase::scenarios" name="kaleidoscope::showcase::scenarios">
+<item elementID="=SimpleTreeToPerson" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.showcase.third" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.showcase.xmlexcel" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=SimpleExcelToEmployee" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.showcase.first" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.showcase.second" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=com.kaleidoscope.usecase.showcase.fourth" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSets>
 </psf>

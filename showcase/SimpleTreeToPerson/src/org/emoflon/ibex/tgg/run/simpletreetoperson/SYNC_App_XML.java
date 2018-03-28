@@ -21,21 +21,22 @@ public class SYNC_App_XML extends SYNC {
 		this.input = input;
 		registerBlackInterpreter(new DemoclesTGGEngine());
 	}
-	
+
 	@Override
-	protected Resource loadTGGResource() throws IOException{
-		return loadResource("platform:/plugin/" + options.projectName() + "/model/" + options.projectName() + ".tgg.xmi");
+	protected Resource loadTGGResource() throws IOException {
+		return loadResource(
+				"platform:/plugin/" + options.projectName() + "/model/" + options.projectName() + ".tgg.xmi");
 	}
-	
+
 	@Override
-	protected Resource loadFlattenedTGGResource() throws IOException{
-		return loadResource("platform:/plugin/" + options.projectName() + "/model/" + options.projectName() + "_flattened.tgg.xmi");
+	protected Resource loadFlattenedTGGResource() throws IOException {
+		return loadResource(
+				"platform:/plugin/" + options.projectName() + "/model/" + options.projectName() + "_flattened.tgg.xmi");
 	}
-	
-	
+
 	@Override
 	public void loadModels() throws IOException {
-		if(fwd) {			
+		if (fwd) {
 			s = createResource("temp/instances/src.xmi");
 			s.getContents().add(input);
 			t = createResource("temp/instances/trg.xml");
@@ -44,29 +45,29 @@ public class SYNC_App_XML extends SYNC {
 			t.getContents().add(input);
 			s = createResource("temp/instances/src.xmi");
 		}
-		
+
 		c = createResource("temp/instances/corr.xmi");
 		p = createResource("temp/instances/protocol.xmi");
-		
+
 		EcoreUtil.resolveAll(rs);
 	}
-	
+
 	protected void registerUserMetamodels() throws IOException {
 		_RegistrationHelper.registerMetamodels(rs, this);
-			
+
 		// Register correspondence metamodel
 		Resource res = loadResource("platform:/plugin/SimpleTreeToPerson/model/SimpleTreeToPerson.ecore");
 		EPackage pack = (EPackage) res.getContents().get(0);
 		rs.getPackageRegistry().put(pack.getNsURI(), pack);
 		rs.getResources().remove(res);
 	}
-	
+
 	private static IbexOptions createIbexOptions() {
-			IbexOptions options = new IbexOptions();
-			options.projectName("SimpleTreeToPerson");
-			options.projectPath("SimpleTreeToPerson");
-			options.debug(false);
-			options.userDefinedConstraints(new UserDefinedRuntimeTGGAttrConstraintFactory());
-			return options;
+		IbexOptions options = new IbexOptions();
+		options.projectName("SimpleTreeToPerson");
+		options.projectPath("SimpleTreeToPerson");
+		options.debug(false);
+		options.userDefinedConstraints(new UserDefinedRuntimeTGGAttrConstraintFactory());
+		return options;
 	}
 }
