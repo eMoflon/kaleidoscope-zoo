@@ -1,30 +1,21 @@
 package com.kaleidoscope.usecase.showcase.xmlexcel.artefactadapter;
 
+import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Optional;
 
-<<<<<<< HEAD
-=======
 import org.apache.log4j.Logger;
->>>>>>> master
 import org.emoflon.ibex.tgg.run.simpletreetoperson.SYNC_App_XML;
 
 import com.kaleidoscope.core.auxiliary.simpletree.artefactadapter.XML.XMLArtefactAdapter;
 import com.kaleidoscope.core.framework.workflow.adapters.ArtefactAdapter;
 
 import Persons.PersonContainer;
-<<<<<<< HEAD
 import Simpletree.File;
 import Simpletree.TreeElement;
 
-public class PersonArtefactAdapter implements ArtefactAdapter<Persons.PersonContainer, Path> {
-
-=======
-import Simpletree.Node;
-
 public class PersonArtefactAdapter implements ArtefactAdapter<Persons.PersonContainer, Path> { 	
 	private static final Logger logger = Logger.getLogger(PersonArtefactAdapter.class);
->>>>>>> master
 	private Optional<Persons.PersonContainer> model;
 	private Path path;
 
@@ -38,8 +29,6 @@ public class PersonArtefactAdapter implements ArtefactAdapter<Persons.PersonCont
 	 */
 	@Override
 	public void parse() {
-<<<<<<< HEAD
-
 		System.out.println("Reading from XML file start ...");
 
 		// Call XMLArtefactAdapter and get Simpletree Model from XML
@@ -50,38 +39,14 @@ public class PersonArtefactAdapter implements ArtefactAdapter<Persons.PersonCont
 		simpleTreeModelFromXml.ifPresent(tree -> {
 			try {
 				SYNC_App_XML sync = new SYNC_App_XML(true, true, tree);
-=======
-		logger.debug("Reading from XML file start ...");
-		
-		// Call XMLArtefactAdapter and get Simpletree Model from XML
-		XMLArtefactAdapter xmlArtefactAdapter  = new XMLArtefactAdapter(path);
-		xmlArtefactAdapter.parse();
-		Optional<Node> simpleTreeModelFromXml = xmlArtefactAdapter.getModel();
-		
-		// Convert SimpleTree Model to Person Model using TGG
-		simpleTreeModelFromXml.ifPresent(tree -> {
-			try {
-				SYNC_App_XML sync = new SYNC_App_XML(true, tree);
->>>>>>> master
 				sync.forward();
 				setModel((PersonContainer) sync.getTargetResource().getContents().get(0));
 				System.out.println(getModel().get().getPersons());
 				sync.terminate();
-<<<<<<< HEAD
-
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		});
-		System.out.println();
-=======
-			} catch (Exception|Error e) {
-				e.printStackTrace();
-			}
-		});
-	}
->>>>>>> master
-
 	}
 
 	/**
@@ -89,10 +54,8 @@ public class PersonArtefactAdapter implements ArtefactAdapter<Persons.PersonCont
 	 */
 	@Override
 	public void unparse() {
-<<<<<<< HEAD
 		System.out.println("parsing person model");
 
-		// TODO: Convert Persons Model to SimpleTree model
 		XMLArtefactAdapter xmlArtefactAdapter = new XMLArtefactAdapter(this.path);
 		getModel().ifPresent(person -> {
 			try {
@@ -106,14 +69,8 @@ public class PersonArtefactAdapter implements ArtefactAdapter<Persons.PersonCont
 		});
 
 		//Call XMLArtefactAdapter, send simpleTreeModel and get XML back.
-		System.out.println("Converting to XML Document");
+		logger.debug("Converting to XML Document");
 		xmlArtefactAdapter.unparse();
-=======
-		logger.debug("Reading from model start ...");
-		
-		//TODO: Convert Persons Model to SimpleTree model
-		//TODO : Call XMLArtefactAdapter, send simpleTreeModel and get XML back. 
->>>>>>> master
 	}
 
 	@Override
