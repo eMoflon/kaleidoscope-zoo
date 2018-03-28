@@ -5,17 +5,22 @@
 #schema SimpleExcelToEmployee
 	
 #source {
-	Simpleexcel
+	Employees
 }
 
 #target { 
-	Employees
+	Simpleexcel
 } 
 
 #correspondence {
 	SimpleExcelToEmployeeContainerRelation {
-		#src->Simpleexcel.File
-		#trg->EmployeeContainer	
+		#src-> EmployeeContainer
+		#trg-> Simpleexcel.File
+	}
+	
+	RowToEmployeeRelation {
+		#src-> Employees.Employee
+		#trg-> Simpleexcel.Row
 	}
 }
 

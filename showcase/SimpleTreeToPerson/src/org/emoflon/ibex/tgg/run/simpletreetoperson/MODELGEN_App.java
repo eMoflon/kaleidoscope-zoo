@@ -3,7 +3,7 @@ package org.emoflon.ibex.tgg.run.simpletreetoperson;
 import java.io.IOException;
 
 import org.apache.log4j.BasicConfigurator;
-
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.emoflon.ibex.tgg.operational.csp.constraints.factories.UserDefinedRuntimeTGGAttrConstraintFactory;
 import org.emoflon.ibex.tgg.operational.defaults.IbexOptions;
 import org.emoflon.ibex.tgg.operational.strategies.gen.MODELGEN;
@@ -23,7 +23,7 @@ public class MODELGEN_App extends MODELGEN {
 		MODELGEN_App generator = new MODELGEN_App();
 		
 		MODELGENStopCriterion stop = new MODELGENStopCriterion(generator.getTGG());
-		stop.setTimeOutInMS(1000);
+		stop.setTimeOutInMS(100);
 		generator.setStopCriterion(stop);
 		
 		logger.info("Starting MODELGEN");
@@ -47,8 +47,19 @@ public class MODELGEN_App extends MODELGEN {
 	private static IbexOptions createIbexOptions() {
 			IbexOptions options = new IbexOptions();
 			options.projectName("SimpleTreeToPerson");
+			options.projectPath("SimpleTreeToPerson");
 			options.debug(false);
 			options.userDefinedConstraints(new UserDefinedRuntimeTGGAttrConstraintFactory());
 			return options;
+	}
+	
+	@Override
+	public void loadModels() throws IOException {
+		s = createResource(projectPath + "/instances/src.xmi");
+		t = loadResource(projectPath + "/instances/trg.xmi");
+		c = createResource(projectPath + "/instances/corr.xmi");
+		p = createResource(projectPath + "/instances/protocol.xmi");
+
+		EcoreUtil.resolveAll(rs);
 	}
 }

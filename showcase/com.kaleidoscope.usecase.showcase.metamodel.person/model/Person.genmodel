@@ -5,13 +5,13 @@
     updateClasspath="false" codeFormatting="true" importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="8.0" copyrightFields="false" operationReflection="true">
   <foreignModel>Person.ecore</foreignModel>
-  <genPackages prefix="Persons" disposableProviderFactory="true" ecorePackage="platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.person/model/Person.ecore#/">
-    <genClasses ecoreClass="platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.person/model/Person.ecore#//PersonContainer">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.person/model/Person.ecore#//PersonContainer/persons"/>
+  <genPackages prefix="Persons" disposableProviderFactory="true" ecorePackage="Person.ecore#/">
+    <genClasses ecoreClass="Person.ecore#//PersonContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Person.ecore#//PersonContainer/persons"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.person/model/Person.ecore#//Person">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.person/model/Person.ecore#//Person/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.person/model/Person.ecore#//Person/ID"/>
+    <genClasses ecoreClass="Person.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Person.ecore#//Person/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Person.ecore#//Person/ID"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

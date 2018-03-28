@@ -6,13 +6,12 @@ import org.apache.log4j.BasicConfigurator;
 
 import org.emoflon.ibex.tgg.operational.csp.constraints.factories.UserDefinedRuntimeTGGAttrConstraintFactory;
 import org.emoflon.ibex.tgg.operational.defaults.IbexOptions;
-import org.emoflon.ibex.tgg.operational.strategies.gen.MODELGEN;
-import org.emoflon.ibex.tgg.operational.strategies.gen.MODELGENStopCriterion;
+import org.emoflon.ibex.tgg.operational.strategies.sync.BWD_OPT;
 import org.emoflon.ibex.tgg.runtime.engine.DemoclesTGGEngine;
 
-public class MODELGEN_App extends MODELGEN {
+public class BWD_OPT_App extends BWD_OPT {
 
-	public MODELGEN_App() throws IOException {
+	public BWD_OPT_App() throws IOException {
 		super(createIbexOptions());
 		registerBlackInterpreter(new DemoclesTGGEngine());
 	}
@@ -20,22 +19,16 @@ public class MODELGEN_App extends MODELGEN {
 	public static void main(String[] args) throws IOException {
 		BasicConfigurator.configure();
 
-		MODELGEN_App generator = new MODELGEN_App();
+		BWD_OPT_App bwd_opt = new BWD_OPT_App();
 		
-		MODELGENStopCriterion stop = new MODELGENStopCriterion(generator.getTGG());
-		stop.setTimeOutInMS(1000);
-		stop.setMaxRuleCount("SimpleExcelToEmployeeContainerRule", 1);
-		generator.setStopCriterion(stop);
-		
-		logger.info("Starting MODELGEN");
+		logger.info("Starting BWD_OPT");
 		long tic = System.currentTimeMillis();
-		generator.run();
+		bwd_opt.run();
 		long toc = System.currentTimeMillis();
-		logger.info("Completed MODELGEN in: " + (toc - tic) + " ms");
+		logger.info("Completed BWD_OPT in: " + (toc - tic) + " ms");
 		
-		
-		generator.saveModels();
-		generator.terminate();
+		bwd_opt.saveModels();
+		bwd_opt.terminate();
 	}
 
 	protected void registerUserMetamodels() throws IOException {

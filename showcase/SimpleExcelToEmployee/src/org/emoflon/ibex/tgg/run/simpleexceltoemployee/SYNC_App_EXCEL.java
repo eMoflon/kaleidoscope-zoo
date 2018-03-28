@@ -2,6 +2,7 @@ package org.emoflon.ibex.tgg.run.simpleexceltoemployee;
 
 import java.io.IOException;
 
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.emoflon.ibex.tgg.operational.csp.constraints.factories.UserDefinedRuntimeTGGAttrConstraintFactory;
@@ -10,34 +11,44 @@ import org.emoflon.ibex.tgg.operational.strategies.sync.SYNC;
 import org.emoflon.ibex.tgg.runtime.engine.DemoclesTGGEngine;
 
 public class SYNC_App_EXCEL extends SYNC {
-
-	private boolean fwd;
-	private Resource input;
 	
-	public SYNC_App_EXCEL(boolean fwd, Resource input) throws IOException {
+	private boolean fwd;
+	private EObject input;
+	private boolean local;
+	
+	public SYNC_App_EXCEL(boolean fwd, boolean local, EObject input) throws IOException {
 		super(createIbexOptions());
 		this.fwd = fwd;
 		this.input = input;
+		this.local = local;
 		registerBlackInterpreter(new DemoclesTGGEngine());
 	}
 
 	@Override
 	protected Resource loadTGGResource() throws IOException{
-		return loadResource("platform:/plugin/" + options.projectName() + "/model/" + options.projectName() + ".tgg.xmi");
+		if(local)
+			return loadResource("platform:/resource/" + options.projectName() + "/model/" + options.projectName() + ".tgg.xmi");
+		else
+			return loadResource("platform:/plugin/" + options.projectName() + "/model/" + options.projectName() + ".tgg.xmi");
 	}
 	
 	@Override
 	protected Resource loadFlattenedTGGResource() throws IOException{
-		return loadResource("platform:/plugin/" + options.projectName() + "/model/" + options.projectName() + "_flattened.tgg.xmi");
+		if(local)
+			return loadResource("platform:/resource/" + options.projectName() + "/model/" + options.projectName() + "_flattened.tgg.xmi");
+		else
+			return loadResource("platform:/plugin/" + options.projectName() + "/model/" + options.projectName() + "_flattened.tgg.xmi");
 	}
 
 	@Override
 	public void loadModels() throws IOException {
 		if(fwd) {			
-			s = input;
-			t = createResource("temp/instances/trg.xmi");
+			s = createResource("temp/instances/src.xmi");
+			s.getContents().add(input);
+			t = createResource("temp/instances/trg.xlsx");
 		} else {
-			t = input;
+			t = createResource("temp/instances/trg.xlsx");
+			t.getContents().add(input);
 			s = createResource("temp/instances/src.xmi");
 		}
 		
@@ -51,12 +62,14 @@ public class SYNC_App_EXCEL extends SYNC {
 		_RegistrationHelper.registerMetamodels(rs, this);
 			
 		// Register correspondence metamodel last
-		loadAndRegisterMetamodel(projectPath + "/model/" + projectPath + ".ecore");
+		//loadAndRegisterMetamodel(projectPath + "/model/" + projectPath + ".ecore");
+		loadAndRegisterMetamodel("platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore");
 	}
 	
 	private static IbexOptions createIbexOptions() {
 			IbexOptions options = new IbexOptions();
 			options.projectName("SimpleExcelToEmployee");
+			options.projectPath("SimpleExcelToEmployee");
 			options.debug(false);
 			options.userDefinedConstraints(new UserDefinedRuntimeTGGAttrConstraintFactory());
 			return options;

@@ -3,21 +3,76 @@
 
 #rule SimpleExcelToEmployeeContainerRule #with SimpleExcelToEmployee
 
-#source { 
-	++simpleExcelContainer:Simpleexcel.File
+#source {
+	++employeeContainer:EmployeeContainer
 }
 
 #target {
-	++employeeContainer:EmployeeContainer
+	//file
+	++simpleExcelContainer : Simpleexcel.File {
+		++ -sheet->simpleExcelSheet
+	}
+	
+	//generate cells h
+	++headerCell1:Simpleexcel.Cell{
+		text := "Name"
+	}
+	++headerCell2: Simpleexcel.Cell{
+		text := "Salary"
+	}
+	++headerCell3:Simpleexcel.Cell{
+		text := "ID"
+	}
+	
+	
+	
+	//generate header row and row to cells
+	++simpleExcelHeaderRow : Simpleexcel.Row {
+		++-cell->headerCell1
+		++-cell->headerCell2
+		++-cell->headerCell3
+	}
+	
+	//generate columns and columns to cell
+	++simpleExcelHeaderColumn1: Simpleexcel.Column {
+		++-cell->headerCell1
+		++-nextColumn->simpleExcelHeaderColumn2
+	}
+	++simpleExcelHeaderColumn2: Simpleexcel.Column {
+		++-cell->headerCell2
+		++-nextColumn->simpleExcelHeaderColumn3
+	}
+	++simpleExcelHeaderColumn3: Simpleexcel.Column {
+		++-cell->headerCell3
+	}
+	
+	// generate sheet, add cell, row and cols to sheet
+	++simpleExcelSheet:Simpleexcel.Sheet
+	{
+		//row
+		++-rowobject->simpleExcelHeaderRow
+		
+		//columns
+		++-colobject->simpleExcelHeaderColumn1
+		++-colobject->simpleExcelHeaderColumn2
+		++-colobject->simpleExcelHeaderColumn3
+		
+		
+		//cells
+		++-cell->headerCell1
+		++-cell->headerCell2
+		++-cell->headerCell3
+	}
+	
 }
 
 #correspondence {
 	++simpleExcelToEmployeeContainerRule:SimpleExcelToEmployeeContainerRelation{
-		#src->simpleExcelContainer
-		#trg->employeeContainer
+		#src-> employeeContainer
+		#trg-> simpleExcelContainer
 	}
 }
 
 #attributeConditions {
-	
+	setDefaultString(simpleExcelSheet.sheetName,"Sheet_1_")
 }

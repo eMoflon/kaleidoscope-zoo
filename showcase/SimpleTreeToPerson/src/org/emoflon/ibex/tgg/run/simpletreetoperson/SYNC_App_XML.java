@@ -13,32 +13,42 @@ import org.emoflon.ibex.tgg.runtime.engine.DemoclesTGGEngine;
 public class SYNC_App_XML extends SYNC {
 	private boolean fwd;
 	private EObject input;
+	private boolean local;
 
-	public SYNC_App_XML(boolean fwd, EObject input) throws IOException {
+	public SYNC_App_XML(boolean fwd, boolean local, EObject input) throws IOException {
 		super(createIbexOptions());
 		this.fwd = fwd;
 		this.input = input;
+		this.local = local;
 		registerBlackInterpreter(new DemoclesTGGEngine());
 	}
 	
 	@Override
 	protected Resource loadTGGResource() throws IOException{
-		return loadResource("platform:/resource/" + "SimpleTreeToPerson" + "/model/" + "SimpleTreeToPerson" + ".tgg.xmi");
+		if(local)
+			return loadResource("platform:/resource/" + options.projectName() + "/model/" + options.projectName() + ".tgg.xmi");
+		else
+			return loadResource("platform:/plugin/" + options.projectName() + "/model/" + options.projectName() + ".tgg.xmi");
 	}
 	
 	@Override
 	protected Resource loadFlattenedTGGResource() throws IOException{
-		return loadResource("platform:/resource/" + "SimpleTreeToPerson" + "/model/" + "SimpleTreeToPerson" + "_flattened.tgg.xmi");
+		if(local)
+			return loadResource("platform:/resource/" + options.projectName() + "/model/" + options.projectName() + "_flattened.tgg.xmi");
+		else
+			return loadResource("platform:/plugin/" + options.projectName() + "/model/" + options.projectName() + "_flattened.tgg.xmi");
 	}
 	
 	
 	@Override
 	public void loadModels() throws IOException {
-		if(fwd) {
+		if(fwd) {			
 			s = createResource("temp/instances/src.xmi");
-			t = createResource("temp/instances/trg.xmi");
 			s.getContents().add(input);
+			t = createResource("temp/instances/trg.xml");
 		} else {
+			t = createResource("temp/instances/trg.xml");
+			t.getContents().add(input);
 			s = createResource("temp/instances/src.xmi");
 			t = createResource("temp/instances/trg.xmi");
 			t.getContents().add(input);
@@ -54,7 +64,9 @@ public class SYNC_App_XML extends SYNC {
 		_RegistrationHelper.registerMetamodels(rs, this);
 			
 		// Register correspondence metamodel
-		loadAndRegisterMetamodel("platform:/resource/SimpleTreeToPerson/model/SimpleTreeToPerson.ecore");
+
+		//loadAndRegisterMetamodel(projectPath + "/model/" + projectPath + ".ecore");
+		loadAndRegisterMetamodel("platform:/plugin/SimpleTreeToPerson/model/SimpleTreeToPerson.ecore");
 	}
 	
 	private static IbexOptions createIbexOptions() {

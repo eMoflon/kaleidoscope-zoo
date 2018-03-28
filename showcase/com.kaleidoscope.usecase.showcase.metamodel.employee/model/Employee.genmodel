@@ -5,14 +5,14 @@
     updateClasspath="false" codeFormatting="true" importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="8.0" copyrightFields="false" operationReflection="true">
   <foreignModel>Employee.ecore</foreignModel>
-  <genPackages prefix="Employees" disposableProviderFactory="true" ecorePackage="platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore#/">
-    <genClasses ecoreClass="platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore#//EmployeeContainer">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore#//EmployeeContainer/employees"/>
+  <genPackages prefix="Employees" disposableProviderFactory="true" ecorePackage="Employee.ecore#/">
+    <genClasses ecoreClass="Employee.ecore#//EmployeeContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Employee.ecore#//EmployeeContainer/employees"/>
     </genClasses>
-    <genClasses ecoreClass="platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore#//Employee">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore#//Employee/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore#//Employee/salary"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/plugin/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore#//Employee/ID"/>
+    <genClasses ecoreClass="Employee.ecore#//Employee">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Employee.ecore#//Employee/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Employee.ecore#//Employee/salary"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Employee.ecore#//Employee/ID"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

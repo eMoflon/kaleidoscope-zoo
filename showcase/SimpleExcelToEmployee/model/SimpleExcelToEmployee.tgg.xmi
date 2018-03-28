@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.emoflon.ibex.tgg.core.language:TGG xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.emoflon.ibex.tgg.core.language="platform:/plugin/org.emoflon.ibex.tgg.core.language/model/Language.ecore#/" xmlns:org.emoflon.ibex.tgg.core.language.misc.expressions="platform:/plugin/org.emoflon.ibex.tgg.core.language/model/Language.ecore#/misc/expressions" name="SimpleExcelToEmployee">
+  <src href="platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore#/"/>
+  <trg href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#/"/>
+  <corr href="platform:/resource/SimpleExcelToEmployee/model/SimpleExcelToEmployee.ecore#/"/>
+  <rules name="RowToEmployeeRule">
+    <nacs name="nacForRowToEmployee">
+      <nodes name="row" domainType="TRG" outgoingEdges="//@rules.0/@nacs.0/@edges.0">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
+      </nodes>
+      <nodes name="nextRow" domainType="TRG" incomingEdges="//@rules.0/@nacs.0/@edges.0">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
+      </nodes>
+      <edges name="row__nextRow__nextRow_eMoflonEdge" domainType="TRG" srcNode="//@rules.0/@nacs.0/@nodes.0" trgNode="//@rules.0/@nacs.0/@nodes.1">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/nextRow"/>
+      </edges>
+      <attributeConditionLibrary/>
+    </nacs>
+    <nodes name="employeeContainer" outgoingEdges="//@rules.0/@edges.0" incomingCorrsSource="//@rules.0/@nodes.12">
+      <type href="platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore#//EmployeeContainer"/>
+    </nodes>
+    <nodes name="employee" bindingType="CREATE" incomingEdges="//@rules.0/@edges.0" incomingCorrsSource="//@rules.0/@nodes.13">
+      <type href="platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore#//Employee"/>
+    </nodes>
+    <nodes name="dataCell1" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.1 //@rules.0/@edges.4 //@rules.0/@edges.11" outgoingEdges="//@rules.0/@edges.19 //@rules.0/@edges.22">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell"/>
+    </nodes>
+    <nodes name="dataCell2" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.2 //@rules.0/@edges.5 //@rules.0/@edges.12" outgoingEdges="//@rules.0/@edges.20 //@rules.0/@edges.23">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell"/>
+    </nodes>
+    <nodes name="dataCell3" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.3 //@rules.0/@edges.7 //@rules.0/@edges.13" outgoingEdges="//@rules.0/@edges.21 //@rules.0/@edges.25">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell"/>
+    </nodes>
+    <nodes name="simpleExcelRow" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.9 //@rules.0/@edges.10 //@rules.0/@edges.19 //@rules.0/@edges.20 //@rules.0/@edges.21" outgoingEdges="//@rules.0/@edges.1 //@rules.0/@edges.2 //@rules.0/@edges.3 //@rules.0/@edges.27 //@rules.0/@edges.28" incomingCorrsTarget="//@rules.0/@nodes.13">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
+    </nodes>
+    <nodes name="simpleExcelHeaderColumn1" domainType="TRG" incomingEdges="//@rules.0/@edges.6 //@rules.0/@edges.14 //@rules.0/@edges.22" outgoingEdges="//@rules.0/@edges.4 //@rules.0/@edges.24 //@rules.0/@edges.29">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column"/>
+    </nodes>
+    <nodes name="simpleExcelHeaderColumn2" domainType="TRG" incomingEdges="//@rules.0/@edges.8 //@rules.0/@edges.15 //@rules.0/@edges.23 //@rules.0/@edges.24" outgoingEdges="//@rules.0/@edges.5 //@rules.0/@edges.6 //@rules.0/@edges.26 //@rules.0/@edges.30">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column"/>
+    </nodes>
+    <nodes name="simpleExcelHeaderColumn3" domainType="TRG" incomingEdges="//@rules.0/@edges.16 //@rules.0/@edges.25 //@rules.0/@edges.26" outgoingEdges="//@rules.0/@edges.7 //@rules.0/@edges.8 //@rules.0/@edges.31">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column"/>
+    </nodes>
+    <nodes name="row" domainType="TRG" incomingEdges="//@rules.0/@edges.17 //@rules.0/@edges.27" outgoingEdges="//@rules.0/@edges.9 //@rules.0/@edges.32">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
+    </nodes>
+    <nodes name="simpleExcelSheet" domainType="TRG" incomingEdges="//@rules.0/@edges.18 //@rules.0/@edges.28 //@rules.0/@edges.29 //@rules.0/@edges.30 //@rules.0/@edges.31 //@rules.0/@edges.32" outgoingEdges="//@rules.0/@edges.10 //@rules.0/@edges.11 //@rules.0/@edges.12 //@rules.0/@edges.13 //@rules.0/@edges.14 //@rules.0/@edges.15 //@rules.0/@edges.16 //@rules.0/@edges.17">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet"/>
+    </nodes>
+    <nodes name="simpleExcelContainer" domainType="TRG" outgoingEdges="//@rules.0/@edges.18" incomingCorrsTarget="//@rules.0/@nodes.12">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//File"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="simpleexcelContainer" domainType="CORR" source="//@rules.0/@nodes.0" target="//@rules.0/@nodes.11">
+      <type href="platform:/resource/SimpleExcelToEmployee/model/SimpleExcelToEmployee.ecore#//SimpleExcelToEmployeeContainerRelation"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="rowToEmployeeRule" domainType="CORR" bindingType="CREATE" source="//@rules.0/@nodes.1" target="//@rules.0/@nodes.5">
+      <type href="platform:/resource/SimpleExcelToEmployee/model/SimpleExcelToEmployee.ecore#//RowToEmployeeRelation"/>
+    </nodes>
+    <edges name="employeeContainer__employees__employee_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.0" trgNode="//@rules.0/@nodes.1">
+      <type href="platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore#//EmployeeContainer/employees"/>
+    </edges>
+    <edges name="simpleExcelRow__cell__dataCell1_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.5" trgNode="//@rules.0/@nodes.2">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/cell"/>
+    </edges>
+    <edges name="simpleExcelRow__cell__dataCell2_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.5" trgNode="//@rules.0/@nodes.3">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/cell"/>
+    </edges>
+    <edges name="simpleExcelRow__cell__dataCell3_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.5" trgNode="//@rules.0/@nodes.4">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/cell"/>
+    </edges>
+    <edges name="simpleExcelHeaderColumn1__cell__dataCell1_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.6" trgNode="//@rules.0/@nodes.2">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/cell"/>
+    </edges>
+    <edges name="simpleExcelHeaderColumn2__cell__dataCell2_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.7" trgNode="//@rules.0/@nodes.3">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/cell"/>
+    </edges>
+    <edges name="simpleExcelHeaderColumn2__prevColumn__simpleExcelHeaderColumn1_eMoflonEdge" domainType="TRG" srcNode="//@rules.0/@nodes.7" trgNode="//@rules.0/@nodes.6">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/prevColumn"/>
+    </edges>
+    <edges name="simpleExcelHeaderColumn3__cell__dataCell3_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.8" trgNode="//@rules.0/@nodes.4">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/cell"/>
+    </edges>
+    <edges name="simpleExcelHeaderColumn3__prevColumn__simpleExcelHeaderColumn2_eMoflonEdge" domainType="TRG" srcNode="//@rules.0/@nodes.8" trgNode="//@rules.0/@nodes.7">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/prevColumn"/>
+    </edges>
+    <edges name="row__nextRow__simpleExcelRow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.9" trgNode="//@rules.0/@nodes.5">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/nextRow"/>
+    </edges>
+    <edges name="simpleExcelSheet__rowobject__simpleExcelRow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.10" trgNode="//@rules.0/@nodes.5">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/rowobject"/>
+    </edges>
+    <edges name="simpleExcelSheet__cell__dataCell1_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.10" trgNode="//@rules.0/@nodes.2">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/cell"/>
+    </edges>
+    <edges name="simpleExcelSheet__cell__dataCell2_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.10" trgNode="//@rules.0/@nodes.3">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/cell"/>
+    </edges>
+    <edges name="simpleExcelSheet__cell__dataCell3_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.10" trgNode="//@rules.0/@nodes.4">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/cell"/>
+    </edges>
+    <edges name="simpleExcelSheet__colobject__simpleExcelHeaderColumn1_eMoflonEdge" domainType="TRG" srcNode="//@rules.0/@nodes.10" trgNode="//@rules.0/@nodes.6">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/colobject"/>
+    </edges>
+    <edges name="simpleExcelSheet__colobject__simpleExcelHeaderColumn2_eMoflonEdge" domainType="TRG" srcNode="//@rules.0/@nodes.10" trgNode="//@rules.0/@nodes.7">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/colobject"/>
+    </edges>
+    <edges name="simpleExcelSheet__colobject__simpleExcelHeaderColumn3_eMoflonEdge" domainType="TRG" srcNode="//@rules.0/@nodes.10" trgNode="//@rules.0/@nodes.8">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/colobject"/>
+    </edges>
+    <edges name="simpleExcelSheet__rowobject__row_eMoflonEdge" domainType="TRG" srcNode="//@rules.0/@nodes.10" trgNode="//@rules.0/@nodes.9">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/rowobject"/>
+    </edges>
+    <edges name="simpleExcelContainer__sheet__simpleExcelSheet_eMoflonEdge" domainType="TRG" srcNode="//@rules.0/@nodes.11" trgNode="//@rules.0/@nodes.10">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//File/sheet"/>
+    </edges>
+    <edges name="dataCell1__row__simpleExcelRow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.2" trgNode="//@rules.0/@nodes.5">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/row"/>
+    </edges>
+    <edges name="dataCell2__row__simpleExcelRow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.3" trgNode="//@rules.0/@nodes.5">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/row"/>
+    </edges>
+    <edges name="dataCell3__row__simpleExcelRow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.4" trgNode="//@rules.0/@nodes.5">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/row"/>
+    </edges>
+    <edges name="dataCell1__column__simpleExcelHeaderColumn1_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.2" trgNode="//@rules.0/@nodes.6">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/column"/>
+    </edges>
+    <edges name="dataCell2__column__simpleExcelHeaderColumn2_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.3" trgNode="//@rules.0/@nodes.7">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/column"/>
+    </edges>
+    <edges name="simpleExcelHeaderColumn1__nextColumn__simpleExcelHeaderColumn2_eMoflonEdge" domainType="TRG" srcNode="//@rules.0/@nodes.6" trgNode="//@rules.0/@nodes.7">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/nextColumn"/>
+    </edges>
+    <edges name="dataCell3__column__simpleExcelHeaderColumn3_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.4" trgNode="//@rules.0/@nodes.8">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/column"/>
+    </edges>
+    <edges name="simpleExcelHeaderColumn2__nextColumn__simpleExcelHeaderColumn3_eMoflonEdge" domainType="TRG" srcNode="//@rules.0/@nodes.7" trgNode="//@rules.0/@nodes.8">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/nextColumn"/>
+    </edges>
+    <edges name="simpleExcelRow__prevRow__row_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.5" trgNode="//@rules.0/@nodes.9">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/prevRow"/>
+    </edges>
+    <edges name="simpleExcelRow__sheet__simpleExcelSheet_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.5" trgNode="//@rules.0/@nodes.10">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/sheet"/>
+    </edges>
+    <edges name="simpleExcelHeaderColumn1__sheet__simpleExcelSheet_eMoflonEdge" domainType="TRG" srcNode="//@rules.0/@nodes.6" trgNode="//@rules.0/@nodes.10">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/sheet"/>
+    </edges>
+    <edges name="simpleExcelHeaderColumn2__sheet__simpleExcelSheet_eMoflonEdge" domainType="TRG" srcNode="//@rules.0/@nodes.7" trgNode="//@rules.0/@nodes.10">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/sheet"/>
+    </edges>
+    <edges name="simpleExcelHeaderColumn3__sheet__simpleExcelSheet_eMoflonEdge" domainType="TRG" srcNode="//@rules.0/@nodes.8" trgNode="//@rules.0/@nodes.10">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/sheet"/>
+    </edges>
+    <edges name="row__sheet__simpleExcelSheet_eMoflonEdge" domainType="TRG" srcNode="//@rules.0/@nodes.9" trgNode="//@rules.0/@nodes.10">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/sheet"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0" parameters="//@rules.0/@attributeConditionLibrary/@parameterValues.0 //@rules.0/@attributeConditionLibrary/@parameterValues.1"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1" parameters="//@rules.0/@attributeConditionLibrary/@parameterValues.2 //@rules.0/@attributeConditionLibrary/@parameterValues.3"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1" parameters="//@rules.0/@attributeConditionLibrary/@parameterValues.4 //@rules.0/@attributeConditionLibrary/@parameterValues.5"/>
+      <parameterValues xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.0" objectVar="//@rules.0/@nodes.1">
+        <attribute href="platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore#//Employee/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.1" objectVar="//@rules.0/@nodes.2">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/text"/>
+      </parameterValues>
+      <parameterValues xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1/@parameterDefinitions.0" objectVar="//@rules.0/@nodes.3">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/text"/>
+      </parameterValues>
+      <parameterValues xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1/@parameterDefinitions.1" objectVar="//@rules.0/@nodes.1">
+        <attribute href="platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore#//Employee/salary"/>
+      </parameterValues>
+      <parameterValues xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1/@parameterDefinitions.0" objectVar="//@rules.0/@nodes.4">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/text"/>
+      </parameterValues>
+      <parameterValues xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1/@parameterDefinitions.1" objectVar="//@rules.0/@nodes.1">
+        <attribute href="platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore#//Employee/ID"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="SimpleExcelToEmployeeContainerRule">
+    <nodes name="employeeContainer" bindingType="CREATE" incomingCorrsSource="//@rules.1/@nodes.10">
+      <type href="platform:/resource/com.kaleidoscope.usecase.showcase.metamodel.employee/model/Employee.ecore#//EmployeeContainer"/>
+    </nodes>
+    <nodes name="simpleExcelContainer" domainType="TRG" bindingType="CREATE" outgoingEdges="//@rules.1/@edges.0" incomingCorrsTarget="//@rules.1/@nodes.10">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//File"/>
+    </nodes>
+    <nodes name="headerCell1" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.1 //@rules.1/@edges.4 //@rules.1/@edges.13" outgoingEdges="//@rules.1/@edges.16 //@rules.1/@edges.19">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell"/>
+      <attrExpr>
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/text"/>
+        <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;Name&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="headerCell2" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.2 //@rules.1/@edges.6 //@rules.1/@edges.14" outgoingEdges="//@rules.1/@edges.17 //@rules.1/@edges.21">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell"/>
+      <attrExpr>
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/text"/>
+        <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;Salary&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="headerCell3" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.3 //@rules.1/@edges.8 //@rules.1/@edges.15" outgoingEdges="//@rules.1/@edges.18 //@rules.1/@edges.23">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell"/>
+      <attrExpr>
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/text"/>
+        <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;ID&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="simpleExcelHeaderRow" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.9 //@rules.1/@edges.16 //@rules.1/@edges.17 //@rules.1/@edges.18" outgoingEdges="//@rules.1/@edges.1 //@rules.1/@edges.2 //@rules.1/@edges.3 //@rules.1/@edges.24">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
+    </nodes>
+    <nodes name="simpleExcelHeaderColumn1" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.10 //@rules.1/@edges.19 //@rules.1/@edges.20" outgoingEdges="//@rules.1/@edges.4 //@rules.1/@edges.5 //@rules.1/@edges.25">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column"/>
+    </nodes>
+    <nodes name="simpleExcelHeaderColumn2" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.5 //@rules.1/@edges.11 //@rules.1/@edges.21 //@rules.1/@edges.22" outgoingEdges="//@rules.1/@edges.6 //@rules.1/@edges.7 //@rules.1/@edges.20 //@rules.1/@edges.26">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column"/>
+    </nodes>
+    <nodes name="simpleExcelHeaderColumn3" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.7 //@rules.1/@edges.12 //@rules.1/@edges.23" outgoingEdges="//@rules.1/@edges.8 //@rules.1/@edges.22 //@rules.1/@edges.27">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column"/>
+    </nodes>
+    <nodes name="simpleExcelSheet" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.0 //@rules.1/@edges.24 //@rules.1/@edges.25 //@rules.1/@edges.26 //@rules.1/@edges.27" outgoingEdges="//@rules.1/@edges.9 //@rules.1/@edges.10 //@rules.1/@edges.11 //@rules.1/@edges.12 //@rules.1/@edges.13 //@rules.1/@edges.14 //@rules.1/@edges.15">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="simpleExcelToEmployeeContainerRule" domainType="CORR" bindingType="CREATE" source="//@rules.1/@nodes.0" target="//@rules.1/@nodes.1">
+      <type href="platform:/resource/SimpleExcelToEmployee/model/SimpleExcelToEmployee.ecore#//SimpleExcelToEmployeeContainerRelation"/>
+    </nodes>
+    <edges name="simpleExcelContainer__sheet__simpleExcelSheet_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.1" trgNode="//@rules.1/@nodes.9">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//File/sheet"/>
+    </edges>
+    <edges name="simpleExcelHeaderRow__cell__headerCell1_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.5" trgNode="//@rules.1/@nodes.2">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/cell"/>
+    </edges>
+    <edges name="simpleExcelHeaderRow__cell__headerCell2_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.5" trgNode="//@rules.1/@nodes.3">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/cell"/>
+    </edges>
+    <edges name="simpleExcelHeaderRow__cell__headerCell3_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.5" trgNode="//@rules.1/@nodes.4">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/cell"/>
+    </edges>
+    <edges name="simpleExcelHeaderColumn1__cell__headerCell1_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.6" trgNode="//@rules.1/@nodes.2">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/cell"/>
+    </edges>
+    <edges name="simpleExcelHeaderColumn1__nextColumn__simpleExcelHeaderColumn2_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.6" trgNode="//@rules.1/@nodes.7">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/nextColumn"/>
+    </edges>
+    <edges name="simpleExcelHeaderColumn2__cell__headerCell2_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.7" trgNode="//@rules.1/@nodes.3">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/cell"/>
+    </edges>
+    <edges name="simpleExcelHeaderColumn2__nextColumn__simpleExcelHeaderColumn3_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.7" trgNode="//@rules.1/@nodes.8">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/nextColumn"/>
+    </edges>
+    <edges name="simpleExcelHeaderColumn3__cell__headerCell3_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.8" trgNode="//@rules.1/@nodes.4">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/cell"/>
+    </edges>
+    <edges name="simpleExcelSheet__rowobject__simpleExcelHeaderRow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.9" trgNode="//@rules.1/@nodes.5">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/rowobject"/>
+    </edges>
+    <edges name="simpleExcelSheet__colobject__simpleExcelHeaderColumn1_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.9" trgNode="//@rules.1/@nodes.6">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/colobject"/>
+    </edges>
+    <edges name="simpleExcelSheet__colobject__simpleExcelHeaderColumn2_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.9" trgNode="//@rules.1/@nodes.7">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/colobject"/>
+    </edges>
+    <edges name="simpleExcelSheet__colobject__simpleExcelHeaderColumn3_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.9" trgNode="//@rules.1/@nodes.8">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/colobject"/>
+    </edges>
+    <edges name="simpleExcelSheet__cell__headerCell1_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.9" trgNode="//@rules.1/@nodes.2">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/cell"/>
+    </edges>
+    <edges name="simpleExcelSheet__cell__headerCell2_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.9" trgNode="//@rules.1/@nodes.3">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/cell"/>
+    </edges>
+    <edges name="simpleExcelSheet__cell__headerCell3_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.9" trgNode="//@rules.1/@nodes.4">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/cell"/>
+    </edges>
+    <edges name="headerCell1__row__simpleExcelHeaderRow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.2" trgNode="//@rules.1/@nodes.5">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/row"/>
+    </edges>
+    <edges name="headerCell2__row__simpleExcelHeaderRow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.3" trgNode="//@rules.1/@nodes.5">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/row"/>
+    </edges>
+    <edges name="headerCell3__row__simpleExcelHeaderRow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.4" trgNode="//@rules.1/@nodes.5">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/row"/>
+    </edges>
+    <edges name="headerCell1__column__simpleExcelHeaderColumn1_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.2" trgNode="//@rules.1/@nodes.6">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/column"/>
+    </edges>
+    <edges name="simpleExcelHeaderColumn2__prevColumn__simpleExcelHeaderColumn1_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.7" trgNode="//@rules.1/@nodes.6">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/prevColumn"/>
+    </edges>
+    <edges name="headerCell2__column__simpleExcelHeaderColumn2_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.3" trgNode="//@rules.1/@nodes.7">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/column"/>
+    </edges>
+    <edges name="simpleExcelHeaderColumn3__prevColumn__simpleExcelHeaderColumn2_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.8" trgNode="//@rules.1/@nodes.7">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/prevColumn"/>
+    </edges>
+    <edges name="headerCell3__column__simpleExcelHeaderColumn3_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.4" trgNode="//@rules.1/@nodes.8">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/column"/>
+    </edges>
+    <edges name="simpleExcelHeaderRow__sheet__simpleExcelSheet_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.5" trgNode="//@rules.1/@nodes.9">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/sheet"/>
+    </edges>
+    <edges name="simpleExcelHeaderColumn1__sheet__simpleExcelSheet_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.6" trgNode="//@rules.1/@nodes.9">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/sheet"/>
+    </edges>
+    <edges name="simpleExcelHeaderColumn2__sheet__simpleExcelSheet_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.7" trgNode="//@rules.1/@nodes.9">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/sheet"/>
+    </edges>
+    <edges name="simpleExcelHeaderColumn3__sheet__simpleExcelSheet_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.8" trgNode="//@rules.1/@nodes.9">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/sheet"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.2" parameters="//@rules.1/@attributeConditionLibrary/@parameterValues.0 //@rules.1/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.2/@parameterDefinitions.0" objectVar="//@rules.1/@nodes.9">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/sheetName"/>
+      </parameterValues>
+      <parameterValues xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.2/@parameterDefinitions.1" value="&quot;Sheet_1_&quot;"/>
+    </attributeConditionLibrary>
+  </rules>
+  <attributeConstraintDefinitionLibrary>
+    <tggAttributeConstraintDefinitions name="eq_string" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="stringToInt" userDefined="false">
+      <parameterDefinitions name="stringValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="intValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="setDefaultString" userDefined="false">
+      <parameterDefinitions name="variableString">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="defaultString">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+  </attributeConstraintDefinitionLibrary>
+</org.emoflon.ibex.tgg.core.language:TGG>
