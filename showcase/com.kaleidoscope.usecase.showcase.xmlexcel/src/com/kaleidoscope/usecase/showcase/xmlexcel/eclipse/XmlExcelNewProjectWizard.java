@@ -16,6 +16,7 @@ public class XmlExcelNewProjectWizard extends com.kaleidoscope.usecase.showcase.
 
 		InitialProjectStructure.createEmptyFolder(project, "models");
 		InitialProjectStructureXml.createEmptyXMLFile(project, new Path("models/src.xml"));
+		InitialProjectStructureExcel.createEmptyExcelFile(project, new Path("models/trg.xlsx"));
 	}
 
 	@Override
