@@ -1,0 +1,10 @@
+#using PluginsToExcel.*
+#using AttrCondDefLibrary.*
+
+#nac nacForXMLFileToExcelRowRule #for XMLFileToExcelRowRule
+#target{
+	headerRow:Row{
+		-nextRow->nextRow
+	}
+	nextRow:Row
+}
