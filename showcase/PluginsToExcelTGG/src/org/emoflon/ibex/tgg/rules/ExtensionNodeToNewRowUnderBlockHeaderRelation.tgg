@@ -22,12 +22,53 @@
 
 	++extensionNode:Node {
 		name:="extenstion"
+		++-attribute -> extensionAttr
+	}
+
+	++extensionAttr:Attribute{
+		name:="point"
 	}
 }
 
 #target {
-	// create new row for extension
-	++newRowForExtenstion:Row
+	// create new cells for extension points
+	++cell_1:Cell{
+		text:=""
+	}
+
+	++cell_2:Cell
+
+	++cell_3:Cell
+
+	++cell_4:Cell
+
+		// create new row for extension
+	++newRowForExtenstion:Row{
+		++-cell -> cell_1
+		++-cell -> cell_2
+		++-cell -> cell_3
+		++-cell -> cell_4
+	}
+
+		// add new cells to existing cols
+	componentsColumn:Column{
+		++-cell -> cell_1
+		-nextColumn -> dependenciesColumn
+	}
+
+	dependenciesColumn:Column{
+		++-cell -> cell_2
+		-nextColumn -> documentationColumn
+	}
+
+	documentationColumn:Column{
+		++-cell -> cell_3
+		-nextColumn -> reviewColumn
+	}
+
+	reviewColumn:Column{
+		++-cell -> cell_4
+	}
 
 		// adding new row after block header
 	blockHeader:Row{
@@ -37,6 +78,14 @@
 	sheet:Sheet {
 		++-rowobject -> newRowForExtenstion
 		-rowobject -> blockHeader
+		++-cell -> cell_1
+		++-cell -> cell_2
+		++-cell -> cell_3
+		++-cell -> cell_4
+		-colobject -> componentsColumn
+		-colobject -> dependenciesColumn
+		-colobject -> documentationColumn
+		-colobject -> reviewColumn
 	}
 
 	excelFile:File {
@@ -62,6 +111,7 @@
 }
 
 #attributeConditions {
+	eq_string(extensionAttr.value, cell_2.text)
 }
 
 
