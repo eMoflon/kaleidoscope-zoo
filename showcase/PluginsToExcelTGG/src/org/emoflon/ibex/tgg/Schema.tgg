@@ -1,0 +1,19 @@
+// Add imports here
+
+#schema PluginsToExcelTGG
+	
+#source {
+	
+}
+
+#target { 
+	
+} 
+
+#correspondence {
+	
+}
+
+#attributeConditions {
+	
+}
