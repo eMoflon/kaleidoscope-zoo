@@ -1,17 +1,41 @@
-// Add imports here
+#import "platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore"
+#import "platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore"
 
 #schema PluginsToExcelTGG
 	
 #source {
-	
+	Simpletree
 }
 
 #target { 
-	
+	Simpleexcel
 } 
 
 #correspondence {
+	SimpleTreeToSimpleExcelContainerRelation{
+		#src->Node
+		#trg->File
+	}
 	
+	XMLFolderToExcelFileRelation{
+		#src->Folder
+		#trg->File
+	}
+	
+	PluginFolderToExcelBlockHeaderRowRelation {
+		#src->Simpletree.Folder
+		#trg->Simpleexcel.Row
+	}
+	
+	ExtenstionNodeToNewRowRelation{
+		#src->Node
+		#trg->Row
+	}
+	
+	ExtensionAttrToCellUnderBlockHeaderRelation{
+		#src->Attribute
+		#trg->Cell
+	}
 }
 
 #attributeConditions {

@@ -238,7 +238,7 @@
       </values>
     </attrConditions>
   </rules>
-  <rules name="ExtensionNodeToNewRowUnderBlockHeaderRelation" abstractRule="true" schema="//@schema">
+  <rules name="ExtensionNodeToNewRowUnderBlockHeaderRelation" schema="//@schema">
     <sourcePatterns name="extensionNode">
       <op value="++"/>
       <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Node"/>
@@ -469,7 +469,7 @@
         <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//File/sheet"/>
       </linkVariablePatterns>
     </targetPatterns>
-    <targetPatterns name="headerRow">
+    <targetPatterns name="lastRow">
       <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
       <linkVariablePatterns target="//@rules.2/@targetPatterns.0">
         <op value="++"/>
@@ -526,11 +526,11 @@
     </correspondencePatterns>
     <correspondencePatterns name="xmlFolderToExcelFileRule" type="//@schema/@correspondenceTypes.1" source="//@rules.2/@sourcePatterns.5" target="//@rules.2/@targetPatterns.8"/>
     <attrConditions name="//@schema/@attributeCondDefs.0">
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.2/@targetPatterns.1">
-        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/text"/>
-      </values>
       <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.2/@sourcePatterns.0">
         <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//TreeElement/name"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.2/@targetPatterns.1">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/text"/>
       </values>
     </attrConditions>
   </rules>
@@ -803,21 +803,10 @@
       <op value="++"/>
     </correspondencePatterns>
   </rules>
-  <nacs name="nacForExtensionNodeToNewRowUnderBlockHeaderRelation" rule="//@rules.1">
-    <targetPatterns name="blockHeader">
+  <nacs name="nacForPluginFolderToBlockHeaderRowRelation" rule="//@rules.2">
+    <targetPatterns name="lastRow">
       <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
       <linkVariablePatterns target="//@nacs.0/@targetPatterns.1">
-        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/nextRow"/>
-      </linkVariablePatterns>
-    </targetPatterns>
-    <targetPatterns name="nextRow">
-      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
-    </targetPatterns>
-  </nacs>
-  <nacs name="nacForPluginFolderToBlockHeaderRowRelation" rule="//@rules.2">
-    <targetPatterns name="headerRow">
-      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
-      <linkVariablePatterns target="//@nacs.1/@targetPatterns.1">
         <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/nextRow"/>
       </linkVariablePatterns>
     </targetPatterns>

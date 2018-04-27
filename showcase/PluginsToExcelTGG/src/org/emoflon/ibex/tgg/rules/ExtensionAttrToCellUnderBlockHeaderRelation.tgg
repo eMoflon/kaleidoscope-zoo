@@ -1,0 +1,115 @@
+#using PluginsToExcelTGG.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule ExtensionAttrToCellUnderBlockHeaderRelation #with PluginsToExcelTGG
+
+#source {
+	xmlFolder_2:Folder{
+		-subFolder -> pluginFolder
+	}
+
+	pluginFolder:Folder {
+		-file -> pluginXmlFile
+	}
+
+	pluginXmlFile:File {
+		-rootNode -> pluginNode
+	}
+
+	pluginNode:Node {
+		-children -> extensionNode
+	}
+
+	extensionNode:Node {
+		++-attribute -> extensionAttr
+	}
+
+	++extensionAttr:Attribute{
+		name:="point"
+	}
+}
+
+#target {
+	// create new cells for extension points
+	++cell_1:Cell
+
+	++cell_2:Cell
+
+	++cell_3:Cell
+
+	++cell_4:Cell
+
+	newRowForExtenstion:Row{
+		++-cell -> cell_1
+		++-cell -> cell_2
+		++-cell -> cell_3
+		++-cell -> cell_4
+	}
+
+		// add new cells to existing cols
+	componentsColumn:Column{
+		++-cell -> cell_1
+		-nextColumn -> dependenciesColumn
+	}
+
+	dependenciesColumn:Column{
+		++-cell -> cell_2
+		-nextColumn -> documentationColumn
+	}
+
+	documentationColumn:Column{
+		++-cell -> cell_3
+		-nextColumn -> reviewColumn
+	}
+
+	reviewColumn:Column{
+		++-cell -> cell_4
+	}
+
+	blockHeader:Row{
+		-nextRow -> newRowForExtenstion
+	}
+
+	sheet:Sheet {
+		-rowobject -> newRowForExtenstion
+		-rowobject -> blockHeader
+		++-cell -> cell_1
+		++-cell -> cell_2
+		++-cell -> cell_3
+		++-cell -> cell_4
+		-colobject -> componentsColumn
+		-colobject -> dependenciesColumn
+		-colobject -> documentationColumn
+		-colobject -> reviewColumn
+	}
+
+	excelFile:File {
+		-sheet -> sheet
+	}
+}
+
+#correspondence {
+	xmlFolderToExcelFileRule:XMLFolderToExcelFileRelation{
+		#src->xmlFolder_2
+		#trg->excelFile
+	}
+
+	pluginFolderToBlockHeaderRowRule:PluginFolderToExcelBlockHeaderRowRelation{
+		#src->pluginFolder
+		#trg->blockHeader
+	}
+
+	extensionNodeToNewRowRule:ExtenstionNodeToNewRowRelation{
+		#src->extensionNode
+		#trg->newRowForExtenstion
+	}
+	
+	++extensionAttrToCellUnderBlockHeaderRule:ExtensionAttrToCellUnderBlockHeaderRelation{
+		#src->extensionAttr
+		#trg->cell_2
+	}
+}
+
+#attributeConditions {
+	eq_string(extensionAttr.value, cell_2.text)
+}
