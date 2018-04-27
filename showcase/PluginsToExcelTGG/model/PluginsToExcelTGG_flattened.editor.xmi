@@ -1,4 +1,828 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tgg:TripleGraphGrammarFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tgg="http://www.moflon.org/ide/tgg/mosl/TGG">
-  <schema name="PluginsToExcelTGG"/>
+<tgg:TripleGraphGrammarFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tgg="http://www.moflon.org/ide/tgg/mosl/TGG">
+  <imports name="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore"/>
+  <imports name="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore"/>
+  <schema name="PluginsToExcelTGG">
+    <sourceTypes href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#/"/>
+    <targetTypes href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#/"/>
+    <correspondenceTypes name="SimpleTreeToSimpleExcelContainerRelation">
+      <source href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Node"/>
+      <target href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//File"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="XMLFolderToExcelFileRelation">
+      <source href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder"/>
+      <target href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//File"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="PluginFolderToExcelBlockHeaderRowRelation">
+      <source href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder"/>
+      <target href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="ExtenstionNodeToNewRowRelation">
+      <source href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Node"/>
+      <target href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="ExtensionAttrToCellUnderBlockHeaderRelation">
+      <source href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Attribute"/>
+      <target href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell"/>
+    </correspondenceTypes>
+    <attributeCondDefs name="eq_string">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+  </schema>
+  <rules name="ExtensionAttrToCellUnderBlockHeaderRelation" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="extensionAttr">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Attribute"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//TreeElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;point&quot;"/>
+      </attributeAssignments>
+    </sourcePatterns>
+    <sourcePatterns name="extensionNode">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Node"/>
+      <linkVariablePatterns target="//@rules.0/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Node/attribute"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="pluginFolder">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder"/>
+      <linkVariablePatterns target="//@rules.0/@sourcePatterns.4">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder/file"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="pluginNode">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Node"/>
+      <linkVariablePatterns target="//@rules.0/@sourcePatterns.1">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Node/children"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="pluginXmlFile">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//File"/>
+      <linkVariablePatterns target="//@rules.0/@sourcePatterns.3">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//File/rootNode"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="xmlFolder_2">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder"/>
+      <linkVariablePatterns target="//@rules.0/@sourcePatterns.2">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder/subFolder"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="blockHeader">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.9">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/nextRow"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="cell_1">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell"/>
+    </targetPatterns>
+    <targetPatterns name="cell_2">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell"/>
+    </targetPatterns>
+    <targetPatterns name="cell_3">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell"/>
+    </targetPatterns>
+    <targetPatterns name="cell_4">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell"/>
+    </targetPatterns>
+    <targetPatterns name="componentsColumn">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column"/>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.6">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/nextColumn"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="dependenciesColumn">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column"/>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.7">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/nextColumn"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="documentationColumn">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column"/>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.10">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/nextColumn"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="excelFile">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//File"/>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.11">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//File/sheet"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="newRowForExtenstion">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.4">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/cell"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="reviewColumn">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column"/>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.4">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/cell"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="sheet">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet"/>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.9">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/rowobject"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.0">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/rowobject"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.4">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.5">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/colobject"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.6">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/colobject"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.7">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/colobject"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.10">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/colobject"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="extensionAttrToCellUnderBlockHeaderRule" type="//@schema/@correspondenceTypes.4" source="//@rules.0/@sourcePatterns.0" target="//@rules.0/@targetPatterns.2">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="extensionNodeToNewRowRule" type="//@schema/@correspondenceTypes.3" source="//@rules.0/@sourcePatterns.1" target="//@rules.0/@targetPatterns.9"/>
+    <correspondencePatterns name="pluginFolderToBlockHeaderRowRule" type="//@schema/@correspondenceTypes.2" source="//@rules.0/@sourcePatterns.2" target="//@rules.0/@targetPatterns.0"/>
+    <correspondencePatterns name="xmlFolderToExcelFileRule" type="//@schema/@correspondenceTypes.1" source="//@rules.0/@sourcePatterns.5" target="//@rules.0/@targetPatterns.8"/>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@sourcePatterns.0">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Attribute/value"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@targetPatterns.2">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/text"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="ExtensionNodeToNewRowUnderBlockHeaderRelation" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="extensionNode">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Node"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//TreeElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;extenstion&quot;"/>
+      </attributeAssignments>
+    </sourcePatterns>
+    <sourcePatterns name="pluginFolder">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder"/>
+      <linkVariablePatterns target="//@rules.1/@sourcePatterns.3">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder/file"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="pluginNode">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Node"/>
+      <linkVariablePatterns target="//@rules.1/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Node/children"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="pluginXmlFile">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//File"/>
+      <linkVariablePatterns target="//@rules.1/@sourcePatterns.2">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//File/rootNode"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="xmlFolder_2">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder"/>
+      <linkVariablePatterns target="//@rules.1/@sourcePatterns.1">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder/subFolder"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="blockHeader">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/nextRow"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="excelFile">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//File"/>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.3">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//File/sheet"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="newRowForExtenstion">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
+    </targetPatterns>
+    <targetPatterns name="sheet">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet"/>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/rowobject"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.0">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/rowobject"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="extensionNodeToNewUnderBlockHeaderRowRule" type="//@schema/@correspondenceTypes.3" source="//@rules.1/@sourcePatterns.0" target="//@rules.1/@targetPatterns.2">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="pluginFolderToBlockHeaderRowRule" type="//@schema/@correspondenceTypes.2" source="//@rules.1/@sourcePatterns.1" target="//@rules.1/@targetPatterns.0"/>
+    <correspondencePatterns name="xmlFolderToExcelFileRule" type="//@schema/@correspondenceTypes.1" source="//@rules.1/@sourcePatterns.4" target="//@rules.1/@targetPatterns.1"/>
+  </rules>
+  <rules name="PluginFolderToBlockHeaderRowRelation" schema="//@schema">
+    <sourcePatterns name="pluginFolder">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder"/>
+      <linkVariablePatterns target="//@rules.2/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder/file"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="pluginNode">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Node"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//TreeElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;plugin&quot;"/>
+      </attributeAssignments>
+    </sourcePatterns>
+    <sourcePatterns name="pluginXmlFile">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//File"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//TreeElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;plugin.xml&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.2/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//File/rootNode"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="xmlFolderDrive">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder"/>
+      <linkVariablePatterns target="//@rules.2/@sourcePatterns.4">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder/subFolder"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="xmlFolder_1">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder"/>
+      <linkVariablePatterns target="//@rules.2/@sourcePatterns.5">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder/subFolder"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="xmlFolder_2">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder"/>
+      <linkVariablePatterns target="//@rules.2/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder/subFolder"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="blockheaderRow">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.4">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/cell"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="cell_1">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/backgroundColor"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;#FABF8F&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/fontStyle"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;bold&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="cell_2">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/text"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/backgroundColor"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;#FABF8F&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/fontStyle"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;bold&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="cell_3">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/text"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/backgroundColor"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;#FABF8F&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/fontStyle"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;bold&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="cell_4">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/text"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/backgroundColor"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;#FABF8F&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/fontStyle"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;bold&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="componentsColumn">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column"/>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.6">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/nextColumn"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="dependenciesColumn">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column"/>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.7">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/nextColumn"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="documentationColumn">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column"/>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.10">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/nextColumn"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="excelFile">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//File"/>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.11">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//File/sheet"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="headerRow">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.0">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/nextRow"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="reviewColumn">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column"/>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.4">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/cell"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="sheet">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet"/>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.0">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/rowobject"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.4">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.9">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/rowobject"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.5">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/colobject"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.6">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/colobject"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.7">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/colobject"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.10">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/colobject"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="pluginFolderToBlockHeaderRowRule" type="//@schema/@correspondenceTypes.2" source="//@rules.2/@sourcePatterns.0" target="//@rules.2/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="xmlFolderToExcelFileRule" type="//@schema/@correspondenceTypes.1" source="//@rules.2/@sourcePatterns.5" target="//@rules.2/@targetPatterns.8"/>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.2/@targetPatterns.1">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/text"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.2/@sourcePatterns.0">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//TreeElement/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="XMLFolderToExcelFileRelation" schema="//@schema">
+    <sourcePatterns name="xmlFolderDrive">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//TreeElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;C:&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.3/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder/subFolder"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="xmlFolder_1">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//TreeElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Desktop&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.3/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder/subFolder"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="xmlFolder_2">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//Folder"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpletree/model/Simpletree.ecore#//TreeElement/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;My Workspace&quot;"/>
+      </attributeAssignments>
+    </sourcePatterns>
+    <targetPatterns name="componentsCell">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/text"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Components&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/backgroundColor"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;#00008B&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/fontColor"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;#FFFFFF&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/fontSize"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="16"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/fontFamily"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Arial Narrow&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/fontStyle"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;bold&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="componentsColumn">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column"/>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.0">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/cell"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="dependenciesCell">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/text"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Dependencies&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/backgroundColor"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;#00008B&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/fontColor"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;#FFFFFF&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/fontSize"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="16"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/fontFamily"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Arial Narrow&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/fontStyle"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;bold&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="dependenciesColumn">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column"/>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/prevColumn"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="documentationCell">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/text"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Documentation&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/backgroundColor"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;#00008B&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/fontColor"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;#FFFFFF&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/fontSize"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="16"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/fontFamily"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Arial Narrow&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/fontStyle"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;bold&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="documentationColumn">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column"/>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.4">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/prevColumn"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="excelFile">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//File"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//File/fileName"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Workspace&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.10">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//File/sheet"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="headerRow">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.0">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.4">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.8">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/cell"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="reviewCell">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/text"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Review&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/backgroundColor"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;#00008B&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/fontColor"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;#FFFFFF&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/fontSize"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="16"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/fontFamily"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Arial Narrow&quot;"/>
+      </attributeAssignments>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Cell/fontStyle"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;bold&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="reviewColumn">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column"/>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.8">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.5">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Column/prevColumn"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="sheet">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/sheetName"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Plugin.xmls&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/colobject"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/colobject"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.5">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/colobject"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.9">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/colobject"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.0">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.4">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.8">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/cell"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.7">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Sheet/rowobject"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="xmlFolderToExcelFileRule" type="//@schema/@correspondenceTypes.1" source="//@rules.3/@sourcePatterns.2" target="//@rules.3/@targetPatterns.6">
+      <op value="++"/>
+    </correspondencePatterns>
+  </rules>
+  <nacs name="nacForExtensionNodeToNewRowUnderBlockHeaderRelation" rule="//@rules.1">
+    <targetPatterns name="blockHeader">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
+      <linkVariablePatterns target="//@nacs.0/@targetPatterns.1">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/nextRow"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="nextRow">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
+    </targetPatterns>
+  </nacs>
+  <nacs name="nacForPluginFolderToBlockHeaderRowRelation" rule="//@rules.2">
+    <targetPatterns name="headerRow">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
+      <linkVariablePatterns target="//@nacs.1/@targetPatterns.1">
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row/nextRow"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="nextRow">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simpleexcel/model/Simpleexcel.ecore#//Row"/>
+    </targetPatterns>
+  </nacs>
 </tgg:TripleGraphGrammarFile>
