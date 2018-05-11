@@ -25,3 +25,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xmi,
  org.moflon.core.utilities
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: com.kaleidoscope.usecase.kaleidocrypt.bxtend

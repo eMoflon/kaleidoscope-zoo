@@ -46,5 +46,6 @@ Export-Package: org.kaleidoscope.usecase.kaleidocrypt.admin,
  org.kaleidoscope.usecase.kaleidocrypt.admin.ui.wizards.new_project,
  org.kaleidoscope.usecase.kaleidocrypt.admin.ui.wizards.symmetric_encryption,
  org.kaleidoscope.usecase.kaleidocrypt.builder
+Automatic-Module-Name: com.kaleidoscope.usecase.kaleidocrypt
 
 

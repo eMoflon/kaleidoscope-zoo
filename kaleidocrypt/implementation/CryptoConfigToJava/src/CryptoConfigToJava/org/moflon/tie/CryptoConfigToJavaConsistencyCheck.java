@@ -14,7 +14,6 @@ public class CryptoConfigToJavaConsistencyCheck extends SynchronizationHelper{
    {
       super(CryptoConfigToJavaPackage.eINSTANCE, ".");
    }
-	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws IOException {
 		// Set up logging
         BasicConfigurator.configure();
