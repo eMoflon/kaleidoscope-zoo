@@ -33,7 +33,7 @@ import com.kaleidoscope.core.framework.synchronisation.SynchronisationFailedExce
 import com.kaleidoscope.core.framework.workflow.controllers.statebased.PersistentStateBasedController;
 
 import CryptoAPIConfig.Task;
-import SimpleJava.JavaPackage;
+import Simplejava.JavaPackage;
 
 
 public class CryptoAPIProjectBuilder extends IncrementalProjectBuilder implements IResourceDeltaVisitor, Builder {

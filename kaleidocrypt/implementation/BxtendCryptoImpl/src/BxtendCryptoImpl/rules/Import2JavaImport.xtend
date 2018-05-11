@@ -2,12 +2,12 @@ package BxtendCryptoImpl.rules
 
 import org.eclipse.emf.ecore.resource.Resource
 import CryptoAPIConfig.Import
-import SimpleJava.JavaImport
-import SimpleJava.SimpleJavaPackage
+import Simplejava.JavaImport
+import Simplejava.SimplejavaPackage
 import CryptoAPIConfig.CryptoAPIConfigPackage
 import CryptoAPIConfig.SymmetricBlockCipher
 import CryptoAPIConfig.Task
-import SimpleJava.JavaCompilationUnit
+import Simplejava.JavaCompilationUnit
 
 class Import2JavaImport  extends Elem2Elem{
 	
@@ -22,7 +22,7 @@ class Import2JavaImport  extends Elem2Elem{
 		.forEach[c | 
 			c.imports.forEach[i |
 				val corrTarget = i.getOrCreateCorrModelElement(BxtendCryptoImplTransformation.import2JavaImport)
-				val targetElement = corrTarget.getOrCreateTargetElem(SimpleJavaPackage.eINSTANCE.javaImport) as JavaImport
+				val targetElement = corrTarget.getOrCreateTargetElem(SimplejavaPackage.eINSTANCE.javaImport) as JavaImport
 				targetElement.value = i.value
 				
 				if(!targetModel.contents.contains(targetElement)){

@@ -24,7 +24,7 @@ import com.kaleidoscope.core.framework.workflow.adapters.ArtefactAdapter;
 import CryptoAPIConfig.Task;
 import CryptoConfigToJava.CryptoConfigToJavaPackage;
 import CryptoConfigToJava.org.moflon.EMoflonTool;
-import SimpleJava.JavaPackage;
+import Simplejava.JavaPackage;
 import kaleidocrypt.implemenation.BxtendTool;
 
 public class ControllerModule extends AbstractModule {

@@ -18,7 +18,7 @@ import com.kaleidoscope.core.framework.synchronisation.PersistentSynchroniser;
 import com.kaleidoscope.core.framework.synchronisation.SynchronisationFailedException;
 
 import CryptoAPIConfig.Task;
-import SimpleJava.JavaPackage;
+import Simplejava.JavaPackage;
 
 public class EMoflonTool extends SynchronizationHelper implements  PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path> {
 	private Path persistenceDirectory = null;

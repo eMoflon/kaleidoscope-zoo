@@ -20,7 +20,7 @@ import com.kaleidoscope.core.framework.synchronisation.PersistentSynchroniser;
 import BxtendCryptoImpl.Transformation;
 import BxtendCryptoImpl.rules.BxtendCryptoImplTransformation;
 import CryptoAPIConfig.Task;
-import SimpleJava.JavaPackage;
+import Simplejava.JavaPackage;
 
 public class BxtendTool implements PersistentSynchroniser<Task, JavaPackage, String, OperationalDelta, OperationalDelta, Path> {
 	private Resource sourceResource;

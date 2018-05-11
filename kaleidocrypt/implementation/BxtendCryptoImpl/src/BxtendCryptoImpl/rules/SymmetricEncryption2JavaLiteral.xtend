@@ -1,7 +1,7 @@
 package BxtendCryptoImpl.rules
 
 import CryptoAPIConfig.SymmetricBlockCipher
-import SimpleJava.JavaLiteral
+import Simplejava.JavaLiteral
 import org.eclipse.emf.ecore.resource.Resource
 
 class SymmetricEncryption2JavaLiteral extends Elem2Elem{

@@ -1,5 +1,5 @@
 // Add imports here
-#import "platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/SimpleJava.ecore"
+#import "platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore"
 #import "platform:/plugin/CryptoAPIConfig/model/CryptoAPIConfig.ecore"
 
 
@@ -10,7 +10,7 @@
 }
 
 #target { 
-	SimpleJava
+	Simplejava
 } 
 
 #correspondence {

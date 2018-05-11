@@ -5,8 +5,8 @@ import BxtendCryptoImpl.Corr
 import BxtendCryptoImpl.Transformation
 import CryptoAPIConfig.CryptoAPIConfigFactory
 import CryptoAPIConfig.CryptoAPIConfigPackage
-import SimpleJava.SimpleJavaFactory
-import SimpleJava.SimpleJavaPackage
+import Simplejava.SimplejavaFactory
+import Simplejava.SimplejavaPackage
 import java.util.ArrayList
 import java.util.List
 import java.util.Map
@@ -21,10 +21,10 @@ abstract class Elem2Elem {
 	protected Resource corrModel
 	
 	protected val sourceFactory = CryptoAPIConfigFactory::eINSTANCE
-	protected val targetFactory = SimpleJavaFactory::eINSTANCE
+	protected val targetFactory = SimplejavaFactory::eINSTANCE
 	protected val corrFactory = BxtendCryptoImplFactory::eINSTANCE
 	protected val sourcePackage = CryptoAPIConfigPackage::eINSTANCE
-	protected val targetPackage = SimpleJavaPackage::eINSTANCE
+	protected val targetPackage = SimplejavaPackage::eINSTANCE
 	
 	protected var String ruleID
 	
@@ -88,7 +88,7 @@ abstract class Elem2Elem {
 			corr = corrFactory.createBasicElem => [
 			if (obj.eClass.EPackage instanceof CryptoAPIConfigPackage)
 				sourceElement = obj
-			if (obj.eClass.EPackage instanceof SimpleJavaPackage)
+			if (obj.eClass.EPackage instanceof SimplejavaPackage)
 				targetElement = obj
 			desc = description
 			]

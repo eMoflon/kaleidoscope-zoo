@@ -2,11 +2,11 @@ package BxtendCryptoImpl.rules
 
 import CryptoAPIConfig.SymmetricBlockCipher
 import CryptoAPIConfig.Task
-import SimpleJava.SimpleJavaFactory
-import SimpleJava.SimpleJavaPackage
-import SimpleJava.JavaCompilationUnit
-import SimpleJava.JavaLiteral
-import SimpleJava.JavaPackage
+import Simplejava.SimplejavaFactory
+import Simplejava.SimplejavaPackage
+import Simplejava.JavaCompilationUnit
+import Simplejava.JavaLiteral
+import Simplejava.JavaPackage
 import org.eclipse.emf.ecore.resource.Resource
 
 class SymmetricEncryption2Class extends Elem2Elem{
@@ -14,27 +14,27 @@ class SymmetricEncryption2Class extends Elem2Elem{
 		super(src, trgt, corr)
 	}
 	def createJavaVariable(String type, String name, int index){
-		val param = SimpleJavaFactory.eINSTANCE.createJavaVariableDeclaration
+		val param = SimplejavaFactory.eINSTANCE.createJavaVariableDeclaration
 		param.type = type
 		param.name = name
 		param.index = index
 		return param
 	}
 	def createJavaLiteral(String stringLiteral){
-		val literal = SimpleJavaFactory.eINSTANCE.createJavaLiteral
+		val literal = SimplejavaFactory.eINSTANCE.createJavaLiteral
 		literal.value = stringLiteral
 		return literal
 	}
 	def createJavaName(String stringName, int index){
-		val name = SimpleJavaFactory.eINSTANCE.createJavaName
+		val name = SimplejavaFactory.eINSTANCE.createJavaName
 		name.identifier = stringName
 		name.index = index
 		return name
 	}
 	def createEncryptWorkflowMethod(JavaCompilationUnit cunit, JavaLiteral nameModePadding){
 		
-		val methodInvocation = SimpleJavaFactory.eINSTANCE.createJavaMethodInvocation
-		val returnStatement = SimpleJavaFactory.eINSTANCE.createJavaStatement
+		val methodInvocation = SimplejavaFactory.eINSTANCE.createJavaMethodInvocation
+		val returnStatement = SimplejavaFactory.eINSTANCE.createJavaStatement
 		
 		returnStatement.^return = true
 		returnStatement.expr = methodInvocation
@@ -45,7 +45,7 @@ class SymmetricEncryption2Class extends Elem2Elem{
 		methodInvocation.arguments.add(createJavaName("key", 1))
 		methodInvocation.arguments.add(nameModePadding)
 			
-		val workflowMethod = SimpleJavaFactory.eINSTANCE.createJavaWorkflowMethod => [
+		val workflowMethod = SimplejavaFactory.eINSTANCE.createJavaWorkflowMethod => [
 			name = "encrypt"
 			throws = "InvalidKeyException,NoSuchAlgorithmException,NoSuchPaddingException,IllegalBlockSizeException,BadPaddingException,InvalidAlgorithmParameterException"
 			modifier = "public"
@@ -58,7 +58,7 @@ class SymmetricEncryption2Class extends Elem2Elem{
 		cunit.methods.add(workflowMethod)		
 	}
 	def createPerformEncryptionOpaqueMethod(JavaCompilationUnit cunit){
-		val opaqueMethod = SimpleJavaFactory.eINSTANCE.createJavaOpaqueMethod => [
+		val opaqueMethod = SimplejavaFactory.eINSTANCE.createJavaOpaqueMethod => [
 			name = "performEncryption";
 			throws = "InvalidKeyException,NoSuchAlgorithmException,NoSuchPaddingException,IllegalBlockSizeException,BadPaddingException,InvalidAlgorithmParameterException";
 			type = "byte[] "
@@ -80,18 +80,18 @@ class SymmetricEncryption2Class extends Elem2Elem{
 			val task = c.eContainer as Task
 		
 			val corrTargetJcu = task.getOrCreateCorrModelElement(BxtendCryptoImplTransformation.task2JavaPackageCorr)
-			val targetJavaPackage = corrTargetJcu.getOrCreateTargetElem(SimpleJavaPackage.eINSTANCE.javaPackage) as JavaPackage
+			val targetJavaPackage = corrTargetJcu.getOrCreateTargetElem(SimplejavaPackage.eINSTANCE.javaPackage) as JavaPackage
 			
 						
 			val corrTarget = c.getOrCreateCorrModelElement(BxtendCryptoImplTransformation.symmetricEncryption2JavaCompilationUnitCorr)
-			val cunit = corrTarget.getOrCreateTargetElem(SimpleJavaPackage.eINSTANCE.javaCompilationUnit) as JavaCompilationUnit
+			val cunit = corrTarget.getOrCreateTargetElem(SimplejavaPackage.eINSTANCE.javaCompilationUnit) as JavaCompilationUnit
 			
 			if(!targetModel.contents.contains(targetJavaPackage)){
 
 				cunit.name = "Enc"
 				
 				val corrNameModePaddingTarget = c.getOrCreateCorrModelElement(BxtendCryptoImplTransformation.symmetricEncryption2JavaLiteralCorr)
-				val nameModePaddingLiteral = corrNameModePaddingTarget.getOrCreateTargetElem(SimpleJavaPackage.eINSTANCE.javaLiteral) as JavaLiteral
+				val nameModePaddingLiteral = corrNameModePaddingTarget.getOrCreateTargetElem(SimplejavaPackage.eINSTANCE.javaLiteral) as JavaLiteral
 				nameModePaddingLiteral.value = "\""+ c.name + "/"+ c.mode + "/" + c.padding +"\""
 				nameModePaddingLiteral.index = 2
 				createEncryptWorkflowMethod(cunit, nameModePaddingLiteral)
