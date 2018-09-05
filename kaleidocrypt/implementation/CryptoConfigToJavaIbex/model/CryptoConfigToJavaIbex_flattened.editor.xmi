@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tgg:TripleGraphGrammarFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tgg="http://www.moflon.org/ide/tgg/mosl/TGG">
+  <imports name="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore"/>
+  <imports name="platform:/resource/CryptoAPIConfig/model/CryptoAPIConfig.ecore"/>
+  <schema name="CryptoConfigToJavaIbex">
+    <sourceTypes href="platform:/resource/CryptoAPIConfig/model/CryptoAPIConfig.ecore#/"/>
+    <targetTypes href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#/"/>
+    <correspondenceTypes name="ImportToImport">
+      <source href="platform:/resource/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Import"/>
+      <target href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaImport"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="KeyDerivationAlgorithmToMethod">
+      <source href="platform:/resource/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//KeyDerivationAlgorithm"/>
+      <target href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaMethod"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="SymmetricBlockCipherToMethod">
+      <source href="platform:/resource/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//SymmetricBlockCipher"/>
+      <target href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaMethod"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="KeyDerivationAlgorithmToJcu">
+      <source href="platform:/resource/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//KeyDerivationAlgorithm"/>
+      <target href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaCompilationUnit"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="SymmetricBlockCipherToJcu">
+      <source href="platform:/resource/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//SymmetricBlockCipher"/>
+      <target href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaCompilationUnit"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="AlgorithmToJcu">
+      <source href="platform:/resource/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Algorithm"/>
+      <target href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaCompilationUnit"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="TaskToJavaPackage">
+      <source href="platform:/resource/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Task"/>
+      <target href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaPackage"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="AlgorithmToJavaCompilationUnit">
+      <source href="platform:/resource/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Algorithm"/>
+      <target href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaCompilationUnit"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="TaskToJavaCompilationUnit">
+      <source href="platform:/resource/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Task"/>
+      <target href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaCompilationUnit"/>
+    </correspondenceTypes>
+    <attributeCondDefs name="nameModePadding" userDefined="true">
+      <params paramName="arg0">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="arg1">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="arg2">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="arg3">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="setDefaultStringIfNull" userDefined="true">
+      <params paramName="arg0">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="arg1">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs href="platform:/resource/CryptoConfigToJavaIbex/src/org/emoflon/ibex/tgg/rules/SymmetricBlockCipherImportToImport.tgg#|15"/>
+  </schema>
+  <rules name="SymmetricBlockCipherImportToImport" schema="//@schema">
+    <sourcePatterns name="alg">
+      <type href="platform:/resource/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//SymmetricBlockCipher"/>
+      <linkVariablePatterns target="//@rules.0/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/resource/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Algorithm/imports"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="imp">
+      <op value="++"/>
+      <type href="platform:/resource/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Import"/>
+    </sourcePatterns>
+    <targetPatterns name="cu">
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaCompilationUnit"/>
+      <linkVariablePatterns target="//@rules.0/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaCompilationUnit/imports"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="jimp">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaImport"/>
+    </targetPatterns>
+    <correspondencePatterns name="ac">
+      <type href="platform:/resource/CryptoConfigToJavaIbex/src/org/emoflon/ibex/tgg/rules/SymmetricBlockCipherImportToImport.tgg#|9"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="i2j">
+      <op value="++"/>
+      <type href="platform:/resource/CryptoConfigToJavaIbex/src/org/emoflon/ibex/tgg/rules/SymmetricBlockCipherImportToImport.tgg#|12"/>
+    </correspondencePatterns>
+    <attrConditions>
+      <name href="platform:/resource/CryptoConfigToJavaIbex/src/org/emoflon/ibex/tgg/rules/SymmetricBlockCipherImportToImport.tgg#|15"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@sourcePatterns.1">
+        <attribute href="platform:/resource/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Import/value"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@targetPatterns.1">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaImport/value"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="SymmetricEncryptionTask" schema="//@schema">
+    <sourcePatterns name="sbc">
+      <op value="++"/>
+      <type href="platform:/resource/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//SymmetricBlockCipher"/>
+    </sourcePatterns>
+    <sourcePatterns name="task">
+      <op value="++"/>
+      <type href="platform:/resource/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Task"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Task/description"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;SymmetricEncryption&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.1/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/CryptoAPIConfig/model/CryptoAPIConfig.ecore#//Task/algorithms"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="javaPackage">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaPackage"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaPackage/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Crypto&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaPackage/cunits"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaPackage/cunits"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="jcuEnc">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaCompilationUnit"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaCompilationUnit/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Enc&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <targetPatterns name="jcuOutput">
+      <op value="++"/>
+      <type href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaCompilationUnit"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore#//JavaCompilationUnit/name"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;Output&quot;"/>
+      </attributeAssignments>
+    </targetPatterns>
+    <correspondencePatterns name="sbc2Jcu">
+      <op value="++"/>
+      <type href="platform:/resource/CryptoConfigToJavaIbex/src/org/emoflon/ibex/tgg/rules/SymmetricEncryptionTask.tgg#|19"/>
+    </correspondencePatterns>
+    <correspondencePatterns name="t2c">
+      <op value="++"/>
+      <type href="platform:/resource/CryptoConfigToJavaIbex/src/org/emoflon/ibex/tgg/rules/SymmetricEncryptionTask.tgg#|16"/>
+    </correspondencePatterns>
+  </rules>
+</tgg:TripleGraphGrammarFile>

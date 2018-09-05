@@ -1,0 +1,39 @@
+#using CryptoConfigToJavaIbex.*
+#using AttrCondDefLibrary.*
+
+#rule SymmetricEncryptionTask #with CryptoConfigToJavaIbex
+
+#source { 
+	++task:Task{
+		description := "SymmetricEncryption"
+		++ -algorithms->sbc
+	}
+	++sbc:SymmetricBlockCipher
+}
+
+#target {
+	++javaPackage:JavaPackage{
+		name := "Crypto"
+		++ -cunits->jcuEnc
+		++ -cunits->jcuOutput
+	}
+	
+	++ jcuEnc:JavaCompilationUnit {
+		name := "Enc"
+	}
+	
+	++ jcuOutput:JavaCompilationUnit {
+		name := "Output"
+	}	
+}
+
+#correspondence {
+	++ t2c:TaskToJavaPackage{
+		#src->task
+		#trg->javaPackage
+	}
+	++ sbc2Jcu:SymmetricBlockCipherToJcu{
+		#src->sbc
+		#trg->jcuEnc
+	}
+}

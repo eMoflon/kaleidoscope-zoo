@@ -1,0 +1,36 @@
+#using CryptoConfigToJavaIbex.*
+#using AttrCondDefLibrary.*
+
+#rule SymmetricBlockCipherImportToImport #with CryptoConfigToJavaIbex
+
+#source { 
+	alg:SymmetricBlockCipher {
+		++ -imports->imp	
+	}
+	
+	++ imp:Import
+}
+
+#target {
+	cu:JavaCompilationUnit {
+		++-imports->jimp
+	}
+	
+	++ jimp:JavaImport
+}
+
+#correspondence {
+	
+	ac:SymmetricBlockCipherToJcu{
+		#src->alg
+		#trg->cu
+	}
+	++ i2j:ImportToImport {
+		#src->imp
+		#trg->jimp
+	}	
+}
+
+#attributeConditions {
+	eq_string(imp.value, jimp.value)	
+}

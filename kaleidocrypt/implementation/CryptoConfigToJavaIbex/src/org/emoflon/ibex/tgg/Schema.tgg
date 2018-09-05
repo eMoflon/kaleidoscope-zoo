@@ -1,0 +1,70 @@
+// Add imports here
+#import "platform:/plugin/com.kaleidoscope.core.aux.simplejava/model/Simplejava.ecore"
+#import "platform:/resource/CryptoAPIConfig/model/CryptoAPIConfig.ecore"
+
+
+#schema CryptoConfigToJavaIbex
+	
+#source {
+	CryptoAPIConfig
+}
+
+#target { 
+	Simplejava
+} 
+
+#correspondence {
+	ImportToImport {
+		#src->Import
+		#trg->JavaImport
+	}
+	KeyDerivationAlgorithmToMethod{
+		#src->KeyDerivationAlgorithm
+		#trg->JavaMethod
+	}
+	SymmetricBlockCipherToMethod{
+		#src->SymmetricBlockCipher
+		#trg->JavaMethod
+	}
+	KeyDerivationAlgorithmToJcu{
+		#src->KeyDerivationAlgorithm
+		#trg->JavaCompilationUnit
+	}
+	SymmetricBlockCipherToJcu{
+		#src->SymmetricBlockCipher
+		#trg->JavaCompilationUnit
+	}
+	AlgorithmToJcu{
+		#src->Algorithm
+		#trg->JavaCompilationUnit
+	}
+	TaskToJavaPackage{
+		#src->Task
+		#trg->JavaPackage
+	}
+	AlgorithmToJavaCompilationUnit{
+		#src->Algorithm
+		#trg->JavaCompilationUnit
+	}
+	TaskToJavaCompilationUnit{
+		#src->Task
+		#trg->JavaCompilationUnit
+	}
+	
+}
+
+#attributeConditions {
+	
+	#userDefined
+	nameModePadding(arg0:EString, arg1:EString, arg2:EString, arg3:EString){
+		#sync: [B B B F], [F F F B], [B B B B]
+		#gen: [F F F F]
+	}
+	
+	#userDefined
+	setDefaultStringIfNull(arg0:EString, arg1:EString){
+		#sync: [B B], [F B]
+		#gen: [B B], [F B], [F F]
+	}
+	
+}
