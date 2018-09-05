@@ -19,11 +19,13 @@ import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.ui.PlatformUI;
 import org.moflon.core.utilities.LogUtils;
-import org.moflon.core.utilities.WorkspaceHelper;
-import org.moflon.util.plugins.BuildPropertiesFileBuilder;
-import org.moflon.util.plugins.manifest.ManifestFileUpdater;
-import org.moflon.util.plugins.manifest.ManifestFileUpdater.AttributeUpdatePolicy;
-import org.moflon.util.plugins.manifest.PluginManifestConstants;
+
+import com.kaleidoscope.util.BuildPropertiesFileBuilder;
+import com.kaleidoscope.util.WorkspaceHelper;
+import com.kaleidoscope.util.manifest.ManifestFileUpdater;
+import com.kaleidoscope.util.manifest.ManifestFileUpdater.AttributeUpdatePolicy;
+import com.kaleidoscope.util.manifest.PluginManifestConstants;
+
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.SubMonitor;
 
@@ -73,7 +75,7 @@ public class CryptoAPINature implements IProjectNature {
 	}
 	
 	private void setUpAsPluginProject() throws CoreException, IOException {
-        setUpBuildProperties();
+		setUpBuildProperties();
         setUpManifestFile();
         addContainerToBuildPath(project, "org.eclipse.pde.core.requiredPlugins");	
     }

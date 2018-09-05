@@ -17,7 +17,6 @@ import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.kaleidoscope.usecase.kaleidocrypt.admin.ui.wizards.CryptoAPINature;
 import org.moflon.core.utilities.WorkspaceHelper;
-import org.moflon.tgg.mosl.defaults.DefaultFilesHelper;
 
 public class NewCryptoAPIProjectWizard extends Wizard implements INewWizard {
 	private NewCryptoAPIProjectWizardPage page;
@@ -78,7 +77,7 @@ public class NewCryptoAPIProjectWizard extends Wizard implements INewWizard {
 
 	private void createInitialProjectStructure(final IProgressMonitor monitor, IProject project) throws CoreException {
 		final SubMonitor subMon = SubMonitor.convert(monitor, "Generate project structure", 3);
-		DefaultFilesHelper.generateDefaultSchema(project.getName());
+		
 		addAllFolders(project, "src", subMon.split(1));
 		addAllFolders(project, "models", subMon.split(1));
 		addAllFolders(project, "models/gen", subMon.split(1));
@@ -93,6 +92,7 @@ public class NewCryptoAPIProjectWizard extends Wizard implements INewWizard {
 
 		// Add CryptoAPI Nature
 		WorkspaceHelper.addNature(project, CryptoAPINature.CRYPTO_API_NATURE_ID, subMon.split(1));
+		//WorkspaceHelper.addNature(project, "org.eclipse.jdt.core.javanature", subMon.split(1));
 	}
 
 	@Override
